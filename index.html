@@ -135,7 +135,62 @@
         }
 
         .image-cell {
-            text-align: center;
+            text-align: left;
+        }
+
+        .icon-and-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .icon-column {
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+        }
+
+        .icon-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .icon-part {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            align-items: flex-start;
+        }
+
+        .ability-icon {
+            align-self: center;
+        }
+
+        .tags-line {
+            font-size: 0.75em;
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            min-height: 0px;
+            line-height: 1;
+        }
+
+        .tags-line.upgraded {
+            border-top: 1px solid #ddd;
+            padding-top: 2px;
+            margin-top: 2px;
+        }
+
+        .tag-icon-small {
+            width: 12px;
+            height: 12px;
+            display: inline-block;
+        }
+
+        .stats-stack {
+            display: flex;
+            flex-direction: column;
         }
 
         .ability-icon {
@@ -154,25 +209,16 @@
 
         .ability-stats {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             gap: 12px;
-            margin-top: 8px;
+            margin-top: 0;
             font-size: 0.85em;
         }
 
         .ability-stats.upgraded {
-            margin-top: 6px;
-            padding-top: 6px;
-            border-top: 1px dashed #ddd;
-        }
-
-        .stat-label-inline {
-            font-size: 0.8em;
-            font-weight: 600;
-            color: #777;
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
-            align-self: center;
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px solid #ddd;
         }
 
         .stat-group {
@@ -313,10 +359,40 @@
             margin: 0 2px;
         }
 
+        .img-icon-stat {
+            filter: brightness(0) saturate(100%);
+        }
+
         .description-upgraded {
             margin-top: 8px;
             padding-top: 8px;
             border-top: 1px solid #ddd;
+        }
+
+        .ability-tags {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin-top: 6px;
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            padding: 3px 8px;
+            font-size: 0.8em;
+            color: #666;
+            white-space: nowrap;
+        }
+
+        .tag-icon {
+            width: 14px;
+            height: 14px;
+            display: inline-block;
         }
 
         .no-results {
@@ -556,22 +632,31 @@
             }
 
             tbody.innerHTML = abilities.map(ability => {
-                const buildStatsHtml = (cost, damage, label) => {
+                const buildStatsHtml = (cost, damage, isUpgraded) => {
                     const damageValue = formatStatValue(damage?.value);
                     const healValue = formatStatValue(damage?.heal_value);
                     const manaValue = cost?.mana !== null && cost?.mana !== undefined ? cost.mana : null;
                     const damageType = damage?.type || 'physical';
 
-                    // Determine if value is numeric or formula
-                    const damageIsFormula = damageValue.value && isNaN(damageValue.value);
-                    const healIsFormula = healValue.value && isNaN(healValue.value);
-                    const manaDisplay = manaValue !== null ? manaValue : '0';
+                    // Determine if value should be treated as a formula.
+                    const isFormulaValue = (rawValue) => {
+                        if (rawValue === null || rawValue === undefined || rawValue === '') {
+                            return false;
+                        }
+                        if (!isNaN(rawValue)) {
+                            return false;
+                        }
+                        if (typeof rawValue === 'string' && rawValue.length <= 3) {
+                            return false;
+                        }
+                        return true;
+                    };
 
-                    let statsHtml = `<div class="ability-stats${label ? ' upgraded' : ''}">`;
+                    const damageIsFormula = isFormulaValue(damageValue.value);
+                    const healIsFormula = isFormulaValue(healValue.value);
+                    const manaDisplay = manaValue !== null ? manaValue : null;
 
-                    if (label) {
-                        statsHtml += `<div class="stat-label-inline">${label}</div>`;
-                    }
+                    let statsHtml = `<div class="ability-stats${isUpgraded ? ' upgraded' : ''}">`;
 
                     // Damage/Heal stats (if present)
                     if (damageValue.display || healValue.display) {
@@ -586,33 +671,153 @@
                     }
 
                     // Mana cost
-                    statsHtml += `<div class="stat-group" title="Mana Cost">`;
-                    statsHtml += `<img src="res/cost.png" alt="mana" class="stat-icon" onerror="this.style.display='none'">`;
-                    statsHtml += `<div class="stat-value">${manaDisplay}</div>`;
-                    statsHtml += '</div>';
+                    if (manaDisplay !== null) {
+                        statsHtml += `<div class="stat-group" title="Mana Cost">`;
+                        statsHtml += `<img src="res/cost.png" alt="mana" class="stat-icon" onerror="this.style.display='none'">`;
+                        statsHtml += `<div class="stat-value">${manaDisplay}</div>`;
+                        statsHtml += '</div>';
+                    }
 
                     statsHtml += '</div>';
-                    return statsHtml;
+                    const hasDamage = !!(damageValue.display || healValue.display);
+                    const hasMana = manaDisplay !== null;
+                    return (hasDamage || hasMana) ? statsHtml : '';
                 };
 
-                let statsHtml = buildStatsHtml(ability.cost, ability.damage, null);
+                const normalizeCost = (upgradedCost, baseCost) => {
+                    if (!upgradedCost) {
+                        return baseCost;
+                    }
+                    const hasValue = ['move_points', 'act_points', 'mana'].some(
+                        key => upgradedCost[key] !== null && upgradedCost[key] !== undefined
+                    );
+                    return hasValue ? upgradedCost : baseCost;
+                };
+
+                // Build base stats only
+                let baseStatsHtml = buildStatsHtml(ability.cost, ability.damage, false);
+                
+                // Build upgraded stats only (if they exist)
+                let upgradedStatsHtml = '';
                 if (ability.cost_upgraded || ability.damage_upgraded) {
-                    statsHtml += buildStatsHtml(
-                        ability.cost_upgraded || ability.cost,
-                        ability.damage_upgraded || ability.damage,
-                        'Upgraded'
+                    const upgradedCost = normalizeCost(ability.cost_upgraded, ability.cost);
+                    const upgradedDamage = ability.damage_upgraded || ability.damage;
+                    const upgradedHasDamage = upgradedDamage && (upgradedDamage.value || upgradedDamage.heal_value);
+                    const damageForDisplay = upgradedHasDamage ? upgradedDamage : ability.damage;
+
+                    upgradedStatsHtml = buildStatsHtml(
+                        upgradedCost,
+                        damageForDisplay,
+                        true
                     );
                 }
+
+                // Build rendered tags display (small icons above icon)
+                const buildRenderedTagsHtml = (tagsRendered) => {
+                    if (!tagsRendered || tagsRendered.length === 0) return '';
+                    
+                    const tagMap = {
+                        'musical': 'res/music.png',
+                        'holy': 'res/tags/holy.png',
+                        'water': 'res/tags/water.png',
+                        'fire': 'res/tags/fire.png',
+                        'electric': 'res/tags/electric.png',
+                        'ice': 'res/tags/ice.png',
+                        'explosion': 'res/tags/explosion.png',
+                        'grass': 'res/tags/grass.png',
+                        'wind': 'res/tags/wind.png',
+                        'gravity': 'res/tags/gravity.png',
+                        'shadow': 'res/tags/shadow.png',
+                        'earth': 'res/tags/earth.png',
+                    };
+
+                    return tagsRendered.map(tag => {
+                        const lowerTag = tag.toLowerCase();
+                        const iconPath = tagMap[lowerTag];
+                        if (iconPath) {
+                            return `<img src="${iconPath}" alt="${tag}" class="tag-icon-small" title="${escapeHtml(tag)}">`;
+                        }
+                        return '';
+                    }).filter(x => x).join('');
+                };
+
+                let tagsRenderedHtml = buildRenderedTagsHtml(ability.tags_rendered);
+                let tagsRenderedUpgradedHtml = '';
+                let showUpgradedIcon = false;
+                
+                if (ability.tags_rendered_upgraded && ability.tags_rendered !== ability.tags_rendered_upgraded) {
+                    tagsRenderedUpgradedHtml = buildRenderedTagsHtml(ability.tags_rendered_upgraded);
+                    showUpgradedIcon = true;
+                }
+
+                // Build icon sections: base icon with base stats, optionally upgraded icon with upgraded stats
+                let baseIconHtml = `
+                    <div class="icon-column">
+                        <div class="icon-row">
+                            <div class="icon-part">
+                                <div class="tags-line">${tagsRenderedHtml}</div>
+                                <img src="AbilityIcon/${ability.frame_number}.png" 
+                                     alt="${ability.ability_name}"
+                                     class="ability-icon"
+                                     onerror="this.style.display='none'"
+                                     onclick="openModal(this.src, '${escapeHtml(ability.ability_name)}')">
+                            </div>
+                            <div class="stats-stack">
+                                ${baseStatsHtml}
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                let upgradedIconHtml = '';
+                // If upgraded tags differ, show separator and upgraded icon with upgraded stats only
+                if (showUpgradedIcon) {
+                    upgradedIconHtml = `
+                    <div class="icon-column upgraded">
+                        <div class="icon-row">
+                            <div class="icon-part">
+                                <div class="tags-line upgraded">${tagsRenderedUpgradedHtml}</div>
+                                <img src="AbilityIcon/${ability.frame_number}.png" 
+                                     alt="${ability.ability_name}"
+                                     class="ability-icon"
+                                     onerror="this.style.display='none'"
+                                     onclick="openModal(this.src, '${escapeHtml(ability.ability_name)}')">
+                            </div>
+                            <div class="stats-stack">
+                                ${upgradedStatsHtml}
+                            </div>
+                        </div>
+                    </div>
+                    `;
+                } else if (upgradedStatsHtml) {
+                    // If upgraded stats exist but tags are the same, show them in a single icon row with separator
+                    baseIconHtml = `
+                    <div class="icon-column">
+                        <div class="icon-row">
+                            <div class="icon-part">
+                                <div class="tags-line">${tagsRenderedHtml}</div>
+                                <img src="AbilityIcon/${ability.frame_number}.png" 
+                                     alt="${ability.ability_name}"
+                                     class="ability-icon"
+                                     onerror="this.style.display='none'"
+                                     onclick="openModal(this.src, '${escapeHtml(ability.ability_name)}')">
+                            </div>
+                            <div class="stats-stack">
+                                ${baseStatsHtml}${upgradedStatsHtml}
+                            </div>
+                        </div>
+                    </div>
+                    `;
+                }
+
+                const iconAndStatsContent = baseIconHtml + upgradedIconHtml;
 
                 return `
                     <tr>
                         <td class="image-cell">
-                            <img src="AbilityIcon/${ability.frame_number}.png" 
-                                 alt="${ability.ability_name}"
-                                 class="ability-icon"
-                                 onerror="this.style.display='none'"
-                                 onclick="openModal(this.src, '${escapeHtml(ability.ability_name)}')">
-                            ${statsHtml}
+                            <div class="icon-and-stats">
+                                ${iconAndStatsContent}
+                            </div>
                         </td>
                         <td>
                             <div class="ability-name">${escapeHtml(ability.ability_name)}</div>
@@ -641,48 +846,14 @@
             if (!isNaN(value) && value !== '') {
                 return { value: value, display: value };
             }
+
+            // Short non-numeric values (e.g., "X") should be shown directly.
+            if (typeof value === 'string' && value.length <= 3) {
+                return { value: value, display: value };
+            }
             
             // It's a formula or expression
             return { value: value, display: '?' };
-        }
-
-        // Process stat icon images: map white foreground to black, preserve grey background
-        function processStatIconImage(imgElement) {
-            const img = new Image();
-            img.crossOrigin = 'anonymous';
-            img.onload = function() {
-                const canvas = document.createElement('canvas');
-                canvas.width = img.width;
-                canvas.height = img.height;
-                const ctx = canvas.getContext('2d');
-                ctx.drawImage(img, 0, 0);
-                
-                const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-                const data = imageData.data;
-                
-                // Map white/light pixels to black, preserve grey
-                // For each pixel: if luminance > 200 (bright white), darken it proportionally
-                for (let i = 0; i < data.length; i += 4) {
-                    const r = data[i];
-                    const g = data[i + 1];
-                    const b = data[i + 2];
-                    const luminance = (r + g + b) / 3;
-                    
-                    // Linear mapping: bright (255) -> black (0), dark grey (128) stays roughly same
-                    // Formula: newValue = luminance * (1 - luminance/255)
-                    // This maps: 255->0, 200->16, 128->64, 100->60, 0->0
-                    // Better: newValue = 255 - luminance (simple invert)
-                    const inverted = 255 - luminance;
-                    data[i] = inverted;
-                    data[i + 1] = inverted;
-                    data[i + 2] = inverted;
-                    // Keep alpha unchanged
-                }
-                
-                ctx.putImageData(imageData, 0, 0);
-                imgElement.src = canvas.toDataURL('image/png');
-            };
-            img.src = imgElement.src;
         }
 
         // Parse rich text markup in descriptions
@@ -698,16 +869,14 @@
             
             // Handle [img:xxx] placeholders - use actual icon images
             // Map icon names (handle "con" -> "constitution" for Windows reserved name)
-            // Shield icons (shield, divineshield) stay white; stat icons get processed to black
+            // Shield icons (shield, divineshield) stay white; stat icons use CSS filter
             html = html.replace(/\[img:([^\]]+)\]/g, function(match, iconName) {
                 const iconMap = { 'con': 'constitution' };
                 const mappedName = iconMap[iconName] || iconName;
                 const isShield = iconName === 'shield' || iconName === 'divineshield';
                 const className = 'img-icon' + (isShield ? '' : ' img-icon-stat');
-                
-                // Create img tag with onload hook for stat icons to process them
-                const onloadHook = isShield ? '' : ` onload="processStatIconImage(this)"`;
-                return `<img src="res/fonticon/${mappedName}.png" alt="${iconName}" title="${iconName}" class="${className}"${onloadHook} onerror="this.style.display='none'">`;
+
+                return `<img src="res/fonticon/${mappedName}.png" alt="${iconName}" title="${iconName}" class="${className}" onerror="this.style.display='none'">`;
             });
             
             // Handle newlines
