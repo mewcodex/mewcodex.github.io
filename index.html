@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abilities Viewer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .controls {
+            padding: 20px;
+            background: #f5f5f5;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .controls input,
+        .controls select {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        .controls input {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .stats {
+            padding: 20px;
+            background: #f9f9f9;
+            display: flex;
+            gap: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .stat-item {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .stat-label {
+            font-weight: 600;
+            color: #667eea;
+        }
+
+        .stat-value {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f5f5f5;
+            border-bottom: 2px solid #ddd;
+        }
+
+        th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            color: #333;
+            white-space: nowrap;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid #eee;
+            transition: background 0.2s;
+        }
+
+        tbody tr:hover {
+            background: #f9f9f9;
+        }
+
+        td {
+            padding: 12px 15px;
+            vertical-align: top;
+        }
+
+        .frame-cell {
+            text-align: center;
+            font-weight: 600;
+            color: #667eea;
+        }
+
+        .image-cell {
+            text-align: center;
+        }
+
+        .ability-icon {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            cursor: zoom-in;
+        }
+
+        .ability-icon:hover {
+            box-shadow: 0 0 8px rgba(102, 126, 234, 0.4);
+            transform: scale(1.1);
+        }
+
+        .ability-name {
+            font-weight: 600;
+            color: #333;
+            word-break: break-word;
+        }
+
+        .ability-class {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 0.85em;
+            margin-top: 4px;
+        }
+
+        .class-fighter {
+            background: #e74c3c;
+        }
+
+        .class-thief {
+            background: #27ae60;
+        }
+
+        .class-tank {
+            background: #3498db;
+        }
+
+        .class-mage {
+            background: #9b59b6;
+        }
+
+        .class-medic {
+            background: #e91e63;
+        }
+
+        .class-hunter {
+            background: #f39c12;
+        }
+
+        .class-necromancer {
+            background: #34495e;
+        }
+
+        .class-butcher {
+            background: #c0392b;
+        }
+
+        .class-monk {
+            background: #16a085;
+        }
+
+        .class-druid {
+            background: #27ae60;
+        }
+
+        .class-psychic {
+            background: #8e44ad;
+        }
+
+        .class-tinkerer {
+            background: #e67e22;
+        }
+
+        .class-jester {
+            background: #f1c40f;
+            color: #333;
+        }
+
+        .description {
+            color: #666;
+            font-size: 0.95em;
+            word-break: break-word;
+            max-width: 300px;
+        }
+
+        .description-2 {
+            color: #999;
+            font-size: 0.85em;
+            font-style: italic;
+            margin-top: 5px;
+            padding-top: 5px;
+            border-top: 1px solid #ddd;
+        }
+
+        .no-results {
+            padding: 40px;
+            text-align: center;
+            color: #999;
+            font-size: 1.1em;
+        }
+
+        .no-results code {
+            background: #f5f5f5;
+            padding: 5px 10px;
+            border-radius: 3px;
+            display: inline-block;
+            font-family: 'Courier New', monospace;
+            color: #333;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+        }
+
+        .no-results p {
+            margin: 15px 0;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90vh;
+            margin-top: 5%;
+            animation: slideIn 0.3s;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .modal-close:hover {
+            color: #ddd;
+        }
+
+        .footer {
+            padding: 20px;
+            background: #f5f5f5;
+            text-align: center;
+            color: #999;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+
+            th,
+            td {
+                padding: 8px;
+                font-size: 0.9em;
+            }
+
+            .ability-icon {
+                width: 40px;
+                height: 40px;
+            }
+
+            .description {
+                max-width: 150px;
+                font-size: 0.85em;
+            }
+
+            .controls {
+                flex-direction: column;
+            }
+
+            .controls input {
+                min-width: auto;
+            }
+
+            .header h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>⚔️ Ability Viewer</h1>
+            <p>Browse all game abilities with descriptions and icons</p>
+        </div>
+
+        <div class="controls">
+            <input type="text" id="searchInput" placeholder="Search by ability name...">
+            <select id="classFilter">
+                <option value="">All Classes</option>
+            </select>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-label">Total Abilities:</span>
+                <span class="stat-value" id="totalCount">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Showing:</span>
+                <span class="stat-value" id="showingCount">0</span>
+            </div>
+        </div>
+
+        <div class="table-wrapper">
+            <table id="abilitiesTable">
+                <thead>
+                    <tr>
+                        <th style="width: 60px;">Icon</th>
+                        <th style="width: 150px;">Ability Name</th>
+                        <th>Description</th>
+                        <th style="width: 100px;">Class</th>
+                        <th style="width: 80px;">Frame</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <tr>
+                        <td colspan="5" class="no-results">Loading abilities...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="footer">
+            <p>Data sourced from game ability definitions and sprite mappings</p>
+        </div>
+    </div>
+
+    <div id="imageModal" class="modal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        let allAbilities = [];
+        let filteredAbilities = [];
+
+        // Load abilities from JSON
+        async function loadAbilities() {
+            try {
+                const response = await fetch('abilities_combined.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                allAbilities = data.abilities;
+
+                document.getElementById('totalCount').textContent = allAbilities.length;
+                populateClassFilter();
+                displayAbilities(allAbilities);
+            } catch (error) {
+                console.error('Error loading abilities:', error);
+                const errorMsg = `
+                    <tr><td colspan="5" class="no-results">
+                        <p style="margin-bottom: 10px;"><strong>Error loading abilities:</strong> ${escapeHtml(error.message)}</p>
+                        <p style="font-size: 0.9em; color: #666; line-height: 1.5;">
+                            <strong>Solution:</strong><br>
+                            Run the server script to browse the abilities:<br>
+                            <code style="background: #f5f5f5; padding: 5px 10px; border-radius: 3px; display: inline-block;">python serve.py</code><br>
+                            <br>
+                            Then open: <code style="background: #f5f5f5; padding: 5px 10px; border-radius: 3px; display: inline-block;">http://localhost:8000/abilities_viewer.html</code>
+                        </p>
+                    </td></tr>
+                `;
+                document.getElementById('tableBody').innerHTML = errorMsg;
+            }
+        }
+
+        // Populate class filter dropdown
+        function populateClassFilter() {
+            const classes = [...new Set(allAbilities
+                .map(a => a.ability_class)
+                .filter(c => c))
+            ].sort();
+
+            const select = document.getElementById('classFilter');
+            classes.forEach(cls => {
+                const option = document.createElement('option');
+                option.value = cls;
+                option.textContent = cls;
+                select.appendChild(option);
+            });
+        }
+
+        // Display abilities in table
+        function displayAbilities(abilities) {
+            const tbody = document.getElementById('tableBody');
+
+            if (abilities.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="5" class="no-results">No abilities found matching your filters.</td></tr>';
+                document.getElementById('showingCount').textContent = '0';
+                return;
+            }
+
+            tbody.innerHTML = abilities.map(ability => `
+                <tr>
+                    <td class="image-cell">
+                        <img src="AbilityIcon/${ability.frame_number}.png" 
+                             alt="${ability.ability_name}"
+                             class="ability-icon"
+                             onerror="this.style.display='none'"
+                             onclick="openModal(this.src, '${ability.ability_name}')">
+                    </td>
+                    <td>
+                        <div class="ability-name">${escapeHtml(ability.ability_name)}</div>
+                        ${ability.ability_class ? `<div class="ability-class class-${ability.ability_class.toLowerCase()}">${escapeHtml(ability.ability_class)}</div>` : ''}
+                    </td>
+                    <td>
+                        <div class="description">${escapeHtml(ability.description || 'N/A')}</div>
+                        ${ability.description_2 ? `<div class="description-2">${escapeHtml(ability.description_2)}</div>` : ''}
+                    </td>
+                    <td class="frame-cell">${ability.ability_class || '-'}</td>
+                    <td class="frame-cell">${ability.frame_number}</td>
+                </tr>
+            `).join('');
+
+            document.getElementById('showingCount').textContent = abilities.length;
+        }
+
+        // Filter abilities
+        function filterAbilities() {
+            const search = document.getElementById('searchInput').value.toLowerCase();
+            const classFilter = document.getElementById('classFilter').value;
+
+            filteredAbilities = allAbilities.filter(ability => {
+                const matchesSearch = ability.ability_name.toLowerCase().includes(search) ||
+                    (ability.description && ability.description.toLowerCase().includes(search));
+                const matchesClass = !classFilter || ability.ability_class === classFilter;
+                return matchesSearch && matchesClass;
+            });
+
+            displayAbilities(filteredAbilities);
+        }
+
+        // Modal functions
+        function openModal(src, name) {
+            const modal = document.getElementById('imageModal');
+            const img = document.getElementById('modalImage');
+            img.src = src;
+            img.alt = name;
+            modal.style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('imageModal').onclick = function (event) {
+            if (event.target === this) {
+                closeModal();
+            }
+        }
+
+        // HTML escape function
+        function escapeHtml(text) {
+            if (!text) return '';
+            const map = {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#039;'
+            };
+            return text.replace(/[&<>"']/g, m => map[m]);
+        }
+
+        // Event listeners
+        document.getElementById('searchInput').addEventListener('input', filterAbilities);
+        document.getElementById('classFilter').addEventListener('change', filterAbilities);
+
+        // Load on page load
+        window.addEventListener('load', loadAbilities);
+    </script>
+</body>
+
+</html>
