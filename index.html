@@ -263,15 +263,39 @@
             font-size: 0.95em;
             word-break: break-word;
             max-width: 300px;
+            line-height: 1.4;
+        }
+
+        .description i {
+            font-style: italic;
+            color: #999;
+            font-size: 0.9em;
+        }
+
+        .img-placeholder {
+            display: inline-block;
+            background: #f0f0f0;
+            border: 1px solid #ddd;
+            padding: 2px 4px;
+            border-radius: 2px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85em;
+            color: #e67e22;
+            font-weight: 600;
+            cursor: help;
+        }
+
+        .img-placeholder:hover {
+            background: #e67e22;
+            color: white;
         }
 
         .description-2 {
-            color: #999;
-            font-size: 0.85em;
-            font-style: italic;
+            color: #666;
+            font-size: 0.95em;
             margin-top: 5px;
             padding-top: 5px;
-            border-top: 1px solid #ddd;
+            border-top: 1px solid #eee;
         }
 
         .no-results {
@@ -559,8 +583,8 @@
                             ${ability.ability_class ? `<div class="ability-class class-${ability.ability_class.toLowerCase()}">${escapeHtml(ability.ability_class)}</div>` : ''}
                         </td>
                         <td>
-                            <div class="description">${escapeHtml(ability.description || 'N/A')}</div>
-                            ${ability.description_2 ? `<div class="description-2">${escapeHtml(ability.description_2)}</div>` : ''}
+                            <div class="description">${parseRichText(ability.description || 'N/A')}</div>
+                            ${ability.description_2 ? `<div class="description">${parseRichText(ability.description_2)}</div>` : ''}
                         </td>
                         <td class="frame-cell">${ability.ability_class || '-'}</td>
                         <td class="frame-cell">${ability.frame_number}</td>
@@ -584,6 +608,26 @@
             
             // It's a formula or expression
             return { value: value, display: '?' };
+        }
+
+        // Parse rich text markup in descriptions
+        // Handles: [s:.7]text[/s] for italics, [img:xxx] for placeholders, newlines
+        function parseRichText(text) {
+            if (!text) return '';
+            
+            // Escape HTML first
+            let html = escapeHtml(text);
+            
+            // Handle [s:.7]...[/s] for italics
+            html = html.replace(/\[s:.?\d*\](.*?)\[\/s\]/g, '<i>$1</i>');
+            
+            // Handle [img:xxx] placeholders
+            html = html.replace(/\[img:([^\]]+)\]/g, '<span class="img-placeholder" title="$1">[$1]</span>');
+            
+            // Handle newlines
+            html = html.replace(/\n/g, '<br>');
+            
+            return html;
         }
 
         // Filter abilities
