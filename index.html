@@ -152,6 +152,57 @@
             transform: scale(1.1);
         }
 
+        .ability-stats {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 8px;
+            font-size: 0.85em;
+        }
+
+        .stat-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+        }
+
+        .stat-icon {
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+        }
+
+        .stat-value {
+            font-weight: 600;
+            color: #333;
+            min-width: 30px;
+            text-align: center;
+        }
+
+        .stat-value.formula {
+            color: #f39c12;
+            font-style: italic;
+        }
+
+        .stat-value.formula:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            background: #333;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            white-space: nowrap;
+            font-size: 0.9em;
+            z-index: 100;
+            margin-top: 5px;
+            pointer-events: none;
+        }
+
+        .stat-group[title] {
+            cursor: help;
+        }
+
         .ability-name {
             font-weight: 600;
             color: #333;
@@ -473,29 +524,80 @@
                 return;
             }
 
-            tbody.innerHTML = abilities.map(ability => `
-                <tr>
-                    <td class="image-cell">
-                        <img src="AbilityIcon/${ability.frame_number}.png" 
-                             alt="${ability.ability_name}"
-                             class="ability-icon"
-                             onerror="this.style.display='none'"
-                             onclick="openModal(this.src, '${ability.ability_name}')">
-                    </td>
-                    <td>
-                        <div class="ability-name">${escapeHtml(ability.ability_name)}</div>
-                        ${ability.ability_class ? `<div class="ability-class class-${ability.ability_class.toLowerCase()}">${escapeHtml(ability.ability_class)}</div>` : ''}
-                    </td>
-                    <td>
-                        <div class="description">${escapeHtml(ability.description || 'N/A')}</div>
-                        ${ability.description_2 ? `<div class="description-2">${escapeHtml(ability.description_2)}</div>` : ''}
-                    </td>
-                    <td class="frame-cell">${ability.ability_class || '-'}</td>
-                    <td class="frame-cell">${ability.frame_number}</td>
-                </tr>
-            `).join('');
+            tbody.innerHTML = abilities.map(ability => {
+                const damageValue = formatStatValue(ability.damage?.value);
+                const healValue = formatStatValue(ability.damage?.heal_value);
+                const manaValue = ability.cost?.mana !== null && ability.cost?.mana !== undefined ? ability.cost.mana : null;
+                const damageType = ability.damage?.type || 'physical';
+                
+                // Determine if value is numeric or formula
+                const damageIsFormula = damageValue.value && isNaN(damageValue.value);
+                const healIsFormula = healValue.value && isNaN(healValue.value);
+                const manaDisplay = manaValue !== null ? manaValue : '0';
+                
+                let statsHtml = '<div class="ability-stats">';
+                
+                // Damage/Heal stats (if present)
+                if (damageValue.display || healValue.display) {
+                    const statType = damageValue.display ? damageValue.display : healValue.display;
+                    const isHeal = !!healValue.display && !damageValue.display;
+                    const typeIcon = isHeal ? 'heal' : (damageType || 'physical');
+                    const displayValue = damageValue.display || healValue.display;
+                    
+                    statsHtml += `<div class="stat-group" ${(damageIsFormula || healIsFormula) ? `title="Formula: ${escapeHtml(damageValue.value || healValue.value)}"` : ''}>`;
+                    statsHtml += `<img src="res/damage_type/${typeIcon}.png" alt="${typeIcon}" class="stat-icon" onerror="this.style.display='none'">`;
+                    statsHtml += `<div class="stat-value ${(damageIsFormula || healIsFormula) ? 'formula' : ''}" title="${escapeHtml(damageValue.value || healValue.value)}">${displayValue}</div>`;
+                    statsHtml += '</div>';
+                }
+                
+                // Mana cost
+                statsHtml += `<div class="stat-group" title="Mana Cost">`;
+                statsHtml += `<img src="res/cost.png" alt="mana" class="stat-icon" onerror="this.style.display='none'">`;
+                statsHtml += `<div class="stat-value">${manaDisplay}</div>`;
+                statsHtml += '</div>';
+                
+                statsHtml += '</div>';
+                
+                return `
+                    <tr>
+                        <td class="image-cell">
+                            <img src="AbilityIcon/${ability.frame_number}.png" 
+                                 alt="${ability.ability_name}"
+                                 class="ability-icon"
+                                 onerror="this.style.display='none'"
+                                 onclick="openModal(this.src, '${escapeHtml(ability.ability_name)}')">
+                            ${statsHtml}
+                        </td>
+                        <td>
+                            <div class="ability-name">${escapeHtml(ability.ability_name)}</div>
+                            ${ability.ability_class ? `<div class="ability-class class-${ability.ability_class.toLowerCase()}">${escapeHtml(ability.ability_class)}</div>` : ''}
+                        </td>
+                        <td>
+                            <div class="description">${escapeHtml(ability.description || 'N/A')}</div>
+                            ${ability.description_2 ? `<div class="description-2">${escapeHtml(ability.description_2)}</div>` : ''}
+                        </td>
+                        <td class="frame-cell">${ability.ability_class || '-'}</td>
+                        <td class="frame-cell">${ability.frame_number}</td>
+                    </tr>
+                `;
+            }).join('');
 
             document.getElementById('showingCount').textContent = abilities.length;
+        }
+
+        // Format stat values: if numeric, show as-is; if formula, show "?"
+        function formatStatValue(value) {
+            if (value === null || value === undefined) {
+                return { value: null, display: null };
+            }
+            
+            // Check if it's a number or numeric string
+            if (!isNaN(value) && value !== '') {
+                return { value: value, display: value };
+            }
+            
+            // It's a formula or expression
+            return { value: value, display: '?' };
         }
 
         // Filter abilities
