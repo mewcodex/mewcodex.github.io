@@ -290,12 +290,18 @@
             color: white;
         }
 
-        .description-2 {
-            color: #666;
-            font-size: 0.95em;
-            margin-top: 5px;
-            padding-top: 5px;
-            border-top: 1px solid #eee;
+        .img-icon {
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.125em;
+            margin: 0 2px;
+        }
+
+        .description-upgraded {
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px solid #ddd;
         }
 
         .no-results {
@@ -584,7 +590,7 @@
                         </td>
                         <td>
                             <div class="description">${parseRichText(ability.description || 'N/A')}</div>
-                            ${ability.description_2 ? `<div class="description">${parseRichText(ability.description_2)}</div>` : ''}
+                            ${ability.description_2 ? `<div class="description description-upgraded">${parseRichText(ability.description_2)}</div>` : ''}
                         </td>
                         <td class="frame-cell">${ability.ability_class || '-'}</td>
                         <td class="frame-cell">${ability.frame_number}</td>
@@ -611,7 +617,7 @@
         }
 
         // Parse rich text markup in descriptions
-        // Handles: [s:.7]text[/s] for italics, [img:xxx] for placeholders, newlines
+        // Handles: [s:.7]text[/s] for italics, [img:xxx] for icons, newlines
         function parseRichText(text) {
             if (!text) return '';
             
@@ -621,8 +627,8 @@
             // Handle [s:.7]...[/s] for italics
             html = html.replace(/\[s:.?\d*\](.*?)\[\/s\]/g, '<i>$1</i>');
             
-            // Handle [img:xxx] placeholders
-            html = html.replace(/\[img:([^\]]+)\]/g, '<span class="img-placeholder" title="$1">[$1]</span>');
+            // Handle [img:xxx] placeholders - use actual icon images
+            html = html.replace(/\[img:([^\]]+)\]/g, '<img src="res/fonticon/$1.png" alt="$1" title="$1" class="img-icon" onerror="this.style.display=\'none\'">');
             
             // Handle newlines
             html = html.replace(/\n/g, '<br>');
