@@ -12,11 +12,28 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --theme: #9f978b;
+            --theme-dark: #7f776b;
+            --theme-light: #c9c1b7;
+            --theme-bg: #efece7;
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #efece7 0%, #c9c1b7 100%);
             min-height: 100vh;
-            padding: 20px;
+            padding: 36px;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            box-shadow: inset 0 0 140px rgba(32, 28, 22, 0.6), inset 0 0 300px rgba(32, 28, 22, 0.45);
+            z-index: 10;
         }
 
         .container {
@@ -24,12 +41,31 @@
             margin: 0 auto;
             background: white;
             border-radius: 8px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(159, 151, 139, 0.35);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25), 0 0 0 6px rgba(159, 151, 139, 0.18);
             overflow: hidden;
+            position: relative;
+            z-index: 0;
+        }
+
+        .header-image {
+            display: block;
+            width: 100%;
+            max-width: 960px;
+            height: 240px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .header-image-wrap {
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(135deg, #9f978b 0%, #7f776b 100%);
+            padding: 12px 16px;
         }
 
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #9f978b 0%, #7f776b 100%);
             color: white;
             padding: 30px;
             text-align: center;
@@ -47,7 +83,7 @@
 
         .controls {
             padding: 20px;
-            background: #f5f5f5;
+            background: #f3f1ee;
             border-bottom: 1px solid #ddd;
             display: flex;
             gap: 15px;
@@ -70,7 +106,7 @@
 
         .stats {
             padding: 20px;
-            background: #f9f9f9;
+            background: #f7f4f0;
             display: flex;
             gap: 20px;
             border-bottom: 1px solid #ddd;
@@ -84,7 +120,7 @@
 
         .stat-label {
             font-weight: 600;
-            color: #667eea;
+            color: #9f978b;
         }
 
         .stat-value {
@@ -102,7 +138,7 @@
         }
 
         thead {
-            background: #f5f5f5;
+            background: #f3f1ee;
             border-bottom: 2px solid #ddd;
         }
 
@@ -120,7 +156,7 @@
         }
 
         tbody tr:hover {
-            background: #f9f9f9;
+            background: #f7f4f0;
         }
 
         td {
@@ -131,7 +167,7 @@
         .frame-cell {
             text-align: center;
             font-weight: 600;
-            color: #667eea;
+            color: #9f978b;
         }
 
         .image-cell {
@@ -203,7 +239,7 @@
         }
 
         .ability-icon:hover {
-            box-shadow: 0 0 8px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 0 8px rgba(159, 151, 139, 0.4);
             transform: scale(1.1);
         }
 
@@ -258,7 +294,7 @@
 
         .ability-class {
             display: inline-block;
-            background: #667eea;
+            background: #9f978b;
             color: white;
             padding: 3px 8px;
             border-radius: 3px;
@@ -518,9 +554,11 @@
 
 <body>
     <div class="container">
+        <div class="header-image-wrap">
+            <img src="header.jpg" alt="Mewgenics header" class="header-image">
+        </div>
         <div class="header">
-            <h1 id="headerTitle">🐱 Mewgenics Ability Viewer</h1>
-            <p id="headerSubtitle">Browse all game abilities with descriptions and icons</p>
+            <h1 id="headerTitle">Mewgenics Ability Viewer</h1>
         </div>
 
         <div class="controls">
@@ -585,7 +623,7 @@
         const UI_TEXT = {
             en: {
                 pageTitle: 'Mewgenics Ability Viewer',
-                headerTitle: '🐱 Mewgenics Ability Viewer',
+                headerTitle: 'Mewgenics Ability Viewer',
                 headerSubtitle: 'Browse all game abilities with descriptions and icons',
                 searchPlaceholder: 'Search by ability name or description...',
                 allClasses: 'All Classes',
@@ -612,7 +650,7 @@
             },
             zh: {
                 pageTitle: 'Mewgenics 能力图鉴',
-                headerTitle: '🐱 Mewgenics 能力图鉴',
+                headerTitle: 'Mewgenics 能力图鉴',
                 headerSubtitle: '浏览所有能力的描述与图标',
                 searchPlaceholder: '按能力名称或描述搜索...',
                 allClasses: '全部职业',
@@ -646,7 +684,6 @@
         function applyUiLanguage() {
             document.title = t('pageTitle');
             document.getElementById('headerTitle').textContent = t('headerTitle');
-            document.getElementById('headerSubtitle').textContent = t('headerSubtitle');
             document.getElementById('searchInput').placeholder = t('searchPlaceholder');
             document.getElementById('totalLabel').textContent = t('totalAbilities');
             document.getElementById('showingLabel').textContent = t('showing');
