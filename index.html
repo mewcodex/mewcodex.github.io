@@ -294,8 +294,12 @@
             display: inline-block;
             width: 1em;
             height: 1em;
-            vertical-align: -0.125em;
+            vertical-align: -0.2em;
             margin: 0 2px;
+        }
+
+        .img-icon-stat {
+            filter: invert(1);
         }
 
         .description-upgraded {
@@ -629,10 +633,13 @@
             
             // Handle [img:xxx] placeholders - use actual icon images
             // Map icon names (handle "con" -> "constitution" for Windows reserved name)
+            // Shield icons (shield, divineshield) stay white; stat icons get inverted to black
             html = html.replace(/\[img:([^\]]+)\]/g, function(match, iconName) {
                 const iconMap = { 'con': 'constitution' };
                 const mappedName = iconMap[iconName] || iconName;
-                return `<img src="res/fonticon/${mappedName}.png" alt="${iconName}" title="${iconName}" class="img-icon" onerror="this.style.display='none'">`;
+                const isShield = iconName === 'shield' || iconName === 'divineshield';
+                const className = isShield ? 'img-icon' : 'img-icon img-icon-stat';
+                return `<img src="res/fonticon/${mappedName}.png" alt="${iconName}" title="${iconName}" class="${className}" onerror="this.style.display='none'">`;
             });
             
             // Handle newlines
