@@ -545,7 +545,7 @@
                     const displayValue = damageValue.display || healValue.display;
                     
                     statsHtml += `<div class="stat-group" ${(damageIsFormula || healIsFormula) ? `title="Formula: ${escapeHtml(damageValue.value || healValue.value)}"` : ''}>`;
-                    statsHtml += `<img src="res/damage_type/${typeIcon}.png" alt="${typeIcon}" class="stat-icon" onerror="this.style.display='none'">`;
+                    statsHtml += `<img src="res/${typeIcon}.png" alt="${typeIcon}" class="stat-icon" onerror="this.style.display='none'">`;
                     statsHtml += `<div class="stat-value ${(damageIsFormula || healIsFormula) ? 'formula' : ''}" title="${escapeHtml(damageValue.value || healValue.value)}">${displayValue}</div>`;
                     statsHtml += '</div>';
                 }
