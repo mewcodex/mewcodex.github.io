@@ -298,10 +298,6 @@
             margin: 0 2px;
         }
 
-        .img-icon-stat {
-            filter: brightness(0);
-        }
-
         .description-upgraded {
             margin-top: 8px;
             padding-top: 8px;
@@ -620,6 +616,45 @@
             return { value: value, display: '?' };
         }
 
+        // Process stat icon images: map white foreground to black, preserve grey background
+        function processStatIconImage(imgElement) {
+            const img = new Image();
+            img.crossOrigin = 'anonymous';
+            img.onload = function() {
+                const canvas = document.createElement('canvas');
+                canvas.width = img.width;
+                canvas.height = img.height;
+                const ctx = canvas.getContext('2d');
+                ctx.drawImage(img, 0, 0);
+                
+                const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                const data = imageData.data;
+                
+                // Map white/light pixels to black, preserve grey
+                // For each pixel: if luminance > 200 (bright white), darken it proportionally
+                for (let i = 0; i < data.length; i += 4) {
+                    const r = data[i];
+                    const g = data[i + 1];
+                    const b = data[i + 2];
+                    const luminance = (r + g + b) / 3;
+                    
+                    // Linear mapping: bright (255) -> black (0), dark grey (128) stays roughly same
+                    // Formula: newValue = luminance * (1 - luminance/255)
+                    // This maps: 255->0, 200->16, 128->64, 100->60, 0->0
+                    // Better: newValue = 255 - luminance (simple invert)
+                    const inverted = 255 - luminance;
+                    data[i] = inverted;
+                    data[i + 1] = inverted;
+                    data[i + 2] = inverted;
+                    // Keep alpha unchanged
+                }
+                
+                ctx.putImageData(imageData, 0, 0);
+                imgElement.src = canvas.toDataURL('image/png');
+            };
+            img.src = imgElement.src;
+        }
+
         // Parse rich text markup in descriptions
         // Handles: [s:.7]text[/s] for italics, [img:xxx] for icons, newlines
         function parseRichText(text) {
@@ -633,13 +668,16 @@
             
             // Handle [img:xxx] placeholders - use actual icon images
             // Map icon names (handle "con" -> "constitution" for Windows reserved name)
-            // Shield icons (shield, divineshield) stay white; stat icons get inverted to black
+            // Shield icons (shield, divineshield) stay white; stat icons get processed to black
             html = html.replace(/\[img:([^\]]+)\]/g, function(match, iconName) {
                 const iconMap = { 'con': 'constitution' };
                 const mappedName = iconMap[iconName] || iconName;
                 const isShield = iconName === 'shield' || iconName === 'divineshield';
-                const className = isShield ? 'img-icon' : 'img-icon img-icon-stat';
-                return `<img src="res/fonticon/${mappedName}.png" alt="${iconName}" title="${iconName}" class="${className}" onerror="this.style.display='none'">`;
+                const className = 'img-icon' + (isShield ? '' : ' img-icon-stat');
+                
+                // Create img tag with onload hook for stat icons to process them
+                const onloadHook = isShield ? '' : ` onload="processStatIconImage(this)"`;
+                return `<img src="res/fonticon/${mappedName}.png" alt="${iconName}" title="${iconName}" class="${className}"${onloadHook} onerror="this.style.display='none'">`;
             });
             
             // Handle newlines
