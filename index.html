@@ -524,7 +524,11 @@
         </div>
 
         <div class="controls">
-            <input type="text" id="searchInput" placeholder="Search by ability name...">
+            <input type="text" id="searchInput" placeholder="Search by ability name or description...">
+            <select id="languageSelect">
+                <option value="en">English</option>
+                <option value="zh">Chinese</option>
+            </select>
             <select id="classFilter">
                 <option value="">All Classes</option>
             </select>
@@ -573,6 +577,7 @@
     <script>
         let allAbilities = [];
         let filteredAbilities = [];
+        let currentLanguage = 'en';
 
         // Load abilities from JSON
         async function loadAbilities() {
@@ -621,6 +626,13 @@
             });
         }
 
+        function getLocalizedText(texts, fallback) {
+            if (!texts || typeof texts !== 'object') {
+                return fallback || '';
+            }
+            return texts[currentLanguage] || fallback || '';
+        }
+
         // Display abilities in table
         function displayAbilities(abilities) {
             const tbody = document.getElementById('tableBody');
@@ -632,6 +644,9 @@
             }
 
             tbody.innerHTML = abilities.map(ability => {
+                const localizedName = getLocalizedText(ability.ability_name_texts, ability.ability_name);
+                const localizedDescription = getLocalizedText(ability.description_texts, ability.description);
+                const localizedDescription2 = getLocalizedText(ability.description2_texts, ability.description_2);
                 const buildStatsHtml = (cost, damage, isUpgraded) => {
                     const damageValue = formatStatValue(damage?.value);
                     const healValue = formatStatValue(damage?.heal_value);
@@ -756,11 +771,11 @@
                         <div class="icon-row">
                             <div class="icon-part">
                                 <div class="tags-line">${tagsRenderedHtml}</div>
-                                <img src="AbilityIcon/${ability.frame_number}.png" 
-                                     alt="${ability.ability_name}"
+                                  <img src="AbilityIcon/${ability.frame_number}.png" 
+                                      alt="${escapeHtml(localizedName)}"
                                      class="ability-icon"
                                      onerror="this.style.display='none'"
-                                     onclick="openModal(this.src, '${escapeHtml(ability.ability_name)}')">
+                                      onclick="openModal(this.src, '${escapeHtml(localizedName)}')">
                             </div>
                             <div class="stats-stack">
                                 ${baseStatsHtml}
@@ -777,11 +792,11 @@
                         <div class="icon-row">
                             <div class="icon-part">
                                 <div class="tags-line upgraded">${tagsRenderedUpgradedHtml}</div>
-                                <img src="AbilityIcon/${ability.frame_number}.png" 
-                                     alt="${ability.ability_name}"
+                                  <img src="AbilityIcon/${ability.frame_number}.png" 
+                                      alt="${escapeHtml(localizedName)}"
                                      class="ability-icon"
                                      onerror="this.style.display='none'"
-                                     onclick="openModal(this.src, '${escapeHtml(ability.ability_name)}')">
+                                      onclick="openModal(this.src, '${escapeHtml(localizedName)}')">
                             </div>
                             <div class="stats-stack">
                                 ${upgradedStatsHtml}
@@ -796,11 +811,11 @@
                         <div class="icon-row">
                             <div class="icon-part">
                                 <div class="tags-line">${tagsRenderedHtml}</div>
-                                <img src="AbilityIcon/${ability.frame_number}.png" 
-                                     alt="${ability.ability_name}"
+                                  <img src="AbilityIcon/${ability.frame_number}.png" 
+                                      alt="${escapeHtml(localizedName)}"
                                      class="ability-icon"
                                      onerror="this.style.display='none'"
-                                     onclick="openModal(this.src, '${escapeHtml(ability.ability_name)}')">
+                                      onclick="openModal(this.src, '${escapeHtml(localizedName)}')">
                             </div>
                             <div class="stats-stack">
                                 ${baseStatsHtml}${upgradedStatsHtml}
@@ -820,12 +835,12 @@
                             </div>
                         </td>
                         <td>
-                            <div class="ability-name">${escapeHtml(ability.ability_name)}</div>
+                            <div class="ability-name">${escapeHtml(localizedName)}</div>
                             ${ability.ability_class ? `<div class="ability-class class-${ability.ability_class.toLowerCase()}">${escapeHtml(ability.ability_class)}</div>` : ''}
                         </td>
                         <td>
-                            <div class="description">${parseRichText(ability.description || 'N/A')}</div>
-                            ${ability.description_2 ? `<div class="description description-upgraded">${parseRichText(ability.description_2)}</div>` : ''}
+                            <div class="description">${parseRichText(localizedDescription || 'N/A')}</div>
+                            ${localizedDescription2 ? `<div class="description description-upgraded">${parseRichText(localizedDescription2)}</div>` : ''}
                         </td>
                         <td class="frame-cell">${ability.ability_class || '-'}</td>
                         <td class="frame-cell">${ability.frame_number}</td>
@@ -891,8 +906,9 @@
             const classFilter = document.getElementById('classFilter').value;
 
             filteredAbilities = allAbilities.filter(ability => {
-                const matchesSearch = ability.ability_name.toLowerCase().includes(search) ||
-                    (ability.description && ability.description.toLowerCase().includes(search));
+                const localizedName = getLocalizedText(ability.ability_name_texts, ability.ability_name).toLowerCase();
+                const localizedDescription = getLocalizedText(ability.description_texts, ability.description).toLowerCase();
+                const matchesSearch = localizedName.includes(search) || localizedDescription.includes(search);
                 const matchesClass = !classFilter || ability.ability_class === classFilter;
                 return matchesSearch && matchesClass;
             });
@@ -936,6 +952,10 @@
         // Event listeners
         document.getElementById('searchInput').addEventListener('input', filterAbilities);
         document.getElementById('classFilter').addEventListener('change', filterAbilities);
+        document.getElementById('languageSelect').addEventListener('change', (event) => {
+            currentLanguage = event.target.value;
+            filterAbilities();
+        });
 
         // Load on page load
         window.addEventListener('load', loadAbilities);
