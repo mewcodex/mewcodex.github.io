@@ -520,6 +520,9 @@
         }
 
         @media (max-width: 768px) {
+            body {
+                padding: 24px 16px;
+            }
 
             th,
             td {
@@ -677,6 +680,39 @@
             }
         };
 
+        const CLASS_LABELS = {
+            en: {
+                fighter: 'Fighter',
+                thief: 'Thief',
+                tank: 'Tank',
+                mage: 'Mage',
+                medic: 'Medic',
+                hunter: 'Hunter',
+                necromancer: 'Necromancer',
+                butcher: 'Butcher',
+                monk: 'Monk',
+                druid: 'Druid',
+                psychic: 'Psychic',
+                tinkerer: 'Tinkerer',
+                jester: 'Jester',
+            },
+            zh: {
+                fighter: '战士',
+                thief: '盗贼',
+                tank: '坦克',
+                mage: '法师',
+                medic: '医师',
+                hunter: '猎人',
+                necromancer: '死灵法师',
+                butcher: '屠夫',
+                monk: '武僧',
+                druid: '德鲁伊',
+                psychic: '灵能者',
+                tinkerer: '工匠',
+                jester: '小丑',
+            }
+        };
+
         function t(key) {
             return UI_TEXT[currentLanguage]?.[key] || UI_TEXT.en[key] || key;
         }
@@ -697,11 +733,9 @@
             document.getElementById('footerAuthor').textContent = t('footerAuthor');
             document.getElementById('footerTranslator').textContent = t('footerTranslator');
             document.getElementById('footerTools').textContent = t('footerTools');
-
             const classFilter = document.getElementById('classFilter');
-            if (classFilter?.options?.length) {
-                classFilter.options[0].textContent = t('allClasses');
-            }
+            const selectedClass = classFilter ? classFilter.value : '';
+            populateClassFilter(selectedClass);
 
             const loadingMessage = document.getElementById('loadingMessage');
             if (loadingMessage) {
@@ -720,7 +754,6 @@
                 allAbilities = data.abilities;
 
                 document.getElementById('totalCount').textContent = allAbilities.length;
-                populateClassFilter();
                 applyUiLanguage();
                 displayAbilities(allAbilities);
             } catch (error) {
@@ -742,19 +775,31 @@
         }
 
         // Populate class filter dropdown
-        function populateClassFilter() {
+        function populateClassFilter(selectedValue = '') {
             const classes = [...new Set(allAbilities
                 .map(a => a.ability_class)
                 .filter(c => c))
             ].sort();
 
             const select = document.getElementById('classFilter');
+            if (!select) {
+                return;
+            }
+            select.innerHTML = '';
+
+            const allOption = document.createElement('option');
+            allOption.value = '';
+            allOption.textContent = t('allClasses');
+            select.appendChild(allOption);
+
             classes.forEach(cls => {
                 const option = document.createElement('option');
                 option.value = cls;
-                option.textContent = cls;
+                option.textContent = getClassLabel(cls);
                 select.appendChild(option);
             });
+
+            select.value = selectedValue;
         }
 
         function getLocalizedText(texts, fallback) {
@@ -762,6 +807,14 @@
                 return fallback || '';
             }
             return texts[currentLanguage] || fallback || '';
+        }
+
+        function getClassLabel(className) {
+            if (!className) {
+                return '';
+            }
+            const key = className.toLowerCase();
+            return CLASS_LABELS[currentLanguage]?.[key] || CLASS_LABELS.en[key] || className;
         }
 
         // Display abilities in table
@@ -778,6 +831,7 @@
                 const localizedName = getLocalizedText(ability.ability_name_texts, ability.ability_name);
                 const localizedDescription = getLocalizedText(ability.description_texts, ability.description);
                 const localizedDescription2 = getLocalizedText(ability.description2_texts, ability.description_2);
+                const classLabel = ability.ability_class ? getClassLabel(ability.ability_class) : '';
                 const buildStatsHtml = (cost, damage, isUpgraded) => {
                     const damageValue = formatStatValue(damage?.value);
                     const healValue = formatStatValue(damage?.heal_value);
@@ -967,7 +1021,7 @@
                         </td>
                         <td>
                             <div class="ability-name">${escapeHtml(localizedName)}</div>
-                            ${ability.ability_class ? `<div class="ability-class class-${ability.ability_class.toLowerCase()}">${escapeHtml(ability.ability_class)}</div>` : ''}
+                            ${classLabel ? `<div class="ability-class class-${ability.ability_class.toLowerCase()}">${escapeHtml(classLabel)}</div>` : ''}
                         </td>
                         <td>
                             <div class="description">${parseRichText(localizedDescription || 'N/A')}</div>
