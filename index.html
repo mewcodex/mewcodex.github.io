@@ -64,6 +64,37 @@
             padding: 12px 16px;
         }
 
+        .navbar {
+            background: linear-gradient(135deg, #827a6e 0%, #6d6559 100%);
+            border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            padding: 0;
+        }
+
+        .navbar a {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            padding: 14px 32px;
+            font-size: 1em;
+            font-weight: 500;
+            transition: all 0.2s;
+            border-bottom: 3px solid transparent;
+            position: relative;
+        }
+
+        .navbar a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        .navbar a.active {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border-bottom-color: #efece7;
+        }
+
         .header {
             background: linear-gradient(135deg, #9f978b 0%, #7f776b 100%);
             color: white;
@@ -148,6 +179,32 @@
             font-weight: 600;
             color: #333;
             white-space: nowrap;
+        }
+
+        th.sortable {
+            cursor: pointer;
+            user-select: none;
+            transition: background 0.2s;
+        }
+
+        th.sortable:hover {
+            background: rgba(159, 151, 139, 0.1);
+        }
+
+        th .sort-indicator {
+            margin-left: 5px;
+            font-size: 0.8em;
+            color: #999;
+        }
+
+        th.sort-asc .sort-indicator::after {
+            content: '▲';
+            color: #9f978b;
+        }
+
+        th.sort-desc .sort-indicator::after {
+            content: '▼';
+            color: #9f978b;
         }
 
         tbody tr {
@@ -570,6 +627,10 @@
         <div class="header-image-wrap">
             <img src="header.jpg" alt="Mewgenics header" class="header-image">
         </div>
+        <div class="navbar">
+            <a href="index.html" class="active" id="navAbilities">Abilities</a>
+            <a href="items.html" id="navItems">Items</a>
+        </div>
         <div class="header">
             <h1 id="headerTitle">Mewgenics Ability Viewer</h1>
         </div>
@@ -578,8 +639,8 @@
             <input type="text" id="searchInput" placeholder="Search by ability name or description...">
             <label id="languageLabel" for="languageSelect">Language:</label>
             <select id="languageSelect">
-                <option value="en">English</option>
-                <option value="zh">Chinese</option>
+                <option value="en" id="langOptionEn">English</option>
+                <option value="zh" id="langOptionZh">Chinese</option>
             </select>
             <select id="classFilter">
                 <option value="">All Classes</option>
@@ -604,7 +665,8 @@
                         <th id="iconHeader" style="width: 60px;">Icon</th>
                         <th id="nameHeader" style="width: 150px;">Ability Name</th>
                         <th id="descHeader">Description</th>
-                        <th id="classHeader" style="width: 100px;">Class</th>
+                        <th id="classHeader" class="sortable" style="width: 100px;" onclick="sortBy('class')">Class<span
+                                class="sort-indicator"></span></th>
                         <th id="frameHeader" style="width: 80px;" hidden>Frame</th>
                     </tr>
                 </thead>
@@ -634,13 +696,44 @@
         let allAbilities = [];
         let filteredAbilities = [];
         let currentLanguage = 'en';
+        let currentSort = { column: null, direction: 'asc' };
+
+        // Get language from URL parameter
+        function updateNavbarLinks() {
+            const lang = currentLanguage !== 'en' ? `?lang=${currentLanguage}` : '';
+            document.getElementById('navAbilities').href = `index.html${lang}`;
+            document.getElementById('navItems').href = `items.html${lang}`;
+        }
+
+        function getUrlParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Set language in URL parameter
+        function setUrlParameter(name, value) {
+            const url = new URL(window.location);
+            url.searchParams.set(name, value);
+            window.history.replaceState({}, '', url);
+        }
+
+        // Initialize language from URL if present
+        const urlLang = getUrlParameter('lang');
+        if (urlLang === 'zh' || urlLang === 'en') {
+            currentLanguage = urlLang;
+        }
+
         const UI_TEXT = {
             en: {
                 pageTitle: 'Mewgenics Ability Viewer',
                 headerTitle: 'Mewgenics Ability Viewer',
                 headerSubtitle: 'Browse all game abilities with descriptions and icons',
                 searchPlaceholder: 'Search by ability name or description...',
+                navAbilities: 'Abilities',
+                navItems: 'Items',
                 languageLabel: 'Language:',
+                languageEnglish: 'English',
+                languageChinese: 'Chinese',
                 allClasses: 'All Classes',
                 totalAbilities: 'Total Abilities:',
                 showing: 'Showing:',
@@ -668,7 +761,11 @@
                 headerTitle: 'Mewgenics 能力图鉴',
                 headerSubtitle: '浏览所有能力的描述与图标',
                 searchPlaceholder: '按能力名称或描述搜索...',
+                navAbilities: '能力',
+                navItems: '物品',
                 languageLabel: '语言：',
+                languageEnglish: '英语',
+                languageChinese: '中文',
                 allClasses: '全部职业',
                 totalAbilities: '能力总数：',
                 showing: '显示：',
@@ -736,19 +833,26 @@
             document.title = t('pageTitle');
             document.getElementById('headerTitle').textContent = t('headerTitle');
             document.getElementById('searchInput').placeholder = t('searchPlaceholder');
+            document.getElementById('navAbilities').textContent = t('navAbilities');
+            document.getElementById('navItems').textContent = t('navItems');
             document.getElementById('languageLabel').textContent = t('languageLabel');
+            document.getElementById('langOptionEn').textContent = t('languageEnglish');
+            document.getElementById('langOptionZh').textContent = t('languageChinese');
             document.getElementById('totalLabel').textContent = t('totalAbilities');
             document.getElementById('showingLabel').textContent = t('showing');
             document.getElementById('iconHeader').textContent = t('iconHeader');
             document.getElementById('nameHeader').textContent = t('nameHeader');
             document.getElementById('descHeader').textContent = t('descHeader');
-            document.getElementById('classHeader').textContent = t('classHeader');
+            const classHeader = document.getElementById('classHeader');
+            classHeader.innerHTML = t('classHeader') + '<span class="sort-indicator"></span>';
             document.getElementById('frameHeader').textContent = t('frameHeader');
             document.getElementById('footerSource').textContent = t('footerSource');
             document.getElementById('footerCredit').textContent = t('footerCredit');
             document.getElementById('footerAuthor').textContent = t('footerAuthor');
             document.getElementById('footerTranslator').textContent = t('footerTranslator');
             document.getElementById('footerTools').textContent = t('footerTools');
+
+            updateNavbarLinks();
             const classFilter = document.getElementById('classFilter');
             const selectedClass = classFilter ? classFilter.value : '';
             populateClassFilter(selectedClass);
@@ -768,10 +872,11 @@
                 }
                 const data = await response.json();
                 allAbilities = data.abilities;
+                filteredAbilities = allAbilities;
 
                 document.getElementById('totalCount').textContent = allAbilities.length;
                 applyUiLanguage();
-                displayAbilities(allAbilities);
+                displayAbilities(filteredAbilities);
             } catch (error) {
                 console.error('Error loading abilities:', error);
                 const errorMsg = `
@@ -1051,6 +1156,44 @@
             document.getElementById('showingCount').textContent = abilities.length;
         }
 
+        function sortBy(column) {
+            // Toggle direction if clicking same column, otherwise default to ascending
+            if (currentSort.column === column) {
+                currentSort.direction = currentSort.direction === 'asc' ? 'desc' : 'asc';
+            } else {
+                currentSort.column = column;
+                currentSort.direction = 'asc';
+            }
+
+            // Update sort indicators
+            document.querySelectorAll('thead th').forEach(th => {
+                th.classList.remove('sort-asc', 'sort-desc');
+            });
+            const headerMap = {
+                'class': 'classHeader'
+            };
+            const header = document.getElementById(headerMap[column]);
+            if (header) {
+                header.classList.add(`sort-${currentSort.direction}`);
+            }
+
+            // Sort filtered abilities
+            const sortedAbilities = [...filteredAbilities].sort((a, b) => {
+                let valueA, valueB;
+
+                if (column === 'class') {
+                    valueA = a.ability_class || '';
+                    valueB = b.ability_class || '';
+                }
+
+                if (valueA < valueB) return currentSort.direction === 'asc' ? -1 : 1;
+                if (valueA > valueB) return currentSort.direction === 'asc' ? 1 : -1;
+                return 0;
+            });
+
+            displayAbilities(sortedAbilities);
+        }
+
         // Format stat values: if numeric, show as-is; if formula, show "?"
         function formatStatValue(value) {
             if (value === null || value === undefined) {
@@ -1154,8 +1297,15 @@
         document.getElementById('classFilter').addEventListener('change', filterAbilities);
         document.getElementById('languageSelect').addEventListener('change', (event) => {
             currentLanguage = event.target.value;
+            setUrlParameter('lang', currentLanguage);
             applyUiLanguage();
             filterAbilities();
+        });
+
+        // Apply language immediately when DOM is ready (before data loads)
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('languageSelect').value = currentLanguage;
+            applyUiLanguage();
         });
 
         // Load on page load

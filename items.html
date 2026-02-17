@@ -1,0 +1,1632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Items Viewer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --theme: #9f978b;
+            --theme-dark: #7f776b;
+            --theme-light: #c9c1b7;
+            --theme-bg: #efece7;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #efece7 0%, #c9c1b7 100%);
+            min-height: 100vh;
+            padding: 36px;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            box-shadow: inset 0 0 140px rgba(32, 28, 22, 0.6), inset 0 0 300px rgba(32, 28, 22, 0.45);
+            z-index: 10;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid rgba(159, 151, 139, 0.35);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25), 0 0 0 6px rgba(159, 151, 139, 0.18);
+            overflow: hidden;
+            position: relative;
+            z-index: 0;
+        }
+
+        .header-image {
+            display: block;
+            width: 100%;
+            max-width: 960px;
+            height: 240px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .header-image-wrap {
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(135deg, #9f978b 0%, #7f776b 100%);
+            padding: 12px 16px;
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, #827a6e 0%, #6d6559 100%);
+            border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            padding: 0;
+        }
+
+        .navbar a {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            padding: 14px 32px;
+            font-size: 1em;
+            font-weight: 500;
+            transition: all 0.2s;
+            border-bottom: 3px solid transparent;
+            position: relative;
+        }
+
+        .navbar a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        .navbar a.active {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border-bottom-color: #efece7;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #9f978b 0%, #7f776b 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .controls {
+            padding: 20px;
+            background: #f3f1ee;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .search-wrapper {
+            position: relative;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .controls input,
+        .controls select {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        .controls input {
+            width: 100%;
+            padding-right: 35px;
+        }
+
+        .clear-button {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #999;
+            font-size: 1.3em;
+            cursor: pointer;
+            padding: 0;
+            width: 24px;
+            height: 24px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.2s;
+        }
+
+        .clear-button:hover {
+            background: #e0e0e0;
+            color: #666;
+        }
+
+        .clear-button.visible {
+            display: flex;
+        }
+
+        .filter-tags {
+            padding: 10px 20px;
+            background: #f7f4f0;
+            border-bottom: 1px solid #ddd;
+            display: none;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .filter-tags.visible {
+            display: flex;
+        }
+
+        .filter-tags-header {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .set-bonus-info {
+            background: white;
+            border: 2px solid #9f978b;
+            border-radius: 6px;
+            padding: 12px 15px;
+            font-size: 0.95em;
+        }
+
+        .set-bonus-title {
+            font-weight: bold;
+            color: #9f978b;
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+
+        .set-bonus-pieces {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 8px;
+        }
+
+        .set-bonus-desc {
+            color: #333;
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+
+        .set-bonus-stats {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 4px;
+            font-size: 0.9em;
+        }
+
+        .set-bonus-stat {
+            display: inline-flex;
+            align-items: center;
+            gap: 3px;
+            color: #666;
+            font-weight: 400;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .set-bonus-stat.positive {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .set-bonus-stat.negative {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .filter-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 10px;
+            background: #9f978b;
+            color: white;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+
+        .filter-tag-label {
+            color: #e0e0e0;
+            font-size: 0.85em;
+        }
+
+        .filter-tag-remove {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            padding: 0;
+            font-size: 1.2em;
+            line-height: 1;
+            width: 16px;
+            height: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background 0.2s;
+        }
+
+        .filter-tag-remove:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .stats {
+            padding: 20px;
+            background: #f7f4f0;
+            display: flex;
+            gap: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .stat-item {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .stat-label {
+            font-weight: 600;
+            color: #9f978b;
+        }
+
+        .stat-value {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f3f1ee;
+            border-bottom: 2px solid #ddd;
+        }
+
+        th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            color: #333;
+            white-space: nowrap;
+        }
+
+        th.sortable {
+            cursor: pointer;
+            user-select: none;
+            transition: background 0.2s;
+        }
+
+        th.sortable:hover {
+            background: rgba(159, 151, 139, 0.1);
+        }
+
+        th .sort-indicator {
+            margin-left: 5px;
+            font-size: 0.8em;
+            color: #999;
+        }
+
+        th.sort-asc .sort-indicator::after {
+            content: '▲';
+            color: #9f978b;
+        }
+
+        th.sort-desc .sort-indicator::after {
+            content: '▼';
+            color: #9f978b;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid #eee;
+            transition: background 0.2s;
+        }
+
+        tbody tr:hover {
+            background: #f7f4f0;
+        }
+
+        td {
+            padding: 12px 15px;
+            vertical-align: top;
+        }
+
+        .image-cell {
+            text-align: center;
+        }
+
+        .item-icon-wrapper {
+            display: inline-block;
+            width: 64px;
+            height: 64px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+        }
+
+        .item-icon {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+            cursor: zoom-in;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .item-icon-rare {
+            top: 55%;
+        }
+
+        .item-icon-wrapper:hover .item-icon,
+        .item-icon-wrapper:hover .item-icon-rare {
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        .part-icon {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            vertical-align: text-bottom;
+            margin-right: 4px;
+        }
+
+        .item-name {
+            font-weight: 600;
+            color: #333;
+            word-break: break-word;
+        }
+
+        .item-sets {
+            font-size: 0.85em;
+            color: #666;
+            margin-top: 4px;
+        }
+
+        .item-set-badge {
+            display: inline-block;
+            background: #e9e9e9;
+            border: 1px solid #ccc;
+            color: #555;
+            padding: 2px 6px;
+            border-radius: 3px;
+            margin-right: 4px;
+            font-size: 0.9em;
+            transition: all 0.2s;
+        }
+
+        .item-set-badge:hover {
+            background: #9f978b;
+            border-color: #7f776b;
+            color: white;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .item-rarity {
+            display: inline-flex;
+            align-items: center;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-transform: capitalize;
+            white-space: nowrap;
+        }
+
+        .rarity-common {
+            background: #95a5a6;
+            color: white;
+        }
+
+        .rarity-uncommon {
+            background: #27ae60;
+            color: white;
+        }
+
+        .rarity-rare {
+            background: #3498db;
+            color: white;
+        }
+
+        .rarity-very_rare {
+            background: #9b59b6;
+            color: white;
+        }
+
+        .rarity-quest {
+            background: #e67e22;
+            color: white;
+        }
+
+        .rarity-sidequest {
+            background: #c0392b;
+            color: white;
+        }
+
+        .kind-trinket {
+            background: #e67e22;
+            color: white;
+        }
+
+        .kind-weapon {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .kind-neck {
+            background: #3498db;
+            color: white;
+        }
+
+        .kind-face {
+            background: #16a085;
+            color: white;
+        }
+
+        .kind-head {
+            background: #8e44ad;
+            color: white;
+        }
+
+        .description {
+            color: #666;
+            font-size: 0.95em;
+            word-break: break-word;
+            max-width: 400px;
+            line-height: 1.4;
+        }
+
+        .img-icon {
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.2em;
+            margin: 0 2px;
+        }
+
+        .img-icon-stat {
+            filter: brightness(0) saturate(100%);
+        }
+
+        .item-stats {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 4px;
+            font-size: 0.9em;
+        }
+
+        .item-stat {
+            display: inline-flex;
+            align-items: center;
+            gap: 3px;
+            color: #666;
+            font-weight: 400;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .item-stat.positive {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .item-stat.negative {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .item-durability {
+            margin-top: 4px;
+            font-size: 0.85em;
+            color: #888;
+            font-style: italic;
+        }
+
+        code {
+            background: #e8e8e8;
+            border-radius: 3px;
+            padding: 2px 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #333;
+        }
+
+        .item-consumable {
+            text-align: center;
+            font-size: 0.9em;
+            font-weight: 500;
+            color: #555;
+        }
+
+        .no-results {
+            padding: 40px;
+            text-align: center;
+            color: #999;
+            font-size: 1.1em;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90vh;
+            margin-top: 5%;
+            animation: slideIn 0.3s;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .modal-close:hover {
+            color: #ddd;
+        }
+
+        .footer {
+            padding: 20px;
+            background: #f5f5f5;
+            text-align: center;
+            color: #999;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 24px 16px;
+            }
+
+            th,
+            td {
+                padding: 8px;
+                font-size: 0.9em;
+            }
+
+            .item-icon-wrapper {
+                width: 48px;
+                height: 48px;
+            }
+
+            .item-icon {
+                width: 36px;
+                height: 36px;
+            }
+
+            .description {
+                max-width: 150px;
+                font-size: 0.85em;
+            }
+
+            .controls {
+                flex-direction: column;
+            }
+
+            .controls input {
+                min-width: auto;
+            }
+
+            .header h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header-image-wrap">
+            <img src="header.jpg" alt="Mewgenics header" class="header-image">
+        </div>
+        <div class="navbar">
+            <a href="index.html" id="navAbilities">Abilities</a>
+            <a href="items.html" class="active" id="navItems">Items</a>
+        </div>
+        <div class="header">
+            <h1 id="headerTitle">Mewgenics Item Viewer</h1>
+        </div>
+
+        <div class="controls">
+            <div class="search-wrapper">
+                <input type="text" id="searchInput" placeholder="Search by item name or description...">
+                <button class="clear-button" id="clearButton" title="Clear search">×</button>
+            </div>
+            <label id="languageLabel" for="languageSelect">Language:</label>
+            <select id="languageSelect">
+                <option value="en" id="langOptionEn">English</option>
+                <option value="zh" id="langOptionZh">Chinese</option>
+            </select>
+            <select id="kindFilter">
+                <option value="">All Types</option>
+            </select>
+            <select id="rarityFilter">
+                <option value="">All Rarities</option>
+            </select>
+            <select id="consumableFilter">
+                <option value="">All Items</option>
+            </select>
+        </div>
+
+        <div class="filter-tags" id="filterTags">
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-label" id="totalLabel">Total Items:</span>
+                <span class="stat-value" id="totalCount">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label" id="showingLabel">Showing:</span>
+                <span class="stat-value" id="showingCount">0</span>
+            </div>
+        </div>
+
+        <div class="table-wrapper">
+            <table id="itemsTable">
+                <thead>
+                    <tr>
+                        <th id="iconHeader" style="width: 60px;">Icon</th>
+                        <th id="nameHeader" style="width: 180px;">Item Name</th>
+                        <th id="descHeader">Description</th>
+                        <th id="typeHeader" class="sortable" style="width: 100px;" onclick="sortBy('type')">Type<span
+                                class="sort-indicator"></span></th>
+                        <th id="consumableHeader" class="sortable" style="width: 100px;" onclick="sortBy('consumable')">
+                            Consumable<span class="sort-indicator"></span></th>
+                        <th id="rarityHeader" class="sortable" style="width: 100px;" onclick="sortBy('rarity')">
+                            Rarity<span class="sort-indicator"></span></th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <tr>
+                        <td colspan="6" class="no-results" id="loadingMessage">Loading items...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="footer">
+            <p id="footerSource">Free fan site with data from game item definitions.</p>
+            <p id="footerCredit">Original game by Edmund McMillen and Tyler Glaiel.</p>
+            <p id="footerAuthor">Created by: Bilibili@Alriph</p>
+            <p id="footerTranslator">Chinese translation: Bilibili@地下丝绒和妮可</p>
+        </div>
+    </div>
+
+    <div id="imageModal" class="modal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        let allItems = [];
+        let filteredItems = [];
+        let setBonusesData = [];
+        let currentLanguage = 'en';
+        let currentSort = { column: null, direction: 'asc' };
+
+        // Get language from URL parameter
+        function updateNavbarLinks() {
+            const lang = currentLanguage !== 'en' ? `?lang=${currentLanguage}` : '';
+            document.getElementById('navAbilities').href = `index.html${lang}`;
+            document.getElementById('navItems').href = `items.html${lang}`;
+        }
+
+        function getUrlParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Set language in URL parameter
+        function setUrlParameter(name, value) {
+            const url = new URL(window.location);
+            url.searchParams.set(name, value);
+            window.history.replaceState({}, '', url);
+        }
+
+        // Initialize language from URL or default to 'en'
+        const urlLang = getUrlParameter('lang');
+        if (urlLang && ['en', 'zh'].includes(urlLang)) {
+            currentLanguage = urlLang;
+        }
+
+        const UI_TEXT = {
+            en: {
+                pageTitle: 'Mewgenics Item Viewer',
+                headerTitle: 'Mewgenics Item Viewer',
+                searchPlaceholder: 'Search by name/description or use #SetName for sets...',
+                navAbilities: 'Abilities',
+                navItems: 'Items',
+                languageLabel: 'Language:',
+                languageEnglish: 'English',
+                languageChinese: 'Chinese',
+                allTypes: 'All Types',
+                allRarities: 'All Rarities',
+                allConsumable: 'All Items',
+                consumableOnly: 'Consumable Only',
+                nonConsumable: 'Non-Consumable',
+                totalItems: 'Total Items:',
+                showing: 'Showing:',
+                iconHeader: 'Icon',
+                nameHeader: 'Item Name',
+                descHeader: 'Description',
+                typeHeader: 'Type',
+                consumableHeader: 'Consumable',
+                consumableYes: 'Yes',
+                consumableNo: 'No',
+                rarityHeader: 'Rarity',
+                loading: 'Loading items...',
+                noResults: 'No items found matching your filters.',
+                sets: 'Sets:',
+                durabilityLeft: '{amount} durability left',
+                auxCatName: '`cat name`',
+                strAuxPassiveName: '`random passive ability`',
+                strAuxPassiveDesc: '`random passive ability description`',
+                strAuxItemDesc: '`random item description`',
+                strAuxActiveName: '`random active ability`',
+                strAuxActiveDesc: '`random active ability description`',
+                footerSource: 'Free fan site with data from game item definitions.',
+                footerCredit: 'Original game by Edmund McMillen and Tyler Glaiel.',
+                footerAuthor: 'Created by: Bilibili@Alriph',
+                footerTranslator: 'Chinese translation: Bilibili@地下丝绒和妮可',
+            },
+            zh: {
+                pageTitle: 'Mewgenics 物品图鉴',
+                headerTitle: 'Mewgenics 物品图鉴',
+                searchPlaceholder: '按名称/描述搜索，或使用 #套装名 搜索套装...',
+                navAbilities: '能力',
+                navItems: '物品',
+                languageLabel: '语言：',
+                languageEnglish: '英语',
+                languageChinese: '中文',
+                allTypes: '全部类型',
+                allRarities: '全部稀有度',
+                allConsumable: '全部物品',
+                consumableOnly: '仅消耗品',
+                nonConsumable: '非消耗品',
+                totalItems: '物品总数：',
+                showing: '显示：',
+                iconHeader: '图标',
+                nameHeader: '物品名称',
+                descHeader: '描述',
+                typeHeader: '类型',
+                consumableHeader: '消耗品',
+                consumableYes: '是',
+                consumableNo: '否',
+                rarityHeader: '稀有度',
+                loading: '正在加载物品...',
+                noResults: '没有找到符合筛选条件的物品。',
+                sets: '套装：',
+                durabilityLeft: '剩余 {amount} 耐久度',
+                auxCatName: '`猫的名字`',
+                strAuxPassiveName: '`随机被动技能`',
+                strAuxPassiveDesc: '`随机被动技能描述`',
+                strAuxItemDesc: '`随机物品描述`',
+                strAuxActiveName: '`随机主动技能`',
+                strAuxActiveDesc: '`随机主动技能描述`',
+                footerSource: '这是一个免费同人站点，数据来自游戏物品定义。',
+                footerCredit: '原作游戏作者：Edmund McMillen 与 Tyler Glaiel。',
+                footerAuthor: '制作：Bilibili@Alriph',
+                footerTranslator: '中文翻译：Bilibili@地下丝绒和妮可',
+            }
+        };
+
+        const KIND_LABELS = {
+            en: {
+                trinket: 'Trinket',
+                weapon: 'Weapon',
+                neck: 'Neck',
+                face: 'Face',
+                head: 'Head',
+            },
+            zh: {
+                trinket: '饰品',
+                weapon: '武器',
+                neck: '项链',
+                face: '面部',
+                head: '头部',
+            }
+        };
+
+        const RARITY_LABELS = {
+            en: {
+                common: 'Common',
+                uncommon: 'Uncommon',
+                uncommmon: 'Uncommmon', // typo in game data
+                medium: 'Medium',
+                rare: 'Rare',
+                very_rare: 'Very Rare',
+                quest: 'Quest',
+                sidequest: 'Side Quest',
+            },
+            zh: {
+                common: '普通',
+                uncommon: '罕见',
+                uncommmon: '罕罕见', // typo in game data
+                medium: '中等',
+                rare: '稀有',
+                very_rare: '超稀有',
+                quest: '任务',
+                sidequest: '支线任务',
+            }
+        };
+
+        const SET_LABELS = {
+            en: {
+                AdvancedAlloy: 'Advanced Alloy', Alloy: 'Alloy', Amoeba: 'Amoeba', Ancestor: 'Ancestor', Baby: 'Baby',
+                Barbed: 'Barbed', Bionic: 'Bionic', Bloody: 'Bloody', Bone: 'Bone', Brick: 'Brick', Butcher: 'Butcher',
+                Cactus: 'Cactus', Carapace: 'Carapace', Cardboard: 'Cardboard', CatHide: 'Cat Hide', Caveman: 'Caveman',
+                Chip: 'Chip', Cleric: 'Cleric', Collarless: 'Collarless', Cool: 'Cool', Copycat: 'Copycat', Cyborg: 'Cyborg',
+                Debris: 'Debris', Demonic: 'Demonic', Dino: 'Dino', DirtClod: 'Dirt Clod', Druid: 'Druid',
+                EliteAlloy: 'Elite Alloy', Experimental: 'Experimental', Fatty: 'Fatty', Feathered: 'Feathered',
+                Fecal: 'Fecal', Fighter: 'Fighter', Flower: 'Flower', Fly: 'Fly', Frozen: 'Frozen', Gemstone: 'Gemstone',
+                Gimp: 'Gimp', Godhead: 'Godhead', Grub: 'Grub', Guts: 'Guts', Hippie: 'Hippie', HumanFlesh: 'Human Flesh',
+                Hunter: 'Hunter', Hybrid: 'Hybrid', JankAlloy: 'Jank Alloy', Jester: 'Jester', Lead: 'Lead', Leafy: 'Leafy',
+                Leather: 'Leather', Leech: 'Leech', Lucky: 'Lucky', Mage: 'Mage', Man: 'Man', Meat: 'Meat', Medical: 'Medical',
+                Miner: 'Miner', Molten: 'Molten', Monk: 'Monk', Mother: 'Mother', Mummy: 'Mummy', Necromancer: 'Necromancer',
+                Ninja: 'Ninja', Nurse: 'Nurse', Obelisk: 'Obelisk', Paper: 'Paper', Parasite: 'Parasite', Phoenix: 'Phoenix',
+                Planet: 'Planet', Prowler: 'Prowler', Psychic: 'Psychic', Radioactive: 'Radioactive', Rag: 'Rag', Rat: 'Rat',
+                Recycled: 'Recycled', Rock: 'Rock', Rotten: 'Rotten', Rubber: 'Rubber', Rune: 'Rune', 'Rune *': 'Rune *',
+                Scrap: 'Scrap', Slimy: 'Slimy', Sludge: 'Sludge', Space: 'Space', Steven: 'Steven', Stunning: 'Stunning',
+                Superhero: 'Superhero', Survivalist: 'Survivalist', Tank: 'Tank', Tentacle: 'Tentacle', Thief: 'Thief',
+                Thrumming: 'Thrumming', Tinkerer: 'Tinkerer', Transmitter: 'Transmitter', Twine: 'Twine', Used: 'Used',
+                Veiny: 'Veiny', Witch: 'Witch', Wood: 'Wood', Wooly: 'Wooly', Worm: 'Worm'
+            },
+            zh: {
+                AdvancedAlloy: '高级合金', Alloy: '合金', Amoeba: '变形虫', Ancestor: '祖先', Baby: '婴儿',
+                Barbed: '倒刺', Bionic: '仿生', Bloody: '血腥', Bone: '骨头', Brick: '砖块', Butcher: '屠夫',
+                Cactus: '仙人掌', Carapace: '甲壳', Cardboard: '纸板', CatHide: '猫皮', Caveman: '穴居人',
+                Chip: '芯片', Cleric: '牧师', Collarless: '无领', Cool: '酷炫', Copycat: '模仿猫', Cyborg: '机械',
+                Debris: '碎片', Demonic: '恶魔', Dino: '恐龙', DirtClod: '泥块', Druid: '德鲁伊',
+                EliteAlloy: '精英合金', Experimental: '实验', Fatty: '肥胖', Feathered: '羽毛',
+                Fecal: '粪便', Fighter: '战士', Flower: '花朵', Fly: '苍蝇', Frozen: '冰冻', Gemstone: '宝石',
+                Gimp: '残障', Godhead: '神格', Grub: '蛆虫', Guts: '内脏', Hippie: '嬉皮', HumanFlesh: '人肉',
+                Hunter: '猎人', Hybrid: '混血', JankAlloy: '劣质合金', Jester: '小丑', Lead: '铅', Leafy: '叶子',
+                Leather: '皮革', Leech: '水蛭', Lucky: '幸运', Mage: '法师', Man: '人类', Meat: '肉块', Medical: '医疗',
+                Miner: '矿工', Molten: '熔融', Monk: '僧侣', Mother: '母亲', Mummy: '木乃伊', Necromancer: '死灵法师',
+                Ninja: '忍者', Nurse: '护士', Obelisk: '方尖碑', Paper: '纸张', Parasite: '寄生虫', Phoenix: '凤凰',
+                Planet: '行星', Prowler: '潜行者', Psychic: '灵能', Radioactive: '辐射', Rag: '破布', Rat: '老鼠',
+                Recycled: '回收', Rock: '岩石', Rotten: '腐烂', Rubber: '橡胶', Rune: '符文', 'Rune *': '符文 *',
+                Scrap: '废料', Slimy: '黏液', Sludge: '淤泥', Space: '太空', Steven: '史蒂文', Stunning: '眩晕',
+                Superhero: '超级英雄', Survivalist: '生存专家', Tank: '坦克', Tentacle: '触手', Thief: '盗贼',
+                Thrumming: '震颤', Tinkerer: '工匠', Transmitter: '发射器', Twine: '麻绳', Used: '二手',
+                Veiny: '静脉', Witch: '巫师', Wood: '木头', Wooly: '毛茸', Worm: '蠕虫'
+            }
+        };
+
+        function t(key) {
+            return UI_TEXT[currentLanguage]?.[key] || UI_TEXT.en[key] || key;
+        }
+
+        function getKindLabel(kind) {
+            if (!kind) return '';
+            return KIND_LABELS[currentLanguage]?.[kind] || KIND_LABELS.en[kind] || kind;
+        }
+
+        function getRarityLabel(rarity) {
+            if (!rarity) return '';
+            return RARITY_LABELS[currentLanguage]?.[rarity] || RARITY_LABELS.en[rarity] || rarity;
+        }
+
+        function getSetLabel(set) {
+            if (!set) return '';
+            return SET_LABELS[currentLanguage]?.[set] || SET_LABELS.en[set] || set;
+        }
+
+        function searchBySet(setName) {
+            const searchInput = document.getElementById('searchInput');
+
+            // Try to find set bonus to get the proper localized name
+            const setBonus = setBonusesData.find(sb => sb.set_code === setName);
+            const localizedSetName = setBonus ? getSetBonusName(setBonus) : getSetLabel(setName);
+
+            searchInput.value = '#' + localizedSetName + ' ';
+            searchInput.focus();
+            filterItems();
+        }
+
+        function renderItemStats(stats) {
+            if (!stats || Object.keys(stats).length === 0) return '';
+
+            const statOrder = ['str', 'dex', 'int', 'con', 'cha', 'lck', 'spd', 'shield', 'divine_shield'];
+            const statIconMap = {
+                'str': 'str',
+                'dex': 'dex',
+                'int': 'int',
+                'con': 'constitution',
+                'cha': 'cha',
+                'lck': 'lck',
+                'spd': 'spd',
+                'shield': 'shield',
+                'divine_shield': 'divineshield'
+            };
+
+            const statsHtml = statOrder
+                .filter(stat => stats[stat] !== undefined)
+                .map(stat => {
+                    const value = stats[stat];
+                    const iconFile = statIconMap[stat];
+                    const isShield = stat === 'shield' || stat === 'divine_shield';
+                    const className = 'img-icon' + (isShield ? '' : ' img-icon-stat');
+                    const sign = value > 0 ? '+' : '';
+                    const colorClass = value > 0 ? 'positive' : (value < 0 ? 'negative' : '');
+
+                    return `<span class="item-stat ${colorClass}">
+                                ${sign}${value}
+                                <img src="res/fonticon/${iconFile}.png" alt="${stat}" class="${className}" onerror="this.style.display='none'">
+                            </span>`;
+                })
+                .join('');
+
+            return statsHtml ? `<div class="item-stats">${statsHtml}</div>` : '';
+        }
+
+        function applyUiLanguage() {
+            document.title = t('pageTitle');
+            document.getElementById('headerTitle').textContent = t('headerTitle');
+            document.getElementById('searchInput').placeholder = t('searchPlaceholder');
+            document.getElementById('navAbilities').textContent = t('navAbilities');
+            document.getElementById('navItems').textContent = t('navItems');
+            document.getElementById('languageLabel').textContent = t('languageLabel');
+            document.getElementById('langOptionEn').textContent = t('languageEnglish');
+            document.getElementById('langOptionZh').textContent = t('languageChinese');
+            document.getElementById('totalLabel').textContent = t('totalItems');
+            document.getElementById('showingLabel').textContent = t('showing');
+            document.getElementById('iconHeader').textContent = t('iconHeader');
+            document.getElementById('nameHeader').textContent = t('nameHeader');
+            document.getElementById('descHeader').textContent = t('descHeader');
+            document.getElementById('typeHeader').textContent = t('typeHeader');
+            document.getElementById('consumableHeader').textContent = t('consumableHeader');
+            document.getElementById('rarityHeader').textContent = t('rarityHeader');
+            document.getElementById('footerSource').textContent = t('footerSource');
+            document.getElementById('footerCredit').textContent = t('footerCredit');
+            document.getElementById('footerAuthor').textContent = t('footerAuthor');
+            document.getElementById('footerTranslator').textContent = t('footerTranslator');
+
+            updateNavbarLinks();
+
+            const kindFilter = document.getElementById('kindFilter');
+            const rarityFilter = document.getElementById('rarityFilter');
+            const consumableFilter = document.getElementById('consumableFilter');
+            const selectedKind = kindFilter ? kindFilter.value : '';
+            const selectedRarity = rarityFilter ? rarityFilter.value : '';
+            const selectedConsumable = consumableFilter ? consumableFilter.value : '';
+            populateKindFilter(selectedKind);
+            populateRarityFilter(selectedRarity);
+            populateConsumableFilter(selectedConsumable);
+
+            const loadingMessage = document.getElementById('loadingMessage');
+            if (loadingMessage) {
+                loadingMessage.textContent = t('loading');
+            }
+        }
+
+        async function loadItems() {
+            try {
+                const response = await fetch('items_db.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                allItems = await response.json();
+
+                // Load set bonuses data
+                try {
+                    const setBonusResponse = await fetch('set_bonuses_db.json');
+                    if (setBonusResponse.ok) {
+                        const setBonusDb = await setBonusResponse.json();
+                        setBonusesData = setBonusDb.set_bonuses || [];
+                    }
+                } catch (error) {
+                    console.error('Error loading set bonuses:', error);
+                }
+
+                filteredItems = allItems;
+                document.getElementById('totalCount').textContent = allItems.length;
+                applyUiLanguage();
+                displayItems(filteredItems);
+            } catch (error) {
+                console.error('Error loading items:', error);
+                document.getElementById('tableBody').innerHTML = `
+                    <tr><td colspan="6" class="no-results">
+                        <p>Error loading items: ${escapeHtml(error.message)}</p>
+                    </td></tr>
+                `;
+            }
+        }
+
+        function populateKindFilter(selectedValue = '') {
+            const kinds = [...new Set(allItems.map(i => i.kind).filter(k => k))].sort();
+            const select = document.getElementById('kindFilter');
+            if (!select) return;
+
+            select.innerHTML = '';
+            const allOption = document.createElement('option');
+            allOption.value = '';
+            allOption.textContent = t('allTypes');
+            select.appendChild(allOption);
+
+            kinds.forEach(kind => {
+                const option = document.createElement('option');
+                option.value = kind;
+                option.textContent = getKindLabel(kind);
+                select.appendChild(option);
+            });
+
+            select.value = selectedValue;
+        }
+
+        function populateRarityFilter(selectedValue = '') {
+            const rarities = [...new Set(allItems.map(i => i.rarity).filter(r => r))].sort();
+            const select = document.getElementById('rarityFilter');
+            if (!select) return;
+
+            select.innerHTML = '';
+            const allOption = document.createElement('option');
+            allOption.value = '';
+            allOption.textContent = t('allRarities');
+            select.appendChild(allOption);
+
+            rarities.forEach(rarity => {
+                const option = document.createElement('option');
+                option.value = rarity;
+                option.textContent = getRarityLabel(rarity);
+                select.appendChild(option);
+            });
+
+            select.value = selectedValue;
+        }
+
+        function populateConsumableFilter(selectedValue = '') {
+            const select = document.getElementById('consumableFilter');
+            if (!select) return;
+
+            select.innerHTML = '';
+
+            const options = [
+                { value: '', label: t('allConsumable') },
+                { value: 'consumable', label: t('consumableOnly') },
+                { value: 'non-consumable', label: t('nonConsumable') }
+            ];
+
+            options.forEach(opt => {
+                const option = document.createElement('option');
+                option.value = opt.value;
+                option.textContent = opt.label;
+                select.appendChild(option);
+            });
+
+            select.value = selectedValue;
+        }
+
+        function getLocalizedText(texts, fallback) {
+            if (!texts || typeof texts !== 'object') {
+                return fallback || '';
+            }
+            return texts[currentLanguage] || fallback || '';
+        }
+
+        function getItemIconPath(item) {
+            const kindMap = {
+                'trinket': 'TrinketIcon',
+                'weapon': 'WeaponIcon',
+                'neck': 'NeckItemIcon',
+                'face': 'FaceItemIcon',
+                'head': 'HeadItemIcon',
+            };
+            const folder = kindMap[item.kind] || 'TrinketIcon';
+            return `${folder}/${item.frame}.png`;
+        }
+
+        function getRarityBackgroundPath(item) {
+            // handle quest and sidequest and their -cursed variants:
+            if (item.rarity === 'quest' || item.rarity === 'sidequest') {
+                return `rarity/${item.rarity}${item.is_cursed ? 'cursed' : ''}.png`;
+            }
+            if (item.rarity === 'cursed') {
+                return 'rarity/cursed.png';
+            }
+            if (!item.rarity) return 'rarity/unknown.png';
+            // use uncommon for uncommmon
+            if (item.rarity === 'uncommmon') {
+                return `rarity/${item.is_consumable ? 'consumable_' : ''}uncommon.png`;
+            }
+            const prefix = item.is_consumable ? 'consumable_' : '';
+            return `rarity/${prefix}${item.rarity}.png`;
+        }
+
+        function getPartIconPath(kind, isConsumable) {
+            if (isConsumable) {
+                return 'parts/consumable.png';
+            }
+            if (!kind) return '';
+            return `parts/${kind}.png`;
+        }
+
+        function displayItems(items) {
+            const tbody = document.getElementById('tableBody');
+
+            if (items.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="6" class="no-results">${escapeHtml(t('noResults'))}</td></tr>`;
+                document.getElementById('showingCount').textContent = '0';
+                return;
+            }
+
+            tbody.innerHTML = items.map(item => {
+                const localizedName = getLocalizedText(item.item_name_texts, item.item_name);
+                let localizedDescription = getLocalizedText(item.description_texts, item.description);
+
+                // Replace placeholders with their values or descriptions
+                if (item.aux) {
+                    localizedDescription = localizedDescription.replace(/{aux}/g, item.aux);
+                }
+                localizedDescription = localizedDescription.replace(/{aux_cat_name}/g, t('auxCatName'));
+                localizedDescription = localizedDescription.replace(/{str_aux_passive_name}/g, t('strAuxPassiveName'));
+                localizedDescription = localizedDescription.replace(/{str_aux_passive_desc}/g, t('strAuxPassiveDesc'));
+                localizedDescription = localizedDescription.replace(/{str_aux_item_desc}/g, t('strAuxItemDesc'));
+                localizedDescription = localizedDescription.replace(/{str_aux_active_name}/g, t('strAuxActiveName'));
+                localizedDescription = localizedDescription.replace(/{str_aux_active_desc}/g, t('strAuxActiveDesc'));
+
+                const kindLabel = item.kind ? getKindLabel(item.kind) : '-';
+                const rarityLabel = item.rarity ? getRarityLabel(item.rarity) : '-';
+                const iconPath = getItemIconPath(item);
+                const rarityBgPath = getRarityBackgroundPath(item);
+                const partIconPath = getPartIconPath(item.kind, item.is_consumable);
+
+                let setsHtml = '';
+                if (item.sets && item.sets.length > 0) {
+                    setsHtml = `<div class="item-sets">${escapeHtml(t('sets'))} ${item.sets.map(s => {
+                        // Try to get set bonus name first, fall back to SET_LABELS
+                        const setBonus = setBonusesData.find(sb => sb.set_code === s);
+                        const localizedSet = setBonus ? getSetBonusName(setBonus) : getSetLabel(s);
+                        return `<span class="item-set-badge" onclick="searchBySet('${escapeHtml(s)}')" style="cursor: pointer;">${escapeHtml(localizedSet)}</span>`;
+                    }).join('')}</div>`;
+                }
+
+                const statsHtml = renderItemStats(item.stats);
+                const partIconHtml = partIconPath ? `<img src="${partIconPath}" class="part-icon" onerror="this.style.display='none'">` : '';
+                const iconClass = item.rarity === 'rare' ? 'item-icon item-icon-rare' : 'item-icon';
+
+                // Render durability if present
+                let durabilityText = '';
+                if (item.durability) {
+                    const durabilityStr = t('durabilityLeft').replace('{amount}', item.durability);
+                    durabilityText = `\n[s:.7](${durabilityStr})[/s]`;
+                }
+
+                return `
+                    <tr>
+                        <td class="image-cell">
+                            <div class="item-icon-wrapper" style="background-image: url('${rarityBgPath}')">
+                                <img src="${iconPath}" 
+                                     alt="${escapeHtml(localizedName)}"
+                                     class="${iconClass}"
+                                     onerror="this.style.display='none'"
+                                     onclick="openModal(this.src, '${escapeHtml(localizedName)}')">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="item-name">${escapeHtml(localizedName)}</div>
+                            ${setsHtml}
+                        </td>
+                        <td>
+                            ${statsHtml}
+                            <div class="description">${parseRichText(localizedDescription + durabilityText) || '-'}</div>
+                        </td>
+                        <td>
+                            ${item.kind ? `<div class="item-rarity kind-${item.kind}">${partIconHtml}${escapeHtml(kindLabel)}</div>` : '-'}
+                        </td>
+                        <td>
+                            <div class="item-consumable">${item.is_consumable ? escapeHtml(t('consumableYes')) : escapeHtml(t('consumableNo'))}</div>
+                        </td>
+                        <td>
+                            ${item.rarity ? `<div class="item-rarity rarity-${item.rarity}">${escapeHtml(rarityLabel)}</div>` : '-'}
+                        </td>
+                    </tr>
+                `;
+            }).join('');
+
+            document.getElementById('showingCount').textContent = items.length;
+        }
+
+        function sortBy(column) {
+            // Toggle direction if clicking same column, otherwise default to ascending
+            if (currentSort.column === column) {
+                currentSort.direction = currentSort.direction === 'asc' ? 'desc' : 'asc';
+            } else {
+                currentSort.column = column;
+                currentSort.direction = 'asc';
+            }
+
+            // Update sort indicators
+            document.querySelectorAll('thead th').forEach(th => {
+                th.classList.remove('sort-asc', 'sort-desc');
+            });
+            const headerMap = {
+                'type': 'typeHeader',
+                'consumable': 'consumableHeader',
+                'rarity': 'rarityHeader'
+            };
+            const header = document.getElementById(headerMap[column]);
+            if (header) {
+                header.classList.add(`sort-${currentSort.direction}`);
+            }
+
+            // Sort filtered items
+            const sortedItems = [...filteredItems].sort((a, b) => {
+                let valueA, valueB;
+
+                if (column === 'type') {
+                    valueA = a.kind || '';
+                    valueB = b.kind || '';
+                } else if (column === 'consumable') {
+                    valueA = a.is_consumable ? 1 : 0;
+                    valueB = b.is_consumable ? 1 : 0;
+                } else if (column === 'rarity') {
+                    // Define rarity order
+                    const rarityOrder = { 'common': 1, 'uncommon': 2, 'uncommmon': 2, 'medium': 3, 'rare': 4, 'very_rare': 5, 'sidequest': 6, 'quest': 7 };
+                    valueA = rarityOrder[a.rarity] || 0;
+                    valueB = rarityOrder[b.rarity] || 0;
+                }
+
+                if (valueA < valueB) return currentSort.direction === 'asc' ? -1 : 1;
+                if (valueA > valueB) return currentSort.direction === 'asc' ? 1 : -1;
+                return 0;
+            });
+
+            displayItems(sortedItems);
+        }
+
+        function filterItems() {
+            const search = document.getElementById('searchInput').value.toLowerCase();
+            const kindFilter = document.getElementById('kindFilter').value;
+            const rarityFilter = document.getElementById('rarityFilter').value;
+            const consumableFilter = document.getElementById('consumableFilter').value;
+
+            filteredItems = allItems.filter(item => {
+                const localizedName = getLocalizedText(item.item_name_texts, item.item_name).toLowerCase();
+                const localizedDescription = getLocalizedText(item.description_texts, item.description).toLowerCase();
+
+                let matchesSearch = true;
+                if (search.startsWith('#')) {
+                    // Set search: #SetName (supports both English and localized names)
+                    const setSearch = search.substring(1).trim().toLowerCase();
+                    if (setSearch) {
+                        matchesSearch = item.sets && item.sets.some(s => {
+                            const englishName = s.toLowerCase();
+                            const localizedName = getSetLabel(s).toLowerCase();
+
+                            // Also check set bonus name if available
+                            const setBonus = setBonusesData.find(sb => sb.set_code === s);
+                            const setBonusName = setBonus ? getSetBonusName(setBonus).toLowerCase() : '';
+
+                            return englishName.includes(setSearch) ||
+                                localizedName.includes(setSearch) ||
+                                (setBonusName && setBonusName.includes(setSearch));
+                        });
+                    }
+                } else {
+                    matchesSearch = localizedName.includes(search) || localizedDescription.includes(search);
+                }
+                const matchesKind = !kindFilter || item.kind === kindFilter;
+                const matchesRarity = !rarityFilter || item.rarity === rarityFilter;
+                const matchesConsumable = !consumableFilter ||
+                    (consumableFilter === 'consumable' && item.is_consumable) ||
+                    (consumableFilter === 'non-consumable' && !item.is_consumable);
+                return matchesSearch && matchesKind && matchesRarity && matchesConsumable;
+            });
+
+            updateFilterTags();
+            displayItems(filteredItems);
+        }
+
+        function updateFilterTags() {
+            const search = document.getElementById('searchInput').value;
+            const tagsContainer = document.getElementById('filterTags');
+
+            tagsContainer.innerHTML = '';
+
+            if (search.startsWith('#')) {
+                const setSearch = search.substring(1).trim().toLowerCase();
+                if (setSearch) {
+                    // Find matching set bonus
+                    const setBonus = findSetBonus(setSearch);
+
+                    const setLabel = currentLanguage === 'en' ? 'Set' : '套装';
+                    const displayName = setBonus ? getSetBonusName(setBonus) : setSearch;
+
+                    let html = '<div class="filter-tags-header">';
+                    html += `
+                        <div class="filter-tag">
+                            <span class="filter-tag-label">${setLabel}:</span>
+                            <span>${escapeHtml(displayName)}</span>
+                            <button class="filter-tag-remove" onclick="removeSetFilter()" title="${currentLanguage === 'en' ? 'Remove filter' : '移除筛选'}">\u00d7</button>
+                        </div>
+                    `;
+                    html += '</div>';
+
+                    // Add set bonus info if found
+                    if (setBonus) {
+                        html += renderSetBonusInfo(setBonus);
+                    }
+
+                    tagsContainer.innerHTML = html;
+                    tagsContainer.classList.add('visible');
+                } else {
+                    tagsContainer.classList.remove('visible');
+                }
+            } else {
+                tagsContainer.classList.remove('visible');
+            }
+        }
+
+        function findSetBonus(setSearch) {
+            if (!setBonusesData || setBonusesData.length === 0) return null;
+
+            return setBonusesData.find(sb => {
+                const code = sb.set_code.toLowerCase();
+                const nameEn = (sb.name_texts.en || '').toLowerCase();
+                const nameZh = (sb.name_texts.zh || '').toLowerCase();
+
+                return code.includes(setSearch) ||
+                    nameEn.includes(setSearch) ||
+                    nameZh.includes(setSearch);
+            });
+        }
+
+        function getSetBonusName(setBonus) {
+            if (currentLanguage === 'zh' && setBonus.name_texts.zh) {
+                // Remove "套装加成！" suffix for cleaner display
+                return setBonus.name_texts.zh.replace(/套装加成！?$/, '').trim() || setBonus.set_code;
+            }
+            if (setBonus.name_texts.en) {
+                // Remove "Set Bonus!" suffix for cleaner display
+                return setBonus.name_texts.en.replace(/\s+Set Bonus!?$/i, '').trim() || setBonus.set_code;
+            }
+            return setBonus.set_code;
+        }
+
+        function renderSetBonusStats(stats) {
+            if (!stats || Object.keys(stats).length === 0) return '';
+
+            const statOrder = ['str', 'dex', 'int', 'con', 'cha', 'lck', 'spd', 'shield', 'divine_shield'];
+            const statIconMap = {
+                'str': 'str',
+                'dex': 'dex',
+                'int': 'int',
+                'con': 'constitution',
+                'cha': 'cha',
+                'lck': 'lck',
+                'spd': 'spd',
+                'shield': 'shield',
+                'divine_shield': 'divineshield'
+            };
+
+            const statsHtml = statOrder
+                .filter(stat => stats[stat] !== undefined)
+                .map(stat => {
+                    const value = stats[stat];
+                    const iconFile = statIconMap[stat];
+                    const isShield = stat === 'shield' || stat === 'divine_shield';
+                    const className = 'img-icon' + (isShield ? '' : ' img-icon-stat');
+                    const sign = value > 0 ? '+' : '';
+                    const colorClass = value > 0 ? 'positive' : (value < 0 ? 'negative' : '');
+
+                    return `<span class="set-bonus-stat ${colorClass}">
+                                ${sign}${value}
+                                <img src="res/fonticon/${iconFile}.png" alt="${stat}" class="${className}" onerror="this.style.display='none'">
+                            </span>`;
+                })
+                .join('');
+
+            return statsHtml ? `<div class="set-bonus-stats">${statsHtml}</div>` : '';
+        }
+
+        function renderSetBonusInfo(setBonus) {
+            const lang = currentLanguage;
+            let html = '<div class="set-bonus-info">';
+
+            // Title
+            const title = lang === 'zh' && setBonus.name_texts.zh ?
+                setBonus.name_texts.zh :
+                (setBonus.name_texts.en || setBonus.set_code + ' Set Bonus');
+            html += `<div class="set-bonus-title">${escapeHtml(title)}</div>`;
+
+            // Pieces required
+            const piecesLabel = lang === 'en' ? 'Pieces Required' : '需要件数';
+            html += `<div class="set-bonus-pieces">${piecesLabel}: ${setBonus.pieces_required}</div>`;
+
+            // Stats with icon display (before description)
+            if (setBonus.stats && Object.keys(setBonus.stats).length > 0) {
+                html += renderSetBonusStats(setBonus.stats);
+            }
+
+            // Description with rich text parsing (supports [img:] and backticks)
+            const desc = lang === 'zh' && setBonus.desc_texts.zh ?
+                setBonus.desc_texts.zh :
+                setBonus.desc_texts.en;
+            if (desc) {
+                html += `<div class="set-bonus-desc">${parseRichText(desc)}</div>`;
+            }
+
+            html += '</div>';
+            return html;
+        }
+
+        function removeSetFilter() {
+            document.getElementById('searchInput').value = '';
+            updateClearButtonVisibility();
+            filterItems();
+        }
+
+        function updateClearButtonVisibility() {
+            const searchInput = document.getElementById('searchInput');
+            const clearButton = document.getElementById('clearButton');
+
+            if (searchInput.value) {
+                clearButton.classList.add('visible');
+            } else {
+                clearButton.classList.remove('visible');
+            }
+        }
+
+        function clearSearch() {
+            document.getElementById('searchInput').value = '';
+            updateClearButtonVisibility();
+            filterItems();
+        }
+
+        function openModal(src, name) {
+            const modal = document.getElementById('imageModal');
+            const img = document.getElementById('modalImage');
+            img.src = src;
+            img.alt = name;
+            modal.style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+
+        document.getElementById('imageModal').onclick = function (event) {
+            if (event.target === this) {
+                closeModal();
+            }
+        }
+
+        function escapeHtml(text) {
+            if (!text) return '';
+            const map = {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#039;'
+            };
+            return text.replace(/[&<>"']/g, m => map[m]);
+        }
+
+        function parseRichText(text) {
+            if (!text) return '';
+
+            // Escape HTML first
+            let html = escapeHtml(text);
+
+            // Handle [s:.7]...[/s] for italics (allow multiline content)
+            html = html.replace(/\[s:[^\]]+\]([\s\S]*?)\[\/s\]/g, '<i>$1</i>');
+
+            // Handle [img:xxx] placeholders - use actual icon images
+            // Map icon names (handle "con" -> "constitution" for Windows reserved name)
+            // Shield icons (shield, divineshield) stay white; stat icons use CSS filter
+            html = html.replace(/\[img:([^\]]+)\]/g, function (match, iconName) {
+                const iconMap = { 'con': 'constitution' };
+                const mappedName = iconMap[iconName] || iconName;
+                const isShield = iconName === 'shield' || iconName === 'divineshield';
+                const className = 'img-icon' + (isShield ? '' : ' img-icon-stat');
+
+                return `<img src="res/fonticon/${mappedName}.png" alt="${iconName}" title="${iconName}" class="${className}" onerror="this.style.display='none'">`;
+            });
+
+            // Handle backticks for inline code blocks
+            html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
+
+            // Handle newlines
+            html = html.replace(/\n/g, '<br>');
+
+            return html;
+        }
+
+        document.getElementById('searchInput').addEventListener('input', (event) => {
+            updateClearButtonVisibility();
+            filterItems();
+        });
+        document.getElementById('clearButton').addEventListener('click', clearSearch);
+        document.getElementById('kindFilter').addEventListener('change', filterItems);
+        document.getElementById('rarityFilter').addEventListener('change', filterItems);
+        document.getElementById('consumableFilter').addEventListener('change', filterItems);
+        document.getElementById('languageSelect').addEventListener('change', (event) => {
+            currentLanguage = event.target.value;
+            setUrlParameter('lang', currentLanguage);
+            applyUiLanguage();
+            filterItems();
+        });
+
+        // Apply language immediately when DOM is ready (before data loads)
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('languageSelect').value = currentLanguage;
+            applyUiLanguage();
+        });
+
+        window.addEventListener('load', loadItems);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1987 @@
+{
+  "generated_from": "G:\\gpak-all\\data\\item_setbonuses.gon",
+  "count": 101,
+  "set_bonuses": [
+    {
+      "set_code": "Scrap",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_SCRAP_NAME",
+      "desc_key": "SETBONUS_SCRAP_DESC",
+      "name_texts": {
+        "en": "Scrap Set Bonus!",
+        "zh": "废料套装加成！"
+      },
+      "desc_texts": {
+        "en": "+1 Thorns.",
+        "zh": "+1 荆棘。"
+      },
+      "name_mod": null,
+      "stats": {
+        "shield": 3
+      },
+      "passives": [],
+      "code": "Scrap {\n    name \"SETBONUS_SCRAP_NAME\"\n    desc \"SETBONUS_SCRAP_DESC\"\n    pieces_required 3\n\n    shield 3\n    passives {\n        Thorns 1\n    }\n}"
+    },
+    {
+      "set_code": "Leather",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_LEATHER_NAME",
+      "desc_key": "SETBONUS_LEATHER_DESC",
+      "name_texts": {
+        "en": "Leather Set Bonus!",
+        "zh": "皮革套装加成！"
+      },
+      "desc_texts": {},
+      "name_mod": null,
+      "stats": {
+        "shield": 3
+      },
+      "passives": [],
+      "code": "Leather {\n    name \"SETBONUS_LEATHER_NAME\"\n    desc \"SETBONUS_LEATHER_DESC\"\n    pieces_required 3\n\n    shield 3\n}"
+    },
+    {
+      "set_code": "Rag",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_RAG_NAME",
+      "desc_key": "SETBONUS_RAG_DESC",
+      "name_texts": {
+        "en": "Rags Set Bonus!",
+        "zh": "破布套装加成！"
+      },
+      "desc_texts": {},
+      "name_mod": null,
+      "stats": {
+        "spd": 2
+      },
+      "passives": [],
+      "code": "Rag {\n    name \"SETBONUS_RAG_NAME\"\n    desc \"SETBONUS_RAG_DESC\"\n    pieces_required 3\n\n    spd 2\n}"
+    },
+    {
+      "set_code": "Rubber",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_RUBBER_NAME",
+      "desc_key": "SETBONUS_RUBBER_DESC",
+      "name_texts": {
+        "en": "Rubber Set Bonus!",
+        "zh": "橡胶套装加成！"
+      },
+      "desc_texts": {
+        "en": "+3 Knockback damage.",
+        "zh": "+3 击退伤害。"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "AddStatusToAllDamage"
+      ],
+      "code": "Rubber {\n    name \"SETBONUS_RUBBER_NAME\"\n    desc \"SETBONUS_RUBBER_DESC\"\n    pieces_required 3\n\n    passives {\n        AddStatusToAllDamage {\n            BonusKnockbackDamage 3\n        }\n    }\n\n}"
+    },
+    {
+      "set_code": "CatHide",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_CATHIDE_NAME",
+      "desc_key": "SETBONUS_CATHIDE_DESC",
+      "name_texts": {
+        "en": "Cathide Set Bonus!",
+        "zh": "猫皮套装加成！"
+      },
+      "desc_texts": {
+        "en": "5% chance to spawn a Flea each turn.\r\nFamiliars have +1 Damage and +1 movement range.",
+        "zh": "每回合有 5% 几率生成一只跳蚤。\r\n使魔拥有 +1 伤害和 +1 移动距离。\r\n"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "SpawnEachTurn"
+      ],
+      "code": "CatHide {\n    name \"SETBONUS_CATHIDE_NAME\"\n    desc \"SETBONUS_CATHIDE_DESC\"\n    pieces_required 3\n\n    passives {\n        SpawnEachTurn {\n            chance 5%\n            object CharmedFlea\n\n            stack_key CATHIDE\n        }\n\n        GlobalFamiliarDamageBoost 1\n        GlobalFamiliarMoveBoost 1\n    }\n}"
+    },
+    {
+      "set_code": "Guts",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_GUTS_NAME",
+      "desc_key": "SETBONUS_GUTS_DESC",
+      "name_texts": {
+        "en": "Guts Set Bonus!",
+        "zh": "内脏套装加成！"
+      },
+      "desc_texts": {
+        "en": "+1 Health Regen.",
+        "zh": "+1 生命恢复。"
+      },
+      "name_mod": null,
+      "stats": {
+        "con": 3
+      },
+      "passives": [],
+      "code": "Guts {\n    name \"SETBONUS_GUTS_NAME\"\n    desc \"SETBONUS_GUTS_DESC\"\n    pieces_required 3\n\n    con 3\n    passives {\n        HealthRegenUp 1\n    }\n}"
+    },
+    {
+      "set_code": "Bone",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_BONE_NAME",
+      "desc_key": "SETBONUS_BONE_DESC",
+      "name_texts": {
+        "en": "Bone Set Bonus!",
+        "zh": "骨头套装加成！"
+      },
+      "desc_texts": {
+        "en": "Find a random common bone item at the end of each battle.",
+        "zh": "每场战斗结束时，\r\n发现一个随机的普通骨头物品。"
+      },
+      "name_mod": null,
+      "stats": {
+        "shield": 4
+      },
+      "passives": [
+        "StatusOnBattleEnd"
+      ],
+      "code": "Bone {\n    name \"SETBONUS_BONE_NAME\"\n    desc \"SETBONUS_BONE_DESC\"\n    pieces_required 3\n\n    shield 4\n\n    passives {\n        StatusOnBattleEnd {\n            FindItemFromPool common_bones\n        }\n    }\n}"
+    },
+    {
+      "set_code": "DirtClod",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_DIRTCLOD_NAME",
+      "desc_key": "SETBONUS_DIRTCLOD_DESC",
+      "name_texts": {
+        "en": "Dirt Clod Set Bonus!",
+        "zh": "土块套装加成！"
+      },
+      "desc_texts": {
+        "en": "Grow flowers under yourself at the end of each turn.",
+        "zh": "每回合结束时，在身下生长出花朵。\r\n"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [],
+      "code": "DirtClod {\n    name \"SETBONUS_DIRTCLOD_NAME\"\n    desc \"SETBONUS_DIRTCLOD_DESC\"\n    pieces_required 3\n\n    passives {\n        FlowersOnEndTurn 1\n    }\n}"
+    },
+    {
+      "set_code": "Barbed",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_BARBED_NAME",
+      "desc_key": "SETBONUS_BARBED_DESC",
+      "name_texts": {
+        "en": "Barbed Set Bonus!",
+        "zh": "倒钩套装加成！"
+      },
+      "desc_texts": {
+        "en": "+3 Thorns.",
+        "zh": "+3 荆棘。"
+      },
+      "name_mod": null,
+      "stats": {
+        "con": 2
+      },
+      "passives": [],
+      "code": "Barbed {\n    name \"SETBONUS_BARBED_NAME\"\n    desc \"SETBONUS_BARBED_DESC\"\n    pieces_required 3\n\n    con 2\n\n    passives {\n        Thorns 3\n    }\n}"
+    },
+    {
+      "set_code": "Sludge",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_SLUDGE_NAME",
+      "desc_key": "SETBONUS_SLUDGE_DESC",
+      "name_texts": {
+        "en": "Sludge Set Bonus!",
+        "zh": "污泥套装加成！"
+      },
+      "desc_texts": {
+        "en": "Gain +2 [img:shield] at the end of each turn.",
+        "zh": "每回合结束时获得 +2 [img:shield]。"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "StatusEachTurnEnd"
+      ],
+      "code": "Sludge {\n    name \"SETBONUS_SLUDGE_NAME\"\n    desc \"SETBONUS_SLUDGE_DESC\"\n    pieces_required 3\n\n    passives {\n        StatusEachTurnEnd {\n            Shield 2\n        }\n    }\n}"
+    },
+    {
+      "set_code": "Cool",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_COOL_NAME",
+      "desc_key": "SETBONUS_COOL_DESC",
+      "name_texts": {
+        "en": "Cool Set Bonus!",
+        "zh": "酷套装加成！"
+      },
+      "desc_texts": {
+        "en": "Cool Set Pieces are no longer Fragile.",
+        "zh": "酷套装部件不再易碎。"
+      },
+      "name_mod": "CAT_NAME_MOD_COOL",
+      "stats": {
+        "lck": 4
+      },
+      "passives": [],
+      "code": "Cool {\n    name \"SETBONUS_COOL_NAME\"\n    desc \"SETBONUS_COOL_DESC\"\n    pieces_required 3\n\n    name_mod \"CAT_NAME_MOD_COOL\"\n\n    lck 4\n    passives {\n        SetFragileImmune Cool\n    }\n}"
+    },
+    {
+      "set_code": "Paper",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_PAPER_NAME",
+      "desc_key": "SETBONUS_PAPER_DESC",
+      "name_texts": {
+        "en": "Paper Set Bonus!",
+        "zh": "纸制套装加成！"
+      },
+      "desc_texts": {
+        "en": "+1 Bleed Thorns. Paper Set Pieces are no longer Fragile nor Brittle.",
+        "zh": "+1 流血荆棘。\r\n纸制套装部件不再易碎或脆裂。"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [],
+      "code": "Paper {\n    name \"SETBONUS_PAPER_NAME\"\n    desc \"SETBONUS_PAPER_DESC\"\n    pieces_required 3\n\n    passives {\n        BleedThorns 1\n        SetFragileImmune Paper\n        SetBrittleImmune Paper\n    }\n}"
+    },
+    {
+      "set_code": "Cardboard",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_CARDBOARD_NAME",
+      "desc_key": "SETBONUS_CARDBOARD_DESC",
+      "name_texts": {
+        "en": "Cardboard Set Bonus!",
+        "zh": "硬纸板套装加成！"
+      },
+      "desc_texts": {
+        "en": "Cardboard Set Pieces are no longer Fragile.",
+        "zh": "硬纸板套装部件不再易碎。"
+      },
+      "name_mod": null,
+      "stats": {
+        "shield": 2
+      },
+      "passives": [],
+      "code": "Cardboard {\n    name \"SETBONUS_CARDBOARD_NAME\"\n    desc \"SETBONUS_CARDBOARD_DESC\"\n    pieces_required 3\n\n    shield 2\n\n    passives {\n        SetFragileImmune Cardboard\n    }\n}"
+    },
+    {
+      "set_code": "Used",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_USED_NAME",
+      "desc_key": "SETBONUS_USED_DESC",
+      "name_texts": {
+        "en": "Used Set Bonus!",
+        "zh": "二手套装加成！"
+      },
+      "desc_texts": {},
+      "name_mod": null,
+      "stats": {
+        "con": 1
+      },
+      "passives": [],
+      "code": "Used {\n    name \"SETBONUS_USED_NAME\"\n    desc \"SETBONUS_USED_DESC\"\n    pieces_required 3\n\n    con 1\n}"
+    },
+    {
+      "set_code": "Wood",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_WOOD_NAME",
+      "desc_key": "SETBONUS_WOOD_DESC",
+      "name_texts": {
+        "en": "Wood Set Bonus!",
+        "zh": "木制套装加成！"
+      },
+      "desc_texts": {
+        "en": "+1 Brace. Wood Set Pieces are no longer Fragile.",
+        "zh": "+1 护甲。木制套装部件不再易碎。\r\n"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [],
+      "code": "Wood {\n    name \"SETBONUS_WOOD_NAME\"\n    desc \"SETBONUS_WOOD_DESC\"\n    pieces_required 3\n\n    passives {\n        SetFragileImmune Wood\n        Brace 1\n    }\n}"
+    },
+    {
+      "set_code": "Recycled",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_RECYCLED_NAME",
+      "desc_key": "SETBONUS_RECYCLED_DESC",
+      "name_texts": {
+        "en": "Recycled Set Bonus!",
+        "zh": "回收套装加成！"
+      },
+      "desc_texts": {
+        "en": "Also find a rare item when a recycled set piece breaks.",
+        "zh": "当一个回收套装部件破碎时，\r\n额外发现一个稀有物品。"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "StatusOnSetPieceBreak"
+      ],
+      "code": "Recycled {\n    name \"SETBONUS_RECYCLED_NAME\"\n    desc \"SETBONUS_RECYCLED_DESC\"\n    pieces_required 3\n\n    passives {\n        StatusOnSetPieceBreak {\n            set Recycled\n            FindItemFromPool rare\n        }\n    }\n}"
+    },
+    {
+      "set_code": "Rotten",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_ROTTEN_NAME",
+      "desc_key": "SETBONUS_ROTTEN_DESC",
+      "name_texts": {
+        "en": "Rotten Set Bonus!",
+        "zh": "腐肉套装加成！"
+      },
+      "desc_texts": {
+        "en": "All Bugs and Maggots you spawn are upgraded to champions.",
+        "zh": "你生成的所有虫子和蛆虫都会升级为冠军。\r\n"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [],
+      "code": "Rotten {\n    name \"SETBONUS_ROTTEN_NAME\"\n    desc \"SETBONUS_ROTTEN_DESC\"\n    pieces_required 3\n\n    passives {\n        UpgradeTaggedSpawnsToChampions bug\n        UpgradeTaggedSpawnsToChampions worm\n    }\n}"
+    },
+    {
+      "set_code": "JankAlloy",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_JANKALLOY_NAME",
+      "desc_key": "SETBONUS_JANKALLOY_DESC",
+      "name_texts": {
+        "en": "Jank Alloy Set Bonus!",
+        "zh": "劣质合金套装加成！"
+      },
+      "desc_texts": {
+        "en": "Jank Alloy Set Pieces are no longer Brittle.",
+        "zh": "劣质合金套装部件不再脆裂。"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [],
+      "code": "JankAlloy {\n    name \"SETBONUS_JANKALLOY_NAME\"\n    desc \"SETBONUS_JANKALLOY_DESC\"\n    pieces_required 3\n\n    passives {\n        SetBrittleImmune JankAlloy\n    }\n}"
+    },
+    {
+      "set_code": "Alloy",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_ALLOY_NAME",
+      "desc_key": "SETBONUS_ALLOY_DESC",
+      "name_texts": {
+        "en": "Alloy Set Bonus!",
+        "zh": "合金套装加成！"
+      },
+      "desc_texts": {
+        "en": "Alloy Set Pieces are no longer Brittle.",
+        "zh": "合金套装部件不再脆裂。"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [],
+      "code": "Alloy {\n    name \"SETBONUS_ALLOY_NAME\"\n    desc \"SETBONUS_ALLOY_DESC\"\n    pieces_required 3\n\n    passives {\n        SetBrittleImmune Alloy\n    }\n}"
+    },
+    {
+      "set_code": "AdvancedAlloy",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_ADVALLOY_NAME",
+      "desc_key": "SETBONUS_ADVALLOY_DESC",
+      "name_texts": {
+        "en": "Advanced Alloy Set Bonus!",
+        "zh": "高级合金套装加成！"
+      },
+      "desc_texts": {
+        "en": "Advanced Alloy Set Pieces are no longer Brittle.",
+        "zh": "高级合金套装部件不再脆裂。"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [],
+      "code": "AdvancedAlloy {\n    name \"SETBONUS_ADVALLOY_NAME\"\n    desc \"SETBONUS_ADVALLOY_DESC\"\n    pieces_required 3\n\n    passives {\n        SetBrittleImmune AdvancedAlloy\n    }\n}"
+    },
+    {
+      "set_code": "EliteAlloy",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_ELITEALLOY_NAME",
+      "desc_key": "SETBONUS_ELITEALLOY_DESC",
+      "name_texts": {
+        "en": "Elite Alloy Set Bonus!",
+        "zh": "精英合金套装加成！"
+      },
+      "desc_texts": {
+        "en": "Elite Alloy Set Pieces are no longer Brittle.",
+        "zh": "精英合金套装部件不再脆裂。"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [],
+      "code": "EliteAlloy {\n    name \"SETBONUS_ELITEALLOY_NAME\"\n    desc \"SETBONUS_ELITEALLOY_DESC\"\n    pieces_required 3\n\n    passives {\n        SetBrittleImmune EliteAlloy\n    }\n}"
+    },
+    {
+      "set_code": "Twine",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_TWINE_NAME",
+      "desc_key": "SETBONUS_TWINE_DESC",
+      "name_texts": {
+        "en": "Twine Set Bonus!",
+        "zh": "麻绳套装加成！"
+      },
+      "desc_texts": {
+        "en": "+10% Dodge Chance.\r\nBruise units that contact you.",
+        "zh": "+10% 闪避率。\r\n对接触你的单位造成淤伤。"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "MeleeRevengeDamage",
+        "effects"
+      ],
+      "code": "Twine {\n    name \"SETBONUS_TWINE_NAME\"\n    desc \"SETBONUS_TWINE_DESC\"\n    pieces_required 3\n\n    passives {\n        ArmorDodgeChance 10%\n        MeleeRevengeDamage {\n            damage 0\n            effects {\n                Bruise 1\n            }\n        }\n    }\n}"
+    },
+    {
+      "set_code": "Rock",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_ROCK_NAME",
+      "desc_key": "SETBONUS_ROCK_DESC",
+      "name_texts": {
+        "en": "Rock Set Bonus!",
+        "zh": "岩石套装加成！"
+      },
+      "desc_texts": {
+        "en": "+1 Brace. Spawn a pet rock familiar whenever you lose [img:shield].",
+        "zh": "+1 护甲。每当你失去 [img:shield] 时，\r\n生成一个宠物石使魔。"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "SpawnThingOnDamage"
+      ],
+      "code": "Rock {\n    name \"SETBONUS_ROCK_NAME\"\n    desc \"SETBONUS_ROCK_DESC\"\n    pieces_required 3\n\n    passives {\n        Brace 1\n\t\tSpawnThingOnDamage {\n            object AnimatedSmallRock\n            shield_only true\n        }\n    }\n}"
+    },
+    {
+      "set_code": "Miner",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_MINER_NAME",
+      "desc_key": "SETBONUS_MINER_DESC",
+      "name_texts": {
+        "en": "Miner Set Bonus!",
+        "zh": "矿工套装加成！"
+      },
+      "desc_texts": {
+        "en": "2 more pickups spawn in each battle.",
+        "zh": "每场战斗中会生成额外 2 个掉落物。\r\n"
+      },
+      "name_mod": null,
+      "stats": {
+        "lck": 3
+      },
+      "passives": [
+        "SpawnOnBattleStartRandomEmptyTile"
+      ],
+      "code": "Miner {\n    name \"SETBONUS_MINER_NAME\"\n    desc \"SETBONUS_MINER_DESC\"\n    pieces_required 3\n\n    lck 3\n    passives {\n        SpawnOnBattleStartRandomEmptyTile {\n            object RandomPickup\n            number 2\n        }\n    }\n}"
+    },
+    {
+      "set_code": "Gemstone",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_GEMSTONE_NAME",
+      "desc_key": "SETBONUS_GEMSTONE_DESC",
+      "name_texts": {
+        "en": "Gemstone Set Bonus!",
+        "zh": "宝石套装加成！"
+      },
+      "desc_texts": {
+        "en": "Gain +3 [img:shield] at the end of each turn.",
+        "zh": "每回合结束时获得 +3 [img:shield]。"
+      },
+      "name_mod": null,
+      "stats": {
+        "cha": 1
+      },
+      "passives": [
+        "StatusEachTurnEnd"
+      ],
+      "code": "Gemstone {\n    name \"SETBONUS_GEMSTONE_NAME\"\n    desc \"SETBONUS_GEMSTONE_DESC\"\n    pieces_required 3\n\n    cha 1\n    passives {\n        StatusEachTurnEnd {\n            Shield 3\n        }\n    }\n}"
+    },
+    {
+      "set_code": "Veiny",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_VEINY_NAME",
+      "desc_key": "SETBONUS_VEINY_DESC",
+      "name_texts": {
+        "en": "Veiny Set Bonus!",
+        "zh": "青筋套装加成！"
+      },
+      "desc_texts": {
+        "en": "Your basic attack inflicts Bleed. Whenever you inflict Bleed, trigger Bleed damage immediately.",
+        "zh": "你的基础攻击施加流血。\r\n每当你施加流血时，立即触发流血伤害。\r\n"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "AddStatusToBasicAttack"
+      ],
+      "code": "Veiny {\n    name \"SETBONUS_VEINY_NAME\"\n    desc \"SETBONUS_VEINY_DESC\"\n    pieces_required 3\n\n    passives {\n        AddStatusToBasicAttack {\n            Bleed 1\n        }\n        TriggerBleedOnBleed 1\n    }\n}"
+    },
+    {
+      "set_code": "Gimp",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_GIMP_NAME",
+      "desc_key": "SETBONUS_GIMP_DESC",
+      "name_texts": {
+        "en": "Gimp Set Bonus!",
+        "zh": "束缚套装加成！"
+      },
+      "desc_texts": {
+        "en": "Gain +1 Random Stat Up whenever you take damage.",
+        "zh": "每当受到伤害时获得 +1 随机属性提升。\r\n"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "StatusOnTookDamage"
+      ],
+      "code": "Gimp {\n    name \"SETBONUS_GIMP_NAME\"\n    desc \"SETBONUS_GIMP_DESC\"\n    pieces_required 3\n\n    passives {\n        StatusOnTookDamage {\n            RandomStatUp 1\n        }\n    }\n}"
+    },
+    {
+      "set_code": "Bionic",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_BIONIC_NAME",
+      "desc_key": "SETBONUS_BIONIC_DESC",
+      "name_texts": {
+        "en": "Bionic Set Bonus!",
+        "zh": "仿生套装加成！"
+      },
+      "desc_texts": {
+        "en": "Your movement action becomes an infinite range Teleport.\r\nBionic Set Pieces are no longer Fragile.",
+        "zh": "你的移动行动变为无限射程的传送。\r\n仿生套装部件不再易碎。"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [],
+      "code": "Bionic {\n    name \"SETBONUS_BIONIC_NAME\"\n    desc \"SETBONUS_BIONIC_DESC\"\n    pieces_required 3\n\n    passives {\n        SetFragileImmune Bionic\n        ReplaceBasicMove MaxTeleport\n    }\n}"
+    },
+    {
+      "set_code": "Cyborg",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_CYBORG_NAME",
+      "desc_key": "SETBONUS_CYBORG_DESC",
+      "name_texts": {
+        "en": "Cyborg Set Bonus!",
+        "zh": "改造人套装加成！"
+      },
+      "desc_texts": {
+        "en": "Take an AI controlled bonus turn at the end of the first round.",
+        "zh": "在第一回合结束时，\r\n进行一个由 AI 控制的奖励回合。\r\n"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "CyborgTurns",
+        "TakeBonusTurnWithAIControl"
+      ],
+      "code": "Cyborg {\n    name \"SETBONUS_CYBORG_NAME\"\n    desc \"SETBONUS_CYBORG_DESC\"\n    pieces_required 3\n\n    passives {\n        CyborgTurns {\n            stacks 1\n            TakeBonusTurnWithAIControl {\n                end_of_round true\n                include_spells true\n            }\n        }\n        Robot 1\n    }\n}"
+    },
+    {
+      "set_code": "Lucky",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_LUCKY_NAME",
+      "desc_key": "SETBONUS_LUCKY_DESC",
+      "name_texts": {
+        "en": "Lucky Set Bonus!",
+        "zh": "幸运套装加成！"
+      },
+      "desc_texts": {
+        "en": "Spawn 5-10 extra coins on each map.\r\nLucky Set Pieces are no longer Fragile.",
+        "zh": "每张地图额外生成 5-10 枚金币。\r\n幸运套装部件不再易碎。"
+      },
+      "name_mod": null,
+      "stats": {
+        "lck": 1
+      },
+      "passives": [
+        "SpawnOnBattleStartRandomEmptyTile"
+      ],
+      "code": "Lucky {\n    name \"SETBONUS_LUCKY_NAME\"\n    desc \"SETBONUS_LUCKY_DESC\"\n    pieces_required 3\n\n    lck 1\n    passives {\n        SetFragileImmune Lucky\n        SpawnOnBattleStartRandomEmptyTile {\n            object Coin\n            number [5 10]\n        }\n    }\n}"
+    },
+    {
+      "set_code": "Fly",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_FLY_NAME",
+      "desc_key": "SETBONUS_FLY_DESC",
+      "name_texts": {
+        "en": "Fly Set Bonus!",
+        "zh": "苍蝇套装加成！"
+      },
+      "desc_texts": {
+        "en": "Flying. You do not take extra damage from backstabs.\r\n50% Chance to spawn a Fly each turn.",
+        "zh": "飞行。你不会受到背刺的额外伤害。\r\n每回合有 50% 几率生成一只苍蝇。\r\n"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "SpawnEachTurn"
+      ],
+      "code": "Fly {\n    name \"SETBONUS_FLY_NAME\"\n    desc \"SETBONUS_FLY_DESC\"\n    pieces_required 3\n\n    passives {\n        BackstabImmunity 1\n        Flying 1\n\n        SpawnEachTurn {\n            chance 50%\n            object CharmedFly\n        }\n    }\n}"
+    },
+    {
+      "set_code": "Amoeba",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_AMOEBA_NAME",
+      "desc_key": "SETBONUS_AMOEBA_DESC",
+      "name_texts": {
+        "en": "Amoeba Set Bonus!",
+        "zh": "阿米巴套装加成！"
+      },
+      "desc_texts": {
+        "en": "Permanent Madness.",
+        "zh": "永久疯狂。"
+      },
+      "name_mod": "CAT_NAME_MOD_AMOEBA",
+      "stats": {},
+      "passives": [],
+      "code": "Amoeba {\n    name \"SETBONUS_AMOEBA_NAME\"\n    desc \"SETBONUS_AMOEBA_DESC\"\n    pieces_required 3\n\n    name_mod \"CAT_NAME_MOD_AMOEBA\"\n\n    passives {\n        PermanentMadness 1\n    }\n}"
+    },
+    {
+      "set_code": "Mage",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_MAGE_NAME",
+      "desc_key": "SETBONUS_MAGE_DESC",
+      "name_texts": {
+        "en": "Mage Set Bonus!",
+        "zh": "法师套装加成！"
+      },
+      "desc_texts": {
+        "en": "+5 starting mana.",
+        "zh": "+5 初始法力值。"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [],
+      "code": "Mage {\n    name \"SETBONUS_MAGE_NAME\"\n    desc \"SETBONUS_MAGE_DESC\"\n    pieces_required 3\n    \n    passives {\n        AddStartingMana 5\n    }\n}"
+    },
+    {
+      "set_code": "Thief",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_THIEF_NAME",
+      "desc_key": "SETBONUS_THIEF_DESC",
+      "name_texts": {
+        "en": "Thief Set Bonus!",
+        "zh": "盗贼套装加成！"
+      },
+      "desc_texts": {
+        "en": "+5% Dodge Chance and +5% Crit Chance.",
+        "zh": "+5% 闪避率和 +5% 暴击率。\r\n"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [],
+      "code": "Thief {\n    name \"SETBONUS_THIEF_NAME\"\n    desc \"SETBONUS_THIEF_DESC\"\n    pieces_required 3\n    \n    passives {\n        ArmorDodgeChance 5%\n        CritChanceUp 5\n    }\n}"
+    },
+    {
+      "set_code": "Fighter",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_FIGHTER_NAME",
+      "desc_key": "SETBONUS_FIGHTER_DESC",
+      "name_texts": {
+        "en": "Fighter Set Bonus!",
+        "zh": "战士套装加成！"
+      },
+      "desc_texts": {
+        "en": "+15% chance to refresh your basic attack, movement, weapon and trinket actions when you get a kill.",
+        "zh": "击杀时有 +15% 几率刷新你的基础攻击、\r\n移动、武器和饰品行动。"
+      },
+      "name_mod": null,
+      "stats": {
+        "shield": 4
+      },
+      "passives": [
+        "StatusOnKill",
+        "Conditional_GoodRoll"
+      ],
+      "code": "Fighter {\n    name \"SETBONUS_FIGHTER_NAME\"\n    desc \"SETBONUS_FIGHTER_DESC\"\n    pieces_required 3\n    \n    shield 4\n\n    passives {\n        StatusOnKill {\n            Conditional_GoodRoll {\n                odds 15%\n                ForceUseAbility_NonStack Endeavor_Auto\n            }\n        }\n    }\n}"
+    },
+    {
+      "set_code": "Cleric",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_CLERIC_NAME",
+      "desc_key": "SETBONUS_CLERIC_DESC",
+      "name_texts": {
+        "en": "Cleric Set Bonus!",
+        "zh": "牧师套装加成！"
+      },
+      "desc_texts": {
+        "en": "If an attack would down you, instead lower your HP to 1. While at 1 HP, this has no effect.",
+        "zh": "如果一次攻击将使你倒地，\r\n则改为将你的生命值降至 1。\r\n当你处于 1 生命值时，\r\n此效果无效。"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "PassiveAtHealthThreshold"
+      ],
+      "code": "Cleric {\n    name \"SETBONUS_CLERIC_NAME\"\n    desc \"SETBONUS_CLERIC_DESC\"\n    pieces_required 3\n    \n    passives {\n        PassiveAtHealthThreshold {\n            threshold 1\n            mode greater\n            \n            passives {\n                DeathRattleRevive DoNothing\n            }\n        }\n    }\n}"
+    },
+    {
+      "set_code": "Tank",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_TANK_NAME",
+      "desc_key": "SETBONUS_TANK_DESC",
+      "name_texts": {
+        "en": "Tank Set Bonus!",
+        "zh": "坦克套装加成！"
+      },
+      "desc_texts": {
+        "en": "+1 Knockback damage.",
+        "zh": "+1 击退伤害。"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [],
+      "code": "Tank {\n    name \"SETBONUS_TANK_NAME\"\n    desc \"SETBONUS_TANK_DESC\"\n    pieces_required 3\n    \n    passives {\n        AddKnockbackDamage 1\n    }\n}"
+    },
+    {
+      "set_code": "Hunter",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_HUNTER_NAME",
+      "desc_key": "SETBONUS_HUNTER_DESC",
+      "name_texts": {
+        "en": "Hunter Set Bonus!",
+        "zh": "猎人套装加成！"
+      },
+      "desc_texts": {
+        "en": "+50% Crit Chance while standing in tall grass.",
+        "zh": "站在高草中时 +50% 暴击率。\r\n"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "PassiveWhenOnTile"
+      ],
+      "code": "Hunter {\n    name \"SETBONUS_HUNTER_NAME\"\n    desc \"SETBONUS_HUNTER_DESC\"\n    pieces_required 3\n    \n    passives {\n        PassiveWhenOnTile {\n            tile [TallGrassTile TallFlowerTile]\n            passives {\n                CritChanceUp 50\n            }\n        }\n    }\n}"
+    },
+    {
+      "set_code": "Psychic",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_PSYCHIC_NAME",
+      "desc_key": "SETBONUS_PSYCHIC_DESC",
+      "name_texts": {
+        "en": "Psychic Set Bonus!",
+        "zh": "灵能者套装加成！"
+      },
+      "desc_texts": {
+        "en": "When you gain excess mana, reduce the cost of all your spells by that amount until you cast them.",
+        "zh": "当你获得溢出的法力值时，\r\n使你所有法术的消耗减少等量数值，\r\n直到你施放它们为止。"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [],
+      "code": "Psychic {\n    name \"SETBONUS_PSYCHIC_NAME\"\n    desc \"SETBONUS_PSYCHIC_DESC\"\n    pieces_required 3\n    \n    passives {\n        OverManaReducesManaCosts 1\n    }\n}"
+    },
+    {
+      "set_code": "Necromancer",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_NECROMANCER_NAME",
+      "desc_key": "SETBONUS_NECROMANCER_DESC",
+      "name_texts": {
+        "en": "Necromancer Set Bonus!",
+        "zh": "死灵法师套装加成！"
+      },
+      "desc_texts": {
+        "en": "When downed, spawn a shadow copy of yourself that fades away after one turn.",
+        "zh": "倒地时，生成一个你的暗影分身，\r\n该分身在一回合后消散。"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "SpawnCatCopyWhenDowned"
+      ],
+      "code": "Necromancer {\n    name \"SETBONUS_NECROMANCER_NAME\"\n    desc \"SETBONUS_NECROMANCER_DESC\"\n    pieces_required 3\n    \n    passives {\n        SpawnCatCopyWhenDowned {\n            object PlayerCat_NecroShade\n            prevent_chain_tag necroset_shade\n        }\n    }\n}"
+    },
+    {
+      "set_code": "Monk",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_MONK_NAME",
+      "desc_key": "SETBONUS_MONK_DESC",
+      "name_texts": {
+        "en": "Monk Set Bonus!",
+        "zh": "武僧套装加成！"
+      },
+      "desc_texts": {
+        "en": "Gain +2 [img:shield] at the end of each turn.",
+        "zh": "每回合结束时获得 +2 [img:shield]。"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "StatusEachTurnEnd"
+      ],
+      "code": "Monk {\n    name \"SETBONUS_MONK_NAME\"\n    desc \"SETBONUS_MONK_DESC\"\n    pieces_required 3\n    \n    passives {\n        StatusEachTurnEnd {\n\t\t\tShield 2\n\t\t}\n    }\n}"
+    },
+    {
+      "set_code": "Tinkerer",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_TINKERER_NAME",
+      "desc_key": "SETBONUS_TINKERER_DESC",
+      "name_texts": {
+        "en": "Tinkerer Set Bonus!",
+        "zh": "工匠套装加成！"
+      },
+      "desc_texts": {
+        "en": "Spawn 4 Scrap pickups at the start of each battle.",
+        "zh": "每场战斗开始时生成 4 个废料掉落物。\r\n"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "SpawnOnBattleStart"
+      ],
+      "code": "Tinkerer {\n    name \"SETBONUS_TINKERER_NAME\"\n    desc \"SETBONUS_TINKERER_DESC\"\n    pieces_required 3\n    \n\tpassives {\n\t\tSpawnOnBattleStart {\n\t\t\tobject Scrap\n\t\t\tnumber 4\n\t\t}\n\t}\t\n}"
+    },
+    {
+      "set_code": "Butcher",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_BUTCHER_NAME",
+      "desc_key": "SETBONUS_BUTCHER_DESC",
+      "name_texts": {
+        "en": "Butcher Set Bonus!",
+        "zh": "屠夫套装加成！"
+      },
+      "desc_texts": {
+        "en": "Food and scrap pickups you spawn are bigger.",
+        "zh": "你生成的食物和废料掉落物更大。\r\n"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [],
+      "code": "Butcher {\n    name \"SETBONUS_BUTCHER_NAME\"\n    desc \"SETBONUS_BUTCHER_DESC\"\n    pieces_required 3\n    \n\tpassives {\n\t\tUpgradeSpawnedPickups 1\n\t}\n}"
+    },
+    {
+      "set_code": "Druid",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_DRUID_NAME",
+      "desc_key": "SETBONUS_DRUID_DESC",
+      "name_texts": {
+        "en": "Druid Set Bonus!",
+        "zh": "德鲁伊套装加成！"
+      },
+      "desc_texts": {
+        "en": "Your Familiars gain +4 HP and +1 Damage.",
+        "zh": "你的使魔获得 +4 生命值和 +1 伤害。\r\n"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "AddPassivesToMinions"
+      ],
+      "code": "Druid {\n    name \"SETBONUS_DRUID_NAME\"\n    desc \"SETBONUS_DRUID_DESC\"\n    pieces_required 3\n    \n    passives {\n\t\tAddPassivesToMinions {\n            DamageUp 1\n            AddMaxHealth 4\n            HealthGain 4\n\t\t}\n    }\n}"
+    },
+    {
+      "set_code": "Collarless",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_COLLARLESS_NAME",
+      "desc_key": "SETBONUS_COLLARLESS_DESC",
+      "name_texts": {
+        "en": "Collarless Set Bonus!",
+        "zh": "无项圈套装加成！"
+      },
+      "desc_texts": {
+        "en": "Collarless spells cost -1 mana to cast.",
+        "zh": "施放无项圈法术消耗的法力值 -1。\r\n"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "ClassManaCostReduction"
+      ],
+      "code": "Collarless {\n    name \"SETBONUS_COLLARLESS_NAME\"\n    desc \"SETBONUS_COLLARLESS_DESC\"\n    pieces_required 3\n\n    passives {\n        ClassManaCostReduction {\n            class Colorless\n            reduction 1\n        }\n    }\n}"
+    },
+    {
+      "set_code": "Grub",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_GRUB_NAME",
+      "desc_key": "SETBONUS_GRUB_DESC",
+      "name_texts": {
+        "en": "Grub Set Bonus!",
+        "zh": "幼虫套装加成！"
+      },
+      "desc_texts": {
+        "en": "Grubs spawned by items gain +5 HP.",
+        "zh": "物品生成的幼虫获得 +5 生命值。\r\n"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "AddPassivesToMinions"
+      ],
+      "code": "Grub {\n    name \"SETBONUS_GRUB_NAME\"\n    desc \"SETBONUS_GRUB_DESC\"\n    pieces_required 3\n    \n    passives {\n        AddPassivesToMinions {\n            tag_filter grub_familiar\n            Buddy spawner\n            ReturnBoundItemOnBattleEnd 1\n            DamageUp 1\n            AddMaxHealth 5\n            HealthGain 5 //fill up the blank max health\n        }\n    }\n}"
+    },
+    {
+      "set_code": "Fecal",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_FECAL_NAME",
+      "desc_key": "SETBONUS_FECAL_DESC",
+      "name_texts": {
+        "en": "Fecal Set Bonus!",
+        "zh": "粪便套装加成！"
+      },
+      "desc_texts": {
+        "en": "Poisonous 1.\r\nYour basic attack inflicts Poison.",
+        "zh": "带毒 1。\r\n你的基础攻击造成中毒。"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "AddStatusToBasicAttack"
+      ],
+      "code": "Fecal {\n    name \"SETBONUS_FECAL_NAME\"\n    desc \"SETBONUS_FECAL_DESC\"\n    pieces_required 3\n    \n    passives {\n        PoisonThorns 1\n        AddStatusToBasicAttack {\n            Poison 1\n        }\n    }\n}"
+    },
+    {
+      "set_code": "Meat",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_MEAT_NAME",
+      "desc_key": "SETBONUS_MEAT_DESC",
+      "name_texts": {
+        "en": "Meat Set Bonus!",
+        "zh": "肉块套装加成！"
+      },
+      "desc_texts": {
+        "en": "+1 Damage.\r\nGain +1 Damage when you get a kill.\r\nAfter three kills, gains +2 [img:con], +4 Health Regen and Madness for the rest of the battle.",
+        "zh": "+1 伤害。\r\n当你获得击杀时获得 +1 伤害。\r\n获得三次击杀后，获得 +2 [img:con]，\r\n+4 生命恢复和疯狂状态，\r\n持续至战斗结束。"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "StatusOnKillEnemy",
+        "PassiveAfterXKills"
+      ],
+      "code": "Meat {\n    name \"SETBONUS_MEAT_NAME\"\n    desc \"SETBONUS_MEAT_DESC\"\n    pieces_required 3\n    \n    passives {\n        DamageUp 1\n        StatusOnKillEnemy {\n            DamageUp 1\n        }\n        PassiveAfterXKills {\n            stacks 3\n\n            passives {\n                AddConstitution 2\n                HealthRegenUp 4\n                PermanentMadness 1\n            }\n        }\n    }\n}"
+    },
+    {
+      "set_code": "Leafy",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_LEAFY_NAME",
+      "desc_key": "SETBONUS_LEAFY_DESC",
+      "name_texts": {
+        "en": "Leafy Set Bonus!",
+        "zh": "多叶套装加成！"
+      },
+      "desc_texts": {
+        "en": "If you end your turn with unused movement actions, heal 3 HP and gain +3 Charge.",
+        "zh": "如果你在回合结束时还有未使用的移动行动，\r\n治疗 3 点生命值并获得 +3 充能。\r\n"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "StatusIfUnusedMovePoints"
+      ],
+      "code": "Leafy {\n    name \"SETBONUS_LEAFY_NAME\"\n    desc \"SETBONUS_LEAFY_DESC\"\n    pieces_required 3\n    \n    passives {\n        StatusIfUnusedMovePoints {\n            HealthGain 3\n            Charge 3\n        }\n    }\n}"
+    },
+    {
+      "set_code": "Cactus",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_CACTUS_NAME",
+      "desc_key": "SETBONUS_CACTUS_DESC",
+      "name_texts": {
+        "en": "Cactus Set Bonus!",
+        "zh": "仙人掌套装加成！"
+      },
+      "desc_texts": {
+        "en": "+2 Thorns.\r\nWhenever any Cactus armor breaks, increase all your stats by 1, permanently.",
+        "zh": "+2 荆棘。\r\n每当任意仙人掌护甲破碎时，\r\n你的所有属性永久增加 1 点。\r\n"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "StatusOnSetPieceBreak"
+      ],
+      "code": "Cactus {\n    name \"SETBONUS_CACTUS_NAME\"\n    desc \"SETBONUS_CACTUS_DESC\"\n    pieces_required 3\n    \n    passives {\n        Thorns 2\n        StatusOnSetPieceBreak {\n            PermanentCharisma 1\n            PermanentDexterity 1\n            PermanentIntelligence 1\n            PermanentLuck 1\n            PermanentSpeed 1\n            PermanentStrength 1\n            PermanentConstitution 1\n        }\n    }\n}"
+    },
+    {
+      "set_code": "Mummy",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_MUMMY_NAME",
+      "desc_key": "SETBONUS_MUMMY_DESC",
+      "name_texts": {
+        "en": "Mummy Set Bonus!",
+        "zh": "木乃伊套装加成！"
+      },
+      "desc_texts": {
+        "en": "When downed, inflict Rot 1 and Weakness 1 on all enemies.\r\nWhen downed, revive with +30% HP at the end of the round.",
+        "zh": "倒地时，\r\n对所有敌人施加 1 层腐烂和 1 层虚弱。\r\n倒地时，\r\n在回合结束时以 +30% 生命值复活。\r\n"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "DeathRattle",
+        "DelayedAutoRevive"
+      ],
+      "code": "Mummy {\n    name \"SETBONUS_MUMMY_NAME\"\n    desc \"SETBONUS_MUMMY_DESC\"\n    pieces_required 3\n    \n    passives {\n        DeathRattle {\n            pop_corpse false\n            ability set_MummySetCurse\n        }\n        DelayedAutoRevive {\n            rounds 1\n            health 30%\n        }\n    }\n}"
+    },
+    {
+      "set_code": "Man",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_MAN_NAME",
+      "desc_key": "SETBONUS_MAN_DESC",
+      "name_texts": {
+        "en": "Man Set Bonus!",
+        "zh": "男人套装加成！"
+      },
+      "desc_texts": {
+        "en": "Gain 1-9 coins at the end of each battle.",
+        "zh": "每场战斗结束时获得 1-9 枚金币。\r\n"
+      },
+      "name_mod": "CAT_NAME_MOD_MAN",
+      "stats": {},
+      "passives": [
+        "StatusOnBattleEnd",
+        "GainCoinsRange"
+      ],
+      "code": "Man {\n    name \"SETBONUS_MAN_NAME\"\n    desc \"SETBONUS_MAN_DESC\"\n    pieces_required 3\n\n    name_mod \"CAT_NAME_MOD_MAN\"\n    \n    passives {\n        StatusOnBattleEnd {\n            GainCoinsRange {\n                min 1\n                max 9\n            }\n        }\n    }\n}"
+    },
+    {
+      "set_code": "Flower",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_FLOWER_NAME",
+      "desc_key": "SETBONUS_FLOWER_DESC",
+      "name_texts": {
+        "en": "Flower Set Bonus!",
+        "zh": "花朵套装加成！"
+      },
+      "desc_texts": {
+        "en": "Enemies have a 10% chance to become Entangled when walking through flower tiles.",
+        "zh": "敌人在经过花朵地块时有 10% 几率被缠绕。\r\n"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "GlobalFlowerTrapperAura"
+      ],
+      "code": "Flower {\n    name \"SETBONUS_FLOWER_NAME\"\n    desc \"SETBONUS_FLOWER_DESC\"\n    pieces_required 3\n    \n    passives {\n        GlobalFlowerTrapperAura {\n            Tangled [1, .1]\n        }\n    }\n}"
+    },
+    {
+      "set_code": "HumanFlesh",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_HUMANFLESH_NAME",
+      "desc_key": "SETBONUS_HUMANFLESH_DESC",
+      "name_texts": {
+        "en": "Human Flesh Set Bonus!",
+        "zh": "人肉套装加成！"
+      },
+      "desc_texts": {
+        "en": "+50% Crit Chance on humanoid enemies.\r\nWhen downed, inflict Fear 2 on all enemies.",
+        "zh": "对人型敌人 +50% 暴击率。\r\n倒地时，对所有敌人施加 2 层恐惧。\r\n"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "DeathRattle",
+        "AddStatusToAllDamage",
+        "Conditional_HasTag"
+      ],
+      "code": "HumanFlesh {\n    name \"SETBONUS_HUMANFLESH_NAME\"\n    desc \"SETBONUS_HUMANFLESH_DESC\"\n    pieces_required 3\n    \n    passives {\n        DeathRattle {\n            pop_corpse false\n            ability set_HumanFleshSetCurse\n        }\n        AddStatusToAllDamage {\n            Conditional_HasTag {\n                tag humanoid\n                BonusCritChance 50\n            }\n        }\n    }\n}"
+    },
+    {
+      "set_code": "Tentacle",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_TENTACLE_NAME",
+      "desc_key": "SETBONUS_TENTACLE_DESC",
+      "name_texts": {
+        "en": "Tentacle Set Bonus!",
+        "zh": "触手套装加成！"
+      },
+      "desc_texts": {
+        "en": "Cleanse all your debuffs at the end of each turn.",
+        "zh": "每回合结束时驱散你所有的减益效果。\r\n"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "StatusEachTurnEnd",
+        "Conditional_HasCleansableDebuffs"
+      ],
+      "code": "Tentacle {\n    name \"SETBONUS_TENTACLE_NAME\"\n    desc \"SETBONUS_TENTACLE_DESC\"\n    pieces_required 3\n    \n    passives {\n        StatusEachTurnEnd {\n            Conditional_HasCleansableDebuffs {\n                VisualFX Cleanse\n            }\n            Cleanse 0\n        }\n    }\n}"
+    },
+    {
+      "set_code": "Obelisk",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_OBELISK_NAME",
+      "desc_key": "SETBONUS_OBELISK_DESC",
+      "name_texts": {
+        "en": "Obelisk Set Bonus!",
+        "zh": "方尖碑套装加成！"
+      },
+      "desc_texts": {
+        "en": "If you end your turn with unused movement actions, gain +1 [img:divineshield].",
+        "zh": "如果你在结束回合时有未使用的移动行动，\r\n获得 +1 [img:divineshield]。"
+      },
+      "name_mod": null,
+      "stats": {
+        "divine_shield": 1
+      },
+      "passives": [
+        "StatusIfUnusedMovePoints"
+      ],
+      "code": "Obelisk {\n    name \"SETBONUS_OBELISK_NAME\"\n    desc \"SETBONUS_OBELISK_DESC\"\n    pieces_required 3\n    \n    divine_shield 1\n\n    passives {\n        StatusIfUnusedMovePoints {\n            DivineShield 1\n        }\n    }\n}"
+    },
+    {
+      "set_code": "Experimental",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_EXPERIMENTAL_NAME",
+      "desc_key": "SETBONUS_EXPERIMENTAL_DESC",
+      "name_texts": {
+        "en": "Experimental Set Bonus!",
+        "zh": "实验性套装加成！"
+      },
+      "desc_texts": {
+        "en": "Find a pill at the end of each battle.\r\nWhenever you eat a pill, gain a random stat and lose another random stat, permanently.",
+        "zh": "每次战斗结束时发现一颗药丸。\r\n每当你吃下一颗药丸，\r\n永久获得一项随机属性并失去另一项随机属性。\r\n"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "StatusOnEatPill",
+        "RandomPermanentStatsDistinct"
+      ],
+      "code": "Experimental {\n    name \"SETBONUS_EXPERIMENTAL_NAME\"\n    desc \"SETBONUS_EXPERIMENTAL_DESC\"\n    pieces_required 3\n    \n    passives {\n        FindExtraItemFromPoolOnBattleEnd pills\n        StatusOnEatPill {\n            RandomPermanentStatsDistinct {\n                stats [1 -1]\n            }\n        }\n    }\n}"
+    },
+    {
+      "set_code": "Rocky",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_ROCKY_NAME",
+      "desc_key": "SETBONUS_ROCKY_DESC",
+      "name_texts": {
+        "en": "Rocky Set Bonus!",
+        "zh": "硬岩套装加成！"
+      },
+      "desc_texts": {
+        "en": "Spawn a pet rock familiar whenever you lose [img:shield].\r\nBroken Rocky equipment pieces have a 75% chance of being recovered at the end of the battle.",
+        "zh": "每当你失去 [img:shield] 时，\r\n生成一个宠物石使魔。\r\n破碎的硬岩装备部件在战斗结束时有 75% 的\r\n几率恢复。"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "SpawnThingOnDamage"
+      ],
+      "code": "Rocky {\n    name \"SETBONUS_ROCKY_NAME\"\n    desc \"SETBONUS_ROCKY_DESC\"\n    pieces_required 3\n    \n    passives {\n        RockyArmorSalvage .75\n        SpawnThingOnDamage {\n            object AnimatedSmallRock\n            shield_only true\n        }\n    }\n}"
+    },
+    {
+      "set_code": "Space",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_SPACE_NAME",
+      "desc_key": "SETBONUS_SPACE_DESC",
+      "name_texts": {
+        "en": "Space Set Bonus!",
+        "zh": "太空套装加成！"
+      },
+      "desc_texts": {
+        "en": "Your movement action is Jump. Units you land on take damage.",
+        "zh": "你的移动行动变为跳跃。\r\n你落点处的单位会受到伤害。"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [],
+      "code": "Space {\n    name \"SETBONUS_SPACE_NAME\"\n    desc \"SETBONUS_SPACE_DESC\"\n    pieces_required 3\n    \n    passives {\n        ReplaceBasicMove set_SpaceArmorJump\n    }\n}"
+    },
+    {
+      "set_code": "Planet",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_PLANET_NAME",
+      "desc_key": "SETBONUS_PLANET_DESC",
+      "name_texts": {
+        "en": "Planet Set Bonus!",
+        "zh": "行星套装加成！"
+      },
+      "desc_texts": {
+        "en": "Flying. Inflict Bruise 1 on units you make contact with.\r\nPull every unit within 2 tiles toward you at the end of each round.",
+        "zh": "飞行。对接触的单位施加 1 层淤伤。\r\n每回合结束时，\r\n将 2 格内的所有单位拉向你。\r\n"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "MeleeRevengeDamage",
+        "effects",
+        "AutocastEachRound"
+      ],
+      "code": "Planet {\n    name \"SETBONUS_PLANET_NAME\"\n    desc \"SETBONUS_PLANET_DESC\"\n    pieces_required 3\n    \n    passives {\n        MeleeRevengeDamage {\n            effects {\n                Bruise 1\n            }\n        }\n        Flying 1\n        AutocastEachRound {\n            ability set_PlanetSetGravity\n            even_if_stunned true\n        }\n    }\n}"
+    },
+    {
+      "set_code": "Debris",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_DEBRIS_NAME",
+      "desc_key": "SETBONUS_DEBRIS_DESC",
+      "name_texts": {
+        "en": "Debris Set Bonus!",
+        "zh": "残骸套装加成！"
+      },
+      "desc_texts": {
+        "en": "Your basic attack deals electric damage and has a +10% chance to Stun.",
+        "zh": "你的基础攻击造成电击伤害，\r\n并有 +10% 几率造成晕眩。\r\n"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "AddStatusToBasicAttack"
+      ],
+      "code": "Debris {\n    name \"SETBONUS_DEBRIS_NAME\"\n    desc \"SETBONUS_DEBRIS_DESC\"\n    pieces_required 3\n    \n    passives {\n        AddElementsToBasicAttack Electric\n        AddStatusToBasicAttack {\n            Stun [1 .1]\n        }\n    }\n}"
+    },
+    {
+      "set_code": "DryBone",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_DRYBONE_NAME",
+      "desc_key": "SETBONUS_DRYBONE_DESC",
+      "name_texts": {
+        "en": "Dry Bone Set Bonus!",
+        "zh": "枯骨套装加成！"
+      },
+      "desc_texts": {
+        "en": "Find a bone club at the end of each battle.",
+        "zh": "每次战斗结束时发现一根骨棒。"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "StatusOnBattleEnd"
+      ],
+      "code": "DryBone {\n    name \"SETBONUS_DRYBONE_NAME\"\n    desc \"SETBONUS_DRYBONE_DESC\"\n    pieces_required 3\n    \n    passives {\n        StatusOnBattleEnd {\n            FindItem BoneClub\n        }\n    }\n}"
+    },
+    {
+      "set_code": "Molten",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_MOLTEN_NAME",
+      "desc_key": "SETBONUS_MOLTEN_DESC",
+      "name_texts": {
+        "en": "Molten Set Bonus!",
+        "zh": "熔岩套装加成！"
+      },
+      "desc_texts": {
+        "en": "Fire immunity.",
+        "zh": "火焰免疫。"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [],
+      "code": "Molten {\n    name \"SETBONUS_MOLTEN_NAME\"\n    desc \"SETBONUS_MOLTEN_DESC\"\n    pieces_required 3\n    \n    passives {\n\t\tInnateElement Fire\n\t\tElementImmune Fire\n\t\tStatusImmunity [Burn]\n    }\n}"
+    },
+    {
+      "set_code": "Mother",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_MOTHER_NAME",
+      "desc_key": "SETBONUS_MOTHER_DESC",
+      "name_texts": {
+        "en": "Mother Set Bonus!",
+        "zh": "母亲套装加成！"
+      },
+      "desc_texts": {
+        "en": "Familiars you spawn gain +2 Damage and +2 HP.",
+        "zh": "你生成的\r\n使魔获得 +2 伤害和 +2 生命值。\r\n"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "AddPassivesToMinions"
+      ],
+      "code": "Mother {\n    name \"SETBONUS_MOTHER_NAME\"\n    desc \"SETBONUS_MOTHER_DESC\"\n    pieces_required 3\n    \n    passives {\n\t\tAddPassivesToMinions {\n\t\t    DamageUp 2\n\t\t    AddMaxHealth 2\n\t\t    HealthGain 2\n\t\t}\n    }\n}"
+    },
+    {
+      "set_code": "Feathered",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_FEATHERED_NAME",
+      "desc_key": "SETBONUS_FEATHERED_DESC",
+      "name_texts": {
+        "en": "Feathered Set Bonus!",
+        "zh": "羽毛套装加成！"
+      },
+      "desc_texts": {
+        "en": "Flying.",
+        "zh": "飞行。"
+      },
+      "name_mod": null,
+      "stats": {
+        "spd": 2
+      },
+      "passives": [],
+      "code": "Feathered {\n    name \"SETBONUS_FEATHERED_NAME\"\n    desc \"SETBONUS_FEATHERED_DESC\"\n    pieces_required 3\n\t\n\tspd 2\n    \n    passives {\n\t\tFlying 1\n    }\n}"
+    },
+    {
+      "set_code": "Copycat",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_COPYCAT_NAME",
+      "desc_key": "SETBONUS_COPYCAT_DESC",
+      "name_texts": {
+        "en": "Copycat Set Bonus!",
+        "zh": "模仿套装加成！"
+      },
+      "desc_texts": {
+        "en": "Copies your trinket's passive effects.",
+        "zh": "复制你饰品的被动效果。"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [],
+      "code": "Copycat {\n    name \"SETBONUS_COPYCAT_NAME\"\n    desc \"SETBONUS_COPYCAT_DESC\"\n    pieces_required 3\n    \n    passives {\n        TrinketPassiveMultiplierBonus 1\n    }\n}"
+    },
+    {
+      "set_code": "Transmitter",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_TRANSMITTER_NAME",
+      "desc_key": "SETBONUS_TRANSMITTER_DESC",
+      "name_texts": {
+        "en": "Transmitter Set Bonus!",
+        "zh": "传输器套装加成！"
+      },
+      "desc_texts": {
+        "en": "All allies gain +1 [img:int] and +1 [img:lck].",
+        "zh": "所有友军获得 +1 [img:int] 和 +1 [img:lck]。\r\n"
+      },
+      "name_mod": null,
+      "stats": {
+        "int": -2
+      },
+      "passives": [
+        "StatusAlliesOnBattleStart"
+      ],
+      "code": "Transmitter {\n    name \"SETBONUS_TRANSMITTER_NAME\"\n    desc \"SETBONUS_TRANSMITTER_DESC\"\n    pieces_required 3\n    \n    int -2\n\n    passives {\n        StatusAlliesOnBattleStart {\n            IntelligenceUp 1\n            LuckUp 1\n        }\n    }\n}"
+    },
+    {
+      "set_code": "Thrumming",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_THRUMMING_NAME",
+      "desc_key": "SETBONUS_THRUMMING_DESC",
+      "name_texts": {
+        "en": "Thrumming Set Bonus!",
+        "zh": "鸣响套装加成！"
+      },
+      "desc_texts": {
+        "en": "If you end your turn without using your basic attack, movement action, or casting a spell, gain All Stats Up.",
+        "zh": "如果你在结束回合时没有使用基础攻击、\r\n移动行动或施放法术，\r\n获得全属性提升。"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "StatusOnTurnEndIfDidntCastAbilityTypes"
+      ],
+      "code": "Thrumming {\n    name \"SETBONUS_THRUMMING_NAME\"\n    desc \"SETBONUS_THRUMMING_DESC\"\n    pieces_required 3\n    \n    passives {\n        StatusOnTurnEndIfDidntCastAbilityTypes {\n            type [attack move spell]\n            AllStatsUp 1\n        }\n    }\n}"
+    },
+    {
+      "set_code": "Witch",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_WITCH_NAME",
+      "desc_key": "SETBONUS_WITCH_DESC",
+      "name_texts": {
+        "en": "Witch Set Bonus!",
+        "zh": "女巫套装加成！"
+      },
+      "desc_texts": {
+        "en": "Your movement action becomes a Jump with infinite range.\r\nYour tile-targeted spells have infinite range.",
+        "zh": "你的移动行动变为无限射程的跳跃。\r\n你的地块目标法术拥有无限射程。\r\n"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [],
+      "code": "Witch {\n    name \"SETBONUS_WITCH_NAME\"\n    desc \"SETBONUS_WITCH_DESC\"\n    pieces_required 3\n\n    passives {\n        ReplaceBasicMove set_WitchJump\n        IncreaseSpellRange 20\n    }\n}"
+    },
+    {
+      "set_code": "Stunning",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_STUNNING_NAME",
+      "desc_key": "SETBONUS_STUNNING_DESC",
+      "name_texts": {
+        "en": "Stunning Set Bonus!",
+        "zh": "惊艳套装加成！"
+      },
+      "desc_texts": {
+        "en": "Your weapon and trinket's passive and active effects are tripled.",
+        "zh": "你的武器和饰品的被动及主动效果翻至三倍。\r\n"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [],
+      "code": "Stunning {\n    name \"SETBONUS_STUNNING_NAME\"\n    desc \"SETBONUS_STUNNING_DESC\"\n    pieces_required 3\n\n    passives {\n        TrinketPassiveMultiplierBonus 2\n        TrinketActiveEffectsMultiplierBonus 2\n        WeaponPassiveMultiplierBonus 2\n        WeaponActiveEffectsMultiplierBonus 2\n    }\n}"
+    },
+    {
+      "set_code": "Superhero",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_SUPERHERO_NAME",
+      "desc_key": "SETBONUS_SUPERHERO_DESC",
+      "name_texts": {
+        "en": "Superhero Set Bonus!",
+        "zh": "超级英雄套装加成！"
+      },
+      "desc_texts": {
+        "en": "The first spell you cast each turn inflicts Webbed.",
+        "zh": "你每回合施放的第一个法术施加蛛网效果。\r\n"
+      },
+      "name_mod": "CAT_NAME_MOD_SUPER",
+      "stats": {},
+      "passives": [
+        "AddStatusToFirstSpellEachTurn",
+        "Conditional_IsSelf",
+        "Else"
+      ],
+      "code": "Superhero {\n    name \"SETBONUS_SUPERHERO_NAME\"\n    desc \"SETBONUS_SUPERHERO_DESC\"\n    pieces_required 3\n\n    name_mod \"CAT_NAME_MOD_SUPER\"\n\n    passives {\n        AddStatusToFirstSpellEachTurn {\n            Conditional_IsSelf {}\n            Else {\n                Webbed 1\n            }\n        }\n    }\n}"
+    },
+    {
+      "set_code": "Lead",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_LEAD_NAME",
+      "desc_key": "SETBONUS_LEAD_DESC",
+      "name_texts": {
+        "en": "Lead Set Bonus!",
+        "zh": "铅制套装加成！"
+      },
+      "desc_texts": {
+        "en": "Trample 9.",
+        "zh": "践踏 9。"
+      },
+      "name_mod": null,
+      "stats": {
+        "spd": -1,
+        "shield": 4
+      },
+      "passives": [],
+      "code": "Lead {\n    name \"SETBONUS_LEAD_NAME\"\n    desc \"SETBONUS_LEAD_DESC\"\n    pieces_required 3\n\n    shield 4\n    spd -1\n\n    passives {\n        Trample 9\n    }\n}"
+    },
+    {
+      "set_code": "Baby",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_BABY_NAME",
+      "desc_key": "SETBONUS_BABY_DESC",
+      "name_texts": {
+        "en": "Baby Set Bonus!",
+        "zh": "宝宝套装加成！"
+      },
+      "desc_texts": {
+        "en": "Start battle with a baby version of yourself.",
+        "zh": "战斗开始时拥有一个宝宝版本的自己。\r\n"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "SpawnCatCopyOnBattleStart"
+      ],
+      "code": "Baby {\n    name \"SETBONUS_BABY_NAME\"\n    desc \"SETBONUS_BABY_DESC\"\n    pieces_required 3\n\n\tpassives {\n\t\tSpawnCatCopyOnBattleStart {\n\t\t\tobject PlayerCat_MiniMiniMe\n\t\t\tprevent_chain_tag minime_clone\n\t\t}\n\t}\n}"
+    },
+    {
+      "set_code": "Ninja",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_NINJA_NAME",
+      "desc_key": "SETBONUS_NINJA_DESC",
+      "name_texts": {
+        "en": "Ninja Set Bonus!",
+        "zh": "忍者套装加成！"
+      },
+      "desc_texts": {
+        "en": "Start battle with a bonus attack.",
+        "zh": "战斗开始时获得一次奖励攻击。"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [],
+      "code": "Ninja {\n    name \"SETBONUS_NINJA_NAME\"\n    desc \"SETBONUS_NINJA_DESC\"\n    pieces_required 3\n\n    passives {\n        Quivered 1\n    }\n}"
+    },
+    {
+      "set_code": "Prowler",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_PROWLER_NAME",
+      "desc_key": "SETBONUS_PROWLER_DESC",
+      "name_texts": {
+        "en": "Prowler Set Bonus!",
+        "zh": "潜行者套装加成！"
+      },
+      "desc_texts": {
+        "en": "Backstabs are always critical.",
+        "zh": "背刺必定暴击。"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [],
+      "code": "Prowler {\n    name \"SETBONUS_PROWLER_NAME\"\n    desc \"SETBONUS_PROWLER_DESC\"\n    pieces_required 3\n\n\tpassives {\n\t\tBackstabCritChance 1\n\t}\n}"
+    },
+    {
+      "set_code": "Godhead",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_GODHEAD_NAME",
+      "desc_key": "SETBONUS_GODHEAD_DESC",
+      "name_texts": {
+        "en": "Godhead Set Bonus!",
+        "zh": "神性套装加成！"
+      },
+      "desc_texts": {
+        "en": "Eternal Life",
+        "zh": "永恒生命"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "ChanceToRevive"
+      ],
+      "code": "Godhead {\n    name \"SETBONUS_GODHEAD_NAME\"\n    desc \"SETBONUS_GODHEAD_DESC\"\n    pieces_required 3\n\n    passives {\n\t\tChanceToRevive {\n\t\t\tstacks 100\n\t\t\thealth 50%\n\t\t}\n    }\n}"
+    },
+    {
+      "set_code": "Hippie",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_HIPPIE_NAME",
+      "desc_key": "SETBONUS_HIPPIE_DESC",
+      "name_texts": {
+        "en": "Hippie Set Bonus!",
+        "zh": "嬉皮士套装加成！"
+      },
+      "desc_texts": {
+        "en": "Spawn 5 Catnip pickups at the start of each battle.",
+        "zh": "每次战斗开始时生成 5 个猫薄荷掉落物。\r\n"
+      },
+      "name_mod": "CAT_NAME_MOD_HIPPIE",
+      "stats": {},
+      "passives": [
+        "SpawnOnBattleStart"
+      ],
+      "code": "Hippie {\n    name \"SETBONUS_HIPPIE_NAME\"\n    desc \"SETBONUS_HIPPIE_DESC\"\n    pieces_required 3\n\n    name_mod \"CAT_NAME_MOD_HIPPIE\"\n\n\tpassives {\n\t\tSpawnOnBattleStart {\n\t\t\tobject Catnip\n\t\t\tnumber 5\n\t\t}\n\t}\t\n}"
+    },
+    {
+      "set_code": "Parasite",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_PARASITE_NAME",
+      "desc_key": "SETBONUS_PARASITE_DESC",
+      "name_texts": {
+        "en": "Parasite Set Bonus!",
+        "zh": "寄生虫套装加成！"
+      },
+      "desc_texts": {
+        "en": "At the end of each battle, lose a random stat permanently and gain a random mutation.",
+        "zh": "每场战斗结束时，\r\n永久失去一项随机属性并获得一个随机突变。\r\n"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "StatusOnBattleEnd"
+      ],
+      "code": "Parasite {\n    name \"SETBONUS_PARASITE_NAME\"\n    desc \"SETBONUS_PARASITE_DESC\"\n    pieces_required 3\n\n\tpassives {\n        StatusOnBattleEnd {\n            even_if_dead true\n            \n            RandomPermanentStat -1\n            RandomMutation 1\n        }\n\t}\t\n}"
+    },
+    {
+      "set_code": "Brick",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_BRICK_NAME",
+      "desc_key": "SETBONUS_BRICK_DESC",
+      "name_texts": {
+        "en": "Brick Set Bonus!",
+        "zh": "砖块套装加成！"
+      },
+      "desc_texts": {
+        "en": "Knockback immunity.",
+        "zh": "击退免疫。"
+      },
+      "name_mod": null,
+      "stats": {
+        "shield": 4
+      },
+      "passives": [],
+      "code": "Brick {\n    name \"SETBONUS_BRICK_NAME\"\n    desc \"SETBONUS_BRICK_DESC\"\n    pieces_required 3\n\t\n\tshield 4\n\n\tpassives {\n\t\tKnockbackImmunity 1\n\t}\n}\t"
+    },
+    {
+      "set_code": "Slimy",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_SLIMY_NAME",
+      "desc_key": "SETBONUS_SLIMY_DESC",
+      "name_texts": {
+        "en": "Slimy Set Bonus!",
+        "zh": "粘液套装加成！"
+      },
+      "desc_texts": {
+        "en": "Poisonous 2.",
+        "zh": "带毒 2。"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [],
+      "code": "Slimy {\n    name \"SETBONUS_SLIMY_NAME\"\n    desc \"SETBONUS_SLIMY_DESC\"\n    pieces_required 3\n\n\tpassives {\n\t\tPoisonThorns 2\n\t}\n}\t"
+    },
+    {
+      "set_code": "Rat",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_RAT_NAME",
+      "desc_key": "SETBONUS_RAT_DESC",
+      "name_texts": {
+        "en": "Rat Set Bonus!",
+        "zh": "老鼠套装加成！"
+      },
+      "desc_texts": {
+        "en": "Start battle with 2 Charmed Rats.",
+        "zh": "战斗开始时带有 2 只魅惑老鼠。\r\n"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "SpawnOnBattleStart"
+      ],
+      "code": "Rat {\n    name \"SETBONUS_RAT_NAME\"\n    desc \"SETBONUS_RAT_DESC\"\n    pieces_required 3\n\t\n\tpassives {\n\t\tSpawnOnBattleStart {\n\t\t\tobject CharmedRat \n\t\t\tnumber 2\n\t\t}\n\t}\n}\t"
+    },
+    {
+      "set_code": "Carapace",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_CARAPACE_NAME",
+      "desc_key": "SETBONUS_CARAPACE_DESC",
+      "name_texts": {
+        "en": "Carapace Set Bonus!",
+        "zh": "甲壳套装加成！"
+      },
+      "desc_texts": {
+        "en": "Gain 3 random stat ups at the end of your turn.",
+        "zh": "在你的回合结束时，\r\n获得 3 次随机属性提升。"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "StatusEachTurnEnd"
+      ],
+      "code": "Carapace {\n    name \"SETBONUS_CARAPACE_NAME\"\n    desc \"SETBONUS_CARAPACE_DESC\"\n    pieces_required 3\n\t\n\tpassives {\n\t\tStatusEachTurnEnd {\n\t\t\tRandomStatUp 3\n\t\t}\n\t}\n}\t"
+    },
+    {
+      "set_code": "Radioactive",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_RADIOACTIVE_NAME",
+      "desc_key": "SETBONUS_RADIOACTIVE_DESC",
+      "name_texts": {
+        "en": "Radioactive Set Bonus!",
+        "zh": "辐射套装加成！"
+      },
+      "desc_texts": {
+        "en": "Gain a random mutation at the end of each battle.\r\nExplode when downed. This explosion doesn't damage you.",
+        "zh": "每场战斗结束时获得一个随机突变。\r\n倒地时爆炸。此爆炸不会伤害你。\r\n"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "StatusOnBattleEnd",
+        "DeathRattle"
+      ],
+      "code": "Radioactive {\n    name \"SETBONUS_RADIOACTIVE_NAME\"\n    desc \"SETBONUS_RADIOACTIVE_DESC\"\n    pieces_required 3\n\n\tpassives {\n\t\tStatusOnBattleEnd {\n\t\t\tRandomMutation 1\n\t\t}\n        DeathRattle {\n            pop_corpse false\n            ability MiniNukeExplodey\n        }\n\t}\n}\t"
+    },
+    {
+      "set_code": "Nurse",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_NURSE_NAME",
+      "desc_key": "SETBONUS_NURSE_DESC",
+      "name_texts": {
+        "en": "Nurse Set Bonus!",
+        "zh": "护士套装加成！"
+      },
+      "desc_texts": {
+        "en": "Your basic attack becomes holy and can heal allies.",
+        "zh": "你的基础攻击变为神圣属性，\r\n并可以治疗盟友。"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "AddStatusToBasicAttack"
+      ],
+      "code": "Nurse {\n    name \"SETBONUS_NURSE_NAME\"\n    desc \"SETBONUS_NURSE_DESC\"\n    pieces_required 3\n\n\tpassives {\n        AddElementsToBasicAttack Holy\n        AddStatusToBasicAttack {\n            DamageOrHealConditionally 1\n        }\n\t}\n}\t"
+    },
+    {
+      "set_code": "Hybrid",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_HYBRID_NAME",
+      "desc_key": "SETBONUS_HYBRID_DESC",
+      "name_texts": {
+        "en": "Hybrid Set Bonus!",
+        "zh": "混合套装加成！"
+      },
+      "desc_texts": {
+        "en": "Bruise 1. Poison 1. Bleed 1.\r\nThe first spell you cast each turn is cast twice.",
+        "zh": "淤伤 1。中毒 1。流血 1。\r\n你每回合施放的第一个法术会施放两次。\r\n"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [],
+      "code": "Hybrid {\n    name \"SETBONUS_HYBRID_NAME\"\n    desc \"SETBONUS_HYBRID_DESC\"\n    pieces_required 3\n\n\tpassives {\n\t\tPoison 1\n\t\tBleed 1\n\t\tBruise 1\n        DoubleCastSpellsEachTurn_Status 1\n\t}\n}\t"
+    },
+    {
+      "set_code": "Fatty",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_FATTY_NAME",
+      "desc_key": "SETBONUS_FATTY_DESC",
+      "name_texts": {
+        "en": "Fatty Set Bonus!",
+        "zh": "肥胖套装加成！"
+      },
+      "desc_texts": {},
+      "name_mod": null,
+      "stats": {
+        "con": 3
+      },
+      "passives": [],
+      "code": "Fatty {\n    name \"SETBONUS_FATTY_NAME\"\n    desc \"SETBONUS_FATTY_DESC\"\n    pieces_required 3\n\n\tcon 3\n\t\n}\t"
+    },
+    {
+      "set_code": "Medical",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_MEDICAL_NAME",
+      "desc_key": "SETBONUS_MEDICAL_DESC",
+      "name_texts": {
+        "en": "Medical Set Bonus!",
+        "zh": "医疗套装加成！"
+      },
+      "desc_texts": {
+        "en": "You have +1 Health Regen for each disorder you have.",
+        "zh": "你每拥有一种病症，\r\n便获得 +1 生命恢复。"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [],
+      "code": "Medical {\n    name \"SETBONUS_MEDICAL_NAME\"\n    desc \"SETBONUS_MEDICAL_DESC\"\n    pieces_required 3\n\n\tpassives {\n        BonusHealthRegenPerDisorder 1\n\t}\n}"
+    },
+    {
+      "set_code": "Chip",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_CHIP_NAME",
+      "desc_key": "SETBONUS_CHIP_DESC",
+      "name_texts": {
+        "en": "Chip Set Bonus!",
+        "zh": "芯片套装加成！"
+      },
+      "desc_texts": {
+        "en": "When you end your turn, if you cast exactly 5 spells, double cast your next spell.",
+        "zh": "当你结束回合时，\r\n如果你施放了刚好 5 个法术，\r\n你的下一个法术将双重施法。"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "StatusOnTurnEndIfCastNSpells"
+      ],
+      "code": "Chip {\n    name \"SETBONUS_CHIP_NAME\"\n    desc \"SETBONUS_CHIP_DESC\"\n    pieces_required 3\n\n    passives {\n        StatusOnTurnEndIfCastNSpells {\n            spells 5\n\n            DoubleCastSpell 1\n        }\n\t}\n}\t"
+    },
+    {
+      "set_code": "Demonic",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_DEMONIC_NAME",
+      "desc_key": "SETBONUS_DEMONIC_DESC",
+      "name_texts": {
+        "en": "Demonic Set Bonus!",
+        "zh": "恶魔套装加成！"
+      },
+      "desc_texts": {
+        "en": "When you get a kill, gain +6 Shield.",
+        "zh": "当你造成击杀时，获得 +6 护盾。\r\n"
+      },
+      "name_mod": "CAT_NAME_MOD_DEMONIC",
+      "stats": {},
+      "passives": [
+        "StatusOnKill"
+      ],
+      "code": "Demonic {\n    name \"SETBONUS_DEMONIC_NAME\"\n    desc \"SETBONUS_DEMONIC_DESC\"\n    pieces_required 3\n\n    name_mod CAT_NAME_MOD_DEMONIC\n\n\tpassives {\n\t\tStatusOnKill {\n\t\t\tShield 6\n\t\t}\n\t}\n}\t"
+    },
+    {
+      "set_code": "Frozen",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_FROZEN_NAME",
+      "desc_key": "SETBONUS_FROZEN_DESC",
+      "name_texts": {
+        "en": "Frozen Set Bonus!",
+        "zh": "冻结套装加成！"
+      },
+      "desc_texts": {
+        "en": "You can damage Frozen units.",
+        "zh": "你可以对冻结单位造成伤害。"
+      },
+      "name_mod": null,
+      "stats": {
+        "shield": 4
+      },
+      "passives": [],
+      "code": "Frozen {\n    name \"SETBONUS_FROZEN_NAME\"\n    desc \"SETBONUS_FROZEN_DESC\"\n    pieces_required 3\n\n\tshield 4\n\n\tpassives {\n\t\tFreezePiercing 1\n\t}\n}\t"
+    },
+    {
+      "set_code": "Wooly",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_WOOLLY_NAME",
+      "desc_key": "SETBONUS_WOOLLY_DESC",
+      "name_texts": {
+        "en": "Wooly Set Bonus!",
+        "zh": "长毛套装加成！"
+      },
+      "desc_texts": {
+        "en": "Start with a Charmed Mammoth Baby.",
+        "zh": "开局携带一只魅惑猛犸宝宝。"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "SpawnOnBattleStart"
+      ],
+      "code": "Wooly {\n    name \"SETBONUS_WOOLLY_NAME\"\n    desc \"SETBONUS_WOOLLY_DESC\"\n    pieces_required 3\n\n\tpassives {\n\t\tSpawnOnBattleStart {\n\t\t\tobject CharmedMammothBaby\n\t\t\tnumber 1\n\t\t}\n\t}\n}"
+    },
+    {
+      "set_code": "Rune",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_RUNE_NAME",
+      "desc_key": "SETBONUS_RUNE_DESC",
+      "name_texts": {
+        "en": "Rune Set Bonus!",
+        "zh": "符文套装加成！"
+      },
+      "desc_texts": {},
+      "name_mod": null,
+      "stats": {
+        "divine_shield": 2
+      },
+      "passives": [],
+      "code": "Rune {\n    name \"SETBONUS_RUNE_NAME\"\n    desc \"SETBONUS_RUNE_DESC\"\n    pieces_required 3\n\n\tdivine_shield 2\n}\t"
+    },
+    {
+      "set_code": "Caveman",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_CAVEMAN_NAME",
+      "desc_key": "SETBONUS_CAVEMAN_DESC",
+      "name_texts": {
+        "en": "Caveman Set Bonus!",
+        "zh": "穴居人套装加成！"
+      },
+      "desc_texts": {
+        "en": "If your [img:int] is 1 or less, gain Brace 5.",
+        "zh": "如果你的 [img:int] 为 1 或更低，\r\n获得 5 层护甲。"
+      },
+      "name_mod": null,
+      "stats": {
+        "int": 1
+      },
+      "passives": [
+        "PassiveAtStatThreshold",
+        "threshold"
+      ],
+      "code": "Caveman {\n    name \"SETBONUS_CAVEMAN_NAME\"\n    desc \"SETBONUS_CAVEMAN_DESC\"\n    pieces_required 3\n\n\tpassives {\n\t\tPassiveAtStatThreshold {\n\t\tmode less_or_equal\n\t\t\tthreshold {\n\t\t\t\tint 1\n\t\t\t}\n\t\t\tpassives {\n\t\t\t\tBrace 5\n\t\t\t}\n\t\t}\n\t}\n}\t"
+    },
+    {
+      "set_code": "Dino",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_DINO_NAME",
+      "desc_key": "SETBONUS_DINO_DESC",
+      "name_texts": {
+        "en": "Dino Set Bonus!",
+        "zh": "恐龙套装加成！"
+      },
+      "desc_texts": {
+        "en": "Allies gain +5 [img:shield] at the start of each battle.",
+        "zh": "盟友在每次战斗开始时获得 +5 [img:shield]。\r\n"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "StatusAlliesOnBattleStart"
+      ],
+      "code": "Dino {\n    name \"SETBONUS_DINO_NAME\"\n    desc \"SETBONUS_DINO_DESC\"\n    pieces_required 3\n\n\tpassives {\n\t\tStatusAlliesOnBattleStart {\n\t\t\tShield 5\n\t\t}\n\t}\n}\t"
+    },
+    {
+      "set_code": "BigRock",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_BIGROCK_NAME",
+      "desc_key": "SETBONUS_BIGROCK_DESC",
+      "name_texts": {
+        "en": "Big Rock Set Bonus!",
+        "zh": "巨石套装加成！"
+      },
+      "desc_texts": {
+        "en": "Spawn 2 Charmed Geolads at the start of each battle.",
+        "zh": "每场战斗开始时生成 2 个魅惑岩石小子。\r\n"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "SpawnOnBattleStart"
+      ],
+      "code": "BigRock {\n    name \"SETBONUS_BIGROCK_NAME\"\n    desc \"SETBONUS_BIGROCK_DESC\"\n    pieces_required 3\n\n\n\tpassives {\n\t\tSpawnOnBattleStart {\n\t\t\tobject GeoLad\n\t\t\tnumber 2\n\t\t}\n\t}\n}\t"
+    },
+    {
+      "set_code": "Phoenix",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_PHOENIX_NAME",
+      "desc_key": "SETBONUS_PHOENIX_DESC",
+      "name_texts": {
+        "en": "Phoenix Set Bonus!",
+        "zh": "凤凰套装加成！"
+      },
+      "desc_texts": {
+        "en": "Flying. You can move an extra time each turn.",
+        "zh": "飞行。你每回合可以额外移动一次。\r\n"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [],
+      "code": "Phoenix {\n    name \"SETBONUS_PHOENIX_NAME\"\n    desc \"SETBONUS_PHOENIX_DESC\"\n    pieces_required 3\n\n\tpassives {\n\t\tFlying 1\n\t\tExtraBasicMoves_Status 1\n\t}\n}"
+    },
+    {
+      "set_code": "Jester",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_JESTER_NAME",
+      "desc_key": "SETBONUS_JESTER_DESC",
+      "name_texts": {
+        "en": "Jester Set Bonus!",
+        "zh": "小丑套装加成！"
+      },
+      "desc_texts": {
+        "en": "+3 Rerolls when leveling up.",
+        "zh": "升级时 +3 次重掷。"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [],
+      "code": "Jester {\n    name \"SETBONUS_JESTER_NAME\"\n    desc \"SETBONUS_JESTER_DESC\"\n    pieces_required 3\n    \n    passives {\n        AddLevelUpRerolls 3\n    }\n}"
+    },
+    {
+      "set_code": "Ancestor",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_ANCESTOR_NAME",
+      "desc_key": "SETBONUS_ANCESTOR_DESC",
+      "name_texts": {
+        "en": "Ancestor Set Bonus!",
+        "zh": "先祖套装加成！"
+      },
+      "desc_texts": {
+        "en": "Spawn a spectral copy of yourself when you die.\r\nThe copy dies at the end of its turn.",
+        "zh": "当你死亡时，生成一个你的幽灵分身。\r\n分身在其回合结束时死亡。"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "SpawnCatCopyWhenDowned"
+      ],
+      "code": "Ancestor {\n    name \"SETBONUS_ANCESTOR_NAME\"\n    desc \"SETBONUS_ANCESTOR_DESC\"\n    pieces_required 3\n    \n    passives {\n        SpawnCatCopyWhenDowned {\n            object PlayerCat_AncestralShade\n            prevent_chain_tag ancestorset_shade\n        }\n    }\n}"
+    },
+    {
+      "set_code": "Survivalist",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_SURVIVALIST_NAME",
+      "desc_key": "SETBONUS_SURVIVALIST_DESC",
+      "name_texts": {
+        "en": "Survivalist Set Bonus!",
+        "zh": "生存专家套装加成！"
+      },
+      "desc_texts": {
+        "en": "Find a consumable item at the end of each battle.\r\nWhen you use up a consumable or trinket, equip a new consumable from your inventory if you have any.",
+        "zh": "每场战斗结束时发现一个消耗品。\r\n当你用尽一个消耗品或饰品时，\r\n如果库存中有消耗品，\r\n则装备一个新的。"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [
+        "StatusOnBattleEnd",
+        "Conditional_GoodRoll"
+      ],
+      "code": "Survivalist {\n    name \"SETBONUS_SURVIVALIST_NAME\"\n    desc \"SETBONUS_SURVIVALIST_DESC\"\n    pieces_required 3\n    \n    passives {\n        StatusOnBattleEnd {\n            Conditional_GoodRoll {\n                odds 100%\n                FindItemFromPool consumables\n            }\n        }\n        AutoEquipConsumables 1\n    }\n}"
+    },
+    {
+      "set_code": "Leech",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_LEECH_NAME",
+      "desc_key": "SETBONUS_LEECH_DESC",
+      "name_texts": {
+        "en": "Leech Set Bonus!",
+        "zh": "水蛭套装加成！"
+      },
+      "desc_texts": {
+        "en": "Start battle with 4 beefy Leech familiars.",
+        "zh": "战斗开始时拥有 4 只健壮水蛭使魔。\r\n"
+      },
+      "name_mod": null,
+      "stats": {},
+      "passives": [],
+      "code": "Leech {\n    name \"SETBONUS_LEECH_NAME\"\n    desc \"SETBONUS_LEECH_DESC\"\n    pieces_required 3\n    \n\tpassives {\n\t\tSpawnOnBattleStart BeefyCharmedLeech\n\t\tSpawnOnBattleStart BeefyCharmedLeech\n\t\tSpawnOnBattleStart BeefyCharmedLeech\n\t\tSpawnOnBattleStart BeefyCharmedLeech\n\t}\n}"
+    },
+    {
+      "set_code": "Steven",
+      "pieces_required": 3,
+      "name_key": "SETBONUS_STEVEN_NAME",
+      "desc_key": "SETBONUS_STEVEN_DESC",
+      "name_texts": {
+        "en": "Steven Set Bonus!",
+        "zh": "史蒂文套装加成！"
+      },
+      "desc_texts": {
+        "en": "Your name is now Steven! Hello Steven!",
+        "zh": "你的名字现在是史蒂文了！\r\n你好史蒂文！"
+      },
+      "name_mod": "CAT_NAME_MOD_STEVEN",
+      "stats": {},
+      "passives": [],
+      "code": "Steven {//change the cats name to \"Steven\"\n    name \"SETBONUS_STEVEN_NAME\"\n    desc \"SETBONUS_STEVEN_DESC\"\n    pieces_required 3\n\n    name_mod \"CAT_NAME_MOD_STEVEN\"\n    \n    passives {\n    }\n}"
+    }
+  ]
+}
