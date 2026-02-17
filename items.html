@@ -217,14 +217,12 @@
             gap: 8px;
             flex-wrap: wrap;
             margin-top: 4px;
-            font-size: 0.9em;
         }
 
         .set-bonus-stat {
             display: inline-flex;
             align-items: center;
             gap: 3px;
-            color: #666;
             font-weight: 400;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
@@ -476,6 +474,11 @@
             color: white;
         }
 
+        .rarity-cursed {
+            background: #2c3e50;
+            color: white;
+        }
+
         .kind-trinket {
             background: #e67e22;
             color: white;
@@ -715,6 +718,9 @@
             <select id="consumableFilter">
                 <option value="">All Items</option>
             </select>
+            <select id="cursedFilter">
+                <option value="">All Items</option>
+            </select>
         </div>
 
         <div class="filter-tags" id="filterTags">
@@ -811,9 +817,12 @@
                 languageChinese: 'Chinese',
                 allTypes: 'All Types',
                 allRarities: 'All Rarities',
-                allConsumable: 'All Items',
+                allConsumable: 'Consumable Status',
                 consumableOnly: 'Consumable Only',
                 nonConsumable: 'Non-Consumable',
+                allCursed: 'Cursed Status',
+                cursedOnly: 'Cursed Only',
+                nonCursed: 'Non-Cursed Only',
                 totalItems: 'Total Items:',
                 showing: 'Showing:',
                 iconHeader: 'Icon',
@@ -823,6 +832,7 @@
                 consumableHeader: 'Consumable',
                 consumableYes: 'Yes',
                 consumableNo: 'No',
+                cursed: 'Cursed',
                 rarityHeader: 'Rarity',
                 loading: 'Loading items...',
                 noResults: 'No items found matching your filters.',
@@ -850,9 +860,12 @@
                 languageChinese: '中文',
                 allTypes: '全部类型',
                 allRarities: '全部稀有度',
-                allConsumable: '全部物品',
+                allConsumable: '消耗品属性',
                 consumableOnly: '仅消耗品',
                 nonConsumable: '非消耗品',
+                allCursed: '诅咒状态',
+                cursedOnly: '仅诅咒物品',
+                nonCursed: '非诅咒物品',
                 totalItems: '物品总数：',
                 showing: '显示：',
                 iconHeader: '图标',
@@ -862,6 +875,7 @@
                 consumableHeader: '消耗品',
                 consumableYes: '是',
                 consumableNo: '否',
+                cursed: '诅咒',
                 rarityHeader: '稀有度',
                 loading: '正在加载物品...',
                 noResults: '没有找到符合筛选条件的物品。',
@@ -1057,12 +1071,15 @@
             const kindFilter = document.getElementById('kindFilter');
             const rarityFilter = document.getElementById('rarityFilter');
             const consumableFilter = document.getElementById('consumableFilter');
+            const cursedFilter = document.getElementById('cursedFilter');
             const selectedKind = kindFilter ? kindFilter.value : '';
             const selectedRarity = rarityFilter ? rarityFilter.value : '';
             const selectedConsumable = consumableFilter ? consumableFilter.value : '';
+            const selectedCursed = cursedFilter ? cursedFilter.value : '';
             populateKindFilter(selectedKind);
             populateRarityFilter(selectedRarity);
             populateConsumableFilter(selectedConsumable);
+            populateCursedFilter(selectedCursed);
 
             const loadingMessage = document.getElementById('loadingMessage');
             if (loadingMessage) {
@@ -1077,6 +1094,14 @@
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
                 allItems = await response.json();
+
+                // Normalize cursed flag: prefer `cursed` and remove legacy `is_cursed`.
+                // allItems.forEach(it => {
+                //     it.cursed = !!(it.cursed || it.is_cursed);
+                //     if (it.hasOwnProperty('is_cursed')) {
+                //         delete it.is_cursed;
+                //     }
+                // });
 
                 // Load set bonuses data
                 try {
@@ -1167,6 +1192,28 @@
             select.value = selectedValue;
         }
 
+        function populateCursedFilter(selectedValue = '') {
+            const select = document.getElementById('cursedFilter');
+            if (!select) return;
+
+            select.innerHTML = '';
+
+            const options = [
+                { value: '', label: t('allCursed') },
+                { value: 'cursed', label: t('cursedOnly') },
+                { value: 'non-cursed', label: t('nonCursed') }
+            ];
+
+            options.forEach(opt => {
+                const option = document.createElement('option');
+                option.value = opt.value;
+                option.textContent = opt.label;
+                select.appendChild(option);
+            });
+
+            select.value = selectedValue;
+        }
+
         function getLocalizedText(texts, fallback) {
             if (!texts || typeof texts !== 'object') {
                 return fallback || '';
@@ -1189,9 +1236,9 @@
         function getRarityBackgroundPath(item) {
             // handle quest and sidequest and their -cursed variants:
             if (item.rarity === 'quest' || item.rarity === 'sidequest') {
-                return `rarity/${item.rarity}${item.is_cursed ? 'cursed' : ''}.png`;
+                return `rarity/${item.rarity}${item.cursed ? 'cursed' : ''}.png`;
             }
-            if (item.rarity === 'cursed') {
+            if (item.cursed) {
                 return 'rarity/cursed.png';
             }
             if (!item.rarity) return 'rarity/unknown.png';
@@ -1262,6 +1309,21 @@
                     durabilityText = `\n[s:.7](${durabilityStr})[/s]`;
                 }
 
+                // Build rarity display: show "Rarity/Cursed" when item has a rarity and is cursed,
+                // otherwise show just "Cursed" when cursed without rarity, or the rarity label.
+                let rarityCellHtml = '-';
+                if (item.cursed) {
+                    if (item.rarity) {
+                        const baseLabel = getRarityLabel(item.rarity);
+                        // Use the base rarity color for "Rarity/Cursed"
+                        rarityCellHtml = `<div class="item-rarity rarity-${item.rarity}">${escapeHtml(baseLabel + '/' + t('cursed'))}</div>`;
+                    } else {
+                        rarityCellHtml = `<div class="item-rarity rarity-cursed">${escapeHtml(t('cursed'))}</div>`;
+                    }
+                } else if (item.rarity) {
+                    rarityCellHtml = `<div class="item-rarity rarity-${item.rarity}">${escapeHtml(rarityLabel)}</div>`;
+                }
+
                 return `
                     <tr>
                         <td class="image-cell">
@@ -1279,7 +1341,7 @@
                         </td>
                         <td>
                             ${statsHtml}
-                            <div class="description">${parseRichText(localizedDescription + durabilityText) || '-'}</div>
+                            <div class="description">${parseRichText(localizedDescription + durabilityText) || ''}</div>
                         </td>
                         <td>
                             ${item.kind ? `<div class="item-rarity kind-${item.kind}">${partIconHtml}${escapeHtml(kindLabel)}</div>` : '-'}
@@ -1288,7 +1350,7 @@
                             <div class="item-consumable">${item.is_consumable ? escapeHtml(t('consumableYes')) : escapeHtml(t('consumableNo'))}</div>
                         </td>
                         <td>
-                            ${item.rarity ? `<div class="item-rarity rarity-${item.rarity}">${escapeHtml(rarityLabel)}</div>` : '-'}
+                            ${rarityCellHtml}
                         </td>
                     </tr>
                 `;
@@ -1350,6 +1412,7 @@
             const kindFilter = document.getElementById('kindFilter').value;
             const rarityFilter = document.getElementById('rarityFilter').value;
             const consumableFilter = document.getElementById('consumableFilter').value;
+            const cursedFilter = document.getElementById('cursedFilter').value;
 
             filteredItems = allItems.filter(item => {
                 const localizedName = getLocalizedText(item.item_name_texts, item.item_name).toLowerCase();
@@ -1381,7 +1444,12 @@
                 const matchesConsumable = !consumableFilter ||
                     (consumableFilter === 'consumable' && item.is_consumable) ||
                     (consumableFilter === 'non-consumable' && !item.is_consumable);
-                return matchesSearch && matchesKind && matchesRarity && matchesConsumable;
+
+                const matchesCursed = !cursedFilter ||
+                    (cursedFilter === 'cursed' && item.cursed) ||
+                    (cursedFilter === 'non-cursed' && !item.cursed);
+
+                return matchesSearch && matchesKind && matchesRarity && matchesConsumable && matchesCursed;
             });
 
             updateFilterTags();
@@ -1612,6 +1680,7 @@
         document.getElementById('kindFilter').addEventListener('change', filterItems);
         document.getElementById('rarityFilter').addEventListener('change', filterItems);
         document.getElementById('consumableFilter').addEventListener('change', filterItems);
+        document.getElementById('cursedFilter').addEventListener('change', filterItems);
         document.getElementById('languageSelect').addEventListener('change', (event) => {
             currentLanguage = event.target.value;
             setUrlParameter('lang', currentLanguage);
