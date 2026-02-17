@@ -695,6 +695,7 @@
                 psychic: 'Psychic',
                 tinkerer: 'Tinkerer',
                 jester: 'Jester',
+                colorless: 'Colorless',
             },
             zh: {
                 fighter: '战士',
@@ -710,6 +711,7 @@
                 psychic: '灵能者',
                 tinkerer: '工匠',
                 jester: '小丑',
+                colorless: '无色',
             }
         };
 
@@ -896,7 +898,7 @@
 
                 // Build base stats only
                 let baseStatsHtml = buildStatsHtml(ability.cost, ability.damage, false);
-                
+
                 // Build upgraded stats only (if they exist)
                 let upgradedStatsHtml = '';
                 if (ability.cost_upgraded || ability.damage_upgraded) {
@@ -915,7 +917,7 @@
                 // Build rendered tags display (small icons above icon)
                 const buildRenderedTagsHtml = (tagsRendered) => {
                     if (!tagsRendered || tagsRendered.length === 0) return '';
-                    
+
                     const tagMap = {
                         'musical': 'res/music.png',
                         'holy': 'res/tags/holy.png',
@@ -944,7 +946,7 @@
                 let tagsRenderedHtml = buildRenderedTagsHtml(ability.tags_rendered);
                 let tagsRenderedUpgradedHtml = '';
                 let showUpgradedIcon = false;
-                
+
                 if (ability.tags_rendered_upgraded && ability.tags_rendered !== ability.tags_rendered_upgraded) {
                     tagsRenderedUpgradedHtml = buildRenderedTagsHtml(ability.tags_rendered_upgraded);
                     showUpgradedIcon = true;
@@ -968,7 +970,7 @@
                         </div>
                     </div>
                 `;
-                
+
                 let upgradedIconHtml = '';
                 // If upgraded tags differ, show separator and upgraded icon with upgraded stats only
                 if (showUpgradedIcon) {
@@ -1041,7 +1043,7 @@
             if (value === null || value === undefined) {
                 return { value: null, display: null };
             }
-            
+
             // Check if it's a number or numeric string
             if (!isNaN(value) && value !== '') {
                 return { value: value, display: value };
@@ -1051,7 +1053,7 @@
             if (typeof value === 'string' && value.length <= 3) {
                 return { value: value, display: value };
             }
-            
+
             // It's a formula or expression
             return { value: value, display: '?' };
         }
@@ -1060,17 +1062,17 @@
         // Handles: [s:.7]text[/s] for italics, [img:xxx] for icons, newlines
         function parseRichText(text) {
             if (!text) return '';
-            
+
             // Escape HTML first
             let html = escapeHtml(text);
-            
+
             // Handle [s:.7]...[/s] for italics (allow multiline content)
             html = html.replace(/\[s:[^\]]+\]([\s\S]*?)\[\/s\]/g, '<i>$1</i>');
-            
+
             // Handle [img:xxx] placeholders - use actual icon images
             // Map icon names (handle "con" -> "constitution" for Windows reserved name)
             // Shield icons (shield, divineshield) stay white; stat icons use CSS filter
-            html = html.replace(/\[img:([^\]]+)\]/g, function(match, iconName) {
+            html = html.replace(/\[img:([^\]]+)\]/g, function (match, iconName) {
                 const iconMap = { 'con': 'constitution' };
                 const mappedName = iconMap[iconName] || iconName;
                 const isShield = iconName === 'shield' || iconName === 'divineshield';
@@ -1078,10 +1080,10 @@
 
                 return `<img src="res/fonticon/${mappedName}.png" alt="${iconName}" title="${iconName}" class="${className}" onerror="this.style.display='none'">`;
             });
-            
+
             // Handle newlines
             html = html.replace(/\n/g, '<br>');
-            
+
             return html;
         }
 
