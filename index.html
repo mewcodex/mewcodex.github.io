@@ -170,6 +170,11 @@
             color: #9f978b;
         }
 
+        .class-cell {
+            text-align: center;
+            vertical-align: middle;
+        }
+
         .image-cell {
             text-align: left;
         }
@@ -551,6 +556,11 @@
             .header h1 {
                 font-size: 1.8em;
             }
+
+            .controls label {
+                font-size: 0.95em;
+                color: #666;
+            }
         }
     </style>
 </head>
@@ -566,6 +576,7 @@
 
         <div class="controls">
             <input type="text" id="searchInput" placeholder="Search by ability name or description...">
+            <label id="languageLabel" for="languageSelect">Language:</label>
             <select id="languageSelect">
                 <option value="en">English</option>
                 <option value="zh">Chinese</option>
@@ -629,6 +640,7 @@
                 headerTitle: 'Mewgenics Ability Viewer',
                 headerSubtitle: 'Browse all game abilities with descriptions and icons',
                 searchPlaceholder: 'Search by ability name or description...',
+                languageLabel: 'Language:',
                 allClasses: 'All Classes',
                 totalAbilities: 'Total Abilities:',
                 showing: 'Showing:',
@@ -656,6 +668,7 @@
                 headerTitle: 'Mewgenics 能力图鉴',
                 headerSubtitle: '浏览所有能力的描述与图标',
                 searchPlaceholder: '按能力名称或描述搜索...',
+                languageLabel: '语言：',
                 allClasses: '全部职业',
                 totalAbilities: '能力总数：',
                 showing: '显示：',
@@ -723,6 +736,7 @@
             document.title = t('pageTitle');
             document.getElementById('headerTitle').textContent = t('headerTitle');
             document.getElementById('searchInput').placeholder = t('searchPlaceholder');
+            document.getElementById('languageLabel').textContent = t('languageLabel');
             document.getElementById('totalLabel').textContent = t('totalAbilities');
             document.getElementById('showingLabel').textContent = t('showing');
             document.getElementById('iconHeader').textContent = t('iconHeader');
@@ -1023,13 +1037,12 @@
                         </td>
                         <td>
                             <div class="ability-name">${escapeHtml(localizedName)}</div>
-                            ${classLabel ? `<div class="ability-class class-${ability.ability_class.toLowerCase()}">${escapeHtml(classLabel)}</div>` : ''}
                         </td>
                         <td>
                             <div class="description">${parseRichText(localizedDescription || 'N/A')}</div>
                             ${localizedDescription2 ? `<div class="description description-upgraded">${parseRichText(localizedDescription2)}</div>` : ''}
                         </td>
-                        <td class="frame-cell">${ability.ability_class || '-'}</td>
+                        <td class="class-cell">${classLabel ? `<div class="ability-class class-${ability.ability_class.toLowerCase()}">${escapeHtml(classLabel)}</div>` : '-'}</td>
                         <td class="frame-cell" hidden>${ability.frame_number}</td>
                     </tr>
                 `;
