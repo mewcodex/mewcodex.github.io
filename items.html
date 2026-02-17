@@ -694,6 +694,7 @@
         <div class="navbar">
             <a href="index.html" id="navAbilities">Abilities</a>
             <a href="items.html" class="active" id="navItems">Items</a>
+            <a href="passives.html" id="navPassives">Passives</a>
         </div>
         <div class="header">
             <h1 id="headerTitle">Mewgenics Item Viewer</h1>
@@ -785,6 +786,7 @@
             const lang = currentLanguage !== 'en' ? `?lang=${currentLanguage}` : '';
             document.getElementById('navAbilities').href = `index.html${lang}`;
             document.getElementById('navItems').href = `items.html${lang}`;
+            document.getElementById('navPassives').href = `passives.html${lang}`;
         }
 
         function getUrlParameter(name) {
@@ -812,6 +814,7 @@
                 searchPlaceholder: 'Search by name/description or use #SetName for sets...',
                 navAbilities: 'Abilities',
                 navItems: 'Items',
+                navPassives: 'Passives',
                 languageLabel: 'Language:',
                 languageEnglish: 'English',
                 languageChinese: 'Chinese',
@@ -855,6 +858,7 @@
                 searchPlaceholder: '按名称/描述搜索，或使用 #套装名 搜索套装...',
                 navAbilities: '能力',
                 navItems: '物品',
+                navPassives: '被动',
                 languageLabel: '语言：',
                 languageEnglish: '英语',
                 languageChinese: '中文',
@@ -1050,6 +1054,7 @@
             document.getElementById('searchInput').placeholder = t('searchPlaceholder');
             document.getElementById('navAbilities').textContent = t('navAbilities');
             document.getElementById('navItems').textContent = t('navItems');
+            document.getElementById('navPassives').textContent = t('navPassives');
             document.getElementById('languageLabel').textContent = t('languageLabel');
             document.getElementById('langOptionEn').textContent = t('languageEnglish');
             document.getElementById('langOptionZh').textContent = t('languageChinese');

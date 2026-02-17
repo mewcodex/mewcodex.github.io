@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passives Viewer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --theme: #9f978b;
+            --theme-dark: #7f776b;
+            --theme-light: #c9c1b7;
+            --theme-bg: #efece7;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #efece7 0%, #c9c1b7 100%);
+            min-height: 100vh;
+            padding: 36px;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            box-shadow: inset 0 0 140px rgba(32, 28, 22, 0.6), inset 0 0 300px rgba(32, 28, 22, 0.45);
+            z-index: 10;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid rgba(159, 151, 139, 0.35);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25), 0 0 0 6px rgba(159, 151, 139, 0.18);
+            overflow: hidden;
+            position: relative;
+            z-index: 0;
+        }
+
+        .header-image {
+            display: block;
+            width: 100%;
+            max-width: 960px;
+            height: 240px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .header-image-wrap {
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(135deg, #9f978b 0%, #7f776b 100%);
+            padding: 12px 16px;
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, #827a6e 0%, #6d6559 100%);
+            border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            padding: 0;
+        }
+
+        .navbar a {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            padding: 14px 32px;
+            font-size: 1em;
+            font-weight: 500;
+            transition: all 0.2s;
+            border-bottom: 3px solid transparent;
+            position: relative;
+        }
+
+        .navbar a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        .navbar a.active {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border-bottom-color: #efece7;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #9f978b 0%, #7f776b 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .controls {
+            padding: 20px;
+            background: #f5f5f5;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .controls input {
+            flex: 1;
+            min-width: 200px;
+            padding: 10px 15px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        .controls input:focus {
+            outline: none;
+            border-color: #9f978b;
+        }
+
+        .controls label {
+            font-weight: 500;
+            color: #666;
+        }
+
+        .controls select {
+            padding: 10px 15px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            font-size: 1em;
+            background: white;
+            cursor: pointer;
+        }
+
+        .controls select:focus {
+            outline: none;
+            border-color: #9f978b;
+        }
+
+        .stats {
+            padding: 15px 20px;
+            background: white;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .stat-label {
+            color: #666;
+            font-weight: 500;
+        }
+
+        .stat-value {
+            color: #9f978b;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f3f1ee;
+            border-bottom: 2px solid #ddd;
+            color: #333;
+        }
+
+        thead th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            color: #333;
+            white-space: nowrap;
+        }
+
+        thead th.sortable {
+            cursor: pointer;
+            user-select: none;
+            position: relative;
+        }
+
+        thead th.sortable:hover {
+            background: rgba(159, 151, 139, 0.1);
+        }
+
+        th .sort-indicator {
+            margin-left: 5px;
+            font-size: 0.8em;
+            color: #999;
+        }
+
+        th.sort-asc .sort-indicator::after {
+            content: '▲';
+            color: #9f978b;
+        }
+
+        th.sort-desc .sort-indicator::after {
+            content: '▼';
+            color: #9f978b;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid #eee;
+            transition: background 0.2s;
+        }
+
+        tbody tr:hover {
+            background: #f9f9f9;
+        }
+
+        tbody td {
+            padding: 12px 15px;
+            vertical-align: top;
+        }
+
+        .image-cell {
+            width: 130px;
+            text-align: center;
+        }
+
+        .passive-icon {
+            width: 120px;
+            height: 55px;
+            cursor: pointer;
+            transition: transform 0.2s;
+            image-rendering: pixelated;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: crisp-edges;
+        }
+
+        .passive-icon:hover {
+            transform: scale(1.2);
+        }
+
+        .passive-name {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .description {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .passive-stats {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 6px;
+            font-size: 0.9em;
+        }
+
+        .passive-stat {
+            display: inline-flex;
+            align-items: center;
+            gap: 3px;
+            color: #666;
+            font-weight: 400;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .passive-stat.positive {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .passive-stat.negative {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .img-icon {
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.2em;
+            margin: 0 2px;
+        }
+
+        .img-icon-stat {
+            filter: brightness(0) saturate(100%);
+        }
+
+        .class-cell {
+            width: 120px;
+        }
+
+        .passive-class {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .class-fighter {
+            background: #ff6b6b;
+            color: white;
+        }
+
+        .class-thief {
+            background: #4ecdc4;
+            color: white;
+        }
+
+        .class-tank {
+            background: #95a5a6;
+            color: white;
+        }
+
+        .class-mage {
+            background: #6c5ce7;
+            color: white;
+        }
+
+        .class-medic {
+            background: #fd79a8;
+            color: white;
+        }
+
+        .class-hunter {
+            background: #00b894;
+            color: white;
+        }
+
+        .class-necromancer {
+            background: #2d3436;
+            color: white;
+        }
+
+        .class-butcher {
+            background: #d63031;
+            color: white;
+        }
+
+        .class-monk {
+            background: #fdcb6e;
+            color: #333;
+        }
+
+        .class-druid {
+            background: #55efc4;
+            color: #333;
+        }
+
+        .class-psychic {
+            background: #a29bfe;
+            color: white;
+        }
+
+        .class-tinkerer {
+            background: #ff7675;
+            color: white;
+        }
+
+        .class-jester {
+            background: #ffeaa7;
+            color: #333;
+        }
+
+        .class-colorless {
+            background: #dfe6e9;
+            color: #333;
+        }
+
+        .class-disorder {
+            background: #636e72;
+            color: white;
+        }
+
+        .class-util {
+            background: #b2bec3;
+            color: #333;
+        }
+
+        .frame-cell {
+            width: 80px;
+            color: #999;
+            font-size: 0.9em;
+        }
+
+        .footer {
+            padding: 20px;
+            background: #f5f5f5;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+            line-height: 1.8;
+        }
+
+        .no-results {
+            padding: 40px;
+            text-align: center;
+            color: #999;
+            font-size: 1.1em;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+            image-rendering: pixelated;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: crisp-edges;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .modal-close:hover {
+            color: #ddd;
+        }
+
+
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .controls input,
+            .controls select {
+                width: 100%;
+            }
+
+            thead th {
+                padding: 10px 8px;
+                font-size: 0.9em;
+            }
+
+            tbody td {
+                padding: 8px;
+                font-size: 0.9em;
+            }
+
+            .passive-icon {
+                width: 100px;
+                height: 46px;
+            }
+
+            .image-cell {
+                width: 110px;
+            }
+
+            .class-cell {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header-image-wrap">
+            <img src="header.jpg" alt="Mewgenics header" class="header-image">
+        </div>
+        <div class="navbar">
+            <a href="index.html" id="navAbilities">Abilities</a>
+            <a href="items.html" id="navItems">Items</a>
+            <a href="passives.html" class="active" id="navPassives">Passives</a>
+        </div>
+        <div class="header">
+            <h1 id="headerTitle">Mewgenics Passive Abilities Viewer</h1>
+        </div>
+
+        <div class="controls">
+            <input type="text" id="searchInput" placeholder="Search by passive name or description...">
+            <label id="languageLabel" for="languageSelect">Language:</label>
+            <select id="languageSelect">
+                <option value="en" id="langOptionEn">English</option>
+                <option value="zh" id="langOptionZh">Chinese</option>
+            </select>
+            <select id="classFilter">
+                <option value="">All Classes</option>
+            </select>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-label" id="totalLabel">Total Passives:</span>
+                <span class="stat-value" id="totalCount">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label" id="showingLabel">Showing:</span>
+                <span class="stat-value" id="showingCount">0</span>
+            </div>
+        </div>
+
+        <div class="table-wrapper">
+            <table id="passivesTable">
+                <thead>
+                    <tr>
+                        <th id="iconHeader" style="width: 60px;">Icon</th>
+                        <th id="nameHeader" style="width: 150px;">Passive Name</th>
+                        <th id="descHeader">Description</th>
+                        <th id="classHeader" class="sortable" style="width: 120px;" onclick="sortBy('class')">Class<span
+                                class="sort-indicator"></span></th>
+                        <th id="frameHeader" style="width: 80px;" hidden>Frame</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <tr>
+                        <td colspan="5" class="no-results" id="loadingMessage">Loading passives...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="footer">
+            <p id="footerSource">Free fan site with data from game passive definitions and sprite mappings.</p>
+            <p id="footerCredit">Original game by Edmund McMillen and Tyler Glaiel.</p>
+            <p id="footerAuthor">Created by: Bilibili@Alriph</p>
+            <p id="footerTranslator">Chinese translation: Bilibili@地下丝绒和妮可</p>
+            <p id="footerTools">Tools used: mewgpaks, JPEXS FFDec</p>
+        </div>
+    </div>
+
+    <div id="imageModal" class="modal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        let allPassives = [];
+        let filteredPassives = [];
+        let currentLanguage = 'en';
+        let currentSort = { column: null, direction: 'asc' };
+
+        // Get language from URL parameter
+        function updateNavbarLinks() {
+            const lang = currentLanguage !== 'en' ? `?lang=${currentLanguage}` : '';
+            document.getElementById('navAbilities').href = `index.html${lang}`;
+            document.getElementById('navItems').href = `items.html${lang}`;
+            document.getElementById('navPassives').href = `passives.html${lang}`;
+        }
+
+        function getUrlParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Set language in URL parameter
+        function setUrlParameter(name, value) {
+            const url = new URL(window.location);
+            url.searchParams.set(name, value);
+            window.history.replaceState({}, '', url);
+        }
+
+        // Initialize language from URL if present
+        const urlLang = getUrlParameter('lang');
+        if (urlLang === 'zh' || urlLang === 'en') {
+            currentLanguage = urlLang;
+        }
+
+        const UI_TEXT = {
+            en: {
+                pageTitle: 'Mewgenics Passives Viewer',
+                headerTitle: 'Mewgenics Passive Abilities Viewer',
+                searchPlaceholder: 'Search by passive name or description...',
+                navAbilities: 'Abilities',
+                navItems: 'Items',
+                navPassives: 'Passives',
+                languageLabel: 'Language:',
+                languageEnglish: 'English',
+                languageChinese: 'Chinese',
+                allClasses: 'All Classes',
+                totalPassives: 'Total Passives:',
+                showing: 'Showing:',
+                iconHeader: 'Icon',
+                nameHeader: 'Passive Name',
+                descHeader: 'Description',
+                classHeader: 'Class',
+                frameHeader: 'Frame',
+                loading: 'Loading passives...',
+                noResults: 'No passives found matching your filters.',
+                errorLoading: 'Error loading passives:',
+                solution: 'Solution:',
+                runServer: 'Run the server script to browse the passives:',
+                thenOpen: 'Then open:',
+                footerSource: 'Free fan site with data from game passive definitions and sprite mappings.',
+                footerCredit: 'Original game by Edmund McMillen and Tyler Glaiel.',
+                footerAuthor: 'Created by: Bilibili@Alriph',
+                footerTranslator: 'Chinese translation: Bilibili@地下丝绒和妮可',
+                footerTools: 'Tools used: mewgpaks, JPEXS FFDec',
+            },
+            zh: {
+                pageTitle: 'Mewgenics 被动图鉴',
+                headerTitle: 'Mewgenics 被动能力图鉴',
+                searchPlaceholder: '按被动名称或描述搜索...',
+                navAbilities: '能力',
+                navItems: '物品',
+                navPassives: '被动',
+                languageLabel: '语言：',
+                languageEnglish: '英语',
+                languageChinese: '中文',
+                allClasses: '全部职业',
+                totalPassives: '被动总数：',
+                showing: '显示：',
+                iconHeader: '图标',
+                nameHeader: '被动名称',
+                descHeader: '描述',
+                classHeader: '职业',
+                frameHeader: '帧',
+                loading: '正在加载被动...',
+                noResults: '没有找到符合筛选条件的被动。',
+                errorLoading: '加载被动失败：',
+                solution: '解决方法：',
+                runServer: '运行本地服务器脚本以浏览被动：',
+                thenOpen: '然后打开：',
+                footerSource: '这是一个免费同人站点，数据来自游戏被动定义与精灵映射。',
+                footerCredit: '原作游戏作者：Edmund McMillen 与 Tyler Glaiel。',
+                footerAuthor: '制作：Bilibili@Alriph',
+                footerTranslator: '中文翻译：Bilibili@地下丝绒和妮可',
+                footerTools: '工具：mewgpaks，JPEXS FFDec',
+            }
+        };
+
+        const CLASS_LABELS = {
+            en: {
+                fighter: 'Fighter',
+                thief: 'Thief',
+                tank: 'Tank',
+                mage: 'Mage',
+                medic: 'Medic',
+                hunter: 'Hunter',
+                necromancer: 'Necromancer',
+                butcher: 'Butcher',
+                monk: 'Monk',
+                druid: 'Druid',
+                psychic: 'Psychic',
+                tinkerer: 'Tinkerer',
+                jester: 'Jester',
+                colorless: 'Colorless',
+                disorder: 'Disorder',
+                util: 'Util',
+            },
+            zh: {
+                fighter: '战士',
+                thief: '盗贼',
+                tank: '坦克',
+                mage: '法师',
+                medic: '医师',
+                hunter: '猎人',
+                necromancer: '死灵法师',
+                butcher: '屠夫',
+                monk: '武僧',
+                druid: '德鲁伊',
+                psychic: '灵能者',
+                tinkerer: '工匠',
+                jester: '小丑',
+                colorless: '无色',
+                disorder: '病症',
+                util: '实用',
+            }
+        };
+
+        function t(key) {
+            return UI_TEXT[currentLanguage]?.[key] || UI_TEXT.en[key] || key;
+        }
+
+        function applyUiLanguage() {
+            document.title = t('pageTitle');
+            document.getElementById('headerTitle').textContent = t('headerTitle');
+            document.getElementById('searchInput').placeholder = t('searchPlaceholder');
+            document.getElementById('navAbilities').textContent = t('navAbilities');
+            document.getElementById('navItems').textContent = t('navItems');
+            document.getElementById('navPassives').textContent = t('navPassives');
+            document.getElementById('languageLabel').textContent = t('languageLabel');
+            document.getElementById('langOptionEn').textContent = t('languageEnglish');
+            document.getElementById('langOptionZh').textContent = t('languageChinese');
+            document.getElementById('totalLabel').textContent = t('totalPassives');
+            document.getElementById('showingLabel').textContent = t('showing');
+            document.getElementById('iconHeader').textContent = t('iconHeader');
+            document.getElementById('nameHeader').textContent = t('nameHeader');
+            document.getElementById('descHeader').textContent = t('descHeader');
+            const classHeader = document.getElementById('classHeader');
+            classHeader.innerHTML = t('classHeader') + '<span class="sort-indicator"></span>';
+            document.getElementById('frameHeader').textContent = t('frameHeader');
+            document.getElementById('footerSource').textContent = t('footerSource');
+            document.getElementById('footerCredit').textContent = t('footerCredit');
+            document.getElementById('footerAuthor').textContent = t('footerAuthor');
+            document.getElementById('footerTranslator').textContent = t('footerTranslator');
+            document.getElementById('footerTools').textContent = t('footerTools');
+
+            updateNavbarLinks();
+            const classFilter = document.getElementById('classFilter');
+            const selectedClass = classFilter ? classFilter.value : '';
+            populateClassFilter(selectedClass);
+
+            const loadingMessage = document.getElementById('loadingMessage');
+            if (loadingMessage) {
+                loadingMessage.textContent = t('loading');
+            }
+        }
+
+        // Load passives from JSON
+        async function loadPassives() {
+            try {
+                const response = await fetch('passives_combined.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                allPassives = data.passives;
+                filteredPassives = allPassives;
+
+                document.getElementById('totalCount').textContent = allPassives.length;
+                applyUiLanguage();
+                displayPassives(filteredPassives);
+            } catch (error) {
+                console.error('Error loading passives:', error);
+                const errorMsg = `
+                    <tr><td colspan="5" class="no-results">
+                        <p style="margin-bottom: 10px;"><strong>${escapeHtml(t('errorLoading'))}</strong> ${escapeHtml(error.message)}</p>
+                        <p style="font-size: 0.9em; color: #666; line-height: 1.5;">
+                            <strong>${escapeHtml(t('solution'))}</strong><br>
+                            ${escapeHtml(t('runServer'))}<br>
+                            <code style="background: #f5f5f5; padding: 5px 10px; border-radius: 3px; display: inline-block;">python serve.py</code><br>
+                            <br>
+                            ${escapeHtml(t('thenOpen'))} <code style="background: #f5f5f5; padding: 5px 10px; border-radius: 3px; display: inline-block;">http://localhost:8000/passives.html</code>
+                        </p>
+                    </td></tr>
+                `;
+                document.getElementById('tableBody').innerHTML = errorMsg;
+            }
+        }
+
+        // Populate class filter dropdown
+        function populateClassFilter(selectedValue = '') {
+            const classes = [...new Set(allPassives
+                .map(p => p.passive_class)
+                .filter(c => c))
+            ].sort();
+
+            const select = document.getElementById('classFilter');
+            if (!select) {
+                return;
+            }
+            select.innerHTML = '';
+
+            const allOption = document.createElement('option');
+            allOption.value = '';
+            allOption.textContent = t('allClasses');
+            select.appendChild(allOption);
+
+            classes.forEach(cls => {
+                const option = document.createElement('option');
+                option.value = cls;
+                option.textContent = getClassLabel(cls);
+                select.appendChild(option);
+            });
+
+            select.value = selectedValue;
+        }
+
+        function getLocalizedText(texts, fallback) {
+            if (!texts || typeof texts !== 'object') {
+                return fallback || '';
+            }
+            return texts[currentLanguage] || fallback || '';
+        }
+
+        function getClassLabel(className) {
+            if (!className) {
+                return '';
+            }
+            const key = className.toLowerCase();
+            return CLASS_LABELS[currentLanguage]?.[key] || CLASS_LABELS.en[key] || className;
+        }
+
+        // Format stats for display (like items page)
+        function formatStats(statsObj) {
+            if (!statsObj || Object.keys(statsObj).length === 0) {
+                return '';
+            }
+
+            const statOrder = ['str', 'dex', 'int', 'con', 'cha', 'lck', 'spd', 'shield', 'divine_shield', 'hp'];
+            const statIconMap = {
+                'str': 'str',
+                'dex': 'dex',
+                'int': 'int',
+                'con': 'constitution',
+                'cha': 'cha',
+                'lck': 'lck',
+                'spd': 'spd',
+                'shield': 'shield',
+                'divine_shield': 'divineshield',
+                'hp': 'hp'
+            };
+
+            const statsHtml = statOrder
+                .filter(stat => statsObj[stat] !== undefined)
+                .map(stat => {
+                    const value = statsObj[stat];
+                    const iconFile = statIconMap[stat];
+                    const isShield = stat === 'shield' || stat === 'divine_shield';
+                    const className = 'img-icon' + (isShield ? '' : ' img-icon-stat');
+                    const sign = value > 0 ? '+' : '';
+                    const colorClass = value > 0 ? 'positive' : (value < 0 ? 'negative' : '');
+
+                    return `<span class="passive-stat ${colorClass}">
+                                ${sign}${value}
+                                <img src="res/fonticon/${iconFile}.png" alt="${stat}" class="${className}" onerror="this.style.display='none'">
+                            </span>`;
+                })
+                .join('');
+
+            return statsHtml ? `<div class="passive-stats">${statsHtml}</div>` : '';
+        }
+
+        // Display passives in table
+        function displayPassives(passives) {
+            const tbody = document.getElementById('tableBody');
+
+            if (passives.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="5" class="no-results">${escapeHtml(t('noResults'))}</td></tr>`;
+                document.getElementById('showingCount').textContent = '0';
+                return;
+            }
+
+            tbody.innerHTML = passives.map(passive => {
+                const localizedName = getLocalizedText(passive.passive_name_texts, passive.passive_name);
+                const localizedDescription = getLocalizedText(passive.description_texts, passive.description);
+                const classLabel = passive.passive_class ? getClassLabel(passive.passive_class) : '';
+
+                // Get stats to display - prefer base, then level 1, then level 2
+                const stats = passive.stats_base || passive.stats_level1 || passive.stats_level2 || {};
+                const statsHtml = formatStats(stats);
+
+                return `
+                    <tr>
+                        <td class="image-cell">
+                            <img src="PassiveIcon/${passive.frame_number}.png" 
+                                 alt="${escapeHtml(localizedName)}"
+                                 class="passive-icon"
+                                 onerror="this.style.display='none'"
+                                 onclick="openModal(this.src, '${escapeHtml(localizedName)}')">
+                        </td>
+                        <td>
+                            <div class="passive-name">${escapeHtml(localizedName)}</div>
+                        </td>
+                        <td>
+                            ${statsHtml}
+                            <div class="description">${parseRichText(localizedDescription || 'N/A')}</div>
+                        </td>
+                        <td class="class-cell">${classLabel ? `<div class="passive-class class-${passive.passive_class.toLowerCase()}">${escapeHtml(classLabel)}</div>` : '-'}</td>
+                        <td class="frame-cell" hidden>${passive.frame_number}</td>
+                    </tr>
+                `;
+            }).join('');
+
+            document.getElementById('showingCount').textContent = passives.length;
+        }
+
+        function sortBy(column) {
+            // Toggle direction if clicking same column, otherwise default to ascending
+            if (currentSort.column === column) {
+                currentSort.direction = currentSort.direction === 'asc' ? 'desc' : 'asc';
+            } else {
+                currentSort.column = column;
+                currentSort.direction = 'asc';
+            }
+
+            // Update sort indicators
+            document.querySelectorAll('thead th').forEach(th => {
+                th.classList.remove('sort-asc', 'sort-desc');
+            });
+            const headerMap = {
+                'class': 'classHeader'
+            };
+            const header = document.getElementById(headerMap[column]);
+            if (header) {
+                header.classList.add(`sort-${currentSort.direction}`);
+            }
+
+            // Sort filtered passives
+            const sortedPassives = [...filteredPassives].sort((a, b) => {
+                let valueA, valueB;
+
+                if (column === 'class') {
+                    valueA = a.passive_class || '';
+                    valueB = b.passive_class || '';
+                }
+
+                if (valueA < valueB) return currentSort.direction === 'asc' ? -1 : 1;
+                if (valueA > valueB) return currentSort.direction === 'asc' ? 1 : -1;
+                return 0;
+            });
+
+            displayPassives(sortedPassives);
+        }
+
+        // Parse rich text markup in descriptions
+        function parseRichText(text) {
+            if (!text) return '';
+
+            // Escape HTML first
+            let html = escapeHtml(text);
+
+            // Handle [s:.7]...[/s] for italics
+            html = html.replace(/\[s:[^\]]+\]([\s\S]*?)\[\/s\]/g, '<i>$1</i>');
+
+            // Handle [img:xxx] placeholders
+            // Shield icons (shield, divineshield) stay white; stat icons use CSS filter to be black
+            html = html.replace(/\[img:([^\]]+)\]/g, function (match, iconName) {
+                const iconMap = { 'con': 'constitution' };
+                const mappedName = iconMap[iconName] || iconName;
+                const isShield = iconName === 'shield' || iconName === 'divineshield';
+                const className = 'img-icon' + (isShield ? '' : ' img-icon-stat');
+
+                return `<img src="res/fonticon/${mappedName}.png" alt="${iconName}" title="${iconName}" class="${className}" onerror="this.style.display='none'">`;
+            });
+
+            // Handle newlines
+            html = html.replace(/\n/g, '<br>');
+
+            return html;
+        }
+
+        // Filter passives
+        function filterPassives() {
+            const search = document.getElementById('searchInput').value.toLowerCase();
+            const classFilter = document.getElementById('classFilter').value;
+
+            filteredPassives = allPassives.filter(passive => {
+                const localizedName = getLocalizedText(passive.passive_name_texts, passive.passive_name).toLowerCase();
+                const localizedDescription = getLocalizedText(passive.description_texts, passive.description).toLowerCase();
+                const matchesSearch = localizedName.includes(search) || localizedDescription.includes(search);
+                const matchesClass = !classFilter || passive.passive_class === classFilter;
+                return matchesSearch && matchesClass;
+            });
+
+            displayPassives(filteredPassives);
+        }
+
+        // Modal functions
+        function openModal(src, name) {
+            const modal = document.getElementById('imageModal');
+            const img = document.getElementById('modalImage');
+            img.src = src;
+            img.alt = name;
+            modal.style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('imageModal').onclick = function (event) {
+            if (event.target === this) {
+                closeModal();
+            }
+        }
+
+        // HTML escape function
+        function escapeHtml(text) {
+            if (!text) return '';
+            const map = {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#039;'
+            };
+            return text.replace(/[&<>"']/g, m => map[m]);
+        }
+
+        // Event listeners
+        document.getElementById('searchInput').addEventListener('input', filterPassives);
+        document.getElementById('classFilter').addEventListener('change', filterPassives);
+        document.getElementById('languageSelect').addEventListener('change', (event) => {
+            currentLanguage = event.target.value;
+            setUrlParameter('lang', currentLanguage);
+            applyUiLanguage();
+            filterPassives();
+        });
+
+        // Apply language immediately when DOM is ready (before data loads)
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('languageSelect').value = currentLanguage;
+            applyUiLanguage();
+        });
+
+        // Load on page load
+        window.addEventListener('load', loadPassives);
+    </script>
+</body>
+
+</html>

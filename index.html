@@ -630,6 +630,7 @@
         <div class="navbar">
             <a href="index.html" class="active" id="navAbilities">Abilities</a>
             <a href="items.html" id="navItems">Items</a>
+            <a href="passives.html" id="navPassives">Passives</a>
         </div>
         <div class="header">
             <h1 id="headerTitle">Mewgenics Ability Viewer</h1>
@@ -703,6 +704,7 @@
             const lang = currentLanguage !== 'en' ? `?lang=${currentLanguage}` : '';
             document.getElementById('navAbilities').href = `index.html${lang}`;
             document.getElementById('navItems').href = `items.html${lang}`;
+            document.getElementById('navPassives').href = `passives.html${lang}`;
         }
 
         function getUrlParameter(name) {
