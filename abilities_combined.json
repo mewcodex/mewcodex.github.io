@@ -2378,7 +2378,7 @@
       "damage_upgraded": {
         "value": "4",
         "heal_value": null,
-        "type": "physical"
+        "type": "magic"
       },
       "tags": [],
       "tags_upgraded": null,
@@ -3580,7 +3580,7 @@
       "damage_upgraded": {
         "value": null,
         "heal_value": "2",
-        "type": "heal"
+        "type": "magic"
       },
       "tags": [],
       "tags_upgraded": null,
@@ -5646,7 +5646,7 @@
       "damage_upgraded": {
         "value": "max(X*3, 0)",
         "heal_value": null,
-        "type": "physical"
+        "type": "magic"
       },
       "tags": [],
       "tags_upgraded": null,
@@ -7688,7 +7688,7 @@
       "damage_upgraded": {
         "value": null,
         "heal_value": "5",
-        "type": "heal"
+        "type": "magic"
       },
       "tags": [],
       "tags_upgraded": null,
@@ -8007,7 +8007,7 @@
       "damage_upgraded": {
         "value": null,
         "heal_value": "2",
-        "type": "heal"
+        "type": "magic"
       },
       "tags": [],
       "tags_upgraded": null,
@@ -8054,7 +8054,7 @@
       "damage_upgraded": {
         "value": "6",
         "heal_value": null,
-        "type": "physical"
+        "type": "magic"
       },
       "tags": [],
       "tags_upgraded": null,
@@ -8101,7 +8101,7 @@
       "damage_upgraded": {
         "value": "5",
         "heal_value": null,
-        "type": "physical"
+        "type": "magic"
       },
       "tags": [],
       "tags_upgraded": null,
@@ -8473,7 +8473,7 @@
       "damage_upgraded": {
         "value": "2",
         "heal_value": null,
-        "type": "physical"
+        "type": "magic"
       },
       "tags": [],
       "tags_upgraded": null,
@@ -8614,7 +8614,7 @@
       "damage_upgraded": {
         "value": null,
         "heal_value": "2",
-        "type": "heal"
+        "type": "magic"
       },
       "tags": [
         "musical"
@@ -9985,7 +9985,7 @@
       "damage_upgraded": {
         "value": null,
         "heal_value": "2",
-        "type": "heal"
+        "type": "magic"
       },
       "tags": [
         "musical"
@@ -15967,11 +15967,7 @@
         "heal_value": "5",
         "type": "magic"
       },
-      "damage_upgraded": {
-        "value": null,
-        "heal_value": "5",
-        "type": "heal"
-      },
+      "damage_upgraded": null,
       "tags": [],
       "tags_upgraded": null,
       "elements": [],
@@ -16556,7 +16552,7 @@
       "damage_upgraded": {
         "value": "5",
         "heal_value": null,
-        "type": "physical"
+        "type": "magic"
       },
       "tags": [],
       "tags_upgraded": null,
@@ -16605,7 +16601,7 @@
       "damage_upgraded": {
         "value": "6",
         "heal_value": null,
-        "type": "physical"
+        "type": "magic"
       },
       "tags": [],
       "tags_upgraded": null,
@@ -16654,7 +16650,7 @@
       "damage_upgraded": {
         "value": "5",
         "heal_value": null,
-        "type": "physical"
+        "type": "magic"
       },
       "tags": [],
       "tags_upgraded": null,
@@ -16746,7 +16742,7 @@
       "damage_upgraded": {
         "value": "10+int",
         "heal_value": null,
-        "type": "physical"
+        "type": "magic"
       },
       "tags": [],
       "tags_upgraded": null,
@@ -16832,7 +16828,7 @@
       "damage_upgraded": {
         "value": "2",
         "heal_value": null,
-        "type": "physical"
+        "type": "magic"
       },
       "tags": [],
       "tags_upgraded": null,
@@ -17355,11 +17351,7 @@
         "heal_value": null,
         "type": "magic"
       },
-      "damage_upgraded": {
-        "value": "5",
-        "heal_value": null,
-        "type": "physical"
-      },
+      "damage_upgraded": null,
       "tags": [],
       "tags_upgraded": null,
       "elements": [],
@@ -17536,7 +17528,7 @@
       "damage_upgraded": {
         "value": "8",
         "heal_value": null,
-        "type": "physical"
+        "type": "magic"
       },
       "tags": [],
       "tags_upgraded": null,
@@ -17583,7 +17575,7 @@
       "damage_upgraded": {
         "value": "8",
         "heal_value": null,
-        "type": "physical"
+        "type": "magic"
       },
       "tags": [],
       "tags_upgraded": null,
@@ -17632,7 +17624,7 @@
       "damage_upgraded": {
         "value": "10",
         "heal_value": null,
-        "type": "physical"
+        "type": "magic"
       },
       "tags": [],
       "tags_upgraded": null,
@@ -17722,7 +17714,7 @@
       "damage_upgraded": {
         "value": "15",
         "heal_value": null,
-        "type": "physical"
+        "type": "magic"
       },
       "tags": [],
       "tags_upgraded": null,
@@ -17766,11 +17758,7 @@
         "heal_value": null,
         "type": "magic"
       },
-      "damage_upgraded": {
-        "value": "10",
-        "heal_value": null,
-        "type": "physical"
-      },
+      "damage_upgraded": null,
       "tags": [],
       "tags_upgraded": null,
       "elements": [
@@ -17860,11 +17848,7 @@
         "heal_value": null,
         "type": "magic"
       },
-      "damage_upgraded": {
-        "value": "4",
-        "heal_value": null,
-        "type": "physical"
-      },
+      "damage_upgraded": null,
       "tags": [],
       "tags_upgraded": null,
       "elements": [
@@ -18002,7 +17986,7 @@
       "damage_upgraded": {
         "value": "5",
         "heal_value": null,
-        "type": "physical"
+        "type": "magic"
       },
       "tags": [],
       "tags_upgraded": null,
@@ -18092,7 +18076,7 @@
       "damage_upgraded": {
         "value": "3",
         "heal_value": null,
-        "type": "physical"
+        "type": "magic"
       },
       "tags": [],
       "tags_upgraded": null,
@@ -18180,7 +18164,7 @@
       "damage_upgraded": {
         "value": "2",
         "heal_value": null,
-        "type": "physical"
+        "type": "magic"
       },
       "tags": [],
       "tags_upgraded": null,
@@ -18495,7 +18479,7 @@
       "damage_upgraded": {
         "value": "10",
         "heal_value": null,
-        "type": "physical"
+        "type": "contextualspell"
       },
       "tags": [],
       "tags_upgraded": null,
@@ -18974,11 +18958,7 @@
         "heal_value": "2",
         "type": "magic"
       },
-      "damage_upgraded": {
-        "value": null,
-        "heal_value": "2",
-        "type": "heal"
-      },
+      "damage_upgraded": null,
       "tags": [],
       "tags_upgraded": null,
       "elements": [
@@ -20143,7 +20123,7 @@
       "damage_upgraded": {
         "value": null,
         "heal_value": "6",
-        "type": "heal"
+        "type": "magic"
       },
       "tags": [],
       "tags_upgraded": null,
@@ -21102,7 +21082,7 @@
       "damage_upgraded": {
         "value": "15",
         "heal_value": null,
-        "type": "physical"
+        "type": "magic"
       },
       "tags": [],
       "tags_upgraded": null,
@@ -21999,7 +21979,7 @@
       "damage_upgraded": {
         "value": "2",
         "heal_value": null,
-        "type": "physical"
+        "type": "magic"
       },
       "tags": [],
       "tags_upgraded": null,
@@ -22044,7 +22024,7 @@
       "damage_upgraded": {
         "value": "8",
         "heal_value": null,
-        "type": "physical"
+        "type": "magic"
       },
       "tags": [],
       "tags_upgraded": null,
@@ -22298,7 +22278,7 @@
       "damage_upgraded": {
         "value": "1",
         "heal_value": null,
-        "type": "physical"
+        "type": "magic"
       },
       "tags": [],
       "tags_upgraded": null,
@@ -22868,7 +22848,7 @@
       "damage_upgraded": {
         "value": "20",
         "heal_value": null,
-        "type": "physical"
+        "type": "magic"
       },
       "tags": [],
       "tags_upgraded": null,
@@ -24118,7 +24098,7 @@
       "damage_upgraded": {
         "value": "2",
         "heal_value": null,
-        "type": "physical"
+        "type": "magic"
       },
       "tags": [
         "musical"
@@ -27622,7 +27602,7 @@
       "damage_upgraded": {
         "value": "8",
         "heal_value": null,
-        "type": "physical"
+        "type": "magic"
       },
       "tags": [],
       "tags_upgraded": null,
@@ -28391,7 +28371,7 @@
       "damage": {
         "value": "3",
         "heal_value": null,
-        "type": "physical"
+        "type": "magic"
       },
       "damage_upgraded": null,
       "tags": [],
@@ -29220,7 +29200,7 @@
       "damage_upgraded": {
         "value": "5",
         "heal_value": null,
-        "type": "physical"
+        "type": "magic"
       },
       "tags": [],
       "tags_upgraded": null,
@@ -30405,7 +30385,7 @@
       "damage_upgraded": {
         "value": "5",
         "heal_value": null,
-        "type": "physical"
+        "type": "magic"
       },
       "tags": [],
       "tags_upgraded": null,
@@ -33731,7 +33711,7 @@
       "damage_upgraded": {
         "value": "15",
         "heal_value": null,
-        "type": "physical"
+        "type": "magic"
       },
       "tags": [],
       "tags_upgraded": null,
@@ -34036,7 +34016,7 @@
       "damage_upgraded": {
         "value": "2",
         "heal_value": null,
-        "type": "physical"
+        "type": "magic"
       },
       "tags": [],
       "tags_upgraded": null,
