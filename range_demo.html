@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Ability Range Sandbox</title>
@@ -302,19 +303,24 @@
         }
     </style>
 </head>
+
 <body>
     <main class="app-shell">
         <h1>Interactive Range Sandbox</h1>
-        <p>Select a real ability below to load its <code>target { ... }</code> block, then hover the grid to see what the parser thinks the valid tiles and splash pattern look like. Click any tile (except the caster) to place or remove an obstacle.</p>
+        <p>Select a real ability below to load its <code>target { ... }</code> block, then hover the grid to see what
+            the parser thinks the valid tiles and splash pattern look like. Click any tile (except the caster) to place
+            or remove an obstacle.</p>
 
         <section class="instructions">
             <div class="instruction-card">19×19 board with the caster fixed at the center.</div>
             <div class="instruction-card">Use the preset buttons to swap between real targeting scripts.</div>
-            <div class="instruction-card">Hover to preview, click to toggle obstacles, or use the controls below to add/clear them.</div>
+            <div class="instruction-card">Hover to preview, click to toggle obstacles, or use the controls below to
+                add/clear them.</div>
         </section>
 
         <section class="scenario-controls">
-            <div class="scenario-description" id="scenarioDescription">Select a sample targeting script to visualize its pattern.</div>
+            <div class="scenario-description" id="scenarioDescription">Select a sample targeting script to visualize its
+                pattern.</div>
             <div class="scenario-buttons" id="scenarioButtons"></div>
         </section>
 
@@ -330,7 +336,8 @@
         </section>
 
         <div class="legend" aria-hidden="true">
-            <div class="legend-item"><span class="legend-swatch swatch-range"></span>Tiles the parser says are targetable</div>
+            <div class="legend-item"><span class="legend-swatch swatch-range"></span>Tiles the parser says are
+                targetable</div>
             <div class="legend-item"><span class="legend-swatch swatch-target"></span>Hovered target</div>
             <div class="legend-item"><span class="legend-swatch swatch-aoe"></span>AOE splash (parser output)</div>
             <div class="legend-item"><span class="legend-swatch swatch-blocked"></span>Obstacle</div>
@@ -341,7 +348,8 @@
         </div>
 
         <div class="controls-row">
-            <span>Click tiles to place/remove obstacles. Target highlights ignore blocked tiles except for line-of-sight checks.</span>
+            <span>Click tiles to place/remove obstacles. Target highlights ignore blocked tiles except for line-of-sight
+                checks.</span>
             <button type="button" id="addObstacles">Add Obstacles</button>
             <button type="button" id="resetObstacles">Clear Obstacles</button>
         </div>
@@ -859,4 +867,5 @@
         })();
     </script>
 </body>
+
 </html>
