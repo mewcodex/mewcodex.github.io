@@ -767,8 +767,9 @@
         </div>
         <div class="navbar">
             <a href="index.html" id="navAbilities">Abilities</a>
-            <a href="items.html" class="active" id="navItems">Items</a>
             <a href="passives.html" id="navPassives">Passives</a>
+            <a href="items.html" class="active" id="navItems">Items</a>
+            <a href="mutations.html" id="navMutations">Mutations</a>
         </div>
         <div class="header">
             <h1 id="headerTitle">Mewgenics Item Viewer</h1>
@@ -857,8 +858,9 @@
         function updateNavbarLinks() {
             const lang = currentLanguage !== 'en' ? `?lang=${currentLanguage}` : '';
             document.getElementById('navAbilities').href = `index.html${lang}`;
-            document.getElementById('navItems').href = `items.html${lang}`;
             document.getElementById('navPassives').href = `passives.html${lang}`;
+            document.getElementById('navItems').href = `items.html${lang}`;
+            document.getElementById('navMutations').href = `mutations.html${lang}`;
         }
 
         function getUrlParameter(name) {
@@ -887,6 +889,7 @@
                 navAbilities: 'Abilities',
                 navItems: 'Items',
                 navPassives: 'Passives',
+                navMutations: 'Mutations',
                 languageLabel: 'Language:',
                 languageEnglish: 'English',
                 languageChinese: 'Chinese',
@@ -931,6 +934,7 @@
                 navAbilities: '能力',
                 navItems: '物品',
                 navPassives: '被动',
+                navMutations: '突变',
                 languageLabel: '语言：',
                 languageEnglish: '英语',
                 languageChinese: '中文',
@@ -1140,6 +1144,7 @@
             document.getElementById('navAbilities').textContent = t('navAbilities');
             document.getElementById('navItems').textContent = t('navItems');
             document.getElementById('navPassives').textContent = t('navPassives');
+            document.getElementById('navMutations').textContent = t('navMutations');
             document.getElementById('langButtonEn').textContent = t('languageEnglish');
             document.getElementById('langButtonZh').textContent = t('languageChinese');
             document.getElementById('showHiddenLabel').textContent = t('showHidden');

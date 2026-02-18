@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mewgenics Mutations Viewer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --theme: #9f978b;
+            --theme-dark: #7f776b;
+            --theme-light: #c9c1b7;
+            --theme-bg: #efece7;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #efece7 0%, #c9c1b7 100%);
+            min-height: 100vh;
+            padding: 36px;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            box-shadow: inset 0 0 140px rgba(32, 28, 22, 0.6), inset 0 0 300px rgba(32, 28, 22, 0.45);
+            z-index: 10;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid rgba(159, 151, 139, 0.35);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25), 0 0 0 6px rgba(159, 151, 139, 0.18);
+            overflow: hidden;
+            position: relative;
+            z-index: 0;
+        }
+
+        .language-toggle {
+            position: absolute;
+            top: 12px;
+            right: 18px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            z-index: 2;
+            font-size: 0.95em;
+        }
+
+        .language-toggle .lang-link {
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: underline;
+            font-weight: 600;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+        }
+
+        .language-toggle .lang-link.active {
+            color: #fff;
+        }
+
+        .language-toggle .lang-separator {
+            color: rgba(255, 255, 255, 0.65);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+        }
+
+        .header-image {
+            display: block;
+            width: 100%;
+            max-width: 960px;
+            height: 240px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .header-image-wrap {
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(135deg, #9f978b 0%, #7f776b 100%);
+            padding: 12px 16px;
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, #827a6e 0%, #6d6559 100%);
+            border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            padding: 0;
+        }
+
+        .navbar a {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            padding: 14px 32px;
+            font-size: 1em;
+            font-weight: 500;
+            transition: all 0.2s;
+            border-bottom: 3px solid transparent;
+            position: relative;
+        }
+
+        .navbar a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        .navbar a.active {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border-bottom-color: #efece7;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #9f978b 0%, #7f776b 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .passive-stats {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 6px;
+            font-size: 0.9em;
+        }
+
+        .passive-stat {
+            display: inline-flex;
+            align-items: center;
+            gap: 3px;
+            color: #666;
+            font-weight: 400;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .passive-stat.positive {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .passive-stat.negative {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .controls {
+            padding: 20px;
+            background: #f3f1ee;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .search-wrapper {
+            position: relative;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .controls input,
+        .controls select {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        .controls input {
+            width: 100%;
+            padding-right: 35px;
+        }
+
+        .clear-button {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #999;
+            font-size: 1.3em;
+            cursor: pointer;
+            padding: 0;
+            width: 24px;
+            height: 24px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.2s;
+        }
+
+        .clear-button:hover {
+            background: #e0e0e0;
+            color: #666;
+        }
+
+        .clear-button.visible {
+            display: flex;
+        }
+
+        .stats {
+            padding: 20px;
+            background: #f7f4f0;
+            display: flex;
+            gap: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .stat-item {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .stat-label {
+            font-weight: 600;
+            color: #9f978b;
+        }
+
+        .stat-value {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f3f1ee;
+            border-bottom: 2px solid #ddd;
+            color: #333;
+        }
+
+        thead th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            color: #333;
+            white-space: nowrap;
+        }
+
+        thead th.sortable {
+            cursor: pointer;
+            user-select: none;
+            position: relative;
+        }
+
+        thead th.sortable:hover {
+            background: rgba(159, 151, 139, 0.1);
+        }
+
+        th .sort-indicator {
+            margin-left: 5px;
+            font-size: 0.8em;
+            color: #999;
+        }
+
+        th.sort-asc .sort-indicator::after {
+            content: '▲';
+            color: #9f978b;
+        }
+
+        th.sort-desc .sort-indicator::after {
+            content: '▼';
+            color: #9f978b;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid #eee;
+            transition: background 0.2s;
+        }
+
+        tbody tr:hover {
+            background: #f9f9f9;
+        }
+
+        tbody td {
+            padding: 12px 15px;
+            vertical-align: top;
+        }
+
+        .mutation-name {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .description {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .source-comment {
+            color: #888;
+            font-size: 0.9em;
+            font-style: italic;
+            margin-top: 8px;
+            padding: 8px;
+            background: #f9f9f9;
+            border-left: 3px solid #9f978b;
+            border-radius: 2px;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+
+        .tag-badge {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(159, 151, 139, 0.18);
+            color: #5b534a;
+            padding: 3px 7px;
+            border-radius: 999px;
+            font-size: 0.85em;
+            margin: 2px 4px 2px 0;
+        }
+
+        .img-icon {
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.2em;
+            margin: 0 2px;
+        }
+
+        .img-icon-stat {
+            filter: brightness(0) saturate(100%);
+        }
+
+        .footer {
+            padding: 20px;
+            text-align: center;
+            color: #777;
+            font-size: 0.9em;
+            border-top: 1px solid #ddd;
+            background: #f7f4f0;
+        }
+
+        .footer p {
+            margin: 6px 0;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 16px;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .language-toggle {
+                top: 10px;
+                right: 12px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="language-toggle" role="group" aria-label="Language">
+            <button type="button" class="lang-link" id="langButtonEn" data-lang="en">English</button>
+            <span class="lang-separator">/</span>
+            <button type="button" class="lang-link" id="langButtonZh" data-lang="zh">中文</button>
+        </div>
+        <div class="header-image-wrap">
+            <img src="header.jpg" alt="Mewgenics header" class="header-image">
+        </div>
+        <div class="navbar">
+            <a href="index.html" id="navAbilities">Abilities</a>
+            <a href="passives.html" id="navPassives">Passives</a>
+            <a href="items.html" id="navItems">Items</a>
+            <a href="mutations.html" class="active" id="navMutations">Mutations</a>
+        </div>
+        <div class="header">
+            <h1 id="headerTitle">Mewgenics Mutations Viewer</h1>
+        </div>
+
+        <div class="controls">
+            <div class="search-wrapper">
+                <input type="text" id="searchInput" placeholder="Search by mutation name, tags, or description...">
+                <button class="clear-button" id="clearButton" title="Clear search">×</button>
+            </div>
+            <select id="partFilter">
+                <option value="">All Parts</option>
+            </select>
+            <select id="birthDefectFilter">
+                <option value="all">All Mutations</option>
+                <option value="only">Birth Defects</option>
+                <option value="exclude">Exclude Birth Defects</option>
+            </select>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-label" id="totalLabel">Total Mutations:</span>
+                <span class="stat-value" id="totalCount">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label" id="showingLabel">Showing:</span>
+                <span class="stat-value" id="showingCount">0</span>
+            </div>
+        </div>
+
+        <div class="table-wrapper">
+            <table id="mutationsTable">
+                <thead>
+                    <tr>
+                        <th id="nameHeader" class="sortable" style="width: 200px;" onclick="sortBy('name')">Mutation
+                            Name<span class="sort-indicator"></span></th>
+                        <th id="typeHeader" class="sortable" style="width: 200px;" onclick="sortBy('type')">Type<span
+                                class="sort-indicator"></span></th>
+                        <th id="descHeader">Description</th>
+                        <th id="tagsHeader" class="sortable" style="width: 180px;" onclick="sortBy('tags')">Tags<span
+                                class="sort-indicator"></span></th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <tr>
+                        <td colspan="4" class="no-results" id="loadingMessage">Loading mutations...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="footer">
+            <p id="footerSource">Free fan site with data from game mutation definitions.</p>
+            <p id="footerCredit">Original game by Edmund McMillen and Tyler Glaiel.</p>
+            <p id="footerAuthor">Created by: Bilibili@Alriph</p>
+            <p id="footerTranslator">Chinese translation: Bilibili@地下丝绒和妮可</p>
+            <p id="footerTools">Tools used: mewgpaks, JPEXS FFDec</p>
+        </div>
+    </div>
+
+    <script>
+        let allMutations = [];
+        let filteredMutations = [];
+        let currentLanguage = 'en';
+        let currentSort = { column: 'type', direction: 'asc' };
+        let partLabelMap = new Map();
+        let editorNotes = {};
+
+        const PART_ORDER = ['body', 'head', 'tail', 'legs', 'mouth', 'ears', 'eyes', 'eyebrows', 'fur'];
+
+        function partRank(partKey) {
+            const index = PART_ORDER.indexOf((partKey || '').toLowerCase());
+            return index === -1 ? PART_ORDER.length : index;
+        }
+
+        function updateNavbarLinks() {
+            const lang = currentLanguage !== 'en' ? `?lang=${currentLanguage}` : '';
+            document.getElementById('navAbilities').href = `index.html${lang}`;
+            document.getElementById('navItems').href = `items.html${lang}`;
+            document.getElementById('navPassives').href = `passives.html${lang}`;
+            document.getElementById('navMutations').href = `mutations.html${lang}`;
+        }
+
+        function getUrlParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        function setUrlParameter(name, value) {
+            const url = new URL(window.location);
+            url.searchParams.set(name, value);
+            window.history.replaceState({}, '', url);
+        }
+
+        const urlLang = getUrlParameter('lang');
+        if (urlLang === 'zh' || urlLang === 'en') {
+            currentLanguage = urlLang;
+        }
+
+        const UI_TEXT = {
+            en: {
+                pageTitle: 'Mewgenics Mutations Viewer',
+                headerTitle: 'Mewgenics Mutations Viewer',
+                searchPlaceholder: 'Search by mutation name, tags, or description...',
+                navAbilities: 'Abilities',
+                navItems: 'Items',
+                navPassives: 'Passives',
+                navMutations: 'Mutations',
+                languageEnglish: 'English',
+                languageChinese: 'Chinese',
+                allParts: 'All Parts',
+                allMutations: 'All Mutations',
+                birthDefects: 'Birth Defects',
+                excludeBirthDefects: 'Exclude Birth Defects',
+                totalMutations: 'Total Mutations:',
+                showing: 'Showing:',
+                nameHeader: 'Mutation Name',
+                idHeader: 'ID',
+                typeHeader: 'Type',
+                descHeader: 'Description',
+                tagsHeader: 'Tags',
+                birthDefectHeader: 'Birth Defect',
+                loading: 'Loading mutations...',
+                noResults: 'No mutations found matching your filters.',
+                editorNotesLabel: 'Editor Notes:',
+                errorLoading: 'Error loading mutations:',
+                solution: 'Solution:',
+                runServer: 'Run the server script to browse the mutations:',
+                thenOpen: 'Then open:',
+                footerSource: 'Free fan site with data from game mutation definitions.',
+                footerCredit: 'Original game by Edmund McMillen and Tyler Glaiel.',
+                footerAuthor: 'Created by: Bilibili@Alriph',
+                footerTranslator: 'Chinese translation: Bilibili@地下丝绒和妮可',
+                footerTools: 'Tools used: mewgpaks, JPEXS FFDec',
+            },
+            zh: {
+                pageTitle: 'Mewgenics 突变图鉴',
+                headerTitle: 'Mewgenics 突变图鉴',
+                searchPlaceholder: '按突变名称、标签或描述搜索...',
+                navAbilities: '能力',
+                navItems: '物品',
+                navPassives: '被动',
+                navMutations: '突变',
+                languageEnglish: '英语',
+                languageChinese: '中文',
+                allParts: '全部部位',
+                allMutations: '全部突变',
+                birthDefects: '先天缺陷',
+                excludeBirthDefects: '排除先天缺陷',
+                totalMutations: '突变总数：',
+                showing: '显示：',
+                nameHeader: '突变名称',
+                idHeader: '编号',
+                typeHeader: '类型',
+                descHeader: '描述',
+                tagsHeader: '标签',
+                birthDefectHeader: '先天缺陷',
+                loading: '正在加载突变...',
+                noResults: '没有找到符合筛选条件的突变。',
+                editorNotesLabel: '编辑注释：',
+                errorLoading: '加载突变失败：',
+                solution: '解决方法：',
+                runServer: '运行本地服务器脚本以浏览突变：',
+                thenOpen: '然后打开：',
+                footerSource: '这是一个免费同人站点，数据来自游戏突变定义。',
+                footerCredit: '原作游戏作者：Edmund McMillen 与 Tyler Glaiel。',
+                footerAuthor: '制作：Bilibili@Alriph',
+                footerTranslator: '中文翻译：Bilibili@地下丝绒和妮可',
+                footerTools: '工具：mewgpaks，JPEXS FFDec',
+            }
+        };
+
+        function t(key) {
+            return UI_TEXT[currentLanguage]?.[key] || UI_TEXT.en[key] || key;
+        }
+
+        function applyUiLanguage() {
+            document.title = t('pageTitle');
+            document.getElementById('headerTitle').textContent = t('headerTitle');
+            document.getElementById('searchInput').placeholder = t('searchPlaceholder');
+            document.getElementById('navAbilities').textContent = t('navAbilities');
+            document.getElementById('navItems').textContent = t('navItems');
+            document.getElementById('navPassives').textContent = t('navPassives');
+            document.getElementById('navMutations').textContent = t('navMutations');
+            document.getElementById('langButtonEn').textContent = t('languageEnglish');
+            document.getElementById('langButtonZh').textContent = t('languageChinese');
+            document.getElementById('totalLabel').textContent = t('totalMutations');
+            document.getElementById('showingLabel').textContent = t('showing');
+            document.getElementById('nameHeader').innerHTML = t('nameHeader') + '<span class="sort-indicator"></span>';
+            document.getElementById('typeHeader').innerHTML = t('typeHeader') + '<span class="sort-indicator"></span>';
+            document.getElementById('descHeader').textContent = t('descHeader');
+            document.getElementById('tagsHeader').innerHTML = t('tagsHeader') + '<span class="sort-indicator"></span>';
+            document.getElementById('footerSource').textContent = t('footerSource');
+            document.getElementById('footerCredit').textContent = t('footerCredit');
+            document.getElementById('footerAuthor').textContent = t('footerAuthor');
+            document.getElementById('footerTranslator').textContent = t('footerTranslator');
+            document.getElementById('footerTools').textContent = t('footerTools');
+
+            updateNavbarLinks();
+            updateFilterLabels();
+            populatePartFilter(document.getElementById('partFilter')?.value || '');
+
+            const loadingMessage = document.getElementById('loadingMessage');
+            if (loadingMessage) {
+                loadingMessage.textContent = t('loading');
+            }
+
+            document.getElementById('langButtonEn').classList.toggle('active', currentLanguage === 'en');
+            document.getElementById('langButtonZh').classList.toggle('active', currentLanguage === 'zh');
+        }
+
+        async function loadMutations() {
+            try {
+                const [response, notesResponse] = await Promise.all([
+                    fetch('mutations_combined.json'),
+                    fetch('editor_notes.json')
+                ]);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                if (notesResponse.ok) {
+                    editorNotes = await notesResponse.json();
+                } else {
+                    editorNotes = {};
+                }
+                allMutations = data.mutations || [];
+                filteredMutations = allMutations;
+                buildPartLabelMap();
+
+                document.getElementById('totalCount').textContent = allMutations.length;
+                applyUiLanguage();
+                updateClearButtonVisibility();
+                displayMutations(sortMutations(filteredMutations));
+            } catch (error) {
+                console.error('Error loading mutations:', error);
+                const errorMsg = `
+                    <tr><td colspan="6" class="no-results">
+                        <p style="margin-bottom: 10px;"><strong>${escapeHtml(t('errorLoading'))}</strong> ${escapeHtml(error.message)}</p>
+                        <p style="font-size: 0.9em; color: #666; line-height: 1.5;">
+                            <strong>${escapeHtml(t('solution'))}</strong><br>
+                            ${escapeHtml(t('runServer'))}<br>
+                            <code style="background: #f5f5f5; padding: 5px 10px; border-radius: 3px; display: inline-block;">python serve.py</code><br>
+                            <br>
+                            ${escapeHtml(t('thenOpen'))} <code style="background: #f5f5f5; padding: 5px 10px; border-radius: 3px; display: inline-block;">http://localhost:8000/mutations.html</code>
+                        </p>
+                    </td></tr>
+                `;
+                document.getElementById('tableBody').innerHTML = errorMsg;
+            }
+        }
+
+        function buildPartLabelMap() {
+            partLabelMap = new Map();
+            allMutations.forEach(mutation => {
+                if (!partLabelMap.has(mutation.part)) {
+                    partLabelMap.set(mutation.part, {
+                        normal: mutation.part_label_texts || {},
+                        birth: mutation.birth_defect_label_texts || {},
+                    });
+                }
+            });
+        }
+
+        function updateFilterLabels() {
+            const birthFilter = document.getElementById('birthDefectFilter');
+            if (!birthFilter) {
+                return;
+            }
+
+            const selected = birthFilter.value;
+            birthFilter.innerHTML = '';
+
+            const allOption = document.createElement('option');
+            allOption.value = 'all';
+            allOption.textContent = t('allMutations');
+            birthFilter.appendChild(allOption);
+
+            const birthOption = document.createElement('option');
+            birthOption.value = 'only';
+            birthOption.textContent = t('birthDefects');
+            birthFilter.appendChild(birthOption);
+
+            const excludeOption = document.createElement('option');
+            excludeOption.value = 'exclude';
+            excludeOption.textContent = t('excludeBirthDefects');
+            birthFilter.appendChild(excludeOption);
+
+            birthFilter.value = selected || 'all';
+        }
+
+        function populatePartFilter(selectedValue = '') {
+            const select = document.getElementById('partFilter');
+            if (!select) {
+                return;
+            }
+
+            const parts = Array.from(partLabelMap.keys());
+            parts.sort((a, b) => partRank(a) - partRank(b));
+
+            select.innerHTML = '';
+            const allOption = document.createElement('option');
+            allOption.value = '';
+            allOption.textContent = t('allParts');
+            select.appendChild(allOption);
+
+            parts.forEach(part => {
+                const option = document.createElement('option');
+                option.value = part;
+                option.textContent = getPartLabel(part);
+                select.appendChild(option);
+            });
+
+            select.value = selectedValue;
+        }
+
+        function getLocalizedText(texts, fallback) {
+            if (!texts || typeof texts !== 'object') {
+                return fallback || '';
+            }
+            return texts[currentLanguage] || fallback || '';
+        }
+
+        function getPartLabel(partKey) {
+            const record = partLabelMap.get(partKey);
+            if (!record) {
+                return partKey || '';
+            }
+            return getLocalizedText(record.normal, partKey || '');
+        }
+
+        function getBirthDefectLabel(mutation) {
+            if (!mutation || !mutation.is_birth_defect) {
+                return '-';
+            }
+            return getLocalizedText(mutation.birth_defect_label_texts, t('birthDefectHeader'));
+        }
+
+        function getTypeLabel(mutation) {
+            if (!mutation) {
+                return '';
+            }
+            return mutation.is_birth_defect
+                ? getBirthDefectLabel(mutation)
+                : getPartLabel(mutation.part);
+        }
+
+        function formatStatsHtml(statsObj) {
+            if (!statsObj || Object.keys(statsObj).length === 0) {
+                return '';
+            }
+
+            const statOrder = ['str', 'dex', 'int', 'con', 'cha', 'lck', 'spd', 'shield', 'divine_shield', 'hp', 'range', 'reach'];
+            const statIconMap = {
+                str: 'str',
+                dex: 'dex',
+                int: 'int',
+                con: 'constitution',
+                cha: 'cha',
+                lck: 'lck',
+                spd: 'spd',
+                shield: 'shield',
+                divine_shield: 'divineshield',
+                hp: 'hp',
+            };
+            const statLabelMap = { range: 'Range', reach: 'Reach' };
+
+            const orderedStats = [
+                ...statOrder.filter(stat => statsObj[stat] !== undefined),
+                ...Object.keys(statsObj).filter(stat => !statOrder.includes(stat)).sort(),
+            ];
+
+            const statsHtml = orderedStats.map(stat => {
+                const value = statsObj[stat];
+                const sign = value > 0 ? '+' : '';
+                const iconKey = statIconMap[stat];
+                const colorClass = value > 0 ? 'positive' : (value < 0 ? 'negative' : '');
+
+                if (iconKey) {
+                    const isShield = stat === 'shield' || stat === 'divine_shield';
+                    const className = 'img-icon' + (isShield ? '' : ' img-icon-stat');
+                    return `<span class="passive-stat ${colorClass}">
+                        ${sign}${value}
+                        <img src="res/fonticon/${iconKey}.png" alt="${stat}" class="${className}" onerror="this.style.display='none'">
+                    </span>`;
+                }
+
+                const label = statLabelMap[stat] || stat.replace(/_/g, ' ');
+                return `<span class="passive-stat ${colorClass}" title="${escapeHtml(label)}">${sign}${value} ${escapeHtml(label)}</span>`;
+            }).join('');
+
+            return statsHtml ? `<div class="passive-stats">${statsHtml}</div>` : '';
+        }
+
+        function formatTags(tags) {
+            if (!tags || tags.length === 0) {
+                return '-';
+            }
+            return tags.map(tag => `<span class="tag-badge">${escapeHtml(tag)}</span>`).join('');
+        }
+
+        function getEditorNote(mutation) {
+            if (!mutation || !editorNotes || typeof editorNotes !== 'object') {
+                return '';
+            }
+            const keys = [
+                mutation.display_name,
+                mutation.raw_comment,
+                mutation.desc_key,
+            ].filter(Boolean);
+            for (const key of keys) {
+                const note = editorNotes[key];
+                if (note && typeof note === 'object') {
+                    return note[currentLanguage] || note.en || '';
+                }
+            }
+            return '';
+        }
+
+        function displayMutations(mutations) {
+            const tbody = document.getElementById('tableBody');
+            if (!mutations || mutations.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="4" class="no-results">${escapeHtml(t('noResults'))}</td></tr>`;
+                document.getElementById('showingCount').textContent = '0';
+                return;
+            }
+
+            tbody.innerHTML = mutations.map(mutation => {
+                const localizedDescription = getLocalizedText(mutation.description_texts, '');
+                const description = localizedDescription || '';
+                const statsHtml = formatStatsHtml(mutation.stats || {});
+                const typeLabel = getTypeLabel(mutation);
+                const tagsHtml = formatTags(mutation.tags || []);
+                const editorNote = getEditorNote(mutation);
+                const editorHtml = editorNote
+                    ? `<div class="source-comment">${escapeHtml(t('editorNotesLabel'))} ${escapeHtml(editorNote)}</div>`
+                    : '';
+
+                return `
+                    <tr>
+                        <td><div class="mutation-name">${escapeHtml(mutation.display_name || '')}</div></td>
+                        <td>${escapeHtml(typeLabel)}</td>
+                        <td>
+                            ${statsHtml}
+                            <div class="description">${parseRichText(description)}</div>
+                            ${editorHtml}
+                        </td>
+                        <td>${tagsHtml}</td>
+                    </tr>
+                `;
+            }).join('');
+
+            document.getElementById('showingCount').textContent = mutations.length;
+        }
+
+        function sortBy(column) {
+            if (currentSort.column === column) {
+                currentSort.direction = currentSort.direction === 'asc' ? 'desc' : 'asc';
+            } else {
+                currentSort.column = column;
+                currentSort.direction = 'asc';
+            }
+
+            document.querySelectorAll('thead th').forEach(th => {
+                th.classList.remove('sort-asc', 'sort-desc');
+            });
+            const headerMap = {
+                name: 'nameHeader',
+                type: 'typeHeader',
+                tags: 'tagsHeader',
+            };
+            const header = document.getElementById(headerMap[column]);
+            if (header) {
+                header.classList.add(`sort-${currentSort.direction}`);
+            }
+
+            displayMutations(sortMutations(filteredMutations));
+        }
+
+        function sortMutations(mutations) {
+            const sorted = [...mutations].sort((a, b) => {
+                let valueA = '';
+                let valueB = '';
+
+                switch (currentSort.column) {
+                    case 'name':
+                        valueA = a.display_name || '';
+                        valueB = b.display_name || '';
+                        break;
+                    case 'tags':
+                        valueA = (a.tags || []).join(', ');
+                        valueB = (b.tags || []).join(', ');
+                        break;
+                    case 'type':
+                    default:
+                        valueA = partRank(a.part);
+                        valueB = partRank(b.part);
+                        break;
+                }
+
+                if (valueA === valueB && currentSort.column === 'type') {
+                    const birthA = a.is_birth_defect ? 1 : 0;
+                    const birthB = b.is_birth_defect ? 1 : 0;
+                    if (birthA !== birthB) {
+                        return currentSort.direction === 'asc' ? birthA - birthB : birthB - birthA;
+                    }
+                }
+
+                if (valueA < valueB) return currentSort.direction === 'asc' ? -1 : 1;
+                if (valueA > valueB) return currentSort.direction === 'asc' ? 1 : -1;
+
+                const tieA = a.mutation_id ?? 0;
+                const tieB = b.mutation_id ?? 0;
+                return tieA - tieB;
+            });
+
+            return sorted;
+        }
+
+        function updateClearButtonVisibility() {
+            const searchInput = document.getElementById('searchInput');
+            const clearButton = document.getElementById('clearButton');
+
+            if (searchInput.value) {
+                clearButton.classList.add('visible');
+            } else {
+                clearButton.classList.remove('visible');
+            }
+        }
+
+        function clearSearch() {
+            document.getElementById('searchInput').value = '';
+            updateClearButtonVisibility();
+            filterMutations();
+        }
+
+        function parseRichText(text) {
+            if (!text) return '';
+
+            let html = escapeHtml(text);
+            html = html.replace(/\[s:[^\]]+\]([\s\S]*?)\[\/s\]/g, '<i>$1</i>');
+            html = html.replace(/\[b\]([\s\S]*?)\[\/b\]/g, '<b>$1</b>');
+            html = html.replace(/\[img:([^\]]+)\]/g, function (match, iconName) {
+                const iconMap = { 'con': 'constitution' };
+                const mappedName = iconMap[iconName] || iconName;
+                const isShield = iconName === 'shield' || iconName === 'divineshield';
+                const className = 'img-icon' + (isShield ? '' : ' img-icon-stat');
+
+                return `<img src="res/fonticon/${mappedName}.png" alt="${iconName}" title="${iconName}" class="${className}" onerror="this.style.display='none'">`;
+            });
+            html = html.replace(/\n/g, '<br>');
+
+            return html;
+        }
+
+        function filterMutations() {
+            const search = document.getElementById('searchInput').value.toLowerCase();
+            const partFilter = document.getElementById('partFilter').value;
+            const birthFilter = document.getElementById('birthDefectFilter').value;
+
+            filteredMutations = allMutations.filter(mutation => {
+                const name = (mutation.display_name || '').toLowerCase();
+                const description = getLocalizedText(mutation.description_texts, '').toLowerCase();
+                const tags = (mutation.tags || []).join(' ').toLowerCase();
+                const typeLabel = getTypeLabel(mutation).toLowerCase();
+
+                const matchesSearch = name.includes(search)
+                    || description.includes(search)
+                    || tags.includes(search)
+                    || typeLabel.includes(search);
+
+                let matchesPart = true;
+                if (partFilter) {
+                    matchesPart = mutation.part === partFilter;
+                }
+
+                let matchesBirth = true;
+                if (birthFilter === 'only') {
+                    matchesBirth = mutation.is_birth_defect;
+                } else if (birthFilter === 'exclude') {
+                    matchesBirth = !mutation.is_birth_defect;
+                }
+
+                return matchesSearch && matchesPart && matchesBirth;
+            });
+
+            displayMutations(sortMutations(filteredMutations));
+        }
+
+        function escapeHtml(text) {
+            if (!text) return '';
+            const map = {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#039;'
+            };
+            return text.replace(/[&<>"']/g, m => map[m]);
+        }
+
+        document.getElementById('searchInput').addEventListener('input', () => {
+            updateClearButtonVisibility();
+            filterMutations();
+        });
+        document.getElementById('clearButton').addEventListener('click', clearSearch);
+        document.getElementById('partFilter').addEventListener('change', filterMutations);
+        document.getElementById('birthDefectFilter').addEventListener('change', filterMutations);
+        document.querySelectorAll('.lang-link').forEach(button => {
+            button.addEventListener('click', () => {
+                const selectedLang = button.getAttribute('data-lang');
+                if (!selectedLang || selectedLang === currentLanguage) {
+                    return;
+                }
+                currentLanguage = selectedLang;
+                setUrlParameter('lang', currentLanguage);
+                applyUiLanguage();
+                filterMutations();
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            applyUiLanguage();
+        });
+
+        window.addEventListener('load', loadMutations);
+    </script>
+</body>
+
+</html>

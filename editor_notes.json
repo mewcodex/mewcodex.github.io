@@ -199,6 +199,10 @@
         "en": "Source Code Comment: \"util ability for Challenge\"",
         "zh": "源代码注释：“util ability for Challenge”"
     },
+    "MUTATION_LEGS_705_DESC": {
+        "en": "Typo in source: uses 'speed' instead of 'spd' for the stat key.",
+        "zh": "源码有拼写错误：使用了 'speed' 而不是 'spd' 作为属性键。"
+    },
     "TeamFlex_Impl": {
         "en": "Source Code Comment: \"this is a sub ability for TeamFlex and does not need an icon\"",
         "zh": "源代码注释：“this is a sub ability for TeamFlex and does not need an icon”"
