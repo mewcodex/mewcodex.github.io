@@ -552,6 +552,11 @@
             color: white;
         }
 
+        .kind-consumable {
+            background: #c0392b;
+            color: white;
+        }
+
         .description {
             color: #666;
             font-size: 0.95em;
@@ -628,13 +633,6 @@
             font-family: 'Courier New', monospace;
             font-size: 0.9em;
             color: #333;
-        }
-
-        .item-consumable {
-            text-align: center;
-            font-size: 0.9em;
-            font-weight: 500;
-            color: #555;
         }
 
         .no-results {
@@ -787,9 +785,6 @@
             <select id="rarityFilter">
                 <option value="">All Rarities</option>
             </select>
-            <select id="consumableFilter">
-                <option value="">All Items</option>
-            </select>
             <select id="cursedFilter">
                 <option value="">All Items</option>
             </select>
@@ -825,15 +820,13 @@
                         <th id="descHeader">Description</th>
                         <th id="typeHeader" class="sortable" style="width: 100px;" onclick="sortBy('type')">Type<span
                                 class="sort-indicator"></span></th>
-                        <th id="consumableHeader" class="sortable" style="width: 100px;" onclick="sortBy('consumable')">
-                            Consumable<span class="sort-indicator"></span></th>
                         <th id="rarityHeader" class="sortable" style="width: 100px;" onclick="sortBy('rarity')">
                             Rarity<span class="sort-indicator"></span></th>
                     </tr>
                 </thead>
                 <tbody id="tableBody">
                     <tr>
-                        <td colspan="6" class="no-results" id="loadingMessage">Loading items...</td>
+                        <td colspan="5" class="no-results" id="loadingMessage">Loading items...</td>
                     </tr>
                 </tbody>
             </table>
@@ -900,11 +893,9 @@
                 showHidden: 'Show Hidden',
                 otherNoType: 'Other (No Type)',
                 otherNoRarity: 'Other (No Rarity)',
+                noneCursedRarity: 'None (Cursed)',
                 allTypes: 'All Types',
                 allRarities: 'All Rarities',
-                allConsumable: 'Consumable Status',
-                consumableOnly: 'Consumable Only',
-                nonConsumable: 'Non-Consumable',
                 allCursed: 'Cursed Status',
                 cursedOnly: 'Cursed Only',
                 nonCursed: 'Non-Cursed Only',
@@ -916,9 +907,6 @@
                 nameHeader: 'Item Name',
                 descHeader: 'Description',
                 typeHeader: 'Type',
-                consumableHeader: 'Consumable',
-                consumableYes: 'Yes',
-                consumableNo: 'No',
                 cursed: 'Cursed',
                 rarityHeader: 'Rarity',
                 loading: 'Loading items...',
@@ -949,11 +937,9 @@
                 showHidden: '显示隐藏项',
                 otherNoType: '其他（无类型）',
                 otherNoRarity: '其他（无稀有度）',
+                noneCursedRarity: '无（诅咒）',
                 allTypes: '全部类型',
                 allRarities: '全部稀有度',
-                allConsumable: '消耗品属性',
-                consumableOnly: '仅消耗品',
-                nonConsumable: '非消耗品',
                 allCursed: '诅咒状态',
                 cursedOnly: '仅诅咒物品',
                 nonCursed: '非诅咒物品',
@@ -965,9 +951,6 @@
                 nameHeader: '物品名称',
                 descHeader: '描述',
                 typeHeader: '类型',
-                consumableHeader: '消耗品',
-                consumableYes: '是',
-                consumableNo: '否',
                 cursed: '诅咒',
                 rarityHeader: '稀有度',
                 loading: '正在加载物品...',
@@ -989,6 +972,7 @@
 
         const KIND_LABELS = {
             en: {
+                consumable: 'Consumable',
                 trinket: 'Trinket',
                 weapon: 'Weapon',
                 neck: 'Neck',
@@ -996,6 +980,7 @@
                 head: 'Head',
             },
             zh: {
+                consumable: '消耗品',
                 trinket: '饰品',
                 weapon: '武器',
                 neck: '项链',
@@ -1026,6 +1011,10 @@
                 sidequest: '支线任务',
             }
         };
+
+        const RARITY_NORMAL = ['common', 'uncommon', 'rare', 'very_rare'];
+        const RARITY_TYPO = ['uncommmon', 'medium'];
+        const RARITY_PRIMARY = [...RARITY_NORMAL, 'sidequest', 'quest'];
 
         const SET_LABELS = {
             en: {
@@ -1077,6 +1066,13 @@
         function getKindLabel(kind) {
             if (!kind) return '';
             return KIND_LABELS[currentLanguage]?.[kind] || KIND_LABELS.en[kind] || kind;
+        }
+
+        function getEffectiveKind(item) {
+            if (item?.is_consumable) {
+                return 'consumable';
+            }
+            return item?.kind || '';
         }
 
         function getRarityLabel(rarity) {
@@ -1153,7 +1149,6 @@
             document.getElementById('nameHeader').textContent = t('nameHeader');
             document.getElementById('descHeader').textContent = t('descHeader');
             document.getElementById('typeHeader').textContent = t('typeHeader');
-            document.getElementById('consumableHeader').textContent = t('consumableHeader');
             document.getElementById('rarityHeader').textContent = t('rarityHeader');
             document.getElementById('footerSource').textContent = t('footerSource');
             document.getElementById('footerCredit').textContent = t('footerCredit');
@@ -1164,15 +1159,12 @@
 
             const kindFilter = document.getElementById('kindFilter');
             const rarityFilter = document.getElementById('rarityFilter');
-            const consumableFilter = document.getElementById('consumableFilter');
             const cursedFilter = document.getElementById('cursedFilter');
             const selectedKind = kindFilter ? kindFilter.value : '';
             const selectedRarity = rarityFilter ? rarityFilter.value : '';
-            const selectedConsumable = consumableFilter ? consumableFilter.value : '';
             const selectedCursed = cursedFilter ? cursedFilter.value : '';
             populateKindFilter(selectedKind);
             populateRarityFilter(selectedRarity);
-            populateConsumableFilter(selectedConsumable);
             populateCursedFilter(selectedCursed);
 
             const loadingMessage = document.getElementById('loadingMessage');
@@ -1230,7 +1222,7 @@
             } catch (error) {
                 console.error('Error loading items:', error);
                 document.getElementById('tableBody').innerHTML = `
-                    <tr><td colspan="6" class="no-results">
+                    <tr><td colspan="5" class="no-results">
                         <p>Error loading items: ${escapeHtml(error.message)}</p>
                     </td></tr>
                 `;
@@ -1238,9 +1230,9 @@
         }
 
         function populateKindFilter(selectedValue = '') {
-            const allKinds = allItems.map(i => i.kind);
+            const allKinds = allItems.map(i => getEffectiveKind(i));
             const kinds = [...new Set(allKinds.filter(k => k))].sort();
-            const hasNull = allKinds.some(k => !k || k === null || k === undefined);
+            const hasNull = allItems.some(i => !i.kind && !i.is_consumable);
 
             const select = document.getElementById('kindFilter');
             if (!select) return;
@@ -1271,8 +1263,30 @@
 
         function populateRarityFilter(selectedValue = '') {
             const allRarities = allItems.map(i => i.rarity);
-            const rarities = [...new Set(allRarities.filter(r => r))].sort();
-            const hasNull = allRarities.some(r => !r || r === null || r === undefined);
+            const rawRarities = [...new Set(allRarities.filter(r => r))];
+            const primaryRarities = [];
+            const typoRarities = [];
+            const seen = new Set();
+
+            RARITY_PRIMARY.forEach(rarity => {
+                if (rawRarities.includes(rarity)) {
+                    primaryRarities.push(rarity);
+                    seen.add(rarity);
+                }
+            });
+
+            RARITY_TYPO.forEach(rarity => {
+                if (rawRarities.includes(rarity) && !seen.has(rarity)) {
+                    typoRarities.push(rarity);
+                    seen.add(rarity);
+                }
+            });
+
+            const otherRarities = rawRarities
+                .filter(rarity => !seen.has(rarity))
+                .sort();
+            const hasNoRarityNonCursed = allItems.some(i => !i.rarity && !i.cursed);
+            const hasNoRarityCursed = allItems.some(i => !i.rarity && i.cursed);
 
             const select = document.getElementById('rarityFilter');
             if (!select) return;
@@ -1283,7 +1297,28 @@
             allOption.textContent = t('allRarities');
             select.appendChild(allOption);
 
-            rarities.forEach(rarity => {
+            primaryRarities.forEach(rarity => {
+                const option = document.createElement('option');
+                option.value = rarity;
+                option.textContent = getRarityLabel(rarity);
+                select.appendChild(option);
+            });
+
+            if (hasNoRarityCursed) {
+                const cursedOption = document.createElement('option');
+                cursedOption.value = '__null_cursed__';
+                cursedOption.textContent = t('noneCursedRarity');
+                select.appendChild(cursedOption);
+            }
+
+            typoRarities.forEach(rarity => {
+                const option = document.createElement('option');
+                option.value = rarity;
+                option.textContent = getRarityLabel(rarity);
+                select.appendChild(option);
+            });
+
+            otherRarities.forEach(rarity => {
                 const option = document.createElement('option');
                 option.value = rarity;
                 option.textContent = getRarityLabel(rarity);
@@ -1291,34 +1326,12 @@
             });
 
             // Add "Other" option if there are items without a rarity
-            if (hasNull) {
+            if (hasNoRarityNonCursed) {
                 const otherOption = document.createElement('option');
                 otherOption.value = '__null__';
                 otherOption.textContent = t('otherNoRarity');
                 select.appendChild(otherOption);
             }
-
-            select.value = selectedValue;
-        }
-
-        function populateConsumableFilter(selectedValue = '') {
-            const select = document.getElementById('consumableFilter');
-            if (!select) return;
-
-            select.innerHTML = '';
-
-            const options = [
-                { value: '', label: t('allConsumable') },
-                { value: 'consumable', label: t('consumableOnly') },
-                { value: 'non-consumable', label: t('nonConsumable') }
-            ];
-
-            options.forEach(opt => {
-                const option = document.createElement('option');
-                option.value = opt.value;
-                option.textContent = opt.label;
-                select.appendChild(option);
-            });
 
             select.value = selectedValue;
         }
@@ -1410,7 +1423,7 @@
             });
 
             if (visibleItems.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="6" class="no-results">${escapeHtml(t('noResults'))}</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="5" class="no-results">${escapeHtml(t('noResults'))}</td></tr>`;
                 document.getElementById('showingCount').textContent = '0';
                 return;
             }
@@ -1440,11 +1453,12 @@
                 localizedName = localizedName.replace(/{str_aux_active_name}/g, t('strAuxActiveName'));
                 localizedName = localizedName.replace(/{str_aux_active_desc}/g, t('strAuxActiveDesc'));
 
-                const kindLabel = item.kind ? getKindLabel(item.kind) : '-';
+                const effectiveKind = getEffectiveKind(item);
+                const kindLabel = effectiveKind ? getKindLabel(effectiveKind) : '-';
                 const rarityLabel = item.rarity ? getRarityLabel(item.rarity) : '-';
                 const iconPath = getItemIconPath(item);
                 const rarityBgPath = getRarityBackgroundPath(item);
-                const partIconPath = getPartIconPath(item.kind, item.is_consumable);
+                const partIconPath = getPartIconPath(effectiveKind, item.is_consumable);
 
                 let setsHtml = '';
                 if (item.sets && item.sets.length > 0) {
@@ -1504,10 +1518,7 @@
                             ${getEditorNote(item.item_code) ? `<div class="source-comment">${escapeHtml(t('editorNotesLabel'))} ${escapeHtml(getEditorNote(item.item_code))}</div>` : ''}
                         </td>
                         <td>
-                            ${item.kind ? `<div class="item-rarity kind-${item.kind}">${partIconHtml}${escapeHtml(kindLabel)}</div>` : '-'}
-                        </td>
-                        <td>
-                            <div class="item-consumable">${item.is_consumable ? escapeHtml(t('consumableYes')) : escapeHtml(t('consumableNo'))}</div>
+                            ${effectiveKind ? `<div class="item-rarity kind-${effectiveKind}">${partIconHtml}${escapeHtml(kindLabel)}</div>` : '-'}
                         </td>
                         <td>
                             ${rarityCellHtml}
@@ -1534,7 +1545,6 @@
             });
             const headerMap = {
                 'type': 'typeHeader',
-                'consumable': 'consumableHeader',
                 'rarity': 'rarityHeader'
             };
             const header = document.getElementById(headerMap[column]);
@@ -1547,14 +1557,20 @@
                 let valueA, valueB;
 
                 if (column === 'type') {
-                    valueA = a.kind || '';
-                    valueB = b.kind || '';
-                } else if (column === 'consumable') {
-                    valueA = a.is_consumable ? 1 : 0;
-                    valueB = b.is_consumable ? 1 : 0;
+                    valueA = getEffectiveKind(a) || '';
+                    valueB = getEffectiveKind(b) || '';
                 } else if (column === 'rarity') {
                     // Define rarity order
-                    const rarityOrder = { 'common': 1, 'uncommon': 2, 'uncommmon': 2, 'medium': 3, 'rare': 4, 'very_rare': 5, 'sidequest': 6, 'quest': 7 };
+                    const rarityOrder = {
+                        common: 1,
+                        uncommon: 2,
+                        rare: 3,
+                        very_rare: 4,
+                        sidequest: 5,
+                        quest: 6,
+                        uncommmon: 7,
+                        medium: 8
+                    };
                     valueA = rarityOrder[a.rarity] || 0;
                     valueB = rarityOrder[b.rarity] || 0;
                 }
@@ -1571,7 +1587,6 @@
             const search = document.getElementById('searchInput').value.toLowerCase();
             const kindFilter = document.getElementById('kindFilter').value;
             const rarityFilter = document.getElementById('rarityFilter').value;
-            const consumableFilter = document.getElementById('consumableFilter').value;
             const cursedFilter = document.getElementById('cursedFilter').value;
 
             filteredItems = allItems.filter(item => {
@@ -1601,12 +1616,13 @@
                 }
 
                 // Handle kind filter with special "__null__" value for items without a kind
+                const effectiveKind = getEffectiveKind(item);
                 let matchesKind = true;
                 if (kindFilter) {
                     if (kindFilter === '__null__') {
-                        matchesKind = !item.kind;
+                        matchesKind = !item.kind && !item.is_consumable;
                     } else {
-                        matchesKind = item.kind === kindFilter;
+                        matchesKind = effectiveKind === kindFilter;
                     }
                 }
 
@@ -1614,21 +1630,19 @@
                 let matchesRarity = true;
                 if (rarityFilter) {
                     if (rarityFilter === '__null__') {
-                        matchesRarity = !item.rarity;
+                        matchesRarity = !item.rarity && !item.cursed;
+                    } else if (rarityFilter === '__null_cursed__') {
+                        matchesRarity = !item.rarity && item.cursed;
                     } else {
                         matchesRarity = item.rarity === rarityFilter;
                     }
                 }
 
-                const matchesConsumable = !consumableFilter ||
-                    (consumableFilter === 'consumable' && item.is_consumable) ||
-                    (consumableFilter === 'non-consumable' && !item.is_consumable);
-
                 const matchesCursed = !cursedFilter ||
                     (cursedFilter === 'cursed' && item.cursed) ||
                     (cursedFilter === 'non-cursed' && !item.cursed);
 
-                return matchesSearch && matchesKind && matchesRarity && matchesConsumable && matchesCursed;
+                return matchesSearch && matchesKind && matchesRarity && matchesCursed;
             });
 
             updateFilterTags();
@@ -1877,7 +1891,6 @@
         document.getElementById('clearButton').addEventListener('click', clearSearch);
         document.getElementById('kindFilter').addEventListener('change', filterItems);
         document.getElementById('rarityFilter').addEventListener('change', filterItems);
-        document.getElementById('consumableFilter').addEventListener('change', filterItems);
         document.getElementById('cursedFilter').addEventListener('change', filterItems);
         document.querySelectorAll('.lang-link').forEach(button => {
             button.addEventListener('click', () => {

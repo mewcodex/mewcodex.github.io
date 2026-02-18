@@ -140,25 +140,60 @@
 
         .controls {
             padding: 20px;
-            background: #f5f5f5;
+            background: #f3f1ee;
+            border-bottom: 1px solid #ddd;
             display: flex;
             gap: 15px;
             flex-wrap: wrap;
             align-items: center;
         }
 
-        .controls input {
+        .search-wrapper {
+            position: relative;
             flex: 1;
             min-width: 200px;
-            padding: 10px 15px;
-            border: 2px solid #ddd;
+        }
+
+        .controls input,
+        .controls select {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
             border-radius: 4px;
             font-size: 1em;
         }
 
-        .controls input:focus {
-            outline: none;
-            border-color: #9f978b;
+        .controls input {
+            width: 100%;
+            padding-right: 35px;
+        }
+
+        .clear-button {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #999;
+            font-size: 1.3em;
+            cursor: pointer;
+            padding: 0;
+            width: 24px;
+            height: 24px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.2s;
+        }
+
+        .clear-button:hover {
+            background: #e0e0e0;
+            color: #666;
+        }
+
+        .clear-button.visible {
+            display: flex;
         }
 
         .controls label {
@@ -166,23 +201,9 @@
             color: #666;
         }
 
-        .controls select {
-            padding: 10px 15px;
-            border: 2px solid #ddd;
-            border-radius: 4px;
-            font-size: 1em;
-            background: white;
-            cursor: pointer;
-        }
-
-        .controls select:focus {
-            outline: none;
-            border-color: #9f978b;
-        }
-
         .visibility-controls {
             padding: 12px 20px 0;
-            background: #f5f5f5;
+            background: #f7f4f0;
             border-bottom: 1px solid #ddd;
             display: flex;
             align-items: center;
@@ -198,29 +219,27 @@
         }
 
         .stats {
-            padding: 15px 20px;
-            background: white;
-            border-bottom: 1px solid #eee;
+            padding: 20px;
+            background: #f7f4f0;
             display: flex;
-            gap: 30px;
-            flex-wrap: wrap;
+            gap: 20px;
+            border-bottom: 1px solid #ddd;
         }
 
         .stat-item {
             display: flex;
-            gap: 8px;
+            gap: 10px;
             align-items: center;
         }
 
         .stat-label {
-            color: #666;
-            font-weight: 500;
+            font-weight: 600;
+            color: #9f978b;
         }
 
         .stat-value {
-            color: #9f978b;
-            font-weight: bold;
-            font-size: 1.1em;
+            font-size: 1.2em;
+            color: #333;
         }
 
         .table-wrapper {
@@ -331,12 +350,14 @@
         }
 
         .description-upgraded {
-            margin-top: 8px;
-            padding-top: 8px;
-            border-top: 1px solid #ddd;
+            margin-top: 6px;
         }
 
         .passive-name-upgraded {
+            margin-top: 8px;
+        }
+
+        .upgrade-block {
             margin-top: 8px;
             padding-top: 8px;
             border-top: 1px solid #ddd;
@@ -583,6 +604,10 @@
                 width: 100%;
             }
 
+            .search-wrapper {
+                width: 100%;
+            }
+
             thead th {
                 padding: 10px 8px;
                 font-size: 0.9em;
@@ -635,7 +660,10 @@
         </div>
 
         <div class="controls">
-            <input type="text" id="searchInput" placeholder="Search by passive name or description...">
+            <div class="search-wrapper">
+                <input type="text" id="searchInput" placeholder="Search by passive name or description...">
+                <button class="clear-button" id="clearButton" title="Clear search">×</button>
+            </div>
             <select id="classFilter">
                 <option value="">All Classes</option>
             </select>
@@ -1049,12 +1077,14 @@
                 const localizedName = getLocalizedText(passive.passive_name_texts, passive.passive_name);
                 const localizedDescription = getLocalizedText(passive.description_texts, passive.description);
                 const localizedDescription2 = getLocalizedText(passive.description2_texts, passive.description_2);
-                const hasUpgraded = !!(localizedDescription2 && localizedDescription2.trim());
+                const hasUpgraded = !!passive.has_upgrade;
                 const classLabel = passive.passive_class ? getClassLabel(passive.passive_class) : '';
 
-                // Get stats to display - prefer base, then level 1, then level 2
-                const stats = passive.stats_base || passive.stats_level1 || passive.stats_level2 || {};
-                const statsHtml = formatStats(stats);
+                // Get stats to display, merging base + level stats when present
+                const baseStats = { ...(passive.stats_base || {}), ...(passive.stats_level1 || {}) };
+                const upgradedStats = { ...(passive.stats_base || {}), ...(passive.stats_level2 || {}) };
+                const statsHtml = formatStats(baseStats);
+                const upgradedStatsHtml = hasUpgraded ? formatStats(upgradedStats) : '';
 
                 // Get notes if present
                 const notesHtml = passive.desc_notes ? `<div class="source-comment">${escapeHtml(t('sourceCommentsLabel'))} ${escapeHtml(passive.desc_notes)}</div>` : '';
@@ -1080,7 +1110,7 @@
                         <td>
                             ${statsHtml}
                             <div class="description">${parseRichText(localizedDescription || 'N/A')}</div>
-                            ${hasUpgraded ? `<div class="description description-upgraded">${parseRichText(localizedDescription2)}</div>` : ''}
+                            ${hasUpgraded ? `<div class="upgrade-block">${upgradedStatsHtml}<div class="description description-upgraded">${parseRichText(localizedDescription2 || 'N/A')}</div></div>` : ''}
                             ${notesHtml}
                             ${editorHtml}
                         </td>
@@ -1129,6 +1159,23 @@
             });
 
             displayPassives(sortedPassives);
+        }
+
+        function updateClearButtonVisibility() {
+            const searchInput = document.getElementById('searchInput');
+            const clearButton = document.getElementById('clearButton');
+
+            if (searchInput.value) {
+                clearButton.classList.add('visible');
+            } else {
+                clearButton.classList.remove('visible');
+            }
+        }
+
+        function clearSearch() {
+            document.getElementById('searchInput').value = '';
+            updateClearButtonVisibility();
+            filterPassives();
         }
 
         // Parse rich text markup in descriptions
@@ -1221,7 +1268,11 @@
         }
 
         // Event listeners
-        document.getElementById('searchInput').addEventListener('input', filterPassives);
+        document.getElementById('searchInput').addEventListener('input', () => {
+            updateClearButtonVisibility();
+            filterPassives();
+        });
+        document.getElementById('clearButton').addEventListener('click', clearSearch);
         document.getElementById('classFilter').addEventListener('change', filterPassives);
         document.querySelectorAll('.lang-link').forEach(button => {
             button.addEventListener('click', () => {

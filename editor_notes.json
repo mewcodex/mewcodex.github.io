@@ -1,14 +1,542 @@
 {
     "Steven": {
-        "en": "Found in source code comment: \"change the cats name to 'Steven'\"",
-        "zh": "源代码注释里写的：“把猫的名字改成‘Steven’”"
+        "en": "Source Code Comment: \"change the cats name to 'Steven'\"",
+        "zh": "源代码注释：“把猫的名字改成‘Steven’”"
     },
     "Godhead": {
         "en": "While you're downed, you will revive with 50% HP at the end of the round.",
         "zh": "当你倒地后，\n在回合结束时以 50% 的生命值复活。\n"
     },
     "DejaVu": {
-        "en": "Applies Deja Vu (10%); severe version replaces brain AI.",
-        "zh": "施加 10% 既视感；严重版会替换大脑 AI。"
+        "en": "Level 1/2: Apply 10% Deja Vu; Level 3: Change to computer-controlled.",
+        "zh": "1/2级：施加 10% 既视感；3级：改为由电脑操控。"
+    },
+    "Amoeba": {
+        "en": "Literally.",
+        "zh": "字面意思。"
+    },
+    "LongStrider": {
+        "en": "Source Code Comment: \"CUT\"",
+        "zh": "源代码注释：“删减内容”"
+    },
+    "ElementalAttunement": {
+        "en": "Source Code Comment: \"[effects about Shadow elemental spells] do we even have shadow spells?\"",
+        "zh": "源代码注释：“[关于暗影元素法术的效果] 我们真的有暗影法术吗？”"
+    },
+    "SuperCrow": {
+        "en": "Source Code Comment: \"in case you get it twice it should get you to crow3\"",
+        "zh": "源代码注释：“如果你拿到两次，就应该升到 crow3”"
+    },
+    "OneEighty": {
+        "en": "Source Code Comment: \"moved from Fighter\"",
+        "zh": "源代码注释：“moved from Fighter”"
+    },
+    "Gargantuan": {
+        "en": "Source Code Comment: \"Given by a MonkeyPaw event wish.\"",
+        "zh": "源代码注释：“Given by a MonkeyPaw event wish.”"
+    },
+    "BrainDead": {
+        "en": "Source Code Comment: \"Given by a MonkeyPaw event wish.\"",
+        "zh": "源代码注释：“Given by a MonkeyPaw event wish.”"
+    },
+    "TamperedGenes": {
+        "en": "Source Code Comment: \"Given by a MonkeyPaw event wish.\"",
+        "zh": "源代码注释：“Given by a MonkeyPaw event wish.”"
+    },
+    "SensoryOverloadFace": {
+        "en": "Source Code Comment: \"Given by a MonkeyPaw event wish.\"",
+        "zh": "源代码注释：“Given by a MonkeyPaw event wish.”"
+    },
+    "SensoryOverloadTrinket": {
+        "en": "Source Code Comment: \"Given by a MonkeyPaw event wish.\"",
+        "zh": "源代码注释：“Given by a MonkeyPaw event wish.”"
+    },
+    "SensoryOverloadHead": {
+        "en": "Source Code Comment: \"Given by a MonkeyPaw event wish.\"",
+        "zh": "源代码注释：“Given by a MonkeyPaw event wish.”"
+    },
+    "SensoryOverloadNeck": {
+        "en": "Source Code Comment: \"Given by a MonkeyPaw event wish.\"",
+        "zh": "源代码注释：“Given by a MonkeyPaw event wish.”"
+    },
+    "SensoryOverloadWeapon": {
+        "en": "Source Code Comment: \"Given by a MonkeyPaw event wish.\"",
+        "zh": "源代码注释：“Given by a MonkeyPaw event wish.”"
+    },
+    "EternalYouth": {
+        "en": "Source Code Comment: \"Given by the fountain event\"",
+        "zh": "源代码注释：“Given by the fountain event”"
+    },
+    "DownsSyndrome": {
+        "en": "Source Code Comment: \"might be cool to make the head larger but keep the face the same size\"",
+        "zh": "源代码注释：“might be cool to make the head larger but keep the face the same size”"
+    },
+    "WilliamsSyndrome": {
+        "en": "Source Code Comment: \"might be cool to make the mouth larger\"",
+        "zh": "源代码注释：“might be cool to make the mouth larger”"
+    },
+    "DarkOne": {
+        "en": "Source Code Comment: \"Aquired from Core event 'Demonic Idol'\"",
+        "zh": "源代码注释：“Aquired from Core event 'Demonic Idol'”"
+    },
+    "DeathChill": {
+        "en": "Source Code Comment: \"CUT\"",
+        "zh": "源代码注释：\"删减内容\""
+    },
+    "EyeCatchin": {
+        "en": "Source Code Comment: \"CUT\"",
+        "zh": "源代码注释：\"删减内容\""
+    },
+    "BowlDash": {
+        "en": "Source Code Comment: \"2nd util ability for Bowl\"",
+        "zh": "源代码注释：“2nd util ability for Bowl”"
+    },
+    "Indigestion_Fart": {
+        "en": "Source Code Comment: \"util ability for Indigestion passive, no icon needed\"",
+        "zh": "源代码注释：“util ability for Indigestion passive, no icon needed”"
+    },
+    "Indigestion_Fart2": {
+        "en": "Source Code Comment: \"util ability for Indigestion passive, no icon needed\"",
+        "zh": "源代码注释：“util ability for Indigestion passive, no icon needed”"
+    },
+    "Momentum": {
+        "en": "Source Code Comment: \"REMOVED\"",
+        "zh": "源代码注释：\"已删除\""
+    },
+    "TapLand": {
+        "en": "Source Code Comment: \"REMOVED\"",
+        "zh": "源代码注释：\"已删除\""
+    },
+    "HolyStep": {
+        "en": "Source Code Comment: \"REMOVED\"",
+        "zh": "源代码注释：\"已删除\""
+    },
+    "LoveTap": {
+        "en": "Source Code Comment: \"REMOVED\"",
+        "zh": "源代码注释：\"已删除\""
+    },
+    "MarkJump": {
+        "en": "Source Code Comment: \"UTILITY MOVE NEEDED FOR (the old version of) PrepareToJump2\"",
+        "zh": "源代码注释：“UTILITY MOVE NEEDED FOR (the old version of) PrepareToJump2”"
+    },
+    "HolyBlood": {
+        "en": "Source Code Comment: \"REMOVED\"",
+        "zh": "源代码注释：\"已删除\""
+    },
+    "Gassy_AssBlast": {
+        "en": "Source Code Comment: \"util ability used for Gassy passive\"",
+        "zh": "源代码注释：“util ability used for Gassy passive”"
+    },
+    "TinaFlail": {
+        "en": "Source Code Comment: \"for Guillotina\"",
+        "zh": "源代码注释：“for Guillotina”"
+    },
+    "TinaFlailRage": {
+        "en": "Source Code Comment: \"for Guillotina\"",
+        "zh": "源代码注释：“for Guillotina”"
+    },
+    "TigerSwipes": {
+        "en": "Source Code Comment: \"alt basic for TigerForm\"",
+        "zh": "源代码注释：“alt basic for TigerForm”"
+    },
+    "Pounce": {
+        "en": "Source Code Comment: \"alt ability for TigerForm\"",
+        "zh": "源代码注释：“alt ability for TigerForm”"
+    },
+    "ThrowPoop": {
+        "en": "Source Code Comment: \"alt basic attack for Monkey Form\"",
+        "zh": "源代码注释：“alt basic attack for Monkey Form”"
+    },
+    "MonkeyThrow": {
+        "en": "Source Code Comment: \"bonus ability for Monkey Form\"",
+        "zh": "源代码注释：“bonus ability for Monkey Form”"
+    },
+    "HornCharge": {
+        "en": "Source Code Comment: \"bonus ability for Rhino Form\"",
+        "zh": "源代码注释：“bonus ability for Rhino Form”"
+    },
+    "Pilfer": {
+        "en": "Source Code Comment: \"alt basic for RaccoonForm\"",
+        "zh": "源代码注释：“alt basic for RaccoonForm”"
+    },
+    "Timber": {
+        "en": "Source Code Comment: \"alt basic for TreeForm\"",
+        "zh": "源代码注释：“alt basic for TreeForm”"
+    },
+    "GlowingMushroomGiveMana": {
+        "en": "Source Code Comment: \"util ability for Glowing Mushroom, does not need icon\"",
+        "zh": "源代码注释：“util ability for Glowing Mushroom, does not need icon”"
+    },
+    "AntlerSwipe": {
+        "en": "Source Code Comment: \"basic attack for Elk Form\"",
+        "zh": "源代码注释：“basic attack for Elk Form”"
+    },
+    "AntlerSwipe2": {
+        "en": "Source Code Comment: \"basic attack for Elk Form\"",
+        "zh": "源代码注释：“basic attack for Elk Form”"
+    },
+    "Prance": {
+        "en": "Source Code Comment: \"bonus ability for Elk Form\"",
+        "zh": "源代码注释：“bonus ability for Elk Form”"
+    },
+    "MockSong": {
+        "en": "Source Code Comment: \"basic attack for mockingbird form\"",
+        "zh": "源代码注释：“basic attack for mockingbird form”"
+    },
+    "MockSong2": {
+        "en": "Source Code Comment: \"basic attack for mockingbird form\"",
+        "zh": "源代码注释：“basic attack for mockingbird form”"
+    },
+    "Tease": {
+        "en": "Source Code Comment: \"special ability for mockingbird form\"",
+        "zh": "源代码注释：“special ability for mockingbird form”"
+    },
+    "BerserkDash": {
+        "en": "Source Code Comment: \"util ability for Bezerk\"",
+        "zh": "源代码注释：“util ability for Bezerk”"
+    },
+    "Slap": {
+        "en": "Source Code Comment: \"util ability for Challenge\"",
+        "zh": "源代码注释：“util ability for Challenge”"
+    },
+    "TeamFlex_Impl": {
+        "en": "Source Code Comment: \"this is a sub ability for TeamFlex and does not need an icon\"",
+        "zh": "源代码注释：“this is a sub ability for TeamFlex and does not need an icon”"
+    },
+    "Huddle_Impl": {
+        "en": "Source Code Comment: \"this is a sub ability for TeamFlex and does not need an icon\"",
+        "zh": "源代码注释：“this is a sub ability for TeamFlex and does not need an icon”"
+    },
+    "DumbMove_Impl": {
+        "en": "Source Code Comment: \"this is a sub ability for DumbMove and does not need an icon\"",
+        "zh": "源代码注释：“this is a sub ability for DumbMove and does not need an icon”"
+    },
+    "ReflexPunchJab": {
+        "en": "Source Code Comment: \"this is a sub ability for Reflex Punch passive and does not need an icon\"",
+        "zh": "源代码注释：“this is a sub ability for Reflex Punch passive and does not need an icon”"
+    },
+    "ReflexPunchJab2": {
+        "en": "Source Code Comment: \"this is a sub ability for Reflex Punch passive and does not need an icon\"",
+        "zh": "源代码注释：“this is a sub ability for Reflex Punch passive and does not need an icon”"
+    },
+    "Harpoon": {
+        "en": "Source Code Comment: \"CUT\"",
+        "zh": "源代码注释：\"删减内容\""
+    },
+    "TrailBlazer": {
+        "en": "Source Code Comment: \"CUT\"",
+        "zh": "源代码注释：\"删减内容\""
+    },
+    "tk_SuckStone": {
+        "en": "Source Code Comment: \"this one is triggered automatically and not manually castable\"",
+        "zh": "源代码注释：“this one is triggered automatically and not manually castable”"
+    },
+    "wp_CaveCatClub": {
+        "en": "Source Code Comment: \"for a miniboss enemy\"",
+        "zh": "源代码注释：“for a miniboss enemy”"
+    },
+    "Enlarge": {
+        "en": "Source Code Comment: \"REMOVED (spell is still here in case we want to add it back later, its just real fuckin annoying to make abilities when I constantly have to consider how they interact with Enlarge)\"",
+        "zh": "源代码注释：“REMOVED (spell is still here in case we want to add it back later, its just real fuckin annoying to make abilities when I constantly have to consider how they interact with Enlarge)”"
+    },
+    "IceArmor": {
+        "en": "Source Code Comment: \"CUT\"",
+        "zh": "源代码注释：\"删减内容\""
+    },
+    "FireArmor": {
+        "en": "Source Code Comment: \"CUT\"",
+        "zh": "源代码注释：\"删减内容\""
+    },
+    "BlackMagic2": {
+        "en": "Source Code Comment: \"not implemented as a variant cause the all stats up has to be before the mana gain...\"",
+        "zh": "源代码注释：“not implemented as a variant cause the all stats up has to be before the mana gain...”"
+    },
+    "HomingBlasts_sub": {
+        "en": "Source Code Comment: \"util used to show \"3x3\" with magic damage modifications on homing blasts\"",
+        "zh": "源代码注释：“util used to show \"3x3\" with magic damage modifications on homing blasts”"
+    },
+    "HomingBlasts2_sub": {
+        "en": "Source Code Comment: \"util used to show \"3x3\" with magic damage modifications on homing blasts\"",
+        "zh": "源代码注释：“util used to show \"3x3\" with magic damage modifications on homing blasts”"
+    },
+    "Purge": {
+        "en": "Source Code Comment: \"CUT\"",
+        "zh": "源代码注释：\"删减内容\""
+    },
+    "MedicObey": {
+        "en": "Source Code Comment: \"for ThouShaltObey passive, does not need an icon\"",
+        "zh": "源代码注释：“for ThouShaltObey passive, does not need an icon”"
+    },
+    "MedicObey2": {
+        "en": "Source Code Comment: \"for ThouShaltObey passive, does not need an icon\"",
+        "zh": "源代码注释：“for ThouShaltObey passive, does not need an icon”"
+    },
+    "Heathens": {
+        "en": "Source Code Comment: \"util ability for Heathens passive, does not need an icon\"",
+        "zh": "源代码注释：“util ability for Heathens passive, does not need an icon”"
+    },
+    "Heathens2": {
+        "en": "Source Code Comment: \"util ability for Heathens passive, does not need an icon\"",
+        "zh": "源代码注释：“util ability for Heathens passive, does not need an icon”"
+    },
+    "RapidFlowSpin": {
+        "en": "Source Code Comment: \"util ability for RapidFlow passive, does not need an icon\"",
+        "zh": "源代码注释：“util ability for RapidFlow passive, does not need an icon”"
+    },
+    "RapidFlowSpin2": {
+        "en": "Source Code Comment: \"util ability for RapidFlow passive, does not need an icon\"",
+        "zh": "源代码注释：“util ability for RapidFlow passive, does not need an icon”"
+    },
+    "RandomReap": {
+        "en": "Source Code Comment: \"for death incarnate passive\"",
+        "zh": "源代码注释：“for death incarnate passive”"
+    },
+    "RandomReap2": {
+        "en": "Source Code Comment: \"for death incarnate passive\"",
+        "zh": "源代码注释：“for death incarnate passive”"
+    },
+    "SlitWrists": {
+        "en": "Source Code Comment: \"bonus ability for OneWithNothing passive\"",
+        "zh": "源代码注释：“bonus ability for OneWithNothing passive”"
+    },
+    "LastGasp": {
+        "en": "Source Code Comment: \"util deathrattle for Last Gasp passive\"",
+        "zh": "源代码注释：“util deathrattle for Last Gasp passive”"
+    },
+    "Seppuku": {
+        "en": "Source Code Comment: \"bonus ability for Last Gasp passive\"",
+        "zh": "源代码注释：“bonus ability for Last Gasp passive”"
+    },
+    "RaiseTheDead": {
+        "en": "Source Code Comment: \"util ability for RelentlessDead passive\"",
+        "zh": "源代码注释：“util ability for RelentlessDead passive”"
+    },
+    "RaiseTheDead2": {
+        "en": "Source Code Comment: \"util ability for RelentlessDead passive\"",
+        "zh": "源代码注释：“util ability for RelentlessDead passive”"
+    },
+    "RandomSoulLink": {
+        "en": "Source Code Comment: \"for soul bind passive, does not need an icon\"",
+        "zh": "源代码注释：“for soul bind passive, does not need an icon”"
+    },
+    "RandomDualSoulLink": {
+        "en": "Source Code Comment: \"for Raven Feather item, does not need an icon\"",
+        "zh": "源代码注释：“for Raven Feather item, does not need an icon”"
+    },
+    "BlinkDodge": {
+        "en": "Source Code Comment: \"used for a passive, does not need an upgrade\"",
+        "zh": "源代码注释：“used for a passive, does not need an upgrade”"
+    },
+    "ReadMind": {
+        "en": "Source Code Comment: \"CUT\"",
+        "zh": "源代码注释：\"删减内容\""
+    },
+    "GrowHead": {
+        "en": "Source Code Comment: \"bonus ability for FullPower passive\"",
+        "zh": "源代码注释：“bonus ability for FullPower passive”"
+    },
+    "FlashBack": {
+        "en": "Source Code Comment: \"utility ability for FlashForward\"",
+        "zh": "源代码注释：“utility ability for FlashForward”"
+    },
+    "MindCrack_EldritchVisage": {
+        "en": "Source Code Comment: \"util for eldritch visage passive, does not need an icon\"",
+        "zh": "源代码注释：“util for eldritch visage passive, does not need an icon”"
+    },
+    "MindCrack_EldritchVisage2": {
+        "en": "Source Code Comment: \"util for eldritch visage passive, does not need an icon\"",
+        "zh": "源代码注释：“util for eldritch visage passive, does not need an icon”"
+    },
+    "NubsJump_AI": {
+        "en": "Source Code Comment: \"nubs jump pretends its targeting like a spawn ability so he can jump towards things while blind sometimes\"",
+        "zh": "源代码注释：“nubs jump pretends its targeting like a spawn ability so he can jump towards things while blind sometimes”"
+    },
+    "DeathWormTrampleDash_Reaction_ai": {
+        "en": "Source Code Comment: \"copy of the megafetusmelee_ai\"",
+        "zh": "源代码注释：“copy of the megafetusmelee_ai”"
+    },
+    "CerberubsJump_AI": {
+        "en": "Source Code Comment: \"jump pretends its targeting like a spawn ability so he can jump towards things while blind sometimes\"",
+        "zh": "源代码注释：“jump pretends its targeting like a spawn ability so he can jump towards things while blind sometimes”"
+    },
+    "AZ_Jump_AI": {
+        "en": "Source Code Comment: \"jump pretends its targeting like a spawn ability so he can jump towards things\"",
+        "zh": "源代码注释：“jump pretends its targeting like a spawn ability so he can jump towards things”"
+    },
+    "DybbukRePossess": {
+        "en": "Source Code Comment: \"copy of dybbukposses without the heal\"",
+        "zh": "源代码注释：“copy of dybbukposses without the heal”"
+    },
+    "Taunt": {
+        "en": "Source Code Comment: \"CUT\"",
+        "zh": "源代码注释：\"删减内容\""
+    },
+    "BonusToss": {
+        "en": "Source Code Comment: \"bonus ability for Wrestlemania\"",
+        "zh": "源代码注释：“bonus ability for Wrestlemania”"
+    },
+    "BonusToss2": {
+        "en": "Source Code Comment: \"bonus ability for Wrestlemania\"",
+        "zh": "源代码注释：“bonus ability for Wrestlemania”"
+    },
+    "NubbyToss": {
+        "en": "Source Code Comment: \"bonus ability for MyLeg\"",
+        "zh": "源代码注释：“bonus ability for MyLeg”"
+    },
+    "BodyGuardSwap": {
+        "en": "Source Code Comment: \"util ability for BodyGuard\"",
+        "zh": "源代码注释：“util ability for BodyGuard”"
+    },
+    "BodyGuardSwap2": {
+        "en": "Source Code Comment: \"util ability for BodyGuard2\"",
+        "zh": "源代码注释：“util ability for BodyGuard2”"
+    },
+    "SwapPositions_WideLoad": {
+        "en": "Source Code Comment: \"util ability for WideLoad\"",
+        "zh": "源代码注释：“util ability for WideLoad”"
+    },
+    "FollowUpDash": {
+        "en": "Source Code Comment: \"util ability for Follow Up passive, does not need an icon\"",
+        "zh": "源代码注释：“util ability for Follow Up passive, does not need an icon”"
+    },
+    "Double": {
+        "en": "Source Code Comment: \"CUT\"",
+        "zh": "源代码注释：\"删减内容\""
+    },
+    "Camouflage": {
+        "en": "Source Code Comment: \"CUT\"",
+        "zh": "源代码注释：\"删减内容\""
+    },
+    "DoubleLoot": {
+        "en": "Source Code Comment: \"CUT\"",
+        "zh": "源代码注释：\"删减内容\""
+    },
+    "Shank": {
+        "en": "Source Code Comment: \"alt basic attack for Shank passive\"",
+        "zh": "源代码注释：“alt basic attack for Shank passive”"
+    },
+    "ThiefSwapBack": {
+        "en": "Source Code Comment: \"util ability for ThiefSwap, does not need an icon\"",
+        "zh": "源代码注释：“util ability for ThiefSwap, does not need an icon”"
+    },
+    "Switcheroo": {
+        "en": "Source Code Comment: \"CUT\"",
+        "zh": "源代码注释：\"删减内容\""
+    },
+    "Flamethrower": {
+        "en": "Source Code Comment: \"used as Deathbot's basic attack\"",
+        "zh": "源代码注释：“used as Deathbot's basic attack”"
+    },
+    "TurretShot": {
+        "en": "Source Code Comment: \"used as Turret's basic attack\"",
+        "zh": "源代码注释：“used as Turret's basic attack”"
+    },
+    "RocketTurretShot": {
+        "en": "Source Code Comment: \"used as Rocket Turret's basic attack\"",
+        "zh": "源代码注释：“used as Rocket Turret's basic attack”"
+    },
+    "Roomba_Bump": {
+        "en": "Source Code Comment: \"basic attack for roomba\"",
+        "zh": "源代码注释：“basic attack for roomba”"
+    },
+    "NurseBotHeal": {
+        "en": "Source Code Comment: \"basic attack for nurse bot, does not need an icon\"",
+        "zh": "源代码注释：“basic attack for nurse bot, does not need an icon”"
+    },
+    "TeslaBolt": {
+        "en": "Source Code Comment: \"basic attack for tesla coil, does not need an icon\"",
+        "zh": "源代码注释：“basic attack for tesla coil, does not need an icon”"
+    },
+    "Hone": {
+        "en": "Source Code Comment: \"alternate basic attack for Blacksmith passive\"",
+        "zh": "源代码注释：“alternate basic attack for Blacksmith passive”"
+    },
+    "Hone2": {
+        "en": "Source Code Comment: \"alternate basic attack for Blacksmith passive\"",
+        "zh": "源代码注释：“alternate basic attack for Blacksmith passive”"
+    },
+    "ThickHide": {
+        "en": "Source Code Comment: \"Aquired from DeadMammoth event\"",
+        "zh": "源代码注释：“Aquired from DeadMammoth event”"
+    },
+    "BigToe": {
+        "en": "Source Code Comment: \"Aquired from Big Toe event\"",
+        "zh": "源代码注释：“Aquired from Big Toe event”"
+    },
+    "RaptorEgg": {
+        "en": "Source Code Comment: \"Aquired from Nest of Eggs event\"",
+        "zh": "源代码注释：“Aquired from Nest of Eggs event”"
+    },
+    "MarkOfTheBeast": {
+        "en": "Source Code Comment: \"Unique item given from Baphomet event\"",
+        "zh": "源代码注释：“Unique item given from Baphomet event”"
+    },
+    "SlagTight": {
+        "en": "Source Code Comment: \"Unique item given from Jagged Pathway event\"",
+        "zh": "源代码注释：“Unique item given from Jagged Pathway event”"
+    },
+    "MetalRod": {
+        "en": "Source Code Comment: \"Unique item given from Wall of Cats event\"",
+        "zh": "源代码注释：“Unique item given from Wall of Cats event”"
+    },
+    "BigToeCursed": {
+        "en": "Source Code Comment: \"Aquired from Big Toe event\"",
+        "zh": "源代码注释：“Aquired from Big Toe event”"
+    },
+    "GoldenIdol": {
+        "en": "Source Code Comment: \"Aquired from PitOfSnakes event\"",
+        "zh": "源代码注释：“Aquired from PitOfSnakes event”"
+    },
+    "SuperDunceCap": {
+        "en": "Source Code Comment: \"test item\"",
+        "zh": "源代码注释：“test item”"
+    },
+    "EyeOfRa": {
+        "en": "Source Code Comment: \"Unique item from looting the Mysterious Tomb.\"",
+        "zh": "源代码注释：“Unique item from looting the Mysterious Tomb.”"
+    },
+    "JarOfRadiation": {
+        "en": "Source Code Comment: \"end of turn: deal 1 damage to everything (pestillence). take it to throbbing king corpse\"",
+        "zh": "源代码注释：“end of turn: deal 1 damage to everything (pestillence). take it to throbbing king corpse”"
+    },
+    "JarOfRadiatedBlood": {
+        "en": "Source Code Comment: \"when the cat holding the jar takes damage, spawn a clot. the clot evolves into a mini me of the cat that holding the jar\"",
+        "zh": "源代码注释：“when the cat holding the jar takes damage, spawn a clot. the clot evolves into a mini me of the cat that holding the jar”"
+    },
+    "SharkTooth": {
+        "en": "Source Code Comment: \"Aquired from Giant Sleeping Shark event.\"",
+        "zh": "源代码注释：“Aquired from Giant Sleeping Shark event.”"
+    },
+    "Whistle": {
+        "en": "Source Code Comment: \"refresh when a familiar dies\"",
+        "zh": "源代码注释：“refresh when a familiar dies”"
+    },
+    "EnchantingPoop": {
+        "en": "Source Code Comment: \"Aquired from various Poop events\"",
+        "zh": "源代码注释：“Aquired from various Poop events”"
+    },
+    "VideoGameCart": {
+        "en": "Source Code Comment: \"this item will have no effect till dlc.. figure it out later.\"",
+        "zh": "源代码注释：“这个物品在DLC发布前不会生效……之后再慢慢研究吧。”"
+    },
+    "PharaohStaff": {
+        "en": "Source Code Comment: \"Unique item from looting the Mysterious Tomb.\"",
+        "zh": "源代码注释：“Unique item from looting the Mysterious Tomb.”"
+    },
+    "SlagMight": {
+        "en": "Source Code Comment: \"Unique from Jagged Pathway event\"",
+        "zh": "源代码注释：“Unique from Jagged Pathway event”"
+    },
+    "MomsToeNail": {
+        "en": "Source Code Comment: \"Unique from BigToe event\"",
+        "zh": "源代码注释：“Unique from BigToe event”"
+    },
+    "AlienBlaster": {
+        "en": "Source Code Comment: \"Unique from CrashedObject event\"",
+        "zh": "源代码注释：“Unique from CrashedObject event”"
+    },
+    "TeslaCannon": {
+        "en": "Source Code Comment: \"this is a Tinkerer Tech 3 item\"",
+        "zh": "源代码注释：“this is a Tinkerer Tech 3 item”"
     }
 }
