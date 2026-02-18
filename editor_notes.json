@@ -1,0 +1,14 @@
+{
+    "Steven": {
+        "en": "Found in source code comment: \"change the cats name to 'Steven'\"",
+        "zh": "源代码注释里写的：“把猫的名字改成‘Steven’”"
+    },
+    "Godhead": {
+        "en": "While you're downed, you will revive with 50% HP at the end of the round.",
+        "zh": "当你倒地后，\n在回合结束时以 50% 的生命值复活。\n"
+    },
+    "DejaVu": {
+        "en": "Applies Deja Vu (10%); severe version replaces brain AI.",
+        "zh": "施加 10% 既视感；严重版会替换大脑 AI。"
+    }
+}

@@ -48,6 +48,37 @@
             z-index: 0;
         }
 
+        .language-toggle {
+            position: absolute;
+            top: 12px;
+            right: 18px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            z-index: 2;
+            font-size: 0.95em;
+        }
+
+        .language-toggle .lang-link {
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: underline;
+            font-weight: 600;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+        }
+
+        .language-toggle .lang-link.active {
+            color: #fff;
+        }
+
+        .language-toggle .lang-separator {
+            color: rgba(255, 255, 255, 0.65);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+        }
+
         .header-image {
             display: block;
             width: 100%;
@@ -133,6 +164,23 @@
         .controls input {
             flex: 1;
             min-width: 200px;
+        }
+
+        .visibility-controls {
+            padding: 12px 20px 0;
+            background: #f3f1ee;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .visibility-controls label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #5b534a;
+            font-size: 0.95em;
         }
 
         .stats {
@@ -305,6 +353,21 @@
             transform: scale(1.1);
         }
 
+        .ability-icon-placeholder {
+            width: 48px;
+            height: 48px;
+            border-radius: 4px;
+            border: 2px dashed #ccc;
+            background: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 0.7em;
+            text-align: center;
+            padding: 4px;
+        }
+
         .ability-stats {
             display: flex;
             justify-content: flex-start;
@@ -423,6 +486,23 @@
             word-break: break-word;
             max-width: 300px;
             line-height: 1.4;
+        }
+
+        .description b,
+        .description strong {
+            font-weight: 700;
+            color: #333;
+        }
+
+        .source-comment {
+            color: #888;
+            font-size: 0.85em;
+            font-style: italic;
+            margin-top: 8px;
+            padding: 6px;
+            background: #f9f9f9;
+            border-left: 3px solid #9f978b;
+            border-radius: 2px;
         }
 
         .description i {
@@ -618,12 +698,23 @@
                 font-size: 0.95em;
                 color: #666;
             }
+
+            .language-toggle {
+                top: 10px;
+                right: 12px;
+                font-size: 0.9em;
+            }
         }
     </style>
 </head>
 
 <body>
     <div class="container">
+        <div class="language-toggle" role="group" aria-label="Language">
+            <button type="button" class="lang-link" id="langButtonEn" data-lang="en">English</button>
+            <span class="lang-separator">/</span>
+            <button type="button" class="lang-link" id="langButtonZh" data-lang="zh">中文</button>
+        </div>
         <div class="header-image-wrap">
             <img src="header.jpg" alt="Mewgenics header" class="header-image">
         </div>
@@ -638,14 +729,16 @@
 
         <div class="controls">
             <input type="text" id="searchInput" placeholder="Search by ability name or description...">
-            <label id="languageLabel" for="languageSelect">Language:</label>
-            <select id="languageSelect">
-                <option value="en" id="langOptionEn">English</option>
-                <option value="zh" id="langOptionZh">Chinese</option>
-            </select>
             <select id="classFilter">
                 <option value="">All Classes</option>
             </select>
+        </div>
+
+        <div class="visibility-controls">
+            <label for="showHiddenToggle">
+                <input type="checkbox" id="showHiddenToggle">
+                <span id="showHiddenLabel">Show Hidden</span>
+            </label>
         </div>
 
         <div class="stats">
@@ -698,6 +791,7 @@
         let filteredAbilities = [];
         let currentLanguage = 'en';
         let currentSort = { column: null, direction: 'asc' };
+        let editorNotes = {};
 
         // Get language from URL parameter
         function updateNavbarLinks() {
@@ -733,12 +827,17 @@
                 searchPlaceholder: 'Search by ability name or description...',
                 navAbilities: 'Abilities',
                 navItems: 'Items',
+                navPassives: 'Passives',
                 languageLabel: 'Language:',
                 languageEnglish: 'English',
                 languageChinese: 'Chinese',
+                showHidden: 'Show Hidden',
+                otherNoClass: 'Other (No Class)',
                 allClasses: 'All Classes',
                 totalAbilities: 'Total Abilities:',
                 showing: 'Showing:',
+                sourceCommentsLabel: 'Source Comments:',
+                editorNotesLabel: 'Editor Notes:',
                 iconHeader: 'Icon',
                 nameHeader: 'Ability Name',
                 descHeader: 'Description',
@@ -765,12 +864,17 @@
                 searchPlaceholder: '按能力名称或描述搜索...',
                 navAbilities: '能力',
                 navItems: '物品',
+                navPassives: '被动',
                 languageLabel: '语言：',
                 languageEnglish: '英语',
                 languageChinese: '中文',
+                showHidden: '显示隐藏项',
+                otherNoClass: '其他（无职业）',
                 allClasses: '全部职业',
                 totalAbilities: '能力总数：',
                 showing: '显示：',
+                sourceCommentsLabel: '源码注释：',
+                editorNotesLabel: '编辑注释：',
                 iconHeader: '图标',
                 nameHeader: '能力名称',
                 descHeader: '描述',
@@ -837,9 +941,10 @@
             document.getElementById('searchInput').placeholder = t('searchPlaceholder');
             document.getElementById('navAbilities').textContent = t('navAbilities');
             document.getElementById('navItems').textContent = t('navItems');
-            document.getElementById('languageLabel').textContent = t('languageLabel');
-            document.getElementById('langOptionEn').textContent = t('languageEnglish');
-            document.getElementById('langOptionZh').textContent = t('languageChinese');
+            document.getElementById('navPassives').textContent = t('navPassives');
+            document.getElementById('langButtonEn').textContent = t('languageEnglish');
+            document.getElementById('langButtonZh').textContent = t('languageChinese');
+            document.getElementById('showHiddenLabel').textContent = t('showHidden');
             document.getElementById('totalLabel').textContent = t('totalAbilities');
             document.getElementById('showingLabel').textContent = t('showing');
             document.getElementById('iconHeader').textContent = t('iconHeader');
@@ -863,16 +968,27 @@
             if (loadingMessage) {
                 loadingMessage.textContent = t('loading');
             }
+
+            document.getElementById('langButtonEn').classList.toggle('active', currentLanguage === 'en');
+            document.getElementById('langButtonZh').classList.toggle('active', currentLanguage === 'zh');
         }
 
         // Load abilities from JSON
         async function loadAbilities() {
             try {
-                const response = await fetch('abilities_combined.json');
+                const [response, notesResponse] = await Promise.all([
+                    fetch('abilities_combined.json'),
+                    fetch('editor_notes.json')
+                ]);
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
                 const data = await response.json();
+                if (notesResponse.ok) {
+                    editorNotes = await notesResponse.json();
+                } else {
+                    editorNotes = {};
+                }
                 allAbilities = data.abilities;
                 filteredAbilities = allAbilities;
 
@@ -899,10 +1015,9 @@
 
         // Populate class filter dropdown
         function populateClassFilter(selectedValue = '') {
-            const classes = [...new Set(allAbilities
-                .map(a => a.ability_class)
-                .filter(c => c))
-            ].sort();
+            const allClasses = allAbilities.map(a => a.ability_class);
+            const classes = [...new Set(allClasses.filter(c => c))].sort();
+            const hasNull = allClasses.some(c => !c || c === null || c === undefined);
 
             const select = document.getElementById('classFilter');
             if (!select) {
@@ -922,6 +1037,14 @@
                 select.appendChild(option);
             });
 
+            // Add "Other" option if there are entries without a class
+            if (hasNull) {
+                const otherOption = document.createElement('option');
+                otherOption.value = '__null__';
+                otherOption.textContent = t('otherNoClass');
+                select.appendChild(otherOption);
+            }
+
             select.value = selectedValue;
         }
 
@@ -940,17 +1063,46 @@
             return CLASS_LABELS[currentLanguage]?.[key] || CLASS_LABELS.en[key] || className;
         }
 
+        function getEditorNote(code) {
+            if (!code || !editorNotes || typeof editorNotes !== 'object') {
+                return '';
+            }
+            const note = editorNotes[code];
+            if (!note || typeof note !== 'object') {
+                return '';
+            }
+            return note[currentLanguage] || note.en || '';
+        }
+
+        function hasRenderedText(texts, fallback) {
+            if (typeof fallback === 'string' && fallback.trim() !== '') {
+                return true;
+            }
+            if (!texts || typeof texts !== 'object') {
+                return false;
+            }
+            return Object.values(texts).some(value => typeof value === 'string' && value.trim() !== '');
+        }
+
         // Display abilities in table
         function displayAbilities(abilities) {
             const tbody = document.getElementById('tableBody');
+            const showHidden = document.getElementById('showHiddenToggle')?.checked;
+            const visibleAbilities = abilities.filter(ability => {
+                const hasIcon = ability.frame_number !== null && ability.frame_number !== undefined;
+                const hasTitle = hasRenderedText(ability.ability_name_texts, ability.ability_name);
+                const hasDescription = hasRenderedText(ability.description_texts, ability.description) ||
+                    hasRenderedText(ability.description2_texts, ability.description_2);
+                return showHidden || (hasIcon && hasTitle && hasDescription);
+            });
 
-            if (abilities.length === 0) {
+            if (visibleAbilities.length === 0) {
                 tbody.innerHTML = `<tr><td colspan="5" class="no-results">${escapeHtml(t('noResults'))}</td></tr>`;
                 document.getElementById('showingCount').textContent = '0';
                 return;
             }
 
-            tbody.innerHTML = abilities.map(ability => {
+            tbody.innerHTML = visibleAbilities.map(ability => {
                 const localizedName = getLocalizedText(ability.ability_name_texts, ability.ability_name);
                 const localizedDescription = getLocalizedText(ability.description_texts, ability.description);
                 const localizedDescription2 = getLocalizedText(ability.description2_texts, ability.description_2);
@@ -1079,11 +1231,14 @@
                         <div class="icon-row">
                             <div class="icon-part">
                                 <div class="tags-line">${tagsRenderedHtml}</div>
-                                  <img src="AbilityIcon/${ability.frame_number}.png" 
-                                      alt="${escapeHtml(localizedName)}"
-                                     class="ability-icon"
-                                     onerror="this.style.display='none'"
-                                      onclick="openModal(this.src, '${escapeHtml(localizedName)}')">
+                                ${ability.frame_number !== null && ability.frame_number !== undefined ?
+                        `<img src="AbilityIcon/${ability.frame_number}.png" 
+                                        alt="${escapeHtml(localizedName)}"
+                                        class="ability-icon"
+                                        onerror="this.style.display='none'"
+                                        onclick="openModal(this.src, '${escapeHtml(localizedName)}')">`
+                        : '<div class="ability-icon-placeholder" title="No frame mapping available"></div>'
+                    }
                             </div>
                             <div class="stats-stack">
                                 ${baseStatsHtml}
@@ -1100,11 +1255,14 @@
                         <div class="icon-row">
                             <div class="icon-part">
                                 <div class="tags-line upgraded">${tagsRenderedUpgradedHtml}</div>
-                                  <img src="AbilityIcon/${ability.frame_number}.png" 
-                                      alt="${escapeHtml(localizedName)}"
-                                     class="ability-icon"
-                                     onerror="this.style.display='none'"
-                                      onclick="openModal(this.src, '${escapeHtml(localizedName)}')">
+                                ${ability.frame_number !== null && ability.frame_number !== undefined ?
+                            `<img src="AbilityIcon/${ability.frame_number}.png" 
+                                        alt="${escapeHtml(localizedName)}"
+                                        class="ability-icon"
+                                        onerror="this.style.display='none'"
+                                        onclick="openModal(this.src, '${escapeHtml(localizedName)}')">`
+                            : '<div class="ability-icon-placeholder" title="No frame mapping available"></div>'
+                        }
                             </div>
                             <div class="stats-stack">
                                 ${upgradedStatsHtml}
@@ -1119,11 +1277,14 @@
                         <div class="icon-row">
                             <div class="icon-part">
                                 <div class="tags-line">${tagsRenderedHtml}</div>
-                                  <img src="AbilityIcon/${ability.frame_number}.png" 
-                                      alt="${escapeHtml(localizedName)}"
-                                     class="ability-icon"
-                                     onerror="this.style.display='none'"
-                                      onclick="openModal(this.src, '${escapeHtml(localizedName)}')">
+                                ${ability.frame_number !== null && ability.frame_number !== undefined ?
+                            `<img src="AbilityIcon/${ability.frame_number}.png" 
+                                        alt="${escapeHtml(localizedName)}"
+                                        class="ability-icon"
+                                        onerror="this.style.display='none'"
+                                        onclick="openModal(this.src, '${escapeHtml(localizedName)}')">`
+                            : '<div class="ability-icon-placeholder" title="No frame mapping available"></div>'
+                        }
                             </div>
                             <div class="stats-stack">
                                 ${baseStatsHtml}${upgradedStatsHtml}
@@ -1147,7 +1308,10 @@
                         </td>
                         <td>
                             <div class="description">${parseRichText(localizedDescription || 'N/A')}</div>
+                            ${ability.desc_notes ? `<div class="source-comment">${escapeHtml(t('sourceCommentsLabel'))} ${escapeHtml(ability.desc_notes)}</div>` : ''}
+                            ${getEditorNote(ability.ability_code) ? `<div class="source-comment">${escapeHtml(t('editorNotesLabel'))} ${escapeHtml(getEditorNote(ability.ability_code))}</div>` : ''}
                             ${localizedDescription2 ? `<div class="description description-upgraded">${parseRichText(localizedDescription2)}</div>` : ''}
+                            ${localizedDescription2 && ability.desc2_notes ? `<div class="source-comment">${escapeHtml(t('sourceCommentsLabel'))} ${escapeHtml(ability.desc2_notes)}</div>` : ''}
                         </td>
                         <td class="class-cell">${classLabel ? `<div class="ability-class class-${ability.ability_class.toLowerCase()}">${escapeHtml(classLabel)}</div>` : '-'}</td>
                         <td class="frame-cell" hidden>${ability.frame_number}</td>
@@ -1155,7 +1319,7 @@
                 `;
             }).join('');
 
-            document.getElementById('showingCount').textContent = abilities.length;
+            document.getElementById('showingCount').textContent = visibleAbilities.length;
         }
 
         function sortBy(column) {
@@ -1227,6 +1391,9 @@
             // Handle [s:.7]...[/s] for italics (allow multiline content)
             html = html.replace(/\[s:[^\]]+\]([\s\S]*?)\[\/s\]/g, '<i>$1</i>');
 
+            // Handle [b]...[/b] for bold (allow multiline content)
+            html = html.replace(/\[b\]([\s\S]*?)\[\/b\]/g, '<b>$1</b>');
+
             // Handle [img:xxx] placeholders - use actual icon images
             // Map icon names (handle "con" -> "constitution" for Windows reserved name)
             // Shield icons (shield, divineshield) stay white; stat icons use CSS filter
@@ -1254,7 +1421,17 @@
                 const localizedName = getLocalizedText(ability.ability_name_texts, ability.ability_name).toLowerCase();
                 const localizedDescription = getLocalizedText(ability.description_texts, ability.description).toLowerCase();
                 const matchesSearch = localizedName.includes(search) || localizedDescription.includes(search);
-                const matchesClass = !classFilter || ability.ability_class === classFilter;
+
+                let matchesClass = true;
+                if (classFilter) {
+                    if (classFilter === '__null__') {
+                        // Match entries with no class
+                        matchesClass = !ability.ability_class;
+                    } else {
+                        matchesClass = ability.ability_class === classFilter;
+                    }
+                }
+
                 return matchesSearch && matchesClass;
             });
 
@@ -1297,16 +1474,22 @@
         // Event listeners
         document.getElementById('searchInput').addEventListener('input', filterAbilities);
         document.getElementById('classFilter').addEventListener('change', filterAbilities);
-        document.getElementById('languageSelect').addEventListener('change', (event) => {
-            currentLanguage = event.target.value;
-            setUrlParameter('lang', currentLanguage);
-            applyUiLanguage();
-            filterAbilities();
+        document.querySelectorAll('.lang-link').forEach(button => {
+            button.addEventListener('click', () => {
+                const selectedLang = button.getAttribute('data-lang');
+                if (!selectedLang || selectedLang === currentLanguage) {
+                    return;
+                }
+                currentLanguage = selectedLang;
+                setUrlParameter('lang', currentLanguage);
+                applyUiLanguage();
+                filterAbilities();
+            });
         });
+        document.getElementById('showHiddenToggle').addEventListener('change', filterAbilities);
 
         // Apply language immediately when DOM is ready (before data loads)
         document.addEventListener('DOMContentLoaded', () => {
-            document.getElementById('languageSelect').value = currentLanguage;
             applyUiLanguage();
         });
 

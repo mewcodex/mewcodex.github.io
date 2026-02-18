@@ -48,6 +48,37 @@
             z-index: 0;
         }
 
+        .language-toggle {
+            position: absolute;
+            top: 12px;
+            right: 18px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            z-index: 2;
+            font-size: 0.95em;
+        }
+
+        .language-toggle .lang-link {
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: underline;
+            font-weight: 600;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+        }
+
+        .language-toggle .lang-link.active {
+            color: #fff;
+        }
+
+        .language-toggle .lang-separator {
+            color: rgba(255, 255, 255, 0.65);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+        }
+
         .header-image {
             display: block;
             width: 100%;
@@ -147,6 +178,23 @@
         .controls select:focus {
             outline: none;
             border-color: #9f978b;
+        }
+
+        .visibility-controls {
+            padding: 12px 20px 0;
+            background: #f5f5f5;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .visibility-controls label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #5b534a;
+            font-size: 0.95em;
         }
 
         .stats {
@@ -257,6 +305,21 @@
             transform: scale(1.2);
         }
 
+        .passive-icon-placeholder {
+            width: 120px;
+            height: 55px;
+            border: 2px dashed #ccc;
+            background: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 0.75em;
+            text-align: center;
+            padding: 4px;
+            border-radius: 4px;
+        }
+
         .passive-name {
             font-weight: 600;
             color: #333;
@@ -265,6 +328,35 @@
         .description {
             color: #555;
             line-height: 1.6;
+        }
+
+        .description-upgraded {
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px solid #ddd;
+        }
+
+        .passive-name-upgraded {
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px solid #ddd;
+        }
+
+        .description b,
+        .description strong {
+            font-weight: 700;
+            color: #333;
+        }
+
+        .source-comment {
+            color: #888;
+            font-size: 0.9em;
+            font-style: italic;
+            margin-top: 8px;
+            padding: 8px;
+            background: #f9f9f9;
+            border-left: 3px solid #9f978b;
+            border-radius: 2px;
         }
 
         .passive-stats {
@@ -513,12 +605,23 @@
             .class-cell {
                 display: none;
             }
+
+            .language-toggle {
+                top: 10px;
+                right: 12px;
+                font-size: 0.9em;
+            }
         }
     </style>
 </head>
 
 <body>
     <div class="container">
+        <div class="language-toggle" role="group" aria-label="Language">
+            <button type="button" class="lang-link" id="langButtonEn" data-lang="en">English</button>
+            <span class="lang-separator">/</span>
+            <button type="button" class="lang-link" id="langButtonZh" data-lang="zh">中文</button>
+        </div>
         <div class="header-image-wrap">
             <img src="header.jpg" alt="Mewgenics header" class="header-image">
         </div>
@@ -533,14 +636,16 @@
 
         <div class="controls">
             <input type="text" id="searchInput" placeholder="Search by passive name or description...">
-            <label id="languageLabel" for="languageSelect">Language:</label>
-            <select id="languageSelect">
-                <option value="en" id="langOptionEn">English</option>
-                <option value="zh" id="langOptionZh">Chinese</option>
-            </select>
             <select id="classFilter">
                 <option value="">All Classes</option>
             </select>
+        </div>
+
+        <div class="visibility-controls">
+            <label for="showHiddenToggle">
+                <input type="checkbox" id="showHiddenToggle">
+                <span id="showHiddenLabel">Show Hidden</span>
+            </label>
         </div>
 
         <div class="stats">
@@ -593,6 +698,7 @@
         let filteredPassives = [];
         let currentLanguage = 'en';
         let currentSort = { column: null, direction: 'asc' };
+        let editorNotes = {};
 
         // Get language from URL parameter
         function updateNavbarLinks() {
@@ -631,9 +737,13 @@
                 languageLabel: 'Language:',
                 languageEnglish: 'English',
                 languageChinese: 'Chinese',
+                showHidden: 'Show Hidden',
+                otherNoClass: 'Other (No Class)',
                 allClasses: 'All Classes',
                 totalPassives: 'Total Passives:',
                 showing: 'Showing:',
+                sourceCommentsLabel: 'Source Comments:',
+                editorNotesLabel: 'Editor Notes:',
                 iconHeader: 'Icon',
                 nameHeader: 'Passive Name',
                 descHeader: 'Description',
@@ -661,9 +771,13 @@
                 languageLabel: '语言：',
                 languageEnglish: '英语',
                 languageChinese: '中文',
+                showHidden: '显示隐藏项',
+                otherNoClass: '其他（无职业）',
                 allClasses: '全部职业',
                 totalPassives: '被动总数：',
                 showing: '显示：',
+                sourceCommentsLabel: '源码注释：',
+                editorNotesLabel: '编辑注释：',
                 iconHeader: '图标',
                 nameHeader: '被动名称',
                 descHeader: '描述',
@@ -733,9 +847,9 @@
             document.getElementById('navAbilities').textContent = t('navAbilities');
             document.getElementById('navItems').textContent = t('navItems');
             document.getElementById('navPassives').textContent = t('navPassives');
-            document.getElementById('languageLabel').textContent = t('languageLabel');
-            document.getElementById('langOptionEn').textContent = t('languageEnglish');
-            document.getElementById('langOptionZh').textContent = t('languageChinese');
+            document.getElementById('langButtonEn').textContent = t('languageEnglish');
+            document.getElementById('langButtonZh').textContent = t('languageChinese');
+            document.getElementById('showHiddenLabel').textContent = t('showHidden');
             document.getElementById('totalLabel').textContent = t('totalPassives');
             document.getElementById('showingLabel').textContent = t('showing');
             document.getElementById('iconHeader').textContent = t('iconHeader');
@@ -759,16 +873,27 @@
             if (loadingMessage) {
                 loadingMessage.textContent = t('loading');
             }
+
+            document.getElementById('langButtonEn').classList.toggle('active', currentLanguage === 'en');
+            document.getElementById('langButtonZh').classList.toggle('active', currentLanguage === 'zh');
         }
 
         // Load passives from JSON
         async function loadPassives() {
             try {
-                const response = await fetch('passives_combined.json');
+                const [response, notesResponse] = await Promise.all([
+                    fetch('passives_combined.json'),
+                    fetch('editor_notes.json')
+                ]);
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
                 const data = await response.json();
+                if (notesResponse.ok) {
+                    editorNotes = await notesResponse.json();
+                } else {
+                    editorNotes = {};
+                }
                 allPassives = data.passives;
                 filteredPassives = allPassives;
 
@@ -795,10 +920,9 @@
 
         // Populate class filter dropdown
         function populateClassFilter(selectedValue = '') {
-            const classes = [...new Set(allPassives
-                .map(p => p.passive_class)
-                .filter(c => c))
-            ].sort();
+            const allClasses = allPassives.map(p => p.passive_class);
+            const classes = [...new Set(allClasses.filter(c => c))].sort();
+            const hasNull = allClasses.some(c => !c || c === null || c === undefined);
 
             const select = document.getElementById('classFilter');
             if (!select) {
@@ -818,6 +942,14 @@
                 select.appendChild(option);
             });
 
+            // Add "Other" option if there are entries without a class
+            if (hasNull) {
+                const otherOption = document.createElement('option');
+                otherOption.value = '__null__';
+                otherOption.textContent = t('otherNoClass');
+                select.appendChild(otherOption);
+            }
+
             select.value = selectedValue;
         }
 
@@ -834,6 +966,27 @@
             }
             const key = className.toLowerCase();
             return CLASS_LABELS[currentLanguage]?.[key] || CLASS_LABELS.en[key] || className;
+        }
+
+        function getEditorNote(code) {
+            if (!code || !editorNotes || typeof editorNotes !== 'object') {
+                return '';
+            }
+            const note = editorNotes[code];
+            if (!note || typeof note !== 'object') {
+                return '';
+            }
+            return note[currentLanguage] || note.en || '';
+        }
+
+        function hasRenderedText(texts, fallback) {
+            if (typeof fallback === 'string' && fallback.trim() !== '') {
+                return true;
+            }
+            if (!texts || typeof texts !== 'object') {
+                return false;
+            }
+            return Object.values(texts).some(value => typeof value === 'string' && value.trim() !== '');
         }
 
         // Format stats for display (like items page)
@@ -879,37 +1032,57 @@
         // Display passives in table
         function displayPassives(passives) {
             const tbody = document.getElementById('tableBody');
+            const showHidden = document.getElementById('showHiddenToggle')?.checked;
+            const visiblePassives = passives.filter(passive => {
+                const hasIcon = passive.frame_number !== null && passive.frame_number !== undefined;
+                const hasTitle = hasRenderedText(passive.passive_name_texts, passive.passive_name);
+                return showHidden || (hasIcon && hasTitle);
+            });
 
-            if (passives.length === 0) {
+            if (visiblePassives.length === 0) {
                 tbody.innerHTML = `<tr><td colspan="5" class="no-results">${escapeHtml(t('noResults'))}</td></tr>`;
                 document.getElementById('showingCount').textContent = '0';
                 return;
             }
 
-            tbody.innerHTML = passives.map(passive => {
+            tbody.innerHTML = visiblePassives.map(passive => {
                 const localizedName = getLocalizedText(passive.passive_name_texts, passive.passive_name);
                 const localizedDescription = getLocalizedText(passive.description_texts, passive.description);
+                const localizedDescription2 = getLocalizedText(passive.description2_texts, passive.description_2);
+                const hasUpgraded = !!(localizedDescription2 && localizedDescription2.trim());
                 const classLabel = passive.passive_class ? getClassLabel(passive.passive_class) : '';
 
                 // Get stats to display - prefer base, then level 1, then level 2
                 const stats = passive.stats_base || passive.stats_level1 || passive.stats_level2 || {};
                 const statsHtml = formatStats(stats);
 
+                // Get notes if present
+                const notesHtml = passive.desc_notes ? `<div class="source-comment">${escapeHtml(t('sourceCommentsLabel'))} ${escapeHtml(passive.desc_notes)}</div>` : '';
+                const editorNote = getEditorNote(passive.passive_code);
+                const editorHtml = editorNote ? `<div class="source-comment">${escapeHtml(t('editorNotesLabel'))} ${escapeHtml(editorNote)}</div>` : '';
+
                 return `
                     <tr>
                         <td class="image-cell">
-                            <img src="PassiveIcon/${passive.frame_number}.png" 
-                                 alt="${escapeHtml(localizedName)}"
-                                 class="passive-icon"
-                                 onerror="this.style.display='none'"
-                                 onclick="openModal(this.src, '${escapeHtml(localizedName)}')">
+                            ${passive.frame_number !== null && passive.frame_number !== undefined ?
+                        `<img src="PassiveIcon/${passive.frame_number}.png" 
+                                     alt="${escapeHtml(localizedName)}"
+                                     class="passive-icon"
+                                     onerror="this.style.display='none'"
+                                     onclick="openModal(this.src, '${escapeHtml(localizedName)}')">`
+                        : '<div class="passive-icon-placeholder" title="No frame mapping available"></div>'
+                    }
                         </td>
                         <td>
                             <div class="passive-name">${escapeHtml(localizedName)}</div>
+                            ${hasUpgraded ? `<div class="passive-name passive-name-upgraded">${escapeHtml(localizedName)}+</div>` : ''}
                         </td>
                         <td>
                             ${statsHtml}
                             <div class="description">${parseRichText(localizedDescription || 'N/A')}</div>
+                            ${hasUpgraded ? `<div class="description description-upgraded">${parseRichText(localizedDescription2)}</div>` : ''}
+                            ${notesHtml}
+                            ${editorHtml}
                         </td>
                         <td class="class-cell">${classLabel ? `<div class="passive-class class-${passive.passive_class.toLowerCase()}">${escapeHtml(classLabel)}</div>` : '-'}</td>
                         <td class="frame-cell" hidden>${passive.frame_number}</td>
@@ -917,7 +1090,7 @@
                 `;
             }).join('');
 
-            document.getElementById('showingCount').textContent = passives.length;
+            document.getElementById('showingCount').textContent = visiblePassives.length;
         }
 
         function sortBy(column) {
@@ -968,6 +1141,9 @@
             // Handle [s:.7]...[/s] for italics
             html = html.replace(/\[s:[^\]]+\]([\s\S]*?)\[\/s\]/g, '<i>$1</i>');
 
+            // Handle [b]...[/b] for bold (allow multiline content)
+            html = html.replace(/\[b\]([\s\S]*?)\[\/b\]/g, '<b>$1</b>');
+
             // Handle [img:xxx] placeholders
             // Shield icons (shield, divineshield) stay white; stat icons use CSS filter to be black
             html = html.replace(/\[img:([^\]]+)\]/g, function (match, iconName) {
@@ -994,7 +1170,17 @@
                 const localizedName = getLocalizedText(passive.passive_name_texts, passive.passive_name).toLowerCase();
                 const localizedDescription = getLocalizedText(passive.description_texts, passive.description).toLowerCase();
                 const matchesSearch = localizedName.includes(search) || localizedDescription.includes(search);
-                const matchesClass = !classFilter || passive.passive_class === classFilter;
+
+                let matchesClass = true;
+                if (classFilter) {
+                    if (classFilter === '__null__') {
+                        // Match entries with no class
+                        matchesClass = !passive.passive_class;
+                    } else {
+                        matchesClass = passive.passive_class === classFilter;
+                    }
+                }
+
                 return matchesSearch && matchesClass;
             });
 
@@ -1037,16 +1223,22 @@
         // Event listeners
         document.getElementById('searchInput').addEventListener('input', filterPassives);
         document.getElementById('classFilter').addEventListener('change', filterPassives);
-        document.getElementById('languageSelect').addEventListener('change', (event) => {
-            currentLanguage = event.target.value;
-            setUrlParameter('lang', currentLanguage);
-            applyUiLanguage();
-            filterPassives();
+        document.querySelectorAll('.lang-link').forEach(button => {
+            button.addEventListener('click', () => {
+                const selectedLang = button.getAttribute('data-lang');
+                if (!selectedLang || selectedLang === currentLanguage) {
+                    return;
+                }
+                currentLanguage = selectedLang;
+                setUrlParameter('lang', currentLanguage);
+                applyUiLanguage();
+                filterPassives();
+            });
         });
+        document.getElementById('showHiddenToggle').addEventListener('change', filterPassives);
 
         // Apply language immediately when DOM is ready (before data loads)
         document.addEventListener('DOMContentLoaded', () => {
-            document.getElementById('languageSelect').value = currentLanguage;
             applyUiLanguage();
         });
 

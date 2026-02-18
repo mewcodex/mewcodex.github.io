@@ -48,6 +48,37 @@
             z-index: 0;
         }
 
+        .language-toggle {
+            position: absolute;
+            top: 12px;
+            right: 18px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            z-index: 2;
+            font-size: 0.95em;
+        }
+
+        .language-toggle .lang-link {
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: underline;
+            font-weight: 600;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+        }
+
+        .language-toggle .lang-link.active {
+            color: #fff;
+        }
+
+        .language-toggle .lang-separator {
+            color: rgba(255, 255, 255, 0.65);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+        }
+
         .header-image {
             display: block;
             width: 100%;
@@ -176,6 +207,23 @@
 
         .filter-tags.visible {
             display: flex;
+        }
+
+        .visibility-controls {
+            padding: 12px 20px 0;
+            background: #f7f4f0;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .visibility-controls label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #5b534a;
+            font-size: 0.95em;
         }
 
         .filter-tags-header {
@@ -512,6 +560,23 @@
             line-height: 1.4;
         }
 
+        .description b,
+        .description strong {
+            font-weight: 700;
+            color: #333;
+        }
+
+        .source-comment {
+            color: #888;
+            font-size: 0.85em;
+            font-style: italic;
+            margin-top: 8px;
+            padding: 6px;
+            background: #f9f9f9;
+            border-left: 3px solid #9f978b;
+            border-radius: 2px;
+        }
+
         .img-icon {
             display: inline-block;
             width: 1em;
@@ -682,12 +747,23 @@
             .header h1 {
                 font-size: 1.8em;
             }
+
+            .language-toggle {
+                top: 10px;
+                right: 12px;
+                font-size: 0.9em;
+            }
         }
     </style>
 </head>
 
 <body>
     <div class="container">
+        <div class="language-toggle" role="group" aria-label="Language">
+            <button type="button" class="lang-link" id="langButtonEn" data-lang="en">English</button>
+            <span class="lang-separator">/</span>
+            <button type="button" class="lang-link" id="langButtonZh" data-lang="zh">中文</button>
+        </div>
         <div class="header-image-wrap">
             <img src="header.jpg" alt="Mewgenics header" class="header-image">
         </div>
@@ -705,11 +781,6 @@
                 <input type="text" id="searchInput" placeholder="Search by item name or description...">
                 <button class="clear-button" id="clearButton" title="Clear search">×</button>
             </div>
-            <label id="languageLabel" for="languageSelect">Language:</label>
-            <select id="languageSelect">
-                <option value="en" id="langOptionEn">English</option>
-                <option value="zh" id="langOptionZh">Chinese</option>
-            </select>
             <select id="kindFilter">
                 <option value="">All Types</option>
             </select>
@@ -725,6 +796,13 @@
         </div>
 
         <div class="filter-tags" id="filterTags">
+        </div>
+
+        <div class="visibility-controls">
+            <label for="showHiddenToggle">
+                <input type="checkbox" id="showHiddenToggle">
+                <span id="showHiddenLabel">Show Hidden</span>
+            </label>
         </div>
 
         <div class="stats">
@@ -780,6 +858,7 @@
         let setBonusesData = [];
         let currentLanguage = 'en';
         let currentSort = { column: null, direction: 'asc' };
+        let editorNotes = {};
 
         // Get language from URL parameter
         function updateNavbarLinks() {
@@ -818,6 +897,9 @@
                 languageLabel: 'Language:',
                 languageEnglish: 'English',
                 languageChinese: 'Chinese',
+                showHidden: 'Show Hidden',
+                otherNoType: 'Other (No Type)',
+                otherNoRarity: 'Other (No Rarity)',
                 allTypes: 'All Types',
                 allRarities: 'All Rarities',
                 allConsumable: 'Consumable Status',
@@ -828,6 +910,8 @@
                 nonCursed: 'Non-Cursed Only',
                 totalItems: 'Total Items:',
                 showing: 'Showing:',
+                sourceCommentsLabel: 'Source Comments:',
+                editorNotesLabel: 'Editor Notes:',
                 iconHeader: 'Icon',
                 nameHeader: 'Item Name',
                 descHeader: 'Description',
@@ -862,6 +946,9 @@
                 languageLabel: '语言：',
                 languageEnglish: '英语',
                 languageChinese: '中文',
+                showHidden: '显示隐藏项',
+                otherNoType: '其他（无类型）',
+                otherNoRarity: '其他（无稀有度）',
                 allTypes: '全部类型',
                 allRarities: '全部稀有度',
                 allConsumable: '消耗品属性',
@@ -872,6 +959,8 @@
                 nonCursed: '非诅咒物品',
                 totalItems: '物品总数：',
                 showing: '显示：',
+                sourceCommentsLabel: '源码注释：',
+                editorNotesLabel: '编辑注释：',
                 iconHeader: '图标',
                 nameHeader: '物品名称',
                 descHeader: '描述',
@@ -1055,9 +1144,9 @@
             document.getElementById('navAbilities').textContent = t('navAbilities');
             document.getElementById('navItems').textContent = t('navItems');
             document.getElementById('navPassives').textContent = t('navPassives');
-            document.getElementById('languageLabel').textContent = t('languageLabel');
-            document.getElementById('langOptionEn').textContent = t('languageEnglish');
-            document.getElementById('langOptionZh').textContent = t('languageChinese');
+            document.getElementById('langButtonEn').textContent = t('languageEnglish');
+            document.getElementById('langButtonZh').textContent = t('languageChinese');
+            document.getElementById('showHiddenLabel').textContent = t('showHidden');
             document.getElementById('totalLabel').textContent = t('totalItems');
             document.getElementById('showingLabel').textContent = t('showing');
             document.getElementById('iconHeader').textContent = t('iconHeader');
@@ -1090,6 +1179,9 @@
             if (loadingMessage) {
                 loadingMessage.textContent = t('loading');
             }
+
+            document.getElementById('langButtonEn').classList.toggle('active', currentLanguage === 'en');
+            document.getElementById('langButtonZh').classList.toggle('active', currentLanguage === 'zh');
         }
 
         async function loadItems() {
@@ -1119,6 +1211,18 @@
                     console.error('Error loading set bonuses:', error);
                 }
 
+                // Load editor notes
+                try {
+                    const notesResponse = await fetch('editor_notes.json');
+                    if (notesResponse.ok) {
+                        editorNotes = await notesResponse.json();
+                    } else {
+                        editorNotes = {};
+                    }
+                } catch (error) {
+                    console.error('Error loading editor notes:', error);
+                }
+
                 filteredItems = allItems;
                 document.getElementById('totalCount').textContent = allItems.length;
                 applyUiLanguage();
@@ -1134,7 +1238,10 @@
         }
 
         function populateKindFilter(selectedValue = '') {
-            const kinds = [...new Set(allItems.map(i => i.kind).filter(k => k))].sort();
+            const allKinds = allItems.map(i => i.kind);
+            const kinds = [...new Set(allKinds.filter(k => k))].sort();
+            const hasNull = allKinds.some(k => !k || k === null || k === undefined);
+
             const select = document.getElementById('kindFilter');
             if (!select) return;
 
@@ -1151,11 +1258,22 @@
                 select.appendChild(option);
             });
 
+            // Add "Other" option if there are items without a kind
+            if (hasNull) {
+                const otherOption = document.createElement('option');
+                otherOption.value = '__null__';
+                otherOption.textContent = t('otherNoType');
+                select.appendChild(otherOption);
+            }
+
             select.value = selectedValue;
         }
 
         function populateRarityFilter(selectedValue = '') {
-            const rarities = [...new Set(allItems.map(i => i.rarity).filter(r => r))].sort();
+            const allRarities = allItems.map(i => i.rarity);
+            const rarities = [...new Set(allRarities.filter(r => r))].sort();
+            const hasNull = allRarities.some(r => !r || r === null || r === undefined);
+
             const select = document.getElementById('rarityFilter');
             if (!select) return;
 
@@ -1171,6 +1289,14 @@
                 option.textContent = getRarityLabel(rarity);
                 select.appendChild(option);
             });
+
+            // Add "Other" option if there are items without a rarity
+            if (hasNull) {
+                const otherOption = document.createElement('option');
+                otherOption.value = '__null__';
+                otherOption.textContent = t('otherNoRarity');
+                select.appendChild(otherOption);
+            }
 
             select.value = selectedValue;
         }
@@ -1263,17 +1389,34 @@
             return `parts/${kind}.png`;
         }
 
+        function hasRenderedText(texts, fallback) {
+            if (typeof fallback === 'string' && fallback.trim() !== '') {
+                return true;
+            }
+            if (!texts || typeof texts !== 'object') {
+                return false;
+            }
+            return Object.values(texts).some(value => typeof value === 'string' && value.trim() !== '');
+        }
+
         function displayItems(items) {
             const tbody = document.getElementById('tableBody');
+            const showHidden = document.getElementById('showHiddenToggle')?.checked;
+            const visibleItems = items.filter(item => {
+                const hasIcon = item.frame !== null && item.frame !== undefined;
+                const hasTitle = hasRenderedText(item.item_name_texts, item.item_name);
+                const hasDescription = hasRenderedText(item.description_texts, item.description);
+                return showHidden || (hasIcon && hasTitle && hasDescription);
+            });
 
-            if (items.length === 0) {
+            if (visibleItems.length === 0) {
                 tbody.innerHTML = `<tr><td colspan="6" class="no-results">${escapeHtml(t('noResults'))}</td></tr>`;
                 document.getElementById('showingCount').textContent = '0';
                 return;
             }
 
-            tbody.innerHTML = items.map(item => {
-                const localizedName = getLocalizedText(item.item_name_texts, item.item_name);
+            tbody.innerHTML = visibleItems.map(item => {
+                let localizedName = getLocalizedText(item.item_name_texts, item.item_name);
                 let localizedDescription = getLocalizedText(item.description_texts, item.description);
 
                 // Replace placeholders with their values or descriptions
@@ -1286,6 +1429,16 @@
                 localizedDescription = localizedDescription.replace(/{str_aux_item_desc}/g, t('strAuxItemDesc'));
                 localizedDescription = localizedDescription.replace(/{str_aux_active_name}/g, t('strAuxActiveName'));
                 localizedDescription = localizedDescription.replace(/{str_aux_active_desc}/g, t('strAuxActiveDesc'));
+
+                if (item.aux) {
+                    localizedName = localizedName.replace(/{aux}/g, item.aux);
+                }
+                localizedName = localizedName.replace(/{aux_cat_name}/g, t('auxCatName'));
+                localizedName = localizedName.replace(/{str_aux_passive_name}/g, t('strAuxPassiveName'));
+                localizedName = localizedName.replace(/{str_aux_passive_desc}/g, t('strAuxPassiveDesc'));
+                localizedName = localizedName.replace(/{str_aux_item_desc}/g, t('strAuxItemDesc'));
+                localizedName = localizedName.replace(/{str_aux_active_name}/g, t('strAuxActiveName'));
+                localizedName = localizedName.replace(/{str_aux_active_desc}/g, t('strAuxActiveDesc'));
 
                 const kindLabel = item.kind ? getKindLabel(item.kind) : '-';
                 const rarityLabel = item.rarity ? getRarityLabel(item.rarity) : '-';
@@ -1341,12 +1494,14 @@
                             </div>
                         </td>
                         <td>
-                            <div class="item-name">${escapeHtml(localizedName)}</div>
+                            <div class="item-name">${parseRichText(localizedName) || ''}</div>
                             ${setsHtml}
                         </td>
                         <td>
                             ${statsHtml}
                             <div class="description">${parseRichText(localizedDescription + durabilityText) || ''}</div>
+                            ${item.description_notes ? `<div class="source-comment">${escapeHtml(t('sourceCommentsLabel'))} ${escapeHtml(item.description_notes)}</div>` : ''}
+                            ${getEditorNote(item.item_code) ? `<div class="source-comment">${escapeHtml(t('editorNotesLabel'))} ${escapeHtml(getEditorNote(item.item_code))}</div>` : ''}
                         </td>
                         <td>
                             ${item.kind ? `<div class="item-rarity kind-${item.kind}">${partIconHtml}${escapeHtml(kindLabel)}</div>` : '-'}
@@ -1361,7 +1516,7 @@
                 `;
             }).join('');
 
-            document.getElementById('showingCount').textContent = items.length;
+            document.getElementById('showingCount').textContent = visibleItems.length;
         }
 
         function sortBy(column) {
@@ -1444,8 +1599,27 @@
                 } else {
                     matchesSearch = localizedName.includes(search) || localizedDescription.includes(search);
                 }
-                const matchesKind = !kindFilter || item.kind === kindFilter;
-                const matchesRarity = !rarityFilter || item.rarity === rarityFilter;
+
+                // Handle kind filter with special "__null__" value for items without a kind
+                let matchesKind = true;
+                if (kindFilter) {
+                    if (kindFilter === '__null__') {
+                        matchesKind = !item.kind;
+                    } else {
+                        matchesKind = item.kind === kindFilter;
+                    }
+                }
+
+                // Handle rarity filter with special "__null__" value for items without a rarity
+                let matchesRarity = true;
+                if (rarityFilter) {
+                    if (rarityFilter === '__null__') {
+                        matchesRarity = !item.rarity;
+                    } else {
+                        matchesRarity = item.rarity === rarityFilter;
+                    }
+                }
+
                 const matchesConsumable = !consumableFilter ||
                     (consumableFilter === 'consumable' && item.is_consumable) ||
                     (consumableFilter === 'non-consumable' && !item.is_consumable);
@@ -1590,6 +1764,11 @@
                 html += `<div class="set-bonus-desc">${parseRichText(desc)}</div>`;
             }
 
+            const editorNote = getEditorNote(setBonus.set_code);
+            if (editorNote) {
+                html += `<div class="source-comment">${escapeHtml(t('editorNotesLabel'))} ${escapeHtml(editorNote)}</div>`;
+            }
+
             html += '</div>';
             return html;
         }
@@ -1647,6 +1826,17 @@
             return text.replace(/[&<>"']/g, m => map[m]);
         }
 
+        function getEditorNote(code) {
+            if (!code || !editorNotes || typeof editorNotes !== 'object') {
+                return '';
+            }
+            const note = editorNotes[code];
+            if (!note || typeof note !== 'object') {
+                return '';
+            }
+            return note[currentLanguage] || note.en || '';
+        }
+
         function parseRichText(text) {
             if (!text) return '';
 
@@ -1655,6 +1845,9 @@
 
             // Handle [s:.7]...[/s] for italics (allow multiline content)
             html = html.replace(/\[s:[^\]]+\]([\s\S]*?)\[\/s\]/g, '<i>$1</i>');
+
+            // Handle [b]...[/b] for bold (allow multiline content)
+            html = html.replace(/\[b\]([\s\S]*?)\[\/b\]/g, '<b>$1</b>');
 
             // Handle [img:xxx] placeholders - use actual icon images
             // Map icon names (handle "con" -> "constitution" for Windows reserved name)
@@ -1686,16 +1879,22 @@
         document.getElementById('rarityFilter').addEventListener('change', filterItems);
         document.getElementById('consumableFilter').addEventListener('change', filterItems);
         document.getElementById('cursedFilter').addEventListener('change', filterItems);
-        document.getElementById('languageSelect').addEventListener('change', (event) => {
-            currentLanguage = event.target.value;
-            setUrlParameter('lang', currentLanguage);
-            applyUiLanguage();
-            filterItems();
+        document.querySelectorAll('.lang-link').forEach(button => {
+            button.addEventListener('click', () => {
+                const selectedLang = button.getAttribute('data-lang');
+                if (!selectedLang || selectedLang === currentLanguage) {
+                    return;
+                }
+                currentLanguage = selectedLang;
+                setUrlParameter('lang', currentLanguage);
+                applyUiLanguage();
+                filterItems();
+            });
         });
+        document.getElementById('showHiddenToggle').addEventListener('change', filterItems);
 
         // Apply language immediately when DOM is ready (before data loads)
         document.addEventListener('DOMContentLoaded', () => {
-            document.getElementById('languageSelect').value = currentLanguage;
             applyUiLanguage();
         });
 
