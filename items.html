@@ -1417,7 +1417,8 @@
             const showHidden = document.getElementById('showHiddenToggle')?.checked;
             const visibleItems = items.filter(item => {
                 const hasIcon = item.frame !== null && item.frame !== undefined;
-                const hasTitle = hasRenderedText(item.item_name_texts, item.item_name);
+                // Always show if item_name or item_name_texts has anything (including code name)
+                const hasTitle = hasRenderedText(item.item_name_texts, item.item_name) || (typeof item.item_name === 'string' && item.item_name.trim() !== '');
                 const hasDescription = hasRenderedText(item.description_texts, item.description) || // has attributes rendered
                     (item.stats && Object.keys(item.stats).length > 0); // or has stats to show
                 return showHidden || (hasIcon && hasTitle && hasDescription);
@@ -1431,6 +1432,10 @@
 
             tbody.innerHTML = visibleItems.map(item => {
                 let localizedName = getLocalizedText(item.item_name_texts, item.item_name);
+                // If no localized name, fallback to code name
+                if (!localizedName || localizedName.trim() === '') {
+                    localizedName = `\`${item.item_name || item.item_code || ''}\``;
+                }
                 let localizedDescription = getLocalizedText(item.description_texts, item.description);
 
                 // Replace placeholders with their values or descriptions
@@ -1591,7 +1596,16 @@
             const cursedFilter = document.getElementById('cursedFilter').value;
 
             filteredItems = allItems.filter(item => {
-                const localizedName = getLocalizedText(item.item_name_texts, item.item_name).toLowerCase();
+                const localizedNameRaw = getLocalizedText(item.item_name_texts, item.item_name) || '';
+                const fallbackNameRaw = (item.item_name || item.item_code || '').trim();
+                const displayFallback = (!localizedNameRaw || localizedNameRaw.trim() === '') && fallbackNameRaw
+                    ? `\`${fallbackNameRaw}\``
+                    : '';
+
+                const nameCandidates = [localizedNameRaw, fallbackNameRaw, displayFallback]
+                    .filter(text => typeof text === 'string' && text.trim() !== '')
+                    .map(text => text.toLowerCase());
+
                 const localizedDescription = getLocalizedText(item.description_texts, item.description).toLowerCase();
 
                 let matchesSearch = true;
@@ -1613,7 +1627,7 @@
                         });
                     }
                 } else {
-                    matchesSearch = localizedName.includes(search) || localizedDescription.includes(search);
+                    matchesSearch = nameCandidates.some(name => name.includes(search)) || localizedDescription.includes(search);
                 }
 
                 // Handle kind filter with special "__null__" value for items without a kind
