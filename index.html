@@ -511,6 +511,56 @@
             font-size: 0.9em;
         }
 
+        .description-row {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .description-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            flex: 1;
+            min-width: 0;
+        }
+
+        .target-button-column {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            align-items: flex-start;
+        }
+
+        .target-button {
+            border: 1px solid #b5b5b5;
+            background: #f0f0f0;
+            color: #444;
+            border-radius: 4px;
+            padding: 4px 10px;
+            font-size: 0.8em;
+            cursor: pointer;
+            min-width: 80px;
+            transition: background 0.15s, border-color 0.15s, transform 0.15s;
+        }
+
+        .target-button:hover {
+            background: #e0e0e0;
+            border-color: #999;
+            transform: translateY(-1px);
+        }
+
+        .target-button.upgraded {
+            background: #e6f1ff;
+            border-color: #7fbcff;
+            color: #1f4c8f;
+        }
+
+        .target-button.upgraded:hover {
+            background: #d7e8ff;
+        }
+
         .img-placeholder {
             display: inline-block;
             background: #f0f0f0;
@@ -653,6 +703,270 @@
             color: #ddd;
         }
 
+        .target-modal-card {
+            background: #fff;
+            padding: 24px;
+            border-radius: 6px;
+            max-width: 640px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            margin: 5% auto;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        .target-modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .target-modal-title {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .target-modal-body {
+            background: #f5f5f5;
+            border-radius: 4px;
+            padding: 12px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            line-height: 1.4;
+            white-space: pre-wrap;
+        }
+
+        .target-visualizer {
+            margin-bottom: 16px;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 12px;
+            background: #fafafa;
+        }
+
+        .target-visualizer-summary {
+            font-size: 0.9em;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .target-variable-controls {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px dashed #d8d8d8;
+            border-radius: 6px;
+            background: #fff;
+        }
+
+        .target-variable-heading {
+            font-size: 0.85em;
+            font-weight: 600;
+            color: #444;
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .target-variable-hint {
+            font-weight: 400;
+            color: #777;
+        }
+
+        .target-variable-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.85em;
+            color: #333;
+        }
+
+        .target-variable-group input[type="range"] {
+            flex: 1;
+        }
+
+        .target-variable-label {
+            min-width: 70px;
+            font-weight: 500;
+            color: #555;
+        }
+
+        .target-variable-value {
+            min-width: 24px;
+            text-align: right;
+            font-weight: 600;
+            color: #222;
+        }
+
+        .target-visualizer-controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 0.85em;
+            color: #555;
+        }
+
+        .target-visualizer-controls span {
+            flex: 1;
+            min-width: 180px;
+        }
+
+        .target-visualizer-buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .target-visualizer-buttons button {
+            border: 1px solid #c5c5c5;
+            background: #fff;
+            color: #444;
+            border-radius: 999px;
+            padding: 4px 12px;
+            font-size: 0.8em;
+            cursor: pointer;
+            transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+        }
+
+        .target-visualizer-buttons button:hover {
+            background: #f0f0f0;
+            border-color: #999;
+            transform: translateY(-1px);
+        }
+
+        .target-visualizer-error {
+            font-size: 0.9em;
+            color: #c0392b;
+            margin-bottom: 8px;
+            display: none;
+        }
+
+        .target-grid-wrapper {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+
+        .target-grid {
+            display: grid;
+            grid-template-columns: repeat(15, 22px);
+            gap: 4px;
+            padding: 10px;
+            background: #fff;
+            border-radius: 6px;
+            border: 1px solid #e3e3e3;
+        }
+
+        .target-cell {
+            width: 22px;
+            height: 22px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            background: #fdfdfd;
+            cursor: pointer;
+            transition: background 0.1s ease, border-color 0.1s ease, transform 0.1s ease;
+        }
+
+        .target-cell.origin {
+            border-color: #ffa84a;
+            background: #fff6e9;
+            cursor: default;
+        }
+
+        .target-cell-in-range {
+            background: rgba(74, 108, 247, 0.15);
+            border-color: rgba(74, 108, 247, 0.4);
+        }
+
+        .target-cell-target {
+            background: #4a6cf7;
+            border-color: #2742a3;
+        }
+
+        .target-cell-aoe:not(.target-cell-target) {
+            background: rgba(245, 166, 35, 0.85);
+            border-color: #c77b09;
+        }
+
+        .target-cell-blocked {
+            background: #2f3545;
+            border-color: #111527;
+            position: relative;
+        }
+
+        .target-cell-blocked::after {
+            content: '';
+            position: absolute;
+            inset: 4px;
+            background: rgba(255, 255, 255, 0.18);
+            border-radius: 2px;
+        }
+
+        .target-grid-legend {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            font-size: 0.85em;
+            color: #555;
+        }
+
+        .target-grid-legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .target-legend-swatch {
+            width: 14px;
+            height: 14px;
+            border-radius: 3px;
+            border: 1px solid #d1d1d1;
+        }
+
+        .target-legend-swatch.range {
+            background: rgba(74, 108, 247, 0.25);
+        }
+
+        .target-legend-swatch.target {
+            background: #4a6cf7;
+        }
+
+        .target-legend-swatch.aoe {
+            background: rgba(245, 166, 35, 0.85);
+        }
+
+        .target-code-line {
+            display: block;
+        }
+
+        .target-code-line.error {
+            background: #ffeaea;
+            color: #c0392b;
+        }
+
+        .target-modal-close {
+            background: none;
+            border: none;
+            font-size: 1.5em;
+            cursor: pointer;
+            color: #888;
+            line-height: 1;
+        }
+
+        .target-modal-close:hover {
+            color: #333;
+        }
+
         .footer {
             padding: 20px;
             background: #f5f5f5;
@@ -786,12 +1100,52 @@
         <img class="modal-content" id="modalImage">
     </div>
 
+    <div id="targetModal" class="modal">
+        <div class="target-modal-card">
+            <div class="target-modal-header">
+                <div class="target-modal-title" id="targetModalTitle"></div>
+                <button type="button" class="target-modal-close" onclick="closeTargetModal()">&times;</button>
+            </div>
+                <div class="target-visualizer" id="targetVisualizer">
+                    <div class="target-visualizer-summary" id="targetVisualizerSummary"></div>
+                    <div class="target-variable-controls" id="targetVariableControls"></div>
+                    <div class="target-visualizer-controls">
+                        <span id="targetObstaclesHint">Click tiles to toggle obstacles.</span>
+                        <div class="target-visualizer-buttons">
+                            <button type="button" id="targetAddObstaclesBtn">Add Sample Obstacles</button>
+                            <button type="button" id="targetClearObstaclesBtn">Clear Obstacles</button>
+                        </div>
+                    </div>
+                    <div class="target-visualizer-error" id="targetVisualizerError"></div>
+                    <div class="target-grid-wrapper">
+                        <div class="target-grid" id="targetGrid"></div>
+                        <div class="target-grid-legend">
+                            <div class="target-grid-legend-item">
+                                <span class="target-legend-swatch range"></span>
+                                <span id="targetLegendRangeText"></span>
+                            </div>
+                            <div class="target-grid-legend-item">
+                                <span class="target-legend-swatch target"></span>
+                                <span id="targetLegendTargetText"></span>
+                            </div>
+                            <div class="target-grid-legend-item">
+                                <span class="target-legend-swatch aoe"></span>
+                                <span id="targetLegendSplashText"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <pre class="target-modal-body" id="targetModalBody"></pre>
+        </div>
+    </div>
+
     <script>
         let allAbilities = [];
         let filteredAbilities = [];
         let currentLanguage = 'en';
         let currentSort = { column: null, direction: 'asc' };
         let editorNotes = {};
+        let targetRenderer;
 
         // Get language from URL parameter
         function updateNavbarLinks() {
@@ -856,6 +1210,35 @@
                 footerTools: 'Tools used: mewgpaks, JPEXS FFDec',
                 formula: 'Formula',
                 manaCost: 'Mana Cost',
+                rangeButtonLabel: 'Range',
+                rangeButtonUpgradeLabel: 'Range+',
+                rangeModalTitle: 'Target Profile',
+                rangeModalTitleUpgraded: 'Target Profile (Upgraded)',
+                targetModalEmpty: 'No target settings available.',
+                targetLegendRange: 'Reachable tiles',
+                targetLegendTarget: 'Hovered target',
+                targetLegendSplash: 'Splash tiles',
+                targetSummaryDefault: 'Range preview ready.',
+                targetSummaryUnavailable: 'Range preview unavailable.',
+                targetSummaryMode: 'Mode',
+                targetSummaryRange: 'Range',
+                targetSummarySplash: 'Splash',
+                targetSummaryRequiresLine: 'Needs clear line',
+                targetSummaryLineLength: 'Line length',
+                targetSummaryDiagonalOnly: 'Diagonal only',
+                targetSummaryTile: 'Tile',
+                targetSummaryDirection: 'Direction',
+                targetSummaryDirection8: 'Eight-way direction',
+                targetSummarySelf: 'Self-cast',
+                targetRenderUnsupported: 'Unsupported target_mode',
+                targetRenderMissingMode: 'Missing target_mode',
+                targetRenderParseError: 'Could not parse target line.',
+                targetRenderErrorPrefix: 'Unable to render:',
+                targetObstaclesHint: 'Click tiles to add or remove blockers, then preview line-of-sight abilities.',
+                targetAddObstacles: 'Add sample obstacles',
+                targetClearObstacles: 'Clear obstacles',
+                targetVariablesHeading: 'Variables',
+                targetVariablesHint: 'Adjust placeholders (default 1).',
             },
             zh: {
                 pageTitle: 'Mewgenics 能力图鉴',
@@ -893,6 +1276,35 @@
                 footerTools: '工具：mewgpaks，JPEXS FFDec',
                 formula: '公式',
                 manaCost: '法力值消耗',
+                rangeButtonLabel: '射程',
+                rangeButtonUpgradeLabel: '射程+',
+                rangeModalTitle: '目标信息',
+                rangeModalTitleUpgraded: '目标信息（升级）',
+                targetModalEmpty: '无目标设定。',
+                targetLegendRange: '可选格',
+                targetLegendTarget: '指向格',
+                targetLegendSplash: '溅射格',
+                targetSummaryDefault: '射程预览就绪。',
+                targetSummaryUnavailable: '无法提供射程预览。',
+                targetSummaryMode: '模式',
+                targetSummaryRange: '范围',
+                targetSummarySplash: '溅射',
+                targetSummaryRequiresLine: '需要直线视线',
+                targetSummaryLineLength: '射线长度',
+                targetSummaryDiagonalOnly: '仅对角线',
+                targetSummaryTile: '格子',
+                targetSummaryDirection: '定向',
+                targetSummaryDirection8: '八向定向',
+                targetSummarySelf: '自我施放',
+                targetRenderUnsupported: '不支持的 target_mode',
+                targetRenderMissingMode: '缺少 target_mode',
+                targetRenderParseError: '无法解析该目标行。',
+                targetRenderErrorPrefix: '无法渲染：',
+                targetObstaclesHint: '点击格子设置/清除障碍，用于测试视线。',
+                targetAddObstacles: '添加示例障碍',
+                targetClearObstacles: '清除障碍',
+                targetVariablesHeading: '变量',
+                targetVariablesHint: '调整占位符（默认为 1）。',
             }
         };
 
@@ -971,6 +1383,10 @@
 
             document.getElementById('langButtonEn').classList.toggle('active', currentLanguage === 'en');
             document.getElementById('langButtonZh').classList.toggle('active', currentLanguage === 'zh');
+
+            if (targetRenderer && typeof targetRenderer.refreshCopy === 'function') {
+                targetRenderer.refreshCopy();
+            }
         }
 
         // Load abilities from JSON
@@ -1107,6 +1523,7 @@
                 const localizedDescription = getLocalizedText(ability.description_texts, ability.description);
                 const localizedDescription2 = getLocalizedText(ability.description2_texts, ability.description_2);
                 const classLabel = ability.ability_class ? getClassLabel(ability.ability_class) : '';
+                const editorNoteText = getEditorNote(ability.ability_code);
                 const buildStatsHtml = (cost, damage, isUpgraded) => {
                     const damageValue = formatStatValue(damage?.value);
                     const healValue = formatStatValue(damage?.heal_value);
@@ -1296,6 +1713,50 @@
 
                 const iconAndStatsContent = baseIconHtml + upgradedIconHtml;
 
+                const descriptionPieces = [
+                    `<div class="description">${parseRichText(localizedDescription || 'N/A')}</div>`
+                ];
+
+                if (ability.desc_notes) {
+                    descriptionPieces.push(`<div class="source-comment">${escapeHtml(t('sourceCommentsLabel'))} ${escapeHtml(ability.desc_notes)}</div>`);
+                }
+
+                if (editorNoteText) {
+                    descriptionPieces.push(`<div class="source-comment">${escapeHtml(t('editorNotesLabel'))} ${escapeHtml(editorNoteText)}</div>`);
+                }
+
+                if (localizedDescription2) {
+                    descriptionPieces.push(`<div class="description description-upgraded">${parseRichText(localizedDescription2)}</div>`);
+                }
+
+                if (localizedDescription2 && ability.desc2_notes) {
+                    descriptionPieces.push(`<div class="source-comment">${escapeHtml(t('sourceCommentsLabel'))} ${escapeHtml(ability.desc2_notes)}</div>`);
+                }
+
+                const modalAbilityName = localizedName || ability.ability_name || ability.ability_code || '';
+                const modalNameArg = JSON.stringify(modalAbilityName);
+                const targetButtons = [];
+                const baseTargetPayload = ability.target_text ? JSON.stringify(ability.target_text) : null;
+                const upgradedTargetPayload = ability.target_text_upgraded ? JSON.stringify(ability.target_text_upgraded) : null;
+
+                if (baseTargetPayload) {
+                    targetButtons.push(`<button type="button" class="target-button" onclick='openTargetModal(${modalNameArg}, ${baseTargetPayload}, false)'>${escapeHtml(t('rangeButtonLabel'))}</button>`);
+                }
+
+                if (upgradedTargetPayload) {
+                    targetButtons.push(`<button type="button" class="target-button upgraded" onclick='openTargetModal(${modalNameArg}, ${upgradedTargetPayload}, true)'>${escapeHtml(t('rangeButtonUpgradeLabel'))}</button>`);
+                }
+
+                const targetButtonsHtml = targetButtons.length ? `<div class="target-button-column">${targetButtons.join('')}</div>` : '';
+                const descriptionColumnHtml = `
+                    <div class="description-row">
+                        ${targetButtonsHtml}
+                        <div class="description-stack">
+                            ${descriptionPieces.join('')}
+                        </div>
+                    </div>
+                `;
+
                 return `
                     <tr>
                         <td class="image-cell">
@@ -1307,11 +1768,7 @@
                             <div class="ability-name">${escapeHtml(localizedName)}</div>
                         </td>
                         <td>
-                            <div class="description">${parseRichText(localizedDescription || 'N/A')}</div>
-                            ${ability.desc_notes ? `<div class="source-comment">${escapeHtml(t('sourceCommentsLabel'))} ${escapeHtml(ability.desc_notes)}</div>` : ''}
-                            ${getEditorNote(ability.ability_code) ? `<div class="source-comment">${escapeHtml(t('editorNotesLabel'))} ${escapeHtml(getEditorNote(ability.ability_code))}</div>` : ''}
-                            ${localizedDescription2 ? `<div class="description description-upgraded">${parseRichText(localizedDescription2)}</div>` : ''}
-                            ${localizedDescription2 && ability.desc2_notes ? `<div class="source-comment">${escapeHtml(t('sourceCommentsLabel'))} ${escapeHtml(ability.desc2_notes)}</div>` : ''}
+                            ${descriptionColumnHtml}
                         </td>
                         <td class="class-cell">${classLabel ? `<div class="ability-class class-${ability.ability_class.toLowerCase()}">${escapeHtml(classLabel)}</div>` : '-'}</td>
                         <td class="frame-cell" hidden>${ability.frame_number}</td>
@@ -1412,6 +1869,857 @@
             return html;
         }
 
+        targetRenderer = createTargetRenderer();
+
+        function createTargetRenderer() {
+            const GRID_SIZE = 15;
+            const CENTER = Math.floor(GRID_SIZE / 2);
+            const cells = Array.from({ length: GRID_SIZE }, () => Array(GRID_SIZE).fill(null));
+            const blocked = new Set();
+            const SAMPLE_OBSTACLE_LAYOUT = [
+                [-2, 0],
+                [2, 0],
+                [0, -2],
+                [0, 2],
+                [-1, -1],
+                [1, 1],
+                [-1, 2],
+                [1, -2],
+            ];
+            const coordKey = (row, col) => `${row},${col}`;
+            const VARIABLE_SLIDER_MIN = 0;
+            const VARIABLE_SLIDER_MAX = 10;
+            const VARIABLE_SLIDER_DEFAULT = 1;
+            const variableState = {
+                values: new Map([
+                    ['size', 1]
+                ]),
+                canonical: new Map([
+                    ['size', 'size']
+                ]),
+                required: new Set()
+            };
+            let gridEl;
+            let summaryEl;
+            let errorEl;
+            let rawCodeEl;
+            let legendRangeEl;
+            let legendTargetEl;
+            let legendSplashEl;
+            let variableControlsEl;
+            let obstacleHintEl;
+            let addObstaclesBtn;
+            let clearObstaclesBtn;
+            let controlsBound = false;
+            let initialized = false;
+            let activeScenario = null;
+            let lastRawText = '';
+
+            const helpers = {
+                center: CENTER,
+                size: GRID_SIZE,
+                withinBounds(row, col) {
+                    return row >= 0 && row < GRID_SIZE && col >= 0 && col < GRID_SIZE;
+                },
+                isBlocked(row, col) {
+                    return blocked.has(coordKey(row, col));
+                },
+                linePath(row, col) {
+                    if (row === CENTER && col === CENTER) {
+                        return [];
+                    }
+                    return traceLineCells(CENTER, CENTER, row, col);
+                },
+                pathClear(row, col) {
+                    const path = this.linePath(row, col);
+                    if (!path.length) {
+                        return true;
+                    }
+                    for (let i = 0; i < path.length - 1; i++) {
+                        const [r, c] = path[i];
+                        if (this.isBlocked(r, c)) {
+                            return false;
+                        }
+                    }
+                    return true;
+                },
+                cellsWithinRadius(row, col, radius) {
+                    const affected = [];
+                    for (let r = 0; r < GRID_SIZE; r++) {
+                        for (let c = 0; c < GRID_SIZE; c++) {
+                            const distance = Math.abs(r - row) + Math.abs(c - col);
+                            if (distance <= radius) {
+                                affected.push([r, c]);
+                            }
+                        }
+                    }
+                    return affected;
+                }
+            };
+
+            function traceLineCells(startRow, startCol, endRow, endCol) {
+                const cells = [];
+                let currentRow = startRow;
+                let currentCol = startCol;
+                const deltaRow = Math.abs(endRow - startRow);
+                const deltaCol = Math.abs(endCol - startCol);
+                const stepRow = Math.sign(endRow - startRow);
+                const stepCol = Math.sign(endCol - startCol);
+                let error = deltaRow - deltaCol;
+
+                while (currentRow !== endRow || currentCol !== endCol) {
+                    const twiceError = error * 2;
+                    if (twiceError > -deltaCol) {
+                        error -= deltaCol;
+                        currentRow += stepRow;
+                        cells.push([currentRow, currentCol]);
+                    }
+                    if (currentRow === endRow && currentCol === endCol) {
+                        break;
+                    }
+                    if (twiceError < deltaRow) {
+                        error += deltaRow;
+                        currentCol += stepCol;
+                        cells.push([currentRow, currentCol]);
+                    }
+                }
+
+                return cells;
+            }
+
+            function resetVariableRequirements() {
+                variableState.required.clear();
+            }
+
+            function registerVariable(name) {
+                const trimmed = (name || '').trim();
+                if (!trimmed) {
+                    return null;
+                }
+                const lower = trimmed.toLowerCase();
+                if (lower === 'size') {
+                    variableState.canonical.set('size', 'size');
+                    variableState.values.set('size', 1);
+                    return 'size';
+                }
+                if (!variableState.canonical.has(lower)) {
+                    variableState.canonical.set(lower, trimmed);
+                }
+                const canonical = variableState.canonical.get(lower);
+                if (!variableState.values.has(canonical)) {
+                    variableState.values.set(canonical, VARIABLE_SLIDER_DEFAULT);
+                }
+                variableState.required.add(canonical);
+                return canonical;
+            }
+
+            function getVariableValue(name) {
+                const canonical = registerVariable(name);
+                if (!canonical) {
+                    return VARIABLE_SLIDER_DEFAULT;
+                }
+                return variableState.values.get(canonical) ?? VARIABLE_SLIDER_DEFAULT;
+            }
+
+            function evaluateExpression(raw) {
+                if (raw === null || raw === undefined) {
+                    return null;
+                }
+                if (typeof raw === 'number') {
+                    return Number.isFinite(raw) ? raw : null;
+                }
+                if (Array.isArray(raw)) {
+                    return null;
+                }
+                const text = String(raw).trim();
+                if (!text) {
+                    return null;
+                }
+                const percentMatch = text.match(/^(-?\d+(?:\.\d+)?)%$/);
+                if (percentMatch) {
+                    return parseFloat(percentMatch[1]) / 100;
+                }
+                if (/^[+-]?\d+(?:\.\d+)?$/.test(text)) {
+                    return parseFloat(text);
+                }
+                let expression = text.replace(/([A-Za-z_][A-Za-z0-9_]*)/g, (match) => {
+                    const value = getVariableValue(match);
+                    return typeof value === 'number' ? value : VARIABLE_SLIDER_DEFAULT;
+                });
+                expression = expression.replace(/(\d+(?:\.\d+)?)%/g, (_, num) => String(parseFloat(num) / 100));
+                if (!/^[0-9+\-*/().\s]+$/.test(expression)) {
+                    return null;
+                }
+                try {
+                    const result = Function('"use strict"; return (' + expression + ');')();
+                    return Number.isFinite(result) ? result : null;
+                } catch (error) {
+                    return null;
+                }
+            }
+
+            function renderVariableControls(hasScenario) {
+                if (!variableControlsEl) {
+                    return;
+                }
+                const adjustable = hasScenario
+                    ? Array.from(variableState.required).filter(name => name.toLowerCase() !== 'size')
+                    : [];
+                if (adjustable.length === 0) {
+                    variableControlsEl.innerHTML = '';
+                    variableControlsEl.style.display = 'none';
+                    return;
+                }
+                adjustable.sort((a, b) => a.localeCompare(b));
+                const controlsHtml = adjustable.map(name => {
+                    const value = variableState.values.get(name) ?? VARIABLE_SLIDER_DEFAULT;
+                    return `
+                        <label class="target-variable-group">
+                            <span class="target-variable-label">${escapeHtml(name)}</span>
+                            <input type="range" min="${VARIABLE_SLIDER_MIN}" max="${VARIABLE_SLIDER_MAX}" step="1" value="${value}" data-variable="${escapeHtml(name)}">
+                            <span class="target-variable-value">${value}</span>
+                        </label>
+                    `;
+                }).join('');
+                variableControlsEl.innerHTML = `
+                    <div class="target-variable-heading">
+                        <span>${escapeHtml(t('targetVariablesHeading'))}</span>
+                        <span class="target-variable-hint">${escapeHtml(t('targetVariablesHint'))}</span>
+                    </div>
+                    ${controlsHtml}
+                `;
+                variableControlsEl.style.display = 'flex';
+                variableControlsEl.querySelectorAll('input[type="range"]').forEach(input => {
+                    input.addEventListener('input', handleVariableInput);
+                });
+            }
+
+            function handleVariableInput(event) {
+                const input = event.currentTarget;
+                const name = input?.dataset?.variable;
+                if (!name) {
+                    return;
+                }
+                const value = Number(input.value);
+                variableState.values.set(name, value);
+                const valueLabel = input.closest('.target-variable-group')?.querySelector('.target-variable-value');
+                if (valueLabel) {
+                    valueLabel.textContent = String(value);
+                }
+                render(lastRawText);
+            }
+
+            function blockCell(row, col) {
+                if (!helpers.withinBounds(row, col)) {
+                    return;
+                }
+                if (row === CENTER && col === CENTER) {
+                    return;
+                }
+                const key = coordKey(row, col);
+                if (blocked.has(key)) {
+                    return;
+                }
+                blocked.add(key);
+                const cell = cells[row][col];
+                if (cell) {
+                    cell.classList.add('target-cell-blocked');
+                    cell.setAttribute('aria-disabled', 'true');
+                }
+            }
+
+            function unblockCell(row, col) {
+                const key = coordKey(row, col);
+                if (!blocked.has(key)) {
+                    return;
+                }
+                blocked.delete(key);
+                const cell = cells[row][col];
+                if (cell) {
+                    cell.classList.remove('target-cell-blocked');
+                    cell.removeAttribute('aria-disabled');
+                }
+            }
+
+            function toggleObstacle(event) {
+                const cell = event.currentTarget;
+                if (!cell || cell.classList.contains('origin')) {
+                    return;
+                }
+                const row = Number(cell.dataset.row);
+                const col = Number(cell.dataset.col);
+                const key = coordKey(row, col);
+                if (blocked.has(key)) {
+                    unblockCell(row, col);
+                } else {
+                    blockCell(row, col);
+                }
+                clearHoverHighlights();
+                updateRangeHighlights();
+            }
+
+            function clearObstacles() {
+                if (!blocked.size) {
+                    return;
+                }
+                blocked.forEach(key => {
+                    const [row, col] = key.split(',').map(Number);
+                    const cell = cells[row]?.[col];
+                    if (cell) {
+                        cell.classList.remove('target-cell-blocked');
+                        cell.removeAttribute('aria-disabled');
+                    }
+                });
+                blocked.clear();
+                clearHoverHighlights();
+                updateRangeHighlights();
+            }
+
+            function applySampleObstacles() {
+                SAMPLE_OBSTACLE_LAYOUT.forEach(([dRow, dCol]) => {
+                    blockCell(CENTER + dRow, CENTER + dCol);
+                });
+                clearHoverHighlights();
+                updateRangeHighlights();
+            }
+
+            function applyControlCopy() {
+                if (obstacleHintEl) {
+                    obstacleHintEl.textContent = t('targetObstaclesHint');
+                }
+                if (addObstaclesBtn) {
+                    addObstaclesBtn.textContent = t('targetAddObstacles');
+                }
+                if (clearObstaclesBtn) {
+                    clearObstaclesBtn.textContent = t('targetClearObstacles');
+                }
+            }
+
+            function bindControls() {
+                if (controlsBound) {
+                    return;
+                }
+                if (addObstaclesBtn) {
+                    addObstaclesBtn.addEventListener('click', applySampleObstacles);
+                }
+                if (clearObstaclesBtn) {
+                    clearObstaclesBtn.addEventListener('click', clearObstacles);
+                }
+                controlsBound = true;
+            }
+
+            function init() {
+                if (initialized) {
+                    return;
+                }
+                gridEl = document.getElementById('targetGrid');
+                summaryEl = document.getElementById('targetVisualizerSummary');
+                errorEl = document.getElementById('targetVisualizerError');
+                rawCodeEl = document.getElementById('targetModalBody');
+                legendRangeEl = document.getElementById('targetLegendRangeText');
+                legendTargetEl = document.getElementById('targetLegendTargetText');
+                legendSplashEl = document.getElementById('targetLegendSplashText');
+                variableControlsEl = document.getElementById('targetVariableControls');
+                obstacleHintEl = document.getElementById('targetObstaclesHint');
+                addObstaclesBtn = document.getElementById('targetAddObstaclesBtn');
+                clearObstaclesBtn = document.getElementById('targetClearObstaclesBtn');
+                if (!gridEl) {
+                    return;
+                }
+                buildGrid();
+                bindControls();
+                applyControlCopy();
+                initialized = true;
+            }
+
+            function buildGrid() {
+                gridEl.innerHTML = '';
+                for (let row = 0; row < GRID_SIZE; row++) {
+                    for (let col = 0; col < GRID_SIZE; col++) {
+                        const cell = document.createElement('div');
+                        cell.className = 'target-cell';
+                        cell.dataset.row = String(row);
+                        cell.dataset.col = String(col);
+                        if (row === CENTER && col === CENTER) {
+                            cell.classList.add('origin');
+                        }
+                        cell.addEventListener('mouseenter', handleHover);
+                        cell.addEventListener('mouseleave', clearHoverHighlights);
+                        cell.addEventListener('click', toggleObstacle);
+                        gridEl.appendChild(cell);
+                        cells[row][col] = cell;
+                    }
+                }
+            }
+
+            function handleHover(event) {
+                if (!activeScenario) {
+                    return;
+                }
+                const cell = event.currentTarget;
+                const row = Number(cell.dataset.row);
+                const col = Number(cell.dataset.col);
+                if (!activeScenario.isTargetable(row, col, helpers)) {
+                    clearHoverHighlights();
+                    return;
+                }
+                clearHoverHighlights();
+                cell.classList.add('target-cell-target');
+                const aoeCells = activeScenario.aoeCells(row, col, helpers) || [];
+                aoeCells.forEach(([r, c]) => {
+                    if (!helpers.withinBounds(r, c)) {
+                        return;
+                    }
+                    const aoeCell = cells[r][c];
+                    if (aoeCell) {
+                        aoeCell.classList.add('target-cell-aoe');
+                    }
+                });
+            }
+
+            function clearHoverHighlights() {
+                cells.forEach(row => row.forEach(cell => {
+                    if (!cell) {
+                        return;
+                    }
+                    cell.classList.remove('target-cell-target', 'target-cell-aoe');
+                }));
+            }
+
+            function clearRangeHighlights() {
+                cells.forEach(row => row.forEach(cell => {
+                    if (!cell) {
+                        return;
+                    }
+                    cell.classList.remove('target-cell-in-range');
+                }));
+            }
+
+            function clearGridState() {
+                clearRangeHighlights();
+                clearHoverHighlights();
+            }
+
+            function updateRangeHighlights() {
+                clearRangeHighlights();
+                if (!activeScenario) {
+                    return;
+                }
+                for (let row = 0; row < GRID_SIZE; row++) {
+                    for (let col = 0; col < GRID_SIZE; col++) {
+                        const cell = cells[row][col];
+                        if (!cell) {
+                            continue;
+                        }
+                        if (activeScenario.isTargetable(row, col, helpers)) {
+                            cell.classList.add('target-cell-in-range');
+                        }
+                    }
+                }
+            }
+
+            function render(rawText) {
+                init();
+                const text = typeof rawText === 'string' ? rawText : '';
+                lastRawText = text;
+                resetVariableRequirements();
+                clearHoverHighlights();
+                if (!text.trim()) {
+                    activeScenario = null;
+                    clearGridState();
+                    if (summaryEl) {
+                        summaryEl.textContent = t('targetModalEmpty');
+                    }
+                    renderRawCode('', null);
+                    showError('');
+                    renderVariableControls(false);
+                    return;
+                }
+
+                const parsed = parseTargetBlock(text);
+                const built = buildScenario(parsed);
+                renderRawCode(text, built.errorLineIndex);
+                if (built.error) {
+                    activeScenario = null;
+                    clearGridState();
+                    if (summaryEl) {
+                        summaryEl.textContent = t('targetSummaryUnavailable');
+                    }
+                    showError(built.error);
+                    renderVariableControls(false);
+                    return;
+                }
+
+                activeScenario = built.scenario;
+                showError('');
+                if (summaryEl) {
+                    summaryEl.textContent = built.scenario.summary || t('targetSummaryDefault');
+                }
+                 renderVariableControls(true);
+                updateRangeHighlights();
+            }
+
+            function refreshCopy() {
+                init();
+                applyControlCopy();
+                renderVariableControls(!!activeScenario);
+                if (legendRangeEl) {
+                    legendRangeEl.textContent = t('targetLegendRange');
+                }
+                if (legendTargetEl) {
+                    legendTargetEl.textContent = t('targetLegendTarget');
+                }
+                if (legendSplashEl) {
+                    legendSplashEl.textContent = t('targetLegendSplash');
+                }
+                if (!lastRawText.trim()) {
+                    if (summaryEl) {
+                        summaryEl.textContent = t('targetSummaryDefault');
+                    }
+                    renderRawCode('', null);
+                    showError('');
+                    return;
+                }
+                render(lastRawText);
+            }
+
+            function renderRawCode(text, errorLineIndex) {
+                if (!rawCodeEl) {
+                    return;
+                }
+                const trimmed = text.trim();
+                if (!trimmed) {
+                    rawCodeEl.textContent = t('targetModalEmpty');
+                    return;
+                }
+                const lines = text.replace(/\r\n/g, '\n').split('\n');
+                const html = lines.map((line, idx) => {
+                    const sanitized = escapeHtml(line || '');
+                    const content = sanitized === '' ? '&nbsp;' : sanitized;
+                    const cls = idx === errorLineIndex ? 'target-code-line error' : 'target-code-line';
+                    return `<span class="${cls}">${content}</span>`;
+                }).join('\n');
+                rawCodeEl.innerHTML = html;
+            }
+
+            function showError(message) {
+                if (!errorEl) {
+                    return;
+                }
+                if (message) {
+                    errorEl.textContent = `${t('targetRenderErrorPrefix')} ${message}`;
+                    errorEl.style.display = 'block';
+                } else {
+                    errorEl.textContent = '';
+                    errorEl.style.display = 'none';
+                }
+            }
+
+            function parseTargetBlock(text) {
+                const normalized = text.replace(/\r\n/g, '\n');
+                const lines = normalized.split('\n');
+                const entries = {};
+                const meta = {};
+                let firstMalformed = null;
+
+                lines.forEach((rawLine, index) => {
+                    const line = rawLine.trim();
+                    if (!line || line === 'target {' || line === '}') {
+                        return;
+                    }
+                    const spaceIndex = line.indexOf(' ');
+                    if (spaceIndex === -1) {
+                        if (firstMalformed === null) {
+                            firstMalformed = index;
+                        }
+                        return;
+                    }
+                    const key = line.substring(0, spaceIndex).trim();
+                    let value = line.substring(spaceIndex + 1).trim();
+                    if (value.startsWith('[') && value.endsWith(']')) {
+                        const inner = value.slice(1, -1).trim();
+                        value = inner ? inner.split(/\s+/) : [];
+                    }
+                    entries[key] = value;
+                    meta[key] = { line: index, raw: value };
+                });
+
+                return { lines, entries, meta, firstMalformed };
+            }
+
+            function buildScenario(parseResult) {
+                const entries = parseResult.entries;
+                const modeValue = entries.target_mode || '';
+                const mode = typeof modeValue === 'string' ? modeValue.toLowerCase() : '';
+                const entryCount = Object.keys(entries).length;
+
+                if (entryCount === 0 && typeof parseResult.firstMalformed === 'number') {
+                    return {
+                        scenario: null,
+                        error: t('targetRenderParseError'),
+                        errorLineIndex: parseResult.firstMalformed
+                    };
+                }
+
+                if (!mode) {
+                    const lineIndex = typeof parseResult.meta.target_mode?.line === 'number'
+                        ? parseResult.meta.target_mode.line
+                        : (typeof parseResult.firstMalformed === 'number' ? parseResult.firstMalformed : 0);
+                    return {
+                        scenario: null,
+                        error: t('targetRenderMissingMode'),
+                        errorLineIndex: lineIndex
+                    };
+                }
+
+                if (mode === 'none') {
+                    return {
+                        scenario: createSelfScenario(parseResult),
+                        error: null,
+                        errorLineIndex: null
+                    };
+                }
+
+                if (mode === 'tile') {
+                    return {
+                        scenario: createTileScenario(parseResult),
+                        error: null,
+                        errorLineIndex: null
+                    };
+                }
+
+                if (mode === 'direction' || mode === 'direction8') {
+                    return {
+                        scenario: createDirectionScenario(parseResult, mode),
+                        error: null,
+                        errorLineIndex: null
+                    };
+                }
+
+                return {
+                    scenario: null,
+                    error: `${t('targetRenderUnsupported')} ${mode}`,
+                    errorLineIndex: typeof parseResult.meta.target_mode?.line === 'number'
+                        ? parseResult.meta.target_mode.line
+                        : null
+                };
+            }
+
+            function createSelfScenario(parseResult) {
+                const entries = parseResult.entries;
+                const maxAoe = numberFrom(entries.max_aoe) ?? 0;
+                const summaryParts = [
+                    `${t('targetSummaryMode')}: ${t('targetSummarySelf')}`
+                ];
+                if (maxAoe > 0) {
+                    summaryParts.push(`${t('targetSummarySplash')} ${maxAoe}`);
+                }
+
+                return {
+                    summary: summaryParts.join(' · '),
+                    isTargetable(row, col, ctx) {
+                        return row === ctx.center && col === ctx.center;
+                    },
+                    aoeCells(row, col, ctx) {
+                        if (maxAoe > 0) {
+                            return ctx.cellsWithinRadius(row, col, maxAoe);
+                        }
+                        return [];
+                    }
+                };
+            }
+
+            function createTileScenario(parseResult) {
+                const entries = parseResult.entries;
+                const minRangeValue = numberFrom(entries.min_range);
+                const minRange = typeof minRangeValue === 'number' ? minRangeValue : 0;
+                const maxRangeRaw = numberFrom(entries.max_range);
+                const fallbackMax = typeof maxRangeRaw === 'number' ? maxRangeRaw : Math.max(minRange + 3, 4);
+                const rangeMode = (entries.range_mode || 'standard').toLowerCase();
+                const restrictions = listFrom(entries.restrictions).map(value => String(value).toLowerCase());
+                const straightShot = asBoolean(entries.straight_shot) || restrictions.includes('straight_shot');
+                const requiresLine = straightShot
+                    || asBoolean(entries.requires_line_of_sight)
+                    || restrictions.includes('requires_line_of_sight')
+                    || restrictions.includes('needs_los')
+                    || restrictions.includes('line_of_sight')
+                    || restrictions.includes('must_have_line_of_sight');
+                const mustMove = asBoolean(entries.must_move) || restrictions.includes('must_move');
+                const maxAoe = numberFrom(entries.max_aoe) ?? 0;
+
+                const summaryParts = [
+                    `${t('targetSummaryMode')}: ${t('targetSummaryTile')}`,
+                    `${t('targetSummaryRange')} ${formatRangeLabel(entries.min_range, entries.max_range, minRange, maxRangeRaw, fallbackMax)}`
+                ];
+                if (rangeMode === 'cross') {
+                    summaryParts.push(t('targetSummaryDiagonalOnly'));
+                }
+                if (maxAoe > 0) {
+                    summaryParts.push(`${t('targetSummarySplash')} ${maxAoe}`);
+                }
+                if (requiresLine) {
+                    summaryParts.push(t('targetSummaryRequiresLine'));
+                }
+
+                return {
+                    summary: summaryParts.join(' · '),
+                    isTargetable(row, col, ctx) {
+                        if (!ctx.withinBounds(row, col)) {
+                            return false;
+                        }
+                        const dRow = row - ctx.center;
+                        const dCol = col - ctx.center;
+                        if (mustMove && dRow === 0 && dCol === 0) {
+                            return false;
+                        }
+                        const manhattan = Math.abs(dRow) + Math.abs(dCol);
+                        const chebyshev = Math.max(Math.abs(dRow), Math.abs(dCol));
+                        let passesRange = false;
+                        if (rangeMode === 'cross') {
+                            if (dRow === 0 && dCol === 0) {
+                                return minRange === 0 && !mustMove;
+                            }
+                            const diagSteps = Math.abs(dRow);
+                            const isDiagonal = diagSteps === Math.abs(dCol);
+                            if (!isDiagonal) {
+                                return false;
+                            }
+                            passesRange = diagSteps >= Math.max(minRange, 1) && diagSteps <= fallbackMax;
+                        } else if (rangeMode === 'square') {
+                            passesRange = chebyshev >= minRange && chebyshev <= fallbackMax;
+                        } else {
+                            passesRange = manhattan >= minRange && manhattan <= fallbackMax;
+                        }
+                        if (!passesRange) {
+                            return false;
+                        }
+                        if (requiresLine && !ctx.pathClear(row, col)) {
+                            return false;
+                        }
+                        return true;
+                    },
+                    aoeCells(row, col, ctx) {
+                        if (maxAoe > 0) {
+                            return ctx.cellsWithinRadius(row, col, maxAoe);
+                        }
+                        return [];
+                    }
+                };
+            }
+
+            function createDirectionScenario(parseResult, mode) {
+                const entries = parseResult.entries;
+                const minSteps = numberFrom(entries.min_aoe) ?? 1;
+                const maxSteps = numberFrom(entries.max_aoe) ?? numberFrom(entries.max_range) ?? Math.max(minSteps, 3);
+                const allowDiagonal = mode === 'direction8';
+                const splashRadius = numberFrom(entries.aoe_radius)
+                    ?? numberFrom(entries.max_aoe_radius)
+                    ?? numberFrom(entries.max_area)
+                    ?? 0;
+                const summaryParts = [
+                    `${t('targetSummaryMode')}: ${allowDiagonal ? t('targetSummaryDirection8') : t('targetSummaryDirection')}`,
+                    `${t('targetSummaryLineLength')} ${formatStepRange(minSteps, maxSteps)}`
+                ];
+                if (splashRadius > 0) {
+                    summaryParts.push(`${t('targetSummarySplash')} ${splashRadius}`);
+                }
+                summaryParts.push(t('targetSummaryRequiresLine'));
+
+                return {
+                    summary: summaryParts.join(' · '),
+                    isTargetable(row, col) {
+                        if (!helpers.withinBounds(row, col)) {
+                            return false;
+                        }
+                        const dRow = row - helpers.center;
+                        const dCol = col - helpers.center;
+                        if (dRow === 0 && dCol === 0) {
+                            return false;
+                        }
+                        const aligned = allowDiagonal
+                            ? (dRow === 0 || dCol === 0 || Math.abs(dRow) === Math.abs(dCol))
+                            : (dRow === 0 || dCol === 0);
+                        if (!aligned) {
+                            return false;
+                        }
+                        const distance = Math.max(Math.abs(dRow), Math.abs(dCol));
+                        if (distance < minSteps || distance > maxSteps) {
+                            return false;
+                        }
+                        return helpers.pathClear(row, col);
+                    },
+                    aoeCells(row, col) {
+                        if (splashRadius > 0) {
+                            return helpers.cellsWithinRadius(row, col, splashRadius);
+                        }
+                        return helpers.linePath(row, col);
+                    }
+                };
+            }
+
+            function numberFrom(value) {
+                const evaluated = evaluateExpression(value);
+                if (typeof evaluated === 'number' && !Number.isNaN(evaluated)) {
+                    return evaluated;
+                }
+                if (typeof value !== 'string') {
+                    return null;
+                }
+                const match = value.match(/-?\d+/);
+                return match ? parseInt(match[0], 10) : null;
+            }
+
+            function listFrom(value) {
+                if (Array.isArray(value)) {
+                    return value;
+                }
+                if (typeof value === 'string' && value.trim()) {
+                    return [value.trim()];
+                }
+                return [];
+            }
+
+            function asBoolean(value) {
+                if (typeof value === 'boolean') {
+                    return value;
+                }
+                if (typeof value === 'string') {
+                    return value.toLowerCase() === 'true' || value === '1';
+                }
+                return false;
+            }
+
+            function formatRangeLabel(rawMin, rawMax, numericMin, numericMax, fallbackMax) {
+                const minLabel = displayValue(rawMin, numericMin);
+                const maxLabel = displayValue(rawMax, numericMax !== null ? numericMax : fallbackMax);
+                return minLabel === maxLabel ? minLabel : `${minLabel}–${maxLabel}`;
+            }
+
+            function displayValue(raw, fallback) {
+                if (typeof raw === 'string' && raw.trim()) {
+                    return raw.trim();
+                }
+                if (typeof fallback === 'number') {
+                    return String(fallback);
+                }
+                return '?';
+            }
+
+            function formatStepRange(min, max) {
+                if (min === max) {
+                    return String(min);
+                }
+                return `${min}–${max}`;
+            }
+
+            return {
+                init,
+                render,
+                refreshCopy,
+                clearHover: clearHoverHighlights
+            };
+        }
+
         // Filter abilities
         function filterAbilities() {
             const search = document.getElementById('searchInput').value.toLowerCase();
@@ -1458,6 +2766,42 @@
             }
         }
 
+        function openTargetModal(abilityName, targetText, isUpgrade) {
+            const modal = document.getElementById('targetModal');
+            const titleEl = document.getElementById('targetModalTitle');
+            const modalTitle = isUpgrade ? t('rangeModalTitleUpgraded') : t('rangeModalTitle');
+            const displayName = abilityName || '';
+
+            titleEl.textContent = displayName ? `${modalTitle} — ${displayName}` : modalTitle;
+            if (targetRenderer && typeof targetRenderer.render === 'function') {
+                targetRenderer.render(targetText || '');
+            } else {
+                const fallbackBody = document.getElementById('targetModalBody');
+                if (fallbackBody) {
+                    fallbackBody.textContent = targetText || t('targetModalEmpty');
+                }
+            }
+            modal.style.display = 'block';
+            modal.scrollTop = 0;
+            const modalCard = modal.querySelector('.target-modal-card');
+            if (modalCard) {
+                modalCard.scrollTop = 0;
+            }
+        }
+
+        function closeTargetModal() {
+            document.getElementById('targetModal').style.display = 'none';
+            if (targetRenderer && typeof targetRenderer.clearHover === 'function') {
+                targetRenderer.clearHover();
+            }
+        }
+
+        document.getElementById('targetModal').onclick = function (event) {
+            if (event.target === this) {
+                closeTargetModal();
+            }
+        }
+
         // HTML escape function
         function escapeHtml(text) {
             if (!text) return '';
@@ -1491,6 +2835,9 @@
         // Apply language immediately when DOM is ready (before data loads)
         document.addEventListener('DOMContentLoaded', () => {
             applyUiLanguage();
+            if (targetRenderer && typeof targetRenderer.init === 'function') {
+                targetRenderer.init();
+            }
         });
 
         // Load on page load
