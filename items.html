@@ -1418,7 +1418,8 @@
             const visibleItems = items.filter(item => {
                 const hasIcon = item.frame !== null && item.frame !== undefined;
                 const hasTitle = hasRenderedText(item.item_name_texts, item.item_name);
-                const hasDescription = hasRenderedText(item.description_texts, item.description);
+                const hasDescription = hasRenderedText(item.description_texts, item.description) || // has attributes rendered
+                    (item.stats && Object.keys(item.stats).length > 0); // or has stats to show
                 return showHidden || (hasIcon && hasTitle && hasDescription);
             });
 
