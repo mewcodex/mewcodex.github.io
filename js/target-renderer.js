@@ -17,7 +17,7 @@
         const coordKey = (row, col) => `${row},${col}`;
         const VARIABLE_SLIDER_MIN = 0;
         const VARIABLE_SLIDER_MAX = 10;
-        const VARIABLE_SLIDER_DEFAULT = 1;
+        const VARIABLE_SLIDER_DEFAULT = 0;
         const variableState = {
             values: new Map([
                 ['size', 1]
