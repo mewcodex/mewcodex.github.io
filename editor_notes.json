@@ -554,5 +554,13 @@
     "ExperimentalNeck": {
         "en": "Random stat modifier, value ranges from -1 to 2.",
         "zh": "随机属性加成，数值范围从 -1 到 2。"
+    },
+    "Experimentx": {
+        "en": "Gain a large number of random positive and negative effects, for a total of 12 or 16 stacks.",
+        "zh": "获得大量随机正面和负面效果，总计12或16层。"
+    },
+    "Intruder": {
+        "en": "On death, spawn a friendly unit called 'Intruder' (a variant of SpiderCat).",
+        "zh": "在死亡时生成友方单位“闯入者”（一种蜘蛛猫的变种）。"
     }
 }
