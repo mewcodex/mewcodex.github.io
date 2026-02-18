@@ -538,5 +538,21 @@
     "TeslaCannon": {
         "en": "Source Code Comment: \"this is a Tinkerer Tech 3 item\"",
         "zh": "源代码注释：“this is a Tinkerer Tech 3 item”"
+    },
+    "SpottedMushroom": {
+        "en": "Random stat modifier, value ranges from -1 to 2.",
+        "zh": "随机属性加成，数值范围从 -1 到 2。"
+    },
+    "ExperimentalMask": {
+        "en": "Random stat modifier, value ranges from -1 to 2.",
+        "zh": "随机属性加成，数值范围从 -1 到 2。"
+    },
+    "ExperimentalHat": {
+        "en": "Random stat modifier, value ranges from -1 to 2.",
+        "zh": "随机属性加成，数值范围从 -1 到 2。"
+    },
+    "ExperimentalNeck": {
+        "en": "Random stat modifier, value ranges from -1 to 2.",
+        "zh": "随机属性加成，数值范围从 -1 到 2。"
     }
 }
