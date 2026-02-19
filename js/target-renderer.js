@@ -62,39 +62,6 @@
                 if (!path.length) {
                     return true;
                 }
-                const dRow = row - CENTER;
-                const dCol = col - CENTER;
-                if (dRow !== 0 && dCol !== 0 && Math.abs(dRow) === Math.abs(dCol)) {
-                    const stepRow = CENTER + Math.sign(dRow);
-                    const stepCol = CENTER + Math.sign(dCol);
-                    if (this.withinBounds(stepRow, CENTER) && this.withinBounds(CENTER, stepCol)) {
-                        if (this.isBlocked(stepRow, CENTER) && this.isBlocked(CENTER, stepCol)) {
-                            return false;
-                        }
-                    }
-                    const adjRow = row - Math.sign(dRow);
-                    const adjCol = col - Math.sign(dCol);
-                    if (this.withinBounds(row, adjCol) && this.withinBounds(adjRow, col)) {
-                        if (this.isBlocked(row, adjCol) && this.isBlocked(adjRow, col)) {
-                            return false;
-                        }
-                    }
-                }
-                const steps = traceLineSteps(CENTER, CENTER, row, col);
-                for (let i = 0; i < steps.length; i++) {
-                    const step = steps[i];
-                    const dRow = step.row - step.prevRow;
-                    const dCol = step.col - step.prevCol;
-                    if (Math.abs(dRow) === 1 && Math.abs(dCol) === 1) {
-                        const blockA = [step.prevRow, step.col];
-                        const blockB = [step.row, step.prevCol];
-                        if (this.withinBounds(blockA[0], blockA[1]) && this.withinBounds(blockB[0], blockB[1])) {
-                            if (this.isBlocked(blockA[0], blockA[1]) && this.isBlocked(blockB[0], blockB[1])) {
-                                return false;
-                            }
-                        }
-                    }
-                }
                 for (let i = 0; i < path.length; i++) {
                     const [r, c] = path[i];
                     if (!cellIntersectsSegment(r, c, CENTER, CENTER, row, col)) {
@@ -171,36 +138,6 @@
             }
 
             return cells;
-        }
-
-        function traceLineSteps(startRow, startCol, endRow, endCol) {
-            const steps = [];
-            let x0 = startCol;
-            let y0 = startRow;
-            const x1 = endCol;
-            const y1 = endRow;
-            const dx = Math.abs(x1 - x0);
-            const dy = Math.abs(y1 - y0);
-            const sx = x0 < x1 ? 1 : -1;
-            const sy = y0 < y1 ? 1 : -1;
-            let err = dx - dy;
-
-            while (x0 !== x1 || y0 !== y1) {
-                const prevX = x0;
-                const prevY = y0;
-                const e2 = err * 2;
-                if (e2 > -dy) {
-                    err -= dy;
-                    x0 += sx;
-                }
-                if (e2 < dx) {
-                    err += dx;
-                    y0 += sy;
-                }
-                steps.push({ row: y0, col: x0, prevRow: prevY, prevCol: prevX });
-            }
-
-            return steps;
         }
 
         function cellIntersectsSegment(row, col, startRow, startCol, endRow, endCol) {
