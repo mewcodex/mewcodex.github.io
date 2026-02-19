@@ -566,5 +566,17 @@
     "Intruder": {
         "en": "On death, spawn a friendly unit called 'Intruder' (a variant of SpiderCat).",
         "zh": "在死亡时生成友方单位“闯入者”（一种蜘蛛猫的变种）。"
+    },
+    "Distemper": {
+        "zh": "升级词条用于保存叠层等级，最多10级；10级时额外获得一层随机移动。",
+        "en": "Upgrade modifier used to keep track of the number of stacks, up to 10; at 10 stacks, gain one stack MoveRandomly."
+    },
+    "Deathless": {
+        "zh": "二级效果：改为96点。",
+        "en": "Level 2 effect: changed to +96."
+    },
+    "Kamikazee": {
+        "en": "Deal 5 explosion damage and 1 knockback in a 1-tile radius square around the cat.",
+        "zh": "对半径1格的方形范围造成5点爆炸类型伤害和1点击退。"
     }
 }

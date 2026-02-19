@@ -3038,7 +3038,9 @@
       "source_file": "G:/gpak-all/data/passives/disorders.gon",
       "desc_key": "DISORDER_BOILS_DESC",
       "desc_key_raw": "DISORDER_BOILS_DESC",
-      "stats_base": null,
+      "stats_base": {
+        "cha": -2
+      },
       "stats_level1": null,
       "stats_level2": null,
       "stats_level1_upgraded": null,
@@ -3066,7 +3068,15 @@
       "source_file": "G:/gpak-all/data/passives/disorders.gon",
       "desc_key": "DISORDER_DEPRESSION_DESC",
       "desc_key_raw": "DISORDER_DEPRESSION_DESC",
-      "stats_base": null,
+      "stats_base": {
+        "str": -1,
+        "dex": -1,
+        "con": -1,
+        "int": -1,
+        "spd": -1,
+        "cha": -1,
+        "lck": -1
+      },
       "stats_level1": null,
       "stats_level2": null,
       "stats_level1_upgraded": null,
@@ -3094,7 +3104,9 @@
       "source_file": "G:/gpak-all/data/passives/disorders.gon",
       "desc_key": "DISORDER_BROKENLIMB_DESC",
       "desc_key_raw": "DISORDER_BROKENLIMB_DESC",
-      "stats_base": null,
+      "stats_base": {
+        "spd": -2
+      },
       "stats_level1": null,
       "stats_level2": null,
       "stats_level1_upgraded": null,
@@ -3122,7 +3134,10 @@
       "source_file": "G:/gpak-all/data/passives/disorders.gon",
       "desc_key": "DISORDER_WRENCHEDNECK_DESC",
       "desc_key_raw": "DISORDER_WRENCHEDNECK_DESC",
-      "stats_base": null,
+      "stats_base": {
+        "con": -1,
+        "dex": -1
+      },
       "stats_level1": null,
       "stats_level2": null,
       "stats_level1_upgraded": null,
@@ -3150,7 +3165,10 @@
       "source_file": "G:/gpak-all/data/passives/disorders.gon",
       "desc_key": "DISORDER_DECLAWED_DESC",
       "desc_key_raw": "DISORDER_DECLAWED_DESC",
-      "stats_base": null,
+      "stats_base": {
+        "str": -3,
+        "cha": 2
+      },
       "stats_level1": null,
       "stats_level2": null,
       "stats_level1_upgraded": null,
@@ -3178,7 +3196,9 @@
       "source_file": "G:/gpak-all/data/passives/disorders.gon",
       "desc_key": "DISORDER_HEADTRAUMA_DESC",
       "desc_key_raw": "DISORDER_HEADTRAUMA_DESC",
-      "stats_base": null,
+      "stats_base": {
+        "int": -3
+      },
       "stats_level1": null,
       "stats_level2": null,
       "stats_level1_upgraded": null,
@@ -3206,7 +3226,9 @@
       "source_file": "G:/gpak-all/data/passives/disorders.gon",
       "desc_key": "DISORDER_DEEPCUT_DESC",
       "desc_key_raw": "DISORDER_DEEPCUT_DESC",
-      "stats_base": null,
+      "stats_base": {
+        "con": -2
+      },
       "stats_level1": null,
       "stats_level2": null,
       "stats_level1_upgraded": null,
@@ -3570,7 +3592,9 @@
       "source_file": "G:/gpak-all/data/passives/disorders.gon",
       "desc_key": "DISORDER_ASRFIGHT_DESC",
       "desc_key_raw": "DISORDER_ASRFIGHT_DESC",
-      "stats_base": null,
+      "stats_base": {
+        "spd": -2
+      },
       "stats_level1": null,
       "stats_level2": null,
       "stats_level1_upgraded": null,
@@ -3598,7 +3622,9 @@
       "source_file": "G:/gpak-all/data/passives/disorders.gon",
       "desc_key": "DISORDER_ASRFLIGHT_DESC",
       "desc_key_raw": "DISORDER_ASRFLIGHT_DESC",
-      "stats_base": null,
+      "stats_base": {
+        "str": -2
+      },
       "stats_level1": null,
       "stats_level2": null,
       "stats_level1_upgraded": null,
@@ -3931,7 +3957,10 @@
       "source_file": "G:/gpak-all/data/passives/disorders.gon",
       "desc_key": "DISORDER_GIGACHAD_DESC",
       "desc_key_raw": "DISORDER_GIGACHAD_DESC",
-      "stats_base": null,
+      "stats_base": {
+        "cha": 8,
+        "int": -5
+      },
       "stats_level1": null,
       "stats_level2": null,
       "stats_level1_upgraded": null,
@@ -4069,7 +4098,8 @@
       "desc_key": "DISORDER_SCALYSCABS_DESC",
       "desc_key_raw": "DISORDER_SCALYSCABS_DESC",
       "stats_base": {
-        "shield": 8
+        "shield": 8,
+        "con": -2
       },
       "stats_level1": null,
       "stats_level2": null,
@@ -4098,7 +4128,9 @@
       "source_file": "G:/gpak-all/data/passives/disorders.gon",
       "desc_key": "DISORDER_FATTYLIVER_DESC",
       "desc_key_raw": "DISORDER_FATTYLIVER_DESC",
-      "stats_base": null,
+      "stats_base": {
+        "con": 8
+      },
       "stats_level1": null,
       "stats_level2": null,
       "stats_level1_upgraded": null,
@@ -4182,7 +4214,15 @@
       "source_file": "G:/gpak-all/data/passives/disorders.gon",
       "desc_key": "DISORDER_PSYCHOSIS_DESC",
       "desc_key_raw": "DISORDER_PSYCHOSIS_DESC",
-      "stats_base": null,
+      "stats_base": {
+        "str": 1,
+        "int": 1,
+        "dex": 1,
+        "cha": 1,
+        "con": 1,
+        "lck": 1,
+        "spd": 1
+      },
       "stats_level1": null,
       "stats_level2": null,
       "stats_level1_upgraded": null,
@@ -4210,7 +4250,10 @@
       "source_file": "G:/gpak-all/data/passives/disorders.gon",
       "desc_key": "DISORDER_NECROSIS_DESC",
       "desc_key_raw": "DISORDER_NECROSIS_DESC",
-      "stats_base": null,
+      "stats_base": {
+        "str": 2,
+        "con": 2
+      },
       "stats_level1": null,
       "stats_level2": null,
       "stats_level1_upgraded": null,
@@ -4238,7 +4281,15 @@
       "source_file": "G:/gpak-all/data/passives/disorders.gon",
       "desc_key": "DISORDER_TOUCHED_DESC",
       "desc_key_raw": "DISORDER_TOUCHED_DESC",
-      "stats_base": null,
+      "stats_base": {
+        "str": 3,
+        "int": 3,
+        "dex": 3,
+        "cha": 3,
+        "con": 3,
+        "lck": 3,
+        "spd": 3
+      },
       "stats_level1": null,
       "stats_level2": null,
       "stats_level1_upgraded": null,
@@ -4352,7 +4403,10 @@
       "source_file": "G:/gpak-all/data/passives/disorders.gon",
       "desc_key": "DISORDER_TOXOPLASMOSIS_DESC",
       "desc_key_raw": "DISORDER_TOXOPLASMOSIS_DESC",
-      "stats_base": null,
+      "stats_base": {
+        "con": -1,
+        "int": -1
+      },
       "stats_level1": null,
       "stats_level2": null,
       "stats_level1_upgraded": null,
@@ -4772,7 +4826,10 @@
       "source_file": "G:/gpak-all/data/passives/disorders.gon",
       "desc_key": "DISORDER_AUTISM_DESC",
       "desc_key_raw": "DISORDER_AUTISM_DESC",
-      "stats_base": null,
+      "stats_base": {
+        "cha": -2,
+        "int": 2
+      },
       "stats_level1": null,
       "stats_level2": null,
       "stats_level1_upgraded": null,
@@ -5332,7 +5389,9 @@
       "source_file": "G:/gpak-all/data/passives/disorders.gon",
       "desc_key": "DISORDER_NUDIST_DESC",
       "desc_key_raw": "DISORDER_NUDIST_DESC",
-      "stats_base": null,
+      "stats_base": {
+        "spd": 5
+      },
       "stats_level1": null,
       "stats_level2": null,
       "stats_level1_upgraded": null,
@@ -5388,7 +5447,13 @@
       "source_file": "G:/gpak-all/data/passives/disorders.gon",
       "desc_key": "DISORDER_GIGANTISM_DESC",
       "desc_key_raw": "DISORDER_GIGANTISM_DESC",
-      "stats_base": null,
+      "stats_base": {
+        "con": 2,
+        "str": 2,
+        "dex": -2,
+        "lck": -2,
+        "spd": -2
+      },
       "stats_level1": null,
       "stats_level2": null,
       "stats_level1_upgraded": null,
@@ -5416,7 +5481,13 @@
       "source_file": "G:/gpak-all/data/passives/disorders.gon",
       "desc_key": "DISORDER_DWARFISM_DESC",
       "desc_key_raw": "DISORDER_DWARFISM_DESC",
-      "stats_base": null,
+      "stats_base": {
+        "con": -2,
+        "str": -2,
+        "dex": 2,
+        "lck": 2,
+        "spd": 2
+      },
       "stats_level1": null,
       "stats_level2": null,
       "stats_level1_upgraded": null,
@@ -5441,7 +5512,15 @@
       "source_file": "G:/gpak-all/data/passives/disorders.gon",
       "desc_key": "DISORDER_PRIMORDIALDWARF_DESC",
       "desc_key_raw": "DISORDER_PRIMORDIALDWARF_DESC",
-      "stats_base": null,
+      "stats_base": {
+        "lck": 12,
+        "str": -2,
+        "dex": -2,
+        "con": -2,
+        "spd": -2,
+        "int": -2,
+        "cha": -2
+      },
       "stats_level1": null,
       "stats_level2": null,
       "stats_level1_upgraded": null,
@@ -5469,7 +5548,9 @@
       "source_file": "G:/gpak-all/data/passives/disorders.gon",
       "desc_key": "DISORDER_SOCIOPATHY_DESC",
       "desc_key_raw": "DISORDER_SOCIOPATHY_DESC",
-      "stats_base": null,
+      "stats_base": {
+        "cha": 10
+      },
       "stats_level1": null,
       "stats_level2": null,
       "stats_level1_upgraded": null,
@@ -5581,7 +5662,9 @@
       "source_file": "G:/gpak-all/data/passives/disorders.gon",
       "desc_key": "DISORDER_WOBBLYCATSYNDROME_DESC",
       "desc_key_raw": "DISORDER_WOBBLYCATSYNDROME_DESC",
-      "stats_base": null,
+      "stats_base": {
+        "dex": -3
+      },
       "stats_level1": null,
       "stats_level2": null,
       "stats_level1_upgraded": null,
@@ -5665,7 +5748,9 @@
       "source_file": "G:/gpak-all/data/passives/disorders.gon",
       "desc_key": "DISORDER_PHONY_DESC",
       "desc_key_raw": "DISORDER_PHONY_DESC",
-      "stats_base": null,
+      "stats_base": {
+        "cha": 2
+      },
       "stats_level1": null,
       "stats_level2": null,
       "stats_level1_upgraded": null,
@@ -5777,7 +5862,9 @@
       "source_file": "G:/gpak-all/data/passives/disorders.gon",
       "desc_key": "DISORDER_PARAPELEGIC_DESC",
       "desc_key_raw": "DISORDER_PARAPELEGIC_DESC",
-      "stats_base": null,
+      "stats_base": {
+        "int": 2
+      },
       "stats_level1": null,
       "stats_level2": null,
       "stats_level1_upgraded": null,
@@ -5833,7 +5920,11 @@
       "source_file": "G:/gpak-all/data/passives/disorders.gon",
       "desc_key": "DISORDER_GARGANTUAN_DESC",
       "desc_key_raw": "DISORDER_GARGANTUAN_DESC",
-      "stats_base": null,
+      "stats_base": {
+        "con": 5,
+        "str": 10,
+        "spd": -10
+      },
       "stats_level1": null,
       "stats_level2": null,
       "stats_level1_upgraded": null,
@@ -5861,7 +5952,10 @@
       "source_file": "G:/gpak-all/data/passives/disorders.gon",
       "desc_key": "DISORDER_BRAINDEAD_DESC",
       "desc_key_raw": "DISORDER_BRAINDEAD_DESC",
-      "stats_base": null,
+      "stats_base": {
+        "cha": -5,
+        "int": -10
+      },
       "stats_level1": null,
       "stats_level2": null,
       "stats_level1_upgraded": null,
@@ -6110,7 +6204,11 @@
       "source_file": "G:/gpak-all/data/passives/disorders.gon",
       "desc_key": "DISORDER_DOWNSSYNDROME_DESC",
       "desc_key_raw": "DISORDER_DOWNSSYNDROME_DESC",
-      "stats_base": null,
+      "stats_base": {
+        "con": 3,
+        "int": -8,
+        "cha": 7
+      },
       "stats_level1": null,
       "stats_level2": null,
       "stats_level1_upgraded": null,
@@ -6135,7 +6233,11 @@
       "source_file": "G:/gpak-all/data/passives/disorders.gon",
       "desc_key": "DISORDER_TACHYSENSIA_DESC",
       "desc_key_raw": "DISORDER_TACHYSENSIA_DESC",
-      "stats_base": null,
+      "stats_base": {
+        "str": -3,
+        "dex": -3,
+        "spd": 8
+      },
       "stats_level1": null,
       "stats_level2": null,
       "stats_level1_upgraded": null,
@@ -6160,7 +6262,15 @@
       "source_file": "G:/gpak-all/data/passives/disorders.gon",
       "desc_key": "DISORDER_SAVANTSYNDROME_DESC",
       "desc_key_raw": "DISORDER_SAVANTSYNDROME_DESC",
-      "stats_base": null,
+      "stats_base": {
+        "int": 12,
+        "str": -2,
+        "dex": -2,
+        "con": -2,
+        "spd": -2,
+        "cha": -2,
+        "lck": -2
+      },
       "stats_level1": null,
       "stats_level2": null,
       "stats_level1_upgraded": null,
@@ -6188,7 +6298,10 @@
       "source_file": "G:/gpak-all/data/passives/disorders.gon",
       "desc_key": "DISORDER_WILLIAMSSYNDROME_DESC",
       "desc_key_raw": "DISORDER_WILLIAMSSYNDROME_DESC",
-      "stats_base": null,
+      "stats_base": {
+        "int": -5,
+        "cha": 10
+      },
       "stats_level1": null,
       "stats_level2": null,
       "stats_level1_upgraded": null,
@@ -6213,7 +6326,10 @@
       "source_file": "G:/gpak-all/data/passives/disorders.gon",
       "desc_key": "DISORDER_SPINABIFIDA_DESC",
       "desc_key_raw": "DISORDER_SPINABIFIDA_DESC",
-      "stats_base": null,
+      "stats_base": {
+        "dex": 5,
+        "spd": -5
+      },
       "stats_level1": null,
       "stats_level2": null,
       "stats_level1_upgraded": null,
@@ -6269,7 +6385,10 @@
       "source_file": "G:/gpak-all/data/passives/disorders.gon",
       "desc_key": "DISORDER_ADHD_DESC",
       "desc_key_raw": "DISORDER_ADHD_DESC",
-      "stats_base": null,
+      "stats_base": {
+        "spd": 2,
+        "int": 1
+      },
       "stats_level1": null,
       "stats_level2": null,
       "stats_level1_upgraded": null,
@@ -6353,7 +6472,9 @@
       "source_file": "G:/gpak-all/data/passives/disorders.gon",
       "desc_key": "DISORDER_BLESSINGOFGLORG_DESC",
       "desc_key_raw": "DISORDER_BLESSINGOFGLORG_DESC",
-      "stats_base": null,
+      "stats_base": {
+        "con": -2
+      },
       "stats_level1": null,
       "stats_level2": null,
       "stats_level1_upgraded": null,
@@ -6462,7 +6583,9 @@
       "source_file": "G:/gpak-all/data/passives/disorders.gon",
       "desc_key": "DISORDER_CHUNGUS_DESC",
       "desc_key_raw": "DISORDER_CHUNGUS_DESC",
-      "stats_base": null,
+      "stats_base": {
+        "con": 4
+      },
       "stats_level1": null,
       "stats_level2": null,
       "stats_level1_upgraded": null,

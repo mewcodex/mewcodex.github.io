@@ -1,0 +1,1960 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Characters Viewer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --theme: #9f978b;
+            --theme-dark: #7f776b;
+            --theme-light: #c9c1b7;
+            --theme-bg: #efece7;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #efece7 0%, #c9c1b7 100%);
+            min-height: 100vh;
+            padding: 36px;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            box-shadow: inset 0 0 140px rgba(32, 28, 22, 0.6), inset 0 0 300px rgba(32, 28, 22, 0.45);
+            z-index: 10;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid rgba(159, 151, 139, 0.35);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25), 0 0 0 6px rgba(159, 151, 139, 0.18);
+            overflow: hidden;
+            position: relative;
+            z-index: 0;
+        }
+
+        .language-toggle {
+            position: absolute;
+            top: 12px;
+            right: 18px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            z-index: 2;
+            font-size: 0.95em;
+        }
+
+        .language-toggle .lang-link {
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: underline;
+            font-weight: 600;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+        }
+
+        .language-toggle .lang-link.active {
+            color: #fff;
+        }
+
+        .language-toggle .lang-separator {
+            color: rgba(255, 255, 255, 0.65);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+        }
+
+        .header-image {
+            display: block;
+            width: 100%;
+            max-width: 960px;
+            height: 240px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .header-image-wrap {
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(135deg, #9f978b 0%, #7f776b 100%);
+            padding: 12px 16px;
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, #827a6e 0%, #6d6559 100%);
+            border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            padding: 0;
+        }
+
+        .navbar a {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            padding: 14px 32px;
+            font-size: 1em;
+            font-weight: 500;
+            transition: all 0.2s;
+            border-bottom: 3px solid transparent;
+            position: relative;
+        }
+
+        .navbar a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        .navbar a.active {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border-bottom-color: #efece7;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #9f978b 0%, #7f776b 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .controls {
+            padding: 20px;
+            background: #f3f1ee;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .search-wrapper {
+            position: relative;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .controls input,
+        .controls select {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        .controls input {
+            width: 100%;
+            padding-right: 35px;
+        }
+
+        .clear-button {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #999;
+            font-size: 1.3em;
+            cursor: pointer;
+            padding: 0;
+            width: 24px;
+            height: 24px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.2s;
+        }
+
+        .clear-button:hover {
+            background: #e0e0e0;
+            color: #666;
+        }
+
+        .clear-button.visible {
+            display: flex;
+        }
+
+        .controls label {
+            font-weight: 500;
+            color: #666;
+        }
+
+        .visibility-controls {
+            padding: 12px 20px 0;
+            background: #f7f4f0;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .visibility-controls label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #5b534a;
+            font-size: 0.95em;
+        }
+
+        .stats {
+            padding: 20px;
+            background: #f7f4f0;
+            display: flex;
+            gap: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .stat-item {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .stat-label {
+            font-weight: 600;
+            color: #9f978b;
+        }
+
+        .stat-value {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f3f1ee;
+            border-bottom: 2px solid #ddd;
+            color: #333;
+        }
+
+        thead th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            color: #333;
+            white-space: nowrap;
+        }
+
+        thead th.sortable {
+            cursor: pointer;
+            user-select: none;
+            position: relative;
+        }
+
+        thead th.sortable:hover {
+            background: rgba(159, 151, 139, 0.1);
+        }
+
+        th .sort-indicator {
+            margin-left: 5px;
+            font-size: 0.8em;
+            color: #999;
+        }
+
+        th.sort-asc .sort-indicator::after {
+            content: '▲';
+            color: #9f978b;
+        }
+
+        th.sort-desc .sort-indicator::after {
+            content: '▼';
+            color: #9f978b;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid #eee;
+            transition: background 0.2s;
+        }
+
+        tbody tr:hover {
+            background: #f9f9f9;
+        }
+
+        tbody td {
+            padding: 12px 15px;
+            vertical-align: top;
+        }
+
+        .image-cell {
+            width: 130px;
+            text-align: center;
+        }
+
+        .portrait-cell {
+            width: 130px;
+            text-align: center;
+        }
+
+        .portrait-wrap {
+            width: 96px;
+            height: 96px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 1px solid #d6d0c8;
+            border-radius: 6px;
+            background: #f7f4f0;
+        }
+
+        .character-portrait {
+            image-rendering: pixelated;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: crisp-edges;
+            transform-origin: center;
+            display: block;
+            cursor: zoom-in;
+        }
+
+        .portrait-placeholder {
+            width: 96px;
+            height: 96px;
+            border: 2px dashed #ccc;
+            background: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 0.75em;
+            text-align: center;
+            padding: 4px;
+            border-radius: 4px;
+        }
+
+        .passive-icon {
+            width: 120px;
+            height: 55px;
+            cursor: pointer;
+            transition: transform 0.2s;
+            image-rendering: pixelated;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: crisp-edges;
+        }
+
+        .passive-icon:hover {
+            transform: scale(1.2);
+        }
+
+        .passive-icon-placeholder {
+            width: 120px;
+            height: 55px;
+            border: 2px dashed #ccc;
+            background: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 0.75em;
+            text-align: center;
+            padding: 4px;
+            border-radius: 4px;
+        }
+
+        .passive-name,
+        .character-name {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .character-meta {
+            margin-top: 4px;
+            color: #777;
+            font-size: 0.85em;
+            line-height: 1.4;
+        }
+
+        .character-code {
+            margin-top: 2px;
+            color: #8a8378;
+            font-size: 0.8em;
+            font-style: italic;
+        }
+
+        code {
+            background: #e8e8e8;
+            border-radius: 3px;
+            padding: 2px 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #333;
+        }
+
+        .announcement-button {
+            position: fixed;
+            top: 14px;
+            left: 14px;
+            z-index: 1200;
+            background: #9f978b;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 8px 14px;
+            font-size: 0.9em;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+        }
+
+        .announcement-button:hover {
+            background: #7f776b;
+        }
+
+        .announcement-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1300;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .announcement-card {
+            background: #fff;
+            max-width: 560px;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+            border: 1px solid rgba(159, 151, 139, 0.4);
+            overflow: hidden;
+        }
+
+        .announcement-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 20px;
+            background: #f3f1ee;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .announcement-header h2 {
+            font-size: 1.1em;
+            color: #5b534a;
+        }
+
+        .announcement-close {
+            background: none;
+            border: none;
+            font-size: 1.4em;
+            color: #7f776b;
+            cursor: pointer;
+        }
+
+        .announcement-body {
+            padding: 18px 20px 10px;
+            color: #4b453d;
+            line-height: 1.6;
+        }
+
+        .announcement-body pre {
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 10px 12px;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+
+        .announcement-body ul,
+        .announcement-body ol {
+            margin: 8px 0 8px 20px;
+            padding-left: 16px;
+            list-style-position: outside;
+        }
+
+        .announcement-body li {
+            margin: 4px 0;
+        }
+
+        .announcement-body ul ul,
+        .announcement-body ul ol,
+        .announcement-body ol ul,
+        .announcement-body ol ol {
+            margin-top: 4px;
+            margin-bottom: 4px;
+        }
+
+        .announcement-footer {
+            padding: 0 20px 18px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .announcement-lang {
+            display: inline-flex;
+            gap: 8px;
+        }
+
+        .announcement-lang-btn {
+            background: #efece7;
+            border: 1px solid rgba(159, 151, 139, 0.4);
+            color: #5b534a;
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-size: 0.85em;
+            cursor: pointer;
+        }
+
+        .announcement-lang-btn.active {
+            background: #9f978b;
+            color: #fff;
+            border-color: #9f978b;
+        }
+
+        .description {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .character-desc-wrap {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .character-desc-text {
+            flex: 1;
+            min-width: 220px;
+        }
+
+        .character-stat-panel {
+            min-width: 150px;
+            padding: 8px 10px;
+            background: #f7f4f0;
+            border: 1px solid #e2ded8;
+            border-radius: 6px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .stat-chip {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.9em;
+            color: #5b534a;
+        }
+
+        .stat-chip .stat-value {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .description-upgraded {
+            margin-top: 6px;
+        }
+
+        .passive-name-upgraded {
+            margin-top: 8px;
+        }
+
+        .upgrade-block {
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px solid #ddd;
+        }
+
+        .description b,
+        .description strong {
+            font-weight: 700;
+            color: #333;
+        }
+
+        .source-comment {
+            color: #888;
+            font-size: 0.9em;
+            font-style: italic;
+            margin-top: 8px;
+            padding: 8px;
+            background: #f9f9f9;
+            border-left: 3px solid #9f978b;
+            border-radius: 2px;
+        }
+
+        .passive-stats {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 6px;
+            font-size: 0.9em;
+        }
+
+        .passive-stat {
+            display: inline-flex;
+            align-items: center;
+            gap: 3px;
+            color: #666;
+            font-weight: 400;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .passive-stat.positive {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .passive-stat.negative {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .img-icon {
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.2em;
+            margin: 0 2px;
+        }
+
+        .img-icon-stat {
+            filter: brightness(0) saturate(100%);
+        }
+
+        .img-icon-stat.img-icon-no-filter {
+            filter: none;
+        }
+
+        .tag-badge {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(159, 151, 139, 0.18);
+            color: #5b534a;
+            padding: 3px 7px;
+            border-radius: 999px;
+            font-size: 0.85em;
+            margin: 2px 4px 2px 0;
+        }
+
+        .tag-badge.clickable {
+            cursor: pointer;
+        }
+
+        .tag-badge.hidden {
+            background: rgba(159, 151, 139, 0.08);
+            color: #7c7468;
+            border: 1px dashed rgba(159, 151, 139, 0.4);
+        }
+
+        .filter-tags {
+            display: none;
+            padding: 12px 20px;
+            background: #f7f4f0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .filter-tags.visible {
+            display: block;
+        }
+
+        .filter-tags-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .filter-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #efece7;
+            border: 1px solid rgba(159, 151, 139, 0.45);
+            border-radius: 14px;
+            padding: 4px 10px;
+            font-size: 0.9em;
+            color: #5b534a;
+        }
+
+        .filter-tag-label {
+            font-weight: 600;
+            color: #7f776b;
+        }
+
+        .filter-tag-remove {
+            background: none;
+            border: none;
+            color: #7f776b;
+            font-size: 1em;
+            cursor: pointer;
+            padding: 0 4px;
+        }
+
+        .filter-tag-remove:hover {
+            color: #4b453d;
+        }
+
+        .size-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: rgba(159, 151, 139, 0.18);
+            color: #5b534a;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+
+        .size-badge.default {
+            background: rgba(159, 151, 139, 0.08);
+            color: #8a8378;
+            font-weight: 500;
+        }
+
+        .class-cell {
+            width: 120px;
+        }
+
+        .passive-class {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .class-fighter {
+            background: #ff6b6b;
+            color: white;
+        }
+
+        .class-thief {
+            background: #4ecdc4;
+            color: white;
+        }
+
+        .class-tank {
+            background: #95a5a6;
+            color: white;
+        }
+
+        .class-mage {
+            background: #6c5ce7;
+            color: white;
+        }
+
+        .class-medic {
+            background: #fd79a8;
+            color: white;
+        }
+
+        .class-hunter {
+            background: #00b894;
+            color: white;
+        }
+
+        .class-necromancer {
+            background: #2d3436;
+            color: white;
+        }
+
+        .class-butcher {
+            background: #d63031;
+            color: white;
+        }
+
+        .class-monk {
+            background: #fdcb6e;
+            color: #333;
+        }
+
+        .class-druid {
+            background: #55efc4;
+            color: #333;
+        }
+
+        .class-psychic {
+            background: #a29bfe;
+            color: white;
+        }
+
+        .class-tinkerer {
+            background: #ff7675;
+            color: white;
+        }
+
+        .class-jester {
+            background: #ffeaa7;
+            color: #333;
+        }
+
+        .class-colorless {
+            background: #dfe6e9;
+            color: #333;
+        }
+
+        .class-disorder {
+            background: #636e72;
+            color: white;
+        }
+
+        .class-util {
+            background: #b2bec3;
+            color: #333;
+        }
+
+        .frame-cell {
+            width: 80px;
+            color: #999;
+            font-size: 0.9em;
+        }
+
+        .footer {
+            padding: 20px;
+            background: #f5f5f5;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+            line-height: 1.8;
+        }
+
+        .no-results {
+            padding: 40px;
+            text-align: center;
+            color: #999;
+            font-size: 1.1em;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+            image-rendering: pixelated;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: crisp-edges;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .modal-close:hover {
+            color: #ddd;
+        }
+
+
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .controls input,
+            .controls select {
+                width: 100%;
+            }
+
+            .search-wrapper {
+                width: 100%;
+            }
+
+            thead th {
+                padding: 10px 8px;
+                font-size: 0.9em;
+            }
+
+            tbody td {
+                padding: 8px;
+                font-size: 0.9em;
+            }
+
+            .passive-icon {
+                width: 100px;
+                height: 46px;
+            }
+
+            .image-cell {
+                width: 110px;
+            }
+
+            .class-cell {
+                display: none;
+            }
+
+            .language-toggle {
+                top: 10px;
+                right: 12px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <button class="announcement-button" id="announcementButton" type="button">Announcement</button>
+    <div class="announcement-modal" id="announcementModal">
+        <div class="announcement-card" role="dialog" aria-modal="true" aria-labelledby="announcementTitle">
+            <div class="announcement-header">
+                <h2 id="announcementTitle">Announcement</h2>
+                <button class="announcement-close" id="announcementClose" type="button" aria-label="Close">×</button>
+            </div>
+            <div class="announcement-body" id="announcementBody"></div>
+            <div class="announcement-footer">
+                <div class="announcement-lang" role="group" aria-label="Language">
+                    <button type="button" class="announcement-lang-btn" id="announcementLangEn"
+                        data-lang="en">English</button>
+                    <button type="button" class="announcement-lang-btn" id="announcementLangZh"
+                        data-lang="zh">中文</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="language-toggle" role="group" aria-label="Language">
+            <button type="button" class="lang-link" id="langButtonEn" data-lang="en">English</button>
+            <span class="lang-separator">/</span>
+            <button type="button" class="lang-link" id="langButtonZh" data-lang="zh">中文</button>
+        </div>
+        <div class="header-image-wrap">
+            <img src="header.jpg" alt="Mewgenics header" class="header-image">
+        </div>
+        <div class="navbar">
+            <a href="index.html" id="navAbilities">Abilities</a>
+            <a href="passives.html" id="navPassives">Passives</a>
+            <a href="items.html" id="navItems">Items</a>
+            <a href="mutations.html" id="navMutations">Mutations</a>
+            <a href="characters.html" class="active" id="navCharacters">Characters</a>
+        </div>
+        <div class="header">
+            <h1 id="headerTitle">Mewgenics Characters Viewer</h1>
+        </div>
+
+        <div class="controls">
+            <div class="search-wrapper">
+                <input type="text" id="searchInput" placeholder="Search by character name or description...">
+                <button class="clear-button" id="clearButton" title="Clear search">×</button>
+            </div>
+            <select id="factionFilter">
+                <option value="">All Factions</option>
+            </select>
+            <select id="sizeFilter">
+                <option value="">All Sizes</option>
+            </select>
+            <select id="killFilter">
+                <option value="">All Kill Requirements</option>
+            </select>
+        </div>
+
+        <div class="filter-tags" id="filterTags"></div>
+
+        <div class="visibility-controls">
+            <label for="showHiddenToggle">
+                <input type="checkbox" id="showHiddenToggle">
+                <span id="showHiddenLabel">Show Hidden</span>
+            </label>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-label" id="totalLabel">Total Characters:</span>
+                <span class="stat-value" id="totalCount">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label" id="showingLabel">Showing:</span>
+                <span class="stat-value" id="showingCount">0</span>
+            </div>
+        </div>
+
+        <div class="table-wrapper">
+            <table id="charactersTable">
+                <thead>
+                    <tr>
+                        <th id="portraitHeader" style="width: 130px;">Portrait</th>
+                        <th id="nameHeader" class="sortable" style="width: 180px;" onclick="sortBy('name')">
+                            Character<span class="sort-indicator"></span></th>
+                        <th id="descHeader">Description</th>
+                        <th id="tagsHeader" class="sortable" style="width: 180px;" onclick="sortBy('tags')">Tags<span
+                                class="sort-indicator"></span></th>
+                        <th id="factionHeader" class="sortable" style="width: 140px;" onclick="sortBy('faction')">
+                            Faction<span class="sort-indicator"></span></th>
+                        <th id="sizeHeader" style="width: 100px;">Size</th>
+                        <th id="corpseHeader" class="sortable" style="width: 120px;" onclick="sortBy('corpse_health')">
+                            Corpse
+                            Health<span class="sort-indicator"></span></th>
+                        <th id="killHeader" class="sortable" style="width: 140px;" onclick="sortBy('kill_required')">
+                            Kill
+                            Required<span class="sort-indicator"></span></th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <tr>
+                        <td colspan="8" class="no-results" id="loadingMessage">Loading characters...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="footer">
+            <p id="footerSource">Free fan site with data from game character definitions and sprite mappings.</p>
+            <p id="footerCredit">Original game by Edmund McMillen and Tyler Glaiel.</p>
+            <p id="footerAuthor">Created by: Bilibili@Alriph</p>
+            <p id="footerTranslator">Chinese translation: Bilibili@地下丝绒和妮可</p>
+            <p id="footerTools">Tools used: mewgpaks, JPEXS FFDec</p>
+        </div>
+    </div>
+
+    <div id="imageModal" class="modal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script src="announcement.js"></script>
+    <script>
+        let allCharacters = [];
+        let filteredCharacters = [];
+        let currentLanguage = 'en';
+        window.currentLanguage = currentLanguage;
+        let currentSort = { column: null, direction: 'asc' };
+        let characterByKey = new Map();
+        const ANNOUNCEMENT_SEEN_KEY = 'codexAnnouncementSeen_v1';
+
+        // Get language from URL parameter
+        function updateNavbarLinks() {
+            const lang = currentLanguage !== 'en' ? `?lang=${currentLanguage}` : '';
+            document.getElementById('navAbilities').href = `index.html${lang}`;
+            document.getElementById('navPassives').href = `passives.html${lang}`;
+            document.getElementById('navItems').href = `items.html${lang}`;
+            document.getElementById('navMutations').href = `mutations.html${lang}`;
+            document.getElementById('navCharacters').href = `characters.html${lang}`;
+        }
+
+        function getUrlParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Set language in URL parameter
+        function setUrlParameter(name, value) {
+            const url = new URL(window.location);
+            url.searchParams.set(name, value);
+            window.history.replaceState({}, '', url);
+        }
+
+        function setLanguage(lang) {
+            if (!lang || lang === currentLanguage) {
+                return;
+            }
+            currentLanguage = lang;
+            window.currentLanguage = currentLanguage;
+            setUrlParameter('lang', currentLanguage);
+            applyUiLanguage();
+            filterCharacters();
+        }
+
+        // Initialize language from URL if present
+        const urlLang = getUrlParameter('lang');
+        if (urlLang === 'zh' || urlLang === 'en') {
+            currentLanguage = urlLang;
+            window.currentLanguage = currentLanguage;
+        }
+
+        const UI_TEXT = {
+            en: {
+                pageTitle: 'Mewgenics Characters Viewer',
+                headerTitle: 'Mewgenics Characters Viewer',
+                searchPlaceholder: 'Search by character name or description...',
+                navAbilities: 'Abilities',
+                navItems: 'Items',
+                navPassives: 'Passives',
+                navMutations: 'Mutations',
+                navCharacters: 'Characters',
+                languageLabel: 'Language:',
+                languageEnglish: 'English',
+                languageChinese: 'Chinese',
+                allFactions: 'All Factions',
+                allSizes: 'All Sizes',
+                allKillRequired: 'All Kill Requirements',
+                killRequiredYes: 'Yes',
+                killRequiredNo: 'No',
+                killRequiredUnknown: 'Unknown',
+                totalCharacters: 'Total Characters:',
+                showing: 'Showing:',
+                portraitHeader: 'Portrait',
+                nameHeader: 'Character',
+                descHeader: 'Description',
+                tagsHeader: 'Tags',
+                factionHeader: 'Faction',
+                sizeHeader: 'Size',
+                corpseHeader: 'Corpse Health',
+                killHeader: 'Kill Required',
+                loading: 'Loading characters...',
+                noResults: 'No characters found matching your filters.',
+                errorLoading: 'Error loading characters:',
+                solution: 'Solution:',
+                runServer: 'Run the server script to browse the characters:',
+                thenOpen: 'Then open:',
+                footerSource: 'Free fan site with data from game character definitions and sprite mappings.',
+                footerCredit: 'Original game by Edmund McMillen and Tyler Glaiel.',
+                footerAuthor: 'Created by: Bilibili@Alriph',
+                footerTranslator: 'Chinese translation: Bilibili@地下丝绒和妮可',
+                footerTools: 'Tools used: mewgpaks, JPEXS FFDec',
+                statHealth: 'Health',
+                statMovement: 'Movement',
+                statLuck: 'Luck',
+                formLabel: 'Form:',
+                variantOfLabel: 'Variant of:',
+                tagFilterLabel: 'Tag',
+                removeFilter: 'Remove filter',
+                showHidden: 'Show Hidden',
+                spawnedByPlaceholder: '`owner\'s name`',
+                announcementButton: 'Announcement',
+                announcementTitle: 'Announcement',
+                announcementBody: 'Placeholder announcement.',
+            },
+            zh: {
+                pageTitle: 'Mewgenics 角色图鉴',
+                headerTitle: 'Mewgenics 角色图鉴',
+                searchPlaceholder: '按角色名称或描述搜索...',
+                navAbilities: '能力',
+                navItems: '物品',
+                navPassives: '被动',
+                navMutations: '突变',
+                navCharacters: '角色',
+                languageLabel: '语言：',
+                languageEnglish: '英语',
+                languageChinese: '中文',
+                allFactions: '全部阵营',
+                allSizes: '全部尺寸',
+                allKillRequired: '全部击杀要求',
+                killRequiredYes: '是',
+                killRequiredNo: '否',
+                killRequiredUnknown: '未知',
+                totalCharacters: '角色总数：',
+                showing: '显示：',
+                portraitHeader: '头像',
+                nameHeader: '角色',
+                descHeader: '描述',
+                tagsHeader: '标签',
+                factionHeader: '阵营',
+                sizeHeader: '尺寸',
+                corpseHeader: '尸体生命',
+                killHeader: '击杀要求',
+                loading: '正在加载角色...',
+                noResults: '没有找到符合筛选条件的角色。',
+                errorLoading: '加载角色失败：',
+                solution: '解决方法：',
+                runServer: '运行本地服务器脚本以浏览角色：',
+                thenOpen: '然后打开：',
+                footerSource: '这是一个免费同人站点，数据来自游戏角色定义与精灵映射。',
+                footerCredit: '原作游戏作者：Edmund McMillen 与 Tyler Glaiel。',
+                footerAuthor: '制作：Bilibili@Alriph',
+                footerTranslator: '中文翻译：Bilibili@地下丝绒和妮可',
+                footerTools: '工具：mewgpaks，JPEXS FFDec',
+                statHealth: '生命',
+                statMovement: '移动',
+                statLuck: '幸运',
+                formLabel: '形态：',
+                variantOfLabel: '变体：',
+                tagFilterLabel: '标签',
+                removeFilter: '移除筛选',
+                showHidden: '显示隐藏项',
+                spawnedByPlaceholder: '`主人名字`',
+                announcementButton: '公告',
+                announcementTitle: '公告',
+                announcementBody: '公告占位符。',
+            }
+        };
+
+        const FACTION_LABELS = {
+            en: {
+                enemies: 'Enemies',
+                allies: 'Allies',
+                birds: 'Birds',
+                third_party: 'Third Party',
+                none: 'None',
+            },
+            zh: {
+                enemies: '敌方',
+                allies: '盟友',
+                birds: '鸟类',
+                third_party: '第三方',
+                none: '无',
+            }
+        };
+
+        function t(key) {
+            return UI_TEXT[currentLanguage]?.[key] || UI_TEXT.en[key] || key;
+        }
+
+        function getFactionLabel(faction) {
+            if (!faction) {
+                return '';
+            }
+            return FACTION_LABELS[currentLanguage]?.[faction]
+                || FACTION_LABELS.en[faction]
+                || faction;
+        }
+
+        function replaceSpawnedBy(text) {
+            if (typeof text !== 'string' || !text) {
+                return text || '';
+            }
+            return text.replace(/\{SpawnedBy\}/g, t('spawnedByPlaceholder'));
+        }
+
+
+        function applyUiLanguage() {
+            document.title = t('pageTitle');
+            document.getElementById('headerTitle').textContent = t('headerTitle');
+            document.getElementById('searchInput').placeholder = t('searchPlaceholder');
+            document.getElementById('navAbilities').textContent = t('navAbilities');
+            document.getElementById('navItems').textContent = t('navItems');
+            document.getElementById('navPassives').textContent = t('navPassives');
+            document.getElementById('navMutations').textContent = t('navMutations');
+            document.getElementById('navCharacters').textContent = t('navCharacters');
+            document.getElementById('langButtonEn').textContent = t('languageEnglish');
+            document.getElementById('langButtonZh').textContent = t('languageChinese');
+            document.getElementById('totalLabel').textContent = t('totalCharacters');
+            document.getElementById('showingLabel').textContent = t('showing');
+            document.getElementById('portraitHeader').textContent = t('portraitHeader');
+            document.getElementById('nameHeader').innerHTML = t('nameHeader') + '<span class="sort-indicator"></span>';
+            document.getElementById('descHeader').textContent = t('descHeader');
+            document.getElementById('tagsHeader').innerHTML = t('tagsHeader') + '<span class="sort-indicator"></span>';
+            document.getElementById('factionHeader').innerHTML = t('factionHeader') + '<span class="sort-indicator"></span>';
+            document.getElementById('sizeHeader').textContent = t('sizeHeader');
+            document.getElementById('corpseHeader').innerHTML = t('corpseHeader') + '<span class="sort-indicator"></span>';
+            document.getElementById('killHeader').innerHTML = t('killHeader') + '<span class="sort-indicator"></span>';
+            document.getElementById('footerSource').textContent = t('footerSource');
+            document.getElementById('footerCredit').textContent = t('footerCredit');
+            document.getElementById('footerAuthor').textContent = t('footerAuthor');
+            document.getElementById('footerTranslator').textContent = t('footerTranslator');
+            document.getElementById('footerTools').textContent = t('footerTools');
+            document.getElementById('showHiddenLabel').textContent = t('showHidden');
+            document.getElementById('announcementButton').textContent = t('announcementButton');
+            document.getElementById('announcementTitle').textContent = t('announcementTitle');
+            document.getElementById('announcementLangEn').textContent = t('languageEnglish');
+            document.getElementById('announcementLangZh').textContent = t('languageChinese');
+            updateAnnouncementLanguageButtons();
+            loadAnnouncementContent();
+
+            updateNavbarLinks();
+            const factionFilter = document.getElementById('factionFilter');
+            const selectedFaction = factionFilter ? factionFilter.value : '';
+            populateFactionFilter(selectedFaction);
+
+            const sizeFilter = document.getElementById('sizeFilter');
+            const selectedSize = sizeFilter ? sizeFilter.value : '';
+            populateSizeFilter(selectedSize);
+
+            const killFilter = document.getElementById('killFilter');
+            const selectedKill = killFilter ? killFilter.value : '';
+            populateKillFilter(selectedKill);
+
+            const loadingMessage = document.getElementById('loadingMessage');
+            if (loadingMessage) {
+                loadingMessage.textContent = t('loading');
+            }
+
+            document.getElementById('langButtonEn').classList.toggle('active', currentLanguage === 'en');
+            document.getElementById('langButtonZh').classList.toggle('active', currentLanguage === 'zh');
+        }
+
+        async function loadCharacters() {
+            try {
+                const response = await fetch('characters_db.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                allCharacters = data.characters || [];
+                filteredCharacters = allCharacters;
+                buildCharacterMap();
+
+                document.getElementById('totalCount').textContent = allCharacters.length;
+                applyUiLanguage();
+                filterCharacters();
+            } catch (error) {
+                console.error('Error loading characters:', error);
+                const errorMsg = `
+                    <tr><td colspan="6" class="no-results">
+                        <p style="margin-bottom: 10px;"><strong>${escapeHtml(t('errorLoading'))}</strong> ${escapeHtml(error.message)}</p>
+                        <p style="font-size: 0.9em; color: #666; line-height: 1.5;">
+                            <strong>${escapeHtml(t('solution'))}</strong><br>
+                            ${escapeHtml(t('runServer'))}<br>
+                            <code style="background: #f5f5f5; padding: 5px 10px; border-radius: 3px; display: inline-block;">python serve.py</code><br>
+                            <br>
+                            ${escapeHtml(t('thenOpen'))} <code style="background: #f5f5f5; padding: 5px 10px; border-radius: 3px; display: inline-block;">http://localhost:8000/characters.html</code>
+                        </p>
+                    </td></tr>
+                `;
+                document.getElementById('tableBody').innerHTML = errorMsg;
+            }
+        }
+
+        function populateFactionFilter(selectedValue = '') {
+            const factions = [...new Set(allCharacters.map(c => c.faction).filter(Boolean))].sort();
+            const select = document.getElementById('factionFilter');
+            if (!select) {
+                return;
+            }
+            select.innerHTML = '';
+
+            const allOption = document.createElement('option');
+            allOption.value = '';
+            allOption.textContent = t('allFactions');
+            select.appendChild(allOption);
+
+            factions.forEach(faction => {
+                const option = document.createElement('option');
+                option.value = faction;
+                option.textContent = getFactionLabel(faction);
+                select.appendChild(option);
+            });
+
+            select.value = selectedValue;
+        }
+
+        function populateSizeFilter(selectedValue = '') {
+            const sizes = [...new Set(allCharacters.map(c => c.properties?.size || '1x1'))]
+                .filter(Boolean)
+                .sort((a, b) => a.localeCompare(b));
+            const select = document.getElementById('sizeFilter');
+            if (!select) {
+                return;
+            }
+            select.innerHTML = '';
+
+            const allOption = document.createElement('option');
+            allOption.value = '';
+            allOption.textContent = t('allSizes');
+            select.appendChild(allOption);
+
+            sizes.forEach(size => {
+                const option = document.createElement('option');
+                option.value = size;
+                option.textContent = size;
+                select.appendChild(option);
+            });
+
+            select.value = selectedValue;
+        }
+
+        function populateKillFilter(selectedValue = '') {
+            const select = document.getElementById('killFilter');
+            if (!select) {
+                return;
+            }
+            select.innerHTML = '';
+
+            const allOption = document.createElement('option');
+            allOption.value = '';
+            allOption.textContent = t('allKillRequired');
+            select.appendChild(allOption);
+
+            const yesOption = document.createElement('option');
+            yesOption.value = 'true';
+            yesOption.textContent = t('killRequiredYes');
+            select.appendChild(yesOption);
+
+            const noOption = document.createElement('option');
+            noOption.value = 'false';
+            noOption.textContent = t('killRequiredNo');
+            select.appendChild(noOption);
+
+            const unknownOption = document.createElement('option');
+            unknownOption.value = 'unknown';
+            unknownOption.textContent = t('killRequiredUnknown');
+            select.appendChild(unknownOption);
+
+            select.value = selectedValue;
+        }
+
+        function getLocalizedText(texts, fallback) {
+            if (!texts || typeof texts !== 'object') {
+                return fallback || '';
+            }
+            return texts[currentLanguage] || fallback || '';
+        }
+
+        function buildCharacterMap() {
+            characterByKey = new Map();
+            allCharacters.forEach(character => {
+                if (character?.character_key) {
+                    characterByKey.set(character.character_key, character);
+                }
+            });
+        }
+
+        function getCharacterNameByKey(characterKey) {
+            if (!characterKey) {
+                return '';
+            }
+            const [baseKey, ...suffixParts] = characterKey.split(':');
+            const suffix = suffixParts.length ? `:${suffixParts.join(':')}` : '';
+            const character = characterByKey.get(baseKey);
+            if (!character) {
+                return characterKey;
+            }
+            const baseName = getLocalizedText(
+                character.name_texts,
+                character.name_key || character.character_key || baseKey
+            );
+            return `${baseName}${suffix}`;
+        }
+
+        function getCharacterDisplayName(character) {
+            if (!character) {
+                return '';
+            }
+            const localized = replaceSpawnedBy(getLocalizedText(character.name_texts, ''));
+            if (localized) {
+                return localized;
+            }
+            const key = character.name_key || character.character_key || '';
+            if (!key) {
+                return '';
+            }
+            if (character.character_key && character.character_key.includes(':')) {
+                return getCharacterNameByKey(character.character_key);
+            }
+            if (key.includes(':')) {
+                return getCharacterNameByKey(key);
+            }
+            return replaceSpawnedBy(key);
+        }
+
+        function normalizeList(value) {
+            if (Array.isArray(value)) {
+                return value.filter(item => typeof item === 'string' && item.trim() !== '');
+            }
+            if (typeof value === 'string' && value.trim() !== '') {
+                return [value];
+            }
+            return [];
+        }
+
+        function getCombinedTags(character) {
+            const tags = normalizeList(character?.tags);
+            const hiddenTags = normalizeList(character?.hidden_tags);
+            return { tags, hiddenTags };
+        }
+
+        function formatTags(character) {
+            const { tags, hiddenTags } = getCombinedTags(character);
+            if (tags.length === 0 && hiddenTags.length === 0) {
+                return '-';
+            }
+            const tagHtml = tags.map(tag => {
+                const tagArg = JSON.stringify(tag);
+                return `<span class="tag-badge clickable" onclick='searchByTag(${tagArg})'>${escapeHtml(tag)}</span>`;
+            }).join('');
+            const hiddenHtml = hiddenTags.map(tag => `<span class="tag-badge hidden" title="Hidden tag">${escapeHtml(tag)}</span>`).join('');
+            return `${tagHtml}${hiddenHtml}`;
+        }
+
+        function getHealth(character) {
+            return character?.health ?? character?.properties?.health ?? character?.properties?.base_health ?? character?.properties?.initial_health ?? null;
+        }
+
+        function getMovement(character) {
+            return character?.movement ?? character?.properties?.movement ?? character?.properties?.base_movement ?? null;
+        }
+
+        function getLuck(character) {
+            return character?.stats?.luck ?? character?.stats?.lck ?? null;
+        }
+
+        const NO_FILTER_ICON_NAMES = new Set(['health', 'movement', 'hp']);
+
+        function getIconClass(iconName, isShield = false) {
+            const baseClass = 'img-icon' + (isShield ? '' : ' img-icon-stat');
+            return NO_FILTER_ICON_NAMES.has(iconName)
+                ? `${baseClass} img-icon-no-filter`
+                : baseClass;
+        }
+
+        function formatStatChip(labelKey, value, iconName) {
+            const displayValue = value === null || value === undefined ? '-' : value;
+            const className = getIconClass(iconName);
+            return `<div class="stat-chip" title="${escapeHtml(t(labelKey))}">
+                        <img src="res/fonticon/${iconName}.png" alt="${escapeHtml(t(labelKey))}" class="${className}" onerror="this.style.display='none'">
+                        <span class="stat-value">${escapeHtml(displayValue.toString())}</span>
+                    </div>`;
+        }
+
+        function formatStatPanel(character) {
+            const health = getHealth(character);
+            const movement = getMovement(character);
+            const luck = getLuck(character);
+            return `<div class="character-stat-panel">
+                        ${formatStatChip('statHealth', health, 'health')}
+                        ${formatStatChip('statMovement', movement, 'movement')}
+                        ${formatStatChip('statLuck', luck, 'lck')}
+                    </div>`;
+        }
+
+        function formatMetaLine(parts) {
+            if (!parts.length) {
+                return '';
+            }
+            const content = parts.map(part => escapeHtml(part)).join(' · ');
+            return `<div class="character-meta">${content}</div>`;
+        }
+
+        function formatKillRequired(value) {
+            if (value === true) {
+                return t('killRequiredYes');
+            }
+            if (value === false) {
+                return t('killRequiredNo');
+            }
+            return t('killRequiredUnknown');
+        }
+
+        function displayCharacters(characters) {
+            const tbody = document.getElementById('tableBody');
+            if (!characters || characters.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="8" class="no-results">${escapeHtml(t('noResults'))}</td></tr>`;
+                document.getElementById('showingCount').textContent = '0';
+                return;
+            }
+
+            tbody.innerHTML = characters.map(character => {
+                const localizedName = getCharacterDisplayName(character);
+                const localizedDescription = getLocalizedText(
+                    character.tooltip_texts,
+                    character.tooltip_key || ''
+                );
+                const description = replaceSpawnedBy(localizedDescription || '-')
+                const tagsHtml = formatTags(character);
+                const statPanel = formatStatPanel(character);
+                const corpseHealth = character.properties?.corpse_health ?? '-';
+                const killRequired = formatKillRequired(character.kill_required);
+                const sizeValue = character.properties?.size || '1x1';
+                const sizeClass = sizeValue === '1x1' ? 'size-badge default' : 'size-badge';
+                const portraitScale = (character.scale ?? 1) * 0.7;
+                const modalNameArg = JSON.stringify(localizedName || character.character_key || '');
+                const portraitHtml = character.image_path
+                    ? `<div class="portrait-wrap"><img src="${escapeHtml(character.image_path)}" alt="${escapeHtml(localizedName)}" class="character-portrait" style="transform: scale(${portraitScale});" onclick='openModal(this.src, ${modalNameArg})' onerror="this.style.display='none'"></div>`
+                    : `<div class="portrait-placeholder">No Portrait</div>`;
+                const fallbackCodeHtml = character.portrait_is_fallback
+                    ? `<div class="character-code">${escapeHtml(character.character_key || '')}</div>`
+                    : '';
+
+                const gfxMeta = [];
+                if (character.form_name) {
+                    gfxMeta.push(`${t('formLabel')} ${character.form_name}`);
+                }
+                if (character.variant_of) {
+                    const baseName = getCharacterNameByKey(character.variant_of);
+                    if (currentLanguage === 'zh') {
+                        gfxMeta.push(`${baseName} 的变体`);
+                    } else {
+                        gfxMeta.push(`${t('variantOfLabel')} ${baseName}`);
+                    }
+                }
+
+                return `
+                    <tr>
+                        <td class="portrait-cell">${portraitHtml}</td>
+                        <td>
+                            <div class="character-name">${parseRichText(localizedName)}</div>
+                            ${fallbackCodeHtml}
+                            ${formatMetaLine(gfxMeta)}
+                        </td>
+                        <td>
+                            <div class="character-desc-wrap">
+                                <div class="character-desc-text">
+                                    <div class="description">${parseRichText(description)}</div>
+                                </div>
+                                ${statPanel}
+                            </div>
+                        </td>
+                        <td>${tagsHtml}</td>
+                        <td>${escapeHtml(getFactionLabel(character.faction) || '-')}</td>
+                        <td><span class="${sizeClass}">${escapeHtml(sizeValue)}</span></td>
+                        <td>${escapeHtml(corpseHealth.toString())}</td>
+                        <td>${escapeHtml(killRequired)}</td>
+                    </tr>
+                `;
+            }).join('');
+
+            document.getElementById('showingCount').textContent = characters.length;
+        }
+
+        function sortBy(column) {
+            // Toggle direction if clicking same column, otherwise default to ascending
+            if (currentSort.column === column) {
+                currentSort.direction = currentSort.direction === 'asc' ? 'desc' : 'asc';
+            } else {
+                currentSort.column = column;
+                currentSort.direction = 'asc';
+            }
+
+            // Update sort indicators
+            document.querySelectorAll('thead th').forEach(th => {
+                th.classList.remove('sort-asc', 'sort-desc');
+            });
+            const headerMap = {
+                name: 'nameHeader',
+                tags: 'tagsHeader',
+                faction: 'factionHeader',
+                corpse_health: 'corpseHeader',
+                kill_required: 'killHeader'
+            };
+            const header = document.getElementById(headerMap[column]);
+            if (header) {
+                header.classList.add(`sort-${currentSort.direction}`);
+            }
+            displayCharacters(sortCharacters(filteredCharacters));
+        }
+
+        function sortCharacters(characters) {
+            const sorted = [...characters].sort((a, b) => {
+                let valueA = '';
+                let valueB = '';
+
+                switch (currentSort.column) {
+                    case 'tags': {
+                        const tagA = getCombinedTags(a);
+                        const tagB = getCombinedTags(b);
+                        valueA = [...tagA.tags, ...tagA.hiddenTags].join(', ');
+                        valueB = [...tagB.tags, ...tagB.hiddenTags].join(', ');
+                        break;
+                    }
+                    case 'faction':
+                        valueA = a.faction || '';
+                        valueB = b.faction || '';
+                        break;
+                    case 'corpse_health':
+                        valueA = a.properties?.corpse_health ?? -1;
+                        valueB = b.properties?.corpse_health ?? -1;
+                        break;
+                    case 'kill_required':
+                        valueA = a.kill_required === true ? 2 : (a.kill_required === false ? 1 : 0);
+                        valueB = b.kill_required === true ? 2 : (b.kill_required === false ? 1 : 0);
+                        break;
+                    case 'name':
+                    default:
+                        valueA = getCharacterDisplayName(a);
+                        valueB = getCharacterDisplayName(b);
+                        break;
+                }
+
+                if (valueA < valueB) return currentSort.direction === 'asc' ? -1 : 1;
+                if (valueA > valueB) return currentSort.direction === 'asc' ? 1 : -1;
+                return 0;
+            });
+            return sorted;
+        }
+
+        function updateClearButtonVisibility() {
+            const searchInput = document.getElementById('searchInput');
+            const clearButton = document.getElementById('clearButton');
+
+            if (searchInput.value) {
+                clearButton.classList.add('visible');
+            } else {
+                clearButton.classList.remove('visible');
+            }
+        }
+
+        function clearSearch() {
+            document.getElementById('searchInput').value = '';
+            updateClearButtonVisibility();
+            filterCharacters();
+        }
+
+        function searchByTag(tag) {
+            if (!tag) {
+                return;
+            }
+            const searchInput = document.getElementById('searchInput');
+            searchInput.value = `#${tag} `;
+            updateClearButtonVisibility();
+            filterCharacters();
+        }
+
+        function removeTagFilter() {
+            document.getElementById('searchInput').value = '';
+            updateClearButtonVisibility();
+            filterCharacters();
+        }
+
+        function updateFilterTags() {
+            const search = document.getElementById('searchInput').value;
+            const tagsContainer = document.getElementById('filterTags');
+            if (!tagsContainer) {
+                return;
+            }
+
+            tagsContainer.innerHTML = '';
+
+            if (search.startsWith('#')) {
+                const tagSearch = search.substring(1).trim();
+                if (tagSearch) {
+                    let html = '<div class="filter-tags-header">';
+                    html += `
+                        <div class="filter-tag">
+                            <span class="filter-tag-label">${escapeHtml(t('tagFilterLabel'))}:</span>
+                            <span>${escapeHtml(tagSearch)}</span>
+                            <button class="filter-tag-remove" onclick="removeTagFilter()" title="${escapeHtml(t('removeFilter'))}">×</button>
+                        </div>
+                    `;
+                    html += '</div>';
+                    tagsContainer.innerHTML = html;
+                    tagsContainer.classList.add('visible');
+                    return;
+                }
+            }
+
+            tagsContainer.classList.remove('visible');
+        }
+
+        function hasAnyLocalizedText(texts) {
+            if (!texts || typeof texts !== 'object') {
+                return false;
+            }
+            return Object.values(texts).some(value => typeof value === 'string' && value.trim() !== '');
+        }
+
+        function hasPartialLocalizedName(character) {
+            const key = character?.character_key || '';
+            if (!key.includes(':')) {
+                return false;
+            }
+            const baseKey = key.split(':', 1)[0];
+            const baseCharacter = characterByKey.get(baseKey);
+            if (!baseCharacter) {
+                return false;
+            }
+            return hasAnyLocalizedText(baseCharacter.name_texts);
+        }
+
+        function isHiddenCharacter(character) {
+            const hasImage = !!character?.image_path;
+            const hasName = hasAnyLocalizedText(character?.name_texts) || hasPartialLocalizedName(character);
+            return !hasImage || !hasName;
+        }
+
+        function openModal(src, name) {
+            const modal = document.getElementById('imageModal');
+            const img = document.getElementById('modalImage');
+            img.src = src;
+            img.alt = name;
+            modal.style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+
+        document.getElementById('imageModal').onclick = function (event) {
+            if (event.target === this) {
+                closeModal();
+            }
+        }
+
+
+        // Parse rich text markup in descriptions
+        function parseRichText(text) {
+            if (!text) return '';
+
+            // Escape HTML first
+            let html = escapeHtml(text);
+
+            // Handle [s:.7]...[/s] for italics
+            html = html.replace(/\[s:[^\]]+\]([\s\S]*?)\[\/s\]/g, '<i>$1</i>');
+
+            // Handle [b]...[/b] for bold (allow multiline content)
+            html = html.replace(/\[b\]([\s\S]*?)\[\/b\]/g, '<b>$1</b>');
+
+            // Handle markdown-style `code`
+            html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
+
+            // Handle [img:xxx] placeholders
+            // Shield icons (shield, divineshield) stay white; stat icons use CSS filter to be black
+            html = html.replace(/\[img:([^\]]+)\]/g, function (match, iconName) {
+                const iconMap = { 'con': 'constitution' };
+                const mappedName = iconMap[iconName] || iconName;
+                const isShield = iconName === 'shield' || iconName === 'divineshield';
+                const className = getIconClass(mappedName, isShield);
+
+                return `<img src="res/fonticon/${mappedName}.png" alt="${iconName}" title="${iconName}" class="${className}" onerror="this.style.display='none'">`;
+            });
+
+            // Handle newlines
+            html = html.replace(/\n/g, '<br>');
+
+            return html;
+        }
+
+        // Filter passives
+        function filterCharacters() {
+            const search = document.getElementById('searchInput').value.toLowerCase();
+            const factionFilter = document.getElementById('factionFilter').value;
+            const sizeFilter = document.getElementById('sizeFilter').value;
+            const killFilter = document.getElementById('killFilter').value;
+            const tagSearch = search.startsWith('#') ? search.substring(1).trim() : '';
+            const showHidden = document.getElementById('showHiddenToggle')?.checked;
+
+            filteredCharacters = allCharacters.filter(character => {
+                const localizedName = getCharacterDisplayName(character).toLowerCase();
+                const localizedDescription = replaceSpawnedBy(getLocalizedText(
+                    character.tooltip_texts,
+                    character.tooltip_key || ''
+                )).toLowerCase();
+                const tagSet = getCombinedTags(character);
+                const tagText = [...tagSet.tags, ...tagSet.hiddenTags].join(' ').toLowerCase();
+                const movieclip = (character.movieclip || '').toLowerCase();
+                let matchesSearch = true;
+                if (tagSearch) {
+                    matchesSearch = tagText.includes(tagSearch);
+                } else {
+                    matchesSearch = localizedName.includes(search)
+                        || localizedDescription.includes(search)
+                        || tagText.includes(search)
+                        || movieclip.includes(search)
+                        || (character.name_key || '').toLowerCase().includes(search)
+                        || (character.tooltip_key || '').toLowerCase().includes(search)
+                        || (character.character_key || '').toLowerCase().includes(search);
+                }
+
+                let matchesFaction = true;
+                if (factionFilter) {
+                    matchesFaction = character.faction === factionFilter;
+                }
+
+                let matchesSize = true;
+                if (sizeFilter) {
+                    const sizeValue = character.properties?.size || '1x1';
+                    matchesSize = sizeValue === sizeFilter;
+                }
+
+                let matchesKill = true;
+                if (killFilter) {
+                    if (killFilter === 'unknown') {
+                        matchesKill = character.kill_required === null || character.kill_required === undefined;
+                    } else if (killFilter === 'true') {
+                        matchesKill = character.kill_required === true;
+                    } else if (killFilter === 'false') {
+                        matchesKill = character.kill_required === false;
+                    }
+                }
+
+                const hiddenOk = showHidden || !isHiddenCharacter(character);
+                return matchesSearch && matchesFaction && matchesSize && matchesKill && hiddenOk;
+            });
+
+            updateFilterTags();
+            displayCharacters(sortCharacters(filteredCharacters));
+        }
+
+        // HTML escape function
+        function escapeHtml(text) {
+            if (!text) return '';
+            const map = {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#039;'
+            };
+            return text.replace(/[&<>"']/g, m => map[m]);
+        }
+
+        // Event listeners
+        document.getElementById('searchInput').addEventListener('input', () => {
+            updateClearButtonVisibility();
+            filterCharacters();
+        });
+        document.getElementById('clearButton').addEventListener('click', clearSearch);
+        document.getElementById('factionFilter').addEventListener('change', filterCharacters);
+        document.getElementById('sizeFilter').addEventListener('change', filterCharacters);
+        document.getElementById('killFilter').addEventListener('change', filterCharacters);
+        document.getElementById('showHiddenToggle').addEventListener('change', filterCharacters);
+        document.querySelectorAll('.lang-link').forEach(button => {
+            button.addEventListener('click', () => {
+                const selectedLang = button.getAttribute('data-lang');
+                setLanguage(selectedLang);
+            });
+        });
+
+        // Apply language immediately when DOM is ready (before data loads)
+        document.addEventListener('DOMContentLoaded', () => {
+            applyUiLanguage();
+            initAnnouncement();
+            maybeShowAnnouncement();
+        });
+
+        // Load on page load
+        window.addEventListener('load', loadCharacters);
+    </script>
+</body>
+
+</html>

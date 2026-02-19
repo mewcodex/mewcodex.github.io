@@ -344,6 +344,140 @@
             color: #333;
         }
 
+        code {
+            background: #e8e8e8;
+            border-radius: 3px;
+            padding: 2px 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #333;
+        }
+
+        .announcement-button {
+            position: fixed;
+            top: 14px;
+            left: 14px;
+            z-index: 1200;
+            background: #9f978b;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 8px 14px;
+            font-size: 0.9em;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+        }
+
+        .announcement-button:hover {
+            background: #7f776b;
+        }
+
+        .announcement-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1300;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .announcement-card {
+            background: #fff;
+            max-width: 560px;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+            border: 1px solid rgba(159, 151, 139, 0.4);
+            overflow: hidden;
+        }
+
+        .announcement-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 20px;
+            background: #f3f1ee;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .announcement-header h2 {
+            font-size: 1.1em;
+            color: #5b534a;
+        }
+
+        .announcement-close {
+            background: none;
+            border: none;
+            font-size: 1.4em;
+            color: #7f776b;
+            cursor: pointer;
+        }
+
+        .announcement-body {
+            padding: 18px 20px 10px;
+            color: #4b453d;
+            line-height: 1.6;
+        }
+
+        .announcement-body pre {
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 10px 12px;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+
+        .announcement-body ul,
+        .announcement-body ol {
+            margin: 8px 0 8px 20px;
+            padding-left: 16px;
+            list-style-position: outside;
+        }
+
+        .announcement-body li {
+            margin: 4px 0;
+        }
+
+        .announcement-body ul ul,
+        .announcement-body ul ol,
+        .announcement-body ol ul,
+        .announcement-body ol ol {
+            margin-top: 4px;
+            margin-bottom: 4px;
+        }
+
+        .announcement-footer {
+            padding: 0 20px 18px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .announcement-lang {
+            display: inline-flex;
+            gap: 8px;
+        }
+
+        .announcement-lang-btn {
+            background: #efece7;
+            border: 1px solid rgba(159, 151, 139, 0.4);
+            color: #5b534a;
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-size: 0.85em;
+            cursor: pointer;
+        }
+
+        .announcement-lang-btn.active {
+            background: #9f978b;
+            color: #fff;
+            border-color: #9f978b;
+        }
+
         .description {
             color: #555;
             line-height: 1.6;
@@ -415,6 +549,10 @@
 
         .img-icon-stat {
             filter: brightness(0) saturate(100%);
+        }
+
+        .img-icon-stat.img-icon-no-filter {
+            filter: none;
         }
 
         .class-cell {
@@ -641,6 +779,24 @@
 </head>
 
 <body>
+    <button class="announcement-button" id="announcementButton" type="button">Announcement</button>
+    <div class="announcement-modal" id="announcementModal">
+        <div class="announcement-card" role="dialog" aria-modal="true" aria-labelledby="announcementTitle">
+            <div class="announcement-header">
+                <h2 id="announcementTitle">Announcement</h2>
+                <button class="announcement-close" id="announcementClose" type="button" aria-label="Close">×</button>
+            </div>
+            <div class="announcement-body" id="announcementBody"></div>
+            <div class="announcement-footer">
+                <div class="announcement-lang" role="group" aria-label="Language">
+                    <button type="button" class="announcement-lang-btn" id="announcementLangEn"
+                        data-lang="en">English</button>
+                    <button type="button" class="announcement-lang-btn" id="announcementLangZh"
+                        data-lang="zh">中文</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="language-toggle" role="group" aria-label="Language">
             <button type="button" class="lang-link" id="langButtonEn" data-lang="en">English</button>
@@ -655,6 +811,7 @@
             <a href="passives.html" class="active" id="navPassives">Passives</a>
             <a href="items.html" id="navItems">Items</a>
             <a href="mutations.html" id="navMutations">Mutations</a>
+            <a href="characters.html" id="navCharacters">Characters</a>
         </div>
         <div class="header">
             <h1 id="headerTitle">Mewgenics Passive Abilities Viewer</h1>
@@ -722,12 +879,15 @@
         <img class="modal-content" id="modalImage">
     </div>
 
+    <script src="announcement.js"></script>
     <script>
         let allPassives = [];
         let filteredPassives = [];
         let currentLanguage = 'en';
+        window.currentLanguage = currentLanguage;
         let currentSort = { column: null, direction: 'asc' };
         let editorNotes = {};
+        const ANNOUNCEMENT_SEEN_KEY = 'codexAnnouncementSeen_v1';
 
         // Get language from URL parameter
         function updateNavbarLinks() {
@@ -736,6 +896,7 @@
             document.getElementById('navPassives').href = `passives.html${lang}`;
             document.getElementById('navItems').href = `items.html${lang}`;
             document.getElementById('navMutations').href = `mutations.html${lang}`;
+            document.getElementById('navCharacters').href = `characters.html${lang}`;
         }
 
         function getUrlParameter(name) {
@@ -750,10 +911,22 @@
             window.history.replaceState({}, '', url);
         }
 
+        function setLanguage(lang) {
+            if (!lang || lang === currentLanguage) {
+                return;
+            }
+            currentLanguage = lang;
+            window.currentLanguage = currentLanguage;
+            setUrlParameter('lang', currentLanguage);
+            applyUiLanguage();
+            filterPassives();
+        }
+
         // Initialize language from URL if present
         const urlLang = getUrlParameter('lang');
         if (urlLang === 'zh' || urlLang === 'en') {
             currentLanguage = urlLang;
+            window.currentLanguage = currentLanguage;
         }
 
         const UI_TEXT = {
@@ -765,6 +938,7 @@
                 navItems: 'Items',
                 navPassives: 'Passives',
                 navMutations: 'Mutations',
+                navCharacters: 'Characters',
                 languageLabel: 'Language:',
                 languageEnglish: 'English',
                 languageChinese: 'Chinese',
@@ -791,6 +965,9 @@
                 footerAuthor: 'Created by: Bilibili@Alriph',
                 footerTranslator: 'Chinese translation: Bilibili@地下丝绒和妮可',
                 footerTools: 'Tools used: mewgpaks, JPEXS FFDec',
+                announcementButton: 'Announcement',
+                announcementTitle: 'Announcement',
+                announcementBody: 'Placeholder announcement.',
             },
             zh: {
                 pageTitle: 'Mewgenics 被动图鉴',
@@ -800,6 +977,7 @@
                 navItems: '物品',
                 navPassives: '被动',
                 navMutations: '突变',
+                navCharacters: '角色',
                 languageLabel: '语言：',
                 languageEnglish: '英语',
                 languageChinese: '中文',
@@ -826,6 +1004,9 @@
                 footerAuthor: '制作：Bilibili@Alriph',
                 footerTranslator: '中文翻译：Bilibili@地下丝绒和妮可',
                 footerTools: '工具：mewgpaks，JPEXS FFDec',
+                announcementButton: '公告',
+                announcementTitle: '公告',
+                announcementBody: '公告占位符。',
             }
         };
 
@@ -872,6 +1053,7 @@
             return UI_TEXT[currentLanguage]?.[key] || UI_TEXT.en[key] || key;
         }
 
+
         function applyUiLanguage() {
             document.title = t('pageTitle');
             document.getElementById('headerTitle').textContent = t('headerTitle');
@@ -880,6 +1062,7 @@
             document.getElementById('navItems').textContent = t('navItems');
             document.getElementById('navPassives').textContent = t('navPassives');
             document.getElementById('navMutations').textContent = t('navMutations');
+            document.getElementById('navCharacters').textContent = t('navCharacters');
             document.getElementById('langButtonEn').textContent = t('languageEnglish');
             document.getElementById('langButtonZh').textContent = t('languageChinese');
             document.getElementById('showHiddenLabel').textContent = t('showHidden');
@@ -896,6 +1079,12 @@
             document.getElementById('footerAuthor').textContent = t('footerAuthor');
             document.getElementById('footerTranslator').textContent = t('footerTranslator');
             document.getElementById('footerTools').textContent = t('footerTools');
+            document.getElementById('announcementButton').textContent = t('announcementButton');
+            document.getElementById('announcementTitle').textContent = t('announcementTitle');
+            document.getElementById('announcementLangEn').textContent = t('languageEnglish');
+            document.getElementById('announcementLangZh').textContent = t('languageChinese');
+            updateAnnouncementLanguageButtons();
+            loadAnnouncementContent();
 
             updateNavbarLinks();
             const classFilter = document.getElementById('classFilter');
@@ -1029,6 +1218,7 @@
             }
 
             const statOrder = ['str', 'dex', 'int', 'con', 'cha', 'lck', 'spd', 'shield', 'divine_shield', 'hp'];
+            const noFilterIcons = new Set(['health', 'movement', 'hp']);
             const statIconMap = {
                 'str': 'str',
                 'dex': 'dex',
@@ -1048,7 +1238,10 @@
                     const value = statsObj[stat];
                     const iconFile = statIconMap[stat];
                     const isShield = stat === 'shield' || stat === 'divine_shield';
-                    const className = 'img-icon' + (isShield ? '' : ' img-icon-stat');
+                    const baseClass = 'img-icon' + (isShield ? '' : ' img-icon-stat');
+                    const className = noFilterIcons.has(iconFile)
+                        ? `${baseClass} img-icon-no-filter`
+                        : baseClass;
                     const sign = value > 0 ? '+' : '';
                     const colorClass = value > 0 ? 'positive' : (value < 0 ? 'negative' : '');
 
@@ -1090,6 +1283,17 @@
                 const upgradedStats = { ...(passive.stats_base || {}), ...(passive.stats_level2 || {}) };
                 const statsHtml = formatStats(baseStats);
                 const upgradedStatsHtml = hasUpgraded ? formatStats(upgradedStats) : '';
+                const hasDescription = !!(localizedDescription && localizedDescription.trim());
+                const hasDescription2 = !!(localizedDescription2 && localizedDescription2.trim());
+                const descriptionHtml = hasDescription
+                    ? `<div class="description">${parseRichText(localizedDescription)}</div>`
+                    : (statsHtml ? '' : `<div class="description">${parseRichText('N/A')}</div>`);
+                const upgradedDescriptionHtml = hasDescription2
+                    ? `<div class="description description-upgraded">${parseRichText(localizedDescription2)}</div>`
+                    : (upgradedStatsHtml ? '' : `<div class="description description-upgraded">${parseRichText('N/A')}</div>`);
+                const upgradeBlockHtml = hasUpgraded && (upgradedStatsHtml || upgradedDescriptionHtml)
+                    ? `<div class="upgrade-block">${upgradedStatsHtml}${upgradedDescriptionHtml}</div>`
+                    : '';
 
                 // Get notes if present
                 const notesHtml = passive.desc_notes ? `<div class="source-comment">${escapeHtml(t('sourceCommentsLabel'))} ${escapeHtml(passive.desc_notes)}</div>` : '';
@@ -1114,8 +1318,8 @@
                         </td>
                         <td>
                             ${statsHtml}
-                            <div class="description">${parseRichText(localizedDescription || 'N/A')}</div>
-                            ${hasUpgraded ? `<div class="upgrade-block">${upgradedStatsHtml}<div class="description description-upgraded">${parseRichText(localizedDescription2 || 'N/A')}</div></div>` : ''}
+                            ${descriptionHtml}
+                            ${upgradeBlockHtml}
                             ${notesHtml}
                             ${editorHtml}
                         </td>
@@ -1200,12 +1404,19 @@
             // Shield icons (shield, divineshield) stay white; stat icons use CSS filter to be black
             html = html.replace(/\[img:([^\]]+)\]/g, function (match, iconName) {
                 const iconMap = { 'con': 'constitution' };
+                const noFilterIcons = new Set(['health', 'movement', 'hp']);
                 const mappedName = iconMap[iconName] || iconName;
                 const isShield = iconName === 'shield' || iconName === 'divineshield';
-                const className = 'img-icon' + (isShield ? '' : ' img-icon-stat');
+                const baseClass = 'img-icon' + (isShield ? '' : ' img-icon-stat');
+                const className = noFilterIcons.has(mappedName)
+                    ? `${baseClass} img-icon-no-filter`
+                    : baseClass;
 
                 return `<img src="res/fonticon/${mappedName}.png" alt="${iconName}" title="${iconName}" class="${className}" onerror="this.style.display='none'">`;
             });
+
+            // Handle backticks for inline code blocks
+            html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
 
             // Handle newlines
             html = html.replace(/\n/g, '<br>');
@@ -1259,6 +1470,7 @@
             }
         }
 
+
         // HTML escape function
         function escapeHtml(text) {
             if (!text) return '';
@@ -1282,13 +1494,7 @@
         document.querySelectorAll('.lang-link').forEach(button => {
             button.addEventListener('click', () => {
                 const selectedLang = button.getAttribute('data-lang');
-                if (!selectedLang || selectedLang === currentLanguage) {
-                    return;
-                }
-                currentLanguage = selectedLang;
-                setUrlParameter('lang', currentLanguage);
-                applyUiLanguage();
-                filterPassives();
+                setLanguage(selectedLang);
             });
         });
         document.getElementById('showHiddenToggle').addEventListener('change', filterPassives);
@@ -1296,6 +1502,8 @@
         // Apply language immediately when DOM is ready (before data loads)
         document.addEventListener('DOMContentLoaded', () => {
             applyUiLanguage();
+            initAnnouncement();
+            maybeShowAnnouncement();
         });
 
         // Load on page load
