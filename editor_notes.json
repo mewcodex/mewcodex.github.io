@@ -578,5 +578,9 @@
     "Kamikazee": {
         "en": "Deal 5 explosion damage and 1 knockback in a 1-tile radius square around the cat.",
         "zh": "对半径1格的方形范围造成5点爆炸类型伤害和1点击退。"
+    },
+    "Pliers": {
+        "zh": "隐藏效果：20%几率获得“臼齿”。",
+        "en": "Hidden effect: 20% chance to gain 'Molars'."
     }
 }
