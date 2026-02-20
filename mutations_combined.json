@@ -6773,7 +6773,7 @@
       },
       "description_texts": {
         "en": "+1 range, +1 reach.",
-        "zh": "+1 \u5c04\u7a0b\uff0c+1 \u5ef6\u4f38\u3002"
+        "zh": "+1 \u5c04\u7a0b\uff0c+1 \u79fb\u52a8\u8ddd\u79bb\u3002"
       },
       "desc_key": "MUTATION_EYES_348_DESC",
       "stats": {},
@@ -11462,7 +11462,7 @@
       },
       "description_texts": {
         "en": "+1 range. +1 reach.",
-        "zh": "+1 \u5c04\u7a0b\u3002+1 \u5ef6\u4f38\u3002"
+        "zh": "+1 \u5c04\u7a0b\u3002+1 \u79fb\u52a8\u8ddd\u79bb\u3002"
       },
       "desc_key": "MUTATION_HEAD_900_DESC",
       "stats": {

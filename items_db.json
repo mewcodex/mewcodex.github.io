@@ -264,7 +264,7 @@
     "description": "Units that contact you are knocked back 2 tiles.",
     "description_texts": {
       "en": "Units that contact you are knocked back 2 tiles.",
-      "zh": "接触你的单位会被击退 2 个地块。\n"
+      "zh": "接触你的单位会被击退 2 个地块。"
     },
     "kind": "head",
     "rarity": "common",
@@ -293,7 +293,7 @@
     "description": "Units that contact you are knocked back 2 tiles.",
     "description_texts": {
       "en": "Units that contact you are knocked back 2 tiles.",
-      "zh": "接触你的单位会被击退 2 个地块。\n"
+      "zh": "接触你的单位会被击退 2 个地块。"
     },
     "kind": "face",
     "rarity": "common",
@@ -322,7 +322,7 @@
     "description": "Units that contact you are knocked back 2 tiles.",
     "description_texts": {
       "en": "Units that contact you are knocked back 2 tiles.",
-      "zh": "接触你的单位会被击退 2 个地块。\n"
+      "zh": "接触你的单位会被击退 2 个地块。"
     },
     "kind": "neck",
     "rarity": "common",
@@ -351,7 +351,7 @@
     "description": "+1 Health Regen.\n5% chance to spawn a Flea Familiar at the end of your turn.",
     "description_texts": {
       "en": "+1 Health Regen.\n5% chance to spawn a Flea Familiar at the end of your turn.",
-      "zh": "+1 生命恢复。\n你的\n回合结束时有 5% 几率生成一只跳蚤使魔。\n"
+      "zh": "+1 生命恢复。\n你的\n回合结束时有 5% 几率生成一只跳蚤使魔。"
     },
     "kind": "head",
     "rarity": "common",
@@ -380,7 +380,7 @@
     "description": "+1 Health Regen.\n5% chance to spawn a Flea Familiar at the end of your turn.",
     "description_texts": {
       "en": "+1 Health Regen.\n5% chance to spawn a Flea Familiar at the end of your turn.",
-      "zh": "+1 生命恢复。\n你的\n回合结束时有 5% 几率生成一只跳蚤使魔。\n"
+      "zh": "+1 生命恢复。\n你的\n回合结束时有 5% 几率生成一只跳蚤使魔。"
     },
     "kind": "face",
     "rarity": "common",
@@ -409,7 +409,7 @@
     "description": "+1 Health Regen.\n5% chance to spawn a Flea Familiar at the end of your turn.",
     "description_texts": {
       "en": "+1 Health Regen.\n5% chance to spawn a Flea Familiar at the end of your turn.",
-      "zh": "+1 生命恢复。\n你的\n回合结束时有 5% 几率生成一只跳蚤使魔。\n"
+      "zh": "+1 生命恢复。\n你的\n回合结束时有 5% 几率生成一只跳蚤使魔。"
     },
     "kind": "neck",
     "rarity": "common",
@@ -438,7 +438,7 @@
     "description": "+1 Brace. Immunity to Slow and Freeze.",
     "description_texts": {
       "en": "+1 Brace. Immunity to Slow and Freeze.",
-      "zh": "+1 [img:brace] 护甲。免疫[b]减速[/b]和[b]冻结[/b]。\n"
+      "zh": "+1 [img:brace] 护甲。免疫[b]减速[/b]和[b]冻结[/b]。"
     },
     "kind": "neck",
     "rarity": "rare",
@@ -2050,7 +2050,7 @@
     "description": "Poison Immunity.",
     "description_texts": {
       "en": "Poison Immunity.",
-      "zh": "毒素免疫。"
+      "zh": "中毒免疫。"
     },
     "kind": "face",
     "rarity": "uncommon",
@@ -2445,7 +2445,7 @@
     "description": "10% chance to teleport to a neighboring tile when targeted by an enemy.",
     "description_texts": {
       "en": "10% chance to teleport to a neighboring tile when targeted by an enemy.",
-      "zh": "被敌人作为目标时，\n有 10% 几率传送到相邻地块。\n"
+      "zh": "被敌人作为目标时，\n有 10% 几率传送到相邻地块。"
     },
     "kind": "head",
     "rarity": "rare",
@@ -2475,7 +2475,7 @@
     "description": "+1 range, +1 reach.",
     "description_texts": {
       "en": "+1 range, +1 reach.",
-      "zh": "+1 射程，+1 延伸。"
+      "zh": "+1 射程，+1 移动距离。"
     },
     "kind": "face",
     "rarity": "rare",
@@ -2800,7 +2800,7 @@
     "description": "+1 Damage.\nGain +1 Damage when you kill an enemy.",
     "description_texts": {
       "en": "+1 Damage.\nGain +1 Damage when you kill an enemy.",
-      "zh": "+1 伤害。\n当你击杀敌人时获得 +1 伤害。\n"
+      "zh": "+1 伤害。\n当你击杀敌人时获得 +1 伤害。"
     },
     "kind": "face",
     "rarity": "rare",
@@ -2827,7 +2827,7 @@
     "description": "+1 Damage.\nGain +1 Damage when you kill an enemy.",
     "description_texts": {
       "en": "+1 Damage.\nGain +1 Damage when you kill an enemy.",
-      "zh": "+1 伤害。\n当你击杀敌人时获得 +1 伤害。\n"
+      "zh": "+1 伤害。\n当你击杀敌人时获得 +1 伤害。"
     },
     "kind": "head",
     "rarity": "rare",
@@ -2854,7 +2854,7 @@
     "description": "+1 Damage.\nGain +1 Damage when you kill an enemy.",
     "description_texts": {
       "en": "+1 Damage.\nGain +1 Damage when you kill an enemy.",
-      "zh": "+1 伤害。\n当你击杀敌人时获得 +1 伤害。\n"
+      "zh": "+1 伤害。\n当你击杀敌人时获得 +1 伤害。"
     },
     "kind": "neck",
     "rarity": "rare",
@@ -2968,7 +2968,7 @@
     "description": "While standing in tall grass, you have +40% Dodge Chance.",
     "description_texts": {
       "en": "While standing in tall grass, you have +40% Dodge Chance.",
-      "zh": "站在高草中时，你拥有 +40% 闪避率。\n"
+      "zh": "站在高草中时，你拥有 +40% 闪避率。"
     },
     "kind": "face",
     "rarity": "common",
@@ -2997,7 +2997,7 @@
     "description": "While standing in tall grass, you have +3 Mana Regen and +1 Health Regen.",
     "description_texts": {
       "en": "While standing in tall grass, you have +3 Mana Regen and +1 Health Regen.",
-      "zh": "站在高草中时，\n你拥有 +3 法力恢复和 +1 生命恢复。\n"
+      "zh": "站在高草中时，\n你拥有 +3 法力恢复和 +1 生命恢复。"
     },
     "kind": "head",
     "rarity": "common",
@@ -3026,7 +3026,7 @@
     "description": "While standing in tall grass, you have +3 Health Regen and +1 Mana Regen.",
     "description_texts": {
       "en": "While standing in tall grass, you have +3 Health Regen and +1 Mana Regen.",
-      "zh": "站在高草中时，\n你拥有 +3 生命恢复和 +1 法力恢复。\n"
+      "zh": "站在高草中时，\n你拥有 +3 生命恢复和 +1 法力恢复。"
     },
     "kind": "neck",
     "rarity": "common",
@@ -3055,7 +3055,7 @@
     "description": "+3 Thorns, Brittle.\nGain +2 [img:con] permanently and heal 10 HP when this breaks.",
     "description_texts": {
       "en": "+3 Thorns, Brittle.\nGain +2 [img:con] permanently and heal 10 HP when this breaks.",
-      "zh": "+3 荆棘，脆裂。\n当此物品破碎时，\n永久获得 +2 [img:con] 并治疗 10 点生命值。\n"
+      "zh": "+3 荆棘，脆弱。\n破碎时获得永久+2 [img:con] 并恢复10生命值。"
     },
     "kind": "face",
     "rarity": "uncommon",
@@ -3082,7 +3082,7 @@
     "description": "+3 Thorns, Brittle.\nGain +2 [img:con] permanently and heal 10 HP when this breaks.",
     "description_texts": {
       "en": "+3 Thorns, Brittle.\nGain +2 [img:con] permanently and heal 10 HP when this breaks.",
-      "zh": "+3 荆棘，脆裂。\n当此物品破碎时，\n永久获得 +2 [img:con] 并治疗 10 点生命值。\n"
+      "zh": "+3 荆棘，脆弱。\n破碎时获得永久+2 [img:con] 并恢复10生命值。"
     },
     "kind": "head",
     "rarity": "uncommon",
@@ -3109,7 +3109,7 @@
     "description": "+3 Thorns, Brittle.\nGain +2 [img:con] permanently and heal 10 HP when this breaks.",
     "description_texts": {
       "en": "+3 Thorns, Brittle.\nGain +2 [img:con] permanently and heal 10 HP when this breaks.",
-      "zh": "+3 荆棘，脆裂。\n当此物品破碎时，\n永久获得 +2 [img:con] 并治疗 10 点生命值。\n"
+      "zh": "+3 荆棘，脆弱。\n破碎时获得永久+2 [img:con] 并恢复10生命值。"
     },
     "kind": "neck",
     "rarity": "uncommon",
@@ -3136,7 +3136,7 @@
     "description": "+1 Health Regen.\nWhen downed, revive with 15% HP at the end of the round.",
     "description_texts": {
       "en": "+1 Health Regen.\nWhen downed, revive with 15% HP at the end of the round.",
-      "zh": "+1 生命恢复。\n倒地时，在回合结束时以 15% 生命值复活。\n"
+      "zh": "+1 生命恢复。\n倒地时，在回合结束时以 15% 生命值复活。"
     },
     "kind": "face",
     "rarity": "uncommon",
@@ -3163,7 +3163,7 @@
     "description": "+1 Health Regen.\nWhen downed, revive with 15% HP at the end of the round.",
     "description_texts": {
       "en": "+1 Health Regen.\nWhen downed, revive with 15% HP at the end of the round.",
-      "zh": "+1 生命恢复。\n倒地时，在回合结束时以 15% 生命值复活。\n"
+      "zh": "+1 生命恢复。\n倒地时，在回合结束时以 15% 生命值复活。"
     },
     "kind": "head",
     "rarity": "uncommon",
@@ -3190,7 +3190,7 @@
     "description": "+1 Health Regen.\nWhen downed, revive with 15% HP at the end of the round.",
     "description_texts": {
       "en": "+1 Health Regen.\nWhen downed, revive with 15% HP at the end of the round.",
-      "zh": "+1 生命恢复。\n倒地时，在回合结束时以 15% 生命值复活。\n"
+      "zh": "+1 生命恢复。\n倒地时，在回合结束时以 15% 生命值复活。"
     },
     "kind": "neck",
     "rarity": "uncommon",
@@ -3217,7 +3217,7 @@
     "description": "Physical attacks can't miss.\nSpawn 1-2 extra pickups at the start of each battle.",
     "description_texts": {
       "en": "Physical attacks can't miss.\nSpawn 1-2 extra pickups at the start of each battle.",
-      "zh": "物理攻击无法未命中。\n每场战斗开始时生成 1-2 个额外的掉落物。\n"
+      "zh": "物理攻击无法未命中。\n每场战斗开始时生成 1-2 个额外的掉落物。"
     },
     "kind": "face",
     "rarity": "uncommon",
@@ -3383,7 +3383,7 @@
     "description": "Your basic attack has a +25% chance to inflict Fear.\nSpawn a food pickup at the start of each battle.",
     "description_texts": {
       "en": "Your basic attack has a +25% chance to inflict Fear.\nSpawn a food pickup at the start of each battle.",
-      "zh": "你的基础攻击有 +25% 几率施加恐惧。\n每次战斗开始时生成一个食物掉落物。\n"
+      "zh": "你的基础攻击有 +25% 几率施加恐惧。\n每次战斗开始时生成一个食物掉落物。"
     },
     "kind": "face",
     "rarity": "rare",
@@ -3413,7 +3413,7 @@
     "description": "Your crit hits inflict Fear.\nSpawn a food pickup at the start of each battle.",
     "description_texts": {
       "en": "Your crit hits inflict Fear.\nSpawn a food pickup at the start of each battle.",
-      "zh": "你的暴击施加恐惧。\n每次战斗开始时生成一个食物掉落物。\n"
+      "zh": "你的暴击施加恐惧。\n每次战斗开始时生成一个食物掉落物。"
     },
     "kind": "head",
     "rarity": "rare",
@@ -3443,7 +3443,7 @@
     "description": "Units that contact or attack you have a +25% chance to be Feared.\nSpawn a food pickup at the start of each battle.",
     "description_texts": {
       "en": "Units that contact or attack you have a +25% chance to be Feared.\nSpawn a food pickup at the start of each battle.",
-      "zh": "接触或攻击你的单位有 +25% 几率被恐惧。\n每次战斗开始时生成一个食物掉落物。\n"
+      "zh": "接触或攻击你的单位有 +25% 几率被恐惧。\n每次战斗开始时生成一个食物掉落物。"
     },
     "kind": "neck",
     "rarity": "rare",
@@ -3473,7 +3473,7 @@
     "description": "Your basic attack has a +33% chance to inflict Entangle.",
     "description_texts": {
       "en": "Your basic attack has a +33% chance to inflict Entangle.",
-      "zh": "你的基础攻击有 +33% 几率施加缠绕。\n"
+      "zh": "你的基础攻击有 +33% 几率施加缠绕。"
     },
     "kind": "face",
     "rarity": "uncommon",
@@ -3502,7 +3502,7 @@
     "description": "Your basic attack pulls you towards units or objects it hits.",
     "description_texts": {
       "en": "Your basic attack pulls you towards units or objects it hits.",
-      "zh": "你的基础攻击会将你拉向命中的单位或物体。\n"
+      "zh": "你的基础攻击会将你拉向命中的单位或物体。"
     },
     "kind": "head",
     "rarity": "uncommon",
@@ -3560,7 +3560,7 @@
     "description": "Gain +2 [img:int] and +2 [img:cha] when you kill a unit.\nStats obtained this way are lost when you take damage.",
     "description_texts": {
       "en": "Gain +2 [img:int] and +2 [img:cha] when you kill a unit.\nStats obtained this way are lost when you take damage.",
-      "zh": "当你击杀一个单位时，\n获得 +2 [img:int] 和 +2 [img:cha]。\n受到伤害时，以此方式获得的属性将丢失。\n"
+      "zh": "当你击杀一个单位时，\n获得 +2 [img:int] 和 +2 [img:cha]。\n受到伤害时，以此方式获得的属性将丢失。"
     },
     "kind": "face",
     "rarity": "rare",
@@ -3589,7 +3589,7 @@
     "description": "Gain +2 [img:dex] and +2 [img:lck] when you kill a unit.\nStats obtained this way are lost when you take damage.",
     "description_texts": {
       "en": "Gain +2 [img:dex] and +2 [img:lck] when you kill a unit.\nStats obtained this way are lost when you take damage.",
-      "zh": "当你击杀一个单位时，\n获得 +2 [img:dex] 和 +2 [img:lck]。\n受到伤害时，以此方式获得的属性将丢失。\n"
+      "zh": "当你击杀一个单位时，\n获得 +2 [img:dex] 和 +2 [img:lck]。\n受到伤害时，以此方式获得的属性将丢失。"
     },
     "kind": "head",
     "rarity": "rare",
@@ -3618,7 +3618,7 @@
     "description": "Gain +2 [img:str], +2 [img:spd] and +2 [img:con] when you kill a unit.\nStats obtained this way are lost when you take damage.",
     "description_texts": {
       "en": "Gain +2 [img:str], +2 [img:spd] and +2 [img:con] when you kill a unit.\nStats obtained this way are lost when you take damage.",
-      "zh": "当你击杀一个单位时，获得 +2 [img:str]、\n+2 [img:spd] 和 +2 [img:con]。\n受到伤害时，以此方式获得的属性将丢失。\n"
+      "zh": "当你击杀一个单位时，获得 +2 [img:str]、\n+2 [img:spd] 和 +2 [img:con]。\n受到伤害时，以此方式获得的属性将丢失。"
     },
     "kind": "neck",
     "rarity": "rare",
@@ -3728,7 +3728,7 @@
     "description": "Breaks when [img:shield] is depleted.\nWhen this breaks, gain Bruise 3.",
     "description_texts": {
       "en": "Breaks when [img:shield] is depleted.\nWhen this breaks, gain Bruise 3.",
-      "zh": "当 [img:shield] 耗尽时破碎。\n当此物品破碎时，获得 3 层淤伤。\n"
+      "zh": "当 [img:shield] 耗尽时破碎。\n当此物品破碎时，获得 3 层淤伤。"
     },
     "kind": "face",
     "rarity": "uncommon",
@@ -3757,7 +3757,7 @@
     "description": "Breaks when [img:shield] is depleted.\nWhen this breaks, gain Bruise 3.",
     "description_texts": {
       "en": "Breaks when [img:shield] is depleted.\nWhen this breaks, gain Bruise 3.",
-      "zh": "当 [img:shield] 耗尽时破碎。\n当此物品破碎时，获得 3 层淤伤。\n"
+      "zh": "当 [img:shield] 耗尽时破碎。\n当此物品破碎时，获得 3 层淤伤。"
     },
     "kind": "head",
     "rarity": "uncommon",
@@ -3786,7 +3786,7 @@
     "description": "Breaks when [img:shield] is depleted.\nWhen this breaks, gain Bruise 3.",
     "description_texts": {
       "en": "Breaks when [img:shield] is depleted.\nWhen this breaks, gain Bruise 3.",
-      "zh": "当 [img:shield] 耗尽时破碎。\n当此物品破碎时，获得 3 层淤伤。\n"
+      "zh": "当 [img:shield] 耗尽时破碎。\n当此物品破碎时，获得 3 层淤伤。"
     },
     "kind": "neck",
     "rarity": "uncommon",
@@ -3815,7 +3815,7 @@
     "description": "+1 Brace.\n30% chance to block negative status effects.",
     "description_texts": {
       "en": "+1 Brace.\n30% chance to block negative status effects.",
-      "zh": "+1 护甲。\n30% 几率格挡负面状态效果。\n"
+      "zh": "+1 护甲。\n30% 几率格挡负面状态效果。"
     },
     "kind": "face",
     "rarity": "uncommon",
@@ -3842,7 +3842,7 @@
     "description": "Gain 0-4 mana at start of each turn.",
     "description_texts": {
       "en": "Gain 0-4 mana at start of each turn.",
-      "zh": "每回合开始时获得 0-4 点法力。\n"
+      "zh": "每回合开始时获得 0-4 点法力。"
     },
     "kind": "head",
     "rarity": "uncommon",
@@ -4074,7 +4074,7 @@
     "description": "+1 Thorns.\nInflict Bruise 1 on units that contact you.",
     "description_texts": {
       "en": "+1 Thorns.\nInflict Bruise 1 on units that contact you.",
-      "zh": "+1 荆棘。\n对接触你的单位造成 1 层淤伤。\n"
+      "zh": "+1 荆棘。\n对接触你的单位造成 1 层淤伤。"
     },
     "kind": "face",
     "rarity": "uncommon",
@@ -4103,7 +4103,7 @@
     "description": "+1 Thorns.\nInflict Bruise 1 on units that contact you.",
     "description_texts": {
       "en": "+1 Thorns.\nInflict Bruise 1 on units that contact you.",
-      "zh": "+1 荆棘。\n对接触你的单位造成 1 层淤伤。\n"
+      "zh": "+1 荆棘。\n对接触你的单位造成 1 层淤伤。"
     },
     "kind": "head",
     "rarity": "uncommon",
@@ -4132,7 +4132,7 @@
     "description": "+1 Thorns.\nInflict Bruise 1 on units that contact you.",
     "description_texts": {
       "en": "+1 Thorns.\nInflict Bruise 1 on units that contact you.",
-      "zh": "+1 荆棘。\n对接触你的单位造成 1 层淤伤。\n"
+      "zh": "+1 荆棘。\n对接触你的单位造成 1 层淤伤。"
     },
     "kind": "neck",
     "rarity": "uncommon",
@@ -4244,7 +4244,7 @@
     "description": "If you end your turn without using your basic attack, gain +1 Damage and +1 Thorns.",
     "description_texts": {
       "en": "If you end your turn without using your basic attack, gain +1 Damage and +1 Thorns.",
-      "zh": "如果你在结束回合时没有使用基础攻击，\n获得 +1 伤害和 +1 荆棘。\n"
+      "zh": "如果你在结束回合时没有使用基础攻击，\n获得 +1 伤害和 +1 荆棘。"
     },
     "kind": "head",
     "rarity": "rare",
@@ -4271,7 +4271,7 @@
     "description": "If you end your turn without using your movement action, gain +1 Health Regen and +1 [img:shield].",
     "description_texts": {
       "en": "If you end your turn without using your movement action, gain +1 Health Regen and +1 [img:shield].",
-      "zh": "如果你在结束回合时没有使用移动行动，\n获得 +1 生命恢复和 +1 [img:shield]。\n"
+      "zh": "如果你在结束回合时没有使用移动行动，\n获得 +1 生命恢复和 +1 [img:shield]。"
     },
     "kind": "face",
     "rarity": "rare",
@@ -4298,7 +4298,7 @@
     "description": "If you end your turn without casting any spells, gain +1 Magic Damage and +1 Charge.",
     "description_texts": {
       "en": "If you end your turn without casting any spells, gain +1 Magic Damage and +1 Charge.",
-      "zh": "如果你在结束回合时没有施放任何法术，\n获得 +1 魔法伤害和 +1 充能。\n"
+      "zh": "如果你在结束回合时没有施放任何法术，\n获得 +1 魔法伤害和 +1 充能。"
     },
     "kind": "neck",
     "rarity": "rare",
@@ -4743,7 +4743,7 @@
     "description": "Start battle with +2 bonus moves.",
     "description_texts": {
       "en": "Start battle with +2 bonus moves.",
-      "zh": "战斗开始时获得 +2 奖励移动。\n"
+      "zh": "战斗开始时获得 +2 奖励移动。"
     },
     "kind": "neck",
     "rarity": "uncommon",
@@ -4770,7 +4770,7 @@
     "description": "Counter the first 2 attacks you receive each battle.",
     "description_texts": {
       "en": "Counter the first 2 attacks you receive each battle.",
-      "zh": "每场战斗反击你受到的前 2 次攻击。\n"
+      "zh": "每场战斗反击你受到的前 2 次攻击。"
     },
     "kind": "face",
     "rarity": "uncommon",
@@ -4797,7 +4797,7 @@
     "description": "Start battle with +2 Backflip.",
     "description_texts": {
       "en": "Start battle with +2 Backflip.",
-      "zh": "战斗开始时获得 +2 后空翻。\n"
+      "zh": "战斗开始时获得 +2 后空翻。"
     },
     "kind": "head",
     "rarity": "uncommon",
@@ -4905,7 +4905,7 @@
     "description": "Gain +1 Charge each time you cast a spell.",
     "description_texts": {
       "en": "Gain +1 Charge each time you cast a spell.",
-      "zh": "每当你施放法术时获得 +1 充能。\n"
+      "zh": "每当你施放法术时获得 +1 充能。"
     },
     "kind": "head",
     "rarity": "rare",
@@ -4934,7 +4934,7 @@
     "description": "Gain +1 Charge when you deal damage with your basic attack.",
     "description_texts": {
       "en": "Gain +1 Charge when you deal damage with your basic attack.",
-      "zh": "当你用基础攻击造成伤害时获得 +1 充能。\n"
+      "zh": "当你用基础攻击造成伤害时获得 +1 充能。"
     },
     "kind": "face",
     "rarity": "rare",
@@ -4963,7 +4963,7 @@
     "description": "Gain +1 Charge each time an enemy dies.",
     "description_texts": {
       "en": "Gain +1 Charge each time an enemy dies.",
-      "zh": "每当有敌人死亡时获得 +1 充能。\n"
+      "zh": "每当有敌人死亡时获得 +1 充能。"
     },
     "kind": "neck",
     "rarity": "rare",
@@ -5046,7 +5046,7 @@
     "description": "+10% Dodge Chance and +10% Crit Chance.",
     "description_texts": {
       "en": "+10% Dodge Chance and +10% Crit Chance.",
-      "zh": "+10% 闪避率和 +10% 暴击率。\n"
+      "zh": "+10% 闪避率和 +10% 暴击率。"
     },
     "kind": "neck",
     "rarity": "rare",
@@ -5189,7 +5189,7 @@
     "description": "Gain +1 [img:divineshield] each time an ally is downed.",
     "description_texts": {
       "en": "Gain +1 [img:divineshield] each time an ally is downed.",
-      "zh": "每当一名盟友倒地时，获得 +1 [img:divineshield]。\n"
+      "zh": "每当一名盟友倒地时，获得 +1 [img:divineshield]。"
     },
     "kind": "face",
     "rarity": "rare",
@@ -5218,7 +5218,7 @@
     "description": "+1 Brace.\n+15% chance to inflict Fear on units that contact or attack you.",
     "description_texts": {
       "en": "+1 Brace.\n+15% chance to inflict Fear on units that contact or attack you.",
-      "zh": "+1 护甲。\n接触或攻击你的\n单位有 +15% 几率被施加恐惧。\n"
+      "zh": "+1 护甲。\n接触或攻击你的\n单位有 +15% 几率被施加恐惧。"
     },
     "kind": "neck",
     "rarity": "rare",
@@ -5301,7 +5301,7 @@
     "description": "Your knockback damage has a +10% chance to inflict Stun.",
     "description_texts": {
       "en": "Your knockback damage has a +10% chance to inflict Stun.",
-      "zh": "你的击退伤害有 +10% 几率施加晕眩。\n"
+      "zh": "你的击退伤害有 +10% 几率施加晕眩。"
     },
     "kind": "neck",
     "rarity": "rare",
@@ -5386,7 +5386,7 @@
     "description": "Start each battle with 2 bonus attacks.",
     "description_texts": {
       "en": "Start each battle with 2 bonus attacks.",
-      "zh": "每次战斗开始时获得 2 次奖励攻击。\n"
+      "zh": "每次战斗开始时获得 2 次奖励攻击。"
     },
     "kind": "neck",
     "rarity": "rare",
@@ -5414,7 +5414,7 @@
     "description": "+25% chance to reflect projectiles. Your tile-targeted spells have +2 range.",
     "description_texts": {
       "en": "+25% chance to reflect projectiles. Your tile-targeted spells have +2 range.",
-      "zh": "+25% 几率反射投射物。\n你的地块目标法术拥有 +2 射程。\n"
+      "zh": "+25% 几率反射投射物。\n你的地块目标法术拥有 +2 射程。"
     },
     "kind": "face",
     "rarity": "rare",
@@ -5441,7 +5441,7 @@
     "description": "You are immune to Charm, Madness, Fear and Confusion.",
     "description_texts": {
       "en": "You are immune to Charm, Madness, Fear and Confusion.",
-      "zh": "你对魅惑、疯狂、恐惧和混乱免疫。\n"
+      "zh": "你对魅惑、疯狂、恐惧和混乱免疫。"
     },
     "kind": "head",
     "rarity": "rare",
@@ -5471,7 +5471,7 @@
     "description": "Adjacent allies have +25% Dodge Chance.\nGive +1 Charge to all adjacent allies at the end of your turn.",
     "description_texts": {
       "en": "Adjacent allies have +25% Dodge Chance.\nGive +1 Charge to all adjacent allies at the end of your turn.",
-      "zh": "相邻盟友拥有 +25% 闪避率。\n在你的回合结束时，\n给予所有相邻盟友 +1 充能。\n"
+      "zh": "相邻盟友拥有 +25% 闪避率。\n在你的回合结束时，\n给予所有相邻盟友 +1 充能。"
     },
     "kind": "neck",
     "rarity": "rare",
@@ -5499,7 +5499,7 @@
     "description": "Get downed at the start of each battle, then revive at the end of the first round with full HP and +2 [img:shield].",
     "description_texts": {
       "en": "Get downed at the start of each battle, then revive at the end of the first round with full HP and +2 [img:shield].",
-      "zh": "每场战斗开始时倒地，\n然后\n在第一回合结束时满生命值复活并获得 +2 [img:shield]。\n"
+      "zh": "每场战斗开始时倒地，\n然后\n在第一回合结束时满生命值复活并获得 +2 [img:shield]。"
     },
     "kind": "face",
     "rarity": "rare",
@@ -5553,7 +5553,7 @@
     "description": "Your spells inflict Leech 1 against enemies.",
     "description_texts": {
       "en": "Your spells inflict Leech 1 against enemies.",
-      "zh": "你的法术对敌人施加 1 层水蛭。\n"
+      "zh": "你的法术对敌人施加 1 层水蛭。"
     },
     "kind": "neck",
     "rarity": "rare",
@@ -5663,7 +5663,7 @@
     "description": "When you break an item, gain +3 [img:shield].",
     "description_texts": {
       "en": "When you break an item, gain +3 [img:shield].",
-      "zh": "当你破坏一个物品时，获得 +3 [img:shield]。\n"
+      "zh": "当你破坏一个物品时，获得 +3 [img:shield]。"
     },
     "kind": "face",
     "rarity": "rare",
@@ -5751,7 +5751,7 @@
     "description": "Counterattack melee attackers with a bite that deals 3 damage with Lifesteal.",
     "description_texts": {
       "en": "Counterattack melee attackers with a bite that deals 3 damage with Lifesteal.",
-      "zh": "对近战攻击者进行反击，\n造成 3 点伤害并附带生命偷取。\n"
+      "zh": "对近战攻击者进行反击，\n造成 3 点伤害并附带生命偷取。"
     },
     "kind": "face",
     "rarity": "rare",
@@ -5809,7 +5809,7 @@
     "description": "+2 Thorns. Cleave units that contact you.",
     "description_texts": {
       "en": "+2 Thorns. Cleave units that contact you.",
-      "zh": "+2 荆棘。切割接触你的单位。\n"
+      "zh": "+2 荆棘。切割接触你的单位。"
     },
     "kind": "neck",
     "rarity": "rare",
@@ -5893,7 +5893,7 @@
     "description": "All of your area abilities gain +1 area.",
     "description_texts": {
       "en": "All of your area abilities gain +1 area.",
-      "zh": "你所有的区域技能获得 +1 范围。\n"
+      "zh": "你所有的区域技能获得 +1 范围。"
     },
     "kind": "neck",
     "rarity": "rare",
@@ -6284,7 +6284,7 @@
     "description": "Inflict Bruise 1 on units that contact you.",
     "description_texts": {
       "en": "Inflict Bruise 1 on units that contact you.",
-      "zh": "对接触你的单位施加 1 层淤伤。\n"
+      "zh": "对接触你的单位施加 1 层淤伤。"
     },
     "kind": "head",
     "rarity": "common",
@@ -6314,7 +6314,7 @@
     "description": "Inflict Bruise 1 on units that contact you.",
     "description_texts": {
       "en": "Inflict Bruise 1 on units that contact you.",
-      "zh": "对接触你的单位施加 1 层淤伤。\n"
+      "zh": "对接触你的单位施加 1 层淤伤。"
     },
     "kind": "face",
     "rarity": "common",
@@ -6344,7 +6344,7 @@
     "description": "Inflict Bruise 1 on units that contact you.",
     "description_texts": {
       "en": "Inflict Bruise 1 on units that contact you.",
-      "zh": "对接触你的单位施加 1 层淤伤。\n"
+      "zh": "对接触你的单位施加 1 层淤伤。"
     },
     "kind": "neck",
     "rarity": "common",
@@ -6374,7 +6374,7 @@
     "description": "+15% chance to catch projectiles. Inflict Immobile 1 on units that contact you.",
     "description_texts": {
       "en": "+15% chance to catch projectiles. Inflict Immobile 1 on units that contact you.",
-      "zh": "+15% 几率拦截射击。\n对接触你的单位施加 1 层定身。\n"
+      "zh": "+15% 几率拦截射击。\n对接触你的单位施加 1 层定身。"
     },
     "kind": "head",
     "rarity": "uncommon",
@@ -6403,7 +6403,7 @@
     "description": "+15% chance to catch projectiles. Inflict Immobile 1 on units that contact you.",
     "description_texts": {
       "en": "+15% chance to catch projectiles. Inflict Immobile 1 on units that contact you.",
-      "zh": "+15% 几率拦截射击。\n对接触你的单位施加 1 层定身。\n"
+      "zh": "+15% 几率拦截射击。\n对接触你的单位施加 1 层定身。"
     },
     "kind": "face",
     "rarity": "uncommon",
@@ -6432,7 +6432,7 @@
     "description": "+15% chance to catch projectiles. Inflict Immobile 1 on units that contact you.",
     "description_texts": {
       "en": "+15% chance to catch projectiles. Inflict Immobile 1 on units that contact you.",
-      "zh": "+15% 几率拦截射击。\n对接触你的单位施加 1 层定身。\n"
+      "zh": "+15% 几率拦截射击。\n对接触你的单位施加 1 层定身。"
     },
     "kind": "neck",
     "rarity": "uncommon",
@@ -6461,7 +6461,7 @@
     "description": "Start battle with a Charmed Pinky.",
     "description_texts": {
       "en": "Start battle with a Charmed Pinky.",
-      "zh": "战斗开始时带有一个魅惑粉红怪。\n"
+      "zh": "战斗开始时带有一个魅惑粉红怪。"
     },
     "kind": "head",
     "rarity": "common",
@@ -6488,7 +6488,7 @@
     "description": "Start battle with a Charmed Pinky.",
     "description_texts": {
       "en": "Start battle with a Charmed Pinky.",
-      "zh": "战斗开始时带有一个魅惑粉红怪。\n"
+      "zh": "战斗开始时带有一个魅惑粉红怪。"
     },
     "kind": "face",
     "rarity": "common",
@@ -6515,7 +6515,7 @@
     "description": "Start battle with a Charmed Pinky.",
     "description_texts": {
       "en": "Start battle with a Charmed Pinky.",
-      "zh": "战斗开始时带有一个魅惑粉红怪。\n"
+      "zh": "战斗开始时带有一个魅惑粉红怪。"
     },
     "kind": "neck",
     "rarity": "common",
@@ -6542,7 +6542,7 @@
     "description": "Cleanse 1 stack of a random negative status effect when you end your turn.",
     "description_texts": {
       "en": "Cleanse 1 stack of a random negative status effect when you end your turn.",
-      "zh": "当你结束回合时，\n驱散 1 层随机负面状态效果。\n"
+      "zh": "当你结束回合时，\n驱散 1 层随机负面状态效果。"
     },
     "kind": "head",
     "rarity": "uncommon",
@@ -6571,7 +6571,7 @@
     "description": "Cleanse 1 stack of a random negative status effect when you end your turn.",
     "description_texts": {
       "en": "Cleanse 1 stack of a random negative status effect when you end your turn.",
-      "zh": "当你结束回合时，\n驱散 1 层随机负面状态效果。\n"
+      "zh": "当你结束回合时，\n驱散 1 层随机负面状态效果。"
     },
     "kind": "face",
     "rarity": "uncommon",
@@ -6600,7 +6600,7 @@
     "description": "Cleanse 1 stack of a random negative status effect when you end your turn.",
     "description_texts": {
       "en": "Cleanse 1 stack of a random negative status effect when you end your turn.",
-      "zh": "当你结束回合时，\n驱散 1 层随机负面状态效果。\n"
+      "zh": "当你结束回合时，\n驱散 1 层随机负面状态效果。"
     },
     "kind": "neck",
     "rarity": "uncommon",
@@ -6716,7 +6716,7 @@
     "description": "Start with Burn 2. Your basic attack inflicts Burn 1. Inflict Burn 1 on units that contact you.",
     "description_texts": {
       "en": "Start with Burn 2. Your basic attack inflicts Burn 1. Inflict Burn 1 on units that contact you.",
-      "zh": "开局带有 2 层燃烧。\n你的基础攻击施加 1 层燃烧。\n对接触你的单位施加 1 层燃烧。\n"
+      "zh": "开局带有 2 层燃烧。\n你的基础攻击施加 1 层燃烧。\n对接触你的单位施加 1 层燃烧。"
     },
     "kind": "head",
     "rarity": "uncommon",
@@ -6743,7 +6743,7 @@
     "description": "Start with Burn 2. Your basic attack inflicts Burn 1. Inflict Burn 1 on units that contact you.",
     "description_texts": {
       "en": "Start with Burn 2. Your basic attack inflicts Burn 1. Inflict Burn 1 on units that contact you.",
-      "zh": "开局带有 2 层燃烧。\n你的基础攻击施加 1 层燃烧。\n对接触你的单位施加 1 层燃烧。\n"
+      "zh": "开局带有 2 层燃烧。\n你的基础攻击施加 1 层燃烧。\n对接触你的单位施加 1 层燃烧。"
     },
     "kind": "face",
     "rarity": "uncommon",
@@ -6770,7 +6770,7 @@
     "description": "Start with Burn 2. Your basic attack inflicts Burn 1. Inflict Burn 1 on units that contact you.",
     "description_texts": {
       "en": "Start with Burn 2. Your basic attack inflicts Burn 1. Inflict Burn 1 on units that contact you.",
-      "zh": "开局带有 2 层燃烧。\n你的基础攻击施加 1 层燃烧。\n对接触你的单位施加 1 层燃烧。\n"
+      "zh": "开局带有 2 层燃烧。\n你的基础攻击施加 1 层燃烧。\n对接触你的单位施加 1 层燃烧。"
     },
     "kind": "neck",
     "rarity": "uncommon",
@@ -6878,7 +6878,7 @@
     "description": "+1 Health Regen. Your heals heal for 1 extra.",
     "description_texts": {
       "en": "+1 Health Regen. Your heals heal for 1 extra.",
-      "zh": "+1 生命恢复。你的治疗效果 +1。\n"
+      "zh": "+1 生命恢复。你的治疗效果 +1。"
     },
     "kind": "head",
     "rarity": "common",
@@ -6907,7 +6907,7 @@
     "description": "+1 Health Regen. Your heals heal for 1 extra.",
     "description_texts": {
       "en": "+1 Health Regen. Your heals heal for 1 extra.",
-      "zh": "+1 生命恢复。你的治疗效果 +1。\n"
+      "zh": "+1 生命恢复。你的治疗效果 +1。"
     },
     "kind": "face",
     "rarity": "common",
@@ -6936,7 +6936,7 @@
     "description": "+1 Health Regen. Your heals heal for 1 extra.",
     "description_texts": {
       "en": "+1 Health Regen. Your heals heal for 1 extra.",
-      "zh": "+1 生命恢复。你的治疗效果 +1。\n"
+      "zh": "+1 生命恢复。你的治疗效果 +1。"
     },
     "kind": "neck",
     "rarity": "common",
@@ -6965,7 +6965,7 @@
     "description": "Start with a bonus move and Bleed 1.",
     "description_texts": {
       "en": "Start with a bonus move and Bleed 1.",
-      "zh": "开始时获得一次奖励移动和 1 层流血。\n"
+      "zh": "开始时获得一次奖励移动和 1 层流血。"
     },
     "kind": "head",
     "rarity": "common",
@@ -6992,7 +6992,7 @@
     "description": "Start with a bonus attack and Poison 1.",
     "description_texts": {
       "en": "Start with a bonus attack and Poison 1.",
-      "zh": "开始时获得一次奖励攻击和 1 层中毒。\n"
+      "zh": "开始时获得一次奖励攻击和 1 层中毒。"
     },
     "kind": "face",
     "rarity": "common",
@@ -7020,7 +7020,7 @@
     "description": "Start with +5 Charge and Bruise 1.",
     "description_texts": {
       "en": "Start with +5 Charge and Bruise 1.",
-      "zh": "开始时获得 +5 充能和 1 层淤伤。\n"
+      "zh": "开始时获得 +5 充能和 1 层淤伤。"
     },
     "kind": "neck",
     "rarity": "common",
@@ -7047,7 +7047,7 @@
     "description": "Brace 1. Your basic attack has +1 Knockback.",
     "description_texts": {
       "en": "Brace 1. Your basic attack has +1 Knockback.",
-      "zh": "护甲 1。你的基础攻击拥有 +1 击退。\n"
+      "zh": "护甲 1。你的基础攻击拥有 +1 击退。"
     },
     "kind": "head",
     "rarity": "common",
@@ -7074,7 +7074,7 @@
     "description": "Brace 1. Your basic attack has +1 Knockback.",
     "description_texts": {
       "en": "Brace 1. Your basic attack has +1 Knockback.",
-      "zh": "护甲 1。你的基础攻击拥有 +1 击退。\n"
+      "zh": "护甲 1。你的基础攻击拥有 +1 击退。"
     },
     "kind": "face",
     "rarity": "common",
@@ -7101,7 +7101,7 @@
     "description": "Brace 1. Your basic attack has +1 Knockback.",
     "description_texts": {
       "en": "Brace 1. Your basic attack has +1 Knockback.",
-      "zh": "护甲 1。你的基础攻击拥有 +1 击退。\n"
+      "zh": "护甲 1。你的基础攻击拥有 +1 击退。"
     },
     "kind": "neck",
     "rarity": "common",
@@ -7550,7 +7550,7 @@
     "item_name": "Rune of Jera",
     "item_name_texts": {
       "en": "Rune of Jera",
-      "zh": "耶拉符文"
+      "zh": "收获符文"
     },
     "description": "Your trinket effects are doubled.",
     "description_texts": {
@@ -7577,7 +7577,7 @@
     "item_name": "Rune of Hagalaz",
     "item_name_texts": {
       "en": "Rune of Hagalaz",
-      "zh": "哈加拉兹符文"
+      "zh": "冰雹符文"
     },
     "description": "Your Weapons hit twice.",
     "description_texts": {
@@ -7604,7 +7604,7 @@
     "item_name": "Rune of Perthro",
     "item_name_texts": {
       "en": "Rune of Perthro",
-      "zh": "佩伊洛符文"
+      "zh": "签筒符文"
     },
     "description": "This item counts for all item sets.",
     "description_texts": {
@@ -7638,7 +7638,7 @@
     "description": "Spawn 1-3 Charmed Lice at the start of each battle.",
     "description_texts": {
       "en": "Spawn 1-3 Charmed Lice at the start of each battle.",
-      "zh": "每次战斗开始时生成 1-3 只被魅惑的虱子。\n"
+      "zh": "每次战斗开始时生成 1-3 只被魅惑的虱子。"
     },
     "kind": "head",
     "rarity": "uncommon",
@@ -7728,7 +7728,7 @@
     "description": "Allies gain +1 [img:str] at the start of each battle.",
     "description_texts": {
       "en": "Allies gain +1 [img:str] at the start of each battle.",
-      "zh": "盟友在每次战斗开始时获得 +1 [img:str]。\n"
+      "zh": "盟友在每次战斗开始时获得 +1 [img:str]。"
     },
     "kind": "head",
     "rarity": "uncommon",
@@ -7759,7 +7759,7 @@
     "description": "Allies gain +1 [img:con] at the start of each battle.",
     "description_texts": {
       "en": "Allies gain +1 [img:con] at the start of each battle.",
-      "zh": "盟友在每次战斗开始时获得 +1 [img:con]。\n"
+      "zh": "盟友在每次战斗开始时获得 +1 [img:con]。"
     },
     "kind": "face",
     "rarity": "uncommon",
@@ -7790,7 +7790,7 @@
     "description": "Allies gain +1 [img:spd] at the start of each battle.",
     "description_texts": {
       "en": "Allies gain +1 [img:spd] at the start of each battle.",
-      "zh": "盟友在每次战斗开始时获得 +1 [img:spd]。\n"
+      "zh": "盟友在每次战斗开始时获得 +1 [img:spd]。"
     },
     "kind": "neck",
     "rarity": "uncommon",
@@ -7911,7 +7911,7 @@
     "description": "+10% Dodge Chance. Each time you end movement, gain +1 [img:spd] and Charge 2.",
     "description_texts": {
       "en": "+10% Dodge Chance. Each time you end movement, gain +1 [img:spd] and Charge 2.",
-      "zh": "+10% 闪避率。每当你结束移动时，\n获得 +1 [img:spd] 和 2 层充能。\n"
+      "zh": "+10% 闪避率。每当你结束移动时，\n获得 +1 [img:spd] 和 2 层充能。"
     },
     "kind": "head",
     "rarity": "uncommon",
@@ -7939,7 +7939,7 @@
     "description": "+10% Dodge Chance. Each time you end movement, gain +1 [img:spd] and Charge 2.",
     "description_texts": {
       "en": "+10% Dodge Chance. Each time you end movement, gain +1 [img:spd] and Charge 2.",
-      "zh": "+10% 闪避率。每当你结束移动时，\n获得 +1 [img:spd] 和 2 层充能。\n"
+      "zh": "+10% 闪避率。每当你结束移动时，\n获得 +1 [img:spd] 和 2 层充能。"
     },
     "kind": "face",
     "rarity": "uncommon",
@@ -7967,7 +7967,7 @@
     "description": "+10% Dodge Chance. Each time you end movement, gain +1 [img:spd] and Charge 2.",
     "description_texts": {
       "en": "+10% Dodge Chance. Each time you end movement, gain +1 [img:spd] and Charge 2.",
-      "zh": "+10% 闪避率。每当你结束移动时，\n获得 +1 [img:spd] 和 2 层充能。\n"
+      "zh": "+10% 闪避率。每当你结束移动时，\n获得 +1 [img:spd] 和 2 层充能。"
     },
     "kind": "neck",
     "rarity": "uncommon",
@@ -8241,7 +8241,7 @@
     "description": "Side Quest Item. Your team has very bad luck during events. +2 Thorns.",
     "description_texts": {
       "en": "Side Quest Item. Your team has very bad luck during events. +2 Thorns.",
-      "zh": "支线任务物品。你的队伍在事件中运气极差。\n+2 荆棘。"
+      "zh": "支线任务物品。\n你的队伍在事件中运气极差。\n+2 荆棘。"
     },
     "kind": "face",
     "rarity": "sidequest",
@@ -8318,7 +8318,7 @@
     "description": "At the end of your turn, drain up to 5 mana from each of your allies.",
     "description_texts": {
       "en": "At the end of your turn, drain up to 5 mana from each of your allies.",
-      "zh": "在你的回合结束时，\n从你的每个盟友那里吸取最多 5 点法力值。\n"
+      "zh": "在你的回合结束时，\n从你的每个盟友那里吸取最多 5 点法力值。"
     },
     "kind": "trinket",
     "rarity": "rare",
@@ -8345,7 +8345,7 @@
     "description": "Side Quest Item. Equipped cat is an enemy, must be downed to win the battle, and can still receive level ups. Can't be equipped to a Collarless cat.",
     "description_texts": {
       "en": "Side Quest Item. Equipped cat is an enemy, must be downed to win the battle, and can still receive level ups. Can't be equipped to a Collarless cat.",
-      "zh": "支线任务物品。装备的猫视为敌人，\n必须将其击倒才能赢得战斗，\n且仍可获得升级。无法装备给无项圈猫。\n"
+      "zh": "支线任务物品。装备的猫视为敌人，\n必须将其击倒才能赢得战斗，\n且仍可获得升级。无法装备给无项圈猫。"
     },
     "kind": "face",
     "rarity": "sidequest",
@@ -8372,7 +8372,7 @@
     "description": "Spawn near enemies and take an AI controlled bonus turn at the start of every battle.",
     "description_texts": {
       "en": "Spawn near enemies and take an AI controlled bonus turn at the start of every battle.",
-      "zh": "在每场战斗开始时生成在敌人附近，\n并进行一个AI控制的额外回合。\n"
+      "zh": "在每场战斗开始时生成在敌人附近，\n并进行一个AI控制的额外回合。"
     },
     "kind": "face",
     "rarity": "rare",
@@ -8399,7 +8399,7 @@
     "description": "Side Quest Item. Apply Poison 1 to everything at the start of the battle.",
     "description_texts": {
       "en": "Side Quest Item. Apply Poison 1 to everything at the start of the battle.",
-      "zh": "支线任务物品。\n在战斗开始时对所有目标施加 1 层中毒。\n"
+      "zh": "支线任务物品。\n在战斗开始时对所有目标施加 1 层中毒。"
     },
     "kind": "face",
     "rarity": "sidequest",
@@ -8426,7 +8426,7 @@
     "description": "Apply Poison 1 to all enemies at the start of the battle.",
     "description_texts": {
       "en": "Apply Poison 1 to all enemies at the start of the battle.",
-      "zh": "在战斗开始时对所有敌人施加 1 层中毒。\n"
+      "zh": "在战斗开始时对所有敌人施加 1 层中毒。"
     },
     "kind": "face",
     "rarity": "rare",
@@ -8453,7 +8453,7 @@
     "description": "Side Quest Item. Apply Infested 4 to all allies at the start of each battle.",
     "description_texts": {
       "en": "Side Quest Item. Apply Infested 4 to all allies at the start of each battle.",
-      "zh": "支线任务物品。\n在每场战斗开始时对所有盟友施加 4 层寄生。\n"
+      "zh": "支线任务物品。\n在每场战斗开始时对所有盟友施加 4 层寄生。"
     },
     "kind": "head",
     "rarity": "sidequest",
@@ -8478,7 +8478,7 @@
     "description": "Apply Infested 1 to all enemies at the start of each battle.",
     "description_texts": {
       "en": "Apply Infested 1 to all enemies at the start of each battle.",
-      "zh": "在每场战斗开始时对所有敌人施加 1 层寄生。\n"
+      "zh": "在每场战斗开始时对所有敌人施加 1 层寄生。"
     },
     "kind": "head",
     "rarity": "rare",
@@ -8553,7 +8553,7 @@
     "description": "Side Quest Item. You are Ambushed every battle. Use to make some noise!",
     "description_texts": {
       "en": "Side Quest Item. You are Ambushed every battle. Use to make some noise!",
-      "zh": "支线任务物品。你在每场战斗中都会被偷袭。\n使用它来制造噪音！"
+      "zh": "支线任务物品。\n你在每场战斗中都会被偷袭。\n使用它来制造噪音！"
     },
     "kind": "weapon",
     "rarity": "sidequest",
@@ -8603,7 +8603,7 @@
     "description": "Side Quest Item. Kill all of your allies at the start of each battle.",
     "description_texts": {
       "en": "Side Quest Item. Kill all of your allies at the start of each battle.",
-      "zh": "支线任务物品。\n在每场战斗开始时杀死你所有的盟友。\n"
+      "zh": "支线任务物品。\n在每场战斗开始时杀死你所有的盟友。"
     },
     "kind": "weapon",
     "rarity": "sidequest",
@@ -8683,7 +8683,7 @@
     "description": "Use: Shoot a glass ball anywhere.",
     "description_texts": {
       "en": "Use: Shoot a glass ball anywhere.",
-      "zh": "使用：向任意位置发射一个玻璃球。\n"
+      "zh": "使用：向任意位置发射一个玻璃球。"
     },
     "kind": "weapon",
     "rarity": "rare",
@@ -8708,7 +8708,7 @@
     "description": "Side Quest Item. Fragile. Equipped cat cannot use any actions except Move.",
     "description_texts": {
       "en": "Side Quest Item. Fragile. Equipped cat cannot use any actions except Move.",
-      "zh": "支线任务物品。易碎。\n装备的猫咪除了移动外无法使用任何行动。\n"
+      "zh": "支线任务物品。易碎。\n装备的猫咪除了移动外无法使用任何行动。"
     },
     "kind": "head",
     "rarity": "sidequest",
@@ -8764,7 +8764,7 @@
     "description": "Side Quest Item. The adventure is harder!",
     "description_texts": {
       "en": "Side Quest Item. The adventure is harder!",
-      "zh": "支线任务物品。冒险变得更难了！\n"
+      "zh": "支线任务物品。冒险变得更难了！"
     },
     "kind": "trinket",
     "rarity": "sidequest",
@@ -8816,7 +8816,7 @@
     "description": "Side Quest Item. All units rebound with Knockback 5 on contact.",
     "description_texts": {
       "en": "Side Quest Item. All units rebound with Knockback 5 on contact.",
-      "zh": "支线任务物品。\n所有单位接触时会以 5 点击退力反弹。\n"
+      "zh": "支线任务物品。\n所有单位接触时会以 5 点击退力反弹。"
     },
     "kind": "neck",
     "rarity": "sidequest",
@@ -8891,7 +8891,7 @@
     "description": "Your [img:cha] is equal to your highest other stat.",
     "description_texts": {
       "en": "Your [img:cha] is equal to your highest other stat.",
-      "zh": "你的 [img:cha] 等于你最高的其他属性。\n"
+      "zh": "你的 [img:cha] 等于你最高的其他属性。"
     },
     "kind": "face",
     "rarity": "rare",
@@ -8966,7 +8966,7 @@
     "description": "Side Quest Item. Your team's active ability level ups offer rare items instead.",
     "description_texts": {
       "en": "Side Quest Item. Your team's active ability level ups offer rare items instead.",
-      "zh": "支线任务物品。\n你队伍的主动技能升级会改为提供稀有物品。\n"
+      "zh": "支线任务物品。\n你队伍的主动技能升级会改为提供稀有物品。"
     },
     "kind": "neck",
     "rarity": "sidequest",
@@ -9016,7 +9016,7 @@
     "description": "Side Quest Item. Your team's level up options are complete chaos!",
     "description_texts": {
       "en": "Side Quest Item. Your team's level up options are complete chaos!",
-      "zh": "支线任务物品。你队伍的升级选项完全混乱！\n"
+      "zh": "支线任务物品。\n你队伍的升级选项完全混乱！"
     },
     "kind": "trinket",
     "rarity": "sidequest",
@@ -9041,7 +9041,7 @@
     "description": "Use: Permanently upgrade one of your active abilities at random.",
     "description_texts": {
       "en": "Use: Permanently upgrade one of your active abilities at random.",
-      "zh": "使用：随机永久升级你的一个主动技能。\n"
+      "zh": "使用：随机永久升级你的一个主动技能。"
     },
     "kind": "trinket",
     "rarity": "rare",
@@ -9066,7 +9066,7 @@
     "description": "Side Quest Item. Your team's passive ability level ups offer disorders instead.",
     "description_texts": {
       "en": "Side Quest Item. Your team's passive ability level ups offer disorders instead.",
-      "zh": "支线任务物品。\n你队伍的被动技能升级会改为提供病症。\n"
+      "zh": "支线任务物品。\n你队伍的被动技能升级会改为提供病症。"
     },
     "kind": "face",
     "rarity": "sidequest",
@@ -9120,7 +9120,7 @@
     "description": "Side Quest Item. Events are harder. All normal events trigger 2 extra events.",
     "description_texts": {
       "en": "Side Quest Item. Events are harder. All normal events trigger 2 extra events.",
-      "zh": "支线任务物品。事件变得更难。\n所有普通事件会触发 2 个额外事件。\n"
+      "zh": "支线任务物品。事件变得更难。\n所有普通事件会触发 2 个额外事件。"
     },
     "kind": "face",
     "rarity": "sidequest",
@@ -9203,7 +9203,7 @@
     "description": "Side Quest Item. It's about to explode! Get a kill with this now to quench it.",
     "description_texts": {
       "en": "Side Quest Item. It's about to explode! Get a kill with this now to quench it.",
-      "zh": "支线任务物品。它快要爆炸了！\n现在用它完成一次击杀来平息它。\n"
+      "zh": "支线任务物品。它快要爆炸了！\n现在用它完成一次击杀来平息它。"
     },
     "kind": "weapon",
     "rarity": "sidequest",
@@ -9382,7 +9382,7 @@
     "description": "Use: Gain +{aux} [img:str] for the rest of the battle.",
     "description_texts": {
       "en": "Use: Gain +{aux} [img:str] for the rest of the battle.",
-      "zh": "使用：在战斗剩余时间内获得 +{aux} [img:str] 。\n"
+      "zh": "使用：在战斗剩余时间内获得 +{aux} [img:str] 。"
     },
     "kind": "trinket",
     "rarity": "common",
@@ -9407,7 +9407,7 @@
     "description": "Use: Gain +{aux} [img:dex] for the rest of the battle.",
     "description_texts": {
       "en": "Use: Gain +{aux} [img:dex] for the rest of the battle.",
-      "zh": "使用：在战斗剩余时间内获得 +{aux} [img:dex] 。\n"
+      "zh": "使用：在战斗剩余时间内获得 +{aux} [img:dex] 。"
     },
     "kind": "trinket",
     "rarity": "common",
@@ -9432,7 +9432,7 @@
     "description": "Use: Gain +{aux} [img:int] for the rest of the battle.",
     "description_texts": {
       "en": "Use: Gain +{aux} [img:int] for the rest of the battle.",
-      "zh": "使用：获得 +{aux} [img:int]，持续到战斗结束。\n"
+      "zh": "使用：获得 +{aux} [img:int]，持续到战斗结束。"
     },
     "kind": "trinket",
     "rarity": "common",
@@ -9482,7 +9482,7 @@
     "description": "Use: Gain +{aux} [img:lck] for the rest of the battle.",
     "description_texts": {
       "en": "Use: Gain +{aux} [img:lck] for the rest of the battle.",
-      "zh": "使用：在战斗剩余时间内获得 +{aux} [img:lck] 。\n"
+      "zh": "使用：在战斗剩余时间内获得 +{aux} [img:lck] 。"
     },
     "kind": "trinket",
     "rarity": "common",
@@ -9507,7 +9507,7 @@
     "description": "Use: Gain +{aux} [img:spd] for the rest of the battle.",
     "description_texts": {
       "en": "Use: Gain +{aux} [img:spd] for the rest of the battle.",
-      "zh": "使用：在战斗剩余时间内获得 +{aux} [img:spd] 。\n"
+      "zh": "使用：在战斗剩余时间内获得 +{aux} [img:spd] 。"
     },
     "kind": "trinket",
     "rarity": "common",
@@ -9607,7 +9607,7 @@
     "description": "Use: Cleanse all buffs and debuffs.",
     "description_texts": {
       "en": "Use: Cleanse all buffs and debuffs.",
-      "zh": "使用：驱散所有增益和减益效果。\n"
+      "zh": "使用：驱散所有增益和减益效果。"
     },
     "kind": "trinket",
     "rarity": "uncommon",
@@ -9632,7 +9632,7 @@
     "description": "Use: Heal 25% HP.\nAutomatically eaten if your HP drops below 50%.",
     "description_texts": {
       "en": "Use: Heal 25% HP.\nAutomatically eaten if your HP drops below 50%.",
-      "zh": "使用：恢复 25% 生命值。\n当你的生命值低于 50% 时会自动食用。\n"
+      "zh": "使用：恢复 25% 生命值。\n当你的生命值低于 50% 时会自动食用。"
     },
     "kind": "trinket",
     "rarity": "uncommon",
@@ -9682,7 +9682,7 @@
     "description": "Use: Heal yourself and all adjacent units to full HP.",
     "description_texts": {
       "en": "Use: Heal yourself and all adjacent units to full HP.",
-      "zh": "使用：\n将你自己和所有相邻单位的生命值恢复至满。\n"
+      "zh": "使用：\n将你自己和所有相邻单位的生命值恢复至满。"
     },
     "kind": "trinket",
     "rarity": "rare",
@@ -9783,7 +9783,7 @@
     "description": "Use: Cure a random injury.",
     "description_texts": {
       "en": "Use: Cure a random injury.",
-      "zh": "使用：治愈一个随机伤势。"
+      "zh": "使用：治愈一个随机创伤。"
     },
     "kind": "trinket",
     "rarity": "rare",
@@ -9890,7 +9890,7 @@
     "description": "Use: All damage you deal until the end of the turn is critical and can't miss.",
     "description_texts": {
       "en": "Use: All damage you deal until the end of the turn is critical and can't miss.",
-      "zh": "使用：直到回合结束，\n你造成的所有伤害必定暴击且无法未命中。\n"
+      "zh": "使用：直到回合结束，\n你造成的所有伤害必定暴击且无法未命中。"
     },
     "kind": "trinket",
     "rarity": "uncommon",
@@ -10071,7 +10071,7 @@
     "description": "Use: Make your weapon unbreakable for the rest of the adventure.",
     "description_texts": {
       "en": "Use: Make your weapon unbreakable for the rest of the adventure.",
-      "zh": "使用：\n使你的武器在本次冒险剩余时间内不可破坏。\n"
+      "zh": "使用：\n使你的武器在本次冒险剩余时间内不可破坏。"
     },
     "kind": "trinket",
     "rarity": "very_rare",
@@ -10121,7 +10121,7 @@
     "description": "Use: Gain 10-30 coins.",
     "description_texts": {
       "en": "Use: Gain 10-30 coins.",
-      "zh": "使用：获得 10-30 金币。\n"
+      "zh": "使用：获得 10-30 金币。"
     },
     "kind": "trinket",
     "rarity": null,
@@ -10148,7 +10148,7 @@
     "description": "Use: Heal 6, gain +1 Health Regen and cleanse your debuffs.",
     "description_texts": {
       "en": "Use: Heal 6, gain +1 Health Regen and cleanse your debuffs.",
-      "zh": "使用：恢复 6 点生命值，\n获得 +1 生命恢复并净化你的减益效果。\n"
+      "zh": "使用：恢复 6 点生命值，\n获得 +1 生命恢复并净化你的减益效果。"
     },
     "kind": "trinket",
     "rarity": null,
@@ -10175,7 +10175,7 @@
     "description": "Use: Heal to full.\n10% chance at the end of each turn to break and summon a Charmed Raptor Kitten.",
     "description_texts": {
       "en": "Use: Heal to full.\n10% chance at the end of each turn to break and summon a Charmed Raptor Kitten.",
-      "zh": "使用：恢复全部生命值。\n在每回合结束时有 10% 的\n几率破裂并召唤一只被魅惑的迅猛龙小猫。\n"
+      "zh": "使用：恢复全部生命值。\n在每回合结束时有 10% 的\n几率破裂并召唤一只被魅惑的迅猛龙小猫。"
     },
     "kind": "trinket",
     "rarity": null,
@@ -10599,7 +10599,7 @@
     "description": "Use: Gain +20 [img:spd] and +50% Dodge Chance.",
     "description_texts": {
       "en": "Use: Gain +20 [img:spd] and +50% Dodge Chance.",
-      "zh": "使用：获得 +20 [img:spd] 和 +50% 闪避率。\n"
+      "zh": "使用：获得 +20 [img:spd] 和 +50% 闪避率。"
     },
     "kind": "trinket",
     "rarity": "very_rare",
@@ -10702,7 +10702,7 @@
     "description": "Use: Give an adjacent unit +1 Health Regen.",
     "description_texts": {
       "en": "Use: Give an adjacent unit +1 Health Regen.",
-      "zh": "使用：使一个相邻单位获得 +1 生命恢复。\n"
+      "zh": "使用：使一个相邻单位获得 +1 生命恢复。"
     },
     "kind": "trinket",
     "rarity": "rare",
@@ -10754,7 +10754,7 @@
     "description": "Use: Permanently upgrade a random spell or passive ability.",
     "description_texts": {
       "en": "Use: Permanently upgrade a random spell or passive ability.",
-      "zh": "使用：永久升级一个随机法术或被动技能。\n"
+      "zh": "使用：永久升级一个随机法术或被动技能。"
     },
     "kind": "trinket",
     "rarity": "rare",
@@ -10781,7 +10781,7 @@
     "description": "Use: Spawn a controllable copy of yourself.",
     "description_texts": {
       "en": "Use: Spawn a controllable copy of yourself.",
-      "zh": "使用：生成一个可控制的复制体。\n"
+      "zh": "使用：生成一个可控制的复制体。"
     },
     "kind": "trinket",
     "rarity": "rare",
@@ -10808,7 +10808,7 @@
     "description": "Use: Duplicate one of your equipped items.",
     "description_texts": {
       "en": "Use: Duplicate one of your equipped items.",
-      "zh": "使用：复制一件你已装备的物品。\n"
+      "zh": "使用：复制一件你已装备的物品。"
     },
     "kind": "trinket",
     "rarity": "rare",
@@ -10836,7 +10836,7 @@
     "description": "Use: Enter Mockingbird Form. Gain a random bird mutation at the end of the battle.",
     "description_texts": {
       "en": "Use: Enter Mockingbird Form. Gain a random bird mutation at the end of the battle.",
-      "zh": "使用：进入嘲鸫形态。\n在战斗结束时获得一个随机的鸟类突变。\n"
+      "zh": "使用：进入嘲鸫形态。\n在战斗结束时获得一个随机的鸟类突变。"
     },
     "kind": "trinket",
     "rarity": "rare",
@@ -10890,7 +10890,7 @@
     "description": "Your basic attack is a weak tear shot. You can use your basic attack an extra time each turn.",
     "description_texts": {
       "en": "Your basic attack is a weak tear shot. You can use your basic attack an extra time each turn.",
-      "zh": "你的基础攻击变为微弱的眼泪射击。\n你每回合可以额外使用一次基础攻击。\n"
+      "zh": "你的基础攻击变为微弱的眼泪射击。\n你每回合可以额外使用一次基础攻击。"
     },
     "kind": "head",
     "rarity": null,
@@ -10919,7 +10919,7 @@
     "description": "Your basic attack inflicts Bleed 1. Gain +1 Bleed each time you use your basic attack.",
     "description_texts": {
       "en": "Your basic attack inflicts Bleed 1. Gain +1 Bleed each time you use your basic attack.",
-      "zh": "你的基础攻击施加 1 层流血。\n每次使用基础攻击时获得 +1 流血。\n"
+      "zh": "你的基础攻击施加 1 层流血。\n每次使用基础攻击时获得 +1 流血。"
     },
     "kind": "weapon",
     "rarity": null,
@@ -10972,7 +10972,7 @@
     "description": "+2 Thorns.\nGain +1 Bleed each time you take damage.",
     "description_texts": {
       "en": "+2 Thorns.\nGain +1 Bleed each time you take damage.",
-      "zh": "+2 荆棘。\n每次受到伤害时获得 +1 流血。\n"
+      "zh": "+2 荆棘。\n每次受到伤害时获得 +1 流血。"
     },
     "kind": "face",
     "rarity": null,
@@ -11024,7 +11024,7 @@
     "description": "Your basic attack inflicts Poison 2. Start each battle with Poison 3.",
     "description_texts": {
       "en": "Your basic attack inflicts Poison 2. Start each battle with Poison 3.",
-      "zh": "你的基础攻击施加 2 层中毒。\n每场战斗开始时带有 3 层中毒。\n"
+      "zh": "你的基础攻击施加 2 层中毒。\n每场战斗开始时带有 3 层中毒。"
     },
     "kind": "trinket",
     "rarity": null,
@@ -11235,7 +11235,7 @@
     "description": "Brace 1. Your basic attack inflicts Bruise 1.",
     "description_texts": {
       "en": "Brace 1. Your basic attack inflicts Bruise 1.",
-      "zh": "护甲 1。你的基础攻击施加淤伤 1。\n"
+      "zh": "护甲 1。你的基础攻击施加淤伤 1。"
     },
     "kind": "head",
     "rarity": null,
@@ -11291,7 +11291,7 @@
     "description": "After your 3rd turn, spawn a Charmed Spookie with Madness on a random tile.",
     "description_texts": {
       "en": "After your 3rd turn, spawn a Charmed Spookie with Madness on a random tile.",
-      "zh": "在你的第 3 个回合后，\n在随机地块生成一个带有疯狂状态的魅惑幽灵怪。\n"
+      "zh": "在你的第 3 个回合后，\n在随机地块生成一个带有疯狂状态的魅惑幽灵怪。"
     },
     "kind": "trinket",
     "rarity": null,
@@ -12721,7 +12721,7 @@
     "description": "Your basic attack has a +15% chance to inflict Fear.",
     "description_texts": {
       "en": "Your basic attack has a +15% chance to inflict Fear.",
-      "zh": "你的基础攻击有 +15% 几率施加[b]恐惧[/b]。\n"
+      "zh": "你的基础攻击有 +15% 几率施加[b]恐惧[/b]。"
     },
     "kind": "face",
     "rarity": "uncommon",
@@ -12780,7 +12780,7 @@
     "description": "Your physical attacks and abilities always miss.",
     "description_texts": {
       "en": "Your physical attacks and abilities always miss.",
-      "zh": "你的物理攻击和技能总是未命中。\n"
+      "zh": "你的物理攻击和技能总是未命中。"
     },
     "kind": "face",
     "rarity": "rare",
@@ -12865,7 +12865,7 @@
     "description": "While downed, you have a 25% chance to revive with 1 HP at the end of the round.",
     "description_texts": {
       "en": "While downed, you have a 25% chance to revive with 1 HP at the end of the round.",
-      "zh": "当处于[b]倒地[/b]状态时，\n你有 25% 的\n几率在回合结束时以 1 点生命值复活。\n"
+      "zh": "当处于[b]倒地[/b]状态时，\n你有 25% 的\n几率在回合结束时以 1 点生命值复活。"
     },
     "kind": "face",
     "rarity": "uncommon",
@@ -12892,7 +12892,7 @@
     "description": "Your basic attack spawns 1 coin when it deals damage.",
     "description_texts": {
       "en": "Your basic attack spawns 1 coin when it deals damage.",
-      "zh": "你的基础攻击在造成伤害时会生成 1 枚金币。\n"
+      "zh": "你的基础攻击在造成伤害时会生成 1 枚金币。"
     },
     "kind": "face",
     "rarity": "common",
@@ -12977,7 +12977,7 @@
     "description": "+1 Thorns.\nGain +1 Charge when you deal damage.",
     "description_texts": {
       "en": "+1 Thorns.\nGain +1 Charge when you deal damage.",
-      "zh": "+1 荆棘。\n当你造成伤害时，获得 +1 充能。\n"
+      "zh": "+1 荆棘。\n当你造成伤害时，获得 +1 充能。"
     },
     "kind": "face",
     "rarity": "uncommon",
@@ -13004,7 +13004,7 @@
     "description": "You have a 10% chance to gain a bonus attack when you use your basic attack.",
     "description_texts": {
       "en": "You have a 10% chance to gain a bonus attack when you use your basic attack.",
-      "zh": "当你使用基础攻击时，\n有 10% 几率获得一次奖励攻击。\n"
+      "zh": "当你使用基础攻击时，\n有 10% 几率获得一次奖励攻击。"
     },
     "kind": "face",
     "rarity": "uncommon",
@@ -13160,7 +13160,7 @@
     "description": "Your basic attack inflicts Burn 1 and Blind 1.\nInflict Burn 1 and Blind 1 on units that contact or attack you.",
     "description_texts": {
       "en": "Your basic attack inflicts Burn 1 and Blind 1.\nInflict Burn 1 and Blind 1 on units that contact or attack you.",
-      "zh": "你的基础攻击施加 1 层[b]燃烧[/b]和 1 层[b]致盲[/b]。\n对接触或攻击你的\n单位施加 1 层[b]燃烧[/b]和 1 层[b]致盲[/b]。\n"
+      "zh": "你的基础攻击施加 1 层[b]燃烧[/b]和 1 层[b]致盲[/b]。\n对接触或攻击你的\n单位施加 1 层[b]燃烧[/b]和 1 层[b]致盲[/b]。"
     },
     "kind": "face",
     "rarity": "very_rare",
@@ -13212,7 +13212,7 @@
     "description": "Your abilities have 100% accuracy and +50% Crit Chance.\nYou are unable to hit any unit that isn't in a straight line directly in front of you.",
     "description_texts": {
       "en": "Your abilities have 100% accuracy and +50% Crit Chance.\nYou are unable to hit any unit that isn't in a straight line directly in front of you.",
-      "zh": "你的\n技能拥有 100% 命中率和\n +50% [img:crit] 暴击率。\n你无法命中任何不处于你正前方直线上的单位。\n"
+      "zh": "你的\n技能拥有 100% 命中率和\n +50% [img:crit] 暴击率。\n你无法命中任何不处于你正前方直线上的单位。"
     },
     "kind": "face",
     "rarity": "rare",
@@ -13267,7 +13267,7 @@
     "description": "Inflict Leech 1 to all enemies at the start of each battle.\nStart each battle at 50% health.",
     "description_texts": {
       "en": "Inflict Leech 1 to all enemies at the start of each battle.\nStart each battle at 50% health.",
-      "zh": "每场战斗开始时对所有敌人施加 1 层水蛭。\n每场战斗开始时生命值为 50%。\n"
+      "zh": "每场战斗开始时\n对所有敌人施加 1 层水蛭。\n每场战斗开始时生命值为 50%。"
     },
     "kind": "face",
     "rarity": "rare",
@@ -13294,7 +13294,7 @@
     "description": "Gain +1 [img:shield] each time you cast a spell.",
     "description_texts": {
       "en": "Gain +1 [img:shield] each time you cast a spell.",
-      "zh": "每当你施放法术时，获得 +1 [img:shield]。\n"
+      "zh": "每当你施放法术时，获得 +1 [img:shield]。"
     },
     "kind": "face",
     "rarity": "very_rare",
@@ -13490,7 +13490,7 @@
     "description": "Emit 4 Sparkles at the start of each battle.",
     "description_texts": {
       "en": "Emit 4 Sparkles at the start of each battle.",
-      "zh": "每场战斗开始时发出 4 个火花。\n"
+      "zh": "每场战斗开始时发出 4 个火花。"
     },
     "kind": "face",
     "rarity": "common",
@@ -13630,7 +13630,7 @@
     "description": "+1 Brace, +1 Health Regen, 5% chance to spawn a Charmed Flea each turn.",
     "description_texts": {
       "en": "+1 Brace, +1 Health Regen, 5% chance to spawn a Charmed Flea each turn.",
-      "zh": "+1 [img:brace] 护甲，+1 [img:health] 战后生命恢复，\n每回合有 5% 几率生成一个魅惑跳蚤。\n"
+      "zh": "+1 [img:brace] 护甲，+1 [img:health] 战后生命恢复，\n每回合有 5% 几率生成一个魅惑跳蚤。"
     },
     "kind": "face",
     "rarity": "very_rare",
@@ -13660,7 +13660,7 @@
     "description": "Gain +2 Charge when you take damage.\nFind a common item when you are downed.",
     "description_texts": {
       "en": "Gain +2 Charge when you take damage.\nFind a common item when you are downed.",
-      "zh": "当你受到伤害时，获得 +2 充能。\n当你倒地时，发现一件普通物品。\n"
+      "zh": "当你受到伤害时，获得 +2 充能。\n当你倒地时，发现一件普通物品。"
     },
     "kind": "face",
     "rarity": "very_rare",
@@ -13753,7 +13753,7 @@
     "description": "+1 range, +1 reach.\nPoison Immunity.",
     "description_texts": {
       "en": "+1 range, +1 reach.\nPoison Immunity.",
-      "zh": "+1 射程，+1 延伸。\n毒素免疫。"
+      "zh": "+1 射程，+1 近战范围。\n免疫中毒。"
     },
     "kind": "face",
     "rarity": "very_rare",
@@ -13784,7 +13784,7 @@
     "description": "Allies gain 2 [img:divineshield] when you are downed.\nYour spells cost -1 mana.",
     "description_texts": {
       "en": "Allies gain 2 [img:divineshield] when you are downed.\nYour spells cost -1 mana.",
-      "zh": "当你[b]倒地[/b]时，盟友获得 2 [img:divineshield]。\n你的法术消耗减少 1 点法力。\n"
+      "zh": "当你[b]倒地[/b]时，盟友获得 2 [img:divineshield]。\n你的法术消耗减少 1 点法力。"
     },
     "kind": "face",
     "rarity": "very_rare",
@@ -13869,7 +13869,7 @@
     "description": "Permanent Madness.\nTake 2 extra turns at the start of each round.",
     "description_texts": {
       "en": "Permanent Madness.\nTake 2 extra turns at the start of each round.",
-      "zh": "永久[b]疯狂[/b]。\n每回合开始时获得 2 个额外行动点。\n"
+      "zh": "永久[b]疯狂[/b]。\n每回合开始时获得 2 个额外行动点。"
     },
     "kind": "face",
     "rarity": "very_rare",
@@ -13897,7 +13897,7 @@
     "description": "Your explosions deal +1 damage and have +1 area.",
     "description_texts": {
       "en": "Your explosions deal +1 damage and have +1 area.",
-      "zh": "你的爆炸造成 +1 伤害并具有 +1 范围。\n"
+      "zh": "你的爆炸造成 +1 伤害并具有 +1 范围。"
     },
     "kind": "face",
     "rarity": "very_rare",
@@ -13921,12 +13921,12 @@
     "item_name": "Flesh Kid",
     "item_name_texts": {
       "en": "Flesh Kid",
-      "zh": "血肉孩童"
+      "zh": "食肉男孩"
     },
     "description": "You can't get injuries.\nWhen you're downed, revive at the end of the round.\nYour movement action is Jump.",
     "description_texts": {
       "en": "You can't get injuries.\nWhen you're downed, revive at the end of the round.\nYour movement action is Jump.",
-      "zh": "你不会受到伤势。\n当你[b]倒地[/b]时，在回合结束时复活。\n你的移动行动变为跳跃。"
+      "zh": "你不会受到创伤。\n当你[b]倒地[/b]时，在回合结束时复活。\n你的移动行动变为跳跃。"
     },
     "kind": "face",
     "rarity": "very_rare",
@@ -14007,7 +14007,7 @@
     "item_name": "Miner's Beard",
     "item_name_texts": {
       "en": "Miner's Beard",
-      "zh": "矿工胡须"
+      "zh": "矿工之须"
     },
     "description": "When you take damage, spawn scrap.\nWhen you end turn, spawn a coin on a random tile.",
     "description_texts": {
@@ -14040,7 +14040,7 @@
     "description": "+15% Dodge Chance.\nGain +5% Dodge Chance each time you take damage.",
     "description_texts": {
       "en": "+15% Dodge Chance.\nGain +5% Dodge Chance each time you take damage.",
-      "zh": "+15% [img:dodge] 闪避率。\n每次受到伤害时获得 +5% [img:dodge] 闪避率。\n"
+      "zh": "+15% [img:dodge] 闪避率。\n每次受到伤害时获得 +5% [img:dodge] 闪避率。"
     },
     "kind": "face",
     "rarity": "rare",
@@ -14065,7 +14065,7 @@
     "description": "Spawn a Charmed Fly at the end of your turn.",
     "description_texts": {
       "en": "Spawn a Charmed Fly at the end of your turn.",
-      "zh": "在你的回合结束时生成一个魅惑苍蝇。\n"
+      "zh": "在你的回合结束时生成一个魅惑苍蝇。"
     },
     "kind": "face",
     "rarity": "rare",
@@ -14094,7 +14094,7 @@
     "description": "Spawn a large Charmed Fly at the start of each battle.",
     "description_texts": {
       "en": "Spawn a large Charmed Fly at the start of each battle.",
-      "zh": "每场战斗开始时生成一只大型魅惑苍蝇。\n"
+      "zh": "每场战斗开始时生成一只大型魅惑苍蝇。"
     },
     "kind": "face",
     "rarity": "very_rare",
@@ -14205,7 +14205,7 @@
     "description": "While you're downed, spawn a random charmed enemy familiar at the end of each round.",
     "description_texts": {
       "en": "While you're downed, spawn a random charmed enemy familiar at the end of each round.",
-      "zh": "当你倒地时，\n在每回合结束时生成一个随机的魅惑敌方使魔。\n"
+      "zh": "当你倒地时，\n在每回合结束时生成一个随机的魅惑敌方使魔。"
     },
     "kind": "face",
     "rarity": "very_rare",
@@ -14257,7 +14257,7 @@
     "description": "Gain +1 Damage and heal 1 HP every time you use your basic attack.",
     "description_texts": {
       "en": "Gain +1 Damage and heal 1 HP every time you use your basic attack.",
-      "zh": "每次使用基础攻击时，\n获得 +1 伤害并治疗 1 点生命值。\n"
+      "zh": "每次使用基础攻击时，\n获得 +1 伤害并治疗 1 点生命值。"
     },
     "kind": "face",
     "rarity": "very_rare",
@@ -14334,7 +14334,7 @@
     "description": "Fragile. Gain Psychosis when this breaks.",
     "description_texts": {
       "en": "Fragile. Gain Psychosis when this breaks.",
-      "zh": "易碎。当此物品破碎时获得精神错乱。\n"
+      "zh": "易碎。当此物品破碎时获得精神错乱。"
     },
     "kind": "head",
     "rarity": "rare",
@@ -14364,7 +14364,7 @@
     "description": "Units that contact you are knocked back 10 tiles.",
     "description_texts": {
       "en": "Units that contact you are knocked back 10 tiles.",
-      "zh": "接触你的单位会被击退 10 格。\n"
+      "zh": "接触你的单位会被击退 10 格。"
     },
     "kind": "head",
     "rarity": "common",
@@ -14440,7 +14440,7 @@
     "item_name": "Dunce Cap",
     "item_name_texts": {
       "en": "Dunce Cap",
-      "zh": "笨蛋帽"
+      "zh": "蠢巫帽"
     },
     "description": "Your spells cost -1 mana.",
     "description_texts": {
@@ -14501,7 +14501,7 @@
     "description": "When you end your movement, pull all adjacent pickups towards you.\nWhen you gain coins, gain that much [img:shield].",
     "description_texts": {
       "en": "When you end your movement, pull all adjacent pickups towards you.\nWhen you gain coins, gain that much [img:shield].",
-      "zh": "当你结束移动时，\n将所有相邻的掉落物拉向你。\n当你获得金币时，获得等量的 [img:shield] 。\n"
+      "zh": "当你结束移动时，\n将所有相邻的掉落物拉向你。\n当你获得金币时，获得等量的 [img:shield] 。"
     },
     "kind": "head",
     "rarity": "rare",
@@ -14613,7 +14613,7 @@
     "description": "+33% chance to gain +1 [img:divineshield] when you take damage.",
     "description_texts": {
       "en": "+33% chance to gain +1 [img:divineshield] when you take damage.",
-      "zh": "受到伤害时有 +33% 几率获得 +1 [img:divineshield]。\n"
+      "zh": "受到伤害时有 +33% 几率获得 +1 [img:divineshield]。"
     },
     "kind": "head",
     "rarity": "rare",
@@ -14669,7 +14669,7 @@
     "description": "The first spell you cast each turn is free.",
     "description_texts": {
       "en": "The first spell you cast each turn is free.",
-      "zh": "每回合你施放的第一个法术免费。\n"
+      "zh": "每回合你施放的第一个法术免费。"
     },
     "kind": "head",
     "rarity": "rare",
@@ -14725,7 +14725,7 @@
     "description": "While at 5 or less health, you have +3 Damage and can move an extra time each turn.",
     "description_texts": {
       "en": "While at 5 or less health, you have +3 Damage and can move an extra time each turn.",
-      "zh": "当生命值为 5 或更低时，\n获得 +3 伤害并且每回合可以额外移动一次。\n"
+      "zh": "当生命值为 5 或更低时，\n获得 +3 伤害并且每回合可以额外移动一次。"
     },
     "kind": "head",
     "rarity": "rare",
@@ -14833,7 +14833,7 @@
     "description": "+4 Thorns. When you take damage while you have Thorns, lose 1 Thorns, then shoot needles that deal 2 damage in eight directions.",
     "description_texts": {
       "en": "+4 Thorns. When you take damage while you have Thorns, lose 1 Thorns, then shoot needles that deal 2 damage in eight directions.",
-      "zh": "+4 荆棘。当你拥有荆棘并受到伤害时，\n失去 1 层荆棘，\n然后向八个方向发射造成 2 点伤害的针刺。\n"
+      "zh": "+4 荆棘。当你拥有荆棘并受到伤害时，\n失去 1 层荆棘，\n然后向八个方向发射造成 2 点伤害的针刺。"
     },
     "kind": "head",
     "rarity": "rare",
@@ -14890,7 +14890,7 @@
     "description": "Your crits knock units back 10 tiles with Chain Knockback.",
     "description_texts": {
       "en": "Your crits knock units back 10 tiles with Chain Knockback.",
-      "zh": "你的暴击将单位击退 10 格并附带连锁击退。\n"
+      "zh": "你的暴击将单位击退 10 格并附带连锁击退。"
     },
     "kind": "head",
     "rarity": "uncommon",
@@ -14915,7 +14915,7 @@
     "description": "-1 Damage. Your basic attack heals allies.",
     "description_texts": {
       "en": "-1 Damage. Your basic attack heals allies.",
-      "zh": "-1 伤害。你的基础攻击会治疗盟友。\n"
+      "zh": "-1 伤害。你的基础攻击会治疗盟友。"
     },
     "kind": "head",
     "rarity": "uncommon",
@@ -15004,7 +15004,7 @@
     "description": "Inflict Poison 1 on all units at the start of the battle.\nYour basic attack inflicts Poison 1.\nInflict Poison 1 on units that contact you.",
     "description_texts": {
       "en": "Inflict Poison 1 on all units at the start of the battle.\nYour basic attack inflicts Poison 1.\nInflict Poison 1 on units that contact you.",
-      "zh": "战斗开始时对所有单位施加 1 层中毒。\n你的基础攻击施加 1 层中毒。\n对接触你的单位施加 1 层中毒。\n"
+      "zh": "战斗开始时对所有单位施加 1 层中毒。\n你的基础攻击施加 1 层中毒。\n对接触你的单位施加 1 层中毒。"
     },
     "kind": "head",
     "rarity": "rare",
@@ -15031,7 +15031,7 @@
     "description": "+3 Bleed Thorns. Your basic attack inflicts +1 Bleed and spawns glass.",
     "description_texts": {
       "en": "+3 Bleed Thorns. Your basic attack inflicts +1 Bleed and spawns glass.",
-      "zh": "+3 流血荆棘。\n你的基础攻击施加 +1 流血并生成玻璃。\n"
+      "zh": "+3 流血荆棘。\n你的基础攻击施加 +1 流血并生成玻璃。"
     },
     "kind": "head",
     "rarity": "rare",
@@ -15115,7 +15115,7 @@
     "description": "Apply Confusion 2 to yourself and all enemies at the start of each battle.",
     "description_texts": {
       "en": "Apply Confusion 2 to yourself and all enemies at the start of each battle.",
-      "zh": "在每场战斗开始时，\n对你自己和所有敌人施加混乱 2。\n"
+      "zh": "在每场战斗开始时，\n对你自己和所有敌人施加混乱 2。"
     },
     "kind": "head",
     "rarity": "rare",
@@ -15194,7 +15194,7 @@
     "description": "You have All Stats Up while wet.",
     "description_texts": {
       "en": "You have All Stats Up while wet.",
-      "zh": "处于潮湿状态时，获得全属性提升。\n"
+      "zh": "处于潮湿状态时，获得全属性提升。"
     },
     "kind": "head",
     "rarity": "uncommon",
@@ -15219,7 +15219,7 @@
     "description": "Gain +1 Thorns when you take damage.",
     "description_texts": {
       "en": "Gain +1 Thorns when you take damage.",
-      "zh": "当你受到伤害时获得 +1 荆棘。\n"
+      "zh": "当你受到伤害时获得 +1 荆棘。"
     },
     "kind": "head",
     "rarity": "uncommon",
@@ -15356,7 +15356,7 @@
     "description": "Gain +1 [img:shield] at the end of each turn.",
     "description_texts": {
       "en": "Gain +1 [img:shield] at the end of each turn.",
-      "zh": "在每回合结束时获得 +1 [img:shield] 。\n"
+      "zh": "在每回合结束时获得 +1 [img:shield] 。"
     },
     "kind": "head",
     "rarity": "common",
@@ -15410,7 +15410,7 @@
     "description": "Brace 2 \n+25% chance to inflict Stun on units that contact you.",
     "description_texts": {
       "en": "Brace 2 \n+25% chance to inflict Stun on units that contact you.",
-      "zh": "2 层护甲\n+25% 几率对接触你的单位造成晕眩。\n"
+      "zh": "2 层护甲\n+25% 几率对接触你的单位造成晕眩。"
     },
     "kind": "head",
     "rarity": "rare",
@@ -15473,7 +15473,7 @@
     "description": "When you move, spawn a scrap pickup where you moved from.",
     "description_texts": {
       "en": "When you move, spawn a scrap pickup where you moved from.",
-      "zh": "当你移动时，\n在你离开的位置生成一个废料掉落物。\n"
+      "zh": "当你移动时，\n在你离开的位置生成一个废料掉落物。"
     },
     "kind": "head",
     "rarity": "uncommon",
@@ -15501,7 +15501,7 @@
     "description": "Spawn a Charmed Rattlesnek at the start of each battle.",
     "description_texts": {
       "en": "Spawn a Charmed Rattlesnek at the start of each battle.",
-      "zh": "每场战斗开始时生成一条魅惑响尾蛇。\n"
+      "zh": "每场战斗开始时生成一条魅惑响尾蛇。"
     },
     "kind": "head",
     "rarity": "uncommon",
@@ -15528,7 +15528,7 @@
     "description": "When you're downed, permanently gain +1 to a random stat.",
     "description_texts": {
       "en": "When you're downed, permanently gain +1 to a random stat.",
-      "zh": "当你倒地时，永久获得 +1 随机属性。\n"
+      "zh": "当你倒地时，永久获得 +1 随机属性。"
     },
     "kind": "head",
     "rarity": "rare",
@@ -15555,7 +15555,7 @@
     "description": "50% chance to gain +1 [img:divineshield] when you take damage.",
     "description_texts": {
       "en": "50% chance to gain +1 [img:divineshield] when you take damage.",
-      "zh": "当你受到伤害时，\n有 50% 的几率获得 +1 [img:divineshield] 。\n"
+      "zh": "当你受到伤害时，\n有 50% 的几率获得 +1 [img:divineshield] 。"
     },
     "kind": "head",
     "rarity": "very_rare",
@@ -15670,7 +15670,7 @@
     "description": "Spawn a Catnip pickup when you take damage.",
     "description_texts": {
       "en": "Spawn a Catnip pickup when you take damage.",
-      "zh": "当你受到伤害时，生成一个猫薄荷掉落物。\n"
+      "zh": "当你受到伤害时，生成一个猫薄荷掉落物。"
     },
     "kind": "head",
     "rarity": "rare",
@@ -15726,7 +15726,7 @@
     "description": "20% chance to call down a Meteor on a random enemy when you take damage.",
     "description_texts": {
       "en": "20% chance to call down a Meteor on a random enemy when you take damage.",
-      "zh": "当你受到伤害时，\n有 20% 的\n几率对一个随机敌人召唤一颗陨石。\n"
+      "zh": "当你受到伤害时，\n有 20% 的\n几率对一个随机敌人召唤一颗陨石。"
     },
     "kind": "head",
     "rarity": "very_rare",
@@ -15755,7 +15755,7 @@
     "description": "Cast a random spell each time you take damage.",
     "description_texts": {
       "en": "Cast a random spell each time you take damage.",
-      "zh": "每次受到伤害时，施放一个随机法术。\n"
+      "zh": "每次受到伤害时，施放一个随机法术。"
     },
     "kind": "head",
     "rarity": "very_rare",
@@ -15783,7 +15783,7 @@
     "description": "Brace 1, +2 Health Regen, Shield 3. Units that contact you get knocked back 1.",
     "description_texts": {
       "en": "Brace 1, +2 Health Regen, Shield 3. Units that contact you get knocked back 1.",
-      "zh": "1 层护甲，+2 生命恢复，\n3 层护盾。接触你的单位会被击退 1 格。\n"
+      "zh": "1 层护甲，+2 生命恢复，\n3 层护盾。接触你的单位会被击退 1 格。"
     },
     "kind": "head",
     "rarity": "rare",
@@ -15813,7 +15813,7 @@
     "description": "Spawn a Spiderling when you take damage.",
     "description_texts": {
       "en": "Spawn a Spiderling when you take damage.",
-      "zh": "当你受到伤害时生成一只小蜘蛛。\n"
+      "zh": "当你受到伤害时生成一只小蜘蛛。"
     },
     "kind": "head",
     "rarity": "very_rare",
@@ -15867,7 +15867,7 @@
     "description": "Spawn a Charmed Cultist at the start of each battle.",
     "description_texts": {
       "en": "Spawn a Charmed Cultist at the start of each battle.",
-      "zh": "每场战斗开始时生成一个魅惑异教徒。\n"
+      "zh": "每场战斗开始时生成一个魅惑异教徒。"
     },
     "kind": "head",
     "rarity": "very_rare",
@@ -15894,7 +15894,7 @@
     "description": "Your basic attack has Knockback and Chain Knockback.",
     "description_texts": {
       "en": "Your basic attack has Knockback and Chain Knockback.",
-      "zh": "你的基础攻击拥有击退和连锁击退效果。\n"
+      "zh": "你的基础攻击拥有击退和连锁击退效果。"
     },
     "kind": "head",
     "rarity": "very_rare",
@@ -15921,7 +15921,7 @@
     "description": "+1 Thorns. After you use your basic attack, do a dash attack that leaves a tornado behind.",
     "description_texts": {
       "en": "+1 Thorns. After you use your basic attack, do a dash attack that leaves a tornado behind.",
-      "zh": "+1 荆棘。使用基础攻击后，\n进行一次冲刺攻击并在身后留下龙卷风。\n"
+      "zh": "+1 荆棘。使用基础攻击后，\n进行一次冲刺攻击并在身后留下龙卷风。"
     },
     "kind": "head",
     "rarity": "very_rare",
@@ -15948,7 +15948,7 @@
     "description": "Gain +1 [img:divineshield] every time you end your movement.",
     "description_texts": {
       "en": "Gain +1 [img:divineshield] every time you end your movement.",
-      "zh": "每当你结束移动时，获得 +1 [img:divineshield] 。\n"
+      "zh": "每当你结束移动时，获得 +1 [img:divineshield] 。"
     },
     "kind": "head",
     "rarity": "very_rare",
@@ -15973,7 +15973,7 @@
     "description": "When you kill a unit, all nearby cats gain +1 Damage.",
     "description_texts": {
       "en": "When you kill a unit, all nearby cats gain +1 Damage.",
-      "zh": "当你杀死一个单位时，\n所有附近的猫获得 +1 伤害。\n"
+      "zh": "当你杀死一个单位时，\n所有附近的猫获得 +1 伤害。"
     },
     "kind": "head",
     "rarity": "rare",
@@ -16002,7 +16002,7 @@
     "description": "+2 Thorns. Your basic attack is Push Attack.",
     "description_texts": {
       "en": "+2 Thorns. Your basic attack is Push Attack.",
-      "zh": "+2 荆棘。你的基础攻击变为推击。\n"
+      "zh": "+2 荆棘。你的基础攻击变为推击。"
     },
     "kind": "head",
     "rarity": "very_rare",
@@ -16136,7 +16136,7 @@
     "description": "When you get a kill, gain +1 Health Regen.",
     "description_texts": {
       "en": "When you get a kill, gain +1 Health Regen.",
-      "zh": "当你击杀敌人时，获得 +1 生命恢复。\n"
+      "zh": "当你击杀敌人时，获得 +1 生命恢复。"
     },
     "kind": "head",
     "rarity": "very_rare",
@@ -16192,7 +16192,7 @@
     "description": "Your spells cost 0. You can only cast each of your spells once per turn.",
     "description_texts": {
       "en": "Your spells cost 0. You can only cast each of your spells once per turn.",
-      "zh": "你的法术消耗为 0。\n你每回合只能施放每个法术各一次。\n"
+      "zh": "你的法术消耗为 0。\n你每回合只能施放每个法术各一次。"
     },
     "kind": "head",
     "rarity": "very_rare",
@@ -16222,7 +16222,7 @@
     "description": "When you are downed, give another allied cat 2 random disorders, or to yourself if you're alone.",
     "description_texts": {
       "en": "When you are downed, give another allied cat 2 random disorders, or to yourself if you're alone.",
-      "zh": "当你倒地时，\n给予另一只盟友猫咪 2 个随机病症，\n如果你是独自一人，则给予你自己。\n"
+      "zh": "当你倒地时，\n给予另一只盟友猫咪 2 个随机病症，\n如果你是独自一人，则给予你自己。"
     },
     "kind": "head",
     "rarity": "very_rare",
@@ -16278,7 +16278,7 @@
     "description": "Each time you cast a spell, gain +1 range and +1 reach until the end of the turn.",
     "description_texts": {
       "en": "Each time you cast a spell, gain +1 range and +1 reach until the end of the turn.",
-      "zh": "每次施放法术时，\n获得 +1 射程和 +1 延伸，\n直到回合结束。"
+      "zh": "每次施放法术时，\n获得 +1 射程和 +1 近战范围，\n直到本回合结束。"
     },
     "kind": "head",
     "rarity": "very_rare",
@@ -16332,7 +16332,7 @@
     "description": "Take it to the Throbbing Artery in the Boneyard.\nYou never level up and die when downed. You have Lifesteal on all of your attacks and abilities.",
     "description_texts": {
       "en": "Take it to the Throbbing Artery in the Boneyard.\nYou never level up and die when downed. You have Lifesteal on all of your attacks and abilities.",
-      "zh": "把它带到白骨墓园的搏动动脉。\n你永远无法升级，且倒地即死。\n你的所有攻击和技能拥有生命偷取效果。\n"
+      "zh": "把它带到白骨墓园的搏动动脉。\n你永远无法升级，且倒地即死。\n你的所有攻击和技能拥有生命偷取效果。"
     },
     "kind": "head",
     "rarity": "quest",
@@ -16359,7 +16359,7 @@
     "description": "Take it to the Meat Altar in the Throbbing Domain.\nAll battles are Hard battles. Enemies will attack you instead of your allies if they can. Units that contact or attack you have a chance to be Feared. Your basic attack has a +10% chance to inflict Fear.",
     "description_texts": {
       "en": "Take it to the Meat Altar in the Throbbing Domain.\nAll battles are Hard battles. Enemies will attack you instead of your allies if they can. Units that contact or attack you have a chance to be Feared. Your basic attack has a +10% chance to inflict Fear.",
-      "zh": "把它带到搏动领域的肉块祭坛。\n所有战斗均为困难战斗。如果可能，\n敌人会攻击你而不是你的盟友。\n接触或攻击你的单位有几率陷入恐惧。\n你的基础攻击有 +10% 的几率施加恐惧。\n"
+      "zh": "把它带到搏动领域的肉块祭坛。\n所有战斗均为困难战斗。如果可能，\n敌人会攻击你而不是你的盟友。\n接触或攻击你的单位有几率陷入恐惧。\n你的基础攻击有 +10% 的几率施加恐惧。"
     },
     "kind": "face",
     "rarity": "quest",
@@ -16387,7 +16387,7 @@
     "description": "Feed it to the Man in the Moon.\nToss it to allies with open weapon slots to avoid taking Burn 3 each turn!\nApplies Burn 3 to units adjacent to allies that catch it.",
     "description_texts": {
       "en": "Feed it to the Man in the Moon.\nToss it to allies with open weapon slots to avoid taking Burn 3 each turn!\nApplies Burn 3 to units adjacent to allies that catch it.",
-      "zh": "把它喂给月中人。\n把它扔给有空闲武器槽的盟友，\n以避免每回合受到 3 层燃烧！\n对抓住它的盟友相邻的单位施加 3 层燃烧。\n"
+      "zh": "把它喂给月中人。\n把它扔给有空闲武器槽的盟友，\n以避免每回合受到 3 层燃烧！\n对抓住它的盟友相邻的单位施加 3 层燃烧。"
     },
     "kind": "weapon",
     "rarity": "quest",
@@ -16470,7 +16470,7 @@
     "description": "Pyrophina joins you on your journey. She wishes to activate an obelisk on the moon.",
     "description_texts": {
       "en": "Pyrophina joins you on your journey. She wishes to activate an obelisk on the moon.",
-      "zh": "派罗菲娜加入你的旅程。\n她希望激活月球上的一座方尖碑。\n"
+      "zh": "派罗菲娜加入你的旅程。\n她希望激活月球上的一座方尖碑。"
     },
     "kind": "trinket",
     "rarity": "quest",
@@ -16497,7 +16497,7 @@
     "description": "Zaratana joins you on your journey. She wishes to activate an obelisk in the Core.",
     "description_texts": {
       "en": "Zaratana joins you on your journey. She wishes to activate an obelisk in the Core.",
-      "zh": "扎拉塔娜加入你的旅程。\n她希望激活地核中的一座方尖碑。\n"
+      "zh": "扎拉塔娜加入你的旅程。\n她希望激活地核中的一座方尖碑。"
     },
     "kind": "trinket",
     "rarity": "quest",
@@ -16524,7 +16524,7 @@
     "description": "Put the Throbbing King's heart inside it.\nAll enemy bodies revive to 30% health at the end of each round (except bosses). Find a random pill at the end of each battle.",
     "description_texts": {
       "en": "Put the Throbbing King's heart inside it.\nAll enemy bodies revive to 30% health at the end of each round (except bosses). Find a random pill at the end of each battle.",
-      "zh": "把搏动之王的心脏放进去。\n所有敌人尸体在每回合结束时复\n活并恢复 30% 生命值（Boss 除外）。\n每场战斗结束时找到一粒随机药丸。\n"
+      "zh": "把搏动之王的心脏放进去。\n所有敌人尸体在每回合结束时复\n活并恢复 30% 生命值（Boss 除外）。\n每场战斗结束时找到一粒随机药丸。"
     },
     "kind": "trinket",
     "rarity": "quest",
@@ -16604,7 +16604,7 @@
     "description": "Place it far in the future.\nYour spells cost -2 mana. Every time you or another cat casts a spell, scramble that spell for the rest of the battle.",
     "description_texts": {
       "en": "Place it far in the future.\nYour spells cost -2 mana. Every time you or another cat casts a spell, scramble that spell for the rest of the battle.",
-      "zh": "将它放置在遥远的未来。\n你的法术消耗减少 2 点法力。\n每次你或其他猫咪施放法术时，\n该法术在剩余战斗中会变得错乱。\n"
+      "zh": "将它放置在遥远的未来。\n你的法术消耗减少 2 点法力。\n每次你或其他猫咪施放法术时，\n该法术在剩余战斗中会变得错乱。"
     },
     "kind": "head",
     "rarity": "quest",
@@ -16714,7 +16714,7 @@
     "description": "Bring it to Dr. Beanies.\n...or drink it to permanently gain All Stats Up 2 and upgrade all of your spells.",
     "description_texts": {
       "en": "Bring it to Dr. Beanies.\n...or drink it to permanently gain All Stats Up 2 and upgrade all of your spells.",
-      "zh": "把它带给比尼博士。\n...或者喝下它，\n永久获得全属性提升 2 并升级你的所有法术。\n"
+      "zh": "把它带给比尼博士。\n...或者喝下它，\n永久获得全属性提升 2 并升级你的所有法术。"
     },
     "kind": "trinket",
     "rarity": "quest",
@@ -16927,7 +16927,7 @@
     "description": "Units that contact you are knocked back 2 tiles.",
     "description_texts": {
       "en": "Units that contact you are knocked back 2 tiles.",
-      "zh": "接触你的单位会被击退 2 个地块。\n"
+      "zh": "接触你的单位会被击退 2 个地块。"
     },
     "kind": "neck",
     "rarity": "uncommon",
@@ -17064,7 +17064,7 @@
     "description": "Injury immunity.",
     "description_texts": {
       "en": "Injury immunity.",
-      "zh": "伤势免疫。"
+      "zh": "免疫创伤。"
     },
     "kind": "neck",
     "rarity": "uncommon",
@@ -17152,7 +17152,7 @@
     "description": "Deal 1 electric damage to units that contact or attack you.\n25% chance to poop every time you take damage.",
     "description_texts": {
       "en": "Deal 1 electric damage to units that contact or attack you.\n25% chance to poop every time you take damage.",
-      "zh": "对接触或攻击你的单位造成 1 点电击伤害。\n每次受到伤害时有 25% 几率拉粑粑。\n"
+      "zh": "对接触或攻击你的单位造成 1 点电击伤害。\n每次受到伤害时有 25% 几率拉粑粑。"
     },
     "kind": "neck",
     "rarity": "very_rare",
@@ -17214,7 +17214,7 @@
     "description": "Double cast spells that cost 1 or 2 mana.",
     "description_texts": {
       "en": "Double cast spells that cost 1 or 2 mana.",
-      "zh": "[b]双重施法[/b]消耗 1 或 2 点法力的法术。\n"
+      "zh": "[b]双重施法[/b]消耗 1 或 2 点法力的法术。"
     },
     "kind": "neck",
     "rarity": "uncommon",
@@ -17241,7 +17241,7 @@
     "description": "Spawn Charmed Dips randomly when you move over tiles.\nWhile downed, spawn a Charmed Dip at the end of each round.",
     "description_texts": {
       "en": "Spawn Charmed Dips randomly when you move over tiles.\nWhile downed, spawn a Charmed Dip at the end of each round.",
-      "zh": "当你在地块上移动时，\n随机生成魅惑小屎怪。\n当倒地时，在每回合结束时生成一个魅惑小屎怪。\n"
+      "zh": "当你在地块上移动时，\n随机生成魅惑小屎怪。\n当倒地时，在每回合结束时生成一个魅惑小屎怪。"
     },
     "kind": "neck",
     "rarity": "uncommon",
@@ -17269,7 +17269,7 @@
     "description": "+40% Dodge Chance while standing in tall grass.\nStart each battle with Stealth 1. Lose this stealth when you use your basic attack.",
     "description_texts": {
       "en": "+40% Dodge Chance while standing in tall grass.\nStart each battle with Stealth 1. Lose this stealth when you use your basic attack.",
-      "zh": "站在[b]高草[/b]中时 +40% [img:dodge] 闪避率。\n每场战斗开始时获得 1 层[b]潜行[/b]。\n当你使用基础攻击时失去此潜行效果。\n"
+      "zh": "站在[b]高草[/b]中时 +40% [img:dodge] 闪避率。\n每场战斗开始时获得 1 层[b]潜行[/b]。\n当你使用基础攻击时失去此潜行效果。"
     },
     "kind": "neck",
     "rarity": "uncommon",
@@ -17351,7 +17351,7 @@
     "description": "At the start of your turn, spawn a Shadow copy that mimics your basic attack and fades at the end of the turn.\nUnits that contact or attack you have a 15% chance to be Feared.",
     "description_texts": {
       "en": "At the start of your turn, spawn a Shadow copy that mimics your basic attack and fades at the end of the turn.\nUnits that contact or attack you have a 15% chance to be Feared.",
-      "zh": "在你的回合开始时，\n生成一个模仿你基础攻击并在回合结束时消失的\n暗影分身。\n接触或攻击你的单位有 15% 几率陷入恐惧。\n"
+      "zh": "在你的回合开始时，\n生成一个模仿你基础攻击并在回合结束时消失的\n暗影分身。\n接触或攻击你的单位有 15% 几率陷入恐惧。"
     },
     "kind": "neck",
     "rarity": "rare",
@@ -17406,7 +17406,7 @@
     "description": "Damage you take is reduced by 3.\nDamage prevented this way is delayed and taken at the end of your turn, all at once. ",
     "description_texts": {
       "en": "Damage you take is reduced by 3.\nDamage prevented this way is delayed and taken at the end of your turn, all at once. ",
-      "zh": "你受到的伤害减少 3 点。\n以此方式减少的伤害会延迟，\n并在你的回合结束时一次性结算。\n"
+      "zh": "你受到的伤害减少 3 点。\n以此方式减少的伤害会延迟，\n并在你的回合结束时一次性结算。"
     },
     "kind": "neck",
     "rarity": "rare",
@@ -17464,7 +17464,7 @@
     "description": "You have +3 Health Regen as long as you have [img:shield].",
     "description_texts": {
       "en": "You have +3 Health Regen as long as you have [img:shield].",
-      "zh": "只要你有 [img:shield]，你就有 +3 [img:health] 战后生命恢复。\n"
+      "zh": "只要你有 [img:shield]，你就有 +3 [img:health] 战后生命恢复。"
     },
     "kind": "neck",
     "rarity": "uncommon",
@@ -17492,7 +17492,7 @@
     "description": "After every fourth spell you cast, gain +2 [img:int].",
     "description_texts": {
       "en": "After every fourth spell you cast, gain +2 [img:int].",
-      "zh": "每施放四次法术后，获得 +2 [img:int]。\n"
+      "zh": "每施放四次法术后，获得 +2 [img:int]。"
     },
     "kind": "neck",
     "rarity": "uncommon",
@@ -17517,7 +17517,7 @@
     "description": "After every third spell you cast, spawn a Leech familiar.",
     "description_texts": {
       "en": "After every third spell you cast, spawn a Leech familiar.",
-      "zh": "每施放三次法术后，生成一个水蛭使魔。\n"
+      "zh": "每施放三次法术后，生成一个水蛭使魔。"
     },
     "kind": "neck",
     "rarity": "uncommon",
@@ -17575,7 +17575,7 @@
     "description": "Double all status effects that get applied to you.",
     "description_texts": {
       "en": "Double all status effects that get applied to you.",
-      "zh": "施加在你身上的所有状态效果翻倍。\n"
+      "zh": "施加在你身上的所有状态效果翻倍。"
     },
     "kind": "neck",
     "rarity": "rare",
@@ -17600,7 +17600,7 @@
     "description": "Whenever you backstab, gain +1 Serrated Claws.",
     "description_texts": {
       "en": "Whenever you backstab, gain +1 Serrated Claws.",
-      "zh": "每当你[b]背刺[/b]时，获得 +1 [img:serrated_claws] 锯齿利爪。\n"
+      "zh": "每当你[b]背刺[/b]时，获得 +1 [img:serrated_claws] 锯齿利爪。"
     },
     "kind": "neck",
     "rarity": "uncommon",
@@ -17652,7 +17652,7 @@
     "description": "Spawn a small rock when you take damage.",
     "description_texts": {
       "en": "Spawn a small rock when you take damage.",
-      "zh": "当你受到伤害时，生成一个小岩石。\n"
+      "zh": "当你受到伤害时，生成一个小岩石。"
     },
     "kind": "neck",
     "rarity": "uncommon",
@@ -17682,7 +17682,7 @@
     "description": "33% chance to teleport to a random tile when targeted by an enemy.",
     "description_texts": {
       "en": "33% chance to teleport to a random tile when targeted by an enemy.",
-      "zh": "被敌人锁定时，\n有 33% 几率传送到随机地块。\n"
+      "zh": "被敌人锁定时，\n有 33% 几率传送到随机地块。"
     },
     "kind": "neck",
     "rarity": "rare",
@@ -17736,7 +17736,7 @@
     "description": "One random enemy becomes Marked at the start of each turn.",
     "description_texts": {
       "en": "One random enemy becomes Marked at the start of each turn.",
-      "zh": "每个回合开始时，一个随机敌人会被[b]标记[/b]。\n"
+      "zh": "每个回合开始时，一个随机敌人会被[b]标记[/b]。"
     },
     "kind": "neck",
     "rarity": "uncommon",
@@ -17765,7 +17765,7 @@
     "description": "At the end of each turn, gain +1 Preemptive Counterattack.",
     "description_texts": {
       "en": "At the end of each turn, gain +1 Preemptive Counterattack.",
-      "zh": "在每回合结束时，获得 +1 先制反击。\n"
+      "zh": "在每回合结束时，获得 +1 先制反击。"
     },
     "kind": "neck",
     "rarity": "rare",
@@ -17961,7 +17961,7 @@
     "description": "When you take damage, spawn a scrap pickup.",
     "description_texts": {
       "en": "When you take damage, spawn a scrap pickup.",
-      "zh": "当你受到伤害时，生成一个[b]废料掉落物[/b]。\n"
+      "zh": "当你受到伤害时，生成一个[b]废料掉落物[/b]。"
     },
     "kind": "neck",
     "rarity": "common",
@@ -17989,7 +17989,7 @@
     "description": "You have All Stats Up while at 10 or less health.",
     "description_texts": {
       "en": "You have All Stats Up while at 10 or less health.",
-      "zh": "当生命值在 10 或以下时获得[b]全属性提升[/b]。\n"
+      "zh": "当生命值在 10 或以下时获得[b]全属性提升[/b]。"
     },
     "kind": "neck",
     "rarity": "common",
@@ -18068,7 +18068,7 @@
     "description": "Heals heal you for 2 extra.",
     "description_texts": {
       "en": "Heals heal you for 2 extra.",
-      "zh": "治疗会对你额外产生 2 点治疗量。\n"
+      "zh": "治疗会对你额外产生 2 点治疗量。"
     },
     "kind": "neck",
     "rarity": "uncommon",
@@ -18132,7 +18132,7 @@
     "description": "+2 Mana Regen, +2 Health Regen.",
     "description_texts": {
       "en": "+2 Mana Regen, +2 Health Regen.",
-      "zh": "+2 法力恢复，+2 生命恢复。\n"
+      "zh": "+2 法力恢复，+2 生命恢复。"
     },
     "kind": "neck",
     "rarity": "very_rare",
@@ -18162,7 +18162,7 @@
     "description": "75% chance to Grapple units that make contact with you.",
     "description_texts": {
       "en": "75% chance to Grapple units that make contact with you.",
-      "zh": "75% 几率对接触你的单位施加[b]被擒抱[/b]。\n"
+      "zh": "75% 几率对接触你的单位施加[b]被擒抱[/b]。"
     },
     "kind": "neck",
     "rarity": "very_rare",
@@ -18193,7 +18193,7 @@
     "description": "Inflict Soul Link on 2 random enemies at the start of each battle.",
     "description_texts": {
       "en": "Inflict Soul Link on 2 random enemies at the start of each battle.",
-      "zh": "每场战斗开始时，\n对 2 个随机敌人施加[b]灵魂链接[/b]。\n"
+      "zh": "每场战斗开始时，\n对 2 个随机敌人施加[b]灵魂链接[/b]。"
     },
     "kind": "neck",
     "rarity": "rare",
@@ -18215,7 +18215,7 @@
     "item_name": "Lost Soul",
     "item_name_texts": {
       "en": "Lost Soul",
-      "zh": "迷失之魂"
+      "zh": "迷失游魂"
     },
     "description": "The first time you are downed each battle, revive to full HP.",
     "description_texts": {
@@ -18446,7 +18446,7 @@
     "description": "Kinetic Spikes 3. Emit 3 Sparkles when you use your basic attack.",
     "description_texts": {
       "en": "Kinetic Spikes 3. Emit 3 Sparkles when you use your basic attack.",
-      "zh": "3 层动能尖刺。\n当你使用基础攻击时释放 3 个火花。\n"
+      "zh": "3 层动能尖刺。\n当你使用基础攻击时释放 3 个火花。"
     },
     "kind": "neck",
     "rarity": "very_rare",
@@ -18503,7 +18503,7 @@
     "description": "+5 Health Regen.\nWhen you're downed, revive at the end of the round.",
     "description_texts": {
       "en": "+5 Health Regen.\nWhen you're downed, revive at the end of the round.",
-      "zh": "+5 [img:health] 战后生命恢复。\n当你[b]倒地[/b]时，在回合结束时复活。\n"
+      "zh": "+5 [img:health] 战后生命恢复。\n当你[b]倒地[/b]时，在回合结束时复活。"
     },
     "kind": "neck",
     "rarity": "very_rare",
@@ -18528,7 +18528,7 @@
     "description": "+1 Health Regen. 25% chance to spawn a Charmed Clot when you take damage.",
     "description_texts": {
       "en": "+1 Health Regen. 25% chance to spawn a Charmed Clot when you take damage.",
-      "zh": "+1 [img:health] 战后生命恢复。\n当你受到伤害时，\n有 25% 几率生成一个魅惑凝块。\n"
+      "zh": "+1 [img:health] 战后生命恢复。\n当你受到伤害时，\n有 25% 几率生成一个魅惑凝块。"
     },
     "kind": "neck",
     "rarity": "rare",
@@ -18556,7 +18556,7 @@
     "description": "Start with +1 bonus attack. Collect all adjacent pickups when you end your turn.",
     "description_texts": {
       "en": "Start with +1 bonus attack. Collect all adjacent pickups when you end your turn.",
-      "zh": "开始时拥有 +1 [img:extra_attack] 额外攻击。\n当你结束回合时，收集所有相邻的掉落物。\n"
+      "zh": "开始时拥有 +1 [img:extra_attack] 额外攻击。\n当你结束回合时，收集所有相邻的掉落物。"
     },
     "kind": "neck",
     "rarity": "rare",
@@ -18611,7 +18611,7 @@
     "description": "Spawn a Gamete familiar at the start of each battle.",
     "description_texts": {
       "en": "Spawn a Gamete familiar at the start of each battle.",
-      "zh": "每场战斗开始时生成一个配子使魔。\n"
+      "zh": "每场战斗开始时生成一个配子使魔。"
     },
     "kind": "neck",
     "rarity": "rare",
@@ -18752,7 +18752,7 @@
     "description": "Units that contact you get knocked back. Knockback you deal is increased by 10 and inflicts Bruise 1.",
     "description_texts": {
       "en": "Units that contact you get knocked back. Knockback you deal is increased by 10 and inflicts Bruise 1.",
-      "zh": "接触你的单位会被击退。\n你造成的\n击退增加 10 点并施加 1 层[b]淤伤[/b]。\n"
+      "zh": "接触你的单位会被击退。\n你造成的\n击退增加 10 点并施加 1 层[b]淤伤[/b]。"
     },
     "kind": "neck",
     "rarity": "very_rare",
@@ -18809,7 +18809,7 @@
     "description": "Your Holy Element spells cost -1 mana.",
     "description_texts": {
       "en": "Your Holy Element spells cost -1 mana.",
-      "zh": "你的[b]神圣元素[/b]法术消耗减少 1 点法力。\n"
+      "zh": "你的[b]神圣元素[/b]法术消耗减少 1 点法力。"
     },
     "kind": "neck",
     "rarity": "very_rare",
@@ -18836,7 +18836,7 @@
     "description": "While you're downed, receiving any damage revives you.",
     "description_texts": {
       "en": "While you're downed, receiving any damage revives you.",
-      "zh": "当你[b]倒地[/b]时，受到任何伤害都会使你复活。\n"
+      "zh": "当你[b]倒地[/b]时，受到任何伤害都会使你复活。"
     },
     "kind": "neck",
     "rarity": "very_rare",
@@ -18892,7 +18892,7 @@
     "description": "Your basic attack inflicts Poison 1.",
     "description_texts": {
       "en": "Your basic attack inflicts Poison 1.",
-      "zh": "你的基础攻击施加 1 层中毒。\n"
+      "zh": "你的基础攻击施加 1 层中毒。"
     },
     "kind": "trinket",
     "rarity": null,
@@ -18949,7 +18949,7 @@
     "description": "Your basic attack inflicts Weakness 3.",
     "description_texts": {
       "en": "Your basic attack inflicts Weakness 3.",
-      "zh": "你的基础攻击施加 3 层虚弱。\n"
+      "zh": "你的基础攻击施加 3 层虚弱。"
     },
     "kind": "face",
     "rarity": null,
@@ -19005,7 +19005,7 @@
     "description": "Spawns 2 Pooter familiars when you're downed.",
     "description_texts": {
       "en": "Spawns 2 Pooter familiars when you're downed.",
-      "zh": "当你倒地时，生成 2 只狙击蝇使魔。\n"
+      "zh": "当你倒地时，生成 2 只狙击蝇使魔。"
     },
     "kind": "trinket",
     "rarity": null,
@@ -19033,7 +19033,7 @@
     "description": "Revive with 50% HP 2 rounds after you are downed.",
     "description_texts": {
       "en": "Revive with 50% HP 2 rounds after you are downed.",
-      "zh": "倒地 2 回合后以 50% 生命值复活。\n"
+      "zh": "倒地 2 回合后以 50% 生命值复活。"
     },
     "kind": "head",
     "rarity": null,
@@ -19087,7 +19087,7 @@
     "description": "Use: A ranged attack that inflicts Webbed.",
     "description_texts": {
       "en": "Use: A ranged attack that inflicts Webbed.",
-      "zh": "使用：造成蛛网效果的远程攻击。\n"
+      "zh": "使用：造成蛛网效果的远程攻击。"
     },
     "kind": "weapon",
     "rarity": null,
@@ -19112,7 +19112,7 @@
     "description": "+1 Brace. +10% Miss Chance.",
     "description_texts": {
       "en": "+1 Brace. +10% Miss Chance.",
-      "zh": "+1 护甲。+10% 未命中率。\n"
+      "zh": "+1 护甲。+10% 未命中率。"
     },
     "kind": "head",
     "rarity": null,
@@ -19142,7 +19142,7 @@
     "description": "+1 Brace. +10% Miss Chance.",
     "description_texts": {
       "en": "+1 Brace. +10% Miss Chance.",
-      "zh": "+1 护甲。+10% 未命中率。\n"
+      "zh": "+1 护甲。+10% 未命中率。"
     },
     "kind": "neck",
     "rarity": null,
@@ -19172,7 +19172,7 @@
     "description": "+1 Brace. +10% Miss Chance.",
     "description_texts": {
       "en": "+1 Brace. +10% Miss Chance.",
-      "zh": "+1 护甲。+10% 未命中率。\n"
+      "zh": "+1 护甲。+10% 未命中率。"
     },
     "kind": "face",
     "rarity": null,
@@ -19202,7 +19202,7 @@
     "description": "Restore 2 mana when you kill an enemy.",
     "description_texts": {
       "en": "Restore 2 mana when you kill an enemy.",
-      "zh": "当你击杀敌人时，恢复 2 点法力值。\n"
+      "zh": "当你击杀敌人时，恢复 2 点法力值。"
     },
     "kind": "face",
     "rarity": null,
@@ -19231,7 +19231,7 @@
     "description": "10% chance to break when you take damage.\nWhen this breaks, gain a permanent Leech familiar.",
     "description_texts": {
       "en": "10% chance to break when you take damage.\nWhen this breaks, gain a permanent Leech familiar.",
-      "zh": "受到伤害时有 10% 几率损坏。\n损坏时，获得一个永久水蛭使魔。\n"
+      "zh": "受到伤害时有 10% 几率损坏。\n损坏时，获得一个永久水蛭使魔。"
     },
     "kind": "head",
     "rarity": null,
@@ -19376,7 +19376,7 @@
     "description": "Bruise 2. Spawn a charmed Flea when you take damage.",
     "description_texts": {
       "en": "Bruise 2. Spawn a charmed Flea when you take damage.",
-      "zh": "淤伤 2。受到伤害时生成一只魅惑跳蚤。\n"
+      "zh": "淤伤 2。受到伤害时生成一只魅惑跳蚤。"
     },
     "kind": "face",
     "rarity": null,
@@ -19432,7 +19432,7 @@
     "description": "30% chance to gain +2 [img:spd] and become AI controlled at the start of your turn.",
     "description_texts": {
       "en": "30% chance to gain +2 [img:spd] and become AI controlled at the start of your turn.",
-      "zh": "回合开始时有 30% 几率获\n得 +2 [img:spd] 并由 AI 控制。\n"
+      "zh": "回合开始时有 30% 几率获\n得 +2 [img:spd] 并由 AI 控制。"
     },
     "kind": "head",
     "rarity": null,
@@ -19517,7 +19517,7 @@
     "description": "Inflict All Stats Down on bosses and minibosses at the start of each battle.\nHeal +12 HP at the end of each battle.",
     "description_texts": {
       "en": "Inflict All Stats Down on bosses and minibosses at the start of each battle.\nHeal +12 HP at the end of each battle.",
-      "zh": "每场战斗开始时，\n对 Boss 和小 Boss\n 施加全属性下降。\n每场战斗结束时治疗 +12 生命值。\n"
+      "zh": "每场战斗开始时，\n对 Boss 和小 Boss\n 施加全属性下降。\n每场战斗结束时治疗 +12 生命值。"
     },
     "kind": "neck",
     "rarity": "uncommon",
@@ -19634,7 +19634,7 @@
     "description": "Bruise 1. Spawn a charmed Louse when you take damage.",
     "description_texts": {
       "en": "Bruise 1. Spawn a charmed Louse when you take damage.",
-      "zh": "淤伤 1。受到伤害时生成一只魅惑虱子。\n"
+      "zh": "淤伤 1。受到伤害时生成一只魅惑虱子。"
     },
     "kind": "head",
     "rarity": null,
@@ -19687,7 +19687,7 @@
     "description": "Units that contact you get knocked back 5 tiles.",
     "description_texts": {
       "en": "Units that contact you get knocked back 5 tiles.",
-      "zh": "接触你的单位会被击退 5 格。\n"
+      "zh": "接触你的单位会被击退 5 格。"
     },
     "kind": "trinket",
     "rarity": null,
@@ -19916,7 +19916,7 @@
     "description": "Use: A melee attack. If this weapon damages an allied cat, gain one of their spells at random in your bonus ability slot.\nIf this weapon downs an ally it becomes Charged for the rest of the battle.",
     "description_texts": {
       "en": "Use: A melee attack. If this weapon damages an allied cat, gain one of their spells at random in your bonus ability slot.\nIf this weapon downs an ally it becomes Charged for the rest of the battle.",
-      "zh": "使用：近战攻击。\n如果此武器伤害了盟友猫咪，\n随机获得其一个法术放入你的额外技能栏位。\n如果此武器击倒了盟友，\n它将在剩余战斗中变得充能。"
+      "zh": "使用：近战攻击。\n如果此武器伤害了盟友猫咪，\n随机获得其一个法术\n放入你的额外技能栏位。\n如果此武器击倒了盟友，\n它将在剩余战斗中变得充能。"
     },
     "kind": "weapon",
     "rarity": null,
@@ -19941,7 +19941,7 @@
     "description": "Use: A melee attack with Lifesteal. If this weapon damages an allied cat, gain one of their spells at random in your bonus ability slot.\nLoses its charge at the end of the battle.",
     "description_texts": {
       "en": "Use: A melee attack with Lifesteal. If this weapon damages an allied cat, gain one of their spells at random in your bonus ability slot.\nLoses its charge at the end of the battle.",
-      "zh": "使用：带有生命偷取的近战攻击。\n如果此武器伤害了盟友猫咪，\n随机获得其一个法术放入你的额外技能栏位。\n在战斗结束时失去充能。"
+      "zh": "使用：带有生命偷取的近战攻击。\n如果此武器伤害了盟友猫咪，\n随机获得其一个法术\n放入你的额外技能栏位。\n在战斗结束时失去充能。"
     },
     "kind": "weapon",
     "rarity": null,
@@ -20300,7 +20300,7 @@
     "description": "Your basic attack inflicts Bleed 1.",
     "description_texts": {
       "en": "Your basic attack inflicts Bleed 1.",
-      "zh": "你的基础攻击施加 1 层流血。\n"
+      "zh": "你的基础攻击施加 1 层流血。"
     },
     "kind": "trinket",
     "rarity": "rare",
@@ -20327,7 +20327,7 @@
     "description": "Your basic attack inflicts Leech 1.",
     "description_texts": {
       "en": "Your basic attack inflicts Leech 1.",
-      "zh": "你的基础攻击施加 1 层水蛭。\n"
+      "zh": "你的基础攻击施加 1 层水蛭。"
     },
     "kind": "trinket",
     "rarity": "rare",
@@ -20354,7 +20354,7 @@
     "description": "Your basic attack inflicts Bruise 1.",
     "description_texts": {
       "en": "Your basic attack inflicts Bruise 1.",
-      "zh": "你的基础攻击造成 1 层淤伤。\n"
+      "zh": "你的基础攻击造成 1 层淤伤。"
     },
     "kind": "trinket",
     "rarity": "rare",
@@ -20381,7 +20381,7 @@
     "description": "Your basic attack inflicts Rot 1.",
     "description_texts": {
       "en": "Your basic attack inflicts Rot 1.",
-      "zh": "你的基础攻击施加 1 层腐烂。\n"
+      "zh": "你的基础攻击施加 1 层腐烂。"
     },
     "kind": "trinket",
     "rarity": "uncommon",
@@ -20408,7 +20408,7 @@
     "description": "Your basic attack inflicts Mana Leech 1.",
     "description_texts": {
       "en": "Your basic attack inflicts Mana Leech 1.",
-      "zh": "你的基础攻击施加 1 层法力水蛭。\n"
+      "zh": "你的基础攻击施加 1 层法力水蛭。"
     },
     "kind": "trinket",
     "rarity": "uncommon",
@@ -20433,7 +20433,7 @@
     "description": "Your basic attack inflicts Magic Weakness 1.",
     "description_texts": {
       "en": "Your basic attack inflicts Magic Weakness 1.",
-      "zh": "你的基础攻击施加 1 层魔法弱点。\n"
+      "zh": "你的基础攻击施加 1 层魔法弱点。"
     },
     "kind": "trinket",
     "rarity": "uncommon",
@@ -20545,7 +20545,7 @@
     "description": "Your basic attack inflicts Burn 1.",
     "description_texts": {
       "en": "Your basic attack inflicts Burn 1.",
-      "zh": "你的基础攻击施加 1 层燃烧。\n"
+      "zh": "你的基础攻击施加 1 层燃烧。"
     },
     "kind": "trinket",
     "rarity": "rare",
@@ -20570,7 +20570,7 @@
     "description": "Your basic attack inflicts Poison 1.",
     "description_texts": {
       "en": "Your basic attack inflicts Poison 1.",
-      "zh": "你的基础攻击造成 1 层中毒。\n"
+      "zh": "你的基础攻击造成 1 层中毒。"
     },
     "kind": "trinket",
     "rarity": "rare",
@@ -20624,7 +20624,7 @@
     "description": "Use: Vaporize yourself and deal 50 damage to adjacent units.",
     "description_texts": {
       "en": "Use: Vaporize yourself and deal 50 damage to adjacent units.",
-      "zh": "使用：蒸发你自己，\n并对相邻单位造成 50 点伤害。\n"
+      "zh": "使用：蒸发你自己，\n并对相邻单位造成 50 点伤害。"
     },
     "kind": "trinket",
     "rarity": "very_rare",
@@ -20730,7 +20730,7 @@
     "description": "Your Electric Element damage is increased by 1 and has +10% chance to Stun.",
     "description_texts": {
       "en": "Your Electric Element damage is increased by 1 and has +10% chance to Stun.",
-      "zh": "你的电击元素伤害增加 1 点，\n并有 +10% 几率造成晕眩。\n"
+      "zh": "你的电击元素伤害增加 1 点，\n并有 +10% 几率造成晕眩。"
     },
     "kind": "trinket",
     "rarity": "uncommon",
@@ -20755,7 +20755,7 @@
     "description": "Familiars you spawn gain +2 max HP.",
     "description_texts": {
       "en": "Familiars you spawn gain +2 max HP.",
-      "zh": "你生成的使魔获得 +2 最大生命值。\n"
+      "zh": "你生成的使魔获得 +2 最大生命值。"
     },
     "kind": "trinket",
     "rarity": "uncommon",
@@ -20838,7 +20838,7 @@
     "description": "Use: Move 1 tile toward the closest enemy.",
     "description_texts": {
       "en": "Use: Move 1 tile toward the closest enemy.",
-      "zh": "使用：向最近的敌人移动 1 格。\n"
+      "zh": "使用：向最近的敌人移动 1 格。"
     },
     "kind": "trinket",
     "rarity": "common",
@@ -20913,7 +20913,7 @@
     "description": "Use: Move any number of tiles in a straight or diagonal line.",
     "description_texts": {
       "en": "Use: Move any number of tiles in a straight or diagonal line.",
-      "zh": "使用：沿直线或对角线移动任意格数。\n"
+      "zh": "使用：沿直线或对角线移动任意格数。"
     },
     "kind": "trinket",
     "rarity": "very_rare",
@@ -20968,7 +20968,7 @@
     "description": "If you would knockback a unit, instead deal extra damage to it equal to the knockback.",
     "description_texts": {
       "en": "If you would knockback a unit, instead deal extra damage to it equal to the knockback.",
-      "zh": "如果你要击退一个单位，\n改为对它造成等同于击退距离的额外伤害。\n"
+      "zh": "如果你要击退一个单位，\n改为对它造成等同于击退距离的额外伤害。"
     },
     "kind": "trinket",
     "rarity": "uncommon",
@@ -21226,7 +21226,7 @@
     "description": "Gain +1 Brace when you kill an enemy.",
     "description_texts": {
       "en": "Gain +1 Brace when you kill an enemy.",
-      "zh": "当你击杀敌人时获得 +1 护甲。\n"
+      "zh": "当你击杀敌人时获得 +1 护甲。"
     },
     "kind": "trinket",
     "rarity": "uncommon",
@@ -21307,7 +21307,7 @@
     "description": "Use: Heal +5 HP and gain Heatwave immunity.\nRefills when affected by Water Element effects.",
     "description_texts": {
       "en": "Use: Heal +5 HP and gain Heatwave immunity.\nRefills when affected by Water Element effects.",
-      "zh": "使用：恢复 5 点生命值并获得热浪免疫。\n受到水元素效果影响时重新装满。\n"
+      "zh": "使用：恢复 5 点生命值并获得热浪免疫。\n受到水元素效果影响时重新装满。"
     },
     "kind": "trinket",
     "rarity": null,
@@ -21332,7 +21332,7 @@
     "description": "Use: Heal +5 HP and gain Heatwave immunity.\nRefills when affected by Water Element effects.",
     "description_texts": {
       "en": "Use: Heal +5 HP and gain Heatwave immunity.\nRefills when affected by Water Element effects.",
-      "zh": "使用：恢复 5 点生命值并获得热浪免疫。\n受到水元素效果影响时重新装满。\n"
+      "zh": "使用：恢复 5 点生命值并获得热浪免疫。\n受到水元素效果影响时重新装满。"
     },
     "kind": "trinket",
     "rarity": null,
@@ -21357,7 +21357,7 @@
     "description": "Use: Throw it at something.\nRefills when affected by Water Element effects.",
     "description_texts": {
       "en": "Use: Throw it at something.\nRefills when affected by Water Element effects.",
-      "zh": "使用：投掷出去。\n受到水元素效果影响时重新装满。\n"
+      "zh": "使用：投掷出去。\n受到水元素效果影响时重新装满。"
     },
     "kind": "trinket",
     "rarity": null,
@@ -21382,7 +21382,7 @@
     "description": "Use: Flip a coin.\nHeads: Refresh your basic attack.\nTails: Lose 50% of your HP.",
     "description_texts": {
       "en": "Use: Flip a coin.\nHeads: Refresh your basic attack.\nTails: Lose 50% of your HP.",
-      "zh": "使用：掷硬币。\n正面：刷新你的基础攻击。\n反面：失去 50% 的生命值。\n"
+      "zh": "使用：掷硬币。\n正面：刷新你的基础攻击。\n反面：失去 50% 的生命值。"
     },
     "kind": "trinket",
     "rarity": "uncommon",
@@ -21407,7 +21407,7 @@
     "description": "Use: Flip a coin.\nHeads: Double your mana.\nTails: Lose 50% of your mana.",
     "description_texts": {
       "en": "Use: Flip a coin.\nHeads: Double your mana.\nTails: Lose 50% of your mana.",
-      "zh": "使用：掷硬币。\n正面：你的法力值翻倍。\n反面：失去 50% 的法力值。\n"
+      "zh": "使用：掷硬币。\n正面：你的法力值翻倍。\n反面：失去 50% 的法力值。"
     },
     "kind": "trinket",
     "rarity": "uncommon",
@@ -21537,7 +21537,7 @@
     "description": "Repair 1 use to your items at the end of each battle.",
     "description_texts": {
       "en": "Repair 1 use to your items at the end of each battle.",
-      "zh": "每场战斗结束时修复你物品的 1 次使用次数。\n"
+      "zh": "每场战斗结束时修复你物品的 1 次使用次数。"
     },
     "kind": "trinket",
     "rarity": "rare",
@@ -21592,7 +21592,7 @@
     "description": "Gain +2 [img:lck] each time you gain a coin.",
     "description_texts": {
       "en": "Gain +2 [img:lck] each time you gain a coin.",
-      "zh": "每次获得金币时，获得 +2 [img:lck]。\n"
+      "zh": "每次获得金币时，获得 +2 [img:lck]。"
     },
     "kind": "trinket",
     "rarity": "rare",
@@ -21647,7 +21647,7 @@
     "description": "33% chance to gain +1 [img:divineshield] each time you take damage.",
     "description_texts": {
       "en": "33% chance to gain +1 [img:divineshield] each time you take damage.",
-      "zh": "每次受到伤害时有 33% 几率获得 +1 [img:divineshield]。\n"
+      "zh": "每次受到伤害时有 33% 几率获得 +1 [img:divineshield]。"
     },
     "kind": "trinket",
     "rarity": "rare",
@@ -21786,7 +21786,7 @@
     "description": "Your weapons have +50% Crit Chance.\nYour basic attack has +10% Crit Chance.",
     "description_texts": {
       "en": "Your weapons have +50% Crit Chance.\nYour basic attack has +10% Crit Chance.",
-      "zh": "你的武器拥有 +50% 暴击率。\n你的基础攻击拥有 +10% 暴击率。\n"
+      "zh": "你的武器拥有 +50% 暴击率。\n你的基础攻击拥有 +10% 暴击率。"
     },
     "kind": "trinket",
     "rarity": "uncommon",
@@ -21968,7 +21968,7 @@
     "description": "Use: Take 2 damage and spawn a Meat pickup.",
     "description_texts": {
       "en": "Use: Take 2 damage and spawn a Meat pickup.",
-      "zh": "使用：承受 2 点伤害并生成一个肉块掉落物。\n"
+      "zh": "使用：承受 2 点伤害并生成一个肉块掉落物。"
     },
     "kind": "trinket",
     "rarity": "uncommon",
@@ -21993,7 +21993,7 @@
     "description": "Use: Take 5 damage and gain +2 [img:str] and +2 [img:dex].",
     "description_texts": {
       "en": "Use: Take 5 damage and gain +2 [img:str] and +2 [img:dex].",
-      "zh": "使用：\n受到 5 点伤害并获得 +2 [img:str] 和 +2 [img:dex]。\n"
+      "zh": "使用：\n受到 5 点伤害并获得 +2 [img:str] 和 +2 [img:dex]。"
     },
     "kind": "trinket",
     "rarity": "rare",
@@ -22045,7 +22045,7 @@
     "description": "+15% Dodge Chance.\nYour basic attack has a +10% chance to inflict Fear.",
     "description_texts": {
       "en": "+15% Dodge Chance.\nYour basic attack has a +10% chance to inflict Fear.",
-      "zh": "+15% 闪避率。\n你的基础攻击有 +10% 几率施加恐惧。\n"
+      "zh": "+15% 闪避率。\n你的基础攻击有 +10% 几率施加恐惧。"
     },
     "kind": "trinket",
     "rarity": "uncommon",
@@ -22100,7 +22100,7 @@
     "description": "Gain All Stats Up when you deal damage to a party member.\n10% chance to gain Madness at the start of your turn.",
     "description_texts": {
       "en": "Gain All Stats Up when you deal damage to a party member.\n10% chance to gain Madness at the start of your turn.",
-      "zh": "当你对队伍成员造成伤害时，\n获得全属性提升。\n回合开始时有 10% 几率获得疯狂。\n"
+      "zh": "当你对队伍成员造成伤害时，\n获得全属性提升。\n回合开始时有 10% 几率获得疯狂。"
     },
     "kind": "trinket",
     "rarity": "rare",
@@ -22259,7 +22259,7 @@
     "description": "Spawn 3 pickups at the start of each battle.\nFind an extra common item at the end of each battle.",
     "description_texts": {
       "en": "Spawn 3 pickups at the start of each battle.\nFind an extra common item at the end of each battle.",
-      "zh": "每场战斗开始时生成 3 个掉落物。\n每场战斗结束时发现一个额外的普通物品。\n"
+      "zh": "每场战斗开始时生成 3 个掉落物。\n每场战斗结束时发现一个额外的普通物品。"
     },
     "kind": "trinket",
     "rarity": "uncommmon",
@@ -22339,7 +22339,7 @@
     "description": "Your projectiles bounce to another enemy within 2 tiles.",
     "description_texts": {
       "en": "Your projectiles bounce to another enemy within 2 tiles.",
-      "zh": "你的投射物会弹射向 2 格内的另一个敌人。\n"
+      "zh": "你的投射物会弹射向 2 格内的另一个敌人。"
     },
     "kind": "trinket",
     "rarity": "rare",
@@ -22367,7 +22367,7 @@
     "description": "When you collect a coin pickup, gain +1 coin.\nFind an extra coin at the end of each battle.",
     "description_texts": {
       "en": "When you collect a coin pickup, gain +1 coin.\nFind an extra coin at the end of each battle.",
-      "zh": "当你收集硬币掉落物时，\n获得 +1 金币。\n每场战斗结束时额外发现一枚金币。\n"
+      "zh": "当你收集硬币掉落物时，\n获得 +1 金币。\n每场战斗结束时额外发现一枚金币。"
     },
     "kind": "trinket",
     "rarity": "uncommon",
@@ -22419,7 +22419,7 @@
     "description": "Use: Take 1 damage and cleanse one random debuff.",
     "description_texts": {
       "en": "Use: Take 1 damage and cleanse one random debuff.",
-      "zh": "使用：\n承受 1 点伤害并驱散一个随机减益效果。\n"
+      "zh": "使用：\n承受 1 点伤害并驱散一个随机减益效果。"
     },
     "kind": "trinket",
     "rarity": "uncommon",
@@ -22525,7 +22525,7 @@
     "description": "Use: Petrify all nearby units in your line of sight.",
     "description_texts": {
       "en": "Use: Petrify all nearby units in your line of sight.",
-      "zh": "使用：石化你视线内的所有附近单位。\n"
+      "zh": "使用：石化你视线内的所有附近单位。"
     },
     "kind": "trinket",
     "rarity": "uncommon",
@@ -22605,7 +22605,7 @@
     "description": "+1 Damage. Find a pill at the end of each battle.",
     "description_texts": {
       "en": "+1 Damage. Find a pill at the end of each battle.",
-      "zh": "+1 伤害。每场战斗结束时发现一个药丸。\n"
+      "zh": "+1 伤害。每场战斗结束时发现一个药丸。"
     },
     "kind": "trinket",
     "rarity": "rare",
@@ -22632,7 +22632,7 @@
     "description": "Your collarless spells cost -2 mana.",
     "description_texts": {
       "en": "Your collarless spells cost -2 mana.",
-      "zh": "你的无项圈法术法力消耗 -2。\n"
+      "zh": "你的无项圈法术法力消耗 -2。"
     },
     "kind": "trinket",
     "rarity": "rare",
@@ -22659,7 +22659,7 @@
     "description": "Spells that match your class cost -1 mana.",
     "description_texts": {
       "en": "Spells that match your class cost -1 mana.",
-      "zh": "符合你职业的法术法力消耗 -1。\n"
+      "zh": "符合你职业的法术法力消耗 -1。"
     },
     "kind": "trinket",
     "rarity": "rare",
@@ -22686,7 +22686,7 @@
     "description": "You can use your weapon an extra time each turn.",
     "description_texts": {
       "en": "You can use your weapon an extra time each turn.",
-      "zh": "你每回合可以额外使用一次你的武器。\n"
+      "zh": "你每回合可以额外使用一次你的武器。"
     },
     "kind": "trinket",
     "rarity": "rare",
@@ -22711,7 +22711,7 @@
     "description": "+1 Damage. Emit 2 Sparkles when you use your basic attack.",
     "description_texts": {
       "en": "+1 Damage. Emit 2 Sparkles when you use your basic attack.",
-      "zh": "+1 伤害。\n使用基础攻击时发出 2 个火花。\n"
+      "zh": "+1 伤害。\n使用基础攻击时发出 2 个火花。"
     },
     "kind": "trinket",
     "rarity": "rare",
@@ -22733,7 +22733,7 @@
     "item_name": "Fetus in a Jar",
     "item_name_texts": {
       "en": "Fetus in a Jar",
-      "zh": "罐中胎儿"
+      "zh": "胎儿博士"
     },
     "description": "At the the start of each battle, equip a temporary Bomb if your weapon slot is open.\nAt the end of each turn, if you didn't use your basic attack, equip another Bomb.",
     "description_texts": {
@@ -22792,7 +22792,7 @@
     "description": "Whenever you fall asleep, gain All Stats Up, restore all your mana, and heal a random injury.",
     "description_texts": {
       "en": "Whenever you fall asleep, gain All Stats Up, restore all your mana, and heal a random injury.",
-      "zh": "每当你睡着时，获得全属性提升，\n恢复所有法力值，并治愈随机伤势。\n"
+      "zh": "每当你入睡时，\n获得全属性提升，恢复所有法力值，\n并治疗一处随机创伤。"
     },
     "kind": "trinket",
     "rarity": "rare",
@@ -22846,7 +22846,7 @@
     "description": "Use: Heal 5 HP.\nWhenever you collect a food pickup, instead of its normal effects, add +1 use to this item.",
     "description_texts": {
       "en": "Use: Heal 5 HP.\nWhenever you collect a food pickup, instead of its normal effects, add +1 use to this item.",
-      "zh": "使用：治疗 5 点生命值。\n每当你收集食物掉落物时，\n代替其正常效果，\n此物品获得 +1 次使用次数。\n"
+      "zh": "使用：治疗 5 点生命值。\n每当你收集食物掉落物时，\n代替其正常效果，\n此物品获得 +1 次使用次数。"
     },
     "kind": "trinket",
     "rarity": "uncommon",
@@ -22871,7 +22871,7 @@
     "description": "Heal 3 HP and gain +3 Charge each time you damage a party member.",
     "description_texts": {
       "en": "Heal 3 HP and gain +3 Charge each time you damage a party member.",
-      "zh": "每次你对队友造成伤害时，\n恢复 3 点生命值并获得 +3 充能。\n"
+      "zh": "每次你对队友造成伤害时，\n恢复 3 点生命值并获得 +3 充能。"
     },
     "kind": "trinket",
     "rarity": "rare",
@@ -22899,7 +22899,7 @@
     "description": "+10% Dodge Chance.\nGain +2% Dodge Chance when you dodge an attack.",
     "description_texts": {
       "en": "+10% Dodge Chance.\nGain +2% Dodge Chance when you dodge an attack.",
-      "zh": "+10% 闪避率。\n当你闪避攻击时，获得 +2% 闪避率。\n"
+      "zh": "+10% 闪避率。\n当你闪避攻击时，获得 +2% 闪避率。"
     },
     "kind": "trinket",
     "rarity": "uncommon",
@@ -22926,7 +22926,7 @@
     "description": "Craft a temporary weapon at the start of the battle if you don't have a weapon.",
     "description_texts": {
       "en": "Craft a temporary weapon at the start of the battle if you don't have a weapon.",
-      "zh": "如果你没有武器，\n在战斗开始时制作一件临时武器。\n"
+      "zh": "如果你没有武器，\n在战斗开始时制作一件临时武器。"
     },
     "kind": "trinket",
     "rarity": "uncommmon",
@@ -23011,7 +23011,7 @@
     "description": "Spawn a random animal familiar at the start of each battle.",
     "description_texts": {
       "en": "Spawn a random animal familiar at the start of each battle.",
-      "zh": "每场战斗开始时生成一个随机动物使魔。\n"
+      "zh": "每场战斗开始时生成一个随机动物使魔。"
     },
     "kind": "trinket",
     "rarity": "uncommon",
@@ -23066,7 +23066,7 @@
     "description": "Use: Throw a trash bag on an adjacent tile.",
     "description_texts": {
       "en": "Use: Throw a trash bag on an adjacent tile.",
-      "zh": "使用：在相邻地块上投掷一个垃圾袋。\n"
+      "zh": "使用：在相邻地块上投掷一个垃圾袋。"
     },
     "kind": "trinket",
     "rarity": "uncommon",
@@ -23091,7 +23091,7 @@
     "description": "Use: Gain +1 [img:str], permanently. For the rest of the adventure, you have a +2% chance to gain Madness at the start of each turn.",
     "description_texts": {
       "en": "Use: Gain +1 [img:str], permanently. For the rest of the adventure, you have a +2% chance to gain Madness at the start of each turn.",
-      "zh": "使用：永久获得 +1 [img:str]。\n在本次冒险的剩余时间内，\n你在每回合开始时有 +2% 几率获得疯狂。\n"
+      "zh": "使用：永久获得 +1 [img:str]。\n在本次冒险的剩余时间内，\n你在每回合开始时有 +2% 几率获得疯狂。"
     },
     "kind": "trinket",
     "rarity": "rare",
@@ -23118,7 +23118,7 @@
     "description": "Heal 2 HP in an area.",
     "description_texts": {
       "en": "Heal 2 HP in an area.",
-      "zh": "治疗一个区域内 2 点生命值。\n"
+      "zh": "治疗一个区域内 2 点生命值。"
     },
     "kind": "trinket",
     "rarity": "uncommon",
@@ -23145,7 +23145,7 @@
     "description": "Use: Gain -1 [img:spd], then, for the rest of the turn, all damage you deal has Knockback 2 and Chain Knockback.",
     "description_texts": {
       "en": "Use: Gain -1 [img:spd], then, for the rest of the turn, all damage you deal has Knockback 2 and Chain Knockback.",
-      "zh": "使用：获得 -1 [img:spd]，\n然后在回合剩余时间内，\n你造成的\n所有伤害都带有击退 2 和连锁击退效果。\n"
+      "zh": "使用：获得 -1 [img:spd]，\n然后在回合剩余时间内，\n你造成的\n所有伤害都带有击退 2 和连锁击退效果。"
     },
     "kind": "trinket",
     "rarity": "uncommon",
@@ -23255,7 +23255,7 @@
     "description": "Use: Gain +3 [img:shield] for each empty armor slot you have.\nWhen this breaks, gain +1 [img:con] permanently.",
     "description_texts": {
       "en": "Use: Gain +3 [img:shield] for each empty armor slot you have.\nWhen this breaks, gain +1 [img:con] permanently.",
-      "zh": "使用：你每有一个空护甲槽，\n获得 +3 [img:shield]。\n当此物品损坏时，永久获得 +1 [img:con]。\n"
+      "zh": "使用：你每有一个空护甲槽，\n获得 +3 [img:shield]。\n当此物品损坏时，永久获得 +1 [img:con]。"
     },
     "kind": "trinket",
     "rarity": "rare",
@@ -23282,7 +23282,7 @@
     "description": "Use: Emit 5 Sparkles.\nIf you end your turn with 0 mana, this gains +1 use.",
     "description_texts": {
       "en": "Use: Emit 5 Sparkles.\nIf you end your turn with 0 mana, this gains +1 use.",
-      "zh": "使用：释放 5 个火花。\n如果你在 0 法力值时结束回合，\n此物品获得 +1 次使用次数。\n"
+      "zh": "使用：释放 5 个火花。\n如果你在 0 法力值时结束回合，\n此物品获得 +1 次使用次数。"
     },
     "kind": "trinket",
     "rarity": "rare",
@@ -23496,7 +23496,7 @@
     "description": "Find 3-5 extra coins at the end of each battle.",
     "description_texts": {
       "en": "Find 3-5 extra coins at the end of each battle.",
-      "zh": "每场战斗结束时额外发现 3-5 枚金币。\n"
+      "zh": "每场战斗结束时额外发现 3-5 枚金币。"
     },
     "kind": "trinket",
     "rarity": "uncommon",
@@ -23521,7 +23521,7 @@
     "description": "+50% chance for an extra bird to spawn at the start of each battle.",
     "description_texts": {
       "en": "+50% chance for an extra bird to spawn at the start of each battle.",
-      "zh": "每场战斗开始时，\n有 +50% 的几率额外生成一只鸟。\n"
+      "zh": "每场战斗开始时，\n有 +50% 的几率额外生成一只鸟。"
     },
     "kind": "trinket",
     "rarity": "uncommon",
@@ -23546,7 +23546,7 @@
     "description": "If an attack would down you, instead lower your HP to 1. While at 1 HP, this has no effect.",
     "description_texts": {
       "en": "If an attack would down you, instead lower your HP to 1. While at 1 HP, this has no effect.",
-      "zh": "如果一次攻击会使你倒地，\n则改为将你的生命值降为 1。\n当生命值为 1 时，此效果无效。\n"
+      "zh": "如果一次攻击会使你倒地，\n则改为将你的生命值降为 1。\n当生命值为 1 时，此效果无效。"
     },
     "kind": "trinket",
     "rarity": "rare",
@@ -23678,7 +23678,7 @@
     "description": "Use: Heal 5 HP. This refills at the end of each battle.",
     "description_texts": {
       "en": "Use: Heal 5 HP. This refills at the end of each battle.",
-      "zh": "使用：治疗 5 点生命值。\n此物品会在每场战斗结束时填充。\n"
+      "zh": "使用：治疗 5 点生命值。\n此物品会在每场战斗结束时填充。"
     },
     "kind": "trinket",
     "rarity": "rare",
@@ -23703,7 +23703,7 @@
     "description": "Use: Heal 5 HP. This refills at the end of each battle.",
     "description_texts": {
       "en": "Use: Heal 5 HP. This refills at the end of each battle.",
-      "zh": "使用：治疗 5 点生命值。\n此物品会在每场战斗结束时填充。\n"
+      "zh": "使用：治疗 5 点生命值。\n此物品会在每场战斗结束时填充。"
     },
     "kind": "trinket",
     "rarity": "rare",
@@ -23728,7 +23728,7 @@
     "description": "Use: Heal 5 HP. This refills at the end of each battle.",
     "description_texts": {
       "en": "Use: Heal 5 HP. This refills at the end of each battle.",
-      "zh": "使用：治疗 5 点生命值。\n此物品会在每场战斗结束时填充。\n"
+      "zh": "使用：治疗 5 点生命值。\n此物品会在每场战斗结束时填充。"
     },
     "kind": "trinket",
     "rarity": "rare",
@@ -23753,7 +23753,7 @@
     "description": "Coins that spawn at the start of each battle are doubled.",
     "description_texts": {
       "en": "Coins that spawn at the start of each battle are doubled.",
-      "zh": "每场战斗开始时生成的金币翻倍。\n"
+      "zh": "每场战斗开始时生成的金币翻倍。"
     },
     "kind": "trinket",
     "rarity": "uncommmon",
@@ -23782,7 +23782,7 @@
     "description": "Rocks you knock back deal +5 damage and have Chain Knockback.",
     "description_texts": {
       "en": "Rocks you knock back deal +5 damage and have Chain Knockback.",
-      "zh": "你击退的岩石造成 +5 伤害并拥有连锁击退。\n"
+      "zh": "你击退的岩石造成 +5 伤害并拥有连锁击退。"
     },
     "kind": "trinket",
     "rarity": "uncommon",
@@ -23863,7 +23863,7 @@
     "description": "Your basic attack cannot deal more than 1 damage.\nYou can attack 2 extra times each turn.",
     "description_texts": {
       "en": "Your basic attack cannot deal more than 1 damage.\nYou can attack 2 extra times each turn.",
-      "zh": "你的基础攻击造成的伤害不能超过 1 点。\n你每回合可以额外攻击 2 次。\n"
+      "zh": "你的基础攻击造成的伤害不能超过 1 点。\n你每回合可以额外攻击 2 次。"
     },
     "kind": "trinket",
     "rarity": "rare",
@@ -23998,7 +23998,7 @@
     "description": "Use: Deal 5 damage to yourself to gain +3 Damage and +1 Magic Damage.",
     "description_texts": {
       "en": "Use: Deal 5 damage to yourself to gain +3 Damage and +1 Magic Damage.",
-      "zh": "使用：对自己造成 5 点伤害，\n以获得 +3 伤害和 +1 魔法伤害。\n"
+      "zh": "使用：对自己造成 5 点伤害，\n以获得 +3 伤害和 +1 魔法伤害。"
     },
     "kind": "trinket",
     "rarity": "very_rare",
@@ -24023,7 +24023,7 @@
     "description": "+2 Damage, +1 Magic Damage. Emit 3 Sparkles when you use your basic attack.",
     "description_texts": {
       "en": "+2 Damage, +1 Magic Damage. Emit 3 Sparkles when you use your basic attack.",
-      "zh": "+2 伤害，+1 魔法伤害。\n当你使用基础攻击时释放 3 个火花。\n"
+      "zh": "+2 伤害，+1 魔法伤害。\n当你使用基础攻击时释放 3 个火花。"
     },
     "kind": "trinket",
     "rarity": "very_rare",
@@ -24048,7 +24048,7 @@
     "description": "Charm a random enemy at the start of each battle.",
     "description_texts": {
       "en": "Charm a random enemy at the start of each battle.",
-      "zh": "每场战斗开始时魅惑一个随机敌人。\n"
+      "zh": "每场战斗开始时魅惑一个随机敌人。"
     },
     "kind": "trinket",
     "rarity": "very_rare",
@@ -24182,7 +24182,7 @@
     "description": "Summon a Charmed Brute at the start of each battle.",
     "description_texts": {
       "en": "Summon a Charmed Brute at the start of each battle.",
-      "zh": "每场战斗开始时召唤一个魅惑暴徒。\n"
+      "zh": "每场战斗开始时召唤一个魅惑暴徒。"
     },
     "kind": "trinket",
     "rarity": "rare",
@@ -24266,7 +24266,7 @@
     "description": "+6 corpse health. Spawn a Charmed Reaper when you are downed.",
     "description_texts": {
       "en": "+6 corpse health. Spawn a Charmed Reaper when you are downed.",
-      "zh": "+6 尸体生命值。\n当你倒地时生成一个魅惑收割者。\n"
+      "zh": "+6 尸体生命值。\n当你倒地时生成一个魅惑收割者。"
     },
     "kind": "trinket",
     "rarity": "very_rare",
@@ -24328,7 +24328,7 @@
     "description": "Use: Scramble the last spell you used. Permanently.",
     "description_texts": {
       "en": "Use: Scramble the last spell you used. Permanently.",
-      "zh": "使用：永久扰乱你使用的上一个法术。\n"
+      "zh": "使用：永久扰乱你使用的上一个法术。"
     },
     "kind": "trinket",
     "rarity": "rare",
@@ -24455,7 +24455,7 @@
     "description": "Your Earth and Fire Element spells cost -1 mana.",
     "description_texts": {
       "en": "Your Earth and Fire Element spells cost -1 mana.",
-      "zh": "你的土元素和火元素法术法力消耗 -1。\n"
+      "zh": "你的土元素和火元素法术法力消耗 -1。"
     },
     "kind": "trinket",
     "rarity": "very_rare",
@@ -24507,7 +24507,7 @@
     "description": "Your collarless spells cost -2 mana.",
     "description_texts": {
       "en": "Your collarless spells cost -2 mana.",
-      "zh": "你的无项圈法术法力消耗 -2。\n"
+      "zh": "你的无项圈法术法力消耗 -2。"
     },
     "kind": "trinket",
     "rarity": "very_rare",
@@ -24536,7 +24536,7 @@
     "description": "Any [img:shield] you gain is increased by 4.",
     "description_texts": {
       "en": "Any [img:shield] you gain is increased by 4.",
-      "zh": "你获得的任何 [img:shield] 增加 4 点。\n"
+      "zh": "你获得的任何 [img:shield] 增加 4 点。"
     },
     "kind": "trinket",
     "rarity": "very_rare",
@@ -24647,7 +24647,7 @@
     "description": "Gain a temporary copy of your first passive ability at the start of each battle.",
     "description_texts": {
       "en": "Gain a temporary copy of your first passive ability at the start of each battle.",
-      "zh": "每场战斗开始时，\n获得你第一个被动技能的临时复制。\n"
+      "zh": "每场战斗开始时，\n获得你第一个被动技能的临时复制。"
     },
     "kind": "trinket",
     "rarity": "very_rare",
@@ -24700,7 +24700,7 @@
     "description": "Breaks when [img:shield] is depleted.\nBecomes a random piece of rare furniture when you return home.",
     "description_texts": {
       "en": "Breaks when [img:shield] is depleted.\nBecomes a random piece of rare furniture when you return home.",
-      "zh": "当 [img:shield] 耗尽时损坏。\n当你回家时变成一件随机稀有家具。\n"
+      "zh": "当 [img:shield] 耗尽时损坏。\n当你回家时变成一件随机稀有家具。"
     },
     "kind": "trinket",
     "rarity": "very_rare",
@@ -24729,7 +24729,7 @@
     "description": "While you're downed, you have a 50% chance to revive with 33% HP at the end of each round.",
     "description_texts": {
       "en": "While you're downed, you have a 50% chance to revive with 33% HP at the end of each round.",
-      "zh": "当你倒地时，\n每回合结束有 50% 的\n几率以 33% 的生命值复活。\n"
+      "zh": "当你倒地时，\n每回合结束有 50% 的\n几率以 33% 的生命值复活。"
     },
     "kind": "trinket",
     "rarity": "rare",
@@ -24754,7 +24754,7 @@
     "description": "Find an extra chapter item at the end of each battle.",
     "description_texts": {
       "en": "Find an extra chapter item at the end of each battle.",
-      "zh": "每场战斗结束时发现一个额外的章节物品。\n"
+      "zh": "每场战斗结束时发现一个额外的章节物品。"
     },
     "kind": "trinket",
     "rarity": "rare",
@@ -24889,7 +24889,7 @@
     "description": "Use: A melee attack that inflicts Bleed.",
     "description_texts": {
       "en": "Use: A melee attack that inflicts Bleed.",
-      "zh": "使用：一次近战攻击，造成流血。\n"
+      "zh": "使用：一次近战攻击，造成流血。"
     },
     "kind": "weapon",
     "rarity": "common",
@@ -24995,7 +24995,7 @@
     "description": "Use: A lobbed attack that creates a creep puddle.",
     "description_texts": {
       "en": "Use: A lobbed attack that creates a creep puddle.",
-      "zh": "使用：抛射攻击，生成一个粘液坑。\n"
+      "zh": "使用：抛射攻击，生成一个粘液坑。"
     },
     "kind": "weapon",
     "rarity": "common",
@@ -25051,7 +25051,7 @@
     "description": "Use: A melee attack with +1 reach that penetrates through units.",
     "description_texts": {
       "en": "Use: A melee attack with +1 reach that penetrates through units.",
-      "zh": "使用：+1 延伸并穿透单位的近战攻击。\n"
+      "zh": "使用：+1 延伸并穿透单位的近战攻击。"
     },
     "kind": "weapon",
     "rarity": "uncommon",
@@ -25182,7 +25182,7 @@
     "description": "Use: A melee attack.\nThis weapon has a 15% chance to break each time it's used.",
     "description_texts": {
       "en": "Use: A melee attack.\nThis weapon has a 15% chance to break each time it's used.",
-      "zh": "使用：近战攻击。\n此武器每次使用有 15% 几率损坏。\n"
+      "zh": "使用：近战攻击。\n此武器每次使用有 15% 几率损坏。"
     },
     "kind": "weapon",
     "rarity": "uncommon",
@@ -25236,7 +25236,7 @@
     "description": "Use: Gain +1 Damage for the rest of the battle.",
     "description_texts": {
       "en": "Use: Gain +1 Damage for the rest of the battle.",
-      "zh": "使用：在战斗剩余时间内获得 +1 伤害。\n"
+      "zh": "使用：在战斗剩余时间内获得 +1 伤害。"
     },
     "kind": "weapon",
     "rarity": "rare",
@@ -25263,7 +25263,7 @@
     "description": "Use: Deal fire damage in a cone.",
     "description_texts": {
       "en": "Use: Deal fire damage in a cone.",
-      "zh": "使用：在锥形范围内造成火焰伤害。\n"
+      "zh": "使用：在锥形范围内造成火焰伤害。"
     },
     "kind": "weapon",
     "rarity": "uncommon",
@@ -25288,7 +25288,7 @@
     "description": "Use: Inflict Burn 1 on an adjacent unit.",
     "description_texts": {
       "en": "Use: Inflict Burn 1 on an adjacent unit.",
-      "zh": "使用：对相邻单位施加 1 层燃烧。\n"
+      "zh": "使用：对相邻单位施加 1 层燃烧。"
     },
     "kind": "weapon",
     "rarity": "common",
@@ -25315,7 +25315,7 @@
     "description": "Use: A lobbed projectile that spawns tall grass.",
     "description_texts": {
       "en": "Use: A lobbed projectile that spawns tall grass.",
-      "zh": "使用：发射一枚抛射物，生成高草。\n"
+      "zh": "使用：发射一枚抛射物，生成高草。"
     },
     "kind": "weapon",
     "rarity": "uncommon",
@@ -25365,7 +25365,7 @@
     "description": "Use: A water attack that hits an entire line with Knockback 10.",
     "description_texts": {
       "en": "Use: A water attack that hits an entire line with Knockback 10.",
-      "zh": "使用：\n击中整行并附带 10 格击退的水属性攻击。\n"
+      "zh": "使用：\n击中整行并附带 10 格击退的水属性攻击。"
     },
     "kind": "weapon",
     "rarity": "common",
@@ -25392,7 +25392,7 @@
     "description": "Use: A lobbed water attack that deals splash damage.",
     "description_texts": {
       "en": "Use: A lobbed water attack that deals splash damage.",
-      "zh": "使用：一次造成溅射伤害的抛射水属性攻击。\n"
+      "zh": "使用：一次造成溅射伤害的抛射水属性攻击。"
     },
     "kind": "weapon",
     "rarity": "uncommon",
@@ -25444,7 +25444,7 @@
     "description": "Use: An Ice Element melee attack that inflicts Slow.",
     "description_texts": {
       "en": "Use: An Ice Element melee attack that inflicts Slow.",
-      "zh": "使用：冰元素近战攻击，施加减速。\n"
+      "zh": "使用：冰元素近战攻击，施加减速。"
     },
     "kind": "weapon",
     "rarity": "uncommon",
@@ -25471,7 +25471,7 @@
     "description": "Use: A lobbed attack that spawns a glass tile.",
     "description_texts": {
       "en": "Use: A lobbed attack that spawns a glass tile.",
-      "zh": "使用：抛射攻击，生成一个玻璃地块。\n"
+      "zh": "使用：抛射攻击，生成一个玻璃地块。"
     },
     "kind": "weapon",
     "rarity": "common",
@@ -25496,7 +25496,7 @@
     "description": "Use: A melee attack with +1 reach.",
     "description_texts": {
       "en": "Use: A melee attack with +1 reach.",
-      "zh": "使用：一次近战攻击，+1 延伸。\n"
+      "zh": "使用：一次近战攻击，+1 延伸。"
     },
     "kind": "weapon",
     "rarity": "common",
@@ -25604,7 +25604,7 @@
     "description": "Use: A lobbed attack that inflicts Poison 1.",
     "description_texts": {
       "en": "Use: A lobbed attack that inflicts Poison 1.",
-      "zh": "使用：抛射攻击，施加 1 层中毒。\n"
+      "zh": "使用：抛射攻击，施加 1 层中毒。"
     },
     "kind": "weapon",
     "rarity": null,
@@ -25631,7 +25631,7 @@
     "description": "Use: Fires 5 projectiles in a cone.",
     "description_texts": {
       "en": "Use: Fires 5 projectiles in a cone.",
-      "zh": "使用：向锥形范围发射 5 枚投射物。\n"
+      "zh": "使用：向锥形范围发射 5 枚投射物。"
     },
     "kind": "weapon",
     "rarity": "very_rare",
@@ -25656,7 +25656,7 @@
     "description": "Use: Fire a shot in a straight line that instakills units and deals 25 damage to bosses.",
     "description_texts": {
       "en": "Use: Fire a shot in a straight line that instakills units and deals 25 damage to bosses.",
-      "zh": "使用：沿直线射击，\n秒杀单位并对 Boss 造成 25 点伤害。\n"
+      "zh": "使用：沿直线射击，\n秒杀单位并对 Boss 造成 25 点伤害。"
     },
     "kind": "weapon",
     "rarity": "very_rare",
@@ -25681,7 +25681,7 @@
     "description": "Use: Fire a shot that instakills units and deals 25 damage to bosses.",
     "description_texts": {
       "en": "Use: Fire a shot that instakills units and deals 25 damage to bosses.",
-      "zh": "使用：开火射击，\n秒杀单位并对 Boss 造成 25 点伤害。\n"
+      "zh": "使用：开火射击，\n秒杀单位并对 Boss 造成 25 点伤害。"
     },
     "kind": "weapon",
     "rarity": "very_rare",
@@ -25731,7 +25731,7 @@
     "description": "Use: Jump to a tile and damage units you land on.",
     "description_texts": {
       "en": "Use: Jump to a tile and damage units you land on.",
-      "zh": "使用：\n跳向一个地块并对你落点上的单位造成伤害。\n"
+      "zh": "使用：\n跳向一个地块并对你落点上的单位造成伤害。"
     },
     "kind": "weapon",
     "rarity": "uncommon",
@@ -25756,7 +25756,7 @@
     "description": "Use: A ranged attack that inflicts Slow.",
     "description_texts": {
       "en": "Use: A ranged attack that inflicts Slow.",
-      "zh": "使用：一次远程攻击，施加减速。\n"
+      "zh": "使用：一次远程攻击，施加减速。"
     },
     "kind": "weapon",
     "rarity": "uncommon",
@@ -25781,7 +25781,7 @@
     "description": "Use: Fly to a random tile within a target area. If you land on a unit, explode dealing 5 damage in an area (including to yourself).",
     "description_texts": {
       "en": "Use: Fly to a random tile within a target area. If you land on a unit, explode dealing 5 damage in an area (including to yourself).",
-      "zh": "使用：飞向目标区域内的随机地块。\n如果你落在单位上，则发生爆炸，\n对区域内（包括你自己）造成 5 点伤害。\n"
+      "zh": "使用：飞向目标区域内的随机地块。\n如果你落在单位上，则发生爆炸，\n对区域内（包括你自己）造成 5 点伤害。"
     },
     "kind": "weapon",
     "rarity": "rare",
@@ -25862,7 +25862,7 @@
     "description": "Use: A wide attack that hits all units in an area.",
     "description_texts": {
       "en": "Use: A wide attack that hits all units in an area.",
-      "zh": "使用：击中区域内所有单位的广域攻击。\n"
+      "zh": "使用：击中区域内所有单位的广域攻击。"
     },
     "kind": "weapon",
     "rarity": "very_rare",
@@ -25914,7 +25914,7 @@
     "description": "Use: Spawn a Deathbot with a flamethrower.",
     "description_texts": {
       "en": "Use: Spawn a Deathbot with a flamethrower.",
-      "zh": "使用：生成一个装备喷火器的死亡机器人。\n"
+      "zh": "使用：生成一个装备喷火器的死亡机器人。"
     },
     "kind": "weapon",
     "rarity": "rare",
@@ -25968,7 +25968,7 @@
     "description": "Use: A melee attack that inflicts random status effects.",
     "description_texts": {
       "en": "Use: A melee attack that inflicts random status effects.",
-      "zh": "使用：近战攻击，施加随机状态效果。\n"
+      "zh": "使用：近战攻击，施加随机状态效果。"
     },
     "kind": "weapon",
     "rarity": "rare",
@@ -26018,7 +26018,7 @@
     "description": "Use: A ranged attack with a 33% chance to inflict Blind 2.",
     "description_texts": {
       "en": "Use: A ranged attack with a 33% chance to inflict Blind 2.",
-      "zh": "使用：一次远程攻击，\n有 33% 的几率造成 2 层致盲。\n"
+      "zh": "使用：一次远程攻击，\n有 33% 的几率造成 2 层致盲。"
     },
     "kind": "weapon",
     "rarity": "uncommon",
@@ -26045,7 +26045,7 @@
     "description": "Use: Fire 5 shots in a straight line.",
     "description_texts": {
       "en": "Use: Fire 5 shots in a straight line.",
-      "zh": "使用：沿直线发射 5 发子弹。\n"
+      "zh": "使用：沿直线发射 5 发子弹。"
     },
     "kind": "weapon",
     "rarity": "rare",
@@ -26070,7 +26070,7 @@
     "description": "Use: Fire a shot anywhere within your line of sight.",
     "description_texts": {
       "en": "Use: Fire a shot anywhere within your line of sight.",
-      "zh": "使用：向视线内的任意位置射击。\n"
+      "zh": "使用：向视线内的任意位置射击。"
     },
     "kind": "weapon",
     "rarity": "rare",
@@ -26122,7 +26122,7 @@
     "description": "Use: Gain +1 [img:int] for the rest of the battle.",
     "description_texts": {
       "en": "Use: Gain +1 [img:int] for the rest of the battle.",
-      "zh": "使用：在战斗剩余时间内获得 +1 [img:int]。\n"
+      "zh": "使用：在战斗剩余时间内获得 +1 [img:int]。"
     },
     "kind": "weapon",
     "rarity": "rare",
@@ -26176,7 +26176,7 @@
     "description": "Use: Fire a shot in a straight line that inflicts +1 Thorns.",
     "description_texts": {
       "en": "Use: Fire a shot in a straight line that inflicts +1 Thorns.",
-      "zh": "使用：沿直线射击，施加 +1 荆棘。\n"
+      "zh": "使用：沿直线射击，施加 +1 荆棘。"
     },
     "kind": "weapon",
     "rarity": "uncommon",
@@ -26201,7 +26201,7 @@
     "description": "Use: Pull a unit 2 tiles toward you.",
     "description_texts": {
       "en": "Use: Pull a unit 2 tiles toward you.",
-      "zh": "使用：将单位向你拉近 2 格。\n"
+      "zh": "使用：将单位向你拉近 2 格。"
     },
     "kind": "weapon",
     "rarity": "uncommon",
@@ -26333,7 +26333,7 @@
     "description": "Use: A melee attack that inflicts Poison 1 and Bleed 1.",
     "description_texts": {
       "en": "Use: A melee attack that inflicts Poison 1 and Bleed 1.",
-      "zh": "使用：一次近战攻击，\n造成 1 层中毒和 1 层流血。\n"
+      "zh": "使用：一次近战攻击，\n造成 1 层中毒和 1 层流血。"
     },
     "kind": "weapon",
     "rarity": "uncommon",
@@ -26412,7 +26412,7 @@
     "description": "Use: A melee attack with a 5% chance to Stun.\nAutomatically use this when you stop next to an enemy or an enemy stops next to you.",
     "description_texts": {
       "en": "Use: A melee attack with a 5% chance to Stun.\nAutomatically use this when you stop next to an enemy or an enemy stops next to you.",
-      "zh": "使用：近战攻击，\n有 5% 几率造成晕眩。\n当你停在敌人旁边或敌人停在你旁边时，\n自动使用此物品。"
+      "zh": "使用：近战攻击，\n有 5% 几率造成晕眩。\n当你停在敌人旁边\n或敌人停在你旁边时，\n自动使用此物品。"
     },
     "kind": "weapon",
     "rarity": "uncommon",
@@ -26440,7 +26440,7 @@
     "description": "Use: Throw an adjacent unit to a tile.",
     "description_texts": {
       "en": "Use: Throw an adjacent unit to a tile.",
-      "zh": "使用：将相邻单位投掷到一个地块上。\n"
+      "zh": "使用：将相邻单位投掷到一个地块上。"
     },
     "kind": "weapon",
     "rarity": "uncommon",
@@ -26467,7 +26467,7 @@
     "description": "Use: Throw a grenade that explodes and shreds 5 stacks of random buffs off of whatever it hits.",
     "description_texts": {
       "en": "Use: Throw a grenade that explodes and shreds 5 stacks of random buffs off of whatever it hits.",
-      "zh": "使用：投掷一枚手榴弹，\n爆炸并撕裂命中目标身上的 5 层随机增益。\n"
+      "zh": "使用：投掷一枚手榴弹，\n爆炸并撕裂命中目标身上的 5 层随机增益。"
     },
     "kind": "weapon",
     "rarity": "rare",
@@ -26654,7 +26654,7 @@
     "description": "Use: A lobbed attack with Knockback 1.",
     "description_texts": {
       "en": "Use: A lobbed attack with Knockback 1.",
-      "zh": "使用：附带 1 格击退的抛射攻击。\n"
+      "zh": "使用：附带 1 格击退的抛射攻击。"
     },
     "kind": "weapon",
     "rarity": "common",
@@ -26758,7 +26758,7 @@
     "description": "Use: A melee attack that lobs a unit back 2 tiles and digs up a corpse.",
     "description_texts": {
       "en": "Use: A melee attack that lobs a unit back 2 tiles and digs up a corpse.",
-      "zh": "使用：一次近战攻击，\n将单位向后抛射 2 格并掘出一具尸体。\n"
+      "zh": "使用：一次近战攻击，\n将单位向后抛射 2 格并掘出一具尸体。"
     },
     "kind": "weapon",
     "rarity": "rare",
@@ -26862,7 +26862,7 @@
     "description": "Use: A melee spin attack.\nThis uses up both your movement and attack action.",
     "description_texts": {
       "en": "Use: A melee spin attack.\nThis uses up both your movement and attack action.",
-      "zh": "使用：近战旋转攻击。\n此行动会同时消耗你的移动和攻击行动。\n"
+      "zh": "使用：近战旋转攻击。\n此行动会同时消耗你的移动和攻击行动。"
     },
     "kind": "weapon",
     "rarity": "rare",
@@ -26889,7 +26889,7 @@
     "description": "Use: Cleanse debuffs from an adjacent unit or yourself.\n[s:.7](Usable once per battle.)[/s]",
     "description_texts": {
       "en": "Use: Cleanse debuffs from an adjacent unit or yourself.\n[s:.7](Usable once per battle.)[/s]",
-      "zh": "使用：驱散相邻单位或你自身身上的减益效果。\n[s:.7](每场战斗限用一次。)[/s]"
+      "zh": "使用：驱散相邻单位\n或你自身身上的减益效果。\n[s:.7](每场战斗限用一次。)[/s]"
     },
     "kind": "weapon",
     "rarity": "rare",
@@ -26997,7 +26997,7 @@
     "description": "Use: A melee attack with Knockback 1.\nPassive: Start each battle with a Zombie Cat familiar.",
     "description_texts": {
       "en": "Use: A melee attack with Knockback 1.\nPassive: Start each battle with a Zombie Cat familiar.",
-      "zh": "使用：一次造成 1 格击退的近战攻击。\n被动：每场战斗开始时获得一个僵尸猫使魔。\n"
+      "zh": "使用：一次造成 1 格击退的近战攻击。\n被动：每场战斗开始时获得一个僵尸猫使魔。"
     },
     "kind": "weapon",
     "rarity": "rare",
@@ -27053,7 +27053,7 @@
     "description": "Use: A melee attack. If used on an ally, give +1 use to all of their items instead of dealing damage.\n5% chance to break when used to repair items.",
     "description_texts": {
       "en": "Use: A melee attack. If used on an ally, give +1 use to all of their items instead of dealing damage.\n5% chance to break when used to repair items.",
-      "zh": "使用：近战攻击。如果对盟友使用，\n则不造成伤害，\n改为使其所有物品的使用次数 +1。\n用于修理物品时有 5% 几率损坏。\n"
+      "zh": "使用：近战攻击。如果对盟友使用，\n则不造成伤害，\n改为使其所有物品的使用次数 +1。\n用于修理物品时有 5% 几率损坏。"
     },
     "kind": "weapon",
     "rarity": "rare",
@@ -27107,7 +27107,7 @@
     "description": "Use: Spawn a large puddle of water anywhere.",
     "description_texts": {
       "en": "Use: Spawn a large puddle of water anywhere.",
-      "zh": "使用：在任意位置生成一大滩水。\n"
+      "zh": "使用：在任意位置生成一大滩水。"
     },
     "kind": "weapon",
     "rarity": "rare",
@@ -27212,7 +27212,7 @@
     "description": "Use: Pull yourself toward a unit or object.",
     "description_texts": {
       "en": "Use: Pull yourself toward a unit or object.",
-      "zh": "使用：将自己拉向一个单位或物体。\n"
+      "zh": "使用：将自己拉向一个单位或物体。"
     },
     "kind": "weapon",
     "rarity": "rare",
@@ -27321,7 +27321,7 @@
     "description": "Use: A melee attack that inflicts Confusion 1 and turns the unit to the right.",
     "description_texts": {
       "en": "Use: A melee attack that inflicts Confusion 1 and turns the unit to the right.",
-      "zh": "使用：一次近战攻击，\n造成 1 层混乱并使单位向右转。\n"
+      "zh": "使用：一次近战攻击，\n造成 1 层混乱并使单位向右转。"
     },
     "kind": "weapon",
     "rarity": "uncommon",
@@ -27400,7 +27400,7 @@
     "description": "Use: A weak melee attack.\nIf it kills a unit, heal 10 HP.",
     "description_texts": {
       "en": "Use: A weak melee attack.\nIf it kills a unit, heal 10 HP.",
-      "zh": "使用：一次较弱的近战攻击。\n如果击杀单位，恢复 10 点生命值。\n"
+      "zh": "使用：一次较弱的近战攻击。\n如果击杀单位，恢复 10 点生命值。"
     },
     "kind": "weapon",
     "rarity": "uncommon",
@@ -27477,7 +27477,7 @@
     "description": "Use: Inflict Blind 2 on an adjacent unit.\n5% chance to break when used.",
     "description_texts": {
       "en": "Use: Inflict Blind 2 on an adjacent unit.\n5% chance to break when used.",
-      "zh": "使用：对相邻单位施加 2 层致盲。\n使用时有 5% 几率损坏。"
+      "zh": "使用：对相邻单位\n施加 2 层致盲。\n使用时有 5% 几率损坏。"
     },
     "kind": "weapon",
     "rarity": "uncommon",
@@ -27529,7 +27529,7 @@
     "description": "Use: A melee attack that ignores shield.\nIf used on static or inanimate objects it destroys them and spawns a Rock. Restore 1 use when used this way.",
     "description_texts": {
       "en": "Use: A melee attack that ignores shield.\nIf used on static or inanimate objects it destroys them and spawns a Rock. Restore 1 use when used this way.",
-      "zh": "使用：无视护盾的近战攻击。\n如果对静止或无生命物体使用，\n则将其摧毁并生成岩石。\n以此方式使用时恢复 1 次使用次数。\n"
+      "zh": "使用：无视护盾的近战攻击。\n如果对静止或无生命物体使用，\n则将其摧毁并生成岩石。\n以此方式使用时恢复 1 次使用次数。"
     },
     "kind": "weapon",
     "rarity": "rare",
@@ -27556,7 +27556,7 @@
     "description": "Use: Fire a rocket anywhere that explodes.",
     "description_texts": {
       "en": "Use: Fire a rocket anywhere that explodes.",
-      "zh": "使用：向任意位置发射一枚火箭并引爆。\n"
+      "zh": "使用：向任意位置发射一枚火箭并引爆。"
     },
     "kind": "weapon",
     "rarity": "very_rare",
@@ -27631,7 +27631,7 @@
     "description": "Use: A melee attack with Knockback 1.",
     "description_texts": {
       "en": "Use: A melee attack with Knockback 1.",
-      "zh": "使用：一次造成 1 格击退的近战攻击。\n"
+      "zh": "使用：一次造成 1 格击退的近战攻击。"
     },
     "kind": "weapon",
     "rarity": "uncommon",
@@ -27685,7 +27685,7 @@
     "description": "Use: A melee attack that always crits and inflicts Bleed 10.",
     "description_texts": {
       "en": "Use: A melee attack that always crits and inflicts Bleed 10.",
-      "zh": "使用：\n必定暴击并施加 10 层流血的近战攻击。\n"
+      "zh": "使用：\n必定暴击并施加 10 层流血的近战攻击。"
     },
     "kind": "weapon",
     "rarity": "rare",
@@ -27713,7 +27713,7 @@
     "description": "Use: A melee attack with a 5% chance to break when used.\nWhen it breaks, gain 15-30 coins.",
     "description_texts": {
       "en": "Use: A melee attack with a 5% chance to break when used.\nWhen it breaks, gain 15-30 coins.",
-      "zh": "使用：近战攻击，\n使用时有 5% 几率损坏。\n损坏时，获得 15-30 金币。\n"
+      "zh": "使用：近战攻击，\n使用时有 5% 几率损坏。\n损坏时，获得 15-30 金币。"
     },
     "kind": "weapon",
     "rarity": "common",
@@ -27768,7 +27768,7 @@
     "description": "Use: An attack that copies your basic attack.",
     "description_texts": {
       "en": "Use: An attack that copies your basic attack.",
-      "zh": "使用：一次攻击，复制你的基础攻击。\n"
+      "zh": "使用：一次攻击，复制你的基础攻击。"
     },
     "kind": "weapon",
     "rarity": "rare",
@@ -27847,7 +27847,7 @@
     "description": "Use: Gain +1 [img:con] and heal 2 HP.",
     "description_texts": {
       "en": "Use: Gain +1 [img:con] and heal 2 HP.",
-      "zh": "使用：获得 +1 [img:con] 并恢复 2 点生命值。\n"
+      "zh": "使用：获得 +1 [img:con] 并恢复 2 点生命值。"
     },
     "kind": "weapon",
     "rarity": "rare",
@@ -27872,7 +27872,7 @@
     "description": "Use: Gain +1 [img:cha] and 2 mana.",
     "description_texts": {
       "en": "Use: Gain +1 [img:cha] and 2 mana.",
-      "zh": "使用：获得 +1 [img:cha] 和 2 点法力值。\n"
+      "zh": "使用：获得 +1 [img:cha] 和 2 点法力值。"
     },
     "kind": "weapon",
     "rarity": "rare",
@@ -27897,7 +27897,7 @@
     "description": "Use: Gain +1 [img:dex] and +1 [img:spd].",
     "description_texts": {
       "en": "Use: Gain +1 [img:dex] and +1 [img:spd].",
-      "zh": "使用：获得 +1 [img:dex] 和 +1 [img:spd]。\n"
+      "zh": "使用：获得 +1 [img:dex] 和 +1 [img:spd]。"
     },
     "kind": "weapon",
     "rarity": "rare",
@@ -27922,7 +27922,7 @@
     "description": "Use: A melee attack that has a 25% chance to refresh itself when used.",
     "description_texts": {
       "en": "Use: A melee attack that has a 25% chance to refresh itself when used.",
-      "zh": "使用：近战攻击，\n使用时有 25% 几率刷新自身。\n"
+      "zh": "使用：近战攻击，\n使用时有 25% 几率刷新自身。"
     },
     "kind": "weapon",
     "rarity": "rare",
@@ -28058,7 +28058,7 @@
     "description": "Use: Cleanse one stack of a random debuff from a unit at melee range. \nPassive: Your heals heal for 1 extra.",
     "description_texts": {
       "en": "Use: Cleanse one stack of a random debuff from a unit at melee range. \nPassive: Your heals heal for 1 extra.",
-      "zh": "使用：\n驱散近战范围内一个单位的一层随机减益效果。\n被动：你的治疗效果 +1。"
+      "zh": "使用：\n驱散近战范围内一个单位\n的一层随机减益效果。\n被动：你的治疗效果 +1。"
     },
     "kind": "weapon",
     "rarity": "uncommon",
@@ -28085,7 +28085,7 @@
     "description": "Use: An electric melee attack that has a 50% chance to chain to another enemy within 3 tiles. Can only be used while at full mana.",
     "description_texts": {
       "en": "Use: An electric melee attack that has a 50% chance to chain to another enemy within 3 tiles. Can only be used while at full mana.",
-      "zh": "使用：电击近战攻击，\n有 50% 几率连锁到 3 格内的\n另一个敌人。仅在法力值满时可用。\n"
+      "zh": "使用：电击近战攻击，\n有 50% 几率连锁到 3 格内的\n另一个敌人。仅在法力值满时可用。"
     },
     "kind": "weapon",
     "rarity": "uncommon",
@@ -28162,7 +28162,7 @@
     "description": "Use: Summon a swarm of charmed flies.\nWhen you destroy a corpse, restore this weapon's use.",
     "description_texts": {
       "en": "Use: Summon a swarm of charmed flies.\nWhen you destroy a corpse, restore this weapon's use.",
-      "zh": "使用：召唤一群被魅惑的苍蝇。\n当你摧毁尸体时，恢复此武器的使用次数。\n"
+      "zh": "使用：召唤一群被魅惑的苍蝇。\n当你摧毁尸体时，恢复此武器的使用次数。"
     },
     "kind": "weapon",
     "rarity": "very_rare",
@@ -28241,7 +28241,7 @@
     "description": "Use: A laser attack. Gains +1 damage for the rest of the battle each time it's used.",
     "description_texts": {
       "en": "Use: A laser attack. Gains +1 damage for the rest of the battle each time it's used.",
-      "zh": "使用：激光攻击。每次使用后，\n在本场战斗剩余时间内伤害 +1。\n"
+      "zh": "使用：激光攻击。每次使用后，\n在本场战斗剩余时间内伤害 +1。"
     },
     "kind": "weapon",
     "rarity": null,
@@ -28398,7 +28398,7 @@
     "description": "Use: A melee attack that deals damage equal to half your [img:str] rounded up, inflicts Weakness 1, and gives you +1 [img:str] and +1 HP on hit.",
     "description_texts": {
       "en": "Use: A melee attack that deals damage equal to half your [img:str] rounded up, inflicts Weakness 1, and gives you +1 [img:str] and +1 HP on hit.",
-      "zh": "使用：\n造成等同于你 [img:str] 一半（向上取整）伤害的\n近战攻击，施加 1 层虚弱，\n命中时赋予你 +1 [img:str] 和 +1 生命值。\n"
+      "zh": "使用：\n造成等同于你 [img:str] 一半（向上取整）伤害的\n近战攻击，施加 1 层虚弱，\n命中时赋予你 +1 [img:str] 和 +1 生命值。"
     },
     "kind": "weapon",
     "rarity": "uncommon",
@@ -28452,7 +28452,7 @@
     "description": "Use: Throw a penetrating projectile that returns to you.",
     "description_texts": {
       "en": "Use: Throw a penetrating projectile that returns to you.",
-      "zh": "使用：投掷一个穿透性投射物并返回。\n"
+      "zh": "使用：投掷一个穿透性投射物并返回。"
     },
     "kind": "weapon",
     "rarity": "very_rare",
@@ -28506,7 +28506,7 @@
     "description": "Use: Heal an adjacent unit or yourself for 5 HP.",
     "description_texts": {
       "en": "Use: Heal an adjacent unit or yourself for 5 HP.",
-      "zh": "使用：治疗相邻单位或你自己 5 点生命值。\n"
+      "zh": "使用：治疗相邻单位或你自己 5 点生命值。"
     },
     "kind": "weapon",
     "rarity": "very_rare",
@@ -28533,7 +28533,7 @@
     "description": "Use: A melee attack with +1 reach that penetrates through units.\nRELOAD: Collect a blessing pickup or get hit by a Holy Element spell.",
     "description_texts": {
       "en": "Use: A melee attack with +1 reach that penetrates through units.\nRELOAD: Collect a blessing pickup or get hit by a Holy Element spell.",
-      "zh": "使用：一次近战攻击，\n+1 延伸并穿透单位。\n装填：\n收集一个祝福掉落物或被神圣元素法术击中。\n"
+      "zh": "使用：一次近战攻击，\n+1 延伸并穿透单位。\n装填：\n收集一个祝福掉落物或被神圣元素法术击中。"
     },
     "kind": "weapon",
     "rarity": "very_rare",
@@ -28558,7 +28558,7 @@
     "description": "Use: A melee attack with Knockback 2 that deals damage equal to your [img:str].\nCleaves and deals double damage to units with [img:shield].",
     "description_texts": {
       "en": "Use: A melee attack with Knockback 2 that deals damage equal to your [img:str].\nCleaves and deals double damage to units with [img:shield].",
-      "zh": "使用：\n造成等同于你 [img:str] 伤害并附带 2 格击退的\n近战攻击。\n切割并对拥有 [img:shield] 的单位造成双倍伤害。\n"
+      "zh": "使用：\n造成等同于你 [img:str] 伤害并附带 2 格击退的\n近战攻击。\n切割并对拥有 [img:shield] 的单位造成双倍伤害。"
     },
     "kind": "weapon",
     "rarity": "very_rare",
@@ -28880,7 +28880,7 @@
     "description": "Use: A multi-hit melee attack with Lifesteal that inflicts Bleed.\n[s:.7](Usable once per battle.)[/s]",
     "description_texts": {
       "en": "Use: A multi-hit melee attack with Lifesteal that inflicts Bleed.\n[s:.7](Usable once per battle.)[/s]",
-      "zh": "使用：具有生命偷取的多段击近战攻击，\n施加流血。\n[s:.7](每场战斗限用一次。)[/s]"
+      "zh": "使用：具有生命偷取的\n多段击近战攻击，施加流血。\n[s:.7](每场战斗限用一次。)[/s]"
     },
     "kind": "weapon",
     "rarity": "very_rare",
@@ -28958,7 +28958,7 @@
     "description": "Use: A melee attack with Knockback 10 that inflicts Bruise.",
     "description_texts": {
       "en": "Use: A melee attack with Knockback 10 that inflicts Bruise.",
-      "zh": "使用：\n附带 10 格击退并施加淤伤的近战攻击。\n"
+      "zh": "使用：\n附带 10 格击退并施加淤伤的近战攻击。"
     },
     "kind": "weapon",
     "rarity": "very_rare",
@@ -29036,7 +29036,7 @@
     "description": "Use: A lobbed attack that creates a creep puddle.",
     "description_texts": {
       "en": "Use: A lobbed attack that creates a creep puddle.",
-      "zh": "使用：抛射攻击，生成一个粘液坑。\n"
+      "zh": "使用：抛射攻击，生成一个粘液坑。"
     },
     "kind": "weapon",
     "rarity": "very_rare",
@@ -29086,7 +29086,7 @@
     "description": "Use: A lobbed attack that creates glass tiles in an area.",
     "description_texts": {
       "en": "Use: A lobbed attack that creates glass tiles in an area.",
-      "zh": "使用：抛射攻击，在区域内生成玻璃地块。\n"
+      "zh": "使用：抛射攻击，在区域内生成玻璃地块。"
     },
     "kind": "weapon",
     "rarity": "very_rare",
@@ -29111,7 +29111,7 @@
     "description": "Use: Cleanse debuffs and heal an adjacent unit or yourself.",
     "description_texts": {
       "en": "Use: Cleanse debuffs and heal an adjacent unit or yourself.",
-      "zh": "使用：驱散减益效果并治疗相邻单位或你自身。\n"
+      "zh": "使用：驱散减益效果并治疗\n相邻单位或你自身。"
     },
     "kind": "weapon",
     "rarity": "very_rare",
@@ -29138,7 +29138,7 @@
     "description": "Use: A melee attack that inflicts Poison 1, Bleed 1, Confusion 1, Weakness 1, and Slow 1.",
     "description_texts": {
       "en": "Use: A melee attack that inflicts Poison 1, Bleed 1, Confusion 1, Weakness 1, and Slow 1.",
-      "zh": "使用：施加 1 层中毒、\n1 层流血、1 层混乱、\n1 层虚弱和 1 层减速的近战攻击。\n"
+      "zh": "使用：施加 1 层中毒、\n1 层流血、1 层混乱、\n1 层虚弱和 1 层减速的近战攻击。"
     },
     "kind": "weapon",
     "rarity": "very_rare",
@@ -29163,7 +29163,7 @@
     "description": "Use: Toss a Bomb that explodes at the end of the round.",
     "description_texts": {
       "en": "Use: Toss a Bomb that explodes at the end of the round.",
-      "zh": "使用：投掷一枚在回合结束时爆炸的炸弹。\n"
+      "zh": "使用：投掷一枚在回合结束时爆炸的炸弹。"
     },
     "kind": "weapon",
     "rarity": "rare",
@@ -29190,7 +29190,7 @@
     "description": "Use: A ranged attack that inflicts Webbed.",
     "description_texts": {
       "en": "Use: A ranged attack that inflicts Webbed.",
-      "zh": "使用：一次远程攻击，施加蛛网。\n"
+      "zh": "使用：一次远程攻击，施加蛛网。"
     },
     "kind": "weapon",
     "rarity": "rare",
@@ -29242,7 +29242,7 @@
     "description": "Use: Throw a projectile that deals 1-6 damage at random.\nRELOAD: Cast a spell that costs exactly 6 mana.",
     "description_texts": {
       "en": "Use: Throw a projectile that deals 1-6 damage at random.\nRELOAD: Cast a spell that costs exactly 6 mana.",
-      "zh": "使用：投掷抛射物，\n随机造成 1-6 点伤害。\n装填：施放一个消耗正好为 6 法力的法术。\n"
+      "zh": "使用：投掷抛射物，\n随机造成 1-6 点伤害。\n装填：施放一个消耗正好为 6 法力的法术。"
     },
     "kind": "weapon",
     "rarity": "very_rare",
@@ -29267,7 +29267,7 @@
     "description": "Use: A melee attack with Knockback 2.\nIf you end your turn with a unused movement actions, heal 3 HP and gain 3 Charge.",
     "description_texts": {
       "en": "Use: A melee attack with Knockback 2.\nIf you end your turn with a unused movement actions, heal 3 HP and gain 3 Charge.",
-      "zh": "使用：附带 2 格击退的近战攻击。\n如果你在结束回合时仍有未使用的移动行动，\n治疗 3 点生命值并获得 3 层充能。\n"
+      "zh": "使用：附带 2 格击退的近战攻击。\n如果你在结束回合时仍有未使用的移动行动，\n治疗 3 点生命值并获得 3 层充能。"
     },
     "kind": "weapon",
     "rarity": "rare",
@@ -29346,7 +29346,7 @@
     "description": "Use: A melee attack with Knockback 5.",
     "description_texts": {
       "en": "Use: A melee attack with Knockback 5.",
-      "zh": "使用：近战攻击，附带击退 5。\n"
+      "zh": "使用：近战攻击，附带击退 5。"
     },
     "kind": "weapon",
     "rarity": "rare",
@@ -29475,7 +29475,7 @@
     "description": "Use: Force a unit to attack one of its enemies.\n[s:.7](Usable once per battle.)[/s]",
     "description_texts": {
       "en": "Use: Force a unit to attack one of its enemies.\n[s:.7](Usable once per battle.)[/s]",
-      "zh": "使用：强迫一个单位攻击其一名敌人。\n[s:.7](每场战斗限用一次。)[/s]"
+      "zh": "使用：强迫一个单位\n攻击其一名敌人。\n[s:.7](每场战斗限用一次。)[/s]"
     },
     "kind": "weapon",
     "rarity": "rare",
@@ -29503,7 +29503,7 @@
     "item_name": "Book Of Belial",
     "item_name_texts": {
       "en": "Book Of Belial",
-      "zh": "贝利亚之书"
+      "zh": "彼列之书"
     },
     "description": "Use: Gain +3 Damage.\nRELOAD: Kill an enemy.",
     "description_texts": {
@@ -29592,7 +29592,7 @@
     "description": "Start each battle with Poison 5. Inflict All Stats Down 2 on bosses and minibosses at the start of the battle.\nUse: A melee attack that causes a unit to die at the end of its next turn. Bosses fall asleep at the end of their next turn instead.",
     "description_texts": {
       "en": "Start each battle with Poison 5. Inflict All Stats Down 2 on bosses and minibosses at the start of the battle.\nUse: A melee attack that causes a unit to die at the end of its next turn. Bosses fall asleep at the end of their next turn instead.",
-      "zh": "每次战斗开始时带有 5 层中毒。\n战斗开始时对 Boss 和小\n Boss 施加 2 层全属性下降。\n使用：近战攻击，\n使一个单位在其下回合结束时死亡。\nBoss 则改为在其下回合结束时陷入睡眠。\n"
+      "zh": "每次战斗开始时带有 5 层中毒。\n战斗开始时对 Boss 和小\n Boss 施加 2 层全属性下降。\n使用：近战攻击，\n使一个单位在其下回合结束时死亡。\nBoss 则改为在其下回合结束时陷入睡眠。"
     },
     "kind": "weapon",
     "rarity": "rare",
@@ -29646,7 +29646,7 @@
     "description": "Use: A melee attack that ignores shield.\nIf used on static or inanimate objects it destroys them and spawns a Coin.\nSpawn a coin on a random tile at the end of each turn.",
     "description_texts": {
       "en": "Use: A melee attack that ignores shield.\nIf used on static or inanimate objects it destroys them and spawns a Coin.\nSpawn a coin on a random tile at the end of each turn.",
-      "zh": "使用：无视护盾的近战攻击。\n如果对静止或无生命物体使用，\n则将其摧毁并生成一枚金币。\n每回合结束时在随机地块生成一枚金币。\n"
+      "zh": "使用：无视护盾的近战攻击。\n如果对静止或无生命物体使用，\n则将其摧毁并生成一枚金币。\n每回合结束时在随机地块生成一枚金币。"
     },
     "kind": "weapon",
     "rarity": "very_rare",
@@ -29725,7 +29725,7 @@
     "description": "Use: A melee attack with a chance to repeat. Gains 1 damage for the rest of the battle each time it's used.",
     "description_texts": {
       "en": "Use: A melee attack with a chance to repeat. Gains 1 damage for the rest of the battle each time it's used.",
-      "zh": "使用：有几率重复的近战攻击。\n每次使用后，\n在本场战斗剩余时间内获得 1 点伤害。\n"
+      "zh": "使用：有几率重复的近战攻击。\n每次使用后，\n在本场战斗剩余时间内获得 1 点伤害。"
     },
     "kind": "weapon",
     "rarity": "very_rare",
@@ -29939,7 +29939,7 @@
     "description": "Use: A melee attack that inflicts Weakness 3.",
     "description_texts": {
       "en": "Use: A melee attack that inflicts Weakness 3.",
-      "zh": "使用：施加 3 层虚弱的近战攻击。\n"
+      "zh": "使用：施加 3 层虚弱的近战攻击。"
     },
     "kind": "weapon",
     "rarity": "rare",
@@ -29991,7 +29991,7 @@
     "description": "Use: A wide wind attack with Knockback 3.",
     "description_texts": {
       "en": "Use: A wide wind attack with Knockback 3.",
-      "zh": "使用：广域风攻击，附带击退 3。\n"
+      "zh": "使用：广域风攻击，附带击退 3。"
     },
     "kind": "weapon",
     "rarity": null,

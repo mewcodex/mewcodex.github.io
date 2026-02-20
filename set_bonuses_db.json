@@ -87,7 +87,7 @@
       },
       "desc_texts": {
         "en": "5% chance to spawn a Flea each turn.\r\nFamiliars have +1 Damage and +1 movement range.",
-        "zh": "每回合有 5% 几率生成一只跳蚤。\r\n使魔拥有 +1 伤害和 +1 移动距离。\r\n"
+        "zh": "每回合有 5% 几率生成一只跳蚤。\r\n使魔拥有 +1 伤害和 +1 移动距离。"
       },
       "name_mod": null,
       "stats": {},
@@ -149,7 +149,7 @@
       },
       "desc_texts": {
         "en": "Grow flowers under yourself at the end of each turn.",
-        "zh": "每回合结束时，在身下生长出花朵。\r\n"
+        "zh": "每回合结束时，在身下生长出花朵。"
       },
       "name_mod": null,
       "stats": {},
@@ -282,7 +282,7 @@
       },
       "desc_texts": {
         "en": "+1 Brace. Wood Set Pieces are no longer Fragile.",
-        "zh": "+1 护甲。木制套装部件不再易碎。\r\n"
+        "zh": "+1 护甲。木制套装部件不再易碎。"
       },
       "name_mod": null,
       "stats": {},
@@ -320,7 +320,7 @@
       },
       "desc_texts": {
         "en": "All Bugs and Maggots you spawn are upgraded to champions.",
-        "zh": "你生成的所有虫子和蛆虫都会升级为冠军。\r\n"
+        "zh": "你生成的所有虫子和蛆虫都会升级为冠军。"
       },
       "name_mod": null,
       "stats": {},
@@ -451,7 +451,7 @@
       },
       "desc_texts": {
         "en": "2 more pickups spawn in each battle.",
-        "zh": "每场战斗中会生成额外 2 个掉落物。\r\n"
+        "zh": "每场战斗中会生成额外 2 个掉落物。"
       },
       "name_mod": null,
       "stats": {
@@ -495,7 +495,7 @@
       },
       "desc_texts": {
         "en": "Your basic attack inflicts Bleed. Whenever you inflict Bleed, trigger Bleed damage immediately.",
-        "zh": "你的基础攻击施加流血。\r\n每当你施加流血时，立即触发流血伤害。\r\n"
+        "zh": "你的基础攻击施加流血。\r\n每当你施加流血时，立即触发流血伤害。"
       },
       "name_mod": null,
       "stats": {},
@@ -515,7 +515,7 @@
       },
       "desc_texts": {
         "en": "Gain +1 Random Stat Up whenever you take damage.",
-        "zh": "每当受到伤害时获得 +1 随机属性提升。\r\n"
+        "zh": "每当受到伤害时获得 +1 随机属性提升。"
       },
       "name_mod": null,
       "stats": {},
@@ -553,7 +553,7 @@
       },
       "desc_texts": {
         "en": "Take an AI controlled bonus turn at the end of the first round.",
-        "zh": "在第一回合结束时，\r\n进行一个由 AI 控制的奖励回合。\r\n"
+        "zh": "在第一回合结束时，\r\n进行一个由 AI 控制的奖励回合。"
       },
       "name_mod": null,
       "stats": {},
@@ -596,7 +596,7 @@
       },
       "desc_texts": {
         "en": "Flying. You do not take extra damage from backstabs.\r\n50% Chance to spawn a Fly each turn.",
-        "zh": "飞行。你不会受到背刺的额外伤害。\r\n每回合有 50% 几率生成一只苍蝇。\r\n"
+        "zh": "飞行。你不会受到背刺的额外伤害。\r\n每回合有 50% 几率生成一只苍蝇。"
       },
       "name_mod": null,
       "stats": {},
@@ -652,7 +652,7 @@
       },
       "desc_texts": {
         "en": "+5% Dodge Chance and +5% Crit Chance.",
-        "zh": "+5% 闪避率和 +5% 暴击率。\r\n"
+        "zh": "+5% 闪避率和 +5% 暴击率。"
       },
       "name_mod": null,
       "stats": {},
@@ -731,7 +731,7 @@
       },
       "desc_texts": {
         "en": "+50% Crit Chance while standing in tall grass.",
-        "zh": "站在高草中时 +50% 暴击率。\r\n"
+        "zh": "站在高草中时 +50% 暴击率。"
       },
       "name_mod": null,
       "stats": {},
@@ -809,7 +809,7 @@
       },
       "desc_texts": {
         "en": "Spawn 4 Scrap pickups at the start of each battle.",
-        "zh": "每场战斗开始时生成 4 个废料掉落物。\r\n"
+        "zh": "每场战斗开始时生成 4 个废料掉落物。"
       },
       "name_mod": null,
       "stats": {},
@@ -829,7 +829,7 @@
       },
       "desc_texts": {
         "en": "Food and scrap pickups you spawn are bigger.",
-        "zh": "你生成的食物和废料掉落物更大。\r\n"
+        "zh": "你生成的食物和废料掉落物更大。"
       },
       "name_mod": null,
       "stats": {},
@@ -847,7 +847,7 @@
       },
       "desc_texts": {
         "en": "Your Familiars gain +4 HP and +1 Damage.",
-        "zh": "你的使魔获得 +4 生命值和 +1 伤害。\r\n"
+        "zh": "你的使魔获得 +4 生命值和 +1 伤害。"
       },
       "name_mod": null,
       "stats": {},
@@ -867,7 +867,7 @@
       },
       "desc_texts": {
         "en": "Collarless spells cost -1 mana to cast.",
-        "zh": "施放无项圈法术消耗的法力值 -1。\r\n"
+        "zh": "施放无项圈法术消耗的法力值 -1。"
       },
       "name_mod": null,
       "stats": {},
@@ -887,7 +887,7 @@
       },
       "desc_texts": {
         "en": "Grubs spawned by items gain +5 HP.",
-        "zh": "物品生成的幼虫获得 +5 生命值。\r\n"
+        "zh": "物品生成的幼虫获得 +5 生命值。"
       },
       "name_mod": null,
       "stats": {},
@@ -948,7 +948,7 @@
       },
       "desc_texts": {
         "en": "If you end your turn with unused movement actions, heal 3 HP and gain +3 Charge.",
-        "zh": "如果你在回合结束时还有未使用的移动行动，\r\n治疗 3 点生命值并获得 +3 充能。\r\n"
+        "zh": "如果你在回合结束时还有未使用的移动行动，\r\n治疗 3 点生命值并获得 +3 充能。"
       },
       "name_mod": null,
       "stats": {},
@@ -968,7 +968,7 @@
       },
       "desc_texts": {
         "en": "+2 Thorns.\r\nWhenever any Cactus armor breaks, increase all your stats by 1, permanently.",
-        "zh": "+2 荆棘。\r\n每当任意仙人掌护甲破碎时，\r\n你的所有属性永久增加 1 点。\r\n"
+        "zh": "+2 荆棘。\r\n每当任意仙人掌护甲破碎时，\r\n你的所有属性永久增加 1 点。"
       },
       "name_mod": null,
       "stats": {},
@@ -988,7 +988,7 @@
       },
       "desc_texts": {
         "en": "When downed, inflict Rot 1 and Weakness 1 on all enemies.\r\nWhen downed, revive with +30% HP at the end of the round.",
-        "zh": "倒地时，\r\n对所有敌人施加 1 层腐烂和 1 层虚弱。\r\n倒地时，\r\n在回合结束时以 +30% 生命值复活。\r\n"
+        "zh": "倒地时，\r\n对所有敌人施加 1 层腐烂和 1 层虚弱。\r\n倒地时，\r\n在回合结束时以 +30% 生命值复活。"
       },
       "name_mod": null,
       "stats": {},
@@ -1009,7 +1009,7 @@
       },
       "desc_texts": {
         "en": "Gain 1-9 coins at the end of each battle.",
-        "zh": "每场战斗结束时获得 1-9 枚金币。\r\n"
+        "zh": "每场战斗结束时获得 1-9 枚金币。"
       },
       "name_mod": "CAT_NAME_MOD_MAN",
       "stats": {},
@@ -1030,7 +1030,7 @@
       },
       "desc_texts": {
         "en": "Enemies have a 10% chance to become Entangled when walking through flower tiles.",
-        "zh": "敌人在经过花朵地块时有 10% 几率被缠绕。\r\n"
+        "zh": "敌人在经过花朵地块时有 10% 几率被缠绕。"
       },
       "name_mod": null,
       "stats": {},
@@ -1050,7 +1050,7 @@
       },
       "desc_texts": {
         "en": "+50% Crit Chance on humanoid enemies.\r\nWhen downed, inflict Fear 2 on all enemies.",
-        "zh": "对人型敌人 +50% 暴击率。\r\n倒地时，对所有敌人施加 2 层恐惧。\r\n"
+        "zh": "对人型敌人 +50% 暴击率。\r\n倒地时，对所有敌人施加 2 层恐惧。"
       },
       "name_mod": null,
       "stats": {},
@@ -1072,7 +1072,7 @@
       },
       "desc_texts": {
         "en": "Cleanse all your debuffs at the end of each turn.",
-        "zh": "每回合结束时驱散你所有的减益效果。\r\n"
+        "zh": "每回合结束时驱散你所有的减益效果。"
       },
       "name_mod": null,
       "stats": {},
@@ -1115,7 +1115,7 @@
       },
       "desc_texts": {
         "en": "Find a pill at the end of each battle.\r\nWhenever you eat a pill, gain a random stat and lose another random stat, permanently.",
-        "zh": "每次战斗结束时发现一颗药丸。\r\n每当你吃下一颗药丸，\r\n永久获得一项随机属性并失去另一项随机属性。\r\n"
+        "zh": "每次战斗结束时发现一颗药丸。\r\n每当你吃下一颗药丸，\r\n永久获得一项随机属性并失去另一项随机属性。"
       },
       "name_mod": null,
       "stats": {},
@@ -1174,7 +1174,7 @@
       },
       "desc_texts": {
         "en": "Flying. Inflict Bruise 1 on units you make contact with.\r\nPull every unit within 2 tiles toward you at the end of each round.",
-        "zh": "飞行。对接触的单位施加 1 层淤伤。\r\n每回合结束时，\r\n将 2 格内的所有单位拉向你。\r\n"
+        "zh": "飞行。对接触的单位施加 1 层淤伤。\r\n每回合结束时，\r\n将 2 格内的所有单位拉向你。"
       },
       "name_mod": null,
       "stats": {},
@@ -1196,7 +1196,7 @@
       },
       "desc_texts": {
         "en": "Your basic attack deals electric damage and has a +10% chance to Stun.",
-        "zh": "你的基础攻击造成电击伤害，\r\n并有 +10% 几率造成晕眩。\r\n"
+        "zh": "你的基础攻击造成电击伤害，\r\n并有 +10% 几率造成晕眩。"
       },
       "name_mod": null,
       "stats": {},
@@ -1254,7 +1254,7 @@
       },
       "desc_texts": {
         "en": "Familiars you spawn gain +2 Damage and +2 HP.",
-        "zh": "你生成的\r\n使魔获得 +2 伤害和 +2 生命值。\r\n"
+        "zh": "你生成的\r\n使魔获得 +2 伤害和 +2 生命值。"
       },
       "name_mod": null,
       "stats": {},
@@ -1312,7 +1312,7 @@
       },
       "desc_texts": {
         "en": "All allies gain +1 [img:int] and +1 [img:lck].",
-        "zh": "所有友军获得 +1 [img:int] 和 +1 [img:lck]。\r\n"
+        "zh": "所有友军获得 +1 [img:int] 和 +1 [img:lck]。"
       },
       "name_mod": null,
       "stats": {
@@ -1354,7 +1354,7 @@
       },
       "desc_texts": {
         "en": "Your movement action becomes a Jump with infinite range.\r\nYour tile-targeted spells have infinite range.",
-        "zh": "你的移动行动变为无限射程的跳跃。\r\n你的地块目标法术拥有无限射程。\r\n"
+        "zh": "你的移动行动变为无限射程的跳跃。\r\n你的地块目标法术拥有无限射程。"
       },
       "name_mod": null,
       "stats": {},
@@ -1372,7 +1372,7 @@
       },
       "desc_texts": {
         "en": "Your weapon and trinket's passive and active effects are tripled.",
-        "zh": "你的武器和饰品的被动及主动效果翻至三倍。\r\n"
+        "zh": "你的武器和饰品的被动及主动效果翻至三倍。"
       },
       "name_mod": null,
       "stats": {},
@@ -1390,7 +1390,7 @@
       },
       "desc_texts": {
         "en": "The first spell you cast each turn inflicts Webbed.",
-        "zh": "你每回合施放的第一个法术施加蛛网效果。\r\n"
+        "zh": "你每回合施放的第一个法术施加蛛网效果。"
       },
       "name_mod": "CAT_NAME_MOD_SUPER",
       "stats": {},
@@ -1433,7 +1433,7 @@
       },
       "desc_texts": {
         "en": "Start battle with a baby version of yourself.",
-        "zh": "战斗开始时拥有一个宝宝版本的自己。\r\n"
+        "zh": "战斗开始时拥有一个宝宝版本的自己。"
       },
       "name_mod": null,
       "stats": {},
@@ -1509,7 +1509,7 @@
       },
       "desc_texts": {
         "en": "Spawn 5 Catnip pickups at the start of each battle.",
-        "zh": "每次战斗开始时生成 5 个猫薄荷掉落物。\r\n"
+        "zh": "每次战斗开始时生成 5 个猫薄荷掉落物。"
       },
       "name_mod": "CAT_NAME_MOD_HIPPIE",
       "stats": {},
@@ -1529,7 +1529,7 @@
       },
       "desc_texts": {
         "en": "At the end of each battle, lose a random stat permanently and gain a random mutation.",
-        "zh": "每场战斗结束时，\r\n永久失去一项随机属性并获得一个随机突变。\r\n"
+        "zh": "每场战斗结束时，\r\n永久失去一项随机属性并获得一个随机突变。"
       },
       "name_mod": null,
       "stats": {},
@@ -1587,7 +1587,7 @@
       },
       "desc_texts": {
         "en": "Start battle with 2 Charmed Rats.",
-        "zh": "战斗开始时带有 2 只魅惑老鼠。\r\n"
+        "zh": "战斗开始时带有 2 只魅惑老鼠。"
       },
       "name_mod": null,
       "stats": {},
@@ -1627,7 +1627,7 @@
       },
       "desc_texts": {
         "en": "Gain a random mutation at the end of each battle.\r\nExplode when downed. This explosion doesn't damage you.",
-        "zh": "每场战斗结束时获得一个随机突变。\r\n倒地时爆炸。此爆炸不会伤害你。\r\n"
+        "zh": "每场战斗结束时获得一个随机突变。\r\n倒地时爆炸。此爆炸不会伤害你。"
       },
       "name_mod": null,
       "stats": {},
@@ -1668,7 +1668,7 @@
       },
       "desc_texts": {
         "en": "Bruise 1. Poison 1. Bleed 1.\r\nThe first spell you cast each turn is cast twice.",
-        "zh": "淤伤 1。中毒 1。流血 1。\r\n你每回合施放的第一个法术会施放两次。\r\n"
+        "zh": "淤伤 1。中毒 1。流血 1。\r\n你每回合施放的第一个法术会施放两次。"
       },
       "name_mod": null,
       "stats": {},
@@ -1741,7 +1741,7 @@
       },
       "desc_texts": {
         "en": "When you get a kill, gain +6 Shield.",
-        "zh": "当你造成击杀时，获得 +6 护盾。\r\n"
+        "zh": "当你造成击杀时，获得 +6 护盾。"
       },
       "name_mod": "CAT_NAME_MOD_DEMONIC",
       "stats": {},
@@ -1841,7 +1841,7 @@
       },
       "desc_texts": {
         "en": "Allies gain +5 [img:shield] at the start of each battle.",
-        "zh": "盟友在每次战斗开始时获得 +5 [img:shield]。\r\n"
+        "zh": "盟友在每次战斗开始时获得 +5 [img:shield]。"
       },
       "name_mod": null,
       "stats": {},
@@ -1861,7 +1861,7 @@
       },
       "desc_texts": {
         "en": "Spawn 2 Charmed Geolads at the start of each battle.",
-        "zh": "每场战斗开始时生成 2 个魅惑岩石小子。\r\n"
+        "zh": "每场战斗开始时生成 2 个魅惑岩石小子。"
       },
       "name_mod": null,
       "stats": {},
@@ -1881,7 +1881,7 @@
       },
       "desc_texts": {
         "en": "Flying. You can move an extra time each turn.",
-        "zh": "飞行。你每回合可以额外移动一次。\r\n"
+        "zh": "飞行。你每回合可以额外移动一次。"
       },
       "name_mod": null,
       "stats": {},
@@ -1958,7 +1958,7 @@
       },
       "desc_texts": {
         "en": "Start battle with 4 beefy Leech familiars.",
-        "zh": "战斗开始时拥有 4 只健壮水蛭使魔。\r\n"
+        "zh": "战斗开始时拥有 4 只健壮水蛭使魔。"
       },
       "name_mod": null,
       "stats": {},

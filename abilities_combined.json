@@ -1501,7 +1501,7 @@
       "description_2": null,
       "description_texts": {
         "en": "Dash forward one space, then melee attack with Knockback.",
-        "zh": "向前冲刺一格，\r\n然后进行带有击退的近战攻击。"
+        "zh": "向前冲刺一格，\r\n然后用带有击退的近战攻击。"
       },
       "description2_texts": {},
       "ability_class": "Tank",
@@ -39329,7 +39329,7 @@
       "description_2": null,
       "description_texts": {
         "en": "Explode the nuke and mass damage everything.",
-        "zh": "引爆核弹并对所有目标造成大量伤害。\r\n"
+        "zh": "引爆核弹并对所有目标造成大量伤害。"
       },
       "description2_texts": {},
       "ability_class": null,
@@ -48805,11 +48805,11 @@
       "description_2": "Revive a body to 100% HP and cure one of its injuries. If it was an enemy, it gets charmed.",
       "description_texts": {
         "en": "Revive a body to 50% HP and cure one of its injuries.",
-        "zh": "将一具尸体复活至 50% 生命值，\r\n并治愈其一处伤势。"
+        "zh": "将一具尸体复活至 50% 生命值，\r\n并治愈其一处创伤。"
       },
       "description2_texts": {
         "en": "Revive a body to 100% HP and cure one of its injuries. If it was an enemy, it gets charmed.",
-        "zh": "将一具尸体复活至 100% 生命值，\r\n并治愈其一处伤势。如果它是敌人，\r\n则会被魅惑。"
+        "zh": "将一具尸体复活至 100% 生命值，\r\n并治愈其一处创伤。如果它是敌人，\r\n则会被魅惑。"
       },
       "ability_class": "Medic",
       "template": "melee_spell",
@@ -49252,7 +49252,7 @@
       "description_2": "Give +2 Diminishing Health Regeneration and +1 to 2 random stats to any unit.",
       "description_texts": {
         "en": "Give +2 Diminishing Health Regeneration and +1 to a random stat to an adjacent unit.",
-        "zh": "给予一个相邻单位 +2 层生\r\n命恢复 (递减)，\r\n并使其随机一项属性 +1。"
+        "zh": "给予一个相邻单位\r\n+2 层生命恢复 (递减)，\r\n并使其随机一项属性 +1。"
       },
       "description2_texts": {
         "en": "Give +2 Diminishing Health Regeneration and +1 to 2 random stats to any unit.",
@@ -52204,11 +52204,11 @@
       "description_2": "Become downed. You don't get injured. At the end of the next round, you're revived with 50% HP, 20 [img:shield], 2 [img:divineshield], and All Stats Up 2.",
       "description_texts": {
         "en": "Become downed. You don't get injured. At the end of the next round, you're revived with 1 HP, 15 [img:shield], and All Stats Up.",
-        "zh": "进入倒地状态。\r\n你不会受到伤势。\r\n在下一回合结束时，\r\n你将以 1 点生命值、\r\n15 [img:shield] 和全属性提升状态复活。"
+        "zh": "进入倒地状态。\r\n你不会受到创伤。\r\n在下一回合结束时，\r\n你将以 1 点生命值、\r\n15 [img:shield] 和全属性提升状态复活。"
       },
       "description2_texts": {
         "en": "Become downed. You don't get injured. At the end of the next round, you're revived with 50% HP, 20 [img:shield], 2 [img:divineshield], and All Stats Up 2.",
-        "zh": "进入倒地状态。\r\n你不会受到伤势。\r\n在下一回合结束时，\r\n你将以 50% 生命值、20 [img:shield]、2 [img:divineshield] \r\n和 2 层全属性提升状态复活。"
+        "zh": "进入倒地状态。\r\n你不会受到创伤。\r\n在下一回合结束时，\r\n你将以 50% 生命值、20 [img:shield]、2 [img:divineshield] \r\n和 2 层全属性提升状态复活。"
       },
       "ability_class": "Monk",
       "template": "self_buff",
@@ -56561,11 +56561,11 @@
       "description_2": "Until your next turn, you won't get injured if you're downed.\nWhen downed, inflict Confusion 10 on the unit that downed you.",
       "description_texts": {
         "en": "Until your next turn, you won't get injured if you're downed.",
-        "zh": "直到你的下回合，\r\n若你处于倒地状态，\r\n不会受到伤势。"
+        "zh": "直到你的下回合，\r\n若你处于倒地状态，\r\n不会受到创伤。"
       },
       "description2_texts": {
         "en": "Until your next turn, you won't get injured if you're downed.\nWhen downed, inflict Confusion 10 on the unit that downed you.",
-        "zh": "直到你的下回合，若你处于倒地状态，\r\n不会受到伤势。\r\n当倒地时，对击倒你的单位施加 10 层混乱。"
+        "zh": "直到你的下回合，若你处于倒地状态，\r\n不会受到创伤。\r\n当倒地时，对击倒你的单位施加 10 层混乱。"
       },
       "ability_class": "Necromancer",
       "template": "self_buff",
@@ -56612,11 +56612,11 @@
       "description_2": "Injure yourself and take an extra turn.\r\n[s:.7](This spell costs less. This spell can't be cast on extra turns.)[/s]",
       "description_texts": {
         "en": "Injure yourself and take an extra turn.\r\n[s:.7](This spell can't be cast on extra turns.)[/s]",
-        "zh": "使自己受到伤势并获得额外回合。\r\n[s:.7]（此法术无法在额外回合中施放。）[/s]"
+        "zh": "使自己受到创伤并获得额外回合。\r\n[s:.7]（此法术无法在额外回合中施放。）[/s]"
       },
       "description2_texts": {
         "en": "Injure yourself and take an extra turn.\r\n[s:.7](This spell costs less. This spell can't be cast on extra turns.)[/s]",
-        "zh": "使自己受到伤势并获得额外回合。\r\n[s:.7]（此法术消耗更少。\r\n此法术无法在额外回合中施放。）[/s]"
+        "zh": "使自己受到创伤并获得额外回合。\r\n[s:.7]（此法术消耗更少。\r\n此法术无法在额外回合中施放。）[/s]"
       },
       "ability_class": "Necromancer",
       "template": "self_buff",
@@ -57121,11 +57121,11 @@
       "description_2": "Swap HP with any ally.\n[s:.7]Castable while you're downed. If this spell downs you or the ally, neither are injured.[/s]",
       "description_texts": {
         "en": "Swap HP with an ally in range 3.\n[s:.7]Castable while you're downed. If this spell downs you or the ally, neither are injured.[/s]",
-        "zh": "与 3 格范围内的一个盟友交换生命值。\r\n[s:.7]倒地时可施放。\r\n若此法术导致你或盟友倒地，\r\n双方都不会受到伤势。[/s]"
+        "zh": "与 3 格范围内的一个盟友交换生命值。\r\n[s:.7]倒地时可施放。\r\n若此法术导致你或盟友倒地，\r\n双方都不会受到创伤。[/s]"
       },
       "description2_texts": {
         "en": "Swap HP with any ally.\n[s:.7]Castable while you're downed. If this spell downs you or the ally, neither are injured.[/s]",
-        "zh": "与任意盟友交换生命值。\r\n[s:.7]倒地时可施放。\r\n若此法术导致你或盟友倒地，\r\n双方都不会受到伤势。[/s]"
+        "zh": "与任意盟友交换生命值。\r\n[s:.7]倒地时可施放。\r\n若此法术导致你或盟友倒地，\r\n双方都不会受到创伤。[/s]"
       },
       "ability_class": "Necromancer",
       "template": "spell",
@@ -57172,11 +57172,11 @@
       "description_2": "Swap HP with any ally.\n[s:.7]Castable while you're downed. If this spell downs you or the ally, neither are injured.[/s]",
       "description_texts": {
         "en": "Swap HP with an ally in range 3.\n[s:.7]Castable while you're downed. If this spell downs you or the ally, neither are injured.[/s]",
-        "zh": "与 3 格范围内的一个盟友交换生命值。\r\n[s:.7]倒地时可施放。\r\n若此法术导致你或盟友倒地，\r\n双方都不会受到伤势。[/s]"
+        "zh": "与 3 格范围内的一个盟友交换生命值。\r\n[s:.7]倒地时可施放。\r\n若此法术导致你或盟友倒地，\r\n双方都不会受到创伤。[/s]"
       },
       "description2_texts": {
         "en": "Swap HP with any ally.\n[s:.7]Castable while you're downed. If this spell downs you or the ally, neither are injured.[/s]",
-        "zh": "与任意盟友交换生命值。\r\n[s:.7]倒地时可施放。\r\n若此法术导致你或盟友倒地，\r\n双方都不会受到伤势。[/s]"
+        "zh": "与任意盟友交换生命值。\r\n[s:.7]倒地时可施放。\r\n若此法术导致你或盟友倒地，\r\n双方都不会受到创伤。[/s]"
       },
       "ability_class": "Necromancer",
       "template": "spell",
@@ -57223,11 +57223,11 @@
       "description_2": "Down any ally and steal their mana. It doesn't get injured.\n[s:.7](Castable once per turn.)[/s]",
       "description_texts": {
         "en": "Down an ally in range 5 and steal their mana. It doesn't get injured.\n[s:.7](Castable once per turn.)[/s]",
-        "zh": "击倒 5 格范围内的\r\n一个盟友并偷取其法力值。\r\n该盟友不会受到伤势。\r\n[s:.7]（每回合限施放一次。）[/s]"
+        "zh": "击倒 5 格范围内的\r\n一个盟友并偷取其法力值。\r\n该盟友不会受到创伤。\r\n[s:.7]（每回合限施放一次。）[/s]"
       },
       "description2_texts": {
         "en": "Down any ally and steal their mana. It doesn't get injured.\n[s:.7](Castable once per turn.)[/s]",
-        "zh": "击倒任意盟友并偷取其法力值。\r\n该盟友不会受到伤势。\r\n[s:.7]（每回合限施放一次。）[/s]"
+        "zh": "击倒任意盟友并偷取其法力值。\r\n该盟友不会受到创伤。\r\n[s:.7]（每回合限施放一次。）[/s]"
       },
       "ability_class": "Necromancer",
       "template": "spell",
@@ -67521,7 +67521,7 @@
       "description_2": null,
       "description_texts": {
         "en": "Shoot an infinite-range projectile that can't miss.",
-        "zh": "发射一枚无限射程且必中的投射物。\r\n"
+        "zh": "发射一枚无限射程且必中的投射物。"
       },
       "description2_texts": {},
       "ability_class": "Colorless",
