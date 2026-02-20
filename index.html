@@ -230,6 +230,12 @@
             overflow-x: auto;
         }
 
+        .icon-header {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
@@ -356,6 +362,7 @@
         .stats-stack {
             display: flex;
             flex-direction: column;
+            min-width: 130px;
         }
 
         .ability-icon {
@@ -395,6 +402,12 @@
             font-size: 0.85em;
         }
 
+        .ability-stats.detailed {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 6px;
+        }
+
         .ability-stats.upgraded {
             margin-top: 8px;
             padding-top: 8px;
@@ -421,19 +434,59 @@
             text-align: center;
         }
 
+        .stat-value.detailed {
+            min-width: 0;
+            text-align: left;
+            white-space: nowrap;
+        }
+
         .stat-value.formula {
             color: #f39c12;
             font-style: italic;
+        }
+
+        .stat-value.detailed.formula {
+            color: #333;
+            font-style: normal;
         }
 
         .stat-group[title] {
             cursor: help;
         }
 
+        .stat-line {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .detail-toggle {
+            border: 1px solid #c9c2b6;
+            background: #f7f4f0;
+            color: #3e3b36;
+            border-radius: 999px;
+            padding: 6px 12px;
+            font-size: 0.85em;
+            cursor: pointer;
+        }
+
+        .detail-toggle.header-toggle {
+            padding: 4px 10px;
+            font-size: 0.8em;
+        }
+
+        .detail-toggle.active {
+            background: #e8e1d6;
+        }
+
         .ability-name {
             font-weight: 600;
             color: #333;
             word-break: break-word;
+        }
+
+        .ability-name-upgraded {
+            margin-top: 8px;
         }
 
         .ability-class {
@@ -606,6 +659,13 @@
             margin: 0 2px;
         }
 
+        .formula-icon {
+            width: 1.2em;
+            height: 1.2em;
+            vertical-align: -0.28em;
+            margin: 0 4px 0 2px;
+        }
+
         .img-icon-stat {
             filter: brightness(0) saturate(100%);
         }
@@ -673,11 +733,25 @@
             color: #333;
         }
 
-        .announcement-button {
+        .floating-buttons {
             position: fixed;
             top: 14px;
             left: 14px;
             z-index: 1200;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .formula-button-float {
+            position: fixed;
+            top: 14px;
+            right: 14px;
+            z-index: 1200;
+        }
+
+        .announcement-button,
+        .formula-button {
             background: #9f978b;
             color: #fff;
             border: none;
@@ -689,8 +763,13 @@
             box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
         }
 
-        .announcement-button:hover {
+        .announcement-button:hover,
+        .formula-button:hover {
             background: #7f776b;
+        }
+
+        .formula-button {
+            background: #6d6559;
         }
 
         .announcement-modal {
@@ -702,6 +781,19 @@
             align-items: center;
             justify-content: center;
             padding: 20px;
+        }
+
+        .formula-panel {
+            display: none;
+            position: fixed;
+            top: 14px;
+            right: 14px;
+            z-index: 1200;
+            max-width: 380px;
+        }
+
+        .formula-panel .announcement-card {
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
         }
 
         .announcement-card {
@@ -1239,7 +1331,12 @@
 </head>
 
 <body>
-    <button class="announcement-button" id="announcementButton" type="button">Announcement</button>
+    <div class="floating-buttons">
+        <button class="announcement-button" id="announcementButton" type="button">Announcement</button>
+    </div>
+    <div class="formula-button-float">
+        <button class="formula-button" id="formulaButton" type="button">Formula explanation</button>
+    </div>
     <div class="announcement-modal" id="announcementModal">
         <div class="announcement-card" role="dialog" aria-modal="true" aria-labelledby="announcementTitle">
             <div class="announcement-header">
@@ -1255,6 +1352,15 @@
                         data-lang="zh">中文</button>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="formula-panel" id="formulaModal">
+        <div class="announcement-card" role="dialog" aria-labelledby="formulaTitle">
+            <div class="announcement-header">
+                <h2 id="formulaTitle">Formula explanation</h2>
+                <button class="announcement-close" id="formulaClose" type="button" aria-label="Close">×</button>
+            </div>
+            <div class="announcement-body" id="formulaBody"></div>
         </div>
     </div>
     <div class="container">
@@ -1289,7 +1395,7 @@
                 <input type="checkbox" id="showHiddenToggle">
                 <span id="showHiddenLabel">Show Hidden</span>
             </label>
-            <div class="visibility-note">bonus_ranged_damage=max(0,dex-9), bonus_melee_damage=max(0,str-5)</div>
+            <div class="visibility-note" id="visibilityNote"></div>
         </div>
 
         <div class="stats">
@@ -1309,7 +1415,14 @@
             <table id="abilitiesTable">
                 <thead>
                     <tr>
-                        <th id="iconHeader" style="width: 60px;">Icon</th>
+                        <th id="iconHeader" style="width: 160px;">
+                            <div class="icon-header">
+                                <span id="iconHeaderText">Icon</span>
+                                <button type="button" id="detailToggleBtn" class="detail-toggle header-toggle">
+                                    Show detailed values
+                                </button>
+                            </div>
+                        </th>
                         <th id="nameHeader" style="width: 150px;">Ability Name</th>
                         <th id="descHeader">Description</th>
                         <th id="classHeader" class="sortable" style="width: 100px;" onclick="sortBy('class')">Class<span
@@ -1385,6 +1498,8 @@
         let currentSort = { column: null, direction: 'asc' };
         let editorNotes = {};
         let targetRenderer;
+        let showDetailedValues = false;
+        let hasAutoShownFormula = false;
         const ANNOUNCEMENT_SEEN_KEY = 'codexAnnouncementSeen_v1';
 
         // Get language from URL parameter
@@ -1442,6 +1557,8 @@
                 languageEnglish: 'English',
                 languageChinese: 'Chinese',
                 showHidden: 'Show Hidden',
+                showDetailed: 'Show detailed values',
+                hideDetailed: 'Hide detailed values',
                 otherNoClass: 'Other (No Class)',
                 allClasses: 'All Classes',
                 totalAbilities: 'Total Abilities:',
@@ -1468,6 +1585,9 @@
                 announcementButton: 'Announcement',
                 announcementTitle: 'Announcement',
                 announcementBody: 'Placeholder announcement.',
+                formulaButton: 'Formula explanation',
+                formulaTitle: 'Formula explanation',
+                formulaBody: '<ul><li>bonus_melee_damage = max(0,str-5)</li><li>bonus_melee_ability_damage = max(0,(str-5)/2)</li><li>bonus_ranged_damage = max(0,dex-9)</li><li>bonus_basic_spell_damage = unknown, most of the time 0</li><li>clamp(x, a, b) = min(max(x, a), b)</li><li>Multiplication and division are rounded down.</li></ul>',
                 formula: 'Formula',
                 manaCost: 'Mana Cost',
                 rangeButtonLabel: 'Range',
@@ -1495,6 +1615,7 @@
                 targetRenderParseError: 'Could not parse target line.',
                 targetRenderErrorPrefix: 'Unable to render:',
                 targetRenderWarningPrefix: 'Warning: renderer may not support:',
+                targetRenderStraightshotUnsupported: 'straightshot_attack template',
                 targetObstaclesHint: 'Click tiles to add or remove blockers, then preview line-of-sight abilities.',
                 targetAddObstacles: 'Add sample obstacles',
                 targetClearObstacles: 'Clear obstacles',
@@ -1517,6 +1638,8 @@
                 languageEnglish: '英语',
                 languageChinese: '中文',
                 showHidden: '显示隐藏项',
+                showDetailed: '显示详细数值',
+                hideDetailed: '隐藏详细数值',
                 otherNoClass: '其他（无职业）',
                 allClasses: '全部职业',
                 totalAbilities: '能力总数：',
@@ -1543,6 +1666,9 @@
                 announcementButton: '公告',
                 announcementTitle: '公告',
                 announcementBody: '公告占位符。',
+                formulaButton: '公式说明',
+                formulaTitle: '公式说明',
+                formulaBody: '<ul><li>bonus_melee_damage = max(0,str-5)</li><li>bonus_melee_ability_damage = max(0,(str-5)/2)</li><li>bonus_ranged_damage = max(0,dex-9)</li><li>bonus_basic_spell_damage = 未知，多数情况下为 0</li><li>clamp(x, a, b) = min(max(x, a), b)</li><li>乘法和除法结果向下取整。</li></ul>',
                 formula: '公式',
                 manaCost: '法力值消耗',
                 rangeButtonLabel: '射程',
@@ -1570,6 +1696,7 @@
                 targetRenderParseError: '无法解析该目标行。',
                 targetRenderErrorPrefix: '无法渲染：',
                 targetRenderWarningPrefix: '警告：渲染器可能不支持：',
+                targetRenderStraightshotUnsupported: 'straightshot_attack 模板',
                 targetObstaclesHint: '点击格子设置/清除障碍，用于测试视线。',
                 targetAddObstacles: '添加示例障碍',
                 targetClearObstacles: '清除障碍',
@@ -1632,13 +1759,17 @@
             document.getElementById('langButtonEn').textContent = t('languageEnglish');
             document.getElementById('langButtonZh').textContent = t('languageChinese');
             document.getElementById('showHiddenLabel').textContent = t('showHidden');
+            updateDetailToggleLabel();
             document.getElementById('totalLabel').textContent = t('totalAbilities');
             document.getElementById('showingLabel').textContent = t('showing');
             const statsRangeNote = document.getElementById('statsRangeNote');
             if (statsRangeNote) {
                 statsRangeNote.textContent = t('statsRangeNote');
             }
-            document.getElementById('iconHeader').textContent = t('iconHeader');
+            const iconHeaderText = document.getElementById('iconHeaderText');
+            if (iconHeaderText) {
+                iconHeaderText.textContent = t('iconHeader');
+            }
             document.getElementById('nameHeader').textContent = t('nameHeader');
             document.getElementById('descHeader').textContent = t('descHeader');
             const classHeader = document.getElementById('classHeader');
@@ -1653,6 +1784,23 @@
             document.getElementById('announcementTitle').textContent = t('announcementTitle');
             document.getElementById('announcementLangEn').textContent = t('languageEnglish');
             document.getElementById('announcementLangZh').textContent = t('languageChinese');
+            const formulaButton = document.getElementById('formulaButton');
+            if (formulaButton) {
+                formulaButton.textContent = t('formulaButton');
+            }
+            const formulaTitle = document.getElementById('formulaTitle');
+            if (formulaTitle) {
+                formulaTitle.textContent = t('formulaTitle');
+            }
+            const formulaBody = document.getElementById('formulaBody');
+            if (formulaBody) {
+                formulaBody.innerHTML = withAttributeIconsHtml(t('formulaBody'));
+            }
+            const visibilityNote = document.getElementById('visibilityNote');
+            if (visibilityNote) {
+                visibilityNote.textContent = '';
+                visibilityNote.style.display = 'none';
+            }
             updateAnnouncementLanguageButtons();
             loadAnnouncementContent();
 
@@ -1672,6 +1820,15 @@
             if (targetRenderer && typeof targetRenderer.refreshCopy === 'function') {
                 targetRenderer.refreshCopy();
             }
+        }
+
+        function updateDetailToggleLabel() {
+            const button = document.getElementById('detailToggleBtn');
+            if (!button) {
+                return;
+            }
+            button.textContent = showDetailedValues ? t('hideDetailed') : t('showDetailed');
+            button.classList.toggle('active', showDetailedValues);
         }
 
         // Load abilities from JSON
@@ -1805,6 +1962,38 @@
 
             tbody.innerHTML = visibleAbilities.map(ability => {
                 const localizedName = getLocalizedText(ability.ability_name_texts, ability.ability_name);
+                const baseName = localizedName || ability.ability_name || ability.ability_code || '';
+                const displayName = baseName;
+                const localizedUpgradedName = getLocalizedText(
+                    ability.ability_name_texts_upgraded,
+                    ability.ability_name_upgraded
+                );
+                const upgradedNameRaw = (localizedUpgradedName && localizedUpgradedName !== ability.ability_code_upgraded)
+                    ? localizedUpgradedName
+                    : '';
+                const codeNameHint = ability.ability_code && ability.ability_code !== baseName
+                    ? ability.ability_code
+                    : '';
+                const nameTitle = codeNameHint ? `Code: ${codeNameHint}` : '';
+                const upgradedCodeHint = ability.ability_code_upgraded && ability.ability_code_upgraded !== upgradedNameRaw
+                    ? ability.ability_code_upgraded
+                    : '';
+                const upgradedNameTitle = upgradedCodeHint ? `Code: ${upgradedCodeHint}` : '';
+                const hasUpgrade = !!(
+                    upgradedNameRaw ||
+                    hasRenderedText(ability.description2_texts, ability.description_2) ||
+                    ability.cost_upgraded ||
+                    ability.damage_upgraded ||
+                    ability.tags_rendered_upgraded ||
+                    ability.elements_upgraded ||
+                    ability.target_text_upgraded ||
+                    ability.is_dash_attack_upgraded
+                );
+                const upgradedNameFinal = hasUpgrade
+                    ? ((upgradedNameRaw || baseName) === baseName
+                        ? `${upgradedNameRaw || baseName}+`
+                        : (upgradedNameRaw || baseName))
+                    : '';
                 const localizedDescription = getLocalizedText(ability.description_texts, ability.description);
                 const localizedDescription2 = getLocalizedText(ability.description2_texts, ability.description_2);
                 const classLabel = ability.ability_class ? getClassLabel(ability.ability_class) : '';
@@ -1831,28 +2020,52 @@
 
                     const damageIsFormula = isFormulaValue(damageValue.value);
                     const healIsFormula = isFormulaValue(healValue.value);
+                    const manaIsFormula = isFormulaValue(manaValue);
                     const manaDisplay = manaValue !== null ? manaValue : null;
 
-                    let statsHtml = `<div class="ability-stats${isUpgraded ? ' upgraded' : ''}">`;
+                    let statsHtml = `<div class="ability-stats${isUpgraded ? ' upgraded' : ''}${showDetailedValues ? ' detailed' : ''}">`;
 
-                    // Damage/Heal stats (if present)
-                    if (damageValue.display || healValue.display) {
-                        const isHeal = !!healValue.display && !damageValue.display;
-                        const typeIcon = isHeal ? 'heal' : (damageType || 'physical');
-                        const displayValue = damageValue.display || healValue.display;
-
-                        statsHtml += `<div class="stat-group" ${(damageIsFormula || healIsFormula) ? `title="${escapeHtml(t('formula'))}: ${escapeHtml(damageValue.value || healValue.value)}"` : ''}>`;
-                        statsHtml += `<img src="res/${typeIcon}.png" alt="${typeIcon}" class="stat-icon" onerror="this.style.display='none'">`;
-                        statsHtml += `<div class="stat-value ${(damageIsFormula || healIsFormula) ? 'formula' : ''}" title="${escapeHtml(damageValue.value || healValue.value)}">${displayValue}</div>`;
+                    const addDetailedLine = (icon, alt, value, isFormula, title) => {
+                        statsHtml += `<div class="stat-line"${title ? ` title="${escapeHtml(title)}"` : ''}>`;
+                        statsHtml += `<img src="res/${icon}.png" alt="${alt}" class="stat-icon" onerror="this.style.display='none'">`;
+                        const detailValue = isFormula ? withAttributeIcons(String(value)) : escapeHtml(String(value));
+                        statsHtml += `<div class="stat-value detailed${isFormula ? ' formula' : ''}">${detailValue}</div>`;
                         statsHtml += '</div>';
-                    }
+                    };
 
-                    // Mana cost
-                    if (manaDisplay !== null) {
-                        statsHtml += `<div class="stat-group" title="${escapeHtml(t('manaCost'))}">`;
-                        statsHtml += `<img src="res/cost.png" alt="mana" class="stat-icon" onerror="this.style.display='none'">`;
-                        statsHtml += `<div class="stat-value">${manaDisplay}</div>`;
-                        statsHtml += '</div>';
+                    if (showDetailedValues) {
+                        const hasDamage = damageValue.display || healValue.display;
+                        if (hasDamage) {
+                            const isHeal = !!healValue.display && !damageValue.display;
+                            const typeIcon = isHeal ? 'heal' : (damageType || 'physical');
+                            const rawValue = damageValue.value || healValue.value;
+                            const prettyValue = damageValue.pretty || healValue.pretty || rawValue;
+                            addDetailedLine(typeIcon, typeIcon, prettyValue, damageIsFormula || healIsFormula, prettyValue);
+                        }
+                        if (manaDisplay !== null) {
+                            addDetailedLine('cost', 'mana', manaDisplay, manaIsFormula, t('manaCost'));
+                        }
+                    } else {
+                        // Damage/Heal stats (if present)
+                        if (damageValue.display || healValue.display) {
+                            const isHeal = !!healValue.display && !damageValue.display;
+                            const typeIcon = isHeal ? 'heal' : (damageType || 'physical');
+                            const displayValue = damageValue.display || healValue.display;
+
+                            const prettyValue = damageValue.pretty || healValue.pretty || (damageValue.value || healValue.value);
+                            statsHtml += `<div class="stat-group" ${(damageIsFormula || healIsFormula) ? `title="${escapeHtml(t('formula'))}: ${escapeHtml(prettyValue)}"` : ''}>`;
+                            statsHtml += `<img src="res/${typeIcon}.png" alt="${typeIcon}" class="stat-icon" onerror="this.style.display='none'">`;
+                            statsHtml += `<div class="stat-value ${(damageIsFormula || healIsFormula) ? 'formula' : ''}" title="${escapeHtml(prettyValue)}">${displayValue}</div>`;
+                            statsHtml += '</div>';
+                        }
+
+                        // Mana cost
+                        if (manaDisplay !== null) {
+                            statsHtml += `<div class="stat-group" title="${escapeHtml(t('manaCost'))}">`;
+                            statsHtml += `<img src="res/cost.png" alt="mana" class="stat-icon" onerror="this.style.display='none'">`;
+                            statsHtml += `<div class="stat-value">${manaDisplay}</div>`;
+                            statsHtml += '</div>';
+                        }
                     }
 
                     statsHtml += '</div>';
@@ -1935,10 +2148,11 @@
                                 <div class="tags-line">${tagsRenderedHtml}</div>
                                 ${ability.frame_number !== null && ability.frame_number !== undefined ?
                         `<img src="AbilityIcon/${ability.frame_number}.png" 
-                                        alt="${escapeHtml(localizedName)}"
+                                        alt="${escapeHtml(displayName)}"
+                                        title="${escapeHtml(nameTitle)}"
                                         class="ability-icon"
                                         onerror="this.style.display='none'"
-                                        onclick="openModal(this.src, '${escapeHtml(localizedName)}')">`
+                                        onclick="openModal(this.src, '${escapeHtml(displayName)}')">`
                         : '<div class="ability-icon-placeholder" title="No frame mapping available"></div>'
                     }
                             </div>
@@ -1959,10 +2173,11 @@
                                 <div class="tags-line upgraded">${tagsRenderedUpgradedHtml}</div>
                                 ${ability.frame_number !== null && ability.frame_number !== undefined ?
                             `<img src="AbilityIcon/${ability.frame_number}.png" 
-                                        alt="${escapeHtml(localizedName)}"
+                                        alt="${escapeHtml(displayName)}"
+                                        title="${escapeHtml(nameTitle)}"
                                         class="ability-icon"
                                         onerror="this.style.display='none'"
-                                        onclick="openModal(this.src, '${escapeHtml(localizedName)}')">`
+                                        onclick="openModal(this.src, '${escapeHtml(displayName)}')">`
                             : '<div class="ability-icon-placeholder" title="No frame mapping available"></div>'
                         }
                             </div>
@@ -1981,10 +2196,11 @@
                                 <div class="tags-line">${tagsRenderedHtml}</div>
                                 ${ability.frame_number !== null && ability.frame_number !== undefined ?
                             `<img src="AbilityIcon/${ability.frame_number}.png" 
-                                        alt="${escapeHtml(localizedName)}"
+                                        alt="${escapeHtml(displayName)}"
+                                        title="${escapeHtml(nameTitle)}"
                                         class="ability-icon"
                                         onerror="this.style.display='none'"
-                                        onclick="openModal(this.src, '${escapeHtml(localizedName)}')">`
+                                        onclick="openModal(this.src, '${escapeHtml(displayName)}')">`
                             : '<div class="ability-icon-placeholder" title="No frame mapping available"></div>'
                         }
                             </div>
@@ -2018,24 +2234,30 @@
                     descriptionPieces.push(`<div class="source-comment">${escapeHtml(t('sourceCommentsLabel'))} ${escapeHtml(ability.desc2_notes)}</div>`);
                 }
 
-                const modalAbilityName = localizedName || ability.ability_name || ability.ability_code || '';
+                const modalAbilityName = displayName;
                 const modalNameArg = JSON.stringify(modalAbilityName);
                 const targetButtons = [];
                 const baseTargetPayload = ability.target_text ? JSON.stringify(ability.target_text) : null;
-                const upgradedTargetPayload = ability.target_text_upgraded ? JSON.stringify(ability.target_text_upgraded) : null;
+                const upgradedTargetPayload = ability.target_text_upgraded
+                    ? JSON.stringify(ability.target_text_upgraded)
+                    : null;
                 const baseDashPayload = JSON.stringify(ability.is_dash_attack === true);
                 const upgradedDashPayload = JSON.stringify(
                     ability.is_dash_attack_upgraded === true
                         ? true
                         : ability.is_dash_attack === true
                 );
+                const templateWarning = ability.template === 'straightshot_attack'
+                    ? t('targetRenderStraightshotUnsupported')
+                    : '';
+                const warningPayload = JSON.stringify(templateWarning);
 
                 if (baseTargetPayload) {
-                    targetButtons.push(`<button type="button" class="target-button" onclick='openTargetModal(${modalNameArg}, ${baseTargetPayload}, false, ${baseDashPayload})'>${escapeHtml(t('rangeButtonLabel'))}</button>`);
+                    targetButtons.push(`<button type="button" class="target-button" onclick='openTargetModal(${modalNameArg}, ${baseTargetPayload}, false, ${baseDashPayload}, ${warningPayload})'>${escapeHtml(t('rangeButtonLabel'))}</button>`);
                 }
 
                 if (upgradedTargetPayload) {
-                    targetButtons.push(`<button type="button" class="target-button upgraded" onclick='openTargetModal(${modalNameArg}, ${upgradedTargetPayload}, true, ${upgradedDashPayload})'>${escapeHtml(t('rangeButtonUpgradeLabel'))}</button>`);
+                    targetButtons.push(`<button type="button" class="target-button upgraded" onclick='openTargetModal(${modalNameArg}, ${upgradedTargetPayload}, true, ${upgradedDashPayload}, ${warningPayload})'>${escapeHtml(t('rangeButtonUpgradeLabel'))}</button>`);
                 }
 
                 const targetButtonsHtml = targetButtons.length ? `<div class="target-button-column">${targetButtons.join('')}</div>` : '';
@@ -2056,7 +2278,8 @@
                             </div>
                         </td>
                         <td>
-                            <div class="ability-name">${escapeHtml(localizedName)}</div>
+                            <div class="ability-name"${nameTitle ? ` title="${escapeHtml(nameTitle)}"` : ''}>${escapeHtml(displayName)}</div>
+                            ${upgradedNameFinal ? `<div class="ability-name ability-name-upgraded"${upgradedNameTitle ? ` title="${escapeHtml(upgradedNameTitle)}"` : ''}>${escapeHtml(upgradedNameFinal)}</div>` : ''}
                         </td>
                         <td>
                             ${descriptionColumnHtml}
@@ -2111,21 +2334,34 @@
         // Format stat values: if numeric, show as-is; if formula, show "?"
         function formatStatValue(value) {
             if (value === null || value === undefined) {
-                return { value: null, display: null };
+                return { value: null, display: null, pretty: null };
             }
 
             // Check if it's a number or numeric string
             if (!isNaN(value) && value !== '') {
-                return { value: value, display: value };
+                return { value: value, display: value, pretty: value };
             }
 
             // Short non-numeric values (e.g., "X") should be shown directly.
             if (typeof value === 'string' && value.length <= 3) {
-                return { value: value, display: value };
+                return { value: value, display: value, pretty: value };
             }
 
             // It's a formula or expression
-            return { value: value, display: '?' };
+            const pretty = prettifyFormula(value);
+            return { value: value, display: '?', pretty: pretty };
+        }
+
+        function prettifyFormula(value) {
+            if (typeof value !== 'string') {
+                return value;
+            }
+            let text = value;
+            text = text.replace(/ceil\(X\/2\)/g, '(X+1)/2');
+            text = text.replace(/floor\(X\*\.25\)/g, 'X*0.25');
+            text = text.replace(/floor\(X\*0\.25\)/g, 'X*0.25');
+            text = text.replace(/(^|[^0-9])\.(\d)/g, '$10.$2');
+            return text;
         }
 
         // Parse rich text markup in descriptions
@@ -2146,9 +2382,8 @@
             // Map icon names (handle "con" -> "constitution" for Windows reserved name)
             // Shield icons (shield, divineshield) stay white; stat icons use CSS filter
             html = html.replace(/\[img:([^\]]+)\]/g, function (match, iconName) {
-                const iconMap = { 'con': 'constitution' };
                 const noFilterIcons = new Set(['health', 'movement', 'hp']);
-                const mappedName = iconMap[iconName] || iconName;
+                const mappedName = mapFontIconName(iconName);
                 const isShield = iconName === 'shield' || iconName === 'divineshield';
                 const baseClass = 'img-icon' + (isShield ? '' : ' img-icon-stat');
                 const className = noFilterIcons.has(mappedName)
@@ -2177,7 +2412,10 @@
             filteredAbilities = allAbilities.filter(ability => {
                 const localizedName = getLocalizedText(ability.ability_name_texts, ability.ability_name).toLowerCase();
                 const localizedDescription = getLocalizedText(ability.description_texts, ability.description).toLowerCase();
-                const matchesSearch = localizedName.includes(search) || localizedDescription.includes(search);
+                const codeName = (ability.ability_code || '').toLowerCase();
+                const matchesSearch = localizedName.includes(search)
+                    || localizedDescription.includes(search)
+                    || (codeName && codeName.includes(search));
 
                 let matchesClass = true;
                 if (classFilter) {
@@ -2215,7 +2453,7 @@
             }
         }
 
-        function openTargetModal(abilityName, targetText, isUpgrade, isDashAttack) {
+        function openTargetModal(abilityName, targetText, isUpgrade, isDashAttack, extraWarning) {
             const modal = document.getElementById('targetModal');
             const titleEl = document.getElementById('targetModalTitle');
             const modalTitle = isUpgrade ? t('rangeModalTitleUpgraded') : t('rangeModalTitle');
@@ -2223,7 +2461,10 @@
 
             titleEl.textContent = displayName ? `${modalTitle} — ${displayName}` : modalTitle;
             if (targetRenderer && typeof targetRenderer.render === 'function') {
-                targetRenderer.render(targetText || '', { isDashAttack: !!isDashAttack });
+                targetRenderer.render(targetText || '', {
+                    isDashAttack: !!isDashAttack,
+                    extraWarning: extraWarning || ''
+                });
             } else {
                 const fallbackBody = document.getElementById('targetModalBody');
                 if (fallbackBody) {
@@ -2264,6 +2505,78 @@
             return text.replace(/[&<>"']/g, m => map[m]);
         }
 
+        function mapFontIconName(iconName) {
+            const iconMap = { con: 'constitution' };
+            return iconMap[iconName] || iconName;
+        }
+
+        function withAttributeIcons(text) {
+            if (!text) {
+                return '';
+            }
+            const escaped = escapeHtml(text);
+            const functionIconMap = {
+                bonus_melee_ability_damage: 'formula-melee',
+                bonus_basic_spell_damage: 'formula-unknown',
+                bonus_ranged_damage: 'formula-ranged',
+                bonus_melee_damage: 'formula-melee-ability'
+            };
+            const withFunctionIcons = escaped.replace(
+                /\b(bonus_melee_ability_damage|bonus_basic_spell_damage|bonus_ranged_damage|bonus_melee_damage)\b/g,
+                (match) => {
+                    const icon = functionIconMap[match];
+                    return `<img src="res/formula-icons/${icon}.svg" alt="${match}" class="formula-icon">`;
+                }
+            );
+            const iconMap = {
+                str: 'str',
+                dex: 'dex',
+                con: 'con',
+                int: 'int',
+                spd: 'spd',
+                lck: 'lck',
+                cha: 'cha'
+            };
+            return withFunctionIcons.replace(/\b(str|dex|con|int|spd|lck|cha)\b/gi, (match) => {
+                const key = match.toLowerCase();
+                const icon = mapFontIconName(iconMap[key]);
+                return `<img src="res/fonticon/${icon}.png" alt="${match}" class="img-icon img-icon-stat">`;
+            });
+        }
+
+        function withAttributeIconsHtml(text) {
+            if (!text) {
+                return '';
+            }
+            const functionIconMap = {
+                bonus_melee_ability_damage: 'formula-melee',
+                bonus_basic_spell_damage: 'formula-unknown',
+                bonus_ranged_damage: 'formula-ranged',
+                bonus_melee_damage: 'formula-melee-ability'
+            };
+            const withFunctionIcons = text.replace(
+                /\b(bonus_melee_ability_damage|bonus_basic_spell_damage|bonus_ranged_damage|bonus_melee_damage)\b/g,
+                (match) => {
+                    const icon = functionIconMap[match];
+                    return `<img src="res/formula-icons/${icon}.svg" alt="${match}" class="formula-icon">`;
+                }
+            );
+            const iconMap = {
+                str: 'str',
+                dex: 'dex',
+                con: 'con',
+                int: 'int',
+                spd: 'spd',
+                lck: 'lck',
+                cha: 'cha'
+            };
+            return withFunctionIcons.replace(/\b(str|dex|con|int|spd|lck|cha)\b/gi, (match) => {
+                const key = match.toLowerCase();
+                const icon = mapFontIconName(iconMap[key]);
+                return `<img src="res/fonticon/${icon}.png" alt="${match}" class="img-icon img-icon-stat">`;
+            });
+        }
+
         // Event listeners
         document.getElementById('searchInput').addEventListener('input', filterAbilities);
         document.getElementById('classFilter').addEventListener('change', filterAbilities);
@@ -2274,6 +2587,24 @@
             });
         });
         document.getElementById('showHiddenToggle').addEventListener('change', filterAbilities);
+        document.getElementById('detailToggleBtn').addEventListener('click', () => {
+            showDetailedValues = !showDetailedValues;
+            updateDetailToggleLabel();
+            filterAbilities();
+            if (showDetailedValues && !hasAutoShownFormula) {
+                const formulaModal = document.getElementById('formulaModal');
+                if (formulaModal) {
+                    formulaModal.style.display = 'block';
+                }
+                hasAutoShownFormula = true;
+            }
+        });
+        document.getElementById('formulaButton').addEventListener('click', () => {
+            document.getElementById('formulaModal').style.display = 'block';
+        });
+        document.getElementById('formulaClose').addEventListener('click', () => {
+            document.getElementById('formulaModal').style.display = 'none';
+        });
 
         // Apply language immediately when DOM is ready (before data loads)
         document.addEventListener('DOMContentLoaded', () => {

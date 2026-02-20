@@ -42,7 +42,7 @@
         let initialized = false;
         let activeScenario = null;
         let lastRawText = '';
-        let lastRenderOptions = { isDashAttack: false };
+        let lastRenderOptions = { isDashAttack: false, extraWarning: '' };
 
         const helpers = {
             center: CENTER,
@@ -941,6 +941,19 @@
 
             const parsed = parseTargetBlock(text);
             const supportWarnings = buildSupportWarnings(parsed);
+            const extraWarnings = [];
+            if (renderOptions?.extraWarning) {
+                if (Array.isArray(renderOptions.extraWarning)) {
+                    renderOptions.extraWarning.forEach(message => {
+                        if (typeof message === 'string' && message.trim()) {
+                            extraWarnings.push(message.trim());
+                        }
+                    });
+                } else if (typeof renderOptions.extraWarning === 'string' && renderOptions.extraWarning.trim()) {
+                    extraWarnings.push(renderOptions.extraWarning.trim());
+                }
+            }
+            const warningText = supportWarnings.concat(extraWarnings).filter(Boolean).join('; ');
             const built = buildScenario(parsed, renderOptions);
             renderRawCode(text, built.errorLineIndex);
             if (built.error) {
@@ -957,7 +970,7 @@
 
             activeScenario = built.scenario;
             showError('');
-            showWarning(supportWarnings.length ? supportWarnings.join('; ') : '');
+            showWarning(warningText);
             if (summaryEl) {
                 summaryEl.textContent = built.scenario.summary || t('targetSummaryDefault');
             }
@@ -1051,13 +1064,23 @@
                 'randomize_target_within_range',
                 'prioritize_dont_change_direction'
             ]);
+            const unsupportedRestrictions = new Set([
+                'must_be_moveable'
+            ]);
             Object.keys(entries).forEach(key => {
                 if (ignoredKeys.has(key)) {
                     warnings.push(key);
                 }
             });
 
-            // Suppress warnings for restrictions/aoe_restrictions tokens.
+            const restrictionTokens = listFrom(entries.restrictions)
+                .concat(listFrom(entries.aoe_restrictions))
+                .map(value => String(value).toLowerCase());
+            restrictionTokens.forEach(token => {
+                if (unsupportedRestrictions.has(token)) {
+                    warnings.push(`restriction ${token}`);
+                }
+            });
 
             return warnings;
         }
@@ -1555,7 +1578,7 @@
                     }
                 };
             }
-            const directionalAoeSelectionUsesAoe = aoeMode === 'line' && !hasCustomPattern && !hasSelectionRange;
+            const directionalAoeSelectionUsesAoe = aoeMode === 'line' && !hasCustomPattern && !isDashAttack;
             const lineSelectionUsesAoe = aoeMode === 'line' && !hasCustomPattern;
             if (isConeMode) {
                 hasSelectionRange = false;

@@ -1,23 +1,20 @@
 # Announcement
 
+Recent updates: Many bugs fixed, but many bugs still remain. Added ability range previews and improved readability of ability damage formulas. If you have any questions, contact me via Bilibili DM or submit an issue on GitHub.
+
 Current progress:
 
 * Abilities:
-	- Ability numbers are still a bit inaccurate (they are derived from effects in-game)
-	- Ability descriptions are finished and displayed in the same way as in-game
-	- May add some enemy abilities and scene abilities later
-		* Ability ranges:
-			- The mechanics are too complex and need more testing
-			- Source code is provided for preview and comparison
+  - Ability values are still somewhat inaccurate (they are derived from effects in-game)
+  - Ability descriptions are complete and displayed in the same way as in-game
+  - May add some enemy abilities, scene abilities, etc. later
+  - Ability ranges still need more testing
 * Passives & disorders:
-	- Largely complete
-	- Some abilities without descriptions will get notes later
-	- Still need to add some effect icons
+  - Still need to add some effect icons
 * Items:
-	- Largely complete
-	- May consider adding item pool display
+  - May consider adding item pool display
 * Mutations:
-	- Cat body part previews are not available yet
+  - Cat body part previews are not available yet
 * Characters (units):
-	- Missing a lot of information because character files are too complex
-	- Images only include entries with in-game portraits; may render common scene props later
+  - Missing a lot of information because character files are too complex
+  - Images only include entries with in-game portraits; may render common scene props later
