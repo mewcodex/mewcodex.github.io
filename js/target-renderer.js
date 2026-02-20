@@ -30,6 +30,7 @@
         let gridEl;
         let summaryEl;
         let errorEl;
+        let warningEl;
         let rawCodeEl;
         let legendRangeEl;
         let legendSplashEl;
@@ -41,12 +42,22 @@
         let initialized = false;
         let activeScenario = null;
         let lastRawText = '';
+        let lastRenderOptions = { isDashAttack: false };
 
         const helpers = {
             center: CENTER,
             size: GRID_SIZE,
             withinBounds(row, col) {
                 return row >= 0 && row < GRID_SIZE && col >= 0 && col < GRID_SIZE;
+            },
+            allGridCells() {
+                const cells = [];
+                for (let row = 0; row < GRID_SIZE; row++) {
+                    for (let col = 0; col < GRID_SIZE; col++) {
+                        cells.push([row, col]);
+                    }
+                }
+                return cells;
             },
             isBlocked(row, col) {
                 return blocked.has(coordKey(row, col));
@@ -57,17 +68,17 @@
                 }
                 return traceLineCells(CENTER, CENTER, row, col);
             },
-            pathClear(row, col) {
-                const path = this.linePath(row, col);
+            pathClearBetween(startRow, startCol, endRow, endCol, allowEndBlocked = true) {
+                const path = traceLineCells(startRow, startCol, endRow, endCol);
                 if (!path.length) {
                     return true;
                 }
                 for (let i = 0; i < path.length; i++) {
                     const [r, c] = path[i];
-                    if (!cellIntersectsSegment(r, c, CENTER, CENTER, row, col)) {
+                    if (!cellIntersectsSegment(r, c, startRow, startCol, endRow, endCol)) {
                         continue;
                     }
-                    if (r === row && c === col) {
+                    if (allowEndBlocked && r === endRow && c === endCol) {
                         continue;
                     }
                     if (this.isBlocked(r, c)) {
@@ -75,6 +86,9 @@
                     }
                 }
                 return true;
+            },
+            pathClear(row, col) {
+                return this.pathClearBetween(CENTER, CENTER, row, col, true);
             },
             cellsWithinRadius(row, col, maxRadius, minRadius = 0) {
                 const normalizedMax = Math.max(0, Math.floor(Number(maxRadius) || 0));
@@ -282,6 +296,41 @@
             return cells;
         }
 
+        function buildMultiDirectionLineCells(centerRow, centerCol, directions, minDistance, maxDistance, withinBounds) {
+            const cells = [];
+            const seen = new Set();
+            directions.forEach(dir => {
+                const lineCells = buildDirectionalLineCells(centerRow, centerCol, dir, minDistance, maxDistance, withinBounds);
+                lineCells.forEach(([row, col]) => {
+                    const key = `${row},${col}`;
+                    if (!seen.has(key)) {
+                        seen.add(key);
+                        cells.push([row, col]);
+                    }
+                });
+            });
+            return cells;
+        }
+
+        function buildCrossLineCells(centerRow, centerCol, minDistance, maxDistance, withinBounds) {
+            return buildMultiDirectionLineCells(centerRow, centerCol, CARDINAL_DIRECTIONS, minDistance, maxDistance, withinBounds);
+        }
+
+        function buildDiagonalCrossLineCells(centerRow, centerCol, minDistance, maxDistance, withinBounds) {
+            return buildMultiDirectionLineCells(centerRow, centerCol, DIAGONAL_DIRECTIONS, minDistance, maxDistance, withinBounds);
+        }
+
+        function buildEightDirectionLineCells(centerRow, centerCol, minDistance, maxDistance, withinBounds) {
+            return buildMultiDirectionLineCells(
+                centerRow,
+                centerCol,
+                CARDINAL_DIRECTIONS.concat(DIAGONAL_DIRECTIONS),
+                minDistance,
+                maxDistance,
+                withinBounds
+            );
+        }
+
         function buildDirectionalConeCells(centerRow, centerCol, dir, minDistance, maxDistance, withinBounds) {
             if (!dir) {
                 return [];
@@ -448,6 +497,14 @@
             return applyCustomSymmetry(base, entries.aoe_symmetry);
         }
 
+        function getCustomRangeOffsets(entries, meta) {
+            const base = parseCustomCoordinateList(entries, meta, 'custom_range');
+            if (!base.length) {
+                return [];
+            }
+            return applyCustomSymmetry(base, entries.range_symmetry);
+        }
+
         function orientOffsetsForDirection(offsets, dir) {
             if (!Array.isArray(offsets) || offsets.length === 0) {
                 return [];
@@ -563,6 +620,14 @@
             if (!variableControlsEl) {
                 return;
             }
+            const variableLabelKeys = {
+                bonus_melee_range: 'targetVariableBonusMeleeRange',
+                bonus_range: 'targetVariableBonusRange'
+            };
+            const getVariableLabel = name => {
+                const key = variableLabelKeys[name];
+                return key ? t(key) : name;
+            };
             const adjustable = hasScenario
                 ? Array.from(variableState.required).filter(name => name.toLowerCase() !== 'size')
                 : [];
@@ -574,9 +639,10 @@
             adjustable.sort((a, b) => a.localeCompare(b));
             const controlsHtml = adjustable.map(name => {
                 const value = variableState.values.get(name) ?? VARIABLE_SLIDER_DEFAULT;
+                const label = getVariableLabel(name);
                 return `
                     <label class="target-variable-group">
-                        <span class="target-variable-label">${escapeHtml(name)}</span>
+                        <span class="target-variable-label">${escapeHtml(label)}</span>
                         <input type="range" min="${VARIABLE_SLIDER_MIN}" max="${VARIABLE_SLIDER_MAX}" step="1" value="${value}" data-variable="${escapeHtml(name)}">
                         <span class="target-variable-value">${value}</span>
                     </label>
@@ -607,7 +673,7 @@
             if (valueLabel) {
                 valueLabel.textContent = String(value);
             }
-            render(lastRawText);
+            render(lastRawText, lastRenderOptions);
         }
 
         function blockCell(row, col) {
@@ -716,6 +782,7 @@
             gridEl = document.getElementById('targetGrid');
             summaryEl = document.getElementById('targetVisualizerSummary');
             errorEl = document.getElementById('targetVisualizerError');
+            warningEl = document.getElementById('targetVisualizerWarning');
             rawCodeEl = document.getElementById('targetModalBody');
             legendRangeEl = document.getElementById('targetLegendRangeText');
             legendSplashEl = document.getElementById('targetLegendSplashText');
@@ -759,13 +826,29 @@
             const cell = event.currentTarget;
             const row = Number(cell.dataset.row);
             const col = Number(cell.dataset.col);
+            if (activeScenario.alwaysShowAoe) {
+                clearHoverHighlights();
+                const aoeCells = activeScenario.aoeCells(helpers.center, helpers.center, helpers) || [];
+                const highlightCells = aoeCells.length ? aoeCells : [[helpers.center, helpers.center]];
+                highlightCells.forEach(([r, c]) => {
+                    if (!helpers.withinBounds(r, c)) {
+                        return;
+                    }
+                    const aoeCell = cells[r][c];
+                    if (aoeCell) {
+                        aoeCell.classList.add('target-cell-aoe');
+                    }
+                });
+                return;
+            }
             if (!activeScenario.isTargetable(row, col, helpers)) {
                 clearHoverHighlights();
                 return;
             }
             clearHoverHighlights();
-            cell.classList.add('target-cell-target');
             const aoeCells = activeScenario.aoeCells(row, col, helpers) || [];
+            const includesTarget = aoeCells.length === 0 || aoeCells.some(([r, c]) => r === row && c === col);
+            cell.classList.add(includesTarget ? 'target-cell-target' : 'target-cell-selected');
             const highlightCells = aoeCells.length ? aoeCells : [[row, col]];
             highlightCells.forEach(([r, c]) => {
                 if (!helpers.withinBounds(r, c)) {
@@ -783,7 +866,7 @@
                 if (!cell) {
                     return;
                 }
-                cell.classList.remove('target-cell-target', 'target-cell-aoe');
+                cell.classList.remove('target-cell-target', 'target-cell-selected', 'target-cell-aoe');
             }));
         }
 
@@ -806,6 +889,20 @@
             if (!activeScenario) {
                 return;
             }
+            if (activeScenario.alwaysShowAoe) {
+                const aoeCells = activeScenario.aoeCells(helpers.center, helpers.center, helpers) || [];
+                const highlightCells = aoeCells.length ? aoeCells : [[helpers.center, helpers.center]];
+                highlightCells.forEach(([row, col]) => {
+                    if (!helpers.withinBounds(row, col)) {
+                        return;
+                    }
+                    const cell = cells[row][col];
+                    if (cell) {
+                        cell.classList.add('target-cell-in-range');
+                    }
+                });
+                return;
+            }
             for (let row = 0; row < GRID_SIZE; row++) {
                 for (let col = 0; col < GRID_SIZE; col++) {
                     const cell = cells[row][col];
@@ -819,10 +916,14 @@
             }
         }
 
-        function render(rawText) {
+        function render(rawText, options) {
             init();
             const text = typeof rawText === 'string' ? rawText : '';
             lastRawText = text;
+            if (options) {
+                lastRenderOptions = options;
+            }
+            const renderOptions = lastRenderOptions || {};
             resetVariableRequirements();
             clearHoverHighlights();
             if (!text.trim()) {
@@ -833,12 +934,14 @@
                 }
                 renderRawCode('', null);
                 showError('');
+                showWarning('');
                 renderVariableControls(false);
                 return;
             }
 
             const parsed = parseTargetBlock(text);
-            const built = buildScenario(parsed);
+            const supportWarnings = buildSupportWarnings(parsed);
+            const built = buildScenario(parsed, renderOptions);
             renderRawCode(text, built.errorLineIndex);
             if (built.error) {
                 activeScenario = null;
@@ -847,12 +950,14 @@
                     summaryEl.textContent = t('targetSummaryUnavailable');
                 }
                 showError(built.error);
+                showWarning('');
                 renderVariableControls(false);
                 return;
             }
 
             activeScenario = built.scenario;
             showError('');
+            showWarning(supportWarnings.length ? supportWarnings.join('; ') : '');
             if (summaryEl) {
                 summaryEl.textContent = built.scenario.summary || t('targetSummaryDefault');
             }
@@ -876,9 +981,10 @@
                 }
                 renderRawCode('', null);
                 showError('');
+                showWarning('');
                 return;
             }
-            render(lastRawText);
+            render(lastRawText, lastRenderOptions);
         }
 
         function renderRawCode(text, errorLineIndex) {
@@ -913,6 +1019,49 @@
             }
         }
 
+        function showWarning(message) {
+            if (!warningEl) {
+                return;
+            }
+            if (message) {
+                warningEl.textContent = `${t('targetRenderWarningPrefix')} ${message}`;
+                warningEl.style.display = 'block';
+            } else {
+                warningEl.textContent = '';
+                warningEl.style.display = 'none';
+            }
+        }
+
+        function buildSupportWarnings(parseResult) {
+            const entries = parseResult.entries;
+            const warnings = [];
+            const ignoredKeys = new Set([
+                'allow_diagonals',
+                'as_the_crow_flies',
+                'range_excludes_blocking',
+                'shotgun_mode',
+                'aoe_display_exclude_restrictions',
+                'aoe_leading_edge_only',
+                'aoe_tile_requires_element',
+                'aoe_tile_requires_tags',
+                'mouse_offset',
+                'min_targets',
+                'max_targets',
+                'aoe_chance',
+                'randomize_target_within_range',
+                'prioritize_dont_change_direction'
+            ]);
+            Object.keys(entries).forEach(key => {
+                if (ignoredKeys.has(key)) {
+                    warnings.push(key);
+                }
+            });
+
+            // Suppress warnings for restrictions/aoe_restrictions tokens.
+
+            return warnings;
+        }
+
         function parseTargetBlock(text) {
             const normalized = text.replace(/\r\n/g, '\n');
             const lines = normalized.split('\n');
@@ -920,37 +1069,59 @@
             const meta = {};
             let firstMalformed = null;
 
-            lines.forEach((rawLine, index) => {
+            const bracketDelta = value => {
+                const openCount = (value.match(/\[/g) || []).length;
+                const closeCount = (value.match(/\]/g) || []).length;
+                return openCount - closeCount;
+            };
+
+            for (let index = 0; index < lines.length; index++) {
+                const rawLine = lines[index];
                 const line = rawLine.trim();
                 if (!line || line === 'target {' || line === '}') {
-                    return;
+                    continue;
                 }
                 const spaceIndex = line.indexOf(' ');
                 if (spaceIndex === -1) {
                     if (firstMalformed === null) {
                         firstMalformed = index;
                     }
-                    return;
+                    continue;
                 }
                 const key = line.substring(0, spaceIndex).trim();
-                const rawValue = line.substring(spaceIndex + 1).trim();
+                const startIndex = index;
+                let rawValue = line.substring(spaceIndex + 1).trim();
+                if (key === 'custom_aoe' && rawValue.startsWith('[') && !rawValue.endsWith(']')) {
+                    const collected = [rawValue];
+                    let depth = bracketDelta(rawValue);
+                    while (depth > 0 && index + 1 < lines.length) {
+                        const nextLine = lines[++index];
+                        const nextValue = nextLine.trim();
+                        if (nextValue) {
+                            collected.push(nextValue);
+                        }
+                        depth += bracketDelta(nextValue);
+                    }
+                    rawValue = collected.join(' ');
+                }
                 let value = rawValue;
                 if (rawValue.startsWith('[') && rawValue.endsWith(']')) {
                     const inner = rawValue.slice(1, -1).trim();
                     value = inner ? inner.split(/\s+/) : [];
                 }
                 entries[key] = value;
-                meta[key] = { line: index, raw: value, text: rawValue };
-            });
+                meta[key] = { line: startIndex, raw: value, text: rawValue };
+            }
 
             return { lines, entries, meta, firstMalformed };
         }
 
-        function buildScenario(parseResult) {
+        function buildScenario(parseResult, options) {
             const entries = parseResult.entries;
             const modeValue = entries.target_mode || '';
             const mode = typeof modeValue === 'string' ? modeValue.toLowerCase() : '';
             const entryCount = Object.keys(entries).length;
+            const isDashAttack = !!options?.isDashAttack;
 
             if (entryCount === 0 && typeof parseResult.firstMalformed === 'number') {
                 return {
@@ -989,7 +1160,7 @@
 
             if (mode === 'direction' || mode === 'direction8') {
                 return {
-                    scenario: createDirectionScenario(parseResult, mode),
+                    scenario: createDirectionScenario(parseResult, mode, isDashAttack),
                     error: null,
                     errorLineIndex: null
                 };
@@ -1010,9 +1181,10 @@
             const aoeMode = typeof entries.aoe_mode === 'string' ? entries.aoe_mode.toLowerCase() : '';
             const customOffsets = aoeMode === 'custom' ? getCustomAoeOffsets(entries, parseResult.meta) : [];
             const hasCustomAoe = customOffsets.length > 0;
+            const hasAllAoe = aoeMode === 'all';
             const aoeExcludesSelf = asBoolean(entries.aoe_excludes_self);
             const hasRadiusAoe = aoeBounds.max !== 0 || aoeBounds.min !== 0;
-            const hasAoe = hasCustomAoe || hasRadiusAoe;
+            const hasAoe = hasCustomAoe || hasRadiusAoe || hasAllAoe;
             const summaryParts = [
                 `${t('targetSummaryMode')}: ${t('targetSummarySelf')}`
             ];
@@ -1021,16 +1193,34 @@
                 summaryParts.push(`${t('targetSummarySplash')} ${splashLabel}`);
             } else if (hasCustomAoe) {
                 summaryParts.push(`${t('targetSummarySplash')} custom`);
+            } else if (hasAllAoe) {
+                summaryParts.push(`${t('targetSummarySplash')} all`);
             }
 
             return {
                 summary: summaryParts.join(' · '),
+                alwaysShowAoe: true,
                 isTargetable(row, col, ctx) {
                     return row === ctx.center && col === ctx.center;
                 },
                 aoeCells(row, col, ctx) {
                     if (hasCustomAoe) {
                         const cells = translateOffsets(row, col, customOffsets, ctx.withinBounds);
+                        return maybeExcludeSelfCells(cells, ctx, aoeExcludesSelf);
+                    }
+                    if (hasAllAoe) {
+                        return maybeExcludeSelfCells(ctx.allGridCells(), ctx, aoeExcludesSelf);
+                    }
+                    if (aoeMode === 'cross') {
+                        const cells = buildCrossLineCells(row, col, aoeBounds.min, aoeBounds.max, ctx.withinBounds);
+                        return maybeExcludeSelfCells(cells, ctx, aoeExcludesSelf);
+                    }
+                    if (aoeMode === 'diagcross') {
+                        const cells = buildDiagonalCrossLineCells(row, col, aoeBounds.min, aoeBounds.max, ctx.withinBounds);
+                        return maybeExcludeSelfCells(cells, ctx, aoeExcludesSelf);
+                    }
+                    if (aoeMode === '8cross') {
+                        const cells = buildEightDirectionLineCells(row, col, aoeBounds.min, aoeBounds.max, ctx.withinBounds);
                         return maybeExcludeSelfCells(cells, ctx, aoeExcludesSelf);
                     }
                     if (hasRadiusAoe) {
@@ -1049,27 +1239,40 @@
             const maxRangeRaw = numberFrom(entries.max_range);
             const fallbackMax = typeof maxRangeRaw === 'number' ? maxRangeRaw : Math.max(minRange + 3, 4);
             const rangeMode = (entries.range_mode || 'standard').toLowerCase();
+            const customRangeOffsets = rangeMode === 'custom' ? getCustomRangeOffsets(entries, parseResult.meta) : [];
+            const hasCustomRange = customRangeOffsets.length > 0;
+            const customRangeCells = hasCustomRange
+                ? translateOffsets(helpers.center, helpers.center, customRangeOffsets, helpers.withinBounds)
+                : [];
+            const customRangeKeys = hasCustomRange
+                ? new Set(customRangeCells.map(([row, col]) => coordKey(row, col)))
+                : null;
             const restrictions = listFrom(entries.restrictions).map(value => String(value).toLowerCase());
+            const aoeRestrictions = listFrom(entries.aoe_restrictions).map(value => String(value).toLowerCase());
+            const lineOfSightRestrictions = restrictions.concat(aoeRestrictions);
+            const mustFit2x2 = restrictions.includes('must_fit_2x2_character');
             const straightShot = asBoolean(entries.straight_shot) || restrictions.includes('straight_shot');
             const requiresLine = straightShot
-                || asBoolean(entries.requires_line_of_sight)
-                || restrictions.includes('requires_line_of_sight')
-                || restrictions.includes('needs_los')
-                || restrictions.includes('line_of_sight')
-                || restrictions.includes('must_have_line_of_sight');
+                || lineOfSightRestrictions.includes('must_have_line_of_sight')
+                || lineOfSightRestrictions.includes('must_have_line_of_sight_unpurgable');
             const mustMove = asBoolean(entries.must_move) || restrictions.includes('must_move');
+            const mustBeMoveable = restrictions.includes('must_be_moveable');
             const aoeMode = typeof entries.aoe_mode === 'string' ? entries.aoe_mode.toLowerCase() : '';
             const aoeBounds = resolveBounds(numberFrom(entries.min_aoe), numberFrom(entries.max_aoe), 0, 0);
             const aoeExcludesSelf = asBoolean(entries.aoe_excludes_self);
             const customOffsets = aoeMode === 'custom' ? getCustomAoeOffsets(entries, parseResult.meta) : [];
             const hasCustomAoe = customOffsets.length > 0;
+            const hasAllAoe = aoeMode === 'all';
             const dontOrientAoe = asBoolean(entries.dont_orient_aoe);
             const hasRadiusAoe = aoeBounds.max !== 0 || aoeBounds.min !== 0;
-            const hasAoe = hasCustomAoe || hasRadiusAoe;
+            const hasAoe = hasCustomAoe || hasRadiusAoe || hasAllAoe;
+            const includeAoeInRange = asBoolean(entries.range_display_include_aoe)
+                && aoeMode === 'custom'
+                && hasCustomAoe;
 
             const summaryParts = [
                 `${t('targetSummaryMode')}: ${t('targetSummaryTile')}`,
-                `${t('targetSummaryRange')} ${formatRangeLabel(entries.min_range, entries.max_range, minRange, maxRangeRaw, fallbackMax)}`
+                `${t('targetSummaryRange')} ${hasCustomRange ? 'custom' : formatRangeLabel(entries.min_range, entries.max_range, minRange, maxRangeRaw, fallbackMax)}`
             ];
             if (rangeMode === 'diagcross') {
                 summaryParts.push(t('targetSummaryDiagonalOnly'));
@@ -1081,89 +1284,249 @@
                 summaryParts.push(`${t('targetSummarySplash')} ${splashLabel}`);
             } else if (hasCustomAoe) {
                 summaryParts.push(`${t('targetSummarySplash')} custom`);
+            } else if (hasAllAoe) {
+                summaryParts.push(`${t('targetSummarySplash')} all`);
             }
             if (requiresLine) {
                 summaryParts.push(t('targetSummaryRequiresLine'));
             }
 
-            return {
-                summary: summaryParts.join(' · '),
-                isTargetable(row, col, ctx) {
-                    if (!ctx.withinBounds(row, col)) {
+            function buildAoeCells(row, col, ctx) {
+                if (!hasAoe) {
+                    return [];
+                }
+                if (aoeMode === 'custom' && hasCustomAoe) {
+                    const dir = dontOrientAoe ? null : normalizeDirectionVector(row - ctx.center, col - ctx.center);
+                    const oriented = dontOrientAoe ? customOffsets : orientOffsetsForDirection(customOffsets, dir);
+                    const cells = translateOffsets(row, col, oriented, ctx.withinBounds);
+                    return maybeExcludeSelfCells(cells, ctx, aoeExcludesSelf);
+                }
+                if (aoeMode === 'all') {
+                    return maybeExcludeSelfCells(ctx.allGridCells(), ctx, aoeExcludesSelf);
+                }
+                if (aoeMode === 'perpline') {
+                    const dir = normalizeDirectionVector(row - ctx.center, col - ctx.center);
+                    const cells = buildPerpendicularLineThrough(row, col, dir, aoeBounds.min, aoeBounds.max, ctx.withinBounds);
+                    return maybeExcludeSelfCells(cells, ctx, aoeExcludesSelf);
+                }
+                if (aoeMode === 'cross') {
+                    const cells = buildCrossLineCells(row, col, aoeBounds.min, aoeBounds.max, ctx.withinBounds);
+                    return maybeExcludeSelfCells(cells, ctx, aoeExcludesSelf);
+                }
+                if (aoeMode === 'diagcross') {
+                    const cells = buildDiagonalCrossLineCells(row, col, aoeBounds.min, aoeBounds.max, ctx.withinBounds);
+                    return maybeExcludeSelfCells(cells, ctx, aoeExcludesSelf);
+                }
+                if (aoeMode === '8cross') {
+                    const cells = buildEightDirectionLineCells(row, col, aoeBounds.min, aoeBounds.max, ctx.withinBounds);
+                    return maybeExcludeSelfCells(cells, ctx, aoeExcludesSelf);
+                }
+                const splash = ctx.cellsWithinRadius(row, col, Math.max(0, aoeBounds.max), Math.max(0, aoeBounds.min));
+                return maybeExcludeSelfCells(splash, ctx, aoeExcludesSelf);
+            }
+
+            function fits2x2(row, col, ctx) {
+                const tiles = [
+                    [row, col],
+                    [row + 1, col],
+                    [row, col + 1],
+                    [row + 1, col + 1]
+                ];
+                for (const [r, c] of tiles) {
+                    if (!ctx.withinBounds(r, c) || ctx.isBlocked(r, c)) {
                         return false;
                     }
-                    const dRow = row - ctx.center;
-                    const dCol = col - ctx.center;
+                }
+                return true;
+            }
+
+            function isOriginTargetable(row, col, ctx) {
+                if (!ctx.withinBounds(row, col)) {
+                    return false;
+                }
+                if (mustBeMoveable && ctx.isBlocked(row, col)) {
+                    return false;
+                }
+                if (mustFit2x2 && !fits2x2(row, col, ctx)) {
+                    return false;
+                }
+                const dRow = row - ctx.center;
+                const dCol = col - ctx.center;
+                if (hasCustomRange) {
+                    if (!customRangeKeys.has(coordKey(row, col))) {
+                        return false;
+                    }
                     if (mustMove && dRow === 0 && dCol === 0) {
-                        return false;
-                    }
-                    const manhattan = Math.abs(dRow) + Math.abs(dCol);
-                    const chebyshev = Math.max(Math.abs(dRow), Math.abs(dCol));
-                    let passesRange = false;
-                    if (rangeMode === 'diagcross') {
-                        if (dRow === 0 && dCol === 0) {
-                            return minRange === 0 && !mustMove;
-                        }
-                        const diagSteps = Math.abs(dRow);
-                        const isDiagonal = diagSteps === Math.abs(dCol);
-                        if (!isDiagonal) {
-                            return false;
-                        }
-                        passesRange = diagSteps >= Math.max(minRange, 1) && diagSteps <= fallbackMax;
-                    } else if (rangeMode === 'cross') {
-                        if (dRow === 0 && dCol === 0) {
-                            return minRange === 0 && !mustMove;
-                        }
-                        const isOrthogonal = dRow === 0 || dCol === 0;
-                        if (!isOrthogonal) {
-                            return false;
-                        }
-                        const orthoSteps = Math.abs(dRow) + Math.abs(dCol);
-                        passesRange = orthoSteps >= Math.max(minRange, 1) && orthoSteps <= fallbackMax;
-                    } else if (rangeMode === 'square') {
-                        passesRange = chebyshev >= minRange && chebyshev <= fallbackMax;
-                    } else {
-                        passesRange = manhattan >= minRange && manhattan <= fallbackMax;
-                    }
-                    if (!passesRange) {
                         return false;
                     }
                     if (requiresLine && !ctx.pathClear(row, col)) {
                         return false;
                     }
                     return true;
+                }
+                if (dRow === 0 && dCol === 0 && !mustMove) {
+                    if (minRange === 0 || (hasAoe && !aoeExcludesSelf)) {
+                        return true;
+                    }
+                }
+                if (mustMove && dRow === 0 && dCol === 0) {
+                    return false;
+                }
+                const manhattan = Math.abs(dRow) + Math.abs(dCol);
+                const chebyshev = Math.max(Math.abs(dRow), Math.abs(dCol));
+                let passesRange = false;
+                if (rangeMode === 'diagcross') {
+                    if (dRow === 0 && dCol === 0) {
+                        return false;
+                    }
+                    const diagSteps = Math.abs(dRow);
+                    const isDiagonal = diagSteps === Math.abs(dCol);
+                    if (!isDiagonal) {
+                        return false;
+                    }
+                    passesRange = diagSteps >= Math.max(minRange, 1) && diagSteps <= fallbackMax;
+                } else if (rangeMode === 'cross') {
+                    if (dRow === 0 && dCol === 0) {
+                        return false;
+                    }
+                    const isOrthogonal = dRow === 0 || dCol === 0;
+                    if (!isOrthogonal) {
+                        return false;
+                    }
+                    const orthoSteps = Math.abs(dRow) + Math.abs(dCol);
+                    passesRange = orthoSteps >= Math.max(minRange, 1) && orthoSteps <= fallbackMax;
+                } else if (rangeMode === '8cross') {
+                    if (dRow === 0 && dCol === 0) {
+                        return false;
+                    }
+                    const absRow = Math.abs(dRow);
+                    const absCol = Math.abs(dCol);
+                    const isLine = dRow === 0 || dCol === 0 || absRow === absCol;
+                    if (!isLine) {
+                        return false;
+                    }
+                    const lineSteps = Math.max(absRow, absCol);
+                    passesRange = lineSteps >= Math.max(minRange, 1) && lineSteps <= fallbackMax;
+                } else if (rangeMode === 'square') {
+                    passesRange = chebyshev >= minRange && chebyshev <= fallbackMax;
+                } else {
+                    passesRange = manhattan >= minRange && manhattan <= fallbackMax;
+                }
+                if (!passesRange) {
+                    return false;
+                }
+                if (requiresLine && !ctx.pathClear(row, col)) {
+                    return false;
+                }
+                return true;
+            }
+
+            const includeAoeCache = includeAoeInRange
+                ? { stamp: null, map: null }
+                : null;
+
+            const getBlockedStamp = () => {
+                if (!blocked.size) {
+                    return 'none';
+                }
+                return Array.from(blocked).sort().join('|');
+            };
+
+            function getIncludeAoeMap(ctx) {
+                if (!includeAoeInRange) {
+                    return null;
+                }
+                const stamp = getBlockedStamp();
+                if (includeAoeCache.stamp === stamp && includeAoeCache.map) {
+                    return includeAoeCache.map;
+                }
+                const hitMap = new Map();
+                for (let row = 0; row < GRID_SIZE; row++) {
+                    for (let col = 0; col < GRID_SIZE; col++) {
+                        if (!isOriginTargetable(row, col, ctx)) {
+                            continue;
+                        }
+                        const origin = { row, col };
+                        const aoeCells = buildAoeCells(row, col, ctx);
+                        aoeCells.forEach(([hitRow, hitCol]) => {
+                            const key = coordKey(hitRow, hitCol);
+                            if (!hitMap.has(key)) {
+                                hitMap.set(key, []);
+                            }
+                            hitMap.get(key).push(origin);
+                        });
+                    }
+                }
+                includeAoeCache.stamp = stamp;
+                includeAoeCache.map = hitMap;
+                return hitMap;
+            }
+
+            function pickOriginForHit(row, col, ctx) {
+                if (!includeAoeInRange) {
+                    return null;
+                }
+                if (isOriginTargetable(row, col, ctx)) {
+                    return { row, col };
+                }
+                const hitMap = getIncludeAoeMap(ctx);
+                const options = hitMap ? hitMap.get(coordKey(row, col)) : null;
+                if (!options || !options.length) {
+                    return null;
+                }
+                let best = options[0];
+                let bestDistance = Math.abs(best.row - row) + Math.abs(best.col - col);
+                for (let i = 1; i < options.length; i++) {
+                    const option = options[i];
+                    const distance = Math.abs(option.row - row) + Math.abs(option.col - col);
+                    if (distance < bestDistance) {
+                        bestDistance = distance;
+                        best = option;
+                    }
+                }
+                return best;
+            }
+
+            return {
+                summary: summaryParts.join(' · '),
+                isTargetable(row, col, ctx) {
+                    if (isOriginTargetable(row, col, ctx)) {
+                        return true;
+                    }
+                    if (!includeAoeInRange) {
+                        return false;
+                    }
+                    const hitMap = getIncludeAoeMap(ctx);
+                    return hitMap ? hitMap.has(coordKey(row, col)) : false;
                 },
                 aoeCells(row, col, ctx) {
-                    if (!hasAoe) {
+                    if (!includeAoeInRange) {
+                        return buildAoeCells(row, col, ctx);
+                    }
+                    const origin = pickOriginForHit(row, col, ctx);
+                    if (!origin) {
                         return [];
                     }
-                    if (aoeMode === 'custom' && hasCustomAoe) {
-                        const dir = dontOrientAoe ? null : normalizeDirectionVector(row - ctx.center, col - ctx.center);
-                        const oriented = dontOrientAoe ? customOffsets : orientOffsetsForDirection(customOffsets, dir);
-                        const cells = translateOffsets(row, col, oriented, ctx.withinBounds);
-                        return maybeExcludeSelfCells(cells, ctx, aoeExcludesSelf);
-                    }
-                    if (aoeMode === 'perpline') {
-                        const dir = normalizeDirectionVector(row - ctx.center, col - ctx.center);
-                        const cells = buildPerpendicularLineThrough(row, col, dir, aoeBounds.min, aoeBounds.max, ctx.withinBounds);
-                        return maybeExcludeSelfCells(cells, ctx, aoeExcludesSelf);
-                    }
-                    const splash = ctx.cellsWithinRadius(row, col, Math.max(0, aoeBounds.max), Math.max(0, aoeBounds.min));
-                    return maybeExcludeSelfCells(splash, ctx, aoeExcludesSelf);
+                    return buildAoeCells(origin.row, origin.col, ctx);
                 }
             };
         }
 
-        function createDirectionScenario(parseResult, mode) {
+        function createDirectionScenario(parseResult, mode, isDashAttack) {
             const entries = parseResult.entries;
             const allowDiagonal = mode === 'direction8';
             const directionVectors = allowDiagonal
                 ? CARDINAL_DIRECTIONS.concat(DIAGONAL_DIRECTIONS)
                 : CARDINAL_DIRECTIONS;
-            const selectBounds = resolveBounds(numberFrom(entries.min_range), numberFrom(entries.max_range), 1, 1);
-            const selectionMin = Math.max(1, selectBounds.min);
-            const selectionMax = Math.max(selectionMin, selectBounds.max);
+            const rawMinRange = numberFrom(entries.min_range);
+            const rawMaxRange = numberFrom(entries.max_range);
+            let hasSelectionRange = Object.prototype.hasOwnProperty.call(entries, 'min_range')
+                || Object.prototype.hasOwnProperty.call(entries, 'max_range');
             const aoeMode = typeof entries.aoe_mode === 'string' ? entries.aoe_mode.toLowerCase() : 'line';
+            const hasAllAoe = aoeMode === 'all';
+            const selectBounds = resolveBounds(rawMinRange, rawMaxRange, 1, 1);
+            let selectionMin = Math.max(1, selectBounds.min);
+            let selectionMax = Math.max(selectionMin, selectBounds.max);
             const aoeBounds = resolveBounds(numberFrom(entries.min_aoe), numberFrom(entries.max_aoe), 1, selectionMax);
             const splashRadiusRaw = numberFrom(entries.aoe_radius)
                 ?? numberFrom(entries.max_aoe_radius)
@@ -1173,6 +1536,41 @@
             const customOffsets = aoeMode === 'custom' ? getCustomAoeOffsets(entries, parseResult.meta) : [];
             const hasCustomPattern = customOffsets.length > 0;
             const aoeExcludesSelf = asBoolean(entries.aoe_excludes_self);
+            const coneMin = Math.max(1, Math.max(0, aoeBounds.min));
+            const coneMax = Math.max(coneMin, Math.max(0, aoeBounds.max));
+            const isConeMode = aoeMode === 'cone' && !hasCustomPattern && !isDashAttack;
+            if (hasAllAoe) {
+                const summaryParts = [
+                    `${t('targetSummaryMode')}: ${allowDiagonal ? t('targetSummaryDirection8') : t('targetSummaryDirection')}`,
+                    `${t('targetSummarySplash')} all`
+                ];
+                return {
+                    summary: summaryParts.join(' · '),
+                    alwaysShowAoe: true,
+                    isTargetable(row, col, ctx) {
+                        return row === ctx.center && col === ctx.center;
+                    },
+                    aoeCells(row, col, ctx) {
+                        return maybeExcludeSelfCells(ctx.allGridCells(), ctx, aoeExcludesSelf);
+                    }
+                };
+            }
+            const directionalAoeSelectionUsesAoe = aoeMode === 'line' && !hasCustomPattern && !hasSelectionRange;
+            const lineSelectionUsesAoe = aoeMode === 'line' && !hasCustomPattern;
+            if (isConeMode) {
+                hasSelectionRange = false;
+                selectionMin = 1;
+                selectionMax = 1;
+            }
+            if (directionalAoeSelectionUsesAoe) {
+                hasSelectionRange = false;
+                const aoeMin = Math.max(1, Math.max(0, aoeBounds.min));
+                const aoeMax = Math.max(aoeMin, Math.max(0, aoeBounds.max));
+                selectionMin = aoeMin;
+                selectionMax = aoeMax;
+            }
+            const dashLineMode = hasSelectionRange && aoeMode === 'line' && !hasCustomPattern && splashRadius === 0;
+            const directionOnlySelection = lineSelectionUsesAoe && splashRadius === 0;
             const summaryParts = [
                 `${t('targetSummaryMode')}: ${allowDiagonal ? t('targetSummaryDirection8') : t('targetSummaryDirection')}`,
                 `${t('targetSummaryRange')} ${formatStepRange(selectionMin, selectionMax)}`,
@@ -1184,6 +1582,169 @@
                 summaryParts.push(`${t('targetSummarySplash')} custom`);
             }
             summaryParts.push(t('targetSummaryRequiresLine'));
+
+            const dashMode = isDashAttack && mode === 'direction' && hasSelectionRange && !hasAllAoe;
+            if (dashMode) {
+                const dashCache = { stamp: null, states: null };
+
+                const directionScore = (dir, row, col) => {
+                    const dRow = row - helpers.center;
+                    const dCol = col - helpers.center;
+                    const length = Math.hypot(dRow, dCol);
+                    if (!length) {
+                        return -Infinity;
+                    }
+                    const dirLength = Math.hypot(dir.row, dir.col) || 1;
+                    return (dRow * dir.row + dCol * dir.col) / (length * dirLength);
+                };
+
+                const getBlockedStamp = () => {
+                    if (!blocked.size) {
+                        return 'none';
+                    }
+                    return Array.from(blocked).sort().join('|');
+                };
+
+                const buildDashState = dir => {
+                    const dashMax = Math.max(0, Math.floor(selectionMax));
+                    const dashPath = [];
+                    let endRow = helpers.center;
+                    let endCol = helpers.center;
+                    for (let step = 1; step <= dashMax; step++) {
+                        const row = helpers.center + dir.row * step;
+                        const col = helpers.center + dir.col * step;
+                        if (!helpers.withinBounds(row, col)) {
+                            break;
+                        }
+                        if (helpers.isBlocked(row, col)) {
+                            break;
+                        }
+                        dashPath.push([row, col]);
+                        endRow = row;
+                        endCol = col;
+                    }
+
+                    const aoeMin = Math.max(0, Math.floor(aoeBounds.min));
+                    const aoeMax = Math.max(0, Math.floor(aoeBounds.max));
+                    const aoeCells = [];
+                    if (aoeMode === 'standard') {
+                        aoeCells.push(...helpers.cellsWithinRadius(endRow, endCol, aoeMax, aoeMin));
+                    } else if (aoeMode === 'custom' && hasCustomPattern) {
+                        let patternCells = orientOffsetsForDirection(customOffsets, dir);
+                        patternCells = translateOffsets(endRow, endCol, patternCells, helpers.withinBounds);
+                        aoeCells.push(...patternCells);
+                    } else if (aoeMode === 'cone') {
+                        aoeCells.push(...buildDirectionalConeCells(endRow, endCol, dir, aoeBounds.min, aoeBounds.max, helpers.withinBounds));
+                    } else if (aoeMode === 'cross' || aoeMode === 'diagcross' || aoeMode === '8cross') {
+                        const directions = aoeMode === 'cross'
+                            ? CARDINAL_DIRECTIONS
+                            : aoeMode === 'diagcross'
+                                ? DIAGONAL_DIRECTIONS
+                                : CARDINAL_DIRECTIONS.concat(DIAGONAL_DIRECTIONS);
+                        directions.forEach(stepDir => {
+                            const line = [];
+                            for (let step = Math.max(0, aoeMin); step <= aoeMax; step++) {
+                                const row = endRow + stepDir.row * step;
+                                const col = endCol + stepDir.col * step;
+                                if (!helpers.withinBounds(row, col)) {
+                                    break;
+                                }
+                                if (step >= aoeMin) {
+                                    line.push([row, col]);
+                                }
+                            }
+                            aoeCells.push(...line);
+                        });
+                    } else {
+                        if (aoeMin === 0 && aoeMax >= 0) {
+                            aoeCells.push([endRow, endCol]);
+                        }
+                        for (let step = 1; step <= aoeMax; step++) {
+                            const row = endRow + dir.row * step;
+                            const col = endCol + dir.col * step;
+                            if (!helpers.withinBounds(row, col)) {
+                                break;
+                            }
+                            if (step >= aoeMin) {
+                                aoeCells.push([row, col]);
+                            }
+                        }
+                    }
+
+                    const hitKeys = new Set();
+                    const hitCells = [];
+                    dashPath.concat(aoeCells).forEach(([row, col]) => {
+                        const key = coordKey(row, col);
+                        if (hitKeys.has(key)) {
+                            return;
+                        }
+                        hitKeys.add(key);
+                        hitCells.push([row, col]);
+                    });
+
+                    return {
+                        dir,
+                        hitCells,
+                        hitKeys,
+                        endRow,
+                        endCol,
+                        endKey: coordKey(endRow, endCol)
+                    };
+                };
+
+                const getDashStates = () => {
+                    const stamp = getBlockedStamp();
+                    if (dashCache.stamp === stamp && dashCache.states) {
+                        return dashCache.states;
+                    }
+                    const states = directionVectors.map(dir => buildDashState(dir));
+                    dashCache.stamp = stamp;
+                    dashCache.states = states;
+                    return states;
+                };
+
+                const pickDashState = (row, col) => {
+                    const key = coordKey(row, col);
+                    const states = getDashStates();
+                    const options = states.filter(state => state.hitKeys.has(key));
+                    if (!options.length) {
+                        return null;
+                    }
+                    if (options.length === 1) {
+                        return options[0];
+                    }
+                    if (row === helpers.center && col === helpers.center) {
+                        return options[0];
+                    }
+                    let best = options[0];
+                    let bestScore = directionScore(best.dir, row, col);
+                    for (let i = 1; i < options.length; i++) {
+                        const score = directionScore(options[i].dir, row, col);
+                        if (score > bestScore) {
+                            bestScore = score;
+                            best = options[i];
+                        }
+                    }
+                    return best;
+                };
+
+                return {
+                    summary: summaryParts.join(' · '),
+                    isTargetable(row, col) {
+                        if (!helpers.withinBounds(row, col)) {
+                            return false;
+                        }
+                        return !!pickDashState(row, col);
+                    },
+                    aoeCells(row, col) {
+                        const state = pickDashState(row, col);
+                        if (!state) {
+                            return [];
+                        }
+                        return state.hitCells.slice();
+                    }
+                };
+            }
 
             const selectionCellsByDirection = [];
             const patternCellsByDirection = [];
@@ -1198,6 +1759,24 @@
                     reachableEntries.set(key, []);
                 }
                 reachableEntries.get(key).push(entry);
+            }
+
+            function selectionReachable(entry) {
+                return helpers.pathClearBetween(helpers.center, helpers.center, entry.originRow, entry.originCol, true);
+            }
+
+            function canUseDashSelection(entry) {
+                return selectionReachable(entry);
+            }
+
+            function canUseDashHit(entry, row, col) {
+                if (!selectionReachable(entry)) {
+                    return false;
+                }
+                if (helpers.isBlocked(entry.originRow, entry.originCol)) {
+                    return false;
+                }
+                return helpers.pathClearBetween(entry.originRow, entry.originCol, row, col, true);
             }
 
             directionVectors.forEach((dir, dirIndex) => {
@@ -1242,15 +1821,84 @@
                 }
 
                 let patternCells = [];
+                const patternOrigins = hasSelectionRange && selections.length
+                    ? selections
+                    : [[helpers.center, helpers.center]];
+                if (dashLineMode) {
+                    patternCellsByDirection[dirIndex] = [];
+                    patternOrigins.forEach(([originRow, originCol]) => {
+                        let originPattern = aoeMode === 'cone'
+                            ? buildDirectionalConeCells(originRow, originCol, dir, coneMin, coneMax, helpers.withinBounds)
+                            : buildDirectionalLineCells(originRow, originCol, dir, aoeBounds.min, aoeBounds.max, helpers.withinBounds);
+                        if (originPattern.length > 1) {
+                            const seen = new Set();
+                            originPattern = originPattern.filter(([row, col]) => {
+                                const key = coordKey(row, col);
+                                if (seen.has(key)) {
+                                    return false;
+                                }
+                                seen.add(key);
+                                return true;
+                            });
+                        }
+                        if (aoeExcludesSelf) {
+                            originPattern = originPattern.filter(([row, col]) => !(row === helpers.center && col === helpers.center));
+                        }
+                        registerReachableCell(originRow, originCol, {
+                            kind: 'selection',
+                            variant: 'selection',
+                            dirIndex,
+                            originRow,
+                            originCol,
+                            patternCells: originPattern
+                        });
+                        originPattern.forEach(([row, col]) => {
+                            registerReachableCell(row, col, {
+                                kind: 'pattern',
+                                variant: 'pattern',
+                                dirIndex,
+                                originRow,
+                                originCol,
+                                patternCells: originPattern
+                            });
+                        });
+                    });
+                    return;
+                }
                 if (aoeMode === 'cone') {
-                    patternCells = buildDirectionalConeCells(helpers.center, helpers.center, dir, aoeBounds.min, aoeBounds.max, helpers.withinBounds);
+                    patternCells = patternOrigins.flatMap(([originRow, originCol]) =>
+                        buildDirectionalConeCells(originRow, originCol, dir, coneMin, coneMax, helpers.withinBounds)
+                    );
                 } else {
-                    patternCells = buildDirectionalLineCells(helpers.center, helpers.center, dir, aoeBounds.min, aoeBounds.max, helpers.withinBounds);
+                    patternCells = patternOrigins.flatMap(([originRow, originCol]) =>
+                        buildDirectionalLineCells(originRow, originCol, dir, aoeBounds.min, aoeBounds.max, helpers.withinBounds)
+                    );
+                }
+                if (patternCells.length > 1) {
+                    const seen = new Set();
+                    patternCells = patternCells.filter(([row, col]) => {
+                        const key = coordKey(row, col);
+                        if (seen.has(key)) {
+                            return false;
+                        }
+                        seen.add(key);
+                        return true;
+                    });
                 }
                 if (aoeExcludesSelf) {
                     patternCells = patternCells.filter(([row, col]) => !(row === helpers.center && col === helpers.center));
                 }
                 patternCellsByDirection[dirIndex] = patternCells;
+                if (directionOnlySelection) {
+                    selections.forEach(([row, col]) => {
+                        registerReachableCell(row, col, {
+                            kind: 'aoe',
+                            variant: 'pattern',
+                            dirIndex
+                        });
+                    });
+                    return;
+                }
                 patternCells.forEach(([row, col]) => {
                     registerReachableCell(row, col, {
                         kind: 'aoe',
@@ -1271,24 +1919,69 @@
                 return null;
             }
 
+            function directionScoreForIndex(dirIndex, row, col) {
+                const dir = directionVectors[dirIndex];
+                if (!dir) {
+                    return -Infinity;
+                }
+                const dRow = row - helpers.center;
+                const dCol = col - helpers.center;
+                const length = Math.hypot(dRow, dCol);
+                if (!length) {
+                    return -Infinity;
+                }
+                const dirLength = Math.hypot(dir.row, dir.col) || 1;
+                return (dRow * dir.row + dCol * dir.col) / (length * dirLength);
+            }
+
             function pickEntry(row, col) {
                 const key = coordKey(row, col);
                 const options = reachableEntries.get(key);
                 if (!options) {
                     return null;
                 }
+                if (dashLineMode) {
+                    for (const entry of options) {
+                        if (entry.kind === 'selection' && canUseDashSelection(entry)) {
+                            return entry;
+                        }
+                    }
+                    for (const entry of options) {
+                        if (entry.kind === 'pattern' && canUseDashHit(entry, row, col)) {
+                            return entry;
+                        }
+                    }
+                    return null;
+                }
+                const valid = [];
                 for (const entry of options) {
                     if (entry.variant === 'splash') {
                         if (helpers.pathClear(entry.sourceRow, entry.sourceCol)) {
-                            return entry;
+                            valid.push(entry);
                         }
                         continue;
                     }
                     if (directionSelectionFor(entry.dirIndex)) {
-                        return entry;
+                        valid.push(entry);
                     }
                 }
-                return null;
+                if (!valid.length) {
+                    return null;
+                }
+                if (!hasCustomPattern || valid.length === 1) {
+                    return valid[0];
+                }
+                let best = valid[0];
+                let bestScore = directionScoreForIndex(best.dirIndex, row, col);
+                for (let i = 1; i < valid.length; i++) {
+                    const entry = valid[i];
+                    const score = directionScoreForIndex(entry.dirIndex, row, col);
+                    if (score > bestScore) {
+                        bestScore = score;
+                        best = entry;
+                    }
+                }
+                return best;
             }
 
             function buildSplashCells(row, col) {
@@ -1308,6 +2001,45 @@
                     const entry = pickEntry(row, col);
                     if (!entry) {
                         return [];
+                    }
+                    if (dashLineMode) {
+                        if (entry.kind === 'selection') {
+                            if (helpers.isBlocked(entry.originRow, entry.originCol)) {
+                                return [[entry.originRow, entry.originCol]];
+                            }
+                            const cells = entry.patternCells ? entry.patternCells.slice() : [];
+                            if (helpers.withinBounds(entry.originRow, entry.originCol)) {
+                                cells.push([entry.originRow, entry.originCol]);
+                            }
+                            if (cells.length > 1) {
+                                const seen = new Set();
+                                return cells.filter(([cellRow, cellCol]) => {
+                                    const cellKey = coordKey(cellRow, cellCol);
+                                    if (seen.has(cellKey)) {
+                                        return false;
+                                    }
+                                    seen.add(cellKey);
+                                    return true;
+                                });
+                            }
+                            return cells;
+                        }
+                        const cells = entry.patternCells ? entry.patternCells.slice() : [];
+                        if (helpers.withinBounds(entry.originRow, entry.originCol)) {
+                            cells.push([entry.originRow, entry.originCol]);
+                        }
+                        if (cells.length > 1) {
+                            const seen = new Set();
+                            return cells.filter(([cellRow, cellCol]) => {
+                                const cellKey = coordKey(cellRow, cellCol);
+                                if (seen.has(cellKey)) {
+                                    return false;
+                                }
+                                seen.add(cellKey);
+                                return true;
+                            });
+                        }
+                        return cells;
                     }
                     if (entry.variant === 'splash') {
                         const sourceRow = entry.sourceRow;

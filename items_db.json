@@ -16812,31 +16812,6 @@
     "source_file": "G:/gpak-all/data/items/legendary_items.gon"
   },
   {
-    "item_code": "/*LevelUp",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "modifier",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 3,
-    "sets": null,
-    "stats": null,
-    "durability": null,
-    "aux": null,
-    "name_key": "Rare Candy",
-    "desc_key": "Use to level up a cat now.",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/modifiers.gon"
-  },
-  {
     "item_code": "LearnPassive",
     "item_name": "{str_aux_passive_name} Syringe",
     "item_name_texts": {
@@ -16908,156 +16883,6 @@
     "aux": null,
     "name_key": "ITEM_LEARNABILITY_NAME",
     "desc_key": "ITEM_LEARNABILITY_DESC",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/modifiers.gon"
-  },
-  {
-    "item_code": "Upgrade",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "modifier",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 4,
-    "sets": null,
-    "stats": null,
-    "durability": null,
-    "aux": null,
-    "name_key": "Upgrade",
-    "desc_key": "Use to have a cat upgrade a passive or active ability now.",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/modifiers.gon"
-  },
-  {
-    "item_code": "StatUp",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "modifier",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 5,
-    "sets": null,
-    "stats": null,
-    "durability": null,
-    "aux": null,
-    "name_key": "Stat Up",
-    "desc_key": "Use to have a cat gain stats now.",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/modifiers.gon"
-  },
-  {
-    "item_code": "StatShuffle",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "modifier",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 6,
-    "sets": null,
-    "stats": null,
-    "durability": null,
-    "aux": null,
-    "name_key": "Stat Shuffle",
-    "desc_key": "Use to have a cat shuffle their stats now.",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/modifiers.gon"
-  },
-  {
-    "item_code": "InstantHeal",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "modifier",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 7,
-    "sets": null,
-    "stats": null,
-    "durability": null,
-    "aux": null,
-    "name_key": "Heal",
-    "desc_key": "Use to have a cat heal now.",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/modifiers.gon"
-  },
-  {
-    "item_code": "CureDisorder",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "modifier",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 8,
-    "sets": null,
-    "stats": null,
-    "durability": null,
-    "aux": null,
-    "name_key": "Cure",
-    "desc_key": "Use to have a cat (i forgot what this does when writing the description TODO) now.",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/modifiers.gon"
-  },
-  {
-    "item_code": "TemporaryBuff",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "modifier",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 10,
-    "sets": null,
-    "stats": null,
-    "durability": null,
-    "aux": null,
-    "name_key": "Temp Buff",
-    "desc_key": "Use to have a cat get a temporary status effect for the next fight now.",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/modifiers.gon"
   },
@@ -21952,56 +21777,6 @@
     "source_file": "G:/gpak-all/data/items/trinkets.gon"
   },
   {
-    "item_code": "Rosary",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "trinket",
-    "rarity": "uncommon",
-    "is_consumable": false,
-    "frame": 77,
-    "sets": null,
-    "stats": null,
-    "durability": null,
-    "aux": null,
-    "name_key": "ITEM_ROSARY_NAME",
-    "desc_key": "ITEM_ROSARY_DESC",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/trinkets.gon"
-  },
-  {
-    "item_code": "WeatherVane",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "trinket",
-    "rarity": "uncommon",
-    "is_consumable": false,
-    "frame": 78,
-    "sets": null,
-    "stats": null,
-    "durability": null,
-    "aux": null,
-    "name_key": "ITEM_WEATHERVANE_NAME",
-    "desc_key": "ITEM_WEATHERVANE_DESC",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/trinkets.gon"
-  },
-  {
     "item_code": "Natural20",
     "item_name": "Natural 20",
     "item_name_texts": {
@@ -25101,31 +24876,6 @@
     "aux": null,
     "name_key": "ITEM_SKULLOFGLORG_NAME",
     "desc_key": "ITEM_SKULLOFGLORG_DESC",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/trinkets.gon"
-  },
-  {
-    "item_code": "Checkers",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "trinket",
-    "rarity": "rare",
-    "is_consumable": false,
-    "frame": 200,
-    "sets": null,
-    "stats": null,
-    "durability": null,
-    "aux": null,
-    "name_key": "Checkers",
-    "desc_key": "Use: Move 1 tile diagonally. If a unit is in the way, leap 2 tiles over it instead, dealing 4 damage to it and refresh this. You cannot use this to move to a tile you've previously occupied this turn.",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon"
   },

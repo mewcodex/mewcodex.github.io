@@ -1007,6 +1007,17 @@
             display: none;
         }
 
+        .target-visualizer-warning {
+            font-size: 0.85em;
+            color: #7a4a00;
+            background: #fff3d6;
+            border: 1px solid #f1c17d;
+            border-radius: 6px;
+            padding: 8px 10px;
+            margin-bottom: 8px;
+            display: none;
+        }
+
         .target-grid-wrapper {
             display: flex;
             gap: 16px;
@@ -1036,13 +1047,18 @@
 
         .target-cell.origin {
             border-color: #ffa84a;
-            background: #fff6e9;
+            background: #ffffff;
             cursor: default;
         }
 
         .target-cell-in-range {
             background: rgba(74, 108, 247, 0.15);
             border-color: rgba(74, 108, 247, 0.4);
+        }
+
+        .target-cell.origin.target-cell-in-range {
+            background: #fff6e9;
+            border-color: #ffa84a;
         }
 
         .target-cell-target {
@@ -1062,7 +1078,37 @@
             pointer-events: none;
         }
 
+        .target-cell-selected {
+            position: relative;
+            z-index: 1;
+            border-color: #2742a3;
+        }
+
+        .target-cell-selected::after {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            border-radius: 6px;
+            border: 2px solid #2742a3;
+            pointer-events: none;
+        }
+
+        .target-cell.origin.target-cell-target {
+            background: rgba(255, 168, 74, 0.55);
+            border-color: #f08d28;
+            color: #5f2f00;
+        }
+
+        .target-cell.origin.target-cell-target::after {
+            border-color: #f08d28;
+        }
+
         .target-cell-aoe {
+            background: rgba(245, 166, 35, 0.85);
+            border-color: #c77b09;
+        }
+
+        .target-cell.origin.target-cell-aoe {
             background: rgba(245, 166, 35, 0.85);
             border-color: #c77b09;
         }
@@ -1072,17 +1118,18 @@
         }
 
         .target-cell-blocked {
-            background: #2f3545;
-            border-color: #111527;
             position: relative;
         }
 
         .target-cell-blocked::after {
             content: '';
             position: absolute;
-            inset: 4px;
-            background: rgba(255, 255, 255, 0.18);
-            border-radius: 2px;
+            inset: 5px;
+            background: #111111;
+            border: 1px solid #050505;
+            border-radius: 50%;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+            pointer-events: none;
         }
 
         .target-grid-legend {
@@ -1308,6 +1355,7 @@
                         <button type="button" id="targetClearObstaclesBtn">Clear Obstacles</button>
                     </div>
                 </div>
+                <div class="target-visualizer-warning" id="targetVisualizerWarning"></div>
                 <div class="target-visualizer-error" id="targetVisualizerError"></div>
                 <div class="target-grid-wrapper">
                     <div class="target-grid" id="targetGrid"></div>
@@ -1446,11 +1494,14 @@
                 targetRenderMissingMode: 'Missing target_mode',
                 targetRenderParseError: 'Could not parse target line.',
                 targetRenderErrorPrefix: 'Unable to render:',
+                targetRenderWarningPrefix: 'Warning: renderer may not support:',
                 targetObstaclesHint: 'Click tiles to add or remove blockers, then preview line-of-sight abilities.',
                 targetAddObstacles: 'Add sample obstacles',
                 targetClearObstacles: 'Clear obstacles',
                 targetVariablesHeading: 'Variables',
                 targetVariablesHint: 'Adjust placeholders (default 0).',
+                targetVariableBonusMeleeRange: 'Reach',
+                targetVariableBonusRange: 'Range',
             },
             zh: {
                 pageTitle: 'Mewgenics 能力图鉴',
@@ -1518,11 +1569,14 @@
                 targetRenderMissingMode: '缺少 target_mode',
                 targetRenderParseError: '无法解析该目标行。',
                 targetRenderErrorPrefix: '无法渲染：',
+                targetRenderWarningPrefix: '警告：渲染器可能不支持：',
                 targetObstaclesHint: '点击格子设置/清除障碍，用于测试视线。',
                 targetAddObstacles: '添加示例障碍',
                 targetClearObstacles: '清除障碍',
                 targetVariablesHeading: '变量',
                 targetVariablesHint: '调整占位符（默认为 0）。',
+                targetVariableBonusMeleeRange: '延伸',
+                targetVariableBonusRange: '射程',
             }
         };
 
@@ -1969,13 +2023,19 @@
                 const targetButtons = [];
                 const baseTargetPayload = ability.target_text ? JSON.stringify(ability.target_text) : null;
                 const upgradedTargetPayload = ability.target_text_upgraded ? JSON.stringify(ability.target_text_upgraded) : null;
+                const baseDashPayload = JSON.stringify(ability.is_dash_attack === true);
+                const upgradedDashPayload = JSON.stringify(
+                    ability.is_dash_attack_upgraded === true
+                        ? true
+                        : ability.is_dash_attack === true
+                );
 
                 if (baseTargetPayload) {
-                    targetButtons.push(`<button type="button" class="target-button" onclick='openTargetModal(${modalNameArg}, ${baseTargetPayload}, false)'>${escapeHtml(t('rangeButtonLabel'))}</button>`);
+                    targetButtons.push(`<button type="button" class="target-button" onclick='openTargetModal(${modalNameArg}, ${baseTargetPayload}, false, ${baseDashPayload})'>${escapeHtml(t('rangeButtonLabel'))}</button>`);
                 }
 
                 if (upgradedTargetPayload) {
-                    targetButtons.push(`<button type="button" class="target-button upgraded" onclick='openTargetModal(${modalNameArg}, ${upgradedTargetPayload}, true)'>${escapeHtml(t('rangeButtonUpgradeLabel'))}</button>`);
+                    targetButtons.push(`<button type="button" class="target-button upgraded" onclick='openTargetModal(${modalNameArg}, ${upgradedTargetPayload}, true, ${upgradedDashPayload})'>${escapeHtml(t('rangeButtonUpgradeLabel'))}</button>`);
                 }
 
                 const targetButtonsHtml = targetButtons.length ? `<div class="target-button-column">${targetButtons.join('')}</div>` : '';
@@ -2155,7 +2215,7 @@
             }
         }
 
-        function openTargetModal(abilityName, targetText, isUpgrade) {
+        function openTargetModal(abilityName, targetText, isUpgrade, isDashAttack) {
             const modal = document.getElementById('targetModal');
             const titleEl = document.getElementById('targetModalTitle');
             const modalTitle = isUpgrade ? t('rangeModalTitleUpgraded') : t('rangeModalTitle');
@@ -2163,7 +2223,7 @@
 
             titleEl.textContent = displayName ? `${modalTitle} — ${displayName}` : modalTitle;
             if (targetRenderer && typeof targetRenderer.render === 'function') {
-                targetRenderer.render(targetText || '');
+                targetRenderer.render(targetText || '', { isDashAttack: !!isDashAttack });
             } else {
                 const fallbackBody = document.getElementById('targetModalBody');
                 if (fallbackBody) {
