@@ -25,6 +25,7 @@
         setLink('navMutations', `mutations.html${lang}`);
         setLink('navAchievements', `achievements.html${lang}`);
         setLink('navCharacters', `characters.html${lang}`);
+        setLink('navEvents', `events.html${lang}`);
     }
 
     function getLocalizedText(texts, fallback) {

@@ -1,0 +1,2249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mewgenics Events Viewer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --theme: #9f978b;
+            --theme-dark: #7f776b;
+            --theme-light: #c9c1b7;
+            --theme-bg: #efece7;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #efece7 0%, #c9c1b7 100%);
+            min-height: 100vh;
+            padding: 36px;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            box-shadow: inset 0 0 140px rgba(32, 28, 22, 0.6), inset 0 0 300px rgba(32, 28, 22, 0.45);
+            z-index: 10;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid rgba(159, 151, 139, 0.35);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25), 0 0 0 6px rgba(159, 151, 139, 0.18);
+            overflow: hidden;
+            position: relative;
+            z-index: 0;
+        }
+
+        .language-toggle {
+            position: absolute;
+            top: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            z-index: 2;
+            font-size: 0.95em;
+        }
+
+        .language-toggle .lang-link {
+            background: rgba(245, 245, 245, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            padding: 4px 8px;
+            cursor: pointer;
+            color: #4b453d;
+            text-decoration: none;
+            font-weight: 600;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+            border-radius: 999px;
+        }
+
+        .language-toggle .lang-link.active {
+            color: #2f2a23;
+            background: rgba(245, 245, 245, 0.95);
+        }
+
+        .language-toggle .lang-separator {
+            color: #4b453d;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+        }
+
+        .header-image {
+            display: block;
+            width: 100%;
+            max-width: 960px;
+            height: 240px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .header-image-wrap {
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(135deg, #9f978b 0%, #7f776b 100%);
+            padding: 12px 16px;
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, #827a6e 0%, #6d6559 100%);
+            border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            padding: 0;
+            overflow-x: hidden;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+
+        .navbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .navbar a {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            padding: 14px 32px;
+            font-size: 1em;
+            font-weight: 500;
+            transition: all 0.2s;
+            border-bottom: 3px solid transparent;
+            position: relative;
+            flex: 0 0 auto;
+        }
+
+        .navbar a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        .navbar a.active {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border-bottom-color: #efece7;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #9f978b 0%, #7f776b 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header-warning {
+            margin-top: 8px;
+            color: #ff4a4a;
+            font-weight: 700;
+            text-shadow: 0 1px 4px rgba(255, 255, 255, 0.65);
+        }
+
+        .passive-stats {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 6px;
+            font-size: 0.9em;
+        }
+
+        .passive-stat {
+            display: inline-flex;
+            align-items: center;
+            gap: 3px;
+            color: #666;
+            font-weight: 400;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .passive-stat.positive {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .passive-stat.negative {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .controls {
+            padding: 20px;
+            background: #f3f1ee;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .visibility-controls {
+            padding: 12px 20px 0;
+            background: #f7f4f0;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .visibility-controls label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #5b534a;
+            font-size: 0.95em;
+        }
+
+        .search-wrapper {
+            position: relative;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .controls input,
+        .controls select {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        .controls input {
+            width: 100%;
+            padding-right: 35px;
+        }
+
+        .clear-button {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #999;
+            font-size: 1.3em;
+            cursor: pointer;
+            padding: 0;
+            width: 24px;
+            height: 24px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.2s;
+        }
+
+        .clear-button:hover {
+            background: #e0e0e0;
+            color: #666;
+        }
+
+        .clear-button.visible {
+            display: flex;
+        }
+
+        .stats {
+            padding: 20px;
+            background: #f7f4f0;
+            display: flex;
+            gap: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .stat-item {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .stat-label {
+            font-weight: 600;
+            color: #9f978b;
+        }
+
+        .stat-value {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+        }
+
+        .event-panel {
+            position: fixed;
+            inset: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: calc(20px + env(safe-area-inset-top)) calc(20px + env(safe-area-inset-right)) calc(20px + env(safe-area-inset-bottom)) calc(20px + env(safe-area-inset-left));
+            background: rgba(18, 16, 12, 0.6);
+            z-index: 1400;
+        }
+
+        .event-panel.open {
+            display: flex;
+        }
+
+        .event-panel-card {
+            background: #fff;
+            width: min(880px, 92vw);
+            max-height: min(720px, 90vh);
+            border-radius: 12px;
+            border: 1px solid rgba(159, 151, 139, 0.35);
+            box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .event-panel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 20px 24px;
+            background: linear-gradient(135deg, #9f978b 0%, #7f776b 100%);
+            color: #fff;
+        }
+
+        .event-panel-header h2 {
+            margin: 0 0 6px 0;
+            font-size: 1.5em;
+        }
+
+        .event-panel-meta {
+            font-size: 0.95em;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .event-panel-close {
+            background: rgba(255, 255, 255, 0.15);
+            border: none;
+            color: #fff;
+            font-size: 1.5em;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .event-panel-close:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .event-panel-body {
+            padding: 24px;
+            overflow-y: auto;
+            background: #f7f4f0;
+        }
+
+        .event-panel-footer {
+            padding: 16px 24px;
+            background: #efece7;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .event-panel-back {
+            border: none;
+            background: #7f776b;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .event-panel-back[disabled] {
+            opacity: 0.5;
+            cursor: default;
+        }
+
+        .event-panel-finish {
+            border: none;
+            background: #4f7661;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .event-panel-finish:hover {
+            background: #3f604f;
+        }
+
+        .event-step-prompt {
+            font-size: 1.05em;
+            color: #333;
+            margin-bottom: 18px;
+            line-height: 1.6;
+        }
+
+        .event-step-subtitle {
+            font-size: 0.95em;
+            color: #666;
+            margin-bottom: 14px;
+        }
+
+        .event-step-layout {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .event-step-content {
+            flex: 1 1 auto;
+            min-width: 0;
+        }
+
+        .event-step-actions {
+            flex: 0 0 240px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .event-option-grid,
+        .event-result-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .event-option-button,
+        .event-result-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 12px;
+            border-radius: 8px;
+            border: 1px solid rgba(159, 151, 139, 0.4);
+            background: #fff;
+            color: #4b453d;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            width: 100%;
+            justify-content: flex-start;
+        }
+
+        .enter-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 1px solid rgba(159, 151, 139, 0.4);
+            background: #fff;
+            color: #4b453d;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .event-option-button:hover,
+        .event-result-button:hover {
+            background: #efece7;
+        }
+
+        .enter-button:hover {
+            background: #efece7;
+        }
+
+        .event-stat {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 600;
+            color: #5b534a;
+        }
+
+        .event-detail-list {
+            margin-top: 12px;
+        }
+
+        .event-detail-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .event-detail-card {
+            border-radius: 8px;
+            border: 1px solid rgba(159, 151, 139, 0.35);
+            background: #fff;
+            padding: 6px 12px;
+        }
+
+        .event-detail-card-title {
+            font-weight: 700;
+            color: #6a6157;
+            margin-bottom: 2px;
+            line-height: 1.35;
+        }
+
+        .event-detail-card-body {
+            color: #4b453d;
+            line-height: 1.35;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        .event-reward-box {
+            margin-top: 14px;
+            border-radius: 10px;
+            border: 1px solid #d7d1c7;
+            background: #fff;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+        }
+
+        .event-reward-header {
+            padding: 10px 14px;
+            border-bottom: 1px solid #e4dfd6;
+            background: #f3f1ee;
+            font-weight: 700;
+            color: #5b534a;
+        }
+
+        .event-reward-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 12px 14px 14px;
+        }
+
+        .event-reward-rarity {
+            border-radius: 8px;
+            border: 1px solid rgba(159, 151, 139, 0.35);
+            background: #faf8f5;
+            padding: 10px 12px;
+        }
+
+        .event-reward-title {
+            font-weight: 700;
+            color: #4b453d;
+            margin-bottom: 8px;
+        }
+
+        .event-reward-body {
+            color: #4b453d;
+            line-height: 1.5;
+            white-space: normal;
+        }
+
+        .event-reward-nested {
+            margin-top: 6px;
+            border-radius: 8px;
+            border: 1px dashed rgba(133, 124, 112, 0.6);
+            padding: 6px 12px;
+            background: #f3efe8;
+        }
+
+        .event-reward-entry-title {
+            font-weight: 700;
+            color: #6a6157;
+            margin-bottom: 2px;
+            line-height: 1.35;
+        }
+
+        .event-reward-entry {
+            margin-top: 6px;
+            border-radius: 6px;
+            border: 1px solid rgba(159, 151, 139, 0.35);
+            padding: 6px 12px;
+            background: #fff;
+        }
+
+        .event-reward-entry-prompt {
+            margin-bottom: 2px;
+            color: #4b453d;
+            font-weight: 600;
+            line-height: 1.35;
+        }
+
+        .event-reward-list {
+            margin-top: 6px;
+            border-radius: 8px;
+            border: 1px dashed rgba(133, 124, 112, 0.6);
+            padding: 6px 12px;
+            background: #f5f1ea;
+        }
+
+        .event-keyword-box {
+            margin-top: 6px;
+            border-radius: 8px;
+            border: 1px solid rgba(159, 151, 139, 0.4);
+            background: #fff;
+            padding: 6px 12px;
+        }
+
+        .event-keyword-box-item {
+            border-color: rgba(188, 152, 67, 0.7);
+            background: #fff7d1;
+        }
+
+        .event-keyword-box-bad {
+            border-color: rgba(165, 73, 73, 0.7);
+            background: #fbe3e3;
+        }
+
+        .event-keyword-box-neutral {
+            border-color: rgba(159, 151, 139, 0.45);
+            background: #fff;
+        }
+
+        .event-keyword-title {
+            font-weight: 700;
+            color: #6a6157;
+            margin-bottom: 2px;
+            line-height: 1.35;
+        }
+
+        .event-keyword-body {
+            color: #4b453d;
+            line-height: 1.35;
+        }
+
+        .event-reward-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .event-raw-block {
+            background: #fff;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            padding: 16px;
+            color: #333;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+        }
+
+        .img-icon {
+            width: 18px;
+            height: 18px;
+            vertical-align: middle;
+        }
+
+        .img-icon-event {
+            width: 18px;
+            height: 18px;
+            object-fit: contain;
+        }
+
+        @media (max-width: 900px) {
+            .event-step-layout {
+                flex-direction: column;
+            }
+
+            .event-step-actions {
+                flex: 1 1 auto;
+                width: 100%;
+            }
+        }
+
+        table {
+            width: 100%;
+            min-width: 960px;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f3f1ee;
+            border-bottom: 2px solid #ddd;
+            color: #333;
+        }
+
+        thead th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            color: #333;
+            white-space: nowrap;
+            min-width: 120px;
+        }
+
+        thead th.sortable {
+            cursor: pointer;
+            user-select: none;
+            position: relative;
+        }
+
+        thead th.sortable:hover {
+            background: rgba(159, 151, 139, 0.1);
+        }
+
+        th .sort-indicator {
+            margin-left: 5px;
+            font-size: 0.8em;
+            color: #999;
+        }
+
+        th.sort-asc .sort-indicator::after {
+            content: '▲';
+            color: #9f978b;
+        }
+
+        th.sort-desc .sort-indicator::after {
+            content: '▼';
+            color: #9f978b;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid #eee;
+            transition: background 0.2s;
+        }
+
+        tbody tr:hover {
+            background: #f9f9f9;
+        }
+
+        tbody td {
+            padding: 12px 15px;
+            vertical-align: top;
+            min-width: 120px;
+        }
+
+        .mutation-name {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .description {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .source-comment {
+            color: #888;
+            font-size: 0.9em;
+            font-style: italic;
+            margin-top: 8px;
+            padding: 8px;
+            background: #f9f9f9;
+            border-left: 3px solid #9f978b;
+            border-radius: 2px;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+
+        .tag-badge {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(159, 151, 139, 0.18);
+            color: #5b534a;
+            padding: 3px 7px;
+            border-radius: 999px;
+            font-size: 0.85em;
+            margin: 2px 4px 2px 0;
+        }
+
+        code {
+            background: #e8e8e8;
+            border-radius: 3px;
+            padding: 2px 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #333;
+        }
+
+        .announcement-button {
+            position: fixed;
+            top: 14px;
+            left: 14px;
+            z-index: 1200;
+            background: #9f978b;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 8px 14px;
+            font-size: 0.9em;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+        }
+
+        .announcement-button:hover {
+            background: #7f776b;
+        }
+
+        .announcement-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1300;
+            align-items: center;
+            justify-content: center;
+            padding: calc(20px + env(safe-area-inset-top)) calc(20px + env(safe-area-inset-right)) calc(20px + env(safe-area-inset-bottom)) calc(20px + env(safe-area-inset-left));
+        }
+
+        .announcement-card {
+            background: #fff;
+            max-width: 560px;
+            width: 100%;
+            max-height: calc(100vh - 40px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+            border-radius: 10px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+            border: 1px solid rgba(159, 151, 139, 0.4);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .announcement-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 20px;
+            background: #f3f1ee;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .announcement-header h2 {
+            font-size: 1.1em;
+            color: #5b534a;
+        }
+
+        .announcement-close {
+            background: none;
+            border: none;
+            font-size: 1.4em;
+            color: #7f776b;
+            cursor: pointer;
+        }
+
+        .announcement-body {
+            padding: 18px 20px 10px;
+            color: #4b453d;
+            line-height: 1.6;
+            overflow-y: auto;
+        }
+
+        .announcement-body pre {
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 10px 12px;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+
+        .announcement-body ul,
+        .announcement-body ol {
+            margin: 8px 0 8px 20px;
+            padding-left: 16px;
+            list-style-position: outside;
+        }
+
+        .announcement-body li {
+            margin: 4px 0;
+        }
+
+        .announcement-body ul ul,
+        .announcement-body ul ol,
+        .announcement-body ol ul,
+        .announcement-body ol ol {
+            margin-top: 4px;
+            margin-bottom: 4px;
+        }
+
+        .announcement-footer {
+            padding: 0 20px 18px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .announcement-lang {
+            display: inline-flex;
+            gap: 8px;
+        }
+
+        .announcement-lang-btn {
+            background: #efece7;
+            border: 1px solid rgba(159, 151, 139, 0.4);
+            color: #5b534a;
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-size: 0.85em;
+            cursor: pointer;
+        }
+
+        .announcement-lang-btn.active {
+            background: #9f978b;
+            color: #fff;
+            border-color: #9f978b;
+        }
+
+        .img-icon {
+            display: inline-block;
+            height: 1em;
+            width: auto;
+            object-fit: contain;
+            vertical-align: -0.2em;
+            margin: 0 2px;
+        }
+
+        .img-icon-shield {
+            width: auto;
+            height: 1em;
+            object-fit: contain;
+        }
+
+        .img-icon-stat {
+            filter: brightness(0) saturate(100%);
+        }
+
+        .img-icon-stat.img-icon-no-filter {
+            filter: none;
+        }
+
+        .footer {
+            padding: 20px;
+            text-align: center;
+            color: #777;
+            font-size: 0.9em;
+            border-top: 1px solid #ddd;
+            background: #f7f4f0;
+        }
+
+        .footer p {
+            margin: 6px 0;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 16px;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .navbar {
+                justify-content: flex-start;
+                overflow-x: auto;
+            }
+
+            .language-toggle {
+                top: 12px;
+                right: 12px;
+                left: auto;
+                transform: none;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <button class="announcement-button" id="announcementButton" type="button">Announcement</button>
+    <div class="announcement-modal" id="announcementModal">
+        <div class="announcement-card" role="dialog" aria-modal="true" aria-labelledby="announcementTitle">
+            <div class="announcement-header">
+                <h2 id="announcementTitle">Announcement</h2>
+                <button class="announcement-close" id="announcementClose" type="button" aria-label="Close">×</button>
+            </div>
+            <div class="announcement-body" id="announcementBody"></div>
+            <div class="announcement-footer">
+                <div class="announcement-lang" role="group" aria-label="Language">
+                    <button type="button" class="announcement-lang-btn" id="announcementLangEn"
+                        data-lang="en">English</button>
+                    <button type="button" class="announcement-lang-btn" id="announcementLangZh"
+                        data-lang="zh">中文</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="language-toggle" role="group" aria-label="Language">
+            <button type="button" class="lang-link" id="langButtonEn" data-lang="en">English</button>
+            <span class="lang-separator">/</span>
+            <button type="button" class="lang-link" id="langButtonZh" data-lang="zh">中文</button>
+        </div>
+        <div class="header-image-wrap">
+            <img src="header.jpg" alt="Mewgenics header" class="header-image">
+        </div>
+        <div class="navbar">
+            <a href="index.html" id="navAbilities">Abilities</a>
+            <a href="passives.html" id="navPassives">Passives</a>
+            <a href="items.html" id="navItems">Items</a>
+            <a href="mutations.html" id="navMutations">Mutations</a>
+            <a href="events.html" class="active" id="navEvents">Events</a>
+            <a href="achievements.html" id="navAchievements">Achievements</a>
+            <a href="characters.html" id="navCharacters">Characters</a>
+        </div>
+        <div class="header">
+            <h1 id="headerTitle">Mewgenics Events Viewer</h1>
+            <div class="header-warning" id="headerWarning">DEMO: Early beta testing. Results may be incorrect, including
+                localization.</div>
+        </div>
+
+        <div class="controls">
+            <div class="search-wrapper">
+                <input type="text" id="searchInput" placeholder="Search by event title or prompt...">
+                <button class="clear-button" id="clearButton" title="Clear search">×</button>
+            </div>
+        </div>
+
+        <div class="visibility-controls">
+            <label for="showHiddenToggle">
+                <input type="checkbox" id="showHiddenToggle">
+                <span id="showHiddenLabel">Show Hidden</span>
+            </label>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-label" id="totalLabel">Total Events:</span>
+                <span class="stat-value" id="totalCount">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label" id="showingLabel">Showing:</span>
+                <span class="stat-value" id="showingCount">0</span>
+            </div>
+        </div>
+
+        <div class="table-wrapper">
+            <table id="eventsTable">
+                <thead>
+                    <tr>
+                        <th id="titleHeader" class="sortable" style="width: 220px;" onclick="sortBy('title')">Title<span
+                                class="sort-indicator"></span></th>
+                        <th id="choiceHeader" class="sortable" style="width: 160px;" onclick="sortBy('choice')">Cat
+                            Choice<span class="sort-indicator"></span></th>
+                        <th id="promptHeader">Main Prompt</th>
+                        <th id="enterHeader" style="width: 140px;">Enter</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <tr>
+                        <td colspan="4" class="no-results" id="loadingMessage">Loading events...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="event-panel" id="eventPanel" aria-hidden="true">
+            <div class="event-panel-card" role="dialog" aria-modal="true" aria-labelledby="eventPanelTitle">
+                <div class="event-panel-header">
+                    <div>
+                        <h2 id="eventPanelTitle">Event</h2>
+                        <div class="event-panel-meta" id="eventPanelMeta"></div>
+                    </div>
+                    <button class="event-panel-close" id="eventPanelClose" type="button" aria-label="Close">×</button>
+                </div>
+                <div class="event-panel-body" id="eventPanelBody"></div>
+                <div class="event-panel-footer">
+                    <button type="button" class="event-panel-back" id="eventPanelBack">Back</button>
+                    <button type="button" class="event-panel-finish" id="eventPanelFinish">Finish</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p id="footerSource">Free fan site with data from game event definitions.</p>
+            <p id="footerCredit">Original game by Edmund McMillen and Tyler Glaiel.</p>
+            <p id="footerAuthor">Created by: Bilibili@Alriph</p>
+            <p id="footerTranslator">Chinese translation: Bilibili@地下丝绒和妮可</p>
+            <p id="footerTools">Tools used: mewgpaks, JPEXS FFDec</p>
+        </div>
+    </div>
+
+    <script src="js/codex-utils.js"></script>
+    <script src="js/codex-i18n.js"></script>
+    <script src="announcement.js"></script>
+    <script>
+        let allEvents = [];
+        let filteredEvents = [];
+        let eventsByKey = new Map();
+        let displayedEvents = [];
+        let currentLanguage = initLanguage('en');
+        window.currentLanguage = currentLanguage;
+        let currentSort = { column: 'title', direction: 'asc' };
+        let currentEvent = null;
+        let stepStack = [];
+        const ANNOUNCEMENT_SEEN_KEY = 'codexAnnouncementSeen_v1';
+
+        function setLanguage(lang) {
+            codexSetLanguage(lang, () => {
+                currentLanguage = window.currentLanguage;
+                applyUiLanguage();
+                filterEvents();
+            });
+        }
+
+        const urlLang = getUrlParameter('lang');
+        if (urlLang === 'zh' || urlLang === 'en') {
+            currentLanguage = urlLang;
+            window.currentLanguage = currentLanguage;
+        }
+
+        const UI_TEXT = mergeUiText(COMMON_UI_TEXT, {
+            en: {
+                pageTitle: 'Mewgenics Events Viewer',
+                headerTitle: 'Mewgenics Events Viewer',
+                searchPlaceholder: 'Search by event title or prompt...',
+                totalEvents: 'Total Events:',
+                showing: 'Showing:',
+                titleHeader: 'Title',
+                choiceHeader: 'Cat Choice',
+                promptHeader: 'Main Prompt',
+                enterHeader: 'Enter',
+                enterButton: 'Enter',
+                loading: 'Loading events...',
+                noResults: 'No events found matching your filters.',
+                errorLoading: 'Error loading events:',
+                solution: 'Solution:',
+                runServer: 'Run the server script to browse the events:',
+                thenOpen: 'Then open:',
+                footerSource: 'Free fan site with data from game event definitions.',
+                backButton: 'Back',
+                finishButton: 'Finish',
+                goodResult: 'Good result',
+                badResult: 'Bad result',
+                resultLabel: 'Result',
+                selectOutcomePrompt: 'Select the outcome for this check:',
+                noResultData: 'No result data found for this option.',
+                detailsLabel: 'Details',
+                rewardLabel: 'Reward',
+                rewardOther: 'Other',
+                randomPoolLabel: 'Get a random one from the list:',
+                weightLabel: 'Received with weight {weight}:',
+                optionLabel: 'Option:',
+                promptLabel: 'Prompt:',
+                statLabel: 'Stat check:',
+                headerWarning: 'DEMO: Early beta testing. Results may be incorrect.',
+                showHiddenLabel: 'Show Hidden',
+                catChoiceRandom: 'Random',
+                catChoiceChoose: 'Choose',
+                catChoiceNone: 'None',
+                panelTitleFallback: 'Event',
+                tokenCatname: 'cat name',
+                tokenHis: 'his',
+                tokenHisCap: 'His',
+                tokenHim: 'him',
+                tokenHe: 'he',
+                tokenHeCap: 'He',
+                keywordRandomPool: 'Random pool',
+                keywordGetItemFromPool: 'Get an item',
+                keywordLoseItem: 'Lose an item',
+                keywordEventNowSameCat: 'Next event (same cat)',
+            },
+            zh: {
+                pageTitle: 'Mewgenics 事件图鉴',
+                headerTitle: 'Mewgenics 事件图鉴',
+                searchPlaceholder: '按事件标题或提示搜索...',
+                totalEvents: '事件总数：',
+                showing: '显示：',
+                titleHeader: '标题',
+                choiceHeader: '猫咪选择',
+                promptHeader: '主要提示',
+                enterHeader: '进入',
+                enterButton: '进入',
+                loading: '正在加载事件...',
+                noResults: '没有找到符合筛选条件的事件。',
+                errorLoading: '加载事件失败：',
+                solution: '解决方法：',
+                runServer: '运行本地服务器脚本以浏览事件：',
+                thenOpen: '然后打开：',
+                footerSource: '这是一个免费同人站点，数据来自游戏事件定义。',
+                backButton: '返回',
+                finishButton: '完成',
+                goodResult: '好结果',
+                badResult: '坏结果',
+                resultLabel: '结果',
+                selectOutcomePrompt: '请选择这次检定的结果：',
+                noResultData: '此选项没有结果数据。',
+                detailsLabel: '细节',
+                rewardLabel: '奖励',
+                rewardOther: '其他',
+                randomPoolLabel: '从列表中随机获得：',
+                weightLabel: '权重 {weight}：',
+                optionLabel: '选项：',
+                promptLabel: '提示：',
+                statLabel: '检定属性：',
+                headerWarning: 'DEMO：早期测试版本，结果可能完全不准确。',
+                showHiddenLabel: '显示隐藏',
+                catChoiceRandom: '随机',
+                catChoiceChoose: '选择',
+                catChoiceNone: '无',
+                panelTitleFallback: '事件',
+                tokenCatname: '猫名',
+                tokenHis: '他的',
+                tokenHisCap: '他的',
+                tokenHim: '他',
+                tokenHe: '他',
+                tokenHeCap: '他',
+                keywordRandomPool: '随机池',
+                keywordGetItemFromPool: '获得物品',
+                keywordLoseItem: '失去物品',
+                keywordEventNowSameCat: '下一事件（同一只猫）',
+            }
+        });
+
+        const t = createTranslator(UI_TEXT);
+
+        const RARITY_LABELS = {
+            en: {
+                common: 'Common',
+                uncommon: 'Uncommon',
+                uncommmon: 'Uncommmon',
+                medium: 'Medium',
+                rare: 'Rare',
+                very_rare: 'Very Rare',
+                quest: 'Quest',
+                sidequest: 'Side Quest',
+            },
+            zh: {
+                common: '普通',
+                uncommon: '罕见',
+                uncommmon: '罕罕见',
+                medium: '中等',
+                rare: '稀有',
+                very_rare: '超稀有',
+                quest: '任务',
+                sidequest: '支线任务',
+            }
+        };
+
+
+        function applyUiLanguage() {
+            document.title = t('pageTitle');
+            document.getElementById('headerTitle').textContent = t('headerTitle');
+            document.getElementById('headerWarning').textContent = t('headerWarning');
+            document.getElementById('searchInput').placeholder = t('searchPlaceholder');
+            document.getElementById('navAbilities').textContent = t('navAbilities');
+            document.getElementById('navItems').textContent = t('navItems');
+            document.getElementById('navPassives').textContent = t('navPassives');
+            document.getElementById('navMutations').textContent = t('navMutations');
+            document.getElementById('navAchievements').textContent = t('navAchievements');
+            document.getElementById('navCharacters').textContent = t('navCharacters');
+            const navEvents = document.getElementById('navEvents');
+            if (navEvents) {
+                navEvents.textContent = t('navEvents');
+            }
+            document.getElementById('langButtonEn').textContent = t('languageEnglish');
+            document.getElementById('langButtonZh').textContent = t('languageChinese');
+            document.getElementById('totalLabel').textContent = t('totalEvents');
+            document.getElementById('showingLabel').textContent = t('showing');
+            document.getElementById('showHiddenLabel').textContent = t('showHiddenLabel');
+            document.getElementById('titleHeader').innerHTML = t('titleHeader') + '<span class="sort-indicator"></span>';
+            document.getElementById('choiceHeader').innerHTML = t('choiceHeader') + '<span class="sort-indicator"></span>';
+            document.getElementById('promptHeader').textContent = t('promptHeader');
+            document.getElementById('enterHeader').textContent = t('enterHeader');
+            document.getElementById('footerSource').textContent = t('footerSource');
+            document.getElementById('footerCredit').textContent = t('footerCredit');
+            document.getElementById('footerAuthor').textContent = t('footerAuthor');
+            document.getElementById('footerTranslator').textContent = t('footerTranslator');
+            document.getElementById('footerTools').textContent = t('footerTools');
+            document.getElementById('announcementButton').textContent = t('announcementButton');
+            document.getElementById('announcementTitle').textContent = t('announcementTitle');
+            document.getElementById('announcementLangEn').textContent = t('languageEnglish');
+            document.getElementById('announcementLangZh').textContent = t('languageChinese');
+            updateAnnouncementLanguageButtons();
+            loadAnnouncementContent();
+
+            updateNavbarLinks();
+
+            const loadingMessage = document.getElementById('loadingMessage');
+            if (loadingMessage) {
+                loadingMessage.textContent = t('loading');
+            }
+
+            document.getElementById('langButtonEn').classList.toggle('active', currentLanguage === 'en');
+            document.getElementById('langButtonZh').classList.toggle('active', currentLanguage === 'zh');
+        }
+
+        async function loadEvents() {
+            try {
+                const response = await fetch('events_combined.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                allEvents = data.events || [];
+                filteredEvents = allEvents;
+                eventsByKey = new Map(allEvents.map((eventData) => [eventData.event_key, eventData]));
+
+                document.getElementById('totalCount').textContent = allEvents.length;
+                applyUiLanguage();
+                updateClearButtonVisibility();
+                filterEvents();
+            } catch (error) {
+                console.error('Error loading events:', error);
+                const errorMsg = `
+                    <tr><td colspan="4" class="no-results">
+                        <p style="margin-bottom: 10px;"><strong>${escapeHtml(t('errorLoading'))}</strong> ${escapeHtml(error.message)}</p>
+                        <p style="font-size: 0.9em; color: #666; line-height: 1.5;">
+                            <strong>${escapeHtml(t('solution'))}</strong><br>
+                            ${escapeHtml(t('runServer'))}<br>
+                            <code style="background: #f5f5f5; padding: 5px 10px; border-radius: 3px; display: inline-block;">python serve.py</code><br>
+                            <br>
+                            ${escapeHtml(t('thenOpen'))} <code style="background: #f5f5f5; padding: 5px 10px; border-radius: 3px; display: inline-block;">http://localhost:8000/events.html</code>
+                        </p>
+                    </td></tr>
+                `;
+                document.getElementById('tableBody').innerHTML = errorMsg;
+            }
+        }
+        function getLocalizedTextOrKey(texts, fallbackKey) {
+            const localized = getLocalizedText(texts, '');
+            if (localized) {
+                return localized;
+            }
+            return fallbackKey || '';
+        }
+
+        function formatCatChoice(choice) {
+            const normalized = (choice || '').toLowerCase();
+            if (normalized === 'random') {
+                return t('catChoiceRandom');
+            }
+            if (normalized === 'choose') {
+                return t('catChoiceChoose');
+            }
+            if (normalized === 'none') {
+                return t('catChoiceNone');
+            }
+            return choice || '';
+        }
+
+        function getEventTitle(eventData) {
+            return getLocalizedTextOrKey(eventData.title_texts, eventData.title_key || eventData.event_key || '');
+        }
+
+        function hasLocalizedTitle(eventData) {
+            const localized = getLocalizedText(eventData.title_texts, '');
+            return Boolean(localized && localized.trim());
+        }
+
+        function getEventPrompt(eventData) {
+            return getLocalizedTextOrKey(eventData.main_prompt_texts, eventData.main_prompt_key || '');
+        }
+
+        function getOptionLabel(option) {
+            return getLocalizedTextOrKey(option.label_texts, option.label_key || option.name || '');
+        }
+
+        function resolveStatIconName(stat) {
+            if (!stat) {
+                return '';
+            }
+            if (stat === 'coins') {
+                return 'coins';
+            }
+            return mapFontIconName(stat);
+        }
+
+        function buildStatIconHtml(stat) {
+            if (!stat || stat === 'none') {
+                return '';
+            }
+            const iconName = resolveStatIconName(stat);
+            if (!iconName) {
+                return '';
+            }
+            return `<img src="eventicon/${iconName}.png" alt="${escapeHtml(stat)}" class="img-icon img-icon-event" onerror="this.style.display='none'">`;
+        }
+
+        function displayEvents(events) {
+            const tbody = document.getElementById('tableBody');
+            if (!events || events.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="4" class="no-results">${escapeHtml(t('noResults'))}</td></tr>`;
+                document.getElementById('showingCount').textContent = '0';
+                return;
+            }
+
+            displayedEvents = events;
+
+            tbody.innerHTML = events.map((eventData, index) => {
+                const title = getEventTitle(eventData);
+                const prompt = getEventPrompt(eventData);
+                const choice = formatCatChoice(eventData.cat_choice);
+                return `
+                    <tr>
+                        <td><div class="mutation-name">${escapeHtml(title)}</div></td>
+                        <td>${escapeHtml(choice)}</td>
+                        <td><div class="description">${parseRichText(prompt)}</div></td>
+                        <td><button class="enter-button" data-event-key="${escapeHtml(eventData.event_key || '')}">${escapeHtml(t('enterButton'))}</button></td>
+                    </tr>
+                `;
+            }).join('');
+
+            document.getElementById('showingCount').textContent = events.length;
+        }
+
+        function sortBy(column) {
+            if (currentSort.column === column) {
+                currentSort.direction = currentSort.direction === 'asc' ? 'desc' : 'asc';
+            } else {
+                currentSort.column = column;
+                currentSort.direction = 'asc';
+            }
+
+            document.querySelectorAll('thead th').forEach(th => {
+                th.classList.remove('sort-asc', 'sort-desc');
+            });
+            const headerMap = {
+                title: 'titleHeader',
+                choice: 'choiceHeader',
+            };
+            const header = document.getElementById(headerMap[column]);
+            if (header) {
+                header.classList.add(`sort-${currentSort.direction}`);
+            }
+
+            displayEvents(sortEvents(filteredEvents));
+        }
+
+        function sortEvents(events) {
+            return [...events].sort((a, b) => {
+                let valueA = '';
+                let valueB = '';
+
+                if (currentSort.column === 'choice') {
+                    valueA = (a.cat_choice || '').toLowerCase();
+                    valueB = (b.cat_choice || '').toLowerCase();
+                } else {
+                    valueA = (getEventTitle(a) || '').toLowerCase();
+                    valueB = (getEventTitle(b) || '').toLowerCase();
+                }
+
+                if (valueA < valueB) return currentSort.direction === 'asc' ? -1 : 1;
+                if (valueA > valueB) return currentSort.direction === 'asc' ? 1 : -1;
+
+                const tieA = a.event_key || '';
+                const tieB = b.event_key || '';
+                return tieA.localeCompare(tieB);
+            });
+        }
+
+        function updateClearButtonVisibility() {
+            const searchInput = document.getElementById('searchInput');
+            const clearButton = document.getElementById('clearButton');
+
+            if (searchInput.value) {
+                clearButton.classList.add('visible');
+            } else {
+                clearButton.classList.remove('visible');
+            }
+        }
+
+        function clearSearch() {
+            document.getElementById('searchInput').value = '';
+            updateClearButtonVisibility();
+            filterEvents();
+        }
+
+        function parseRichText(text) {
+            if (!text) return '';
+
+            let html = escapeHtml(text);
+            const tokenMap = {
+                '{catname}': t('tokenCatname'),
+                '{his}': t('tokenHis'),
+                '{His}': t('tokenHisCap'),
+                '{him}': t('tokenHim'),
+                '{he}': t('tokenHe'),
+                '{He}': t('tokenHeCap'),
+            };
+            for (const [token, replacement] of Object.entries(tokenMap)) {
+                const safe = escapeHtml(replacement);
+                html = html.replaceAll(token, `<code>${safe}</code>`);
+            }
+            html = html.replace(/\[s:[^\]]+\]([\s\S]*?)\[\/s\]/g, '<i>$1</i>');
+            html = html.replace(/\[i\]([\s\S]*?)\[\/i\]/g, '<i>$1</i>');
+            html = html.replace(/\[b\]([\s\S]*?)\[\/b\]/g, '<b>$1</b>');
+            html = html.replace(/\[img:([^\]]+)\]/g, function (match, iconName) {
+                const iconMap = { 'con': 'constitution' };
+                const noFilterIcons = new Set(['health', 'movement', 'hp']);
+                const mappedName = iconMap[iconName] || iconName;
+                const isShield = iconName === 'shield' || iconName === 'divineshield';
+                const baseClass = isShield
+                    ? 'img-icon img-icon-shield'
+                    : 'img-icon img-icon-stat';
+                const className = noFilterIcons.has(mappedName)
+                    ? `${baseClass} img-icon-no-filter`
+                    : baseClass;
+
+                return `<img src="res/fonticon/${mappedName}.png" alt="${iconName}" title="${iconName}" class="${className}" onerror="this.style.display='none'">`;
+            });
+            html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
+            html = html.replace(/\n/g, '<br>');
+
+            return html;
+        }
+
+        function getOutcomePrompt(option, outcome) {
+            if (!option) {
+                return '';
+            }
+            const promptKey = outcome === 'bad'
+                ? option.bad_prompt_key
+                : option.good_prompt_key;
+            const promptTexts = outcome === 'bad'
+                ? option.bad_prompt_texts
+                : option.good_prompt_texts;
+            return getLocalizedTextOrKey(promptTexts, promptKey);
+        }
+
+        function extractTextKeyFromLine(line) {
+            const match = line.match(/"([^"]+)"/);
+            if (match) {
+                return match[1];
+            }
+            const parts = line.trim().split(/\s+/);
+            if (parts.length >= 2) {
+                return parts[1];
+            }
+            return '';
+        }
+
+        function getPromptText(promptKey, promptTextMap) {
+            if (!promptKey) {
+                return '';
+            }
+            const texts = promptTextMap && promptTextMap[promptKey];
+            return getLocalizedTextOrKey(texts, promptKey);
+        }
+
+        function formatWeightLabel(weight) {
+            return t('weightLabel').replace('{weight}', weight);
+        }
+
+        function getKeywordTitle(token) {
+            if (!token) {
+                return '';
+            }
+            switch (token) {
+                case 'random_pool':
+                    return t('keywordRandomPool');
+                case 'get_item_from_pool':
+                    return t('keywordGetItemFromPool');
+                case 'lose_item':
+                    return t('keywordLoseItem');
+                case 'event_now_same_cat':
+                    return t('keywordEventNowSameCat');
+                default:
+                    return '';
+            }
+        }
+
+        function renderKeywordLine(line) {
+            const trimmed = line.trim();
+            if (!trimmed) {
+                return '';
+            }
+            const key = trimmed.split(/\s+/)[0];
+            const title = getKeywordTitle(key);
+            if (!title) {
+                const rest = trimmed.slice(key.length).trim();
+                if (rest && /^[A-Za-z_][A-Za-z0-9_]*$/.test(key)) {
+                    return `
+                        <div class="event-keyword-box event-keyword-box-neutral">
+                            <div class="event-keyword-title">${escapeHtml(key)}</div>
+                            <div class="event-keyword-body">${parseRichText(rest)}</div>
+                        </div>
+                    `;
+                }
+                return `<div>${parseRichText(line)}</div>`;
+            }
+            let body = trimmed.slice(key.length).trim();
+            if (key === 'get_item_from_pool' && body && !body.startsWith('{')) {
+                body = `pool ${body}`;
+            }
+            const bodyHtml = body ? `<div class="event-keyword-body">${parseRichText(body)}</div>` : '';
+            let boxClass = 'event-keyword-box';
+            if (key === 'get_item_from_pool') {
+                boxClass = 'event-keyword-box event-keyword-box-item';
+            } else if (key === 'lose_item') {
+                boxClass = 'event-keyword-box event-keyword-box-bad';
+            } else if (key === 'event_now_same_cat') {
+                boxClass = 'event-keyword-box event-keyword-box-neutral';
+            }
+            return `
+                <div class="${boxClass}">
+                    <div class="event-keyword-title">${escapeHtml(title)}</div>
+                    ${bodyHtml}
+                </div>
+            `;
+        }
+
+        function stripInlineComment(line) {
+            return line.split('//', 1)[0];
+        }
+
+        function shouldSkipLine(line) {
+            const token = (line.trim().split(/\s+/)[0] || '').toLowerCase();
+            return token === 'set_frame'
+                || token === 'animation'
+                || token === 'animation_fail'
+                || token === 'play_animation';
+        }
+
+        function buildBlockTree(code) {
+            const root = { name: 'root', lines: [], children: [] };
+            const stack = [root];
+            const lines = (code || '').split('\n');
+            for (const raw of lines) {
+                const noComment = stripInlineComment(raw);
+                const trimmed = noComment.trim();
+                if (!trimmed) {
+                    continue;
+                }
+                const openMatch = trimmed.match(/^([A-Za-z0-9_]+)\s*{\s*$/);
+                if (openMatch) {
+                    const node = { name: openMatch[1], lines: [], children: [] };
+                    stack[stack.length - 1].children.push(node);
+                    stack.push(node);
+                    continue;
+                }
+                const openListMatch = trimmed.match(/^([A-Za-z0-9_]+)\s*\[\s*$/);
+                if (openListMatch) {
+                    const node = { name: openListMatch[1], lines: [], children: [] };
+                    stack[stack.length - 1].children.push(node);
+                    stack.push(node);
+                    continue;
+                }
+                if (trimmed === '{') {
+                    const node = { name: 'entry', lines: [], children: [] };
+                    stack[stack.length - 1].children.push(node);
+                    stack.push(node);
+                    continue;
+                }
+                if (trimmed === '[') {
+                    const node = { name: 'list', lines: [], children: [] };
+                    stack[stack.length - 1].children.push(node);
+                    stack.push(node);
+                    continue;
+                }
+                if (trimmed === '}') {
+                    if (stack.length > 1) {
+                        stack.pop();
+                    }
+                    continue;
+                }
+                if (trimmed === ']') {
+                    if (stack.length > 1) {
+                        stack.pop();
+                    }
+                    continue;
+                }
+                stack[stack.length - 1].lines.push(trimmed);
+            }
+            return root;
+        }
+
+        function formatNodeValue(node) {
+            const pieces = [];
+            for (const line of node.lines) {
+                if (!shouldSkipLine(line)) {
+                    pieces.push(line);
+                }
+            }
+            for (const child of node.children) {
+                if (child.name === 'reward') {
+                    continue;
+                }
+                const childValue = formatNodeValue(child);
+                if (childValue) {
+                    pieces.push(`${child.name} { ${childValue} }`);
+                }
+            }
+            return pieces.join('; ');
+        }
+
+        function collectDetailsFromNode(node) {
+            const entries = [];
+            for (const line of node.lines) {
+                if (shouldSkipLine(line)) {
+                    continue;
+                }
+                if (line.startsWith('prompt')) {
+                    continue;
+                }
+                const parts = line.split(/\s+/);
+                const key = parts[0];
+                const value = line.slice(key.length).trim();
+                entries.push({ key, value });
+            }
+            for (const child of node.children) {
+                if (child.name === 'reward' || child.name === 'random_pool' || child.name === 'list' || child.name === 'entry') {
+                    continue;
+                }
+                const value = formatNodeValue(child);
+                if (value) {
+                    entries.push({ key: child.name, value });
+                }
+            }
+            return entries;
+        }
+
+        function collectTopLevelListNodes(node) {
+            if (!node || !node.children) {
+                return [];
+            }
+            return node.children.filter((child) => child && (child.name === 'random_pool' || child.name === 'list'));
+        }
+
+        function collectListNodes(node, results) {
+            if (!node || !node.children) {
+                return;
+            }
+            for (const child of node.children) {
+                if (!child) {
+                    continue;
+                }
+                if (child.name === 'random_pool' || child.name === 'list') {
+                    results.push(child);
+                    continue;
+                }
+                collectListNodes(child, results);
+            }
+        }
+
+        function collectRewardNodes(node, results) {
+            for (const child of node.children) {
+                if (child.name === 'reward') {
+                    results.push(child);
+                }
+                collectRewardNodes(child, results);
+            }
+        }
+
+        function getRarityLabel(rarity) {
+            const langMap = RARITY_LABELS[currentLanguage] || RARITY_LABELS.en;
+            return langMap[rarity] || rarity;
+        }
+
+        function parseOutcomeCode(code) {
+            if (!code) {
+                return { details: [], rewards: [] };
+            }
+            const tree = buildBlockTree(code);
+            const rewardNodes = [];
+            collectRewardNodes(tree, rewardNodes);
+            const details = collectDetailsFromNode(tree);
+            let rewards = rewardNodes.map((node) => {
+                const rarityBlocks = [];
+                const otherLines = [];
+                for (const line of node.lines) {
+                    if (!shouldSkipLine(line)) {
+                        otherLines.push(line);
+                    }
+                }
+                for (const child of node.children) {
+                    if (child) {
+                        rarityBlocks.push({ rarity: child.name, node: child });
+                    }
+                }
+                if (otherLines.length) {
+                    rarityBlocks.push({ rarity: 'other', body: otherLines.join('; ') });
+                }
+                return rarityBlocks;
+            });
+            if (rewards.length === 0) {
+                const listNodes = [];
+                collectListNodes(tree, listNodes);
+                if (listNodes.length) {
+                    rewards = listNodes.map((node) => [{ rarity: 'other', node }]);
+                }
+            }
+            return { details, rewards };
+        }
+
+        function renderDetailsList(details) {
+            if (!details || details.length === 0) {
+                return '';
+            }
+            const rows = details.map((entry) => {
+                const key = (entry.key || '').trim();
+                const value = entry.value ? parseRichText(entry.value) : '';
+                if (getKeywordTitle(key)) {
+                    const line = value ? `${key} ${entry.value}` : key;
+                    return renderKeywordLine(line);
+                }
+                return `
+                    <div class="event-detail-card">
+                        <div class="event-detail-card-title">${escapeHtml(key)}</div>
+                        <div class="event-detail-card-body">${value || ''}</div>
+                    </div>
+                `;
+            }).join('');
+            return `
+                <div class="event-detail-list" aria-label="${escapeHtml(t('detailsLabel'))}">
+                    <div class="event-detail-stack">${rows}</div>
+                </div>
+            `;
+        }
+
+        function renderRewardBoxes(rewardGroups, promptTextMap) {
+            if (!rewardGroups || rewardGroups.length === 0) {
+                return '';
+            }
+            return rewardGroups.map((group) => {
+                if (!group || group.length === 0) {
+                    return '';
+                }
+                const itemsHtml = group.map((item) => {
+                    const rarityName = item.rarity === 'other'
+                        ? t('rewardOther')
+                        : getRarityLabel(item.rarity);
+                    const isListNode = item.node && (item.node.name === 'random_pool' || item.node.name === 'list');
+                    const showTitle = !(item.rarity === 'other' && isListNode);
+                    const bodyHtml = item.node
+                        ? renderRewardContent(item.node, promptTextMap)
+                        : parseRichText(item.body || '');
+                    return `
+                        <div class="event-reward-rarity">
+                            ${showTitle ? `<div class="event-reward-title">${escapeHtml(rarityName)}</div>` : ''}
+                            <div class="event-reward-body">${bodyHtml}</div>
+                        </div>
+                    `;
+                }).join('');
+                return `
+                    <div class="event-reward-box">
+                        <div class="event-reward-header">${escapeHtml(t('rewardLabel'))}</div>
+                        <div class="event-reward-grid">${itemsHtml}</div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function renderRewardContent(node, promptTextMap) {
+            if (!node) {
+                return '';
+            }
+            if (node.name === 'random_pool' || node.name === 'list') {
+                const title = node.name === 'random_pool'
+                    ? getKeywordTitle('random_pool')
+                    : t('randomPoolLabel');
+                const childrenHtml = node.children.map((child) => {
+                    return renderRewardContent(child, promptTextMap);
+                }).join('');
+                return `
+                    <div class="event-reward-list">
+                        <div class="event-reward-entry-title">${escapeHtml(title)}</div>
+                        ${childrenHtml}
+                    </div>
+                `;
+            }
+
+            if (node.name === 'get_item_from_pool') {
+                const title = getKeywordTitle('get_item_from_pool');
+                const linesHtml = node.lines
+                    .filter((line) => !shouldSkipLine(line))
+                    .map((line) => `<div>${parseRichText(line)}</div>`)
+                    .join('');
+                const childrenHtml = node.children.map((child) => {
+                    return renderRewardContent(child, promptTextMap);
+                }).join('');
+                return `
+                    <div class="event-keyword-box event-keyword-box-item">
+                        <div class="event-keyword-title">${escapeHtml(title)}</div>
+                        <div class="event-keyword-body">${linesHtml}</div>
+                        ${childrenHtml}
+                    </div>
+                `;
+            }
+
+            if (node.name === 'entry') {
+                let weightValue = '';
+                let promptKey = '';
+                const otherLines = [];
+                for (const line of node.lines) {
+                    if (shouldSkipLine(line)) {
+                        continue;
+                    }
+                    if (line.startsWith('weight')) {
+                        weightValue = line.slice('weight'.length).trim();
+                        continue;
+                    }
+                    if (line.startsWith('prompt')) {
+                        promptKey = extractTextKeyFromLine(line);
+                        continue;
+                    }
+                    otherLines.push(line);
+                }
+                const title = weightValue
+                    ? formatWeightLabel(weightValue)
+                    : '';
+                const hasKeywordOnlyLines = otherLines.length > 0
+                    && otherLines.every((line) => {
+                        const token = (line.trim().split(/\s+/)[0] || '').toLowerCase();
+                        return Boolean(getKeywordTitle(token));
+                    });
+                const hasNonKeywordLines = otherLines.length > 0 && !hasKeywordOnlyLines;
+                const hasPromptOnly = Boolean(promptKey) && otherLines.length === 0;
+                const shouldShowOther = !weightValue && (hasNonKeywordLines || hasPromptOnly);
+                const resolvedTitle = title || (shouldShowOther ? t('rewardOther') : '');
+                const promptText = getPromptText(promptKey, promptTextMap);
+                const promptHtml = promptText
+                    ? `<div class="event-reward-entry-prompt">${parseRichText(promptText)}</div>`
+                    : '';
+                const linesHtml = otherLines.map((line) => {
+                    return renderKeywordLine(line);
+                }).join('');
+                const childrenHtml = node.children.map((child) => {
+                    return renderRewardContent(child, promptTextMap);
+                }).join('');
+                const hasTitle = Boolean(resolvedTitle);
+                const hasPrompt = Boolean(promptHtml);
+                const hasLines = Boolean(linesHtml);
+                const hasOwnContent = hasTitle || hasPrompt || hasLines;
+                if (!hasOwnContent && childrenHtml) {
+                    return `<div class="event-reward-stack">${childrenHtml}</div>`;
+                }
+                if (!hasTitle && !hasPrompt && hasKeywordOnlyLines) {
+                    return `<div class="event-reward-stack">${linesHtml}${childrenHtml}</div>`;
+                }
+                return `
+                    <div class="event-reward-entry">
+                        ${resolvedTitle ? `<div class="event-reward-entry-title">${escapeHtml(resolvedTitle)}</div>` : ''}
+                        ${promptHtml}
+                        ${linesHtml}
+                        ${childrenHtml}
+                    </div>
+                `;
+            }
+
+            const parts = [];
+            for (const line of node.lines) {
+                if (shouldSkipLine(line)) {
+                    continue;
+                }
+                if (line.startsWith('prompt')) {
+                    const key = extractTextKeyFromLine(line);
+                    const promptText = getPromptText(key, promptTextMap);
+                    parts.push(`<div>${parseRichText(promptText || key)}</div>`);
+                } else {
+                    parts.push(renderKeywordLine(line));
+                }
+            }
+            const nestedBlocks = node.children.map((child) => {
+                if (!child) {
+                    return '';
+                }
+                if (child.name === 'random_pool' || child.name === 'list') {
+                    return renderRewardContent(child, promptTextMap);
+                }
+                const keywordTitle = getKeywordTitle(child.name);
+                const blockTitle = keywordTitle || child.name;
+                const childHtml = renderRewardContent(child, promptTextMap);
+                if (!childHtml || !childHtml.trim()) {
+                    return '';
+                }
+                return `
+                    <div class="event-reward-nested">
+                        <div class="event-reward-entry-title">${escapeHtml(blockTitle)}</div>
+                        ${childHtml}
+                    </div>
+                `;
+            }).join('');
+            return `${parts.join('')}${nestedBlocks}`;
+        }
+
+        function filterEvents() {
+            const search = document.getElementById('searchInput').value.toLowerCase();
+            const showHidden = document.getElementById('showHiddenToggle')?.checked;
+
+            filteredEvents = allEvents.filter(eventData => {
+                if (!showHidden && !hasLocalizedTitle(eventData)) {
+                    return false;
+                }
+                const title = (getEventTitle(eventData) || '').toLowerCase();
+                const prompt = (getEventPrompt(eventData) || '').toLowerCase();
+                const choice = (eventData.cat_choice || '').toLowerCase();
+                const key = (eventData.event_key || '').toLowerCase();
+
+                return title.includes(search)
+                    || prompt.includes(search)
+                    || choice.includes(search)
+                    || key.includes(search);
+            });
+
+            displayEvents(sortEvents(filteredEvents));
+        }
+
+        function resolveOptionResults(option, eventData) {
+            let current = option;
+            const visited = new Set();
+            while (current && current.copy_results) {
+                if (visited.has(current.copy_results)) {
+                    break;
+                }
+                visited.add(current.copy_results);
+                const target = (eventData.options || []).find(entry => entry.name === current.copy_results);
+                if (!target) {
+                    break;
+                }
+                if (current.good_code || current.bad_code) {
+                    break;
+                }
+                current = target;
+            }
+            return current || option;
+        }
+
+        function pushStep(step) {
+            stepStack.push(step);
+            renderCurrentStep();
+        }
+
+        function popStep() {
+            if (stepStack.length > 1) {
+                stepStack.pop();
+                renderCurrentStep();
+                return;
+            }
+            closeEventPanel();
+        }
+
+        function isFinalStep(step) {
+            if (!step) {
+                return false;
+            }
+            if (step.type === 'result') {
+                return true;
+            }
+            if (step.type === 'options') {
+                return !step.options || step.options.length === 0;
+            }
+            return false;
+        }
+
+        function openEventPanel(eventData) {
+            currentEvent = eventData;
+            stepStack = [];
+            const prompt = getEventPrompt(eventData);
+            if (eventData.fixed_outcome && (!eventData.options || eventData.options.length === 0)) {
+                const resolved = {
+                    prompt_texts: eventData.outcome_prompt_texts || {},
+                };
+                pushStep({ type: 'result', prompt, outcome: 'good', resultText: eventData.outcome_code || '', resolved });
+            } else {
+                pushStep({ type: 'options', prompt, options: eventData.options || [] });
+            }
+
+            const panel = document.getElementById('eventPanel');
+            const title = getEventTitle(eventData) || t('panelTitleFallback');
+            document.getElementById('eventPanelTitle').textContent = title;
+            document.getElementById('eventPanelMeta').textContent = `${t('choiceHeader')}: ${formatCatChoice(eventData.cat_choice)}`;
+            panel.classList.add('open');
+            panel.setAttribute('aria-hidden', 'false');
+        }
+
+        function closeEventPanel() {
+            const panel = document.getElementById('eventPanel');
+            panel.classList.remove('open');
+            panel.setAttribute('aria-hidden', 'true');
+            currentEvent = null;
+            stepStack = [];
+        }
+
+        function renderCurrentStep() {
+            const step = stepStack[stepStack.length - 1];
+            const body = document.getElementById('eventPanelBody');
+            const backButton = document.getElementById('eventPanelBack');
+            const finishButton = document.getElementById('eventPanelFinish');
+            if (!step) {
+                body.innerHTML = '';
+                return;
+            }
+
+            if (step.type === 'options') {
+                body.innerHTML = renderOptionsStep(step);
+            } else if (step.type === 'result-choice') {
+                body.innerHTML = renderResultChoiceStep(step, true);
+            } else if (step.type === 'examine') {
+                body.innerHTML = renderResultChoiceStep(step, true);
+            } else if (step.type === 'result') {
+                body.innerHTML = renderResultStep(step);
+            }
+
+            backButton.textContent = t('backButton');
+            backButton.disabled = false;
+            finishButton.textContent = t('finishButton');
+            finishButton.style.display = isFinalStep(step) ? 'inline-flex' : 'none';
+        }
+
+        function renderOptionsStep(step) {
+            const promptHtml = parseRichText(step.prompt || '');
+            const optionsHtml = (step.options || []).map((option, index) => {
+                const label = getOptionLabel(option);
+                const iconHtml = buildStatIconHtml(option.stat);
+                const labelHtml = iconHtml
+                    ? `${iconHtml} ${escapeHtml(label)}`
+                    : escapeHtml(label);
+                return `<button class="event-option-button" data-action="option" data-index="${index}">${labelHtml}</button>`;
+            }).join('');
+
+            return `
+                <div class="event-step-layout">
+                    <div class="event-step-content">
+                        <div class="event-step-prompt">${promptHtml}</div>
+                    </div>
+                    <div class="event-step-actions">
+                        <div class="event-option-grid">${optionsHtml}</div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderResultChoiceStep(step, showStat) {
+            const promptHtml = parseRichText(step.prompt || '');
+
+            return `
+                <div class="event-step-layout">
+                    <div class="event-step-content">
+                        <div class="event-step-prompt">${promptHtml}</div>
+                        <div class="event-step-subtitle">${escapeHtml(t('selectOutcomePrompt'))}</div>
+                    </div>
+                    <div class="event-step-actions">
+                        <div class="event-result-grid">
+                            <button class="event-result-button" data-action="result" data-outcome="good">${escapeHtml(t('goodResult'))}</button>
+                            <button class="event-result-button" data-action="result" data-outcome="bad">${escapeHtml(t('badResult'))}</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderResultStep(step) {
+            const promptText = step.prompt || '';
+            const promptHtml = parseRichText(promptText);
+            const resultText = step.resultText || '';
+            const resolved = step.resolved || step.option || {};
+            const promptTextMap = resolved.prompt_texts || {};
+            const parsed = parseOutcomeCode(resultText);
+            const detailsHtml = renderDetailsList(parsed.details);
+            const rewardsHtml = renderRewardBoxes(parsed.rewards, promptTextMap);
+            const hasContent = detailsHtml || rewardsHtml;
+            return `
+                <div class="event-step-prompt">${promptHtml}</div>
+                ${hasContent ? `${detailsHtml}${rewardsHtml}` : ''}
+            `;
+        }
+
+
+        document.getElementById('searchInput').addEventListener('input', () => {
+            updateClearButtonVisibility();
+            filterEvents();
+        });
+        document.getElementById('showHiddenToggle').addEventListener('change', filterEvents);
+        document.getElementById('clearButton').addEventListener('click', clearSearch);
+        document.querySelectorAll('.lang-link').forEach(button => {
+            button.addEventListener('click', () => {
+                const selectedLang = button.getAttribute('data-lang');
+                setLanguage(selectedLang);
+            });
+        });
+        document.getElementById('tableBody').addEventListener('click', (event) => {
+            const button = event.target.closest('.enter-button');
+            if (!button) {
+                return;
+            }
+            const eventKey = button.getAttribute('data-event-key') || '';
+            const eventData = eventsByKey.get(eventKey) || displayedEvents.find((entry) => entry.event_key === eventKey);
+            if (eventData) {
+                openEventPanel(eventData);
+            }
+        });
+        document.getElementById('eventPanelBody').addEventListener('click', (event) => {
+            const actionButton = event.target.closest('[data-action]');
+            if (!actionButton || !currentEvent) {
+                return;
+            }
+            const action = actionButton.getAttribute('data-action');
+            const step = stepStack[stepStack.length - 1];
+
+            if (action === 'option' && step && step.type === 'options') {
+                const index = Number(actionButton.getAttribute('data-index'));
+                const option = (step.options || [])[index];
+                if (!option) {
+                    return;
+                }
+                const resolved = resolveOptionResults(option, currentEvent);
+                const hasGood = resolved.good_code && resolved.good_code.length > 0;
+                const hasBad = resolved.bad_code && resolved.bad_code.length > 0;
+
+                if (option.name === 'examine') {
+                    pushStep({ type: 'examine', prompt: step.prompt, option, resolved });
+                    return;
+                }
+
+                if (hasGood && hasBad) {
+                    pushStep({ type: 'result-choice', prompt: step.prompt, option, resolved });
+                    return;
+                }
+
+                const outcome = hasBad && !hasGood ? 'bad' : 'good';
+                const resultText = outcome === 'bad' ? resolved.bad_code : resolved.good_code;
+                const outcomePrompt = getOutcomePrompt(resolved, outcome) || step.prompt;
+                pushStep({ type: 'result', prompt: outcomePrompt, option, outcome, resultText, resolved });
+            }
+
+            if (action === 'result' && step && (step.type === 'result-choice' || step.type === 'examine')) {
+                const outcome = actionButton.getAttribute('data-outcome');
+                const resolved = step.resolved || step.option || {};
+                const resultText = outcome === 'bad' ? resolved.bad_code : resolved.good_code;
+                const outcomePrompt = getOutcomePrompt(resolved, outcome) || step.prompt;
+                pushStep({ type: 'result', prompt: outcomePrompt, option: step.option, outcome, resultText, resolved });
+            }
+        });
+        document.getElementById('eventPanelBack').addEventListener('click', popStep);
+        document.getElementById('eventPanelFinish').addEventListener('click', closeEventPanel);
+        document.getElementById('eventPanelClose').addEventListener('click', closeEventPanel);
+        document.getElementById('eventPanel').addEventListener('click', (event) => {
+            if (event.target.id === 'eventPanel') {
+                closeEventPanel();
+            }
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            applyUiLanguage();
+            initAnnouncement();
+            maybeShowAnnouncement();
+        });
+
+        window.addEventListener('load', loadEvents);
+    </script>
+</body>
+
+</html>

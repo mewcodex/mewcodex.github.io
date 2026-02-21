@@ -1020,6 +1020,7 @@
             <a href="passives.html" id="navPassives">Passives</a>
             <a href="items.html" id="navItems">Items</a>
             <a href="mutations.html" id="navMutations">Mutations</a>
+            <a href="events.html" id="navEvents">Events</a>
             <a href="achievements.html" id="navAchievements">Achievements</a>
             <a href="characters.html" class="active" id="navCharacters">Characters</a>
         </div>
@@ -1247,6 +1248,10 @@
             document.getElementById('navItems').textContent = t('navItems');
             document.getElementById('navPassives').textContent = t('navPassives');
             document.getElementById('navMutations').textContent = t('navMutations');
+            const navEvents = document.getElementById('navEvents');
+            if (navEvents) {
+                navEvents.textContent = t('navEvents');
+            }
             document.getElementById('navAchievements').textContent = t('navAchievements');
             document.getElementById('navCharacters').textContent = t('navCharacters');
             document.getElementById('langButtonEn').textContent = t('languageEnglish');
