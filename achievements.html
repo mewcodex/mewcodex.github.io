@@ -231,6 +231,12 @@
             text-decoration: none;
         }
 
+        .achievement-icon-link.monoclass-run {
+            outline: 2px solid #d63031;
+            outline-offset: 1px;
+            border-radius: 0;
+        }
+
         .achievement-icon {
             width: 44px;
             height: 44px;
@@ -318,8 +324,7 @@
             z-index: 1300;
             align-items: center;
             justify-content: center;
-            padding: calc(20px + env(safe-area-inset-top)) calc(20px + env(safe-area-inset-right))
-                calc(20px + env(safe-area-inset-bottom)) calc(20px + env(safe-area-inset-left));
+            padding: calc(20px + env(safe-area-inset-top)) calc(20px + env(safe-area-inset-right)) calc(20px + env(safe-area-inset-bottom)) calc(20px + env(safe-area-inset-left));
         }
 
         .announcement-card {
@@ -602,6 +607,7 @@
                 strAuxActiveName: '`random active ability`',
                 strAuxActiveDesc: '`random active ability description`',
                 strAuxAttribute: '`random attribute`',
+                monoclassRunHint: 'Requires mono-class (Colorless-only) run',
             },
             zh: {
                 pageTitle: 'Mewgenics 成就总览',
@@ -628,8 +634,15 @@
                 strAuxActiveName: '`随机主动技能`',
                 strAuxActiveDesc: '`随机主动技能描述`',
                 strAuxAttribute: '`随机属性`',
+                monoclassRunHint: '需要无项圈单职业通关',
             }
         });
+
+        const MONOCLASS_REQUIRED_ITEMS = new Set([
+            'CopycatHat',
+            'CopycatMask',
+            'CopycatScarf'
+        ]);
 
         const CLASS_LABELS = {
             en: {
@@ -842,13 +855,16 @@
         function buildEntryIcon(entry) {
             const label = getEntryName(entry);
             const link = makeEntryLink(entry);
-            const title = escapeHtml(label);
+            const isMonoclassItem = entry.type === 'item' && MONOCLASS_REQUIRED_ITEMS.has(entry.code);
+            const hintText = isMonoclassItem ? ` - ${t('monoclassRunHint')}` : '';
+            const title = escapeHtml(label + hintText);
+            const linkClass = isMonoclassItem ? 'achievement-icon-link monoclass-run' : 'achievement-icon-link';
 
             if (entry.type === 'item') {
                 const iconPath = getItemIconPath(entry);
                 const rarityBg = getRarityBackgroundPath(entry);
                 return `
-                    <a href="${link}" class="achievement-icon-link" title="${title}" aria-label="${title}">
+                    <a href="${link}" class="${linkClass}" title="${title}" aria-label="${title}">
                         <span class="achievement-item-wrapper" style="background-image: url('${rarityBg}')">
                             <img src="${iconPath}" class="achievement-item-icon" alt="${title}" onerror="this.style.display='none'">
                         </span>
@@ -864,7 +880,7 @@
                 : 'achievement-icon';
 
             return `
-                <a href="${link}" class="achievement-icon-link" title="${title}" aria-label="${title}">
+                <a href="${link}" class="${linkClass}" title="${title}" aria-label="${title}">
                     <img src="${iconPath}" class="${iconClass}" alt="${title}" onerror="this.style.display='none'">
                 </a>
             `;

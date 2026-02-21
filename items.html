@@ -705,8 +705,7 @@
             z-index: 1300;
             align-items: center;
             justify-content: center;
-            padding: calc(20px + env(safe-area-inset-top)) calc(20px + env(safe-area-inset-right))
-                calc(20px + env(safe-area-inset-bottom)) calc(20px + env(safe-area-inset-left));
+            padding: calc(20px + env(safe-area-inset-top)) calc(20px + env(safe-area-inset-right)) calc(20px + env(safe-area-inset-bottom)) calc(20px + env(safe-area-inset-left));
         }
 
         .announcement-card {
@@ -1105,6 +1104,7 @@
                 strAuxActiveName: '`random active ability`',
                 strAuxActiveDesc: '`random active ability description`',
                 footerSource: 'Free fan site with data from game item definitions.',
+                monoclassRunHint: 'Requires mono-class (Colorless-only) run',
             },
             zh: {
                 pageTitle: 'Mewgenics 物品图鉴',
@@ -1144,6 +1144,7 @@
                 strAuxActiveName: '`随机主动技能`',
                 strAuxActiveDesc: '`随机主动技能描述`',
                 footerSource: '这是一个免费同人站点，数据来自游戏物品定义。',
+                monoclassRunHint: '需要无项圈单职业通关',
             }
         });
 
@@ -1213,6 +1214,12 @@
                 3: '不可能',
             }
         };
+
+        const MONOCLASS_REQUIRED_ITEMS = new Set([
+            'CopycatHat',
+            'CopycatMask',
+            'CopycatScarf'
+        ]);
 
         const RARITY_LABELS = {
             en: {
@@ -1779,7 +1786,7 @@
                         <td>
                             ${statsHtml}
                             <div class="description">${parseRichText(localizedDescription + durabilityText) || ''}</div>
-                            ${buildUnlockRequirementsHtml(item.unlock_requirements)}
+                            ${buildUnlockRequirementsHtml(item.unlock_requirements, item.item_code)}
                             ${item.description_notes ? `<div class="source-comment">${escapeHtml(t('sourceCommentsLabel'))} ${escapeHtml(item.description_notes)}</div>` : ''}
                             ${getEditorNote(item.item_code) ? `<div class="source-comment">${escapeHtml(t('editorNotesLabel'))} ${escapeHtml(getEditorNote(item.item_code))}</div>` : ''}
                         </td>
@@ -2153,7 +2160,7 @@
             return label || String(requiredDifficulty);
         }
 
-        function buildUnlockRequirementsHtml(requirements) {
+        function buildUnlockRequirementsHtml(requirements, itemCode) {
             if (!Array.isArray(requirements) || requirements.length === 0) {
                 return '';
             }
@@ -2192,6 +2199,11 @@
 
             if (lines.length === 0) {
                 return '';
+            }
+
+            const needsMonoclassRun = itemCode && MONOCLASS_REQUIRED_ITEMS.has(itemCode);
+            if (needsMonoclassRun) {
+                lines.push(t('monoclassRunHint'));
             }
 
             const linesHtml = lines.map(line => escapeHtml(line)).join('<br>');
