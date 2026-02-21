@@ -397,14 +397,15 @@
             z-index: 1300;
             align-items: center;
             justify-content: center;
-            padding: 20px;
+            padding: calc(20px + env(safe-area-inset-top)) calc(20px + env(safe-area-inset-right))
+                calc(20px + env(safe-area-inset-bottom)) calc(20px + env(safe-area-inset-left));
         }
 
         .announcement-card {
             background: #fff;
             max-width: 560px;
             width: 100%;
-            max-height: calc(100vh - 40px);
+            max-height: calc(100vh - 40px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
             border-radius: 10px;
             box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
             border: 1px solid rgba(159, 151, 139, 0.4);
