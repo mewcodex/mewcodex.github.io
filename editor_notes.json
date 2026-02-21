@@ -582,5 +582,9 @@
     "Pliers": {
         "zh": "隐藏效果：20%几率获得“臼齿”。",
         "en": "Hidden effect: 20% chance to gain 'Molars'."
+    },
+    "MomsKnife": {
+        "zh": "解锁条件：妈刀事件力量检定通过后作为稀有奖励小概率解锁。",
+        "en": "Unlock condition: Unlocked as a rare reward with a small chance after passing the strength check in the Mom's Knife event."
     }
 }
