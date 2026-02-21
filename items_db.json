@@ -11314,7 +11314,12 @@
       {
         "type": "beat_house_boss",
         "boss": "guillotina_3",
-        "required_difficulty": 3
+        "required_difficulty": 3,
+        "boss_name_key": "BOSS_GUILLOTINA_3_NAME",
+        "boss_name_texts": {
+          "en": "Guillotina 3",
+          "zh": "吉洛蒂娜 3"
+        }
       }
     ]
   },
@@ -11348,7 +11353,12 @@
       {
         "type": "beat_house_boss",
         "boss": "terminator_3",
-        "required_difficulty": 3
+        "required_difficulty": 3,
+        "boss_name_key": "BOSS_TERMINATOR_3_NAME",
+        "boss_name_texts": {
+          "en": "Hitler III",
+          "zh": "希特勒三世"
+        }
       }
     ]
   },
@@ -14674,7 +14684,12 @@
       {
         "type": "beat_house_boss",
         "boss": "guillotina_3",
-        "required_difficulty": 1
+        "required_difficulty": 1,
+        "boss_name_key": "BOSS_GUILLOTINA_3_NAME",
+        "boss_name_texts": {
+          "en": "Guillotina 3",
+          "zh": "吉洛蒂娜 3"
+        }
       }
     ]
   },
@@ -14708,7 +14723,12 @@
       {
         "type": "beat_chapter_boss",
         "boss": "dimensionx",
-        "required_difficulty": 2
+        "required_difficulty": 2,
+        "boss_name_key": "AREA_NAME_DIMENSIONX",
+        "boss_name_texts": {
+          "en": "The Rift",
+          "zh": "裂隙"
+        }
       }
     ]
   },
@@ -14745,7 +14765,12 @@
       {
         "type": "beat_house_boss",
         "boss": "guillotina_1",
-        "required_difficulty": 2
+        "required_difficulty": 2,
+        "boss_name_key": "BOSS_GUILLOTINA_1_NAME",
+        "boss_name_texts": {
+          "en": "Guillotina 1",
+          "zh": "吉洛蒂娜 1"
+        }
       }
     ]
   },
@@ -14779,7 +14804,12 @@
       {
         "type": "beat_chapter_boss",
         "boss": "dimensionx",
-        "required_difficulty": 3
+        "required_difficulty": 3,
+        "boss_name_key": "AREA_NAME_DIMENSIONX",
+        "boss_name_texts": {
+          "en": "The Rift",
+          "zh": "裂隙"
+        }
       }
     ]
   },
@@ -14813,7 +14843,12 @@
       {
         "type": "beat_house_boss",
         "boss": "zaratana",
-        "required_difficulty": 3
+        "required_difficulty": 3,
+        "boss_name_key": "BOSS_ZARATANA_NAME",
+        "boss_name_texts": {
+          "en": "Zaratana",
+          "zh": "扎拉塔娜"
+        }
       }
     ]
   },
@@ -16672,7 +16707,12 @@
       {
         "type": "beat_chapter_boss",
         "boss": "meatworld",
-        "required_difficulty": 1
+        "required_difficulty": 1,
+        "boss_name_key": "AREA_NAME_MEATWORLD",
+        "boss_name_texts": {
+          "en": "The Throbbing Domain",
+          "zh": "搏动领域"
+        }
       }
     ]
   },
@@ -16706,7 +16746,12 @@
       {
         "type": "beat_chapter_boss",
         "boss": "dimensionx",
-        "required_difficulty": 1
+        "required_difficulty": 1,
+        "boss_name_key": "AREA_NAME_DIMENSIONX",
+        "boss_name_texts": {
+          "en": "The Rift",
+          "zh": "裂隙"
+        }
       }
     ]
   },
@@ -16738,7 +16783,12 @@
       {
         "type": "beat_chapter_boss",
         "boss": "endoftime",
-        "required_difficulty": 1
+        "required_difficulty": 1,
+        "boss_name_key": "AREA_NAME_ENDOFTIME",
+        "boss_name_texts": {
+          "en": "The Infinite",
+          "zh": "无限界"
+        }
       }
     ]
   },
@@ -16770,7 +16820,12 @@
       {
         "type": "beat_house_boss",
         "boss": "guillotina_1",
-        "required_difficulty": 1
+        "required_difficulty": 1,
+        "boss_name_key": "BOSS_GUILLOTINA_1_NAME",
+        "boss_name_texts": {
+          "en": "Guillotina 1",
+          "zh": "吉洛蒂娜 1"
+        }
       }
     ]
   },
@@ -16808,7 +16863,12 @@
       {
         "type": "beat_house_boss",
         "boss": "terminator_3",
-        "required_difficulty": 1
+        "required_difficulty": 1,
+        "boss_name_key": "BOSS_TERMINATOR_3_NAME",
+        "boss_name_texts": {
+          "en": "Hitler III",
+          "zh": "希特勒三世"
+        }
       }
     ]
   },
@@ -16845,7 +16905,12 @@
       {
         "type": "beat_house_boss",
         "boss": "terminator_3",
-        "required_difficulty": 2
+        "required_difficulty": 2,
+        "boss_name_key": "BOSS_TERMINATOR_3_NAME",
+        "boss_name_texts": {
+          "en": "Hitler III",
+          "zh": "希特勒三世"
+        }
       }
     ]
   },
@@ -16881,7 +16946,12 @@
       {
         "type": "beat_house_boss",
         "boss": "pyrophina",
-        "required_difficulty": 2
+        "required_difficulty": 2,
+        "boss_name_key": "BOSS_PYROPHINA_NAME",
+        "boss_name_texts": {
+          "en": "Pyrophina",
+          "zh": "派罗菲娜"
+        }
       }
     ]
   },
@@ -16915,7 +16985,12 @@
       {
         "type": "beat_chapter_boss",
         "boss": "meatworld",
-        "required_difficulty": 3
+        "required_difficulty": 3,
+        "boss_name_key": "AREA_NAME_MEATWORLD",
+        "boss_name_texts": {
+          "en": "The Throbbing Domain",
+          "zh": "搏动领域"
+        }
       }
     ]
   },
@@ -16949,7 +17024,12 @@
       {
         "type": "beat_house_boss",
         "boss": "pyrophina",
-        "required_difficulty": 3
+        "required_difficulty": 3,
+        "boss_name_key": "BOSS_PYROPHINA_NAME",
+        "boss_name_texts": {
+          "en": "Pyrophina",
+          "zh": "派罗菲娜"
+        }
       }
     ]
   },
@@ -19373,7 +19453,12 @@
       {
         "type": "beat_house_boss",
         "boss": "pyrophina",
-        "required_difficulty": 1
+        "required_difficulty": 1,
+        "boss_name_key": "BOSS_PYROPHINA_NAME",
+        "boss_name_texts": {
+          "en": "Pyrophina",
+          "zh": "派罗菲娜"
+        }
       }
     ]
   },
@@ -19410,7 +19495,12 @@
       {
         "type": "beat_house_boss",
         "boss": "zaratana",
-        "required_difficulty": 1
+        "required_difficulty": 1,
+        "boss_name_key": "BOSS_ZARATANA_NAME",
+        "boss_name_texts": {
+          "en": "Zaratana",
+          "zh": "扎拉塔娜"
+        }
       }
     ]
   },
@@ -19447,7 +19537,12 @@
       {
         "type": "beat_chapter_boss",
         "boss": "meatworld",
-        "required_difficulty": 2
+        "required_difficulty": 2,
+        "boss_name_key": "AREA_NAME_MEATWORLD",
+        "boss_name_texts": {
+          "en": "The Throbbing Domain",
+          "zh": "搏动领域"
+        }
       }
     ]
   },
@@ -19481,7 +19576,12 @@
       {
         "type": "beat_house_boss",
         "boss": "zaratana",
-        "required_difficulty": 2
+        "required_difficulty": 2,
+        "boss_name_key": "BOSS_ZARATANA_NAME",
+        "boss_name_texts": {
+          "en": "Zaratana",
+          "zh": "扎拉塔娜"
+        }
       }
     ]
   },
@@ -19515,7 +19615,12 @@
       {
         "type": "beat_chapter_boss",
         "boss": "endoftime",
-        "required_difficulty": 3
+        "required_difficulty": 3,
+        "boss_name_key": "AREA_NAME_ENDOFTIME",
+        "boss_name_texts": {
+          "en": "The Infinite",
+          "zh": "无限界"
+        }
       }
     ]
   },
@@ -19549,7 +19654,12 @@
       {
         "type": "beat_house_boss",
         "boss": "pyrophina_vs_zaratana",
-        "required_difficulty": 3
+        "required_difficulty": 3,
+        "boss_name_key": "BOSS_PYROPHINA_VS_ZARATANA_NAME",
+        "boss_name_texts": {
+          "en": "Pyrophina vs Zaratana",
+          "zh": "派罗菲娜 vs 扎拉塔娜"
+        }
       }
     ]
   },
@@ -25403,7 +25513,12 @@
       {
         "type": "beat_house_boss",
         "boss": "pyrophina_vs_zaratana",
-        "required_difficulty": 1
+        "required_difficulty": 1,
+        "boss_name_key": "BOSS_PYROPHINA_VS_ZARATANA_NAME",
+        "boss_name_texts": {
+          "en": "Pyrophina vs Zaratana",
+          "zh": "派罗菲娜 vs 扎拉塔娜"
+        }
       }
     ]
   },
@@ -25435,7 +25550,12 @@
       {
         "type": "beat_house_boss",
         "boss": "terminator_2",
-        "required_difficulty": 1
+        "required_difficulty": 1,
+        "boss_name_key": "BOSS_TERMINATOR_2_NAME",
+        "boss_name_texts": {
+          "en": "C-1000",
+          "zh": "C-1000"
+        }
       }
     ]
   },
@@ -25471,7 +25591,12 @@
       {
         "type": "beat_house_boss",
         "boss": "pyrophina_vs_zaratana",
-        "required_difficulty": 2
+        "required_difficulty": 2,
+        "boss_name_key": "BOSS_PYROPHINA_VS_ZARATANA_NAME",
+        "boss_name_texts": {
+          "en": "Pyrophina vs Zaratana",
+          "zh": "派罗菲娜 vs 扎拉塔娜"
+        }
       }
     ]
   },
@@ -25508,7 +25633,12 @@
       {
         "type": "beat_house_boss",
         "boss": "terminator_1",
-        "required_difficulty": 2
+        "required_difficulty": 2,
+        "boss_name_key": "BOSS_TERMINATOR_1_NAME",
+        "boss_name_texts": {
+          "en": "C-800",
+          "zh": "C-800"
+        }
       }
     ]
   },
@@ -25542,7 +25672,12 @@
       {
         "type": "beat_house_boss",
         "boss": "guillotina_1",
-        "required_difficulty": 3
+        "required_difficulty": 3,
+        "boss_name_key": "BOSS_GUILLOTINA_1_NAME",
+        "boss_name_texts": {
+          "en": "Guillotina 1",
+          "zh": "吉洛蒂娜 1"
+        }
       }
     ]
   },
@@ -25576,7 +25711,12 @@
       {
         "type": "beat_house_boss",
         "boss": "terminator_1",
-        "required_difficulty": 3
+        "required_difficulty": 3,
+        "boss_name_key": "BOSS_TERMINATOR_1_NAME",
+        "boss_name_texts": {
+          "en": "C-800",
+          "zh": "C-800"
+        }
       }
     ]
   },
@@ -30862,7 +31002,12 @@
       {
         "type": "beat_house_boss",
         "boss": "guillotina_2",
-        "required_difficulty": 1
+        "required_difficulty": 1,
+        "boss_name_key": "BOSS_GUILLOTINA_2_NAME",
+        "boss_name_texts": {
+          "en": "Guillotina 2",
+          "zh": "吉洛蒂娜 2"
+        }
       }
     ]
   },
@@ -30896,7 +31041,12 @@
       {
         "type": "beat_house_boss",
         "boss": "terminator_1",
-        "required_difficulty": 1
+        "required_difficulty": 1,
+        "boss_name_key": "BOSS_TERMINATOR_1_NAME",
+        "boss_name_texts": {
+          "en": "C-800",
+          "zh": "C-800"
+        }
       }
     ]
   },
@@ -30928,7 +31078,12 @@
       {
         "type": "beat_chapter_boss",
         "boss": "endoftime",
-        "required_difficulty": 2
+        "required_difficulty": 2,
+        "boss_name_key": "AREA_NAME_ENDOFTIME",
+        "boss_name_texts": {
+          "en": "The Infinite",
+          "zh": "无限界"
+        }
       }
     ]
   },
@@ -30962,7 +31117,12 @@
       {
         "type": "beat_house_boss",
         "boss": "guillotina_2",
-        "required_difficulty": 2
+        "required_difficulty": 2,
+        "boss_name_key": "BOSS_GUILLOTINA_2_NAME",
+        "boss_name_texts": {
+          "en": "Guillotina 2",
+          "zh": "吉洛蒂娜 2"
+        }
       }
     ]
   },
@@ -30996,7 +31156,12 @@
       {
         "type": "beat_house_boss",
         "boss": "guillotina_3",
-        "required_difficulty": 2
+        "required_difficulty": 2,
+        "boss_name_key": "BOSS_GUILLOTINA_3_NAME",
+        "boss_name_texts": {
+          "en": "Guillotina 3",
+          "zh": "吉洛蒂娜 3"
+        }
       }
     ]
   },
@@ -31030,7 +31195,12 @@
       {
         "type": "beat_house_boss",
         "boss": "terminator_2",
-        "required_difficulty": 2
+        "required_difficulty": 2,
+        "boss_name_key": "BOSS_TERMINATOR_2_NAME",
+        "boss_name_texts": {
+          "en": "C-1000",
+          "zh": "C-1000"
+        }
       }
     ]
   },
@@ -31064,7 +31234,12 @@
       {
         "type": "beat_house_boss",
         "boss": "guillotina_2",
-        "required_difficulty": 3
+        "required_difficulty": 3,
+        "boss_name_key": "BOSS_GUILLOTINA_2_NAME",
+        "boss_name_texts": {
+          "en": "Guillotina 2",
+          "zh": "吉洛蒂娜 2"
+        }
       }
     ]
   },
@@ -31098,7 +31273,12 @@
       {
         "type": "beat_house_boss",
         "boss": "terminator_2",
-        "required_difficulty": 3
+        "required_difficulty": 3,
+        "boss_name_key": "BOSS_TERMINATOR_2_NAME",
+        "boss_name_texts": {
+          "en": "C-1000",
+          "zh": "C-1000"
+        }
       }
     ]
   },

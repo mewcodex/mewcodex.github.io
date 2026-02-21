@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mewgenics Achievements</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --theme: #9f978b;
+            --theme-dark: #7f776b;
+            --theme-light: #c9c1b7;
+            --theme-bg: #efece7;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #efece7 0%, #c9c1b7 100%);
+            min-height: 100vh;
+            padding: 36px;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            box-shadow: inset 0 0 140px rgba(32, 28, 22, 0.6), inset 0 0 300px rgba(32, 28, 22, 0.45);
+            z-index: 10;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid rgba(159, 151, 139, 0.35);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25), 0 0 0 6px rgba(159, 151, 139, 0.18);
+            overflow: hidden;
+            position: relative;
+            z-index: 0;
+        }
+
+        .language-toggle {
+            position: absolute;
+            top: 12px;
+            right: 18px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            z-index: 2;
+            font-size: 0.95em;
+        }
+
+        .language-toggle .lang-link {
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: underline;
+            font-weight: 600;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+        }
+
+        .language-toggle .lang-link.active {
+            color: #fff;
+        }
+
+        .language-toggle .lang-separator {
+            color: rgba(255, 255, 255, 0.65);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+        }
+
+        .header-image {
+            display: block;
+            width: 100%;
+            max-width: 960px;
+            height: 240px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .header-image-wrap {
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(135deg, #9f978b 0%, #7f776b 100%);
+            padding: 12px 16px;
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, #827a6e 0%, #6d6559 100%);
+            border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            padding: 0;
+        }
+
+        .navbar a {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            padding: 14px 28px;
+            font-size: 1em;
+            font-weight: 500;
+            transition: all 0.2s;
+            border-bottom: 3px solid transparent;
+            position: relative;
+        }
+
+        .navbar a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        .navbar a.active {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border-bottom-color: #efece7;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #9f978b 0%, #7f776b 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .controls {
+            padding: 18px 20px;
+            background: #f3f1ee;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .controls span {
+            color: #6d6559;
+            font-weight: 600;
+        }
+
+        .achievement-section {
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .achievement-section:last-of-type {
+            border-bottom: none;
+        }
+
+        .achievement-section h2 {
+            color: #5b534a;
+            font-size: 1.35em;
+            margin-bottom: 12px;
+        }
+
+        .achievement-table-wrapper {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f3f1ee;
+            border-bottom: 2px solid #ddd;
+        }
+
+        th {
+            padding: 12px 14px;
+            text-align: left;
+            font-weight: 600;
+            color: #333;
+            white-space: nowrap;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid #eee;
+        }
+
+        tbody tr:hover {
+            background: #f9f9f9;
+        }
+
+        td {
+            padding: 12px 14px;
+            vertical-align: top;
+        }
+
+        .achievement-label {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .achievement-icons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            align-items: center;
+        }
+
+        .achievement-icon-link {
+            display: inline-flex;
+            text-decoration: none;
+        }
+
+        .achievement-icon {
+            width: 44px;
+            height: 44px;
+            object-fit: contain;
+            border-radius: 4px;
+            transition: transform 0.15s ease;
+        }
+
+        .achievement-icon-link:hover .achievement-icon {
+            transform: scale(1.08);
+        }
+
+        .achievement-icon-passive {
+            width: 70px;
+            height: auto;
+            clip-path: inset(0 0 0 25%);
+            margin-left: -25px;
+        }
+
+        .achievement-item-wrapper {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+        }
+
+        .achievement-item-icon {
+            width: 36px;
+            height: 36px;
+            object-fit: contain;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .achievement-item-wrapper:hover .achievement-item-icon {
+            transform: translate(-50%, -50%) scale(1.08);
+        }
+
+        .class-col-jester,
+        .class-col-colorless {
+            width: 150px;
+        }
+
+        .empty-cell {
+            color: #999;
+            font-size: 0.9em;
+        }
+
+        .no-results {
+            padding: 20px;
+            text-align: center;
+            color: #666;
+        }
+
+        .announcement-button {
+            position: fixed;
+            top: 14px;
+            left: 14px;
+            z-index: 1200;
+            background: #9f978b;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 8px 14px;
+            font-size: 0.9em;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+        }
+
+        .announcement-button:hover {
+            background: #7f776b;
+        }
+
+        .announcement-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1300;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .announcement-card {
+            background: #fff;
+            max-width: 560px;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+            border: 1px solid rgba(159, 151, 139, 0.4);
+            overflow: hidden;
+        }
+
+        .announcement-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 20px;
+            background: #f3f1ee;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .announcement-header h2 {
+            font-size: 1.1em;
+            color: #5b534a;
+        }
+
+        .announcement-close {
+            background: none;
+            border: none;
+            font-size: 1.4em;
+            color: #7f776b;
+            cursor: pointer;
+        }
+
+        .announcement-body {
+            padding: 18px 20px 10px;
+            color: #4b453d;
+            line-height: 1.6;
+        }
+
+        .announcement-footer {
+            padding: 0 20px 18px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .announcement-lang {
+            display: inline-flex;
+            gap: 8px;
+        }
+
+        .announcement-lang-btn {
+            background: #efece7;
+            border: 1px solid rgba(159, 151, 139, 0.4);
+            color: #5b534a;
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-size: 0.85em;
+            cursor: pointer;
+        }
+
+        .announcement-lang-btn.active {
+            background: #9f978b;
+            color: #fff;
+            border-color: #9f978b;
+        }
+
+        .footer {
+            padding: 20px;
+            text-align: center;
+            color: #777;
+            font-size: 0.9em;
+            border-top: 1px solid #ddd;
+            background: #f7f4f0;
+        }
+
+        .footer p {
+            margin: 6px 0;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 16px;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .language-toggle {
+                top: 10px;
+                right: 12px;
+                font-size: 0.9em;
+            }
+
+            th,
+            td {
+                padding: 10px;
+                font-size: 0.9em;
+            }
+
+            .navbar a {
+                padding: 12px 16px;
+                font-size: 0.95em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <button class="announcement-button" id="announcementButton" type="button">Announcement</button>
+    <div class="announcement-modal" id="announcementModal">
+        <div class="announcement-card" role="dialog" aria-modal="true" aria-labelledby="announcementTitle">
+            <div class="announcement-header">
+                <h2 id="announcementTitle">Announcement</h2>
+                <button class="announcement-close" id="announcementClose" type="button" aria-label="Close">×</button>
+            </div>
+            <div class="announcement-body" id="announcementBody"></div>
+            <div class="announcement-footer">
+                <div class="announcement-lang" role="group" aria-label="Language">
+                    <button type="button" class="announcement-lang-btn" id="announcementLangEn"
+                        data-lang="en">English</button>
+                    <button type="button" class="announcement-lang-btn" id="announcementLangZh"
+                        data-lang="zh">中文</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="language-toggle" role="group" aria-label="Language">
+            <button type="button" class="lang-link" id="langButtonEn" data-lang="en">English</button>
+            <span class="lang-separator">/</span>
+            <button type="button" class="lang-link" id="langButtonZh" data-lang="zh">中文</button>
+        </div>
+        <div class="header-image-wrap">
+            <img src="header.jpg" alt="Mewgenics header" class="header-image">
+        </div>
+        <div class="navbar">
+            <a href="index.html" id="navAbilities">Abilities</a>
+            <a href="passives.html" id="navPassives">Passives</a>
+            <a href="items.html" id="navItems">Items</a>
+            <a href="mutations.html" id="navMutations">Mutations</a>
+            <a href="achievements.html" class="active" id="navAchievements">Achievements</a>
+            <a href="characters.html" id="navCharacters">Characters</a>
+        </div>
+        <div class="header">
+            <h1 id="headerTitle">Mewgenics Achievements</h1>
+        </div>
+
+        <div class="controls">
+            <span id="controlsHint">Hover icons to see localized names. Click to jump.</span>
+        </div>
+
+        <div class="achievement-section">
+            <h2 id="classTableTitle">Class Unlocks</h2>
+            <div class="achievement-table-wrapper">
+                <table id="classAchievementsTable">
+                    <thead>
+                        <tr id="classHeaderRow"></tr>
+                    </thead>
+                    <tbody id="classTableBody">
+                        <tr>
+                            <td colspan="99" class="no-results" id="classLoadingMessage">Loading achievements...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="achievement-section">
+            <h2 id="bossTableTitle">Boss Unlocks by Difficulty</h2>
+            <div class="achievement-table-wrapper">
+                <table id="bossAchievementsTable">
+                    <thead>
+                        <tr id="bossHeaderRow"></tr>
+                    </thead>
+                    <tbody id="bossTableBody">
+                        <tr>
+                            <td colspan="99" class="no-results" id="bossLoadingMessage">Loading achievements...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p id="footerSource">Free fan site with data from game unlock definitions.</p>
+            <p id="footerCredit">Original game by Edmund McMillen and Tyler Glaiel.</p>
+            <p id="footerAuthor">Created by: Bilibili@Alriph</p>
+            <p id="footerTranslator">Chinese translation: Bilibili@地下丝绒和妮可</p>
+            <p id="footerTools">Tools used: mewgpaks, JPEXS FFDec</p>
+        </div>
+    </div>
+
+    <script src="announcement.js"></script>
+    <script>
+        let allAbilities = [];
+        let allPassives = [];
+        let allItems = [];
+        let allEntries = [];
+        let currentLanguage = 'en';
+        window.currentLanguage = currentLanguage;
+        let dataReady = false;
+        const ANNOUNCEMENT_SEEN_KEY = 'codexAnnouncementSeen_v1';
+
+        const CLASS_ORDER = [
+            'fighter', 'hunter', 'tank', 'mage', 'medic', 'thief',
+            'necromancer', 'druid', 'tinkerer', 'psychic', 'butcher',
+            'monk', 'jester', 'colorless'
+        ];
+
+        const DIFFICULTY_ORDER = [1, 2, 3];
+        const CHAPTER_ORDER = [
+            'caves',
+            'boneyard',
+            'meatworld',
+            'core',
+            'moon',
+            'dimensionx',
+            'jurassic',
+            'theend',
+            'endoftime',
+        ];
+        const BOSS_TABLE_ORDER = [
+            'guillotina_1',
+            'guillotina_2',
+            'guillotina_3',
+            'pyrophina',
+            'zaratana',
+            'pyrophina_vs_zaratana',
+            'terminator_1',
+            'terminator_2',
+            'terminator_3',
+            'meatworld',
+            'dimensionx',
+            'endoftime',
+        ];
+        const CHAPTER_ORDER_MAP = CHAPTER_ORDER.reduce((acc, key, index) => {
+            acc[key] = index + 1;
+            return acc;
+        }, {});
+
+        const UI_TEXT = {
+            en: {
+                pageTitle: 'Mewgenics Achievements',
+                headerTitle: 'Mewgenics Achievements',
+                controlsHint: 'Hover icons to see localized names. Click to jump.',
+                navAbilities: 'Abilities',
+                navItems: 'Items',
+                navPassives: 'Passives',
+                navMutations: 'Mutations',
+                navAchievements: 'Achievements',
+                navCharacters: 'Characters',
+                languageEnglish: 'English',
+                languageChinese: 'Chinese',
+                classTableTitle: 'Class Unlocks',
+                bossTableTitle: 'Boss Unlocks by Difficulty',
+                achievementHeader: 'Achievement',
+                classHeader: 'Class',
+                bossHeader: 'Boss',
+                difficultyHeader: 'Difficulty',
+                unlocksHeader: 'Unlocks (Hard/Crazy/Impossible)',
+                completeChecklistRow: 'Complete all checkmarks',
+                chapterLabelFallback: 'Chapter',
+                houseBossPrefix: 'House Boss',
+                chapterBossPrefix: 'Chapter Boss',
+                loading: 'Loading achievements...',
+                noResults: 'No achievements found.',
+                footerSource: 'Free fan site with data from game unlock definitions.',
+                footerCredit: 'Original game by Edmund McMillen and Tyler Glaiel.',
+                footerAuthor: 'Created by: Bilibili@Alriph',
+                footerTranslator: 'Chinese translation: Bilibili@地下丝绒和妮可',
+                footerTools: 'Tools used: mewgpaks, JPEXS FFDec',
+                announcementButton: 'Announcement',
+                announcementTitle: 'Announcement',
+                announcementBody: 'Placeholder announcement.',
+                auxCatName: '`cat name`',
+                strAuxPassiveName: '`random passive ability`',
+                strAuxPassiveDesc: '`random passive ability description`',
+                strAuxItemDesc: '`random item description`',
+                strAuxActiveName: '`random active ability`',
+                strAuxActiveDesc: '`random active ability description`',
+            },
+            zh: {
+                pageTitle: 'Mewgenics 成就总览',
+                headerTitle: 'Mewgenics 成就总览',
+                controlsHint: '鼠标悬停查看中文名称，点击图标跳转。',
+                navAbilities: '能力',
+                navItems: '物品',
+                navPassives: '被动',
+                navMutations: '突变',
+                navAchievements: '成就',
+                navCharacters: '角色',
+                languageEnglish: '英语',
+                languageChinese: '中文',
+                classTableTitle: '职业解锁',
+                bossTableTitle: 'Boss 难度解锁',
+                achievementHeader: '成就',
+                classHeader: '职业',
+                bossHeader: 'Boss',
+                difficultyHeader: '难度',
+                unlocksHeader: '解锁（困难/疯狂/不可能）',
+                completeChecklistRow: '所有标记',
+                chapterLabelFallback: '章节',
+                houseBossPrefix: '宅邸 Boss',
+                chapterBossPrefix: '章节 Boss',
+                loading: '正在加载成就...',
+                noResults: '未找到成就。',
+                footerSource: '这是一个免费同人站点，数据来自游戏解锁定义。',
+                footerCredit: '原作游戏作者：Edmund McMillen 与 Tyler Glaiel。',
+                footerAuthor: '制作：Bilibili@Alriph',
+                footerTranslator: '中文翻译：Bilibili@地下丝绒和妮可',
+                footerTools: '工具：mewgpaks，JPEXS FFDec',
+                announcementButton: '公告',
+                announcementTitle: '公告',
+                announcementBody: '公告占位符。',
+                auxCatName: '`猫的名字`',
+                strAuxPassiveName: '`随机被动技能`',
+                strAuxPassiveDesc: '`随机被动技能描述`',
+                strAuxItemDesc: '`随机物品描述`',
+                strAuxActiveName: '`随机主动技能`',
+                strAuxActiveDesc: '`随机主动技能描述`',
+            }
+        };
+
+        const CLASS_LABELS = {
+            en: {
+                fighter: 'Fighter',
+                thief: 'Thief',
+                tank: 'Tank',
+                mage: 'Mage',
+                medic: 'Medic',
+                hunter: 'Hunter',
+                necromancer: 'Necromancer',
+                butcher: 'Butcher',
+                monk: 'Monk',
+                druid: 'Druid',
+                psychic: 'Psychic',
+                tinkerer: 'Tinkerer',
+                jester: 'Jester',
+                colorless: 'Colorless',
+            },
+            zh: {
+                fighter: '战士',
+                thief: '盗贼',
+                tank: '坦克',
+                mage: '法师',
+                medic: '医师',
+                hunter: '猎人',
+                necromancer: '死灵法师',
+                butcher: '屠夫',
+                monk: '武僧',
+                druid: '德鲁伊',
+                psychic: '灵能者',
+                tinkerer: '工匠',
+                jester: '小丑',
+                colorless: '无色',
+            }
+        };
+
+        const DIFFICULTY_LABELS = {
+            en: {
+                1: 'Hard',
+                2: 'Crazy',
+                3: 'Impossible',
+            },
+            zh: {
+                1: '困难',
+                2: '疯狂',
+                3: '不可能',
+            }
+        };
+
+        function t(key) {
+            return UI_TEXT[currentLanguage]?.[key] || UI_TEXT.en[key] || key;
+        }
+
+        function updateNavbarLinks() {
+            const lang = currentLanguage !== 'en' ? `?lang=${currentLanguage}` : '';
+            document.getElementById('navAbilities').href = `index.html${lang}`;
+            document.getElementById('navPassives').href = `passives.html${lang}`;
+            document.getElementById('navItems').href = `items.html${lang}`;
+            document.getElementById('navMutations').href = `mutations.html${lang}`;
+            document.getElementById('navAchievements').href = `achievements.html${lang}`;
+            document.getElementById('navCharacters').href = `characters.html${lang}`;
+        }
+
+        function getUrlParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        function setUrlParameter(name, value) {
+            const url = new URL(window.location);
+            url.searchParams.set(name, value);
+            window.history.replaceState({}, '', url);
+        }
+
+        function setLanguage(lang) {
+            if (!lang || lang === currentLanguage) {
+                return;
+            }
+            currentLanguage = lang;
+            window.currentLanguage = currentLanguage;
+            setUrlParameter('lang', currentLanguage);
+            applyUiLanguage();
+            renderAchievements();
+        }
+
+        const urlLang = getUrlParameter('lang');
+        if (urlLang === 'zh' || urlLang === 'en') {
+            currentLanguage = urlLang;
+            window.currentLanguage = currentLanguage;
+        }
+
+        function applyUiLanguage() {
+            document.title = t('pageTitle');
+            document.getElementById('headerTitle').textContent = t('headerTitle');
+            document.getElementById('controlsHint').textContent = t('controlsHint');
+            document.getElementById('navAbilities').textContent = t('navAbilities');
+            document.getElementById('navPassives').textContent = t('navPassives');
+            document.getElementById('navItems').textContent = t('navItems');
+            document.getElementById('navMutations').textContent = t('navMutations');
+            document.getElementById('navAchievements').textContent = t('navAchievements');
+            document.getElementById('navCharacters').textContent = t('navCharacters');
+            document.getElementById('langButtonEn').textContent = t('languageEnglish');
+            document.getElementById('langButtonZh').textContent = t('languageChinese');
+            document.getElementById('classTableTitle').textContent = t('classTableTitle');
+            document.getElementById('bossTableTitle').textContent = t('bossTableTitle');
+            document.getElementById('footerSource').textContent = t('footerSource');
+            document.getElementById('footerCredit').textContent = t('footerCredit');
+            document.getElementById('footerAuthor').textContent = t('footerAuthor');
+            document.getElementById('footerTranslator').textContent = t('footerTranslator');
+            document.getElementById('footerTools').textContent = t('footerTools');
+            document.getElementById('announcementButton').textContent = t('announcementButton');
+            document.getElementById('announcementTitle').textContent = t('announcementTitle');
+            document.getElementById('announcementLangEn').textContent = t('languageEnglish');
+            document.getElementById('announcementLangZh').textContent = t('languageChinese');
+            updateAnnouncementLanguageButtons();
+            loadAnnouncementContent();
+
+            const classLoading = document.getElementById('classLoadingMessage');
+            if (classLoading) {
+                classLoading.textContent = t('loading');
+            }
+            const bossLoading = document.getElementById('bossLoadingMessage');
+            if (bossLoading) {
+                bossLoading.textContent = t('loading');
+            }
+
+            document.getElementById('langButtonEn').classList.toggle('active', currentLanguage === 'en');
+            document.getElementById('langButtonZh').classList.toggle('active', currentLanguage === 'zh');
+
+            updateNavbarLinks();
+        }
+
+        function getLocalizedText(texts, fallback) {
+            if (!texts || typeof texts !== 'object') {
+                return fallback || '';
+            }
+            return texts[currentLanguage] || fallback || '';
+        }
+
+        function getClassLabel(className) {
+            if (!className) {
+                return '';
+            }
+            const key = className.toLowerCase();
+            return CLASS_LABELS[currentLanguage]?.[key] || CLASS_LABELS.en[key] || className;
+        }
+
+        function getChapterName(requirement) {
+            if (!requirement || typeof requirement !== 'object') {
+                return '';
+            }
+            const localized = getLocalizedText(requirement.chapter_name_texts, '');
+            if (localized) {
+                return localized;
+            }
+            if (requirement.chapter_name_literal) {
+                return requirement.chapter_name_literal;
+            }
+            return requirement.chapter || '';
+        }
+
+        function getBossName(requirement) {
+            if (!requirement || typeof requirement !== 'object') {
+                return '';
+            }
+            const localized = getLocalizedText(requirement.boss_name_texts, '');
+            if (localized) {
+                return localized;
+            }
+            return requirement.boss || '';
+        }
+
+        function getDifficultyLabel(level) {
+            if (!level) {
+                return '';
+            }
+            return DIFFICULTY_LABELS[currentLanguage]?.[level] || DIFFICULTY_LABELS.en[level] || String(level);
+        }
+
+        function getEntryName(entry) {
+            if (!entry) {
+                return '';
+            }
+            if (entry.type === 'item') {
+                let name = getLocalizedText(entry.name_texts, entry.name) || entry.name || entry.code || '';
+                if (entry.aux) {
+                    name = name.replace(/{aux}/g, entry.aux);
+                }
+                name = name.replace(/{aux_cat_name}/g, t('auxCatName'));
+                name = name.replace(/{str_aux_passive_name}/g, t('strAuxPassiveName'));
+                name = name.replace(/{str_aux_passive_desc}/g, t('strAuxPassiveDesc'));
+                name = name.replace(/{str_aux_item_desc}/g, t('strAuxItemDesc'));
+                name = name.replace(/{str_aux_active_name}/g, t('strAuxActiveName'));
+                name = name.replace(/{str_aux_active_desc}/g, t('strAuxActiveDesc'));
+                return name;
+            }
+            return getLocalizedText(entry.name_texts, entry.name) || entry.name || entry.code || '';
+        }
+
+        function makeEntryLink(entry) {
+            if (!entry || !entry.code) {
+                return '#';
+            }
+            const code = encodeURIComponent(entry.code);
+            const lang = currentLanguage !== 'en' ? `?lang=${currentLanguage}` : '';
+            if (entry.type === 'ability') {
+                return `index.html${lang}#${code}`;
+            }
+            if (entry.type === 'passive') {
+                return `passives.html${lang}#${code}`;
+            }
+            if (entry.type === 'item') {
+                return `items.html${lang}#${code}`;
+            }
+            return '#';
+        }
+
+        function getItemIconPath(item) {
+            const kindMap = {
+                'trinket': 'TrinketIcon',
+                'weapon': 'WeaponIcon',
+                'neck': 'NeckItemIcon',
+                'face': 'FaceItemIcon',
+                'head': 'HeadItemIcon',
+            };
+            const folder = kindMap[item.kind] || 'TrinketIcon';
+            return `${folder}/${item.frame}.png`;
+        }
+
+        function getRarityBackgroundPath(item) {
+            if (item.rarity === 'quest' || item.rarity === 'sidequest') {
+                return `rarity/${item.rarity}${item.cursed ? 'cursed' : ''}.png`;
+            }
+            if (item.cursed) {
+                return 'rarity/cursed.png';
+            }
+            if (!item.rarity) return 'rarity/unknown.png';
+            if (item.rarity === 'uncommmon') {
+                return `rarity/${item.is_consumable ? 'consumable_' : ''}uncommon.png`;
+            }
+            const prefix = item.is_consumable ? 'consumable_' : '';
+            return `rarity/${prefix}${item.rarity}.png`;
+        }
+
+        function escapeHtml(text) {
+            if (!text) return '';
+            const map = {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#039;'
+            };
+            return text.replace(/[&<>"']/g, m => map[m]);
+        }
+
+        function buildEntryIcon(entry) {
+            const label = getEntryName(entry);
+            const link = makeEntryLink(entry);
+            const title = escapeHtml(label);
+
+            if (entry.type === 'item') {
+                const iconPath = getItemIconPath(entry);
+                const rarityBg = getRarityBackgroundPath(entry);
+                return `
+                    <a href="${link}" class="achievement-icon-link" title="${title}" aria-label="${title}">
+                        <span class="achievement-item-wrapper" style="background-image: url('${rarityBg}')">
+                            <img src="${iconPath}" class="achievement-item-icon" alt="${title}" onerror="this.style.display='none'">
+                        </span>
+                    </a>
+                `;
+            }
+
+            const iconPath = entry.type === 'ability'
+                ? `AbilityIcon/${entry.frame}.png`
+                : `PassiveIcon/${entry.frame}.png`;
+            const iconClass = entry.type === 'passive'
+                ? 'achievement-icon achievement-icon-passive'
+                : 'achievement-icon';
+
+            return `
+                <a href="${link}" class="achievement-icon-link" title="${title}" aria-label="${title}">
+                    <img src="${iconPath}" class="${iconClass}" alt="${title}" onerror="this.style.display='none'">
+                </a>
+            `;
+        }
+
+        function buildEntries() {
+            const entries = [];
+            allAbilities.forEach(ability => {
+                entries.push({
+                    type: 'ability',
+                    code: ability.ability_code,
+                    name_texts: ability.ability_name_texts,
+                    name: ability.ability_name,
+                    frame: ability.frame_number,
+                    unlocks: ability.unlock_requirements || []
+                });
+            });
+            allPassives.forEach(passive => {
+                entries.push({
+                    type: 'passive',
+                    code: passive.passive_code,
+                    name_texts: passive.passive_name_texts,
+                    name: passive.passive_name,
+                    frame: passive.frame_number,
+                    unlocks: passive.unlock_requirements || []
+                });
+            });
+            allItems.forEach(item => {
+                entries.push({
+                    type: 'item',
+                    code: item.item_code,
+                    name_texts: item.item_name_texts,
+                    name: item.item_name,
+                    frame: item.frame,
+                    kind: item.kind,
+                    rarity: item.rarity,
+                    cursed: item.cursed,
+                    is_consumable: item.is_consumable,
+                    aux: item.aux,
+                    unlocks: item.unlock_requirements || []
+                });
+            });
+            allEntries = entries;
+        }
+
+        function sortEntries(entries) {
+            const typeOrder = { ability: 1, passive: 2, item: 3 };
+            return [...entries].sort((a, b) => {
+                const typeDiff = (typeOrder[a.type] || 9) - (typeOrder[b.type] || 9);
+                if (typeDiff !== 0) return typeDiff;
+                const nameA = getEntryName(a).toLowerCase();
+                const nameB = getEntryName(b).toLowerCase();
+                if (nameA < nameB) return -1;
+                if (nameA > nameB) return 1;
+                return 0;
+            });
+        }
+
+        function buildClassRows() {
+            const rows = new Map();
+            const classKeys = new Set(CLASS_ORDER);
+
+            const ensureRow = (key, label, orderKey) => {
+                if (!rows.has(key)) {
+                    rows.set(key, { key, label, orderKey, cells: new Map() });
+                }
+                return rows.get(key);
+            };
+
+            const addEntry = (row, classKey, entry) => {
+                if (!row.cells.has(classKey)) {
+                    row.cells.set(classKey, new Map());
+                }
+                const cell = row.cells.get(classKey);
+                const entryKey = `${entry.type}:${entry.code}`;
+                if (!cell.has(entryKey)) {
+                    cell.set(entryKey, entry);
+                }
+            };
+
+            allEntries.forEach(entry => {
+                if (!Array.isArray(entry.unlocks)) {
+                    return;
+                }
+                entry.unlocks.forEach(req => {
+                    if (!req || typeof req !== 'object') {
+                        return;
+                    }
+                    const inferredType = (!req.type && req.class && (req.chapter || req.chapter_name_texts || req.chapter_name_literal))
+                        ? 'complete_chapter_with_class'
+                        : req.type;
+                    if (inferredType === 'complete_chapter_with_class') {
+                        const classKey = (req.class || '').toLowerCase();
+                        if (!classKey) {
+                            return;
+                        }
+                        classKeys.add(classKey);
+                        const chapterName = getChapterName(req) || t('chapterLabelFallback');
+                        const orderKey = getChapterSortKey(req);
+                        const rowKey = `chapter:${req.chapter || chapterName}`;
+                        const row = ensureRow(rowKey, chapterName, orderKey);
+                        addEntry(row, classKey, entry);
+                    } else if (inferredType === 'complete_checklist_with_class') {
+                        const classKey = (req.class || '').toLowerCase();
+                        if (!classKey) {
+                            return;
+                        }
+                        classKeys.add(classKey);
+                        const rowKey = 'checklist';
+                        const row = ensureRow(rowKey, t('completeChecklistRow'), 9999);
+                        addEntry(row, classKey, entry);
+                    }
+                });
+            });
+
+            const sortedRows = Array.from(rows.values()).sort((a, b) => {
+                if (a.orderKey !== b.orderKey) {
+                    return a.orderKey - b.orderKey;
+                }
+                return a.label.localeCompare(b.label);
+            });
+
+            const orderedClasses = [
+                ...CLASS_ORDER,
+                ...Array.from(classKeys).filter(key => !CLASS_ORDER.includes(key)).sort()
+            ];
+
+            return { rows: sortedRows, classKeys: orderedClasses };
+        }
+
+        function formatBossKey(key) {
+            if (!key) {
+                return '';
+            }
+            const match = key.match(/^(guillotina|terminator)_(\d+)/i);
+            if (match) {
+                const name = match[1].charAt(0).toUpperCase() + match[1].slice(1).toLowerCase();
+                return `${name} ${match[2]}`;
+            }
+            return key.replace(/_/g, ' ');
+        }
+
+        function getBossLabel(req, bossKey) {
+            const localized = getBossName(req);
+            if (localized) {
+                const match = bossKey.match(/^guillotina_(\d+)/i);
+                if (match && !localized.trim().endsWith(match[1])) {
+                    return `${localized} ${match[1]}`;
+                }
+                return localized;
+            }
+            return formatBossKey(bossKey);
+        }
+
+        function buildBossGroups() {
+            const groups = new Map();
+
+            const ensureGroup = (key) => {
+                if (!groups.has(key)) {
+                    groups.set(key, { key, label: '', entries: new Map() });
+                }
+                return groups.get(key);
+            };
+
+            allEntries.forEach(entry => {
+                if (!Array.isArray(entry.unlocks)) {
+                    return;
+                }
+                entry.unlocks.forEach(req => {
+                    if (!req || typeof req !== 'object') {
+                        return;
+                    }
+                    if (req.type !== 'beat_house_boss' && req.type !== 'beat_chapter_boss') {
+                        return;
+                    }
+                    const bossKey = (req.boss || '').toLowerCase();
+                    if (!bossKey || !BOSS_TABLE_ORDER.includes(bossKey)) {
+                        return;
+                    }
+                    const group = ensureGroup(bossKey);
+                    if (!group.label) {
+                        group.label = getBossLabel(req, bossKey);
+                    }
+                    const difficulty = req.required_difficulty || 0;
+                    const entryKey = `${entry.type}:${entry.code}`;
+                    const existing = group.entries.get(entryKey);
+                    if (!existing || difficulty < existing.difficulty) {
+                        group.entries.set(entryKey, { entry, difficulty });
+                    }
+                });
+            });
+
+            return BOSS_TABLE_ORDER.map(key => {
+                const group = groups.get(key) || { key, label: '', entries: new Map() };
+                if (!group.label) {
+                    group.label = formatBossKey(key);
+                }
+                return group;
+            });
+        }
+
+        function getChapterSortKey(requirement) {
+            const chapterId = (requirement.chapter || '').toLowerCase();
+            if (chapterId && CHAPTER_ORDER_MAP[chapterId] !== undefined) {
+                return CHAPTER_ORDER_MAP[chapterId];
+            }
+            const fallback = (requirement.chapter_name_literal || '').toLowerCase();
+            if (fallback) {
+                if (fallback.includes('throbbing')) return CHAPTER_ORDER_MAP.meatworld || 999;
+                if (fallback.includes('rift')) return CHAPTER_ORDER_MAP.dimensionx || 999;
+                if (fallback.includes('infinite')) return CHAPTER_ORDER_MAP.endoftime || 999;
+                if (fallback.includes('end')) return CHAPTER_ORDER_MAP.theend || 999;
+            }
+            return 999;
+        }
+
+        function renderClassTable() {
+            const headerRow = document.getElementById('classHeaderRow');
+            const tbody = document.getElementById('classTableBody');
+            const { rows, classKeys } = buildClassRows();
+
+            headerRow.innerHTML = `
+                <th>${escapeHtml(t('achievementHeader'))}</th>
+                ${classKeys.map(cls => {
+                const className = cls === 'jester'
+                    ? ' class="class-col-jester"'
+                    : (cls === 'colorless' ? ' class="class-col-colorless"' : '');
+                return `<th${className}>${escapeHtml(getClassLabel(cls) || cls)}</th>`;
+            }).join('')}
+            `;
+
+            if (!rows.length) {
+                tbody.innerHTML = `<tr><td colspan="${classKeys.length + 1}" class="no-results">${escapeHtml(t('noResults'))}</td></tr>`;
+                return;
+            }
+
+            tbody.innerHTML = rows.map(row => {
+                const cellsHtml = classKeys.map(cls => {
+                    const cell = row.cells.get(cls);
+                    const className = cls === 'jester'
+                        ? ' class="class-col-jester"'
+                        : (cls === 'colorless' ? ' class="class-col-colorless"' : '');
+                    if (!cell || cell.size === 0) {
+                        return `<td class="empty-cell"${className}>-</td>`;
+                    }
+                    const entries = sortEntries(Array.from(cell.values()));
+                    const icons = entries.map(buildEntryIcon).join('');
+                    return `<td${className}><div class="achievement-icons">${icons}</div></td>`;
+                }).join('');
+
+                return `
+                    <tr>
+                        <td class="achievement-label">${escapeHtml(row.label)}</td>
+                        ${cellsHtml}
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        function renderBossTable() {
+            const headerRow = document.getElementById('bossHeaderRow');
+            const tbody = document.getElementById('bossTableBody');
+            const groups = buildBossGroups();
+            const half = Math.ceil(groups.length / 2);
+
+            headerRow.innerHTML = `
+                <th>${escapeHtml(t('bossHeader'))}</th>
+                <th>${escapeHtml(t('unlocksHeader'))}</th>
+                <th>${escapeHtml(t('bossHeader'))}</th>
+                <th>${escapeHtml(t('unlocksHeader'))}</th>
+            `;
+
+            if (!groups.length) {
+                tbody.innerHTML = `<tr><td colspan="4" class="no-results">${escapeHtml(t('noResults'))}</td></tr>`;
+                return;
+            }
+
+            const rows = Array.from({ length: half }, (_, index) => {
+                const left = groups[index];
+                const right = groups[index + half];
+                const leftEntries = left?.entries && left.entries.size > 0
+                    ? Array.from(left.entries.values())
+                        .sort((a, b) => a.difficulty - b.difficulty)
+                        .map(item => item.entry)
+                    : [];
+                const rightEntries = right?.entries && right.entries.size > 0
+                    ? Array.from(right.entries.values())
+                        .sort((a, b) => a.difficulty - b.difficulty)
+                        .map(item => item.entry)
+                    : [];
+                const leftIcons = leftEntries.length
+                    ? `<div class="achievement-icons">${leftEntries.map(buildEntryIcon).join('')}</div>`
+                    : '<span class="empty-cell">-</span>';
+                const rightIcons = rightEntries.length
+                    ? `<div class="achievement-icons">${rightEntries.map(buildEntryIcon).join('')}</div>`
+                    : (right ? '<span class="empty-cell">-</span>' : '');
+
+                return `
+                    <tr>
+                        <td class="achievement-label">${escapeHtml(left.label || '')}</td>
+                        <td>${leftIcons}</td>
+                        <td class="achievement-label">${escapeHtml(right?.label || '')}</td>
+                        <td>${right ? rightIcons : ''}</td>
+                    </tr>
+                `;
+            });
+
+            tbody.innerHTML = rows.join('');
+        }
+
+        function renderAchievements() {
+            if (!dataReady) {
+                return;
+            }
+            renderClassTable();
+            renderBossTable();
+        }
+
+        async function loadAchievements() {
+            try {
+                const [abilitiesResponse, passivesResponse, itemsResponse] = await Promise.all([
+                    fetch('abilities_combined.json'),
+                    fetch('passives_combined.json'),
+                    fetch('items_db.json')
+                ]);
+
+                if (!abilitiesResponse.ok || !passivesResponse.ok || !itemsResponse.ok) {
+                    throw new Error('Failed to load achievement data.');
+                }
+
+                const abilitiesData = await abilitiesResponse.json();
+                const passivesData = await passivesResponse.json();
+                const itemsData = await itemsResponse.json();
+
+                allAbilities = abilitiesData.abilities || [];
+                allPassives = passivesData.passives || [];
+                allItems = Array.isArray(itemsData) ? itemsData : [];
+
+                buildEntries();
+                dataReady = true;
+                applyUiLanguage();
+                renderAchievements();
+            } catch (error) {
+                console.error('Error loading achievements:', error);
+                const message = `<tr><td colspan="99" class="no-results">${escapeHtml(t('noResults'))}</td></tr>`;
+                document.getElementById('classTableBody').innerHTML = message;
+                document.getElementById('bossTableBody').innerHTML = message;
+            }
+        }
+
+        document.querySelectorAll('.lang-link').forEach(button => {
+            button.addEventListener('click', () => {
+                const selectedLang = button.getAttribute('data-lang');
+                setLanguage(selectedLang);
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            applyUiLanguage();
+            initAnnouncement();
+            maybeShowAnnouncement();
+        });
+
+        window.addEventListener('load', loadAchievements);
+    </script>
+</body>
+
+</html>
