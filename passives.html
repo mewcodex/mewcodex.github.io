@@ -514,6 +514,16 @@
             border-radius: 2px;
         }
 
+        .unlock-requirements {
+            color: #6b5b2a;
+            font-size: 0.9em;
+            margin-top: 8px;
+            padding: 8px;
+            background: #fff4cc;
+            border-left: 3px solid #d8b55b;
+            border-radius: 2px;
+        }
+
         .passive-stats {
             display: flex;
             gap: 8px;
@@ -949,6 +959,7 @@
                 showing: 'Showing:',
                 sourceCommentsLabel: 'Source Comments:',
                 editorNotesLabel: 'Editor Notes:',
+                unlockRequirementsLabel: 'Unlock Requirements:',
                 iconHeader: 'Icon',
                 nameHeader: 'Passive Name',
                 descHeader: 'Description',
@@ -988,6 +999,7 @@
                 showing: '显示：',
                 sourceCommentsLabel: '源码注释：',
                 editorNotesLabel: '编辑注释：',
+                unlockRequirementsLabel: '解锁条件：',
                 iconHeader: '图标',
                 nameHeader: '被动名称',
                 descHeader: '描述',
@@ -1201,6 +1213,45 @@
             return note[currentLanguage] || note.en || '';
         }
 
+        function getChapterName(requirement) {
+            if (!requirement || typeof requirement !== 'object') {
+                return '';
+            }
+            const localized = getLocalizedText(requirement.chapter_name_texts, '');
+            if (localized) {
+                return localized;
+            }
+            if (requirement.chapter_name_literal) {
+                return requirement.chapter_name_literal;
+            }
+            return requirement.chapter || '';
+        }
+
+        function buildUnlockRequirementsHtml(requirements) {
+            if (!Array.isArray(requirements) || requirements.length === 0) {
+                return '';
+            }
+            const lines = requirements
+                .map(requirement => {
+                    const chapterName = getChapterName(requirement);
+                    const classLabel = requirement.class
+                        ? getClassLabel(requirement.class)
+                        : (requirement.class || '');
+                    if (chapterName && classLabel) {
+                        return `${chapterName} (${classLabel})`;
+                    }
+                    return chapterName || classLabel || '';
+                })
+                .filter(line => line && line.trim() !== '');
+
+            if (lines.length === 0) {
+                return '';
+            }
+
+            const linesHtml = lines.map(line => escapeHtml(line)).join('<br>');
+            return `<div class="unlock-requirements">${escapeHtml(t('unlockRequirementsLabel'))} ${linesHtml}</div>`;
+        }
+
         function hasRenderedText(texts, fallback) {
             if (typeof fallback === 'string' && fallback.trim() !== '') {
                 return true;
@@ -1295,6 +1346,10 @@
                     ? `<div class="upgrade-block">${upgradedStatsHtml}${upgradedDescriptionHtml}</div>`
                     : '';
 
+                const unlockRequirementsHtml = buildUnlockRequirementsHtml(
+                    passive.unlock_requirements
+                );
+
                 // Get notes if present
                 const notesHtml = passive.desc_notes ? `<div class="source-comment">${escapeHtml(t('sourceCommentsLabel'))} ${escapeHtml(passive.desc_notes)}</div>` : '';
                 const editorNote = getEditorNote(passive.passive_code);
@@ -1320,6 +1375,7 @@
                             ${statsHtml}
                             ${descriptionHtml}
                             ${upgradeBlockHtml}
+                            ${unlockRequirementsHtml}
                             ${notesHtml}
                             ${editorHtml}
                         </td>

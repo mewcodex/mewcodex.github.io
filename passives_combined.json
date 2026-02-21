@@ -38,6 +38,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -69,6 +70,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -100,6 +102,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -131,6 +134,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -162,6 +166,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -193,6 +198,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -224,6 +230,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -255,6 +262,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -286,6 +294,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -317,6 +326,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -348,6 +358,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -379,6 +390,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -410,6 +422,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -441,6 +454,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -472,6 +486,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -503,6 +518,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -545,6 +561,7 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -576,6 +593,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -607,6 +625,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -638,6 +657,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -669,6 +689,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -700,6 +721,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -731,6 +753,17 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": [
+        {
+          "chapter": "boneyard",
+          "class": "Butcher",
+          "chapter_name_key": "AREA_NAME_BONEYARD",
+          "chapter_name_texts": {
+            "en": "The Boneyard",
+            "zh": "\u767d\u9aa8\u5893\u56ed"
+          }
+        }
+      ],
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -762,6 +795,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -793,6 +827,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -824,6 +859,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -855,6 +891,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -886,6 +923,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -917,6 +955,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -948,6 +987,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -979,6 +1019,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1007,6 +1048,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1038,6 +1080,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1069,6 +1112,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1100,6 +1144,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1131,6 +1176,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1162,6 +1208,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1193,6 +1240,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1224,6 +1272,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1255,6 +1304,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1286,6 +1336,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1317,6 +1368,17 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": [
+        {
+          "chapter": "boneyard",
+          "class": "Colorless",
+          "chapter_name_key": "AREA_NAME_BONEYARD",
+          "chapter_name_texts": {
+            "en": "The Boneyard",
+            "zh": "\u767d\u9aa8\u5893\u56ed"
+          }
+        }
+      ],
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1348,6 +1410,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1379,6 +1442,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1414,6 +1478,7 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1445,6 +1510,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1476,6 +1542,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1507,6 +1574,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1538,6 +1606,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1569,6 +1638,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1600,6 +1670,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1631,6 +1702,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1662,6 +1734,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1693,6 +1766,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1724,6 +1798,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1755,6 +1830,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1786,6 +1862,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1817,6 +1894,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1848,6 +1926,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1879,6 +1958,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1910,6 +1990,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1941,6 +2022,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1972,6 +2054,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2003,6 +2086,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2034,6 +2118,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2065,6 +2150,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2104,6 +2190,17 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": [
+        {
+          "chapter": "moon",
+          "class": "Fighter",
+          "chapter_name_key": "AREA_NAME_MOON",
+          "chapter_name_texts": {
+            "en": "The Moon",
+            "zh": "\u6708\u7403"
+          }
+        }
+      ],
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2145,6 +2242,17 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": [
+        {
+          "chapter": "moon",
+          "class": "Hunter",
+          "chapter_name_key": "AREA_NAME_MOON",
+          "chapter_name_texts": {
+            "en": "The Moon",
+            "zh": "\u6708\u7403"
+          }
+        }
+      ],
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2186,6 +2294,17 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": [
+        {
+          "chapter": "moon",
+          "class": "Mage",
+          "chapter_name_key": "AREA_NAME_MOON",
+          "chapter_name_texts": {
+            "en": "The Moon",
+            "zh": "\u6708\u7403"
+          }
+        }
+      ],
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2227,6 +2346,17 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": [
+        {
+          "chapter": "moon",
+          "class": "Medic",
+          "chapter_name_key": "AREA_NAME_MOON",
+          "chapter_name_texts": {
+            "en": "The Moon",
+            "zh": "\u6708\u7403"
+          }
+        }
+      ],
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2266,6 +2396,17 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": [
+        {
+          "chapter": "moon",
+          "class": "Tank",
+          "chapter_name_key": "AREA_NAME_MOON",
+          "chapter_name_texts": {
+            "en": "The Moon",
+            "zh": "\u6708\u7403"
+          }
+        }
+      ],
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2307,6 +2448,17 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": [
+        {
+          "chapter": "moon",
+          "class": "Thief",
+          "chapter_name_key": "AREA_NAME_MOON",
+          "chapter_name_texts": {
+            "en": "The Moon",
+            "zh": "\u6708\u7403"
+          }
+        }
+      ],
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2348,6 +2500,17 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": [
+        {
+          "chapter": "moon",
+          "class": "Monk",
+          "chapter_name_key": "AREA_NAME_MOON",
+          "chapter_name_texts": {
+            "en": "The Moon",
+            "zh": "\u6708\u7403"
+          }
+        }
+      ],
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2387,6 +2550,17 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": [
+        {
+          "chapter": "moon",
+          "class": "Butcher",
+          "chapter_name_key": "AREA_NAME_MOON",
+          "chapter_name_texts": {
+            "en": "The Moon",
+            "zh": "\u6708\u7403"
+          }
+        }
+      ],
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2426,6 +2600,17 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": [
+        {
+          "chapter": "moon",
+          "class": "Druid",
+          "chapter_name_key": "AREA_NAME_MOON",
+          "chapter_name_texts": {
+            "en": "The Moon",
+            "zh": "\u6708\u7403"
+          }
+        }
+      ],
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2465,6 +2650,17 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": [
+        {
+          "chapter": "moon",
+          "class": "Tinkerer",
+          "chapter_name_key": "AREA_NAME_MOON",
+          "chapter_name_texts": {
+            "en": "The Moon",
+            "zh": "\u6708\u7403"
+          }
+        }
+      ],
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2504,6 +2700,17 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": [
+        {
+          "chapter": "moon",
+          "class": "Necromancer",
+          "chapter_name_key": "AREA_NAME_MOON",
+          "chapter_name_texts": {
+            "en": "The Moon",
+            "zh": "\u6708\u7403"
+          }
+        }
+      ],
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2545,6 +2752,17 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": [
+        {
+          "chapter": "moon",
+          "class": "Psychic",
+          "chapter_name_key": "AREA_NAME_MOON",
+          "chapter_name_texts": {
+            "en": "The Moon",
+            "zh": "\u6708\u7403"
+          }
+        }
+      ],
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2580,6 +2798,7 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2611,6 +2830,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2642,6 +2862,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2673,6 +2894,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2702,6 +2924,7 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2733,6 +2956,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2764,6 +2988,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2793,6 +3018,7 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2824,6 +3050,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2863,6 +3090,17 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": [
+        {
+          "chapter": "moon",
+          "class": "Jester",
+          "chapter_name_key": "AREA_NAME_MOON",
+          "chapter_name_texts": {
+            "en": "The Moon",
+            "zh": "\u6708\u7403"
+          }
+        }
+      ],
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2894,6 +3132,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2925,6 +3164,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2956,6 +3196,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2987,6 +3228,17 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": [
+        {
+          "chapter": "moon",
+          "class": "Colorless",
+          "chapter_name_key": "AREA_NAME_MOON",
+          "chapter_name_texts": {
+            "en": "The Moon",
+            "zh": "\u6708\u7403"
+          }
+        }
+      ],
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3015,6 +3267,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3045,6 +3298,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3081,6 +3335,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3111,6 +3366,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3142,6 +3398,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3173,6 +3430,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3203,6 +3461,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3233,6 +3492,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3261,6 +3521,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3289,6 +3550,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3317,6 +3579,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3345,6 +3608,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3373,6 +3637,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3401,6 +3666,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3429,6 +3695,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3457,6 +3724,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3485,6 +3753,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3513,6 +3782,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3541,6 +3811,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3569,6 +3840,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3599,6 +3871,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3629,6 +3902,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3657,6 +3931,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3685,6 +3960,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3713,6 +3989,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3741,6 +4018,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3769,6 +4047,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3797,6 +4076,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3825,6 +4105,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3853,6 +4134,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3881,6 +4163,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3909,6 +4192,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3937,6 +4221,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3965,6 +4250,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3993,6 +4279,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4021,6 +4308,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4049,6 +4337,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4077,6 +4366,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4105,6 +4395,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4135,6 +4426,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4163,6 +4455,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4191,6 +4484,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4227,6 +4521,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4258,6 +4553,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4294,6 +4590,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4324,6 +4621,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4352,6 +4650,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4380,6 +4679,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4411,6 +4711,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4439,6 +4740,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4467,6 +4769,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4495,6 +4798,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4523,6 +4827,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4551,6 +4856,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4579,6 +4885,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4607,6 +4914,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4635,6 +4943,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4663,6 +4972,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4691,6 +5001,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4719,6 +5030,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4747,6 +5059,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4775,6 +5088,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4803,6 +5117,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4834,6 +5149,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4862,6 +5178,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4890,6 +5207,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4918,6 +5236,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4946,6 +5265,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4974,6 +5294,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5002,6 +5323,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5030,6 +5352,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5058,6 +5381,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5086,6 +5410,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5114,6 +5439,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5142,6 +5468,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5170,6 +5497,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5198,6 +5526,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5226,6 +5555,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5254,6 +5584,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5282,6 +5613,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5310,6 +5642,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5338,6 +5671,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5366,6 +5700,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5396,6 +5731,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5424,6 +5760,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5458,6 +5795,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5492,6 +5830,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5525,6 +5864,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5555,6 +5895,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5583,6 +5924,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5611,6 +5953,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5639,6 +5982,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5669,6 +6013,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5697,6 +6042,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5725,6 +6071,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5755,6 +6102,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5783,6 +6131,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5811,6 +6160,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5839,6 +6189,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5869,6 +6220,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5897,6 +6249,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5929,6 +6282,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5960,6 +6314,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5988,6 +6343,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6016,6 +6372,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6044,6 +6401,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6072,6 +6430,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6100,6 +6459,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6128,6 +6488,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6156,6 +6517,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6184,6 +6546,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6213,6 +6576,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6242,6 +6606,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6275,6 +6640,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6306,6 +6672,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6334,6 +6701,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6362,6 +6730,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6393,6 +6762,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6421,6 +6791,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6449,6 +6820,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6479,6 +6851,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6507,6 +6880,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6535,6 +6909,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6563,6 +6938,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6590,6 +6966,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": "purposely empty",
       "desc2_notes": null
     },
@@ -6621,6 +6998,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6652,6 +7030,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6685,6 +7064,7 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6716,6 +7096,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6747,6 +7128,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6778,6 +7160,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6809,6 +7192,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6840,6 +7224,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6871,6 +7256,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6902,6 +7288,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6933,6 +7320,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6964,6 +7352,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6995,6 +7384,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7028,6 +7418,7 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7059,6 +7450,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7090,6 +7482,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7121,6 +7514,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7156,6 +7550,7 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7187,6 +7582,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7218,6 +7614,17 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": [
+        {
+          "chapter": "boneyard",
+          "class": "Druid",
+          "chapter_name_key": "AREA_NAME_BONEYARD",
+          "chapter_name_texts": {
+            "en": "The Boneyard",
+            "zh": "\u767d\u9aa8\u5893\u56ed"
+          }
+        }
+      ],
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7256,6 +7663,7 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7287,6 +7695,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7318,6 +7727,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7349,6 +7759,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7380,6 +7791,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7411,6 +7823,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7442,6 +7855,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7473,6 +7887,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7506,6 +7921,7 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7537,6 +7953,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7568,6 +7985,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7607,6 +8025,7 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7638,6 +8057,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7669,6 +8089,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7700,6 +8121,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7736,6 +8158,7 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7767,6 +8190,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7798,6 +8222,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7829,6 +8254,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7864,6 +8290,7 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7895,6 +8322,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7926,6 +8354,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7961,6 +8390,7 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7992,6 +8422,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8023,6 +8454,17 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": [
+        {
+          "chapter": "boneyard",
+          "class": "Fighter",
+          "chapter_name_key": "AREA_NAME_BONEYARD",
+          "chapter_name_texts": {
+            "en": "The Boneyard",
+            "zh": "\u767d\u9aa8\u5893\u56ed"
+          }
+        }
+      ],
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8054,6 +8496,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8085,6 +8528,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8116,6 +8560,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8147,6 +8592,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8178,6 +8624,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8209,6 +8656,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8240,6 +8688,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8271,6 +8720,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8302,6 +8752,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8333,6 +8784,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8364,6 +8816,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8395,6 +8848,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8426,6 +8880,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8457,6 +8912,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8488,6 +8944,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8519,6 +8976,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8550,6 +9008,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8581,6 +9040,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8612,6 +9072,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8643,6 +9104,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8676,6 +9138,7 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8707,6 +9170,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8738,6 +9202,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8769,6 +9234,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8800,6 +9266,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8831,6 +9298,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8862,6 +9330,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8893,6 +9362,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8924,6 +9394,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8955,6 +9426,17 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": [
+        {
+          "chapter": "boneyard",
+          "class": "Hunter",
+          "chapter_name_key": "AREA_NAME_BONEYARD",
+          "chapter_name_texts": {
+            "en": "The Boneyard",
+            "zh": "\u767d\u9aa8\u5893\u56ed"
+          }
+        }
+      ],
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8984,6 +9466,17 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": [
+        {
+          "chapter": "boneyard",
+          "class": "Jester",
+          "chapter_name_key": "AREA_NAME_BONEYARD",
+          "chapter_name_texts": {
+            "en": "The Boneyard",
+            "zh": "\u767d\u9aa8\u5893\u56ed"
+          }
+        }
+      ],
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9015,6 +9508,17 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": [
+        {
+          "chapter": "boneyard",
+          "class": "Jester",
+          "chapter_name_key": "AREA_NAME_BONEYARD",
+          "chapter_name_texts": {
+            "en": "The Boneyard",
+            "zh": "\u767d\u9aa8\u5893\u56ed"
+          }
+        }
+      ],
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9046,6 +9550,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9081,6 +9586,7 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9112,6 +9618,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9143,6 +9650,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9174,6 +9682,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9205,6 +9714,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9236,6 +9746,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9267,6 +9778,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9298,6 +9810,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9329,6 +9842,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9360,6 +9874,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9391,6 +9906,17 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": [
+        {
+          "chapter": "boneyard",
+          "class": "Mage",
+          "chapter_name_key": "AREA_NAME_BONEYARD",
+          "chapter_name_texts": {
+            "en": "The Boneyard",
+            "zh": "\u767d\u9aa8\u5893\u56ed"
+          }
+        }
+      ],
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9422,6 +9948,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9453,6 +9980,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9484,6 +10012,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9515,6 +10044,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9546,6 +10076,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9577,6 +10108,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9608,6 +10140,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9639,6 +10172,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9670,6 +10204,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9701,6 +10236,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9732,6 +10268,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9763,6 +10300,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9794,6 +10332,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9825,6 +10364,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9856,6 +10396,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9887,6 +10428,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9918,6 +10460,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9949,6 +10492,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9980,6 +10524,17 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": [
+        {
+          "chapter": "boneyard",
+          "class": "Medic",
+          "chapter_name_key": "AREA_NAME_BONEYARD",
+          "chapter_name_texts": {
+            "en": "The Boneyard",
+            "zh": "\u767d\u9aa8\u5893\u56ed"
+          }
+        }
+      ],
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10014,6 +10569,7 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10045,6 +10601,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10080,6 +10637,7 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10111,6 +10669,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10142,6 +10701,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10177,6 +10737,7 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10208,6 +10769,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10241,6 +10803,7 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10272,6 +10835,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10303,6 +10867,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10334,6 +10899,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10365,6 +10931,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10396,6 +10963,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10427,6 +10995,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10458,6 +11027,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10489,6 +11059,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10520,6 +11091,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10551,6 +11123,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10582,6 +11155,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10613,6 +11187,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10644,6 +11219,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10675,6 +11251,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10706,6 +11283,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10737,6 +11315,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10770,6 +11349,7 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10805,6 +11385,7 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10836,6 +11417,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10867,6 +11449,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10898,6 +11481,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10932,6 +11516,7 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10963,6 +11548,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10994,6 +11580,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11025,6 +11612,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11056,6 +11644,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11087,6 +11676,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11118,6 +11708,17 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": [
+        {
+          "chapter": "boneyard",
+          "class": "Monk",
+          "chapter_name_key": "AREA_NAME_BONEYARD",
+          "chapter_name_texts": {
+            "en": "The Boneyard",
+            "zh": "\u767d\u9aa8\u5893\u56ed"
+          }
+        }
+      ],
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11153,6 +11754,7 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11184,6 +11786,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11221,6 +11824,7 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11252,6 +11856,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11283,6 +11888,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11314,6 +11920,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11345,6 +11952,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11376,6 +11984,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11407,6 +12016,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11438,6 +12048,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11469,6 +12080,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11500,6 +12112,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11531,6 +12144,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11562,6 +12176,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11593,6 +12208,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11624,6 +12240,17 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": [
+        {
+          "chapter": "boneyard",
+          "class": "Necromancer",
+          "chapter_name_key": "AREA_NAME_BONEYARD",
+          "chapter_name_texts": {
+            "en": "The Boneyard",
+            "zh": "\u767d\u9aa8\u5893\u56ed"
+          }
+        }
+      ],
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11655,6 +12282,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11686,6 +12314,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11717,6 +12346,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11748,6 +12378,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11779,6 +12410,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11810,6 +12442,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11841,6 +12474,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11872,6 +12506,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11903,6 +12538,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11934,6 +12570,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11965,6 +12602,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11996,6 +12634,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12027,6 +12666,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12058,6 +12698,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12089,6 +12730,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12120,6 +12762,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12151,6 +12794,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12182,6 +12826,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12213,6 +12858,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12244,6 +12890,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12275,6 +12922,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12306,6 +12954,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12337,6 +12986,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12368,6 +13018,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12399,6 +13050,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12430,6 +13082,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12461,6 +13114,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12492,6 +13146,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12523,6 +13178,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12554,6 +13210,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12585,6 +13242,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12618,6 +13276,7 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12649,6 +13308,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12680,6 +13340,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12715,6 +13376,7 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12746,6 +13408,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12777,6 +13440,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12808,6 +13472,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12839,6 +13504,17 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": [
+        {
+          "chapter": "boneyard",
+          "class": "Psychic",
+          "chapter_name_key": "AREA_NAME_BONEYARD",
+          "chapter_name_texts": {
+            "en": "The Boneyard",
+            "zh": "\u767d\u9aa8\u5893\u56ed"
+          }
+        }
+      ],
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12870,6 +13546,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12901,6 +13578,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12932,6 +13610,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12963,6 +13642,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12994,6 +13674,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13025,6 +13706,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13056,6 +13738,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13087,6 +13770,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13109,6 +13793,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13142,6 +13827,7 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13173,6 +13859,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13204,6 +13891,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13239,6 +13927,7 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13270,6 +13959,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13301,6 +13991,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13336,6 +14027,7 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13367,6 +14059,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13398,6 +14091,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13433,6 +14127,7 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13468,6 +14163,7 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13499,6 +14195,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13530,6 +14227,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13561,6 +14259,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13596,6 +14295,7 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13627,6 +14327,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13658,6 +14359,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13689,6 +14391,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13720,6 +14423,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13755,6 +14459,7 @@
       },
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13786,6 +14491,17 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": [
+        {
+          "chapter": "boneyard",
+          "class": "Tank",
+          "chapter_name_key": "AREA_NAME_BONEYARD",
+          "chapter_name_texts": {
+            "en": "The Boneyard",
+            "zh": "\u767d\u9aa8\u5893\u56ed"
+          }
+        }
+      ],
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13817,6 +14533,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13848,6 +14565,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13879,6 +14597,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13910,6 +14629,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13941,6 +14661,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13972,6 +14693,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14003,6 +14725,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14034,6 +14757,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14065,6 +14789,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14096,6 +14821,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14127,6 +14853,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14158,6 +14885,17 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": [
+        {
+          "chapter": "boneyard",
+          "class": "Thief",
+          "chapter_name_key": "AREA_NAME_BONEYARD",
+          "chapter_name_texts": {
+            "en": "The Boneyard",
+            "zh": "\u767d\u9aa8\u5893\u56ed"
+          }
+        }
+      ],
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14189,6 +14927,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14220,6 +14959,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14251,6 +14991,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14282,6 +15023,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14313,6 +15055,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14344,6 +15087,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14375,6 +15119,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14406,6 +15151,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14437,6 +15183,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14468,6 +15215,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14499,6 +15247,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14530,6 +15279,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14561,6 +15311,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14592,6 +15343,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14623,6 +15375,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14654,6 +15407,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14685,6 +15439,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14716,6 +15471,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14747,6 +15503,17 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": [
+        {
+          "chapter": "boneyard",
+          "class": "Tinkerer",
+          "chapter_name_key": "AREA_NAME_BONEYARD",
+          "chapter_name_texts": {
+            "en": "The Boneyard",
+            "zh": "\u767d\u9aa8\u5893\u56ed"
+          }
+        }
+      ],
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14778,6 +15545,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14809,6 +15577,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14840,6 +15609,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14871,6 +15641,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14902,6 +15673,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14933,6 +15705,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14964,6 +15737,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14995,6 +15769,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15026,6 +15801,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15057,6 +15833,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15088,6 +15865,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15119,6 +15897,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15150,6 +15929,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15181,6 +15961,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15212,6 +15993,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15243,6 +16025,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15274,6 +16057,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15305,6 +16089,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15336,6 +16121,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15367,6 +16153,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15395,6 +16182,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15423,6 +16211,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15451,6 +16240,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15479,6 +16269,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15507,6 +16298,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15535,6 +16327,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15563,6 +16356,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15591,6 +16385,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15619,6 +16414,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15647,6 +16443,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15675,6 +16472,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15703,6 +16501,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15731,6 +16530,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15759,6 +16559,7 @@
       "stats_level2": null,
       "stats_level1_upgraded": null,
       "stats_level2_upgraded": null,
+      "unlock_requirements": null,
       "desc_notes": null,
       "desc2_notes": null
     }
