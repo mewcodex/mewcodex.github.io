@@ -499,6 +499,10 @@
             margin-top: 4px;
         }
 
+        .pool-cell {
+            min-width: 160px;
+        }
+
         .class-fighter {
             background: #e74c3c;
         }
@@ -1449,6 +1453,7 @@
                         </th>
                         <th id="nameHeader" style="width: 150px;">Ability Name</th>
                         <th id="descHeader">Description</th>
+                        <th id="poolHeader" style="width: 180px;">Pools</th>
                         <th id="classHeader" class="sortable" style="width: 100px;" onclick="sortBy('class')">Class<span
                                 class="sort-indicator"></span></th>
                         <th id="frameHeader" style="width: 80px;" hidden>Frame</th>
@@ -1456,7 +1461,7 @@
                 </thead>
                 <tbody id="tableBody">
                     <tr>
-                        <td colspan="5" class="no-results" id="loadingMessage">Loading abilities...</td>
+                        <td colspan="6" class="no-results" id="loadingMessage">Loading abilities...</td>
                     </tr>
                 </tbody>
             </table>
@@ -1512,12 +1517,14 @@
         </div>
     </div>
 
+    <script src="js/codex-utils.js"></script>
+    <script src="js/codex-i18n.js"></script>
     <script src="js/target-renderer.js"></script>
     <script src="announcement.js"></script>
     <script>
         let allAbilities = [];
         let filteredAbilities = [];
-        let currentLanguage = 'en';
+        let currentLanguage = initLanguage('en');
         window.currentLanguage = currentLanguage;
         let currentSort = { column: null, direction: 'asc' };
         let editorNotes = {};
@@ -1526,63 +1533,20 @@
         let hasAutoShownFormula = false;
         const ANNOUNCEMENT_SEEN_KEY = 'codexAnnouncementSeen_v1';
 
-        // Get language from URL parameter
-        function updateNavbarLinks() {
-            const lang = currentLanguage !== 'en' ? `?lang=${currentLanguage}` : '';
-            document.getElementById('navAbilities').href = `index.html${lang}`;
-            document.getElementById('navPassives').href = `passives.html${lang}`;
-            document.getElementById('navItems').href = `items.html${lang}`;
-            document.getElementById('navMutations').href = `mutations.html${lang}`;
-            document.getElementById('navAchievements').href = `achievements.html${lang}`;
-            document.getElementById('navCharacters').href = `characters.html${lang}`;
-        }
-
-        function getUrlParameter(name) {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(name);
-        }
-
-        // Set language in URL parameter
-        function setUrlParameter(name, value) {
-            const url = new URL(window.location);
-            url.searchParams.set(name, value);
-            window.history.replaceState({}, '', url);
-        }
-
         function setLanguage(lang) {
-            if (!lang || lang === currentLanguage) {
-                return;
-            }
-            currentLanguage = lang;
-            window.currentLanguage = currentLanguage;
-            setUrlParameter('lang', currentLanguage);
-            applyUiLanguage();
-            filterAbilities();
+            codexSetLanguage(lang, () => {
+                currentLanguage = window.currentLanguage;
+                applyUiLanguage();
+                filterAbilities();
+            });
         }
 
-        // Initialize language from URL if present
-        const urlLang = getUrlParameter('lang');
-        if (urlLang === 'zh' || urlLang === 'en') {
-            currentLanguage = urlLang;
-            window.currentLanguage = currentLanguage;
-        }
-
-        const UI_TEXT = {
+        const UI_TEXT = mergeUiText(COMMON_UI_TEXT, {
             en: {
                 pageTitle: 'Mewgenics Ability Viewer',
                 headerTitle: 'Mewgenics Ability Viewer',
                 headerSubtitle: 'Browse all game abilities with descriptions and icons',
                 searchPlaceholder: 'Search by ability name or description...',
-                navAbilities: 'Abilities',
-                navPassives: 'Passives',
-                navItems: 'Items',
-                navMutations: 'Mutations',
-                navAchievements: 'Achievements',
-                navCharacters: 'Characters',
-                languageLabel: 'Language:',
-                languageEnglish: 'English',
-                languageChinese: 'Chinese',
-                showHidden: 'Show Hidden',
                 showDetailed: 'Show detailed values',
                 hideDetailed: 'Hide detailed values',
                 otherNoClass: 'Other (No Class)',
@@ -1596,6 +1560,7 @@
                 iconHeader: 'Icon',
                 nameHeader: 'Ability Name',
                 descHeader: 'Description',
+                poolHeader: 'Pools',
                 classHeader: 'Class',
                 frameHeader: 'Frame',
                 loading: 'Loading abilities...',
@@ -1605,13 +1570,6 @@
                 runServer: 'Run the server script to browse the abilities:',
                 thenOpen: 'Then open:',
                 footerSource: 'Free fan site with data from game ability definitions and sprite mappings.',
-                footerCredit: 'Original game by Edmund McMillen and Tyler Glaiel.',
-                footerAuthor: 'Created by: Bilibili@Alriph',
-                footerTranslator: 'Chinese translation: Bilibili@地下丝绒和妮可',
-                footerTools: 'Tools used: mewgpaks, JPEXS FFDec',
-                announcementButton: 'Announcement',
-                announcementTitle: 'Announcement',
-                announcementBody: 'Placeholder announcement.',
                 formulaButton: 'Formula explanation',
                 formulaTitle: 'Formula explanation',
                 formulaBody: '<ul><li>bonus_melee_damage = max(0,str-5)</li><li>bonus_melee_ability_damage = max(0,(str-5)/2)</li><li>bonus_ranged_damage = max(0,dex-9)</li><li>bonus_basic_spell_damage = unknown, most of the time 0</li><li>clamp(x, a, b) = min(max(x, a), b)</li><li>Multiplication and division are rounded down.</li></ul>',
@@ -1656,16 +1614,6 @@
                 headerTitle: 'Mewgenics 能力图鉴',
                 headerSubtitle: '浏览所有能力的描述与图标',
                 searchPlaceholder: '按能力名称或描述搜索...',
-                navAbilities: '能力',
-                navPassives: '被动',
-                navItems: '物品',
-                navMutations: '突变',
-                navAchievements: '成就',
-                navCharacters: '角色',
-                languageLabel: '语言：',
-                languageEnglish: '英语',
-                languageChinese: '中文',
-                showHidden: '显示隐藏项',
                 showDetailed: '显示详细数值',
                 hideDetailed: '隐藏详细数值',
                 otherNoClass: '其他（无职业）',
@@ -1679,6 +1627,7 @@
                 iconHeader: '图标',
                 nameHeader: '能力名称',
                 descHeader: '描述',
+                poolHeader: '池',
                 classHeader: '职业',
                 frameHeader: '帧',
                 loading: '正在加载能力...',
@@ -1688,13 +1637,6 @@
                 runServer: '运行本地服务器脚本以浏览能力：',
                 thenOpen: '然后打开：',
                 footerSource: '这是一个免费同人站点，数据来自游戏能力定义与精灵映射。',
-                footerCredit: '原作游戏作者：Edmund McMillen 与 Tyler Glaiel。',
-                footerAuthor: '制作：Bilibili@Alriph',
-                footerTranslator: '中文翻译：Bilibili@地下丝绒和妮可',
-                footerTools: '工具：mewgpaks，JPEXS FFDec',
-                announcementButton: '公告',
-                announcementTitle: '公告',
-                announcementBody: '公告占位符。',
                 formulaButton: '公式说明',
                 formulaTitle: '公式说明',
                 formulaBody: '<ul><li>bonus_melee_damage = max(0,str-5)</li><li>bonus_melee_ability_damage = max(0,(str-5)/2)</li><li>bonus_ranged_damage = max(0,dex-9)</li><li>bonus_basic_spell_damage = 未知，多数情况下为 0</li><li>clamp(x, a, b) = min(max(x, a), b)</li><li>乘法和除法结果向下取整。</li></ul>',
@@ -1734,7 +1676,7 @@
                 targetVariableBonusMeleeRange: '延伸',
                 targetVariableBonusRange: '射程',
             }
-        };
+        });
 
         const CLASS_LABELS = {
             en: {
@@ -1751,14 +1693,14 @@
                 psychic: 'Psychic',
                 tinkerer: 'Tinkerer',
                 jester: 'Jester',
-                colorless: 'Colorless',
+                colorless: 'Collarless',
             },
             zh: {
                 fighter: '战士',
                 thief: '盗贼',
                 tank: '坦克',
                 mage: '法师',
-                medic: '医师',
+                medic: '牧师',
                 hunter: '猎人',
                 necromancer: '死灵法师',
                 butcher: '屠夫',
@@ -1767,13 +1709,52 @@
                 psychic: '灵能者',
                 tinkerer: '工匠',
                 jester: '小丑',
-                colorless: '无色',
+                colorless: '无项圈',
             }
         };
 
-        function t(key) {
-            return UI_TEXT[currentLanguage]?.[key] || UI_TEXT.en[key] || key;
-        }
+        const POOL_LABELS = {
+            en: {
+                BasicAttackPool: 'Default/Basic Attack',
+                CatAbilityPool: 'Default',
+                CatGenAbilityPool: 'Default/Generated Ability',
+                ColorlessAbilities: 'Default/Collarless Ability',
+            },
+            zh: {
+                BasicAttackPool: '默认/基础攻击',
+                CatAbilityPool: '默认',
+                CatGenAbilityPool: '默认/生成能力',
+                ColorlessAbilities: '默认/无项圈能力',
+            }
+        };
+
+        const POOL_TYPE_LABELS = {
+            en: {
+                ability_pool: 'Ability Pool',
+                attack_pool: 'Attack Pool',
+            },
+            zh: {
+                ability_pool: '能力池',
+                attack_pool: '攻击池',
+            }
+        };
+
+        const GROUP_LABELS = {
+            en: {
+                attack: 'Attack',
+                defense: 'Defense',
+                move: 'Move',
+                misc: 'Misc',
+            },
+            zh: {
+                attack: '攻击',
+                defense: '防御',
+                move: '移动',
+                misc: '其他',
+            }
+        };
+
+        const t = createTranslator(UI_TEXT);
 
 
         function applyUiLanguage() {
@@ -1802,6 +1783,7 @@
             }
             document.getElementById('nameHeader').textContent = t('nameHeader');
             document.getElementById('descHeader').textContent = t('descHeader');
+            document.getElementById('poolHeader').textContent = t('poolHeader');
             const classHeader = document.getElementById('classHeader');
             classHeader.innerHTML = t('classHeader') + '<span class="sort-indicator"></span>';
             document.getElementById('frameHeader').textContent = t('frameHeader');
@@ -1886,7 +1868,7 @@
             } catch (error) {
                 console.error('Error loading abilities:', error);
                 const errorMsg = `
-                    <tr><td colspan="5" class="no-results">
+                    <tr><td colspan="6" class="no-results">
                         <p style="margin-bottom: 10px;"><strong>${escapeHtml(t('errorLoading'))}</strong> ${escapeHtml(error.message)}</p>
                         <p style="font-size: 0.9em; color: #666; line-height: 1.5;">
                             <strong>${escapeHtml(t('solution'))}</strong><br>
@@ -1936,12 +1918,6 @@
             select.value = selectedValue;
         }
 
-        function getLocalizedText(texts, fallback) {
-            if (!texts || typeof texts !== 'object') {
-                return fallback || '';
-            }
-            return texts[currentLanguage] || fallback || '';
-        }
 
         function getClassLabel(className) {
             if (!className) {
@@ -1949,6 +1925,37 @@
             }
             const key = className.toLowerCase();
             return CLASS_LABELS[currentLanguage]?.[key] || CLASS_LABELS.en[key] || className;
+        }
+
+        function localizePoolTag(tag) {
+            if (!tag) {
+                return '';
+            }
+            const direct = POOL_LABELS[currentLanguage]?.[tag] || POOL_LABELS.en[tag];
+            if (direct) {
+                return direct;
+            }
+            const parts = String(tag).split('.');
+            if (parts.length < 2) {
+                return tag;
+            }
+            const className = parts[0];
+            const section = parts[1];
+            if (section === 'ability_groups' && parts[2]) {
+                const group = parts[2];
+                const groupLabel = GROUP_LABELS[currentLanguage]?.[group]
+                    || GROUP_LABELS.en[group]
+                    || group;
+                return `${getClassLabel(className)}/${groupLabel}`;
+            }
+            if (section === 'ability_pool') {
+                return getClassLabel(className);
+            }
+            if (section === 'attack_pool') {
+                const basicAttack = currentLanguage === 'zh' ? '基础攻击' : 'Basic Attack';
+                return `${getClassLabel(className)}/${basicAttack}`;
+            }
+            return tag;
         }
 
         function getEditorNote(code) {
@@ -2049,7 +2056,7 @@
             });
 
             if (visibleAbilities.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="5" class="no-results">${escapeHtml(t('noResults'))}</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="6" class="no-results">${escapeHtml(t('noResults'))}</td></tr>`;
                 document.getElementById('showingCount').textContent = '0';
                 return;
             }
@@ -2308,6 +2315,29 @@
 
                 const iconAndStatsContent = baseIconHtml + upgradedIconHtml;
 
+                const poolTags = Array.isArray(ability.ability_pools) ? ability.ability_pools : [];
+                const classesWithGroups = new Set(
+                    poolTags
+                        .map(tag => {
+                            const parts = String(tag).split('.');
+                            return parts[1] === 'ability_groups' ? parts[0] : null;
+                        })
+                        .filter(Boolean)
+                );
+                const filteredPoolTags = poolTags.filter(tag => {
+                    const parts = String(tag).split('.');
+                    if (parts.length < 2) {
+                        return true;
+                    }
+                    if (parts[1] === 'ability_pool' && classesWithGroups.has(parts[0])) {
+                        return false;
+                    }
+                    return true;
+                });
+                const poolTagsHtml = filteredPoolTags.length
+                    ? `<div class="ability-tags">${filteredPoolTags.map(tag => `<span class="tag">${escapeHtml(localizePoolTag(tag))}</span>`).join('')}</div>`
+                    : '-';
+
                 const descriptionPieces = [
                     `<div class="description">${parseRichText(localizedDescription || 'N/A')}</div>`
                 ];
@@ -2385,6 +2415,7 @@
                         <td>
                             ${descriptionColumnHtml}
                         </td>
+                        <td class="pool-cell">${poolTagsHtml}</td>
                         <td class="class-cell">${classLabel ? `<div class="ability-class class-${ability.ability_class.toLowerCase()}">${escapeHtml(classLabel)}</div>` : '-'}</td>
                         <td class="frame-cell" hidden>${ability.frame_number}</td>
                     </tr>
@@ -2596,23 +2627,6 @@
             }
         }
 
-        // HTML escape function
-        function escapeHtml(text) {
-            if (!text) return '';
-            const map = {
-                '&': '&amp;',
-                '<': '&lt;',
-                '>': '&gt;',
-                '"': '&quot;',
-                "'": '&#039;'
-            };
-            return text.replace(/[&<>"']/g, m => map[m]);
-        }
-
-        function mapFontIconName(iconName) {
-            const iconMap = { con: 'constitution' };
-            return iconMap[iconName] || iconName;
-        }
 
         function withAttributeIcons(text) {
             if (!text) {

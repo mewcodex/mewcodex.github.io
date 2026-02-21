@@ -1081,71 +1081,31 @@
         <img class="modal-content" id="modalImage">
     </div>
 
+    <script src="js/codex-utils.js"></script>
+    <script src="js/codex-i18n.js"></script>
     <script src="announcement.js"></script>
     <script>
         let allCharacters = [];
         let filteredCharacters = [];
-        let currentLanguage = 'en';
+        let currentLanguage = initLanguage('en');
         window.currentLanguage = currentLanguage;
         let currentSort = { column: null, direction: 'asc' };
         let characterByKey = new Map();
         const ANNOUNCEMENT_SEEN_KEY = 'codexAnnouncementSeen_v1';
 
-        // Get language from URL parameter
-        function updateNavbarLinks() {
-            const lang = currentLanguage !== 'en' ? `?lang=${currentLanguage}` : '';
-            document.getElementById('navAbilities').href = `index.html${lang}`;
-            document.getElementById('navPassives').href = `passives.html${lang}`;
-            document.getElementById('navItems').href = `items.html${lang}`;
-            document.getElementById('navMutations').href = `mutations.html${lang}`;
-            document.getElementById('navAchievements').href = `achievements.html${lang}`;
-            document.getElementById('navCharacters').href = `characters.html${lang}`;
-        }
-
-        function getUrlParameter(name) {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(name);
-        }
-
-        // Set language in URL parameter
-        function setUrlParameter(name, value) {
-            const url = new URL(window.location);
-            url.searchParams.set(name, value);
-            window.history.replaceState({}, '', url);
-        }
-
         function setLanguage(lang) {
-            if (!lang || lang === currentLanguage) {
-                return;
-            }
-            currentLanguage = lang;
-            window.currentLanguage = currentLanguage;
-            setUrlParameter('lang', currentLanguage);
-            applyUiLanguage();
-            filterCharacters();
+            codexSetLanguage(lang, () => {
+                currentLanguage = window.currentLanguage;
+                applyUiLanguage();
+                filterCharacters();
+            });
         }
 
-        // Initialize language from URL if present
-        const urlLang = getUrlParameter('lang');
-        if (urlLang === 'zh' || urlLang === 'en') {
-            currentLanguage = urlLang;
-            window.currentLanguage = currentLanguage;
-        }
-
-        const UI_TEXT = {
+        const UI_TEXT = mergeUiText(COMMON_UI_TEXT, {
             en: {
                 pageTitle: 'Mewgenics Characters Viewer',
                 headerTitle: 'Mewgenics Characters Viewer',
                 searchPlaceholder: 'Search by character name or description...',
-                navAbilities: 'Abilities',
-                navItems: 'Items',
-                navPassives: 'Passives',
-                navMutations: 'Mutations',
-                navAchievements: 'Achievements',
-                navCharacters: 'Characters',
-                languageLabel: 'Language:',
-                languageEnglish: 'English',
-                languageChinese: 'Chinese',
                 allFactions: 'All Factions',
                 allSizes: 'All Sizes',
                 allKillRequired: 'All Kill Requirements',
@@ -1169,10 +1129,6 @@
                 runServer: 'Run the server script to browse the characters:',
                 thenOpen: 'Then open:',
                 footerSource: 'Free fan site with data from game character definitions and sprite mappings.',
-                footerCredit: 'Original game by Edmund McMillen and Tyler Glaiel.',
-                footerAuthor: 'Created by: Bilibili@Alriph',
-                footerTranslator: 'Chinese translation: Bilibili@地下丝绒和妮可',
-                footerTools: 'Tools used: mewgpaks, JPEXS FFDec',
                 statHealth: 'Health',
                 statMovement: 'Movement',
                 statLuck: 'Luck',
@@ -1182,23 +1138,11 @@
                 removeFilter: 'Remove filter',
                 showHidden: 'Show Hidden',
                 spawnedByPlaceholder: '`owner\'s name`',
-                announcementButton: 'Announcement',
-                announcementTitle: 'Announcement',
-                announcementBody: 'Placeholder announcement.',
             },
             zh: {
                 pageTitle: 'Mewgenics 角色图鉴',
                 headerTitle: 'Mewgenics 角色图鉴',
                 searchPlaceholder: '按角色名称或描述搜索...',
-                navAbilities: '能力',
-                navItems: '物品',
-                navPassives: '被动',
-                navMutations: '突变',
-                navAchievements: '成就',
-                navCharacters: '角色',
-                languageLabel: '语言：',
-                languageEnglish: '英语',
-                languageChinese: '中文',
                 allFactions: '全部阵营',
                 allSizes: '全部尺寸',
                 allKillRequired: '全部击杀要求',
@@ -1222,10 +1166,6 @@
                 runServer: '运行本地服务器脚本以浏览角色：',
                 thenOpen: '然后打开：',
                 footerSource: '这是一个免费同人站点，数据来自游戏角色定义与精灵映射。',
-                footerCredit: '原作游戏作者：Edmund McMillen 与 Tyler Glaiel。',
-                footerAuthor: '制作：Bilibili@Alriph',
-                footerTranslator: '中文翻译：Bilibili@地下丝绒和妮可',
-                footerTools: '工具：mewgpaks，JPEXS FFDec',
                 statHealth: '生命',
                 statMovement: '移动',
                 statLuck: '幸运',
@@ -1235,11 +1175,8 @@
                 removeFilter: '移除筛选',
                 showHidden: '显示隐藏项',
                 spawnedByPlaceholder: '`主人名字`',
-                announcementButton: '公告',
-                announcementTitle: '公告',
-                announcementBody: '公告占位符。',
             }
-        };
+        });
 
         const FACTION_LABELS = {
             en: {
@@ -1258,9 +1195,7 @@
             }
         };
 
-        function t(key) {
-            return UI_TEXT[currentLanguage]?.[key] || UI_TEXT.en[key] || key;
-        }
+        const t = createTranslator(UI_TEXT);
 
         function getFactionLabel(faction) {
             if (!faction) {
@@ -1446,12 +1381,6 @@
             select.value = selectedValue;
         }
 
-        function getLocalizedText(texts, fallback) {
-            if (!texts || typeof texts !== 'object') {
-                return fallback || '';
-            }
-            return texts[currentLanguage] || fallback || '';
-        }
 
         function buildCharacterMap() {
             characterByKey = new Map();
@@ -1930,17 +1859,6 @@
         }
 
         // HTML escape function
-        function escapeHtml(text) {
-            if (!text) return '';
-            const map = {
-                '&': '&amp;',
-                '<': '&lt;',
-                '>': '&gt;',
-                '"': '&quot;',
-                "'": '&#039;'
-            };
-            return text.replace(/[&<>"']/g, m => map[m]);
-        }
 
         // Event listeners
         document.getElementById('searchInput').addEventListener('input', () => {

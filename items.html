@@ -1019,73 +1019,32 @@
         <img class="modal-content" id="modalImage">
     </div>
 
+    <script src="js/codex-utils.js"></script>
+    <script src="js/codex-i18n.js"></script>
     <script src="announcement.js"></script>
     <script>
         let allItems = [];
         let filteredItems = [];
         let setBonusesData = [];
-        let currentLanguage = 'en';
+        let currentLanguage = initLanguage('en');
         window.currentLanguage = currentLanguage;
         let currentSort = { column: null, direction: 'asc' };
         const ANNOUNCEMENT_SEEN_KEY = 'codexAnnouncementSeen_v1';
         let editorNotes = {};
 
-        // Get language from URL parameter
-        function updateNavbarLinks() {
-            const lang = currentLanguage !== 'en' ? `?lang=${currentLanguage}` : '';
-            document.getElementById('navAbilities').href = `index.html${lang}`;
-            document.getElementById('navPassives').href = `passives.html${lang}`;
-            document.getElementById('navItems').href = `items.html${lang}`;
-            document.getElementById('navMutations').href = `mutations.html${lang}`;
-            document.getElementById('navAchievements').href = `achievements.html${lang}`;
-            document.getElementById('navCharacters').href = `characters.html${lang}`;
-        }
-
-        function getUrlParameter(name) {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(name);
-        }
-
-        // Set language in URL parameter
-        function setUrlParameter(name, value) {
-            const url = new URL(window.location);
-            url.searchParams.set(name, value);
-            window.history.replaceState({}, '', url);
-        }
-
         function setLanguage(lang) {
-            if (!lang || lang === currentLanguage) {
-                return;
-            }
-            currentLanguage = lang;
-            window.currentLanguage = currentLanguage;
-            setUrlParameter('lang', currentLanguage);
-            applyUiLanguage();
-            filterItems();
+            codexSetLanguage(lang, () => {
+                currentLanguage = window.currentLanguage;
+                applyUiLanguage();
+                filterItems();
+            });
         }
 
-        // Initialize language from URL or default to 'en'
-        const urlLang = getUrlParameter('lang');
-        if (urlLang && ['en', 'zh'].includes(urlLang)) {
-            currentLanguage = urlLang;
-            window.currentLanguage = currentLanguage;
-        }
-
-        const UI_TEXT = {
+        const UI_TEXT = mergeUiText(COMMON_UI_TEXT, {
             en: {
                 pageTitle: 'Mewgenics Item Viewer',
                 headerTitle: 'Mewgenics Item Viewer',
                 searchPlaceholder: 'Search by name/description or use #SetName for sets...',
-                navAbilities: 'Abilities',
-                navItems: 'Items',
-                navPassives: 'Passives',
-                navMutations: 'Mutations',
-                navAchievements: 'Achievements',
-                navCharacters: 'Characters',
-                languageLabel: 'Language:',
-                languageEnglish: 'English',
-                languageChinese: 'Chinese',
-                showHidden: 'Show Hidden',
                 otherNoType: 'Other (No Type)',
                 otherNoRarity: 'Other (No Rarity)',
                 noneCursedRarity: 'None (Cursed)',
@@ -1120,27 +1079,11 @@
                 strAuxActiveName: '`random active ability`',
                 strAuxActiveDesc: '`random active ability description`',
                 footerSource: 'Free fan site with data from game item definitions.',
-                footerCredit: 'Original game by Edmund McMillen and Tyler Glaiel.',
-                footerAuthor: 'Created by: Bilibili@Alriph',
-                footerTranslator: 'Chinese translation: Bilibili@地下丝绒和妮可',
-                announcementButton: 'Announcement',
-                announcementTitle: 'Announcement',
-                announcementBody: 'Placeholder announcement.',
             },
             zh: {
                 pageTitle: 'Mewgenics 物品图鉴',
                 headerTitle: 'Mewgenics 物品图鉴',
                 searchPlaceholder: '按名称/描述搜索，或使用 #套装名 搜索套装...',
-                navAbilities: '能力',
-                navItems: '物品',
-                navPassives: '被动',
-                navMutations: '突变',
-                navAchievements: '成就',
-                navCharacters: '角色',
-                languageLabel: '语言：',
-                languageEnglish: '英语',
-                languageChinese: '中文',
-                showHidden: '显示隐藏项',
                 otherNoType: '其他（无类型）',
                 otherNoRarity: '其他（无稀有度）',
                 noneCursedRarity: '无（诅咒）',
@@ -1175,14 +1118,8 @@
                 strAuxActiveName: '`随机主动技能`',
                 strAuxActiveDesc: '`随机主动技能描述`',
                 footerSource: '这是一个免费同人站点，数据来自游戏物品定义。',
-                footerCredit: '原作游戏作者：Edmund McMillen 与 Tyler Glaiel。',
-                footerAuthor: '制作：Bilibili@Alriph',
-                footerTranslator: '中文翻译：Bilibili@地下丝绒和妮可',
-                announcementButton: '公告',
-                announcementTitle: '公告',
-                announcementBody: '公告占位符。',
             }
-        };
+        });
 
         const KIND_LABELS = {
             en: {
@@ -1218,14 +1155,14 @@
                 psychic: 'Psychic',
                 tinkerer: 'Tinkerer',
                 jester: 'Jester',
-                colorless: 'Colorless',
+                colorless: 'Collarless',
             },
             zh: {
                 fighter: '战士',
                 thief: '盗贼',
                 tank: '坦克',
                 mage: '法师',
-                medic: '医师',
+                medic: '牧师',
                 hunter: '猎人',
                 necromancer: '死灵法师',
                 butcher: '屠夫',
@@ -1234,7 +1171,7 @@
                 psychic: '灵能者',
                 tinkerer: '工匠',
                 jester: '小丑',
-                colorless: '无色',
+                colorless: '无项圈',
             }
         };
 
@@ -1321,9 +1258,7 @@
             }
         };
 
-        function t(key) {
-            return UI_TEXT[currentLanguage]?.[key] || UI_TEXT.en[key] || key;
-        }
+        const t = createTranslator(UI_TEXT);
 
         function getKindLabel(kind) {
             if (!kind) return '';
@@ -1637,12 +1572,6 @@
             select.value = selectedValue;
         }
 
-        function getLocalizedText(texts, fallback) {
-            if (!texts || typeof texts !== 'object') {
-                return fallback || '';
-            }
-            return texts[currentLanguage] || fallback || '';
-        }
 
         function makeRowId(prefix, code) {
             if (!code) {
@@ -2152,17 +2081,6 @@
         }
 
 
-        function escapeHtml(text) {
-            if (!text) return '';
-            const map = {
-                '&': '&amp;',
-                '<': '&lt;',
-                '>': '&gt;',
-                '"': '&quot;',
-                "'": '&#039;'
-            };
-            return text.replace(/[&<>"']/g, m => map[m]);
-        }
 
         function getEditorNote(code) {
             if (!code || !editorNotes || typeof editorNotes !== 'object') {

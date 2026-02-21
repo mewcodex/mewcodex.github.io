@@ -503,13 +503,15 @@
         </div>
     </div>
 
+    <script src="js/codex-utils.js"></script>
+    <script src="js/codex-i18n.js"></script>
     <script src="announcement.js"></script>
     <script>
         let allAbilities = [];
         let allPassives = [];
         let allItems = [];
         let allEntries = [];
-        let currentLanguage = 'en';
+        let currentLanguage = initLanguage('en');
         window.currentLanguage = currentLanguage;
         let dataReady = false;
         const ANNOUNCEMENT_SEEN_KEY = 'codexAnnouncementSeen_v1';
@@ -551,19 +553,11 @@
             return acc;
         }, {});
 
-        const UI_TEXT = {
+        const UI_TEXT = mergeUiText(COMMON_UI_TEXT, {
             en: {
                 pageTitle: 'Mewgenics Achievements',
                 headerTitle: 'Mewgenics Achievements',
                 controlsHint: 'Hover icons to see localized names. Click to jump.',
-                navAbilities: 'Abilities',
-                navItems: 'Items',
-                navPassives: 'Passives',
-                navMutations: 'Mutations',
-                navAchievements: 'Achievements',
-                navCharacters: 'Characters',
-                languageEnglish: 'English',
-                languageChinese: 'Chinese',
                 classTableTitle: 'Class Unlocks',
                 bossTableTitle: 'Boss Unlocks by Difficulty',
                 achievementHeader: 'Achievement',
@@ -578,13 +572,6 @@
                 loading: 'Loading achievements...',
                 noResults: 'No achievements found.',
                 footerSource: 'Free fan site with data from game unlock definitions.',
-                footerCredit: 'Original game by Edmund McMillen and Tyler Glaiel.',
-                footerAuthor: 'Created by: Bilibili@Alriph',
-                footerTranslator: 'Chinese translation: Bilibili@地下丝绒和妮可',
-                footerTools: 'Tools used: mewgpaks, JPEXS FFDec',
-                announcementButton: 'Announcement',
-                announcementTitle: 'Announcement',
-                announcementBody: 'Placeholder announcement.',
                 auxCatName: '`cat name`',
                 strAuxPassiveName: '`random passive ability`',
                 strAuxPassiveDesc: '`random passive ability description`',
@@ -597,14 +584,6 @@
                 pageTitle: 'Mewgenics 成就总览',
                 headerTitle: 'Mewgenics 成就总览',
                 controlsHint: '鼠标悬停查看中文名称，点击图标跳转。',
-                navAbilities: '能力',
-                navItems: '物品',
-                navPassives: '被动',
-                navMutations: '突变',
-                navAchievements: '成就',
-                navCharacters: '角色',
-                languageEnglish: '英语',
-                languageChinese: '中文',
                 classTableTitle: '职业解锁',
                 bossTableTitle: 'Boss 难度解锁',
                 achievementHeader: '成就',
@@ -619,13 +598,6 @@
                 loading: '正在加载成就...',
                 noResults: '未找到成就。',
                 footerSource: '这是一个免费同人站点，数据来自游戏解锁定义。',
-                footerCredit: '原作游戏作者：Edmund McMillen 与 Tyler Glaiel。',
-                footerAuthor: '制作：Bilibili@Alriph',
-                footerTranslator: '中文翻译：Bilibili@地下丝绒和妮可',
-                footerTools: '工具：mewgpaks，JPEXS FFDec',
-                announcementButton: '公告',
-                announcementTitle: '公告',
-                announcementBody: '公告占位符。',
                 auxCatName: '`猫的名字`',
                 strAuxPassiveName: '`随机被动技能`',
                 strAuxPassiveDesc: '`随机被动技能描述`',
@@ -634,7 +606,7 @@
                 strAuxActiveDesc: '`随机主动技能描述`',
                 strAuxAttribute: '`随机属性`',
             }
-        };
+        });
 
         const CLASS_LABELS = {
             en: {
@@ -651,14 +623,14 @@
                 psychic: 'Psychic',
                 tinkerer: 'Tinkerer',
                 jester: 'Jester',
-                colorless: 'Colorless',
+                colorless: 'Collarless',
             },
             zh: {
                 fighter: '战士',
                 thief: '盗贼',
                 tank: '坦克',
                 mage: '法师',
-                medic: '医师',
+                medic: '牧师',
                 hunter: '猎人',
                 necromancer: '死灵法师',
                 butcher: '屠夫',
@@ -667,7 +639,7 @@
                 psychic: '灵能者',
                 tinkerer: '工匠',
                 jester: '小丑',
-                colorless: '无色',
+                colorless: '无项圈',
             }
         };
 
@@ -684,46 +656,14 @@
             }
         };
 
-        function t(key) {
-            return UI_TEXT[currentLanguage]?.[key] || UI_TEXT.en[key] || key;
-        }
-
-        function updateNavbarLinks() {
-            const lang = currentLanguage !== 'en' ? `?lang=${currentLanguage}` : '';
-            document.getElementById('navAbilities').href = `index.html${lang}`;
-            document.getElementById('navPassives').href = `passives.html${lang}`;
-            document.getElementById('navItems').href = `items.html${lang}`;
-            document.getElementById('navMutations').href = `mutations.html${lang}`;
-            document.getElementById('navAchievements').href = `achievements.html${lang}`;
-            document.getElementById('navCharacters').href = `characters.html${lang}`;
-        }
-
-        function getUrlParameter(name) {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(name);
-        }
-
-        function setUrlParameter(name, value) {
-            const url = new URL(window.location);
-            url.searchParams.set(name, value);
-            window.history.replaceState({}, '', url);
-        }
+        const t = createTranslator(UI_TEXT);
 
         function setLanguage(lang) {
-            if (!lang || lang === currentLanguage) {
-                return;
-            }
-            currentLanguage = lang;
-            window.currentLanguage = currentLanguage;
-            setUrlParameter('lang', currentLanguage);
-            applyUiLanguage();
-            renderAchievements();
-        }
-
-        const urlLang = getUrlParameter('lang');
-        if (urlLang === 'zh' || urlLang === 'en') {
-            currentLanguage = urlLang;
-            window.currentLanguage = currentLanguage;
+            codexSetLanguage(lang, () => {
+                currentLanguage = window.currentLanguage;
+                applyUiLanguage();
+                renderAchievements();
+            });
         }
 
         function applyUiLanguage() {
@@ -767,12 +707,6 @@
             updateNavbarLinks();
         }
 
-        function getLocalizedText(texts, fallback) {
-            if (!texts || typeof texts !== 'object') {
-                return fallback || '';
-            }
-            return texts[currentLanguage] || fallback || '';
-        }
 
         function getClassLabel(className) {
             if (!className) {
@@ -881,17 +815,6 @@
             return `rarity/${prefix}${item.rarity}.png`;
         }
 
-        function escapeHtml(text) {
-            if (!text) return '';
-            const map = {
-                '&': '&amp;',
-                '<': '&lt;',
-                '>': '&gt;',
-                '"': '&quot;',
-                "'": '&#039;'
-            };
-            return text.replace(/[&<>"']/g, m => map[m]);
-        }
 
         function buildEntryIcon(entry) {
             const label = getEntryName(entry);
