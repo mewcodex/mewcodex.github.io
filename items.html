@@ -660,6 +660,7 @@
             font-family: 'Courier New', monospace;
             font-size: 0.9em;
             color: #333;
+            font-style: normal;
         }
 
         .announcement-button {
@@ -2258,6 +2259,9 @@
 
             // Escape HTML first
             let html = escapeHtml(text);
+
+            // Render bracketed numeric pairs as inline code for clarity
+            html = html.replace(/\[(\d+\s+\d+)\]/g, '<code>[$1]</code>');
 
             // Handle [s:.7]...[/s] for italics (allow multiline content)
             html = html.replace(/\[s:[^\]]+\]([\s\S]*?)\[\/s\]/g, '<i>$1</i>');

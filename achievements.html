@@ -591,6 +591,7 @@
                 strAuxItemDesc: '`random item description`',
                 strAuxActiveName: '`random active ability`',
                 strAuxActiveDesc: '`random active ability description`',
+                strAuxAttribute: '`random attribute`',
             },
             zh: {
                 pageTitle: 'Mewgenics 成就总览',
@@ -631,6 +632,7 @@
                 strAuxItemDesc: '`随机物品描述`',
                 strAuxActiveName: '`随机主动技能`',
                 strAuxActiveDesc: '`随机主动技能描述`',
+                strAuxAttribute: '`随机属性`',
             }
         };
 
@@ -827,6 +829,8 @@
                 name = name.replace(/{str_aux_item_desc}/g, t('strAuxItemDesc'));
                 name = name.replace(/{str_aux_active_name}/g, t('strAuxActiveName'));
                 name = name.replace(/{str_aux_active_desc}/g, t('strAuxActiveDesc'));
+                name = name.replace(/\[img:\{str_aux\}\]/g, t('strAuxAttribute'));
+                name = name.replace(/{img:str_aux}/g, t('strAuxAttribute'));
                 return name;
             }
             return getLocalizedText(entry.name_texts, entry.name) || entry.name || entry.code || '';
