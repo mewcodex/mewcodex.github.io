@@ -633,10 +633,17 @@
 
         .img-icon {
             display: inline-block;
-            width: 1em;
             height: 1em;
+            width: auto;
+            object-fit: contain;
             vertical-align: -0.2em;
             margin: 0 2px;
+        }
+
+        .img-icon-shield {
+            width: auto;
+            height: 1em;
+            object-fit: contain;
         }
 
         .img-icon-stat {
@@ -1537,7 +1544,9 @@
         const NO_FILTER_ICON_NAMES = new Set(['health', 'movement', 'hp']);
 
         function getIconClass(iconName, isShield = false) {
-            const baseClass = 'img-icon' + (isShield ? '' : ' img-icon-stat');
+            const baseClass = isShield
+                ? 'img-icon img-icon-shield'
+                : 'img-icon img-icon-stat';
             return NO_FILTER_ICON_NAMES.has(iconName)
                 ? `${baseClass} img-icon-no-filter`
                 : baseClass;

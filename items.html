@@ -600,10 +600,17 @@
 
         .img-icon {
             display: inline-block;
-            width: 1em;
             height: 1em;
+            width: auto;
+            object-fit: contain;
             vertical-align: -0.2em;
             margin: 0 2px;
+        }
+
+        .img-icon-shield {
+            width: auto;
+            height: 1em;
+            object-fit: contain;
         }
 
         .img-icon-stat {
@@ -1379,7 +1386,9 @@
                     const value = stats[stat];
                     const iconFile = statIconMap[stat];
                     const isShield = stat === 'shield' || stat === 'divine_shield';
-                    const className = 'img-icon' + (isShield ? '' : ' img-icon-stat');
+                    const className = isShield
+                        ? 'img-icon img-icon-shield'
+                        : 'img-icon img-icon-stat';
                     const sign = value > 0 ? '+' : '';
                     const colorClass = value > 0 ? 'positive' : (value < 0 ? 'negative' : '');
 
@@ -2048,7 +2057,9 @@
                     const value = stats[stat];
                     const iconFile = statIconMap[stat];
                     const isShield = stat === 'shield' || stat === 'divine_shield';
-                    const className = 'img-icon' + (isShield ? '' : ' img-icon-stat');
+                    const className = isShield
+                        ? 'img-icon img-icon-shield'
+                        : 'img-icon img-icon-stat';
                     const sign = value > 0 ? '+' : '';
                     const colorClass = value > 0 ? 'positive' : (value < 0 ? 'negative' : '');
 
@@ -2262,7 +2273,9 @@
                 const noFilterIcons = new Set(['health', 'movement', 'hp']);
                 const mappedName = iconMap[iconName] || iconName;
                 const isShield = iconName === 'shield' || iconName === 'divineshield';
-                const baseClass = 'img-icon' + (isShield ? '' : ' img-icon-stat');
+                const baseClass = isShield
+                    ? 'img-icon img-icon-shield'
+                    : 'img-icon img-icon-stat';
                 const className = noFilterIcons.has(mappedName)
                     ? `${baseClass} img-icon-no-filter`
                     : baseClass;
