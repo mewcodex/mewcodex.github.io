@@ -514,6 +514,12 @@
             border-radius: 2px;
         }
 
+        .hash-target {
+            outline: 2px solid #d8b55b;
+            outline-offset: -2px;
+            background: rgba(255, 244, 204, 0.35);
+        }
+
         .unlock-requirements {
             color: #6b5b2a;
             font-size: 0.9em;
@@ -1262,6 +1268,31 @@
             return Object.values(texts).some(value => typeof value === 'string' && value.trim() !== '');
         }
 
+        function makeRowId(prefix, code) {
+            if (!code) {
+                return '';
+            }
+            const safe = String(code).replace(/[^A-Za-z0-9_-]+/g, '-');
+            return `${prefix}-${safe}`;
+        }
+
+        function scrollToHash(prefix) {
+            const hash = window.location.hash ? window.location.hash.slice(1) : '';
+            if (!hash) {
+                return;
+            }
+            const decoded = decodeURIComponent(hash);
+            const direct = document.getElementById(decoded);
+            const rowId = makeRowId(prefix, decoded);
+            const target = direct || (rowId ? document.getElementById(rowId) : null);
+            if (!target) {
+                return;
+            }
+            target.classList.add('hash-target');
+            target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            setTimeout(() => target.classList.remove('hash-target'), 2000);
+        }
+
         // Format stats for display (like items page)
         function formatStats(statsObj) {
             if (!statsObj || Object.keys(statsObj).length === 0) {
@@ -1356,7 +1387,7 @@
                 const editorHtml = editorNote ? `<div class="source-comment">${escapeHtml(t('editorNotesLabel'))} ${escapeHtml(editorNote)}</div>` : '';
 
                 return `
-                    <tr>
+                    <tr id="${makeRowId('passive', passive.passive_code || '')}" data-code="${escapeHtml(passive.passive_code || '')}">
                         <td class="image-cell">
                             ${passive.frame_number !== null && passive.frame_number !== undefined ?
                         `<img src="PassiveIcon/${passive.frame_number}.png" 
@@ -1386,6 +1417,7 @@
             }).join('');
 
             document.getElementById('showingCount').textContent = visiblePassives.length;
+            requestAnimationFrame(() => scrollToHash('passive'));
         }
 
         function sortBy(column) {
@@ -1554,6 +1586,7 @@
             });
         });
         document.getElementById('showHiddenToggle').addEventListener('change', filterPassives);
+        window.addEventListener('hashchange', () => scrollToHash('passive'));
 
         // Apply language immediately when DOM is ready (before data loads)
         document.addEventListener('DOMContentLoaded', () => {

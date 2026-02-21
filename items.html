@@ -582,6 +582,22 @@
             border-radius: 2px;
         }
 
+        .hash-target {
+            outline: 2px solid #d8b55b;
+            outline-offset: -2px;
+            background: rgba(255, 244, 204, 0.35);
+        }
+
+        .unlock-requirements {
+            color: #6b5b2a;
+            font-size: 0.85em;
+            margin-top: 8px;
+            padding: 6px;
+            background: #fff4cc;
+            border-left: 3px solid #d8b55b;
+            border-radius: 2px;
+        }
+
         .img-icon {
             display: inline-block;
             width: 1em;
@@ -1071,6 +1087,11 @@
                 showing: 'Showing:',
                 sourceCommentsLabel: 'Source Comments:',
                 editorNotesLabel: 'Editor Notes:',
+                unlockRequirementsLabel: 'Unlock Requirements:',
+                completeChecklistWithClass: 'Complete all checkmarks as {className}',
+                beatHouseBoss: 'Beat house boss {bossName}',
+                beatChapterBoss: 'Beat chapter boss {bossName}',
+                difficultyLabel: 'Difficulty:',
                 iconHeader: 'Icon',
                 nameHeader: 'Item Name',
                 descHeader: 'Description',
@@ -1120,6 +1141,11 @@
                 showing: '显示：',
                 sourceCommentsLabel: '源码注释：',
                 editorNotesLabel: '编辑注释：',
+                unlockRequirementsLabel: '解锁条件：',
+                completeChecklistWithClass: '以 {className} 通关所有勾选章',
+                beatHouseBoss: '击败宅邸 Boss {bossName}',
+                beatChapterBoss: '击败章节 Boss {bossName}',
+                difficultyLabel: '难度：',
                 iconHeader: '图标',
                 nameHeader: '物品名称',
                 descHeader: '描述',
@@ -1162,6 +1188,54 @@
                 neck: '项链',
                 face: '面部',
                 head: '头部',
+            }
+        };
+
+        const CLASS_LABELS = {
+            en: {
+                fighter: 'Fighter',
+                thief: 'Thief',
+                tank: 'Tank',
+                mage: 'Mage',
+                medic: 'Medic',
+                hunter: 'Hunter',
+                necromancer: 'Necromancer',
+                butcher: 'Butcher',
+                monk: 'Monk',
+                druid: 'Druid',
+                psychic: 'Psychic',
+                tinkerer: 'Tinkerer',
+                jester: 'Jester',
+                colorless: 'Colorless',
+            },
+            zh: {
+                fighter: '战士',
+                thief: '盗贼',
+                tank: '坦克',
+                mage: '法师',
+                medic: '医师',
+                hunter: '猎人',
+                necromancer: '死灵法师',
+                butcher: '屠夫',
+                monk: '武僧',
+                druid: '德鲁伊',
+                psychic: '灵能者',
+                tinkerer: '工匠',
+                jester: '小丑',
+                colorless: '无色',
+            }
+        };
+
+        const DIFFICULTY_LABELS = {
+            en: {
+                1: 'Hard',
+                2: 'Crazy',
+                3: 'Impossible',
+            },
+            zh: {
+                1: '困难',
+                2: '疯狂',
+                3: '不可能',
             }
         };
 
@@ -1242,6 +1316,12 @@
         function getKindLabel(kind) {
             if (!kind) return '';
             return KIND_LABELS[currentLanguage]?.[kind] || KIND_LABELS.en[kind] || kind;
+        }
+
+        function getClassLabel(className) {
+            if (!className) return '';
+            const key = className.toLowerCase();
+            return CLASS_LABELS[currentLanguage]?.[key] || CLASS_LABELS.en[key] || className;
         }
 
         function getEffectiveKind(item) {
@@ -1549,6 +1629,31 @@
             return texts[currentLanguage] || fallback || '';
         }
 
+        function makeRowId(prefix, code) {
+            if (!code) {
+                return '';
+            }
+            const safe = String(code).replace(/[^A-Za-z0-9_-]+/g, '-');
+            return `${prefix}-${safe}`;
+        }
+
+        function scrollToHash(prefix) {
+            const hash = window.location.hash ? window.location.hash.slice(1) : '';
+            if (!hash) {
+                return;
+            }
+            const decoded = decodeURIComponent(hash);
+            const direct = document.getElementById(decoded);
+            const rowId = makeRowId(prefix, decoded);
+            const target = direct || (rowId ? document.getElementById(rowId) : null);
+            if (!target) {
+                return;
+            }
+            target.classList.add('hash-target');
+            target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            setTimeout(() => target.classList.remove('hash-target'), 2000);
+        }
+
         function getItemIconPath(item) {
             const kindMap = {
                 'trinket': 'TrinketIcon',
@@ -1687,7 +1792,7 @@
                 }
 
                 return `
-                    <tr>
+                    <tr id="${makeRowId('item', item.item_code || '')}" data-code="${escapeHtml(item.item_code || '')}">
                         <td class="image-cell">
                             <div class="item-icon-wrapper" style="background-image: url('${rarityBgPath}')">
                                 <img src="${iconPath}" 
@@ -1704,6 +1809,7 @@
                         <td>
                             ${statsHtml}
                             <div class="description">${parseRichText(localizedDescription + durabilityText) || ''}</div>
+                            ${buildUnlockRequirementsHtml(item.unlock_requirements)}
                             ${item.description_notes ? `<div class="source-comment">${escapeHtml(t('sourceCommentsLabel'))} ${escapeHtml(item.description_notes)}</div>` : ''}
                             ${getEditorNote(item.item_code) ? `<div class="source-comment">${escapeHtml(t('editorNotesLabel'))} ${escapeHtml(getEditorNote(item.item_code))}</div>` : ''}
                         </td>
@@ -1718,6 +1824,7 @@
             }).join('');
 
             document.getElementById('showingCount').textContent = visibleItems.length;
+            requestAnimationFrame(() => scrollToHash('item'));
         }
 
         function sortBy(column) {
@@ -2051,6 +2158,85 @@
             return note[currentLanguage] || note.en || '';
         }
 
+        function getLocalizedChapterName(requirement) {
+            if (!requirement || typeof requirement !== 'object') {
+                return '';
+            }
+            const localized = getLocalizedText(requirement.chapter_name_texts, '');
+            if (localized) {
+                return localized;
+            }
+            if (requirement.chapter_name_literal) {
+                return requirement.chapter_name_literal;
+            }
+            return requirement.chapter || '';
+        }
+
+        function getLocalizedBossName(requirement) {
+            if (!requirement || typeof requirement !== 'object') {
+                return '';
+            }
+            const localized = getLocalizedText(requirement.boss_name_texts, '');
+            if (localized) {
+                return localized;
+            }
+            return requirement.boss || '';
+        }
+
+        function getDifficultyLabel(requiredDifficulty) {
+            if (!requiredDifficulty) {
+                return '';
+            }
+            const label = DIFFICULTY_LABELS[currentLanguage]?.[requiredDifficulty]
+                || DIFFICULTY_LABELS.en[requiredDifficulty];
+            return label || String(requiredDifficulty);
+        }
+
+        function buildUnlockRequirementsHtml(requirements) {
+            if (!Array.isArray(requirements) || requirements.length === 0) {
+                return '';
+            }
+
+            const lines = requirements
+                .map(requirement => {
+                    const reqType = requirement.type;
+                    let line = '';
+                    if (reqType === 'complete_chapter_with_class') {
+                        const chapterName = getLocalizedChapterName(requirement);
+                        const classLabel = getClassLabel(requirement.class || '');
+                        if (chapterName && classLabel) {
+                            line = `${chapterName} (${classLabel})`;
+                        } else {
+                            line = chapterName || classLabel || '';
+                        }
+                    } else if (reqType === 'complete_checklist_with_class') {
+                        const classLabel = getClassLabel(requirement.class || '');
+                        line = t('completeChecklistWithClass').replace('{className}', classLabel || requirement.class || '');
+                    } else if (reqType === 'beat_house_boss') {
+                        const bossName = getLocalizedBossName(requirement);
+                        line = t('beatHouseBoss').replace('{bossName}', bossName || requirement.boss || '');
+                    } else if (reqType === 'beat_chapter_boss') {
+                        const bossName = getLocalizedBossName(requirement);
+                        line = t('beatChapterBoss').replace('{bossName}', bossName || requirement.boss || '');
+                    }
+
+                    const difficultyLabel = getDifficultyLabel(requirement.required_difficulty);
+                    if (difficultyLabel) {
+                        line = `${line} (${t('difficultyLabel')} ${difficultyLabel})`;
+                    }
+
+                    return line.trim();
+                })
+                .filter(line => line !== '');
+
+            if (lines.length === 0) {
+                return '';
+            }
+
+            const linesHtml = lines.map(line => escapeHtml(line)).join('<br>');
+            return `<div class="unlock-requirements">${escapeHtml(t('unlockRequirementsLabel'))} ${linesHtml}</div>`;
+        }
+
         function parseRichText(text) {
             if (!text) return '';
 
@@ -2103,6 +2289,7 @@
             });
         });
         document.getElementById('showHiddenToggle').addEventListener('change', filterItems);
+        window.addEventListener('hashchange', () => scrollToHash('item'));
 
         // Apply language immediately when DOM is ready (before data loads)
         document.addEventListener('DOMContentLoaded', () => {

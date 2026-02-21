@@ -4922,7 +4922,19 @@
     "name_key": "ARMOR_MAGEHAT_NAME",
     "desc_key": "ARMOR_MAGEHAT_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "meatworld",
+        "class": "Mage",
+        "chapter_name_key": "AREA_NAME_MEATWORLD",
+        "chapter_name_texts": {
+          "en": "The Throbbing Domain",
+          "zh": "搏动领域"
+        }
+      }
+    ]
   },
   {
     "item_code": "MageRobe",
@@ -4951,7 +4963,19 @@
     "name_key": "ARMOR_MAGEROBE_NAME",
     "desc_key": "ARMOR_MAGEROBE_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "dimensionx",
+        "class": "Mage",
+        "chapter_name_key": "AREA_NAME_DIMENSIONX",
+        "chapter_name_texts": {
+          "en": "The Rift",
+          "zh": "裂隙"
+        }
+      }
+    ]
   },
   {
     "item_code": "MageScarf",
@@ -4980,7 +5004,19 @@
     "name_key": "ARMOR_MAGESCARF_NAME",
     "desc_key": "ARMOR_MAGESCARF_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "endoftime",
+        "class": "Mage",
+        "chapter_name_key": "AREA_NAME_ENDOFTIME",
+        "chapter_name_texts": {
+          "en": "The Infinite",
+          "zh": "无限界"
+        }
+      }
+    ]
   },
   {
     "item_code": "ThiefHood",
@@ -5007,7 +5043,19 @@
     "name_key": "ARMOR_THIEFHOOD_NAME",
     "desc_key": "ARMOR_THIEFHOOD_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "meatworld",
+        "class": "Thief",
+        "chapter_name_key": "AREA_NAME_MEATWORLD",
+        "chapter_name_texts": {
+          "en": "The Throbbing Domain",
+          "zh": "搏动领域"
+        }
+      }
+    ]
   },
   {
     "item_code": "ThiefTattoo",
@@ -5034,7 +5082,19 @@
     "name_key": "ARMOR_THIEFTATTOO_NAME",
     "desc_key": "ARMOR_THIEFTATTOO_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "dimensionx",
+        "class": "Thief",
+        "chapter_name_key": "AREA_NAME_DIMENSIONX",
+        "chapter_name_texts": {
+          "en": "The Rift",
+          "zh": "裂隙"
+        }
+      }
+    ]
   },
   {
     "item_code": "ThiefCloak",
@@ -5061,7 +5121,19 @@
     "name_key": "ARMOR_THIEFCLOAK_NAME",
     "desc_key": "ARMOR_THIEFCLOAK_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "endoftime",
+        "class": "Thief",
+        "chapter_name_key": "AREA_NAME_ENDOFTIME",
+        "chapter_name_texts": {
+          "en": "The Infinite",
+          "zh": "无限界"
+        }
+      }
+    ]
   },
   {
     "item_code": "FighterHelm",
@@ -5090,7 +5162,19 @@
     "name_key": "ARMOR_FIGHTERHELM_NAME",
     "desc_key": "ARMOR_FIGHTERHELM_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "meatworld",
+        "class": "Fighter",
+        "chapter_name_key": "AREA_NAME_MEATWORLD",
+        "chapter_name_texts": {
+          "en": "The Throbbing Domain",
+          "zh": "搏动领域"
+        }
+      }
+    ]
   },
   {
     "item_code": "FighterScar",
@@ -5119,7 +5203,19 @@
     "name_key": "ARMOR_FIGHTERSCAR_NAME",
     "desc_key": "ARMOR_FIGHTERSCAR_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "dimensionx",
+        "class": "Fighter",
+        "chapter_name_key": "AREA_NAME_DIMENSIONX",
+        "chapter_name_texts": {
+          "en": "The Rift",
+          "zh": "裂隙"
+        }
+      }
+    ]
   },
   {
     "item_code": "FighterShoulderPad",
@@ -5148,7 +5244,19 @@
     "name_key": "ARMOR_FIGHTERSHOULDERPAD_NAME",
     "desc_key": "ARMOR_FIGHTERSHOULDERPAD_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "endoftime",
+        "class": "Fighter",
+        "chapter_name_key": "AREA_NAME_ENDOFTIME",
+        "chapter_name_texts": {
+          "en": "The Infinite",
+          "zh": "无限界"
+        }
+      }
+    ]
   },
   {
     "item_code": "ClericHat",
@@ -5177,7 +5285,19 @@
     "name_key": "ARMOR_CLERICHAT_NAME",
     "desc_key": "ARMOR_CLERICHAT_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "meatworld",
+        "class": "Medic",
+        "chapter_name_key": "AREA_NAME_MEATWORLD",
+        "chapter_name_texts": {
+          "en": "The Throbbing Domain",
+          "zh": "搏动领域"
+        }
+      }
+    ]
   },
   {
     "item_code": "ClericTears",
@@ -5206,7 +5326,19 @@
     "name_key": "ARMOR_CLERICTEARS_NAME",
     "desc_key": "ARMOR_CLERICTEARS_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "dimensionx",
+        "class": "Medic",
+        "chapter_name_key": "AREA_NAME_DIMENSIONX",
+        "chapter_name_texts": {
+          "en": "The Rift",
+          "zh": "裂隙"
+        }
+      }
+    ]
   },
   {
     "item_code": "ClericRelic",
@@ -5233,7 +5365,19 @@
     "name_key": "ARMOR_CLERICRELIC_NAME",
     "desc_key": "ARMOR_CLERICRELIC_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "endoftime",
+        "class": "Medic",
+        "chapter_name_key": "AREA_NAME_ENDOFTIME",
+        "chapter_name_texts": {
+          "en": "The Infinite",
+          "zh": "无限界"
+        }
+      }
+    ]
   },
   {
     "item_code": "TankHelmet",
@@ -5262,7 +5406,19 @@
     "name_key": "ARMOR_TANKHELMET_NAME",
     "desc_key": "ARMOR_TANKHELMET_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "meatworld",
+        "class": "Tank",
+        "chapter_name_key": "AREA_NAME_MEATWORLD",
+        "chapter_name_texts": {
+          "en": "The Throbbing Domain",
+          "zh": "搏动领域"
+        }
+      }
+    ]
   },
   {
     "item_code": "TankTattoo",
@@ -5289,7 +5445,19 @@
     "name_key": "ARMOR_TANKTATTOO_NAME",
     "desc_key": "ARMOR_TANKTATTOO_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "dimensionx",
+        "class": "Tank",
+        "chapter_name_key": "AREA_NAME_DIMENSIONX",
+        "chapter_name_texts": {
+          "en": "The Rift",
+          "zh": "裂隙"
+        }
+      }
+    ]
   },
   {
     "item_code": "TankPads",
@@ -5318,7 +5486,19 @@
     "name_key": "ARMOR_TANKPADS_NAME",
     "desc_key": "ARMOR_TANKPADS_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "endoftime",
+        "class": "Tank",
+        "chapter_name_key": "AREA_NAME_ENDOFTIME",
+        "chapter_name_texts": {
+          "en": "The Infinite",
+          "zh": "无限界"
+        }
+      }
+    ]
   },
   {
     "item_code": "HunterCap",
@@ -5347,7 +5527,19 @@
     "name_key": "ARMOR_HUNTERCAP_NAME",
     "desc_key": "ARMOR_HUNTERCAP_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "meatworld",
+        "class": "Hunter",
+        "chapter_name_key": "AREA_NAME_MEATWORLD",
+        "chapter_name_texts": {
+          "en": "The Throbbing Domain",
+          "zh": "搏动领域"
+        }
+      }
+    ]
   },
   {
     "item_code": "HunterMonocle",
@@ -5374,7 +5566,19 @@
     "name_key": "ARMOR_HUNTERMONOCLE_NAME",
     "desc_key": "ARMOR_HUNTERMONOCLE_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "dimensionx",
+        "class": "Hunter",
+        "chapter_name_key": "AREA_NAME_DIMENSIONX",
+        "chapter_name_texts": {
+          "en": "The Rift",
+          "zh": "裂隙"
+        }
+      }
+    ]
   },
   {
     "item_code": "HunterQuiver",
@@ -5402,7 +5606,19 @@
     "name_key": "ARMOR_HUNTERQUIVER_NAME",
     "desc_key": "ARMOR_HUNTERQUIVER_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "endoftime",
+        "class": "Hunter",
+        "chapter_name_key": "AREA_NAME_ENDOFTIME",
+        "chapter_name_texts": {
+          "en": "The Infinite",
+          "zh": "无限界"
+        }
+      }
+    ]
   },
   {
     "item_code": "MysticEye",
@@ -5429,7 +5645,19 @@
     "name_key": "ARMOR_MYSTICEYE_NAME",
     "desc_key": "ARMOR_MYSTICEYE_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "dimensionx",
+        "class": "Psychic",
+        "chapter_name_key": "AREA_NAME_DIMENSIONX",
+        "chapter_name_texts": {
+          "en": "The Rift",
+          "zh": "裂隙"
+        }
+      }
+    ]
   },
   {
     "item_code": "TinfoilHat",
@@ -5459,7 +5687,19 @@
     "name_key": "ARMOR_TINFOILHAT_NAME",
     "desc_key": "ARMOR_TINFOILHAT_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "meatworld",
+        "class": "Psychic",
+        "chapter_name_key": "AREA_NAME_MEATWORLD",
+        "chapter_name_texts": {
+          "en": "The Throbbing Domain",
+          "zh": "搏动领域"
+        }
+      }
+    ]
   },
   {
     "item_code": "DivinersCloth",
@@ -5487,7 +5727,19 @@
     "name_key": "ARMOR_DIVINERSCLOTH_NAME",
     "desc_key": "ARMOR_DIVINERSCLOTH_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "endoftime",
+        "class": "Psychic",
+        "chapter_name_key": "AREA_NAME_ENDOFTIME",
+        "chapter_name_texts": {
+          "en": "The Infinite",
+          "zh": "无限界"
+        }
+      }
+    ]
   },
   {
     "item_code": "DeathMask",
@@ -5514,7 +5766,19 @@
     "name_key": "ARMOR_DEATHMASK_NAME",
     "desc_key": "ARMOR_DEATHMASK_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "dimensionx",
+        "class": "Necromancer",
+        "chapter_name_key": "AREA_NAME_DIMENSIONX",
+        "chapter_name_texts": {
+          "en": "The Rift",
+          "zh": "裂隙"
+        }
+      }
+    ]
   },
   {
     "item_code": "SpiderHat",
@@ -5541,7 +5805,19 @@
     "name_key": "ARMOR_SPIDERHAT_NAME",
     "desc_key": "ARMOR_SPIDERHAT_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "meatworld",
+        "class": "Necromancer",
+        "chapter_name_key": "AREA_NAME_MEATWORLD",
+        "chapter_name_texts": {
+          "en": "The Throbbing Domain",
+          "zh": "搏动领域"
+        }
+      }
+    ]
   },
   {
     "item_code": "LeechNecklace",
@@ -5569,7 +5845,19 @@
     "name_key": "ARMOR_LEECHNECKLACE_NAME",
     "desc_key": "ARMOR_LEECHNECKLACE_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "endoftime",
+        "class": "Necromancer",
+        "chapter_name_key": "AREA_NAME_ENDOFTIME",
+        "chapter_name_texts": {
+          "en": "The Infinite",
+          "zh": "无限界"
+        }
+      }
+    ]
   },
   {
     "item_code": "FaceBrand",
@@ -5596,7 +5884,19 @@
     "name_key": "ARMOR_FACEBRAND_NAME",
     "desc_key": "ARMOR_FACEBRAND_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "dimensionx",
+        "class": "Monk",
+        "chapter_name_key": "AREA_NAME_DIMENSIONX",
+        "chapter_name_texts": {
+          "en": "The Rift",
+          "zh": "裂隙"
+        }
+      }
+    ]
   },
   {
     "item_code": "HeadBrand",
@@ -5623,7 +5923,19 @@
     "name_key": "ARMOR_HEADBRAND_NAME",
     "desc_key": "ARMOR_HEADBRAND_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "meatworld",
+        "class": "Monk",
+        "chapter_name_key": "AREA_NAME_MEATWORLD",
+        "chapter_name_texts": {
+          "en": "The Throbbing Domain",
+          "zh": "搏动领域"
+        }
+      }
+    ]
   },
   {
     "item_code": "PrayerBeads",
@@ -5651,7 +5963,19 @@
     "name_key": "ARMOR_PRAYERBEADS_NAME",
     "desc_key": "ARMOR_PRAYERBEADS_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "endoftime",
+        "class": "Monk",
+        "chapter_name_key": "AREA_NAME_ENDOFTIME",
+        "chapter_name_texts": {
+          "en": "The Infinite",
+          "zh": "无限界"
+        }
+      }
+    ]
   },
   {
     "item_code": "ScrappersMask",
@@ -5681,7 +6005,19 @@
     "name_key": "ARMOR_SCRAPPERSMASK_NAME",
     "desc_key": "ARMOR_SCRAPPERSMASK_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "dimensionx",
+        "class": "Tinkerer",
+        "chapter_name_key": "AREA_NAME_DIMENSIONX",
+        "chapter_name_texts": {
+          "en": "The Rift",
+          "zh": "裂隙"
+        }
+      }
+    ]
   },
   {
     "item_code": "ScrappersHat",
@@ -5711,7 +6047,19 @@
     "name_key": "ARMOR_SCRAPPERSHAT_NAME",
     "desc_key": "ARMOR_SCRAPPERSHAT_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "meatworld",
+        "class": "Tinkerer",
+        "chapter_name_key": "AREA_NAME_MEATWORLD",
+        "chapter_name_texts": {
+          "en": "The Throbbing Domain",
+          "zh": "搏动领域"
+        }
+      }
+    ]
   },
   {
     "item_code": "ScrappersBackpack",
@@ -5739,7 +6087,19 @@
     "name_key": "ARMOR_SCRAPPERSBACKPACK_NAME",
     "desc_key": "ARMOR_SCRAPPERSBACKPACK_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "endoftime",
+        "class": "Tinkerer",
+        "chapter_name_key": "AREA_NAME_ENDOFTIME",
+        "chapter_name_texts": {
+          "en": "The Infinite",
+          "zh": "无限界"
+        }
+      }
+    ]
   },
   {
     "item_code": "IronJaw",
@@ -5769,7 +6129,19 @@
     "name_key": "ARMOR_IRONJAW_NAME",
     "desc_key": "ARMOR_IRONJAW_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "dimensionx",
+        "class": "Butcher",
+        "chapter_name_key": "AREA_NAME_DIMENSIONX",
+        "chapter_name_texts": {
+          "en": "The Rift",
+          "zh": "裂隙"
+        }
+      }
+    ]
   },
   {
     "item_code": "FleshShroud",
@@ -5797,7 +6169,19 @@
     "name_key": "ARMOR_FLESHSHROUD_NAME",
     "desc_key": "ARMOR_FLESHSHROUD_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "meatworld",
+        "class": "Butcher",
+        "chapter_name_key": "AREA_NAME_MEATWORLD",
+        "chapter_name_texts": {
+          "en": "The Throbbing Domain",
+          "zh": "搏动领域"
+        }
+      }
+    ]
   },
   {
     "item_code": "HookedNecklace",
@@ -5826,7 +6210,19 @@
     "name_key": "ARMOR_HOOKEDNECKLACE_NAME",
     "desc_key": "ARMOR_HOOKEDNECKLACE_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "endoftime",
+        "class": "Butcher",
+        "chapter_name_key": "AREA_NAME_ENDOFTIME",
+        "chapter_name_texts": {
+          "en": "The Infinite",
+          "zh": "无限界"
+        }
+      }
+    ]
   },
   {
     "item_code": "GreenmanMask",
@@ -5854,7 +6250,19 @@
     "name_key": "ARMOR_GREENMANMASK_NAME",
     "desc_key": "ARMOR_GREENMANMASK_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "dimensionx",
+        "class": "Druid",
+        "chapter_name_key": "AREA_NAME_DIMENSIONX",
+        "chapter_name_texts": {
+          "en": "The Rift",
+          "zh": "裂隙"
+        }
+      }
+    ]
   },
   {
     "item_code": "MushroomHat",
@@ -5881,7 +6289,19 @@
     "name_key": "ARMOR_MUSHROOMHAT_NAME",
     "desc_key": "ARMOR_MUSHROOMHAT_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "meatworld",
+        "class": "Druid",
+        "chapter_name_key": "AREA_NAME_MEATWORLD",
+        "chapter_name_texts": {
+          "en": "The Throbbing Domain",
+          "zh": "搏动领域"
+        }
+      }
+    ]
   },
   {
     "item_code": "RingOfMushrooms",
@@ -5909,7 +6329,19 @@
     "name_key": "ARMOR_RINGOFMUSHROOMS_NAME",
     "desc_key": "ARMOR_RINGOFMUSHROOMS_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "endoftime",
+        "class": "Druid",
+        "chapter_name_key": "AREA_NAME_ENDOFTIME",
+        "chapter_name_texts": {
+          "en": "The Infinite",
+          "zh": "无限界"
+        }
+      }
+    ]
   },
   {
     "item_code": "CatWhiskers",
@@ -5944,7 +6376,19 @@
     "name_key": "ARMOR_CATWHISKERS_NAME",
     "desc_key": "ARMOR_CATWHISKERS_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "dimensionx",
+        "class": "Colorless",
+        "chapter_name_key": "AREA_NAME_DIMENSIONX",
+        "chapter_name_texts": {
+          "en": "The Rift",
+          "zh": "裂隙"
+        }
+      }
+    ]
   },
   {
     "item_code": "CatEars",
@@ -5979,7 +6423,19 @@
     "name_key": "ARMOR_CATEARS_NAME",
     "desc_key": "ARMOR_CATEARS_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "meatworld",
+        "class": "Colorless",
+        "chapter_name_key": "AREA_NAME_MEATWORLD",
+        "chapter_name_texts": {
+          "en": "The Throbbing Domain",
+          "zh": "搏动领域"
+        }
+      }
+    ]
   },
   {
     "item_code": "CatCollar",
@@ -6015,7 +6471,19 @@
     "name_key": "ARMOR_CATCOLLAR_NAME",
     "desc_key": "ARMOR_CATCOLLAR_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "endoftime",
+        "class": "Colorless",
+        "chapter_name_key": "AREA_NAME_ENDOFTIME",
+        "chapter_name_texts": {
+          "en": "The Infinite",
+          "zh": "无限界"
+        }
+      }
+    ]
   },
   {
     "item_code": "ClownMakeup",
@@ -6044,7 +6512,19 @@
     "name_key": "ARMOR_CLOWNMAKEUP_NAME",
     "desc_key": "ARMOR_CLOWNMAKEUP_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "dimensionx",
+        "class": "Jester",
+        "chapter_name_key": "AREA_NAME_DIMENSIONX",
+        "chapter_name_texts": {
+          "en": "The Rift",
+          "zh": "裂隙"
+        }
+      }
+    ]
   },
   {
     "item_code": "CapAndBells",
@@ -6073,7 +6553,19 @@
     "name_key": "ARMOR_CAPANDBELLS_NAME",
     "desc_key": "ARMOR_CAPANDBELLS_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "meatworld",
+        "class": "Jester",
+        "chapter_name_key": "AREA_NAME_MEATWORLD",
+        "chapter_name_texts": {
+          "en": "The Throbbing Domain",
+          "zh": "搏动领域"
+        }
+      }
+    ]
   },
   {
     "item_code": "Ruffle",
@@ -6102,7 +6594,19 @@
     "name_key": "ARMOR_RUFFLE_NAME",
     "desc_key": "ARMOR_RUFFLE_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "endoftime",
+        "class": "Jester",
+        "chapter_name_key": "AREA_NAME_ENDOFTIME",
+        "chapter_name_texts": {
+          "en": "The Infinite",
+          "zh": "无限界"
+        }
+      }
+    ]
   },
   {
     "item_code": "FeatheredVeil",
@@ -8094,7 +8598,19 @@
     "name_key": "ARMOR_COPYCATHAT_NAME",
     "desc_key": "ARMOR_COPYCATHAT_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "meatworld",
+        "class": "Colorless",
+        "chapter_name_key": "AREA_NAME_MEATWORLD",
+        "chapter_name_texts": {
+          "en": "The Throbbing Domain",
+          "zh": "搏动领域"
+        }
+      }
+    ]
   },
   {
     "item_code": "CopycatMask",
@@ -8121,7 +8637,19 @@
     "name_key": "ARMOR_COPYCATMASK_NAME",
     "desc_key": "ARMOR_COPYCATMASK_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "dimensionx",
+        "class": "Colorless",
+        "chapter_name_key": "AREA_NAME_DIMENSIONX",
+        "chapter_name_texts": {
+          "en": "The Rift",
+          "zh": "裂隙"
+        }
+      }
+    ]
   },
   {
     "item_code": "CopycatScarf",
@@ -8148,7 +8676,19 @@
     "name_key": "ARMOR_COPYCATSCARF_NAME",
     "desc_key": "ARMOR_COPYCATSCARF_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "endoftime",
+        "class": "Colorless",
+        "chapter_name_key": "AREA_NAME_ENDOFTIME",
+        "chapter_name_texts": {
+          "en": "The Infinite",
+          "zh": "无限界"
+        }
+      }
+    ]
   },
   {
     "item_code": "PersuasionDevice",
@@ -10769,7 +11309,14 @@
     "name_key": "ITEM_STEVENSCONSUMABLE1_NAME",
     "desc_key": "ITEM_STEVENSCONSUMABLE1_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/consumables.gon"
+    "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "unlock_requirements": [
+      {
+        "type": "beat_house_boss",
+        "boss": "guillotina_3",
+        "required_difficulty": 3
+      }
+    ]
   },
   {
     "item_code": "StevensConsumable2",
@@ -10796,7 +11343,14 @@
     "name_key": "ITEM_STEVENSCONSUMABLE2_NAME",
     "desc_key": "ITEM_STEVENSCONSUMABLE2_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/consumables.gon"
+    "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "unlock_requirements": [
+      {
+        "type": "beat_house_boss",
+        "boss": "terminator_3",
+        "required_difficulty": 3
+      }
+    ]
   },
   {
     "item_code": "JokerCard",
@@ -10824,7 +11378,13 @@
     "name_key": "ITEM_JOKERCARD_NAME",
     "desc_key": "ITEM_JOKERCARD_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/consumables.gon"
+    "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_checklist_with_class",
+        "class": "Jester"
+      }
+    ]
   },
   {
     "item_code": "Gizzard",
@@ -14109,7 +14669,14 @@
     "name_key": "ARMOR_TINASFRIEND_NAME",
     "desc_key": "ARMOR_TINASFRIEND_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/face_items.gon"
+    "source_file": "G:/gpak-all/data/items/face_items.gon",
+    "unlock_requirements": [
+      {
+        "type": "beat_house_boss",
+        "boss": "guillotina_3",
+        "required_difficulty": 1
+      }
+    ]
   },
   {
     "item_code": "StevensFartFace",
@@ -14136,7 +14703,14 @@
     "name_key": "ARMOR_STEVENSFARTFACE_NAME",
     "desc_key": "ARMOR_STEVENSFARTFACE_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/face_items.gon"
+    "source_file": "G:/gpak-all/data/items/face_items.gon",
+    "unlock_requirements": [
+      {
+        "type": "beat_chapter_boss",
+        "boss": "dimensionx",
+        "required_difficulty": 2
+      }
+    ]
   },
   {
     "item_code": "StevensMustache",
@@ -14166,7 +14740,14 @@
     "name_key": "ARMOR_STEVENSMUSTACHE_NAME",
     "desc_key": "ARMOR_STEVENSMUSTACHE_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/face_items.gon"
+    "source_file": "G:/gpak-all/data/items/face_items.gon",
+    "unlock_requirements": [
+      {
+        "type": "beat_house_boss",
+        "boss": "guillotina_1",
+        "required_difficulty": 2
+      }
+    ]
   },
   {
     "item_code": "StevenMask1",
@@ -14193,7 +14774,14 @@
     "name_key": "ARMOR_STEVENMASK1_NAME",
     "desc_key": "ARMOR_STEVENMASK1_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/face_items.gon"
+    "source_file": "G:/gpak-all/data/items/face_items.gon",
+    "unlock_requirements": [
+      {
+        "type": "beat_chapter_boss",
+        "boss": "dimensionx",
+        "required_difficulty": 3
+      }
+    ]
   },
   {
     "item_code": "StevenMask2",
@@ -14220,7 +14808,14 @@
     "name_key": "ARMOR_STEVENMASK2_NAME",
     "desc_key": "ARMOR_STEVENMASK2_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/face_items.gon"
+    "source_file": "G:/gpak-all/data/items/face_items.gon",
+    "unlock_requirements": [
+      {
+        "type": "beat_house_boss",
+        "boss": "zaratana",
+        "required_difficulty": 3
+      }
+    ]
   },
   {
     "item_code": "Intruder",
@@ -16072,7 +16667,14 @@
     "name_key": "ARMOR_THROBBINGCROWN_NAME",
     "desc_key": "ARMOR_THROBBINGCROWN_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/head_items.gon"
+    "source_file": "G:/gpak-all/data/items/head_items.gon",
+    "unlock_requirements": [
+      {
+        "type": "beat_chapter_boss",
+        "boss": "meatworld",
+        "required_difficulty": 1
+      }
+    ]
   },
   {
     "item_code": "CrownOfChaos",
@@ -16099,7 +16701,14 @@
     "name_key": "ARMOR_CROWNOFCHAOS_NAME",
     "desc_key": "ARMOR_CROWNOFCHAOS_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/head_items.gon"
+    "source_file": "G:/gpak-all/data/items/head_items.gon",
+    "unlock_requirements": [
+      {
+        "type": "beat_chapter_boss",
+        "boss": "dimensionx",
+        "required_difficulty": 1
+      }
+    ]
   },
   {
     "item_code": "ChildsCrown",
@@ -16124,7 +16733,14 @@
     "name_key": "ARMOR_CHILDSCROWN_NAME",
     "desc_key": "ARMOR_CHILDSCROWN_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/head_items.gon"
+    "source_file": "G:/gpak-all/data/items/head_items.gon",
+    "unlock_requirements": [
+      {
+        "type": "beat_chapter_boss",
+        "boss": "endoftime",
+        "required_difficulty": 1
+      }
+    ]
   },
   {
     "item_code": "TinasBellyButton",
@@ -16149,7 +16765,14 @@
     "name_key": "ARMOR_TINASBELLYBUTTON_NAME",
     "desc_key": "ARMOR_TINASBELLYBUTTON_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/head_items.gon"
+    "source_file": "G:/gpak-all/data/items/head_items.gon",
+    "unlock_requirements": [
+      {
+        "type": "beat_house_boss",
+        "boss": "guillotina_1",
+        "required_difficulty": 1
+      }
+    ]
   },
   {
     "item_code": "HitlersToupe",
@@ -16180,7 +16803,14 @@
     "name_key": "ARMOR_HITLERSTOUPE_NAME",
     "desc_key": "ARMOR_HITLERSTOUPE_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/head_items.gon"
+    "source_file": "G:/gpak-all/data/items/head_items.gon",
+    "unlock_requirements": [
+      {
+        "type": "beat_house_boss",
+        "boss": "terminator_3",
+        "required_difficulty": 1
+      }
+    ]
   },
   {
     "item_code": "StevensHat",
@@ -16210,7 +16840,14 @@
     "name_key": "ARMOR_STEVENSHAT_NAME",
     "desc_key": "ARMOR_STEVENSHAT_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/head_items.gon"
+    "source_file": "G:/gpak-all/data/items/head_items.gon",
+    "unlock_requirements": [
+      {
+        "type": "beat_house_boss",
+        "boss": "terminator_3",
+        "required_difficulty": 2
+      }
+    ]
   },
   {
     "item_code": "StevensHelmet",
@@ -16239,7 +16876,14 @@
     "name_key": "ARMOR_STEVENSHELMET_NAME",
     "desc_key": "ARMOR_STEVENSHELMET_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/head_items.gon"
+    "source_file": "G:/gpak-all/data/items/head_items.gon",
+    "unlock_requirements": [
+      {
+        "type": "beat_house_boss",
+        "boss": "pyrophina",
+        "required_difficulty": 2
+      }
+    ]
   },
   {
     "item_code": "StevenHat1",
@@ -16266,7 +16910,14 @@
     "name_key": "ARMOR_STEVENHAT1_NAME",
     "desc_key": "ARMOR_STEVENHAT1_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/head_items.gon"
+    "source_file": "G:/gpak-all/data/items/head_items.gon",
+    "unlock_requirements": [
+      {
+        "type": "beat_chapter_boss",
+        "boss": "meatworld",
+        "required_difficulty": 3
+      }
+    ]
   },
   {
     "item_code": "StevenHat2",
@@ -16293,7 +16944,14 @@
     "name_key": "ARMOR_STEVENHAT2_NAME",
     "desc_key": "ARMOR_STEVENHAT2_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/head_items.gon"
+    "source_file": "G:/gpak-all/data/items/head_items.gon",
+    "unlock_requirements": [
+      {
+        "type": "beat_house_boss",
+        "boss": "pyrophina",
+        "required_difficulty": 3
+      }
+    ]
   },
   {
     "item_code": "ThrobbingGristle",
@@ -18710,7 +19368,14 @@
     "name_key": "ARMOR_PYROPHINASTOENAIL_NAME",
     "desc_key": "ARMOR_PYROPHINASTOENAIL_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/neck_items.gon"
+    "source_file": "G:/gpak-all/data/items/neck_items.gon",
+    "unlock_requirements": [
+      {
+        "type": "beat_house_boss",
+        "boss": "pyrophina",
+        "required_difficulty": 1
+      }
+    ]
   },
   {
     "item_code": "ZaratanaTurd",
@@ -18740,7 +19405,14 @@
     "name_key": "ARMOR_ZARATANATURD_NAME",
     "desc_key": "ARMOR_ZARATANATURD_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/neck_items.gon"
+    "source_file": "G:/gpak-all/data/items/neck_items.gon",
+    "unlock_requirements": [
+      {
+        "type": "beat_house_boss",
+        "boss": "zaratana",
+        "required_difficulty": 1
+      }
+    ]
   },
   {
     "item_code": "StevensGobbler",
@@ -18770,7 +19442,14 @@
     "name_key": "ARMOR_STEVENSGOBBLER_NAME",
     "desc_key": "ARMOR_STEVENSGOBBLER_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/neck_items.gon"
+    "source_file": "G:/gpak-all/data/items/neck_items.gon",
+    "unlock_requirements": [
+      {
+        "type": "beat_chapter_boss",
+        "boss": "meatworld",
+        "required_difficulty": 2
+      }
+    ]
   },
   {
     "item_code": "StevensFriend",
@@ -18797,7 +19476,14 @@
     "name_key": "ARMOR_STEVENSFRIEND_NAME",
     "desc_key": "ARMOR_STEVENSFRIEND_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/neck_items.gon"
+    "source_file": "G:/gpak-all/data/items/neck_items.gon",
+    "unlock_requirements": [
+      {
+        "type": "beat_house_boss",
+        "boss": "zaratana",
+        "required_difficulty": 2
+      }
+    ]
   },
   {
     "item_code": "StevenNeck1",
@@ -18824,7 +19510,14 @@
     "name_key": "ARMOR_STEVENNECK1_NAME",
     "desc_key": "ARMOR_STEVENNECK1_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/neck_items.gon"
+    "source_file": "G:/gpak-all/data/items/neck_items.gon",
+    "unlock_requirements": [
+      {
+        "type": "beat_chapter_boss",
+        "boss": "endoftime",
+        "required_difficulty": 3
+      }
+    ]
   },
   {
     "item_code": "StevenNeck2",
@@ -18851,7 +19544,14 @@
     "name_key": "ARMOR_STEVENNECK2_NAME",
     "desc_key": "ARMOR_STEVENNECK2_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/neck_items.gon"
+    "source_file": "G:/gpak-all/data/items/neck_items.gon",
+    "unlock_requirements": [
+      {
+        "type": "beat_house_boss",
+        "boss": "pyrophina_vs_zaratana",
+        "required_difficulty": 3
+      }
+    ]
   },
   {
     "item_code": "AFriendsFoot",
@@ -21580,7 +22280,19 @@
     "name_key": "ITEM_RINGOFFROST_NAME",
     "desc_key": "ITEM_RINGOFFROST_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/trinkets.gon"
+    "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "theend",
+        "class": "Mage",
+        "chapter_name_key": "AREA_NAME_THEEND",
+        "chapter_name_texts": {
+          "en": "The End",
+          "zh": "终点"
+        }
+      }
+    ]
   },
   {
     "item_code": "LuckyCoinPurse",
@@ -21608,7 +22320,19 @@
     "name_key": "ITEM_LUCKYCOINPURSE_NAME",
     "desc_key": "ITEM_LUCKYCOINPURSE_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/trinkets.gon"
+    "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "theend",
+        "class": "Thief",
+        "chapter_name_key": "AREA_NAME_THEEND",
+        "chapter_name_texts": {
+          "en": "The End",
+          "zh": "终点"
+        }
+      }
+    ]
   },
   {
     "item_code": "RageJuice",
@@ -21635,7 +22359,19 @@
     "name_key": "ITEM_RAGEJUICE_NAME",
     "desc_key": "ITEM_RAGEJUICE_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/trinkets.gon"
+    "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "theend",
+        "class": "Fighter",
+        "chapter_name_key": "AREA_NAME_THEEND",
+        "chapter_name_texts": {
+          "en": "The End",
+          "zh": "终点"
+        }
+      }
+    ]
   },
   {
     "item_code": "PrayerCard",
@@ -21664,7 +22400,13 @@
     "name_key": "ITEM_PRAYERCARD_NAME",
     "desc_key": "ITEM_PRAYERCARD_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/trinkets.gon"
+    "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_checklist_with_class",
+        "class": "Medic"
+      }
+    ]
   },
   {
     "item_code": "TankToy",
@@ -21693,7 +22435,13 @@
     "name_key": "ITEM_TANKTOY_NAME",
     "desc_key": "ITEM_TANKTOY_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/trinkets.gon"
+    "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_checklist_with_class",
+        "class": "Tank"
+      }
+    ]
   },
   {
     "item_code": "BagOfSeeds",
@@ -21720,7 +22468,13 @@
     "name_key": "ITEM_BAGOFSEEDS_NAME",
     "desc_key": "ITEM_BAGOFSEEDS_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/trinkets.gon"
+    "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_checklist_with_class",
+        "class": "Hunter"
+      }
+    ]
   },
   {
     "item_code": "Libra",
@@ -22887,7 +23641,19 @@
     "name_key": "ITEM_SATANICBIBLE_NAME",
     "desc_key": "ITEM_SATANICBIBLE_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/trinkets.gon"
+    "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "theend",
+        "class": "Necromancer",
+        "chapter_name_key": "AREA_NAME_THEEND",
+        "chapter_name_texts": {
+          "en": "The End",
+          "zh": "终点"
+        }
+      }
+    ]
   },
   {
     "item_code": "TinyPebble",
@@ -22914,7 +23680,13 @@
     "name_key": "ITEM_TINYPEBBLE_NAME",
     "desc_key": "ITEM_TINYPEBBLE_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/trinkets.gon"
+    "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_checklist_with_class",
+        "class": "Monk"
+      }
+    ]
   },
   {
     "item_code": "ScrapBag",
@@ -22942,7 +23714,19 @@
     "name_key": "ITEM_SCRAPBAG_NAME",
     "desc_key": "ITEM_SCRAPBAG_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/trinkets.gon"
+    "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "theend",
+        "class": "Tinkerer",
+        "chapter_name_key": "AREA_NAME_THEEND",
+        "chapter_name_texts": {
+          "en": "The End",
+          "zh": "终点"
+        }
+      }
+    ]
   },
   {
     "item_code": "Cookbook",
@@ -22970,7 +23754,19 @@
     "name_key": "ITEM_COOKBOOK_NAME",
     "desc_key": "ITEM_COOKBOOK_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/trinkets.gon"
+    "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "theend",
+        "class": "Butcher",
+        "chapter_name_key": "AREA_NAME_THEEND",
+        "chapter_name_texts": {
+          "en": "The End",
+          "zh": "终点"
+        }
+      }
+    ]
   },
   {
     "item_code": "TarotDeck",
@@ -22999,7 +23795,19 @@
     "name_key": "ITEM_TAROTDECK_NAME",
     "desc_key": "ITEM_TAROTDECK_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/trinkets.gon"
+    "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "theend",
+        "class": "Psychic",
+        "chapter_name_key": "AREA_NAME_THEEND",
+        "chapter_name_texts": {
+          "en": "The End",
+          "zh": "终点"
+        }
+      }
+    ]
   },
   {
     "item_code": "TinyCage",
@@ -23026,7 +23834,13 @@
     "name_key": "ITEM_TINYCAGE_NAME",
     "desc_key": "ITEM_TINYCAGE_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/trinkets.gon"
+    "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_checklist_with_class",
+        "class": "Druid"
+      }
+    ]
   },
   {
     "item_code": "SpellBook",
@@ -23054,7 +23868,13 @@
     "name_key": "ITEM_SPELLBOOK_NAME",
     "desc_key": "ITEM_SPELLBOOK_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/trinkets.gon"
+    "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_checklist_with_class",
+        "class": "Mage"
+      }
+    ]
   },
   {
     "item_code": "BagOfBags",
@@ -23079,7 +23899,13 @@
     "name_key": "ITEM_BAGOFBAGS_NAME",
     "desc_key": "ITEM_BAGOFBAGS_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/trinkets.gon"
+    "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_checklist_with_class",
+        "class": "Thief"
+      }
+    ]
   },
   {
     "item_code": "Steroids",
@@ -23106,7 +23932,13 @@
     "name_key": "ITEM_STEROIDS_NAME",
     "desc_key": "ITEM_STEROIDS_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/trinkets.gon"
+    "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_checklist_with_class",
+        "class": "Fighter"
+      }
+    ]
   },
   {
     "item_code": "HolyWater",
@@ -23133,7 +23965,19 @@
     "name_key": "ITEM_HOLYWATER_NAME",
     "desc_key": "ITEM_HOLYWATER_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/trinkets.gon"
+    "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "theend",
+        "class": "Medic",
+        "chapter_name_key": "AREA_NAME_THEEND",
+        "chapter_name_texts": {
+          "en": "The End",
+          "zh": "终点"
+        }
+      }
+    ]
   },
   {
     "item_code": "TankJuice",
@@ -23160,7 +24004,19 @@
     "name_key": "ITEM_TANKJUICE_NAME",
     "desc_key": "ITEM_TANKJUICE_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/trinkets.gon"
+    "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "theend",
+        "class": "Tank",
+        "chapter_name_key": "AREA_NAME_THEEND",
+        "chapter_name_texts": {
+          "en": "The End",
+          "zh": "终点"
+        }
+      }
+    ]
   },
   {
     "item_code": "HuntersFlute",
@@ -23187,7 +24043,19 @@
     "name_key": "ITEM_HUNTERSFLUTE_NAME",
     "desc_key": "ITEM_HUNTERSFLUTE_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/trinkets.gon"
+    "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "theend",
+        "class": "Hunter",
+        "chapter_name_key": "AREA_NAME_THEEND",
+        "chapter_name_texts": {
+          "en": "The End",
+          "zh": "终点"
+        }
+      }
+    ]
   },
   {
     "item_code": "FriendshipBracelet",
@@ -23214,7 +24082,13 @@
     "name_key": "ITEM_FRIENDSHIPBRACELET_NAME",
     "desc_key": "ITEM_FRIENDSHIPBRACELET_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/trinkets.gon"
+    "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_checklist_with_class",
+        "class": "Psychic"
+      }
+    ]
   },
   {
     "item_code": "CambionConception",
@@ -23243,7 +24117,13 @@
     "name_key": "ITEM_CAMBIONCONCEPTION_NAME",
     "desc_key": "ITEM_CAMBIONCONCEPTION_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/trinkets.gon"
+    "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_checklist_with_class",
+        "class": "Necromancer"
+      }
+    ]
   },
   {
     "item_code": "EmptyHand",
@@ -23270,7 +24150,19 @@
     "name_key": "ITEM_EMPTYHAND_NAME",
     "desc_key": "ITEM_EMPTYHAND_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/trinkets.gon"
+    "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "theend",
+        "class": "Monk",
+        "chapter_name_key": "AREA_NAME_THEEND",
+        "chapter_name_texts": {
+          "en": "The End",
+          "zh": "终点"
+        }
+      }
+    ]
   },
   {
     "item_code": "Fireworks",
@@ -23297,7 +24189,13 @@
     "name_key": "ITEM_FIREWORKS_NAME",
     "desc_key": "ITEM_FIREWORKS_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/trinkets.gon"
+    "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_checklist_with_class",
+        "class": "Tinkerer"
+      }
+    ]
   },
   {
     "item_code": "SackOfMeat",
@@ -23324,7 +24222,13 @@
     "name_key": "ITEM_SACKOFMEAT_NAME",
     "desc_key": "ITEM_SACKOFMEAT_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/trinkets.gon"
+    "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_checklist_with_class",
+        "class": "Butcher"
+      }
+    ]
   },
   {
     "item_code": "DruidsWhistle",
@@ -23351,7 +24255,19 @@
     "name_key": "ITEM_DRUIDSWHISTLE_NAME",
     "desc_key": "ITEM_DRUIDSWHISTLE_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/trinkets.gon"
+    "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "theend",
+        "class": "Druid",
+        "chapter_name_key": "AREA_NAME_THEEND",
+        "chapter_name_texts": {
+          "en": "The End",
+          "zh": "终点"
+        }
+      }
+    ]
   },
   {
     "item_code": "BallOfYarn",
@@ -23378,7 +24294,19 @@
     "name_key": "ITEM_BALLOFYARN_NAME",
     "desc_key": "ITEM_BALLOFYARN_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/trinkets.gon"
+    "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "theend",
+        "class": "Colorless",
+        "chapter_name_key": "AREA_NAME_THEEND",
+        "chapter_name_texts": {
+          "en": "The End",
+          "zh": "终点"
+        }
+      }
+    ]
   },
   {
     "item_code": "BirdHead",
@@ -24470,7 +25398,14 @@
     "name_key": "ITEM_SCORCHEDEARTH_NAME",
     "desc_key": "ITEM_SCORCHEDEARTH_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/trinkets.gon"
+    "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "unlock_requirements": [
+      {
+        "type": "beat_house_boss",
+        "boss": "pyrophina_vs_zaratana",
+        "required_difficulty": 1
+      }
+    ]
   },
   {
     "item_code": "LiquidMetal",
@@ -24495,7 +25430,14 @@
     "name_key": "ITEM_LIQUIDMETAL_NAME",
     "desc_key": "ITEM_LIQUIDMETAL_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/trinkets.gon"
+    "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "unlock_requirements": [
+      {
+        "type": "beat_house_boss",
+        "boss": "terminator_2",
+        "required_difficulty": 1
+      }
+    ]
   },
   {
     "item_code": "StevenStone",
@@ -24524,7 +25466,14 @@
     "name_key": "ITEM_STEVENSTONE_NAME",
     "desc_key": "ITEM_STEVENSTONE_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/trinkets.gon"
+    "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "unlock_requirements": [
+      {
+        "type": "beat_house_boss",
+        "boss": "pyrophina_vs_zaratana",
+        "required_difficulty": 2
+      }
+    ]
   },
   {
     "item_code": "StevenMarrow",
@@ -24554,7 +25503,14 @@
     "name_key": "ITEM_STEVENMARROW_NAME",
     "desc_key": "ITEM_STEVENMARROW_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/trinkets.gon"
+    "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "unlock_requirements": [
+      {
+        "type": "beat_house_boss",
+        "boss": "terminator_1",
+        "required_difficulty": 2
+      }
+    ]
   },
   {
     "item_code": "StevenTrinket1",
@@ -24581,7 +25537,14 @@
     "name_key": "ITEM_STEVENTRINKET1_NAME",
     "desc_key": "ITEM_STEVENTRINKET1_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/trinkets.gon"
+    "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "unlock_requirements": [
+      {
+        "type": "beat_house_boss",
+        "boss": "guillotina_1",
+        "required_difficulty": 3
+      }
+    ]
   },
   {
     "item_code": "StevenTrinket2",
@@ -24608,7 +25571,14 @@
     "name_key": "ITEM_STEVENTRINKET2_NAME",
     "desc_key": "ITEM_STEVENTRINKET2_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/trinkets.gon"
+    "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "unlock_requirements": [
+      {
+        "type": "beat_house_boss",
+        "boss": "terminator_1",
+        "required_difficulty": 3
+      }
+    ]
   },
   {
     "item_code": "NinnyStick",
@@ -24635,7 +25605,19 @@
     "name_key": "ITEM_NINNYSTICK_NAME",
     "desc_key": "ITEM_NINNYSTICK_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/trinkets.gon"
+    "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "jurassic",
+        "class": "Jester",
+        "chapter_name_key": "AREA_NAME_JURASSIC",
+        "chapter_name_texts": {
+          "en": "The Jurassic",
+          "zh": "侏罗纪"
+        }
+      }
+    ]
   },
   {
     "item_code": "SkillSplit",
@@ -24660,7 +25642,13 @@
     "name_key": "ITEM_SKILLSPLIT_NAME",
     "desc_key": "ITEM_SKILLSPLIT_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/trinkets.gon"
+    "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_checklist_with_class",
+        "class": "Colorless"
+      }
+    ]
   },
   {
     "item_code": "FurnitureBox",
@@ -26823,7 +27811,19 @@
     "name_key": "ITEM_STAFFOFFLAME_NAME",
     "desc_key": "ITEM_STAFFOFFLAME_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/weapons.gon"
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "jurassic",
+        "class": "Mage",
+        "chapter_name_key": "AREA_NAME_JURASSIC",
+        "chapter_name_texts": {
+          "en": "The Jurassic",
+          "zh": "侏罗纪"
+        }
+      }
+    ]
   },
   {
     "item_code": "LacedNeedle",
@@ -26850,7 +27850,19 @@
     "name_key": "ITEM_LACEDNEEDLE_NAME",
     "desc_key": "ITEM_LACEDNEEDLE_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/weapons.gon"
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "jurassic",
+        "class": "Thief",
+        "chapter_name_key": "AREA_NAME_JURASSIC",
+        "chapter_name_texts": {
+          "en": "The Jurassic",
+          "zh": "侏罗纪"
+        }
+      }
+    ]
   },
   {
     "item_code": "BattleAxe",
@@ -26877,7 +27889,19 @@
     "name_key": "ITEM_BATTLEAXE_NAME",
     "desc_key": "ITEM_BATTLEAXE_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/weapons.gon"
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "jurassic",
+        "class": "Fighter",
+        "chapter_name_key": "AREA_NAME_JURASSIC",
+        "chapter_name_texts": {
+          "en": "The Jurassic",
+          "zh": "侏罗纪"
+        }
+      }
+    ]
   },
   {
     "item_code": "AnointingOil",
@@ -26904,7 +27928,19 @@
     "name_key": "ITEM_ANOINTINGOIL_NAME",
     "desc_key": "ITEM_ANOINTINGOIL_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/weapons.gon"
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "jurassic",
+        "class": "Medic",
+        "chapter_name_key": "AREA_NAME_JURASSIC",
+        "chapter_name_texts": {
+          "en": "The Jurassic",
+          "zh": "侏罗纪"
+        }
+      }
+    ]
   },
   {
     "item_code": "Girder",
@@ -26931,7 +27967,19 @@
     "name_key": "ITEM_GIRDER_NAME",
     "desc_key": "ITEM_GIRDER_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/weapons.gon"
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "jurassic",
+        "class": "Tank",
+        "chapter_name_key": "AREA_NAME_JURASSIC",
+        "chapter_name_texts": {
+          "en": "The Jurassic",
+          "zh": "侏罗纪"
+        }
+      }
+    ]
   },
   {
     "item_code": "InfinityArrow",
@@ -26958,7 +28006,19 @@
     "name_key": "ITEM_INFINITYARROW_NAME",
     "desc_key": "ITEM_INFINITYARROW_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/weapons.gon"
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "jurassic",
+        "class": "Hunter",
+        "chapter_name_key": "AREA_NAME_JURASSIC",
+        "chapter_name_texts": {
+          "en": "The Jurassic",
+          "zh": "侏罗纪"
+        }
+      }
+    ]
   },
   {
     "item_code": "BentSpoon",
@@ -26985,7 +28045,19 @@
     "name_key": "ITEM_BENTSPOON_NAME",
     "desc_key": "ITEM_BENTSPOON_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/weapons.gon"
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "jurassic",
+        "class": "Psychic",
+        "chapter_name_key": "AREA_NAME_JURASSIC",
+        "chapter_name_texts": {
+          "en": "The Jurassic",
+          "zh": "侏罗纪"
+        }
+      }
+    ]
   },
   {
     "item_code": "UnderworldStaff",
@@ -27013,7 +28085,19 @@
     "name_key": "ITEM_UNDERWORLDSTAFF_NAME",
     "desc_key": "ITEM_UNDERWORLDSTAFF_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/weapons.gon"
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "jurassic",
+        "class": "Necromancer",
+        "chapter_name_key": "AREA_NAME_JURASSIC",
+        "chapter_name_texts": {
+          "en": "The Jurassic",
+          "zh": "侏罗纪"
+        }
+      }
+    ]
   },
   {
     "item_code": "Bo",
@@ -27041,7 +28125,19 @@
     "name_key": "ITEM_BO_NAME",
     "desc_key": "ITEM_BO_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/weapons.gon"
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "jurassic",
+        "class": "Monk",
+        "chapter_name_key": "AREA_NAME_JURASSIC",
+        "chapter_name_texts": {
+          "en": "The Jurassic",
+          "zh": "侏罗纪"
+        }
+      }
+    ]
   },
   {
     "item_code": "BallPeenHammer",
@@ -27068,7 +28164,19 @@
     "name_key": "ITEM_BALLPEENHAMMER_NAME",
     "desc_key": "ITEM_BALLPEENHAMMER_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/weapons.gon"
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "jurassic",
+        "class": "Tinkerer",
+        "chapter_name_key": "AREA_NAME_JURASSIC",
+        "chapter_name_texts": {
+          "en": "The Jurassic",
+          "zh": "侏罗纪"
+        }
+      }
+    ]
   },
   {
     "item_code": "ButchersCleaver",
@@ -27095,7 +28203,19 @@
     "name_key": "ITEM_BUTCHERSCLEAVER_NAME",
     "desc_key": "ITEM_BUTCHERSCLEAVER_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/weapons.gon"
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "jurassic",
+        "class": "Butcher",
+        "chapter_name_key": "AREA_NAME_JURASSIC",
+        "chapter_name_texts": {
+          "en": "The Jurassic",
+          "zh": "侏罗纪"
+        }
+      }
+    ]
   },
   {
     "item_code": "RainStaff",
@@ -27123,7 +28243,19 @@
     "name_key": "ITEM_RAINSTAFF_NAME",
     "desc_key": "ITEM_RAINSTAFF_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/weapons.gon"
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "jurassic",
+        "class": "Druid",
+        "chapter_name_key": "AREA_NAME_JURASSIC",
+        "chapter_name_texts": {
+          "en": "The Jurassic",
+          "zh": "侏罗纪"
+        }
+      }
+    ]
   },
   {
     "item_code": "LilKitty",
@@ -27148,7 +28280,19 @@
     "name_key": "ITEM_LILKITTY_NAME",
     "desc_key": "ITEM_LILKITTY_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/weapons.gon"
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "jurassic",
+        "class": "Colorless",
+        "chapter_name_key": "AREA_NAME_JURASSIC",
+        "chapter_name_texts": {
+          "en": "The Jurassic",
+          "zh": "侏罗纪"
+        }
+      }
+    ]
   },
   {
     "item_code": "TractorBeam",
@@ -29713,7 +30857,14 @@
     "name_key": "ITEM_TINASLARYNX_NAME",
     "desc_key": "ITEM_TINASLARYNX_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/weapons.gon"
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "unlock_requirements": [
+      {
+        "type": "beat_house_boss",
+        "boss": "guillotina_2",
+        "required_difficulty": 1
+      }
+    ]
   },
   {
     "item_code": "RoboticArm",
@@ -29740,7 +30891,14 @@
     "name_key": "ITEM_ROBOTICARM_NAME",
     "desc_key": "ITEM_ROBOTICARM_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/weapons.gon"
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "unlock_requirements": [
+      {
+        "type": "beat_house_boss",
+        "boss": "terminator_1",
+        "required_difficulty": 1
+      }
+    ]
   },
   {
     "item_code": "StevensShotgun",
@@ -29765,7 +30923,14 @@
     "name_key": "ITEM_STEVENSSHOTGUN_NAME",
     "desc_key": "ITEM_STEVENSSHOTGUN_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/weapons.gon"
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "unlock_requirements": [
+      {
+        "type": "beat_chapter_boss",
+        "boss": "endoftime",
+        "required_difficulty": 2
+      }
+    ]
   },
   {
     "item_code": "StevensGristle",
@@ -29792,7 +30957,14 @@
     "name_key": "ITEM_STEVENSGRISTLE_NAME",
     "desc_key": "ITEM_STEVENSGRISTLE_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/weapons.gon"
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "unlock_requirements": [
+      {
+        "type": "beat_house_boss",
+        "boss": "guillotina_2",
+        "required_difficulty": 2
+      }
+    ]
   },
   {
     "item_code": "StevensBagofRocks",
@@ -29819,7 +30991,14 @@
     "name_key": "ITEM_STEVENSBAGOFROCKS_NAME",
     "desc_key": "ITEM_STEVENSBAGOFROCKS_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/weapons.gon"
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "unlock_requirements": [
+      {
+        "type": "beat_house_boss",
+        "boss": "guillotina_3",
+        "required_difficulty": 2
+      }
+    ]
   },
   {
     "item_code": "StevensBottle",
@@ -29846,7 +31025,14 @@
     "name_key": "ITEM_STEVENSBOTTLE_NAME",
     "desc_key": "ITEM_STEVENSBOTTLE_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/weapons.gon"
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "unlock_requirements": [
+      {
+        "type": "beat_house_boss",
+        "boss": "terminator_2",
+        "required_difficulty": 2
+      }
+    ]
   },
   {
     "item_code": "StevenWeapon1",
@@ -29873,7 +31059,14 @@
     "name_key": "ITEM_STEVENWEAPON1_NAME",
     "desc_key": "ITEM_STEVENWEAPON1_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/weapons.gon"
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "unlock_requirements": [
+      {
+        "type": "beat_house_boss",
+        "boss": "guillotina_2",
+        "required_difficulty": 3
+      }
+    ]
   },
   {
     "item_code": "StevenWeapon2",
@@ -29900,7 +31093,14 @@
     "name_key": "ITEM_STEVENWEAPON2_NAME",
     "desc_key": "ITEM_STEVENWEAPON2_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/weapons.gon"
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "unlock_requirements": [
+      {
+        "type": "beat_house_boss",
+        "boss": "terminator_2",
+        "required_difficulty": 3
+      }
+    ]
   },
   {
     "item_code": "ToyGun",
@@ -29927,7 +31127,19 @@
     "name_key": "ITEM_TOYGUN_NAME",
     "desc_key": "ITEM_TOYGUN_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/weapons.gon"
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "unlock_requirements": [
+      {
+        "type": "complete_chapter_with_class",
+        "chapter": "theend",
+        "class": "Jester",
+        "chapter_name_key": "AREA_NAME_THEEND",
+        "chapter_name_texts": {
+          "en": "The End",
+          "zh": "终点"
+        }
+      }
+    ]
   },
   {
     "item_code": "Pliers",

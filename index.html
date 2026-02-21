@@ -643,6 +643,12 @@
             background: #d7e8ff;
         }
 
+        .hash-target {
+            outline: 2px solid #d8b55b;
+            outline-offset: -2px;
+            background: rgba(255, 244, 204, 0.35);
+        }
+
         .img-placeholder {
             display: inline-block;
             background: #f0f0f0;
@@ -1993,6 +1999,31 @@
             return Object.values(texts).some(value => typeof value === 'string' && value.trim() !== '');
         }
 
+        function makeRowId(prefix, code) {
+            if (!code) {
+                return '';
+            }
+            const safe = String(code).replace(/[^A-Za-z0-9_-]+/g, '-');
+            return `${prefix}-${safe}`;
+        }
+
+        function scrollToHash(prefix) {
+            const hash = window.location.hash ? window.location.hash.slice(1) : '';
+            if (!hash) {
+                return;
+            }
+            const decoded = decodeURIComponent(hash);
+            const direct = document.getElementById(decoded);
+            const rowId = makeRowId(prefix, decoded);
+            const target = direct || (rowId ? document.getElementById(rowId) : null);
+            if (!target) {
+                return;
+            }
+            target.classList.add('hash-target');
+            target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            setTimeout(() => target.classList.remove('hash-target'), 2000);
+        }
+
         // Display abilities in table
         function displayAbilities(abilities) {
             const tbody = document.getElementById('tableBody');
@@ -2329,7 +2360,7 @@
                 `;
 
                 return `
-                    <tr>
+                    <tr id="${makeRowId('ability', ability.ability_code || '')}" data-code="${escapeHtml(ability.ability_code || '')}">
                         <td class="image-cell">
                             <div class="icon-and-stats">
                                 ${iconAndStatsContent}
@@ -2349,6 +2380,7 @@
             }).join('');
 
             document.getElementById('showingCount').textContent = visibleAbilities.length;
+            requestAnimationFrame(() => scrollToHash('ability'));
         }
 
         function sortBy(column) {
@@ -2663,6 +2695,7 @@
         document.getElementById('formulaClose').addEventListener('click', () => {
             document.getElementById('formulaModal').style.display = 'none';
         });
+        window.addEventListener('hashchange', () => scrollToHash('ability'));
 
         // Apply language immediately when DOM is ready (before data loads)
         document.addEventListener('DOMContentLoaded', () => {
