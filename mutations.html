@@ -51,7 +51,8 @@
         .language-toggle {
             position: absolute;
             top: 12px;
-            right: 18px;
+            left: 50%;
+            transform: translateX(-50%);
             display: flex;
             align-items: center;
             gap: 8px;
@@ -60,22 +61,24 @@
         }
 
         .language-toggle .lang-link {
-            background: none;
-            border: none;
-            padding: 0;
+            background: rgba(245, 245, 245, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            padding: 4px 8px;
             cursor: pointer;
-            color: rgba(255, 255, 255, 0.85);
-            text-decoration: underline;
+            color: #4b453d;
+            text-decoration: none;
             font-weight: 600;
             text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+            border-radius: 999px;
         }
 
         .language-toggle .lang-link.active {
-            color: #fff;
+            color: #2f2a23;
+            background: rgba(245, 245, 245, 0.95);
         }
 
         .language-toggle .lang-separator {
-            color: rgba(255, 255, 255, 0.65);
+            color: #4b453d;
             text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
         }
 
@@ -102,6 +105,13 @@
             justify-content: center;
             gap: 0;
             padding: 0;
+            overflow-x: hidden;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+
+        .navbar::-webkit-scrollbar {
+            display: none;
         }
 
         .navbar a {
@@ -113,6 +123,7 @@
             transition: all 0.2s;
             border-bottom: 3px solid transparent;
             position: relative;
+            flex: 0 0 auto;
         }
 
         .navbar a:hover {
@@ -393,10 +404,13 @@
             background: #fff;
             max-width: 560px;
             width: 100%;
+            max-height: calc(100vh - 40px);
             border-radius: 10px;
             box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
             border: 1px solid rgba(159, 151, 139, 0.4);
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
 
         .announcement-header {
@@ -425,6 +439,7 @@
             padding: 18px 20px 10px;
             color: #4b453d;
             line-height: 1.6;
+            overflow-y: auto;
         }
 
         .announcement-body pre {
@@ -538,9 +553,16 @@
                 gap: 10px;
             }
 
+            .navbar {
+                justify-content: flex-start;
+                overflow-x: auto;
+            }
+
             .language-toggle {
-                top: 10px;
+                top: 12px;
                 right: 12px;
+                left: auto;
+                transform: none;
                 font-size: 0.9em;
             }
         }
