@@ -475,6 +475,24 @@
             margin-top: 4px;
         }
 
+        .item-pools {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+
+        .item-pool-badge {
+            display: inline-block;
+            background: #f3f1ee;
+            border: 1px solid #d6d1c9;
+            color: #6d6559;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.82em;
+            text-transform: lowercase;
+            white-space: nowrap;
+        }
+
         .item-set-badge {
             display: inline-block;
             background: #e9e9e9;
@@ -1020,13 +1038,14 @@
                         <th id="descHeader">Description</th>
                         <th id="typeHeader" class="sortable" style="width: 100px;" onclick="sortBy('type')">Type<span
                                 class="sort-indicator"></span></th>
+                        <th id="poolHeader" style="width: 180px;">Pools</th>
                         <th id="rarityHeader" class="sortable" style="width: 100px;" onclick="sortBy('rarity')">
                             Rarity<span class="sort-indicator"></span></th>
                     </tr>
                 </thead>
                 <tbody id="tableBody">
                     <tr>
-                        <td colspan="5" class="no-results" id="loadingMessage">Loading items...</td>
+                        <td colspan="6" class="no-results" id="loadingMessage">Loading items...</td>
                     </tr>
                 </tbody>
             </table>
@@ -1085,13 +1104,16 @@
                 editorNotesLabel: 'Editor Notes:',
                 unlockRequirementsLabel: 'Unlock Requirements:',
                 completeChecklistWithClass: 'Complete all checkmarks as {className}',
+                allChaptersEveryClass: 'All chapters with every class',
                 beatHouseBoss: 'Beat house boss {bossName}',
                 beatChapterBoss: 'Beat chapter boss {bossName}',
+                eventUnlockLabel: 'Event unlock: {eventName}',
                 difficultyLabel: 'Difficulty:',
                 iconHeader: 'Icon',
                 nameHeader: 'Item Name',
                 descHeader: 'Description',
                 typeHeader: 'Type',
+                poolHeader: 'Pools',
                 cursed: 'Cursed',
                 rarityHeader: 'Rarity',
                 loading: 'Loading items...',
@@ -1125,13 +1147,16 @@
                 editorNotesLabel: '编辑注释：',
                 unlockRequirementsLabel: '解锁条件：',
                 completeChecklistWithClass: '以 {className} 通关所有勾选章',
+                allChaptersEveryClass: '所有章节（每个职业）',
                 beatHouseBoss: '击败宅邸 Boss {bossName}',
                 beatChapterBoss: '击败章节 Boss {bossName}',
+                eventUnlockLabel: '事件解锁：{eventName}',
                 difficultyLabel: '难度：',
                 iconHeader: '图标',
                 nameHeader: '物品名称',
                 descHeader: '描述',
                 typeHeader: '类型',
+                poolHeader: '物品池',
                 cursed: '诅咒',
                 rarityHeader: '稀有度',
                 loading: '正在加载物品...',
@@ -1205,15 +1230,34 @@
 
         const DIFFICULTY_LABELS = {
             en: {
+                0: 'Normal',
                 1: 'Hard',
                 2: 'Crazy',
                 3: 'Impossible',
             },
             zh: {
+                0: '普通',
                 1: '困难',
                 2: '疯狂',
                 3: '不可能',
             }
+        };
+
+        const MANUAL_ITEM_UNLOCKS = {
+            ThrobbingGristle: [{ type: 'beat_house_boss', boss: 'guillotina_1', boss_name_literal: 'Guillotina 1' }],
+            PutridLeech: [{ type: 'beat_house_boss', boss: 'guillotina_2', boss_name_literal: 'Guillotina 2' }],
+            GuillotinasHead: [{ type: 'beat_house_boss', boss: 'guillotina_3', boss_name_literal: 'Guillotina 3' }],
+            ScaldingOrb: [{ type: 'beat_house_boss', boss: 'pyrophina', boss_name_literal: 'Pyrophina' }],
+            BlackShard: [{ type: 'beat_house_boss', boss: 'zaratana', boss_name_literal: 'Zaratana' }],
+            PyrophinasCollar: [{ type: 'beat_house_boss', boss: 'pyrophina_vs_zaratana', boss_name_literal: 'Pyrophina vs Zaratana' }],
+            ZaratanasCollar: [{ type: 'beat_house_boss', boss: 'pyrophina_vs_zaratana', boss_name_literal: 'Pyrophina vs Zaratana' }],
+            ReceiverAntenna: [{ type: 'beat_house_boss', boss: 'terminator_1', boss_name_literal: 'Terminator 1' }],
+            TransmitterAntenna: [{ type: 'beat_house_boss', boss: 'terminator_2', boss_name_literal: 'Terminator 2' }],
+            SignalAmplifier: [{ type: 'beat_house_boss', boss: 'terminator_3', boss_name_literal: 'Terminator 3' }],
+            TheBoxCardboard: [{ type: 'all_chapters_every_class' }],
+            TheBoxChest: [{ type: 'all_chapters_every_class' }],
+            TheBox: [{ type: 'all_chapters_every_class' }],
+            TheBlackBox: [{ type: 'all_chapters_every_class' }]
         };
 
         const MONOCLASS_REQUIRED_ITEMS = new Set([
@@ -1395,6 +1439,7 @@
             document.getElementById('nameHeader').textContent = t('nameHeader');
             document.getElementById('descHeader').textContent = t('descHeader');
             document.getElementById('typeHeader').textContent = t('typeHeader');
+            document.getElementById('poolHeader').textContent = t('poolHeader');
             document.getElementById('rarityHeader').textContent = t('rarityHeader');
             document.getElementById('footerSource').textContent = t('footerSource');
             document.getElementById('footerCredit').textContent = t('footerCredit');
@@ -1474,7 +1519,7 @@
             } catch (error) {
                 console.error('Error loading items:', error);
                 document.getElementById('tableBody').innerHTML = `
-                    <tr><td colspan="5" class="no-results">
+                    <tr><td colspan="6" class="no-results">
                         <p>Error loading items: ${escapeHtml(error.message)}</p>
                     </td></tr>
                 `;
@@ -1696,7 +1741,7 @@
             });
 
             if (visibleItems.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="5" class="no-results">${escapeHtml(t('noResults'))}</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="6" class="no-results">${escapeHtml(t('noResults'))}</td></tr>`;
                 document.getElementById('showingCount').textContent = '0';
                 return;
             }
@@ -1751,6 +1796,24 @@
                 const partIconHtml = partIconPath ? `<img src="${partIconPath}" class="part-icon" onerror="this.style.display='none'">` : '';
                 const iconClass = item.rarity === 'rare' ? 'item-icon item-icon-rare' : 'item-icon';
 
+                let poolsHtml = '';
+                if (Array.isArray(item.item_pools) && item.item_pools.length > 0) {
+                    const poolTags = item.item_pools
+                        .map(pool => {
+                            if (typeof pool === 'string') {
+                                return pool;
+                            }
+                            if (pool && typeof pool === 'object') {
+                                return getLocalizedText(pool.tag_texts, pool.tag || '') || pool.tag || '';
+                            }
+                            return '';
+                        })
+                        .filter(Boolean);
+                    if (poolTags.length > 0) {
+                        poolsHtml = `<div class="item-pools">${poolTags.map(tag => `<span class="item-pool-badge">${escapeHtml(tag)}</span>`).join('')}</div>`;
+                    }
+                }
+
                 // Render durability if present
                 let durabilityText = '';
                 if (item.durability) {
@@ -1797,6 +1860,9 @@
                         </td>
                         <td>
                             ${effectiveKind ? `<div class="item-rarity kind-${effectiveKind}">${partIconHtml}${escapeHtml(kindLabel)}</div>` : '-'}
+                        </td>
+                        <td>
+                            ${poolsHtml || '-'}
                         </td>
                         <td>
                             ${rarityCellHtml}
@@ -2153,11 +2219,14 @@
             if (localized) {
                 return localized;
             }
+            if (requirement.boss_name_literal) {
+                return requirement.boss_name_literal;
+            }
             return requirement.boss || '';
         }
 
         function getDifficultyLabel(requiredDifficulty) {
-            if (!requiredDifficulty) {
+            if (requiredDifficulty === null || requiredDifficulty === undefined) {
                 return '';
             }
             const label = DIFFICULTY_LABELS[currentLanguage]?.[requiredDifficulty]
@@ -2166,14 +2235,20 @@
         }
 
         function buildUnlockRequirementsHtml(requirements, itemCode) {
-            if (!Array.isArray(requirements) || requirements.length === 0) {
+            const manualRequirements = (itemCode && MANUAL_ITEM_UNLOCKS[itemCode]) || [];
+            const combined = [
+                ...(Array.isArray(requirements) ? requirements : []),
+                ...(Array.isArray(manualRequirements) ? manualRequirements : [])
+            ];
+            if (combined.length === 0) {
                 return '';
             }
 
-            const lines = requirements
+            const lines = combined
                 .map(requirement => {
                     const reqType = requirement.type;
                     let line = '';
+                    let appendDifficulty = true;
                     if (reqType === 'complete_chapter_with_class') {
                         const chapterName = getLocalizedChapterName(requirement);
                         const classLabel = getClassLabel(requirement.class || '');
@@ -2185,17 +2260,35 @@
                     } else if (reqType === 'complete_checklist_with_class') {
                         const classLabel = getClassLabel(requirement.class || '');
                         line = t('completeChecklistWithClass').replace('{className}', classLabel || requirement.class || '');
+                    } else if (reqType === 'all_chapters_every_class') {
+                        line = t('allChaptersEveryClass');
                     } else if (reqType === 'beat_house_boss') {
                         const bossName = getLocalizedBossName(requirement);
                         line = t('beatHouseBoss').replace('{bossName}', bossName || requirement.boss || '');
                     } else if (reqType === 'beat_chapter_boss') {
                         const bossName = getLocalizedBossName(requirement);
                         line = t('beatChapterBoss').replace('{bossName}', bossName || requirement.boss || '');
+                    } else if (reqType === 'event_unlock') {
+                        const eventName = getLocalizedText(requirement.event_name_texts, '')
+                            || requirement.event_name_literal
+                            || requirement.event
+                            || '';
+                        line = t('eventUnlockLabel').replace('{eventName}', eventName || requirement.event || '');
+                    } else if (reqType === 'fully_complete_difficulty') {
+                        const difficultyLabel = getDifficultyLabel(requirement.required_difficulty);
+                        if (difficultyLabel) {
+                            line = `${t('difficultyLabel')} ${difficultyLabel}`;
+                        }
+                        appendDifficulty = false;
                     }
 
                     const difficultyLabel = getDifficultyLabel(requirement.required_difficulty);
-                    if (difficultyLabel) {
-                        line = `${line} (${t('difficultyLabel')} ${difficultyLabel})`;
+                    if (appendDifficulty && difficultyLabel) {
+                        if (line) {
+                            line = `${line} (${t('difficultyLabel')} ${difficultyLabel})`;
+                        } else {
+                            line = `${t('difficultyLabel')} ${difficultyLabel}`;
+                        }
                     }
 
                     return line.trim();

@@ -508,6 +508,19 @@
         </div>
 
         <div class="achievement-section">
+            <h2 id="boxTableTitle">Box Unlocks</h2>
+            <div class="achievement-table-wrapper">
+                <table id="boxAchievementsTable">
+                    <tbody id="boxTableBody">
+                        <tr>
+                            <td colspan="99" class="no-results" id="boxLoadingMessage">Loading achievements...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="achievement-section">
             <h2 id="bossTableTitle">Boss Unlocks by Difficulty</h2>
             <div class="achievement-table-wrapper">
                 <table id="bossAchievementsTable">
@@ -540,6 +553,7 @@
         let allPassives = [];
         let allItems = [];
         let allEntries = [];
+        let itemEntriesByCode = new Map();
         let currentLanguage = initLanguage('en');
         window.currentLanguage = currentLanguage;
         let dataReady = false;
@@ -577,6 +591,23 @@
             'dimensionx',
             'endoftime',
         ];
+        const QUEST_UNLOCKS_BY_BOSS = {
+            guillotina_1: ['ThrobbingGristle'],
+            guillotina_2: ['PutridLeech'],
+            guillotina_3: ['GuillotinasHead'],
+            pyrophina: ['ScaldingOrb'],
+            zaratana: ['BlackShard'],
+            pyrophina_vs_zaratana: ['PyrophinasCollar', 'ZaratanasCollar'],
+            terminator_1: ['ReceiverAntenna'],
+            terminator_2: ['TransmitterAntenna'],
+            terminator_3: ['SignalAmplifier'],
+        };
+        const BOX_UNLOCK_ITEMS = [
+            { difficulty: 0, item: 'TheBoxCardboard' },
+            { difficulty: 1, item: 'TheBoxChest' },
+            { difficulty: 2, item: 'TheBox' },
+            { difficulty: 3, item: 'TheBlackBox' }
+        ];
         const CHAPTER_ORDER_MAP = CHAPTER_ORDER.reduce((acc, key, index) => {
             acc[key] = index + 1;
             return acc;
@@ -592,9 +623,12 @@
                 achievementHeader: 'Achievement',
                 classHeader: 'Class',
                 bossHeader: 'Boss',
+                questHeader: 'Quest unlocks',
                 difficultyHeader: 'Difficulty',
                 unlocksHeader: 'Unlocks (Hard/Crazy/Impossible)',
-                completeChecklistRow: 'Complete all checkmarks',
+                completeChecklistRow: 'All areas',
+                boxTableTitle: 'Box Unlocks',
+                allChaptersEveryClass: 'All chapters with every class',
                 chapterLabelFallback: 'Chapter',
                 houseBossPrefix: 'House Boss',
                 chapterBossPrefix: 'Chapter Boss',
@@ -619,9 +653,12 @@
                 achievementHeader: '成就',
                 classHeader: '职业',
                 bossHeader: 'Boss',
+                questHeader: '任务解锁',
                 difficultyHeader: '难度',
                 unlocksHeader: '解锁（困难/疯狂/不可能）',
-                completeChecklistRow: '所有标记',
+                completeChecklistRow: '所有区域',
+                boxTableTitle: '盒子解锁',
+                allChaptersEveryClass: '所有章节（每个职业）',
                 chapterLabelFallback: '章节',
                 houseBossPrefix: '宅邸 Boss',
                 chapterBossPrefix: '章节 Boss',
@@ -682,11 +719,13 @@
 
         const DIFFICULTY_LABELS = {
             en: {
+                0: 'Normal',
                 1: 'Hard',
                 2: 'Crazy',
                 3: 'Impossible',
             },
             zh: {
+                0: '普通',
                 1: '困难',
                 2: '疯狂',
                 3: '不可能',
@@ -720,6 +759,7 @@
             document.getElementById('langButtonEn').textContent = t('languageEnglish');
             document.getElementById('langButtonZh').textContent = t('languageChinese');
             document.getElementById('classTableTitle').textContent = t('classTableTitle');
+            document.getElementById('boxTableTitle').textContent = t('boxTableTitle');
             document.getElementById('bossTableTitle').textContent = t('bossTableTitle');
             document.getElementById('footerSource').textContent = t('footerSource');
             document.getElementById('footerCredit').textContent = t('footerCredit');
@@ -740,6 +780,10 @@
             const bossLoading = document.getElementById('bossLoadingMessage');
             if (bossLoading) {
                 bossLoading.textContent = t('loading');
+            }
+            const boxLoading = document.getElementById('boxLoadingMessage');
+            if (boxLoading) {
+                boxLoading.textContent = t('loading');
             }
 
             document.getElementById('langButtonEn').classList.toggle('active', currentLanguage === 'en');
@@ -783,7 +827,7 @@
         }
 
         function getDifficultyLabel(level) {
-            if (!level) {
+            if (level === null || level === undefined) {
                 return '';
             }
             return DIFFICULTY_LABELS[currentLanguage]?.[level] || DIFFICULTY_LABELS.en[level] || String(level);
@@ -893,6 +937,7 @@
 
         function buildEntries() {
             const entries = [];
+            const itemMap = new Map();
             allAbilities.forEach(ability => {
                 entries.push({
                     type: 'ability',
@@ -914,7 +959,7 @@
                 });
             });
             allItems.forEach(item => {
-                entries.push({
+                const entry = {
                     type: 'item',
                     code: item.item_code,
                     name_texts: item.item_name_texts,
@@ -926,9 +971,14 @@
                     is_consumable: item.is_consumable,
                     aux: item.aux,
                     unlocks: item.unlock_requirements || []
-                });
+                };
+                entries.push(entry);
+                if (entry.code) {
+                    itemMap.set(entry.code, entry);
+                }
             });
             allEntries = entries;
+            itemEntriesByCode = itemMap;
         }
 
         function sortEntries(entries) {
@@ -1153,13 +1203,15 @@
 
             headerRow.innerHTML = `
                 <th>${escapeHtml(t('bossHeader'))}</th>
+                <th>${escapeHtml(t('questHeader'))}</th>
                 <th>${escapeHtml(t('unlocksHeader'))}</th>
                 <th>${escapeHtml(t('bossHeader'))}</th>
+                <th>${escapeHtml(t('questHeader'))}</th>
                 <th>${escapeHtml(t('unlocksHeader'))}</th>
             `;
 
             if (!groups.length) {
-                tbody.innerHTML = `<tr><td colspan="4" class="no-results">${escapeHtml(t('noResults'))}</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="6" class="no-results">${escapeHtml(t('noResults'))}</td></tr>`;
                 return;
             }
 
@@ -1182,12 +1234,30 @@
                 const rightIcons = rightEntries.length
                     ? `<div class="achievement-icons">${rightEntries.map(buildEntryIcon).join('')}</div>`
                     : (right ? '<span class="empty-cell">-</span>' : '');
+                const leftQuestEntries = left?.key && QUEST_UNLOCKS_BY_BOSS[left.key]
+                    ? QUEST_UNLOCKS_BY_BOSS[left.key]
+                        .map(code => itemEntriesByCode.get(code))
+                        .filter(Boolean)
+                    : [];
+                const rightQuestEntries = right?.key && QUEST_UNLOCKS_BY_BOSS[right.key]
+                    ? QUEST_UNLOCKS_BY_BOSS[right.key]
+                        .map(code => itemEntriesByCode.get(code))
+                        .filter(Boolean)
+                    : [];
+                const leftQuestIcons = leftQuestEntries.length
+                    ? `<div class="achievement-icons">${leftQuestEntries.map(buildEntryIcon).join('')}</div>`
+                    : '<span class="empty-cell">-</span>';
+                const rightQuestIcons = rightQuestEntries.length
+                    ? `<div class="achievement-icons">${rightQuestEntries.map(buildEntryIcon).join('')}</div>`
+                    : (right ? '<span class="empty-cell">-</span>' : '');
 
                 return `
                     <tr>
                         <td class="achievement-label">${escapeHtml(left.label || '')}</td>
+                        <td>${leftQuestIcons}</td>
                         <td>${leftIcons}</td>
                         <td class="achievement-label">${escapeHtml(right?.label || '')}</td>
+                        <td>${right ? rightQuestIcons : ''}</td>
                         <td>${right ? rightIcons : ''}</td>
                     </tr>
                 `;
@@ -1196,11 +1266,38 @@
             tbody.innerHTML = rows.join('');
         }
 
+        function renderBoxTable() {
+            const tbody = document.getElementById('boxTableBody');
+            if (!tbody) {
+                return;
+            }
+            const difficultyLabels = BOX_UNLOCK_ITEMS.map(entry => getDifficultyLabel(entry.difficulty) || entry.difficulty);
+            const icons = BOX_UNLOCK_ITEMS.map(entry => {
+                const itemEntry = itemEntriesByCode.get(entry.item);
+                if (!itemEntry) {
+                    return '<span class="empty-cell">-</span>';
+                }
+                return `<div class="achievement-icons">${buildEntryIcon(itemEntry)}</div>`;
+            });
+
+            tbody.innerHTML = `
+                <tr>
+                    <td class="achievement-label">${escapeHtml(t('difficultyHeader'))}</td>
+                    ${difficultyLabels.map(label => `<td>${escapeHtml(label)}</td>`).join('')}
+                </tr>
+                <tr>
+                    <td class="achievement-label">${escapeHtml(t('allChaptersEveryClass'))}</td>
+                    ${icons.map(html => `<td>${html}</td>`).join('')}
+                </tr>
+            `;
+        }
+
         function renderAchievements() {
             if (!dataReady) {
                 return;
             }
             renderClassTable();
+            renderBoxTable();
             renderBossTable();
         }
 
@@ -1232,6 +1329,10 @@
                 console.error('Error loading achievements:', error);
                 const message = `<tr><td colspan="99" class="no-results">${escapeHtml(t('noResults'))}</td></tr>`;
                 document.getElementById('classTableBody').innerHTML = message;
+                const boxBody = document.getElementById('boxTableBody');
+                if (boxBody) {
+                    boxBody.innerHTML = message;
+                }
                 document.getElementById('bossTableBody').innerHTML = message;
             }
         }
