@@ -699,7 +699,7 @@
     "description": "+1 Brace. Immunity to Slow and Freeze.",
     "description_texts": {
       "en": "+1 Brace. Immunity to Slow and Freeze.",
-      "zh": "+1 [img:brace] 护甲。免疫[b]减速[/b]和[b]冻结[/b]。"
+      "zh": "+1 护甲。免疫[b]减速[/b]和[b]冻结[/b]。"
     },
     "kind": "neck",
     "rarity": "rare",
@@ -3781,7 +3781,7 @@
     "description": "+1 range, +1 reach.",
     "description_texts": {
       "en": "+1 range, +1 reach.",
-      "zh": "+1 射程，+1 移动距离。"
+      "zh": "+1 射程，+1 近战范围。"
     },
     "kind": "face",
     "rarity": "rare",
@@ -4633,7 +4633,7 @@
     "description": "+3 Thorns, Brittle.\nGain +2 [img:con] permanently and heal 10 HP when this breaks.",
     "description_texts": {
       "en": "+3 Thorns, Brittle.\nGain +2 [img:con] permanently and heal 10 HP when this breaks.",
-      "zh": "+3 荆棘，脆弱。\n破碎时获得永久+2 [img:con] 并恢复10生命值。"
+      "zh": "+3 荆棘，脆弱。\n破碎时获得永久 +2 [img:con] 并恢复 10 生命值。"
     },
     "kind": "face",
     "rarity": "uncommon",
@@ -4669,7 +4669,7 @@
     "description": "+3 Thorns, Brittle.\nGain +2 [img:con] permanently and heal 10 HP when this breaks.",
     "description_texts": {
       "en": "+3 Thorns, Brittle.\nGain +2 [img:con] permanently and heal 10 HP when this breaks.",
-      "zh": "+3 荆棘，脆弱。\n破碎时获得永久+2 [img:con] 并恢复10生命值。"
+      "zh": "+3 荆棘，脆弱。\n破碎时获得永久 +2 [img:con] 并恢复 10 生命值。"
     },
     "kind": "head",
     "rarity": "uncommon",
@@ -4705,7 +4705,7 @@
     "description": "+3 Thorns, Brittle.\nGain +2 [img:con] permanently and heal 10 HP when this breaks.",
     "description_texts": {
       "en": "+3 Thorns, Brittle.\nGain +2 [img:con] permanently and heal 10 HP when this breaks.",
-      "zh": "+3 荆棘，脆弱。\n破碎时获得永久+2 [img:con] 并恢复10生命值。"
+      "zh": "+3 荆棘，脆弱。\n破碎时获得永久 +2 [img:con] 并恢复 10 生命值。"
     },
     "kind": "neck",
     "rarity": "uncommon",
@@ -13037,7 +13037,7 @@
     "item_name": "Ultra Vision 3000",
     "item_name_texts": {
       "en": "Ultra Vision 3000",
-      "zh": "超视觉3000"
+      "zh": "超视觉 3000"
     },
     "description": "Side Quest Item. Events are harder. All normal events trigger 2 extra events.",
     "description_texts": {
@@ -13064,7 +13064,7 @@
     "item_name": "Ultra Vision 3000 v1.1",
     "item_name_texts": {
       "en": "Ultra Vision 3000 v1.1",
-      "zh": "超视觉3000 v1.1"
+      "zh": "超视觉 3000 v1.1"
     },
     "description": "Your basic attack inflicts Marked.",
     "description_texts": {
@@ -15236,7 +15236,7 @@
     "item_name": "Unstable DNA",
     "item_name_texts": {
       "en": "Unstable DNA",
-      "zh": "不稳定DNA"
+      "zh": "不稳定 DNA"
     },
     "description": "Use: Gain 6 random stat ups and 3 random stat downs, then gain 3 Mutations at the end of combat.",
     "description_texts": {
@@ -15337,7 +15337,7 @@
     "item_name": "Experiment X",
     "item_name_texts": {
       "en": "Experiment X",
-      "zh": "实验体X"
+      "zh": "实验体 X"
     },
     "description": "Use: ???",
     "description_texts": {
@@ -17602,7 +17602,7 @@
     "description": "+2 Health Regen.",
     "description_texts": {
       "en": "+2 Health Regen.",
-      "zh": "+2 [img:health] 战后生命恢复。"
+      "zh": "+2 战后生命恢复。"
     },
     "kind": "face",
     "rarity": "uncommon",
@@ -17723,7 +17723,7 @@
     "description": "Spawn flowers under you when you end your turn.\n+1 Health Regen.",
     "description_texts": {
       "en": "Spawn flowers under you when you end your turn.\n+1 Health Regen.",
-      "zh": "结束回合时在身下生成花朵。\n+1 [img:health] 战后生命恢复。"
+      "zh": "结束回合时在身下生成花朵。\n+1 战后生命恢复。"
     },
     "kind": "face",
     "rarity": "uncommon",
@@ -17869,7 +17869,7 @@
     "description": "+1 Bleed Thorns.",
     "description_texts": {
       "en": "+1 Bleed Thorns.",
-      "zh": "+1 [img:bleed_thorns] 流血荆棘。"
+      "zh": "+1 流血荆棘。"
     },
     "kind": "face",
     "rarity": "uncommon",
@@ -18214,7 +18214,7 @@
     "description": "Your abilities have 100% accuracy and +50% Crit Chance.\nYou are unable to hit any unit that isn't in a straight line directly in front of you.",
     "description_texts": {
       "en": "Your abilities have 100% accuracy and +50% Crit Chance.\nYou are unable to hit any unit that isn't in a straight line directly in front of you.",
-      "zh": "你的\n技能拥有 100% 命中率和\n +50% [img:crit] 暴击率。\n你无法命中任何不处于你正前方直线上的单位。"
+      "zh": "你的\n技能拥有 100% 命中率和\n +50% 暴击率。\n你无法命中任何不处于你正前方直线上的单位。"
     },
     "kind": "face",
     "rarity": "rare",
@@ -18359,7 +18359,7 @@
     "description": "+10% Dodge Chance.",
     "description_texts": {
       "en": "+10% Dodge Chance.",
-      "zh": "+10% [img:dodge] 闪避率。"
+      "zh": "+10% 闪避率。"
     },
     "kind": "face",
     "rarity": "common",
@@ -18402,7 +18402,7 @@
     "description": "+1 Brace.",
     "description_texts": {
       "en": "+1 Brace.",
-      "zh": "+1 [img:brace] 护甲。"
+      "zh": "+1 护甲。"
     },
     "kind": "face",
     "rarity": "common",
@@ -18522,7 +18522,7 @@
     "description": "+1 reach.",
     "description_texts": {
       "en": "+1 reach.",
-      "zh": "+1 延伸。"
+      "zh": "+1 近战范围。"
     },
     "kind": "face",
     "rarity": "uncommon",
@@ -18742,7 +18742,7 @@
     "description": "+1 Thorns, +1 Damage.",
     "description_texts": {
       "en": "+1 Thorns, +1 Damage.",
-      "zh": "+1 [img:thorns] 荆棘，+1 伤害。"
+      "zh": "+1 荆棘，+1 伤害。"
     },
     "kind": "face",
     "rarity": "very_rare",
@@ -18781,7 +18781,7 @@
     "description": "+1 Brace, +1 Health Regen, 5% chance to spawn a Charmed Flea each turn.",
     "description_texts": {
       "en": "+1 Brace, +1 Health Regen, 5% chance to spawn a Charmed Flea each turn.",
-      "zh": "+1 [img:brace] 护甲，+1 [img:health] 战后生命恢复，\n每回合有 5% 几率生成一个魅惑跳蚤。"
+      "zh": "+1 护甲，+1 战后生命恢复，\n每回合有 5% 几率生成一个魅惑跳蚤。"
     },
     "kind": "face",
     "rarity": "very_rare",
@@ -18859,7 +18859,7 @@
     "description": "+1 Kinetic Spikes. When you take damage, gain +1 [img:str]. When you are downed, emit 6 Sparkles.",
     "description_texts": {
       "en": "+1 Kinetic Spikes. When you take damage, gain +1 [img:str]. When you are downed, emit 6 Sparkles.",
-      "zh": "+1 [img:kinetic_spikes] 动能尖刺。当你受到伤害时，\n获得 +1 [img:str]。当你[b]倒地[/b]时，\n放出 6 个[b]火花[/b]。"
+      "zh": "+1 动能尖刺。当你受到伤害时，\n获得 +1 [img:str]。当你[b]倒地[/b]时，\n放出 6 个[b]火花[/b]。"
     },
     "kind": "face",
     "rarity": "very_rare",
@@ -19231,7 +19231,7 @@
     "description": "Brace 2. +2 Health Regen. Units that contact you are knocked back 2 tiles.\n20% chance to spawn a Charmed Ameoba at the end of the turn.",
     "description_texts": {
       "en": "Brace 2. +2 Health Regen. Units that contact you are knocked back 2 tiles.\n20% chance to spawn a Charmed Ameoba at the end of the turn.",
-      "zh": "[img:brace] 护甲 2。+2 [img:health] 战后生命恢复。\n接触你的单位会被击退 2 个地块。\n回合结束时有 20% 几率生\n成一个魅惑阿米巴。"
+      "zh": "护甲 2。+2 战后生命恢复。\n接触你的单位会被击退 2 个地块。\n回合结束时有 20% 几率生\n成一个魅惑阿米巴。"
     },
     "kind": "face",
     "rarity": "rare",
@@ -19306,7 +19306,7 @@
     "description": "+15% Dodge Chance.\nGain +5% Dodge Chance each time you take damage.",
     "description_texts": {
       "en": "+15% Dodge Chance.\nGain +5% Dodge Chance each time you take damage.",
-      "zh": "+15% [img:dodge] 闪避率。\n每次受到伤害时获得 +5% [img:dodge] 闪避率。"
+      "zh": "+15% 闪避率。\n每次受到伤害时获得 +5% 闪避率。"
     },
     "kind": "face",
     "rarity": "rare",
@@ -23130,7 +23130,7 @@
     "description": "+2 Thorns.",
     "description_texts": {
       "en": "+2 Thorns.",
-      "zh": "+2 [img:thorns] 荆棘。"
+      "zh": "+2 荆棘。"
     },
     "kind": "neck",
     "rarity": "uncommon",
@@ -23555,7 +23555,7 @@
     "description": "+40% Dodge Chance while standing in tall grass.\nStart each battle with Stealth 1. Lose this stealth when you use your basic attack.",
     "description_texts": {
       "en": "+40% Dodge Chance while standing in tall grass.\nStart each battle with Stealth 1. Lose this stealth when you use your basic attack.",
-      "zh": "站在[b]高草[/b]中时 +40% [img:dodge] 闪避率。\n每场战斗开始时获得 1 层[b]潜行[/b]。\n当你使用基础攻击时失去此潜行效果。"
+      "zh": "站在[b]高草[/b]中时 +40% 闪避率。\n每场战斗开始时获得 1 层[b]潜行[/b]。\n当你使用基础攻击时失去此潜行效果。"
     },
     "kind": "neck",
     "rarity": "uncommon",
@@ -23827,7 +23827,7 @@
     "description": "You have +3 Health Regen as long as you have [img:shield].",
     "description_texts": {
       "en": "You have +3 Health Regen as long as you have [img:shield].",
-      "zh": "只要你有 [img:shield]，你就有 +3 [img:health] 战后生命恢复。"
+      "zh": "只要你有 [img:shield]，你就有 +3 战后生命恢复。"
     },
     "kind": "neck",
     "rarity": "uncommon",
@@ -24008,7 +24008,7 @@
     "description": "Whenever you backstab, gain +1 Serrated Claws.",
     "description_texts": {
       "en": "Whenever you backstab, gain +1 Serrated Claws.",
-      "zh": "每当你[b]背刺[/b]时，获得 +1 [img:serrated_claws] 锯齿利爪。"
+      "zh": "每当你[b]背刺[/b]时，获得 +1 锯齿利爪。"
     },
     "kind": "neck",
     "rarity": "uncommon",
@@ -24277,7 +24277,7 @@
     "description": "Your basic attack inflicts +1 Bleed. Take an extra turn at the end of the round for each Bleeding enemy. You are uncontrollable during these turns.",
     "description_texts": {
       "en": "Your basic attack inflicts +1 Bleed. Take an extra turn at the end of the round for each Bleeding enemy. You are uncontrollable during these turns.",
-      "zh": "你的基础攻击施加 +1 [img:bleed] 流血。\n回合结束时，每有一个[b]流血[/b]的敌人，\n你便获得一个额外回合。\n在这些回合中你[b]不受控制[/b]。"
+      "zh": "你的基础攻击施加 +1 流血。\n回合结束时，每有一个[b]流血[/b]的敌人，\n你便获得一个额外回合。\n在这些回合中你[b]不受控制[/b]。"
     },
     "kind": "neck",
     "rarity": "rare",
@@ -24304,7 +24304,7 @@
     "description": "+10% Dodge Chance.",
     "description_texts": {
       "en": "+10% Dodge Chance.",
-      "zh": "+10% [img:dodge] 闪避率。"
+      "zh": "+10% 闪避率。"
     },
     "kind": "neck",
     "rarity": "common",
@@ -24341,7 +24341,7 @@
     "description": "+1 Brace.",
     "description_texts": {
       "en": "+1 Brace.",
-      "zh": "+1 [img:brace] 护甲。"
+      "zh": "+1 护甲。"
     },
     "kind": "neck",
     "rarity": "common",
@@ -24614,7 +24614,7 @@
     "description": "+1 Health Regen.\nBecome wet at the start of your turn.",
     "description_texts": {
       "en": "+1 Health Regen.\nBecome wet at the start of your turn.",
-      "zh": "+1 [img:health] 战后生命恢复。\n在你的回合开始时变[b]潮湿[/b]。"
+      "zh": "+1 战后生命恢复。\n在你的回合开始时变[b]潮湿[/b]。"
     },
     "kind": "neck",
     "rarity": "common",
@@ -24886,7 +24886,7 @@
     "description": "+6 Bleed Thorns, +6 Thorns, +6 Bleed.",
     "description_texts": {
       "en": "+6 Bleed Thorns, +6 Thorns, +6 Bleed.",
-      "zh": "+6 [img:bleed_thorns] 流血荆棘，+6 [img:thorns] 荆棘，\n+6 [img:bleed] 流血。"
+      "zh": "+6 流血荆棘，+6 荆棘，\n+6 流血。"
     },
     "kind": "neck",
     "rarity": "very_rare",
@@ -25162,7 +25162,7 @@
     "description": "+5 Health Regen.\nWhen you're downed, revive at the end of the round.",
     "description_texts": {
       "en": "+5 Health Regen.\nWhen you're downed, revive at the end of the round.",
-      "zh": "+5 [img:health] 战后生命恢复。\n当你[b]倒地[/b]时，在回合结束时复活。"
+      "zh": "+5 战后生命恢复。\n当你[b]倒地[/b]时，在回合结束时复活。"
     },
     "kind": "neck",
     "rarity": "very_rare",
@@ -25187,7 +25187,7 @@
     "description": "+1 Health Regen. 25% chance to spawn a Charmed Clot when you take damage.",
     "description_texts": {
       "en": "+1 Health Regen. 25% chance to spawn a Charmed Clot when you take damage.",
-      "zh": "+1 [img:health] 战后生命恢复。\n当你受到伤害时，\n有 25% 几率生成一个魅惑凝块。"
+      "zh": "+1 战后生命恢复。\n当你受到伤害时，\n有 25% 几率生成一个魅惑凝块。"
     },
     "kind": "neck",
     "rarity": "rare",
@@ -25224,7 +25224,7 @@
     "description": "Start with +1 bonus attack. Collect all adjacent pickups when you end your turn.",
     "description_texts": {
       "en": "Start with +1 bonus attack. Collect all adjacent pickups when you end your turn.",
-      "zh": "开始时拥有 +1 [img:extra_attack] 额外攻击。\n当你结束回合时，收集所有相邻的掉落物。"
+      "zh": "开始时拥有 +1 额外攻击。\n当你结束回合时，收集所有相邻的掉落物。"
     },
     "kind": "neck",
     "rarity": "rare",
@@ -29679,7 +29679,7 @@
     "item_name": "Natural 20",
     "item_name_texts": {
       "en": "Natural 20",
-      "zh": "自然20"
+      "zh": "自然 20"
     },
     "description": "Your weapons have +50% Crit Chance.\nYour basic attack has +10% Crit Chance.",
     "description_texts": {
@@ -30424,7 +30424,7 @@
     "item_name": "AAA Battery",
     "item_name_texts": {
       "en": "AAA Battery",
-      "zh": "7号电池"
+      "zh": "7 号电池"
     },
     "description": "Every time you cast 3 spells, gain +3 Charge.",
     "description_texts": {
@@ -34539,7 +34539,7 @@
     "description": "Use: A melee attack with +1 reach that penetrates through units.",
     "description_texts": {
       "en": "Use: A melee attack with +1 reach that penetrates through units.",
-      "zh": "使用：+1 延伸并穿透单位的近战攻击。"
+      "zh": "使用：+1 近战范围并穿透单位的近战攻击。"
     },
     "kind": "weapon",
     "rarity": "uncommon",
@@ -35361,7 +35361,7 @@
     "description": "Use: A melee attack with +1 reach.",
     "description_texts": {
       "en": "Use: A melee attack with +1 reach.",
-      "zh": "使用：一次近战攻击，+1 延伸。"
+      "zh": "使用：一次近战攻击，+1 近战范围。"
     },
     "kind": "weapon",
     "rarity": "common",
@@ -35935,7 +35935,7 @@
     "description": "Use: A melee attack with +2 reach.",
     "description_texts": {
       "en": "Use: A melee attack with +2 reach.",
-      "zh": "使用：近战攻击，+2 延伸。"
+      "zh": "使用：近战攻击，+2 近战范围。"
     },
     "kind": "weapon",
     "rarity": "uncommon",
@@ -35978,7 +35978,7 @@
     "description": "Use: A melee attack with +3 reach.",
     "description_texts": {
       "en": "Use: A melee attack with +3 reach.",
-      "zh": "使用：近战攻击，+3 延伸。"
+      "zh": "使用：近战攻击，+3 近战范围。"
     },
     "kind": "weapon",
     "rarity": "rare",
@@ -36366,7 +36366,7 @@
     "item_name": ".22 Rifle",
     "item_name_texts": {
       "en": ".22 Rifle",
-      "zh": ".22步枪"
+      "zh": ".22 步枪"
     },
     "description": "Use: Fire a shot anywhere within your line of sight.",
     "description_texts": {
@@ -40413,7 +40413,7 @@
     "description": "Use: A melee attack with +1 reach that penetrates through units.\nRELOAD: Collect a blessing pickup or get hit by a Holy Element spell.",
     "description_texts": {
       "en": "Use: A melee attack with +1 reach that penetrates through units.\nRELOAD: Collect a blessing pickup or get hit by a Holy Element spell.",
-      "zh": "使用：一次近战攻击，\n+1 延伸并穿透单位。\n装填：\n收集一个祝福掉落物或被神圣元素法术击中。"
+      "zh": "使用：一次近战攻击，\n+1 近战范围并穿透单位。\n装填：\n收集一个祝福掉落物或被神圣元素法术击中。"
     },
     "kind": "weapon",
     "rarity": "very_rare",
@@ -40780,7 +40780,7 @@
     "description": "+1 Health Regen.\nUse: A melee attack with +1 reach.",
     "description_texts": {
       "en": "+1 Health Regen.\nUse: A melee attack with +1 reach.",
-      "zh": "+1 生命恢复。\n使用：近战攻击，+1 延伸。"
+      "zh": "+1 生命恢复。\n使用：近战攻击，+1 近战范围。"
     },
     "kind": "weapon",
     "rarity": "very_rare",
@@ -41394,7 +41394,7 @@
     "item_name": "Stacy 100",
     "item_name_texts": {
       "en": "Stacy 100",
-      "zh": "斯泰西100"
+      "zh": "斯泰西 100"
     },
     "description": "Use: Spawn a Stacy.\n[s:.7](Usable once per battle.)[/s]",
     "description_texts": {
@@ -41580,7 +41580,7 @@
     "description": "Use: Force a unit to attack one of its enemies.\n[s:.7](Usable once per battle.)[/s]",
     "description_texts": {
       "en": "Use: Force a unit to attack one of its enemies.\n[s:.7](Usable once per battle.)[/s]",
-      "zh": "使用：强迫一个单位\n攻击其一名敌人。\n[s:.7](每场战斗限用一次。)[/s]"
+      "zh": "使用：强迫一个单位\n攻击它的一名敌人。\n[s:.7](每场战斗限用一次。)[/s]"
     },
     "kind": "weapon",
     "rarity": "rare",

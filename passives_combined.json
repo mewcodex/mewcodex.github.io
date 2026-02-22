@@ -1185,7 +1185,7 @@
       "passive_code": "ETank",
       "passive_name_texts": {
         "en": "E-Tank",
-        "zh": "E\u7f50"
+        "zh": "E \u7f50"
       },
       "description": "Start each battle with +20 unfilled max health.",
       "description_2": "Start each battle with +50 unfilled max health.",
@@ -3027,7 +3027,7 @@
       "passive_code": "OneEighty",
       "passive_name_texts": {
         "en": "180",
-        "zh": "180\u5ea6"
+        "zh": "180 \u5ea6"
       },
       "description": "When you use your basic attack, turn around and use it again.",
       "description_2": "When you use your basic attack, turn around and use it again.\r\nYour basic attack inflicts Confusion 1.",
@@ -5309,7 +5309,7 @@
       "description_2": null,
       "description_texts": {
         "en": "You are immune to buffs and debuffs. When you die, you don't leave a corpse.",
-        "zh": "\u4f60\u514d\u75ab[buffs]\u548c\u51cf\u76ca\u6548\u679c\u3002\r\n\u5f53\u4f60\u6b7b\u4ea1\u65f6\uff0c\u4e0d\u4f1a\u7559\u4e0b\u5c38\u4f53\u3002"
+        "zh": "\u4f60\u514d\u75ab\u589e\u76ca\u548c\u51cf\u76ca\u6548\u679c\u3002\r\n\u5f53\u4f60\u6b7b\u4ea1\u65f6\uff0c\u4e0d\u4f1a\u7559\u4e0b\u5c38\u4f53\u3002"
       },
       "description2_texts": {},
       "has_upgrade": false,
@@ -6057,7 +6057,7 @@
       "description_2": null,
       "description_texts": {
         "en": "You can't fall asleep.\r\nYou can move an extra time each turn. Exhaustion sets in on round 3.",
-        "zh": "\u4f60\u65e0\u6cd5\u5165\u7761\u3002\r\n\u6bcf\u56de\u5408\u53ef\u4ee5\u989d\u5916\u79fb\u52a8\u4e00\u6b21\u3002\r\n\u7b2c 3 \u56de\u5408\u51fa\u73b0[Exhaustion]\u3002"
+        "zh": "\u4f60\u65e0\u6cd5\u5165\u7761\u3002\r\n\u6bcf\u56de\u5408\u53ef\u4ee5\u989d\u5916\u79fb\u52a8\u4e00\u6b21\u3002\r\n\u7b2c 3 \u56de\u5408\u51fa\u73b0\u75b2\u52b3\u3002"
       },
       "description2_texts": {},
       "has_upgrade": false,
@@ -6264,7 +6264,7 @@
       "description_2": null,
       "description_texts": {
         "en": "You are permanently immobile.",
-        "zh": "\u4f60\u6c38\u4e45[Immobile]\u3002"
+        "zh": "\u4f60\u6c38\u4e45\u5b9a\u8eab\u3002"
       },
       "description2_texts": {},
       "has_upgrade": false,
@@ -11496,11 +11496,11 @@
       "description_2": "+1 Range and +1 Reach.",
       "description_texts": {
         "en": "+1 Range and +1 Reach.",
-        "zh": "+1 \u5c04\u7a0b\u548c +1 \u79fb\u52a8\u8ddd\u79bb\u3002"
+        "zh": "+1 \u5c04\u7a0b\u548c +1 \u8fd1\u6218\u8303\u56f4\u3002"
       },
       "description2_texts": {
         "en": "+1 Range and +1 Reach.",
-        "zh": "+1 \u5c04\u7a0b\u548c +1 \u79fb\u52a8\u8ddd\u79bb\u3002"
+        "zh": "+1 \u5c04\u7a0b\u548c +1 \u8fd1\u6218\u8303\u56f4\u3002"
       },
       "has_upgrade": true,
       "passive_class": "Monk",
@@ -12223,11 +12223,11 @@
       "description_2": "Destroy a random enemy at the start of each battle. If this hits a boss, deal 50 damage instead.",
       "description_texts": {
         "en": "Destroy a random non-boss enemy at the start of each battle.",
-        "zh": "\u6bcf\u573a\u6218\u6597\u5f00\u59cb\u65f6\r\n\u6d88\u706d\u4e00\u4e2a\u968f\u673a\u975eBoss\u654c\u4eba\u3002"
+        "zh": "\u6bcf\u573a\u6218\u6597\u5f00\u59cb\u65f6\r\n\u6d88\u706d\u4e00\u4e2a\u968f\u673a\u975e Boss \u654c\u4eba\u3002"
       },
       "description2_texts": {
         "en": "Destroy a random enemy at the start of each battle. If this hits a boss, deal 50 damage instead.",
-        "zh": "\u6bcf\u573a\u6218\u6597\u5f00\u59cb\u65f6\r\n\u6d88\u706d\u4e00\u4e2a\u968f\u673a\u654c\u4eba\u3002\r\n\u5982\u679c\u547d\u4e2dBoss\uff0c\r\n\u6539\u4e3a\u9020\u6210 50 \u70b9\u4f24\u5bb3\u3002"
+        "zh": "\u6bcf\u573a\u6218\u6597\u5f00\u59cb\u65f6\r\n\u6d88\u706d\u4e00\u4e2a\u968f\u673a\u654c\u4eba\u3002\r\n\u5982\u679c\u547d\u4e2d Boss\uff0c\r\n\u6539\u4e3a\u9020\u6210 50 \u70b9\u4f24\u5bb3\u3002"
       },
       "has_upgrade": true,
       "passive_class": "Necromancer",

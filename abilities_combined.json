@@ -2841,7 +2841,7 @@
       "description_2": null,
       "description_texts": {
         "en": "{he} go",
-        "zh": "{he} 移动"
+        "zh": "使{he}移动"
       },
       "description2_texts": {},
       "ability_class": null,
@@ -2891,7 +2891,7 @@
       "description_2": null,
       "description_texts": {
         "en": "{he} jump",
-        "zh": "{he} 跳"
+        "zh": "使{he}跳跃"
       },
       "description2_texts": {},
       "ability_class": null,
@@ -2941,7 +2941,7 @@
       "description_2": null,
       "description_texts": {
         "en": "{he} teleport",
-        "zh": "{he} 传送"
+        "zh": "使{he}传送"
       },
       "description2_texts": {},
       "ability_class": null,
@@ -2991,7 +2991,7 @@
       "description_2": null,
       "description_texts": {
         "en": "{he} dig",
-        "zh": "{he} 挖"
+        "zh": "使{he}挖掘"
       },
       "description2_texts": {},
       "ability_class": null,
@@ -3041,7 +3041,7 @@
       "description_2": null,
       "description_texts": {
         "en": "{he} teleport",
-        "zh": "{he} 传送"
+        "zh": "使{he}传送"
       },
       "description2_texts": {},
       "ability_class": null,
@@ -3091,7 +3091,7 @@
       "description_2": null,
       "description_texts": {
         "en": "{he} swap",
-        "zh": "{he} 交换"
+        "zh": "使{he}交换"
       },
       "description2_texts": {},
       "ability_class": null,
@@ -3141,7 +3141,7 @@
       "description_2": null,
       "description_texts": {
         "en": "{he} go",
-        "zh": "{he} 移动"
+        "zh": "使{he}移动"
       },
       "description2_texts": {},
       "ability_class": null,
@@ -3191,7 +3191,7 @@
       "description_2": null,
       "description_texts": {
         "en": "{he} go",
-        "zh": "{he} 移动"
+        "zh": "使{he}移动"
       },
       "description2_texts": {},
       "ability_class": null,
@@ -3241,7 +3241,7 @@
       "description_2": null,
       "description_texts": {
         "en": "{he} go",
-        "zh": "{he}移动"
+        "zh": "使{he}移动"
       },
       "description2_texts": {},
       "ability_class": null,
@@ -3291,7 +3291,7 @@
       "description_2": null,
       "description_texts": {
         "en": "{he} teleport",
-        "zh": "{he}传送"
+        "zh": "使{he}传送"
       },
       "description2_texts": {},
       "ability_class": null,
@@ -3341,7 +3341,7 @@
       "description_2": null,
       "description_texts": {
         "en": "{he} go",
-        "zh": "{he}移动"
+        "zh": "使{he}移动"
       },
       "description2_texts": {},
       "ability_class": null,
@@ -5299,11 +5299,11 @@
       "description_2": "Eat a unit within range 2 and take damage equal to half of that unit's remaining HP. You can't swallow bosses or large units.",
       "description_texts": {
         "en": "Eat a unit and take damage equal to that unit's remaining HP. You can't swallow bosses or large units.  ",
-        "zh": "吃掉一个单位，\r\n并承受等于该单位\r\n剩余生命值的伤害。\r\n你无法吞咽Boss或大型单位。"
+        "zh": "吃掉一个单位，\r\n并承受等于该单位\r\n剩余生命值的伤害。\r\n你无法吞咽 Boss 或大型单位。"
       },
       "description2_texts": {
         "en": "Eat a unit within range 2 and take damage equal to half of that unit's remaining HP. You can't swallow bosses or large units.",
-        "zh": "吃掉射程 2 内的一个单位，\r\n并承受等于该单位\r\n剩余生命值一半的伤害。\r\n你无法吞咽Boss或大型单位。"
+        "zh": "吃掉射程 2 内的一个单位，\r\n并承受等于该单位\r\n剩余生命值一半的伤害。\r\n你无法吞咽 Boss 或大型单位。"
       },
       "ability_class": "Butcher",
       "ability_pools": [
@@ -25934,7 +25934,7 @@
       "description_2": "A huge punch that inflicts Bruise and Stun, and breaks your paw... (You get -1 [img:str] permanently.)",
       "description_texts": {
         "en": "A huge punch that breaks your paw... (You get -1 [img:str] permanently.)",
-        "zh": "一次可能会打断你爪子的重拳.\r\n.. (你永久获得 -1 [img:str]。\r\n)"
+        "zh": "一次可能会打断你爪子的重拳。\r\n.. (你永久获得 -1 [img:str]。\r\n)"
       },
       "description2_texts": {
         "en": "A huge punch that inflicts Bruise and Stun, and breaks your paw... (You get -1 [img:str] permanently.)",
@@ -29598,11 +29598,11 @@
       "description_2": "Shoot four penetrating projectiles in an X shape.",
       "description_texts": {
         "en": "Shoot four projectiles in an X shape.",
-        "zh": "呈X形发射四枚投射物。"
+        "zh": "呈 X 形发射四枚投射物。"
       },
       "description2_texts": {
         "en": "Shoot four penetrating projectiles in an X shape.",
-        "zh": "呈X形发射四枚穿透性投射物。"
+        "zh": "呈 X 形发射四枚穿透性投射物。"
       },
       "ability_class": "Hunter",
       "ability_pools": [
@@ -30120,11 +30120,11 @@
       "description_2": "Give a unit +20 range and reach until the end of their next turn.",
       "description_texts": {
         "en": "Give a unit +3 range and reach until the end of their next turn.",
-        "zh": "使一个单位获得 +3 射程和延伸，\r\n直到其下一回合结束。"
+        "zh": "使一个单位获得 +3 射程和近战范围，\r\n直到其下一回合结束。"
       },
       "description2_texts": {
         "en": "Give a unit +20 range and reach until the end of their next turn.",
-        "zh": "使一个单位获得 +20 射程和延伸，\r\n直到其下一回合结束。"
+        "zh": "使一个单位获得 +20 射程和近战范围，\r\n直到其下一回合结束。"
       },
       "ability_class": "Hunter",
       "ability_pools": [
@@ -51292,7 +51292,7 @@
       },
       "description2_texts": {
         "en": "Inflict Charm 2 on an adjacent unit. Non-boss enemies with less than 25% health join your party.",
-        "zh": "对一名相邻单位施加 2 层魅惑。\r\n生命值低于 25% 的\r\n非Boss敌人将加入你的队伍。"
+        "zh": "对一名相邻单位施加 2 层魅惑。\r\n生命值低于 25% 的\r\n非 Boss 敌人将加入你的队伍。"
       },
       "ability_class": "Medic",
       "ability_pools": [
@@ -57888,11 +57888,11 @@
       "description_2": "Summon a half-sized copy of yourself with half your stats. It's AI-controlled and CAN use spells.",
       "description_texts": {
         "en": "Summon a half-sized copy of yourself with half your stats. It's AI-controlled and can't use spells.",
-        "zh": "召唤一个拥有你一半属性\r\n的半身复制体。\r\n它由AI控制且无法使用法术。"
+        "zh": "召唤一个拥有你一半属性\r\n的半身复制体。\r\n它由 AI 控制且无法使用法术。"
       },
       "description2_texts": {
         "en": "Summon a half-sized copy of yourself with half your stats. It's AI-controlled and CAN use spells.",
-        "zh": "召唤一个拥有你一半属性\r\n的半身复制体。\r\n它由AI控制且可以使用法术。"
+        "zh": "召唤一个拥有你一半属性\r\n的半身复制体。\r\n它由 AI 控制且可以使用法术。"
       },
       "ability_class": "Monk",
       "ability_pools": [
@@ -62319,7 +62319,7 @@
       "ability_code_upgraded": "AlterDNA2",
       "ability_name_texts": {
         "en": "Alter DNA",
-        "zh": "修改DNA"
+        "zh": "修改 DNA"
       },
       "ability_name_texts_upgraded": {},
       "description": "Spend all your mana. Give a unit within your line of sight a random stat up for every 3 mana spent (rounded up). Give enemies random stat downs instead.",
@@ -62889,7 +62889,7 @@
       },
       "description2_texts": {
         "en": "Randomize the positions of all units. Enemies get Confused. Non-boss enemies have a 10% chance to be erased from existence.",
-        "zh": "随机打乱所有单位的位置。\r\n敌人会陷入混乱。\r\n非Boss敌人有 10% 的几率\r\n被直接抹除。"
+        "zh": "随机打乱所有单位的位置。\r\n敌人会陷入混乱。\r\n非 Boss 敌人有 10% 的几率\r\n被直接抹除。"
       },
       "ability_class": "Psychic",
       "ability_pools": [
@@ -63225,11 +63225,11 @@
       "description_2": "Vaporize everything on a tile within your line of sight. Against a boss, this deals massive damage and inflicts Stun instead.",
       "description_texts": {
         "en": "Vaporize everything on a tile within your line of sight. Against a boss, this deals damage and inflicts Stun instead.",
-        "zh": "蒸发视线内某地块上的所有东西。\r\n对Boss使用时，\r\n改为造成伤害并施加晕眩。"
+        "zh": "蒸发视线内某地块上的所有东西。\r\n对 Boss 使用时，\r\n改为造成伤害并施加晕眩。"
       },
       "description2_texts": {
         "en": "Vaporize everything on a tile within your line of sight. Against a boss, this deals massive damage and inflicts Stun instead.",
-        "zh": "蒸发视线内某地块上的所有东西。\r\n对Boss使用时，\r\n改为造成巨额伤害并施加晕眩。"
+        "zh": "蒸发视线内某地块上的所有东西。\r\n对 Boss 使用时，\r\n改为造成巨额伤害并施加晕眩。"
       },
       "ability_class": "Psychic",
       "ability_pools": [
@@ -67321,7 +67321,7 @@
       "ability_code_upgraded": null,
       "ability_name_texts": {
         "en": "X Lightning",
-        "zh": "X形闪电"
+        "zh": "X 形闪电"
       },
       "ability_name_texts_upgraded": {},
       "description": null,
@@ -67595,7 +67595,7 @@
       "ability_code_upgraded": null,
       "ability_name_texts": {
         "en": "MC Flamethrower",
-        "zh": "MC喷火器"
+        "zh": "MC 喷火器"
       },
       "ability_name_texts_upgraded": {},
       "description": null,
@@ -67646,7 +67646,7 @@
       "ability_code_upgraded": null,
       "ability_name_texts": {
         "en": "MC Blizz",
-        "zh": "MC暴雪"
+        "zh": "MC 暴雪"
       },
       "ability_name_texts_upgraded": {},
       "description": null,
@@ -67697,7 +67697,7 @@
       "ability_code_upgraded": null,
       "ability_name_texts": {
         "en": "MC Thunder",
-        "zh": "MC雷霆"
+        "zh": "MC 雷霆"
       },
       "ability_name_texts_upgraded": {},
       "description": null,
@@ -102190,11 +102190,11 @@
       "description_2": "{he} swap",
       "description_texts": {
         "en": "{he} swap",
-        "zh": "{he} 交换"
+        "zh": "使{he}交换"
       },
       "description2_texts": {
         "en": "{he} swap",
-        "zh": "{he} 交换"
+        "zh": "使{he}交换"
       },
       "ability_class": null,
       "ability_pools": [],
@@ -103550,7 +103550,7 @@
       "ability_code_upgraded": "CatapultJump2",
       "ability_name_texts": {
         "en": "Cat-A-Pult!",
-        "zh": "猫体投射!"
+        "zh": "猫体投射！"
       },
       "ability_name_texts_upgraded": {},
       "description": "Get flung to a tile and deal damage to anything you land on.\nThis doesn't use up your movement action.",
@@ -108757,11 +108757,11 @@
       "description_2": "Loot 1-3 coins from a body... and possibly something else?\n[s:.7](This might not destroy the body)[/s]\n[s:.7](Your chance of finding \"something else\" is significantly increased.)[/s]",
       "description_texts": {
         "en": "Loot 1-3 coins from a body... and possibly something else?\n[s:.7](This might destroy the body)[/s]",
-        "zh": "从尸体上搜刮 1-3 枚金币.\r\n.. 可能还有别的东西？\r\n[s:.7](这可能会摧毁尸体)[/s]"
+        "zh": "从尸体上搜刮 1-3 枚金币...\r\n可能还有别的东西？\r\n[s:.7](这可能会摧毁尸体)[/s]"
       },
       "description2_texts": {
         "en": "Loot 1-3 coins from a body... and possibly something else?\n[s:.7](This might not destroy the body)[/s]\n[s:.7](Your chance of finding \"something else\" is significantly increased.)[/s]",
-        "zh": "从尸体上搜刮 1-3 枚金币.\r\n.. 可能还有别的东西？\r\n[s:.7](这可能不会摧毁尸体)[/s]\r\n[s:.7](你找到“别的东西”的\r\n几率显著增加。)[/s]"
+        "zh": "从尸体上搜刮 1-3 枚金币...\r\n可能还有别的东西？\r\n[s:.7](这可能不会摧毁尸体)[/s]\r\n[s:.7](你找到“别的东西”的\r\n几率显著增加。)[/s]"
       },
       "ability_class": "Thief",
       "ability_pools": [
