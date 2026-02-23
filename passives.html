@@ -235,12 +235,22 @@
             display: flex;
             gap: 20px;
             border-bottom: 1px solid #ddd;
+            flex-wrap: wrap;
+            align-items: center;
         }
 
         .stat-item {
             display: flex;
             gap: 10px;
             align-items: center;
+        }
+
+        .stats-select {
+            padding: 6px 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 0.95em;
+            background: white;
         }
 
         .stat-label {
@@ -600,6 +610,39 @@
             width: 120px;
         }
 
+        .pool-cell {
+            min-width: 160px;
+        }
+
+        .passive-tags {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin-top: 6px;
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            padding: 3px 8px;
+            font-size: 0.8em;
+            color: #666;
+            white-space: nowrap;
+        }
+
+        .tag.pool-tag {
+            cursor: pointer;
+        }
+
+        .tag.pool-tag:hover {
+            background: #e6e6e6;
+            border-color: #cfcfcf;
+        }
+
         .passive-class {
             display: inline-block;
             padding: 6px 12px;
@@ -893,6 +936,12 @@
                 <span class="stat-label" id="showingLabel">Showing:</span>
                 <span class="stat-value" id="showingCount">0</span>
             </div>
+            <div class="stat-item">
+                <span class="stat-label" id="poolFilterLabel">Pool:</span>
+                <select id="poolFilter" class="stats-select">
+                    <option value="">Select Pool</option>
+                </select>
+            </div>
         </div>
 
         <div class="table-wrapper">
@@ -902,6 +951,7 @@
                         <th id="iconHeader" style="width: 60px;">Icon</th>
                         <th id="nameHeader" style="width: 150px;">Passive Name</th>
                         <th id="descHeader">Description</th>
+                        <th id="poolHeader" style="width: 180px;">Pools</th>
                         <th id="classHeader" class="sortable" style="width: 120px;" onclick="sortBy('class')">Class<span
                                 class="sort-indicator"></span></th>
                         <th id="frameHeader" style="width: 80px;" hidden>Frame</th>
@@ -909,7 +959,7 @@
                 </thead>
                 <tbody id="tableBody">
                     <tr>
-                        <td colspan="5" class="no-results" id="loadingMessage">Loading passives...</td>
+                        <td colspan="6" class="no-results" id="loadingMessage">Loading passives...</td>
                     </tr>
                 </tbody>
             </table>
@@ -958,12 +1008,15 @@
                 allClasses: 'All Classes',
                 totalPassives: 'Total Passives:',
                 showing: 'Showing:',
+                poolFilterLabel: 'Pool:',
+                selectPool: 'Select Pool',
                 sourceCommentsLabel: 'Source Comments:',
                 editorNotesLabel: 'Editor Notes:',
                 unlockRequirementsLabel: 'Unlock Requirements:',
                 iconHeader: 'Icon',
                 nameHeader: 'Passive Name',
                 descHeader: 'Description',
+                poolHeader: 'Pools',
                 classHeader: 'Class',
                 frameHeader: 'Frame',
                 loading: 'Loading passives...',
@@ -982,12 +1035,15 @@
                 allClasses: '全部职业',
                 totalPassives: '被动总数：',
                 showing: '显示：',
+                poolFilterLabel: '池：',
+                selectPool: '选择池',
                 sourceCommentsLabel: '源码注释：',
                 editorNotesLabel: '编辑注释：',
                 unlockRequirementsLabel: '解锁条件：',
                 iconHeader: '图标',
                 nameHeader: '被动名称',
                 descHeader: '描述',
+                poolHeader: '池',
                 classHeader: '职业',
                 frameHeader: '帧',
                 loading: '正在加载被动...',
@@ -1039,6 +1095,42 @@
             }
         };
 
+        const POOL_LABELS = {
+            en: {
+                all_disorders: 'Disorders',
+                birth_defects: 'Disorders/Birth Defects',
+                mental_disorders: 'Disorders/Mental Disorders',
+                physical_disorders: 'Disorders/Physical Disorders',
+                diseases: 'Disorders/Diseases',
+                magic_disorders: 'Disorders/Magic Disorders',
+                forbidden_spell_consequences: 'Disorders/Forbidden Spell Consequences',
+                stomach_disorders: 'Disorders/Stomach Disorders',
+                low_hygeine_in_house_disorders: 'Disorders/Low Hygiene Disorders',
+            },
+            zh: {
+                all_disorders: '病症',
+                birth_defects: '病症/先天缺陷',
+                mental_disorders: '病症/精神病症',
+                physical_disorders: '病症/身体病症',
+                diseases: '病症/疾病',
+                magic_disorders: '病症/魔法病症',
+                forbidden_spell_consequences: '病症/禁忌法术后果',
+                stomach_disorders: '病症/胃部病症',
+                low_hygeine_in_house_disorders: '病症/低卫生病症',
+            }
+        };
+
+        const POOL_TYPE_LABELS = {
+            en: {
+                passive_pool: 'Passive Pool',
+                tutorial_levelup_passive_pool: 'Tutorial Levelup Pool',
+            },
+            zh: {
+                passive_pool: '被动池',
+                tutorial_levelup_passive_pool: '教程升级池',
+            }
+        };
+
         const t = createTranslator(UI_TEXT);
 
 
@@ -1061,9 +1153,14 @@
             document.getElementById('showHiddenLabel').textContent = t('showHidden');
             document.getElementById('totalLabel').textContent = t('totalPassives');
             document.getElementById('showingLabel').textContent = t('showing');
+            const poolFilterLabel = document.getElementById('poolFilterLabel');
+            if (poolFilterLabel) {
+                poolFilterLabel.textContent = t('poolFilterLabel');
+            }
             document.getElementById('iconHeader').textContent = t('iconHeader');
             document.getElementById('nameHeader').textContent = t('nameHeader');
             document.getElementById('descHeader').textContent = t('descHeader');
+            document.getElementById('poolHeader').textContent = t('poolHeader');
             const classHeader = document.getElementById('classHeader');
             classHeader.innerHTML = t('classHeader') + '<span class="sort-indicator"></span>';
             document.getElementById('frameHeader').textContent = t('frameHeader');
@@ -1083,6 +1180,9 @@
             const classFilter = document.getElementById('classFilter');
             const selectedClass = classFilter ? classFilter.value : '';
             populateClassFilter(selectedClass);
+            const poolFilter = document.getElementById('poolFilter');
+            const selectedPool = poolFilter ? poolFilter.value : '';
+            populatePoolFilter(selectedPool);
 
             const loadingMessage = document.getElementById('loadingMessage');
             if (loadingMessage) {
@@ -1118,7 +1218,7 @@
             } catch (error) {
                 console.error('Error loading passives:', error);
                 const errorMsg = `
-                    <tr><td colspan="5" class="no-results">
+                    <tr><td colspan="6" class="no-results">
                         <p style="margin-bottom: 10px;"><strong>${escapeHtml(t('errorLoading'))}</strong> ${escapeHtml(error.message)}</p>
                         <p style="font-size: 0.9em; color: #666; line-height: 1.5;">
                             <strong>${escapeHtml(t('solution'))}</strong><br>
@@ -1175,6 +1275,106 @@
             }
             const key = className.toLowerCase();
             return CLASS_LABELS[currentLanguage]?.[key] || CLASS_LABELS.en[key] || className;
+        }
+
+        function localizePoolTag(tag) {
+            if (!tag) {
+                return '';
+            }
+            const direct = POOL_LABELS[currentLanguage]?.[tag] || POOL_LABELS.en[tag];
+            if (direct) {
+                return direct;
+            }
+            const parts = String(tag).split('.');
+            if (parts.length >= 2) {
+                const className = parts[0];
+                const section = parts[1];
+                const typeLabel = POOL_TYPE_LABELS[currentLanguage]?.[section] || POOL_TYPE_LABELS.en[section];
+                if (typeLabel) {
+                    return `${getClassLabel(className)}/${typeLabel}`;
+                }
+                return `${getClassLabel(className)}/${section}`;
+            }
+            if (currentLanguage === 'zh') {
+                return tag;
+            }
+            return String(tag)
+                .replace(/_/g, ' ')
+                .replace(/\b\w/g, match => match.toUpperCase());
+        }
+
+        function populatePoolFilter(selectedValue = '') {
+            const poolTags = new Map();
+            allPassives.forEach(passive => {
+                const tags = Array.isArray(passive.passive_pools)
+                    ? passive.passive_pools
+                    : [];
+                tags.forEach(tag => {
+                    if (!poolTags.has(tag)) {
+                        poolTags.set(tag, localizePoolTag(tag));
+                    }
+                });
+            });
+
+            const select = document.getElementById('poolFilter');
+            if (!select) {
+                return;
+            }
+            select.innerHTML = '';
+
+            const placeholder = document.createElement('option');
+            placeholder.value = '';
+            placeholder.textContent = t('selectPool');
+            select.appendChild(placeholder);
+
+            const sorted = Array.from(poolTags.entries())
+                .map(([tag, label]) => ({ tag, label }))
+                .sort((a, b) => a.label.localeCompare(b.label, currentLanguage));
+
+            sorted.forEach(({ tag, label }) => {
+                const option = document.createElement('option');
+                option.value = tag;
+                option.textContent = label || tag;
+                select.appendChild(option);
+            });
+
+            select.value = selectedValue;
+        }
+
+        function handlePoolSelection() {
+            const select = document.getElementById('poolFilter');
+            if (!select) {
+                return;
+            }
+            const selected = select.value;
+            if (!selected) {
+                return;
+            }
+            searchByPool(selected);
+            select.value = '';
+        }
+
+        function parseHashQuery(raw) {
+            if (!raw || !raw.startsWith('#')) {
+                return '';
+            }
+            const trimmed = raw.slice(1).trim();
+            if (trimmed.startsWith('(')) {
+                const end = trimmed.indexOf(')');
+                if (end > 1) {
+                    return trimmed.slice(1, end).trim();
+                }
+                return '';
+            }
+            return trimmed;
+        }
+
+        function searchByPool(tag) {
+            const searchInput = document.getElementById('searchInput');
+            const localizedTag = localizePoolTag(tag);
+            searchInput.value = `#(${localizedTag}) `;
+            searchInput.focus();
+            filterPassives();
         }
 
         function getEditorNote(code) {
@@ -1319,7 +1519,7 @@
             });
 
             if (visiblePassives.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="5" class="no-results">${escapeHtml(t('noResults'))}</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="6" class="no-results">${escapeHtml(t('noResults'))}</td></tr>`;
                 document.getElementById('showingCount').textContent = '0';
                 return;
             }
@@ -1357,6 +1557,14 @@
                 const editorNote = getEditorNote(passive.passive_code);
                 const editorHtml = editorNote ? `<div class="source-comment">${escapeHtml(t('editorNotesLabel'))} ${escapeHtml(editorNote)}</div>` : '';
 
+                const poolTags = Array.isArray(passive.passive_pools) ? passive.passive_pools : [];
+                const poolTagsHtml = poolTags.length
+                    ? `<div class="passive-tags">${poolTags.map(tag => {
+                        const tagArg = JSON.stringify(tag);
+                        return `<span class="tag pool-tag" onclick='searchByPool(${tagArg})'>${escapeHtml(localizePoolTag(tag))}</span>`;
+                    }).join('')}</div>`
+                    : '-';
+
                 return `
                     <tr id="${makeRowId('passive', passive.passive_code || '')}" data-code="${escapeHtml(passive.passive_code || '')}">
                         <td class="image-cell">
@@ -1381,6 +1589,7 @@
                             ${notesHtml}
                             ${editorHtml}
                         </td>
+                        <td class="pool-cell">${poolTagsHtml}</td>
                         <td class="class-cell">${classLabel ? `<div class="passive-class class-${passive.passive_class.toLowerCase()}">${escapeHtml(classLabel)}</div>` : '-'}</td>
                         <td class="frame-cell" hidden>${passive.frame_number}</td>
                     </tr>
@@ -1489,11 +1698,27 @@
         function filterPassives() {
             const search = document.getElementById('searchInput').value.toLowerCase();
             const classFilter = document.getElementById('classFilter').value;
+            const poolFilter = document.getElementById('poolFilter')?.value || '';
 
             filteredPassives = allPassives.filter(passive => {
                 const localizedName = getLocalizedText(passive.passive_name_texts, passive.passive_name).toLowerCase();
                 const localizedDescription = getLocalizedText(passive.description_texts, passive.description).toLowerCase();
-                const matchesSearch = localizedName.includes(search) || localizedDescription.includes(search);
+                let matchesSearch = true;
+                if (search.startsWith('#')) {
+                    const poolSearch = parseHashQuery(search).toLowerCase();
+                    if (poolSearch) {
+                        const poolTags = Array.isArray(passive.passive_pools)
+                            ? passive.passive_pools
+                            : [];
+                        matchesSearch = poolTags.some(tag => {
+                            const rawTag = String(tag).toLowerCase();
+                            const localizedTag = localizePoolTag(tag).toLowerCase();
+                            return rawTag.includes(poolSearch) || localizedTag.includes(poolSearch);
+                        });
+                    }
+                } else {
+                    matchesSearch = localizedName.includes(search) || localizedDescription.includes(search);
+                }
 
                 let matchesClass = true;
                 if (classFilter) {
@@ -1505,7 +1730,15 @@
                     }
                 }
 
-                return matchesSearch && matchesClass;
+                let matchesPool = true;
+                if (poolFilter) {
+                    const poolTags = Array.isArray(passive.passive_pools)
+                        ? passive.passive_pools
+                        : [];
+                    matchesPool = poolTags.includes(poolFilter);
+                }
+
+                return matchesSearch && matchesClass && matchesPool;
             });
 
             displayPassives(filteredPassives);
@@ -1541,6 +1774,7 @@
         });
         document.getElementById('clearButton').addEventListener('click', clearSearch);
         document.getElementById('classFilter').addEventListener('change', filterPassives);
+        document.getElementById('poolFilter').addEventListener('change', handlePoolSelection);
         document.querySelectorAll('.lang-link').forEach(button => {
             button.addEventListener('click', () => {
                 const selectedLang = button.getAttribute('data-lang');

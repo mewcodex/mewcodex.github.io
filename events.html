@@ -507,6 +507,12 @@
             word-break: break-word;
         }
 
+        .event-conditional-prompt {
+            margin-top: 6px;
+            color: #4b453d;
+            line-height: 1.45;
+        }
+
         .event-reward-box {
             margin-top: 14px;
             border-radius: 10px;
@@ -603,6 +609,11 @@
         .event-keyword-box-bad {
             border-color: rgba(165, 73, 73, 0.7);
             background: #fbe3e3;
+        }
+
+        .event-keyword-box-positive {
+            border-color: rgba(88, 148, 101, 0.65);
+            background: #e8f6ec;
         }
 
         .event-keyword-box-neutral {
@@ -1020,6 +1031,9 @@
                 <input type="text" id="searchInput" placeholder="Search by event title or prompt...">
                 <button class="clear-button" id="clearButton" title="Clear search">×</button>
             </div>
+            <label for="typeFilter">
+                <select id="typeFilter"></select>
+            </label>
         </div>
 
         <div class="visibility-controls">
@@ -1050,11 +1064,13 @@
                             Choice<span class="sort-indicator"></span></th>
                         <th id="promptHeader">Main Prompt</th>
                         <th id="enterHeader" style="width: 140px;">Enter</th>
+                        <th id="typeHeader" class="sortable" style="width: 160px;" onclick="sortBy('type')">Type<span
+                                class="sort-indicator"></span></th>
                     </tr>
                 </thead>
                 <tbody id="tableBody">
                     <tr>
-                        <td colspan="4" class="no-results" id="loadingMessage">Loading events...</td>
+                        <td colspan="5" class="no-results" id="loadingMessage">Loading events...</td>
                     </tr>
                 </tbody>
             </table>
@@ -1120,12 +1136,14 @@
                 pageTitle: 'Mewgenics Events Viewer',
                 headerTitle: 'Mewgenics Events Viewer',
                 searchPlaceholder: 'Search by event title or prompt...',
+                typeFilterAll: 'All types',
                 totalEvents: 'Total Events:',
                 showing: 'Showing:',
                 titleHeader: 'Title',
                 choiceHeader: 'Cat Choice',
                 promptHeader: 'Main Prompt',
                 enterHeader: 'Enter',
+                typeHeader: 'Type',
                 enterButton: 'Enter',
                 loading: 'Loading events...',
                 noResults: 'No events found matching your filters.',
@@ -1138,13 +1156,20 @@
                 finishButton: 'Finish',
                 goodResult: 'Good result',
                 badResult: 'Bad result',
+                eventKeyLabel: 'Key',
+                ifLabel: 'If',
                 resultLabel: 'Result',
                 selectOutcomePrompt: 'Select the outcome for this check:',
+                conditionalPrompt: 'Does the requirement apply?',
+                conditionalMet: 'Requirement met',
+                conditionalNotMet: 'Requirement not met',
                 noResultData: 'No result data found for this option.',
                 detailsLabel: 'Details',
                 rewardLabel: 'Reward',
                 rewardOther: 'Other',
                 randomPoolLabel: 'Get a random one from the list:',
+                poolLabel: 'From Pool:',
+                restrictLabel: 'Filter Only:',
                 weightLabel: 'Received with weight {weight}:',
                 optionLabel: 'Option:',
                 promptLabel: 'Prompt:',
@@ -1162,20 +1187,25 @@
                 tokenHe: 'he',
                 tokenHeCap: 'He',
                 keywordRandomPool: 'Random pool',
-                keywordGetItemFromPool: 'Get an item',
-                keywordLoseItem: 'Lose an item',
-                keywordEventNowSameCat: 'Next event (same cat)',
+                keywordRandomPoolLuck: 'Random pool (Luck)',
+                keywordRandomChance: 'Random chance',
+                keywordConditionalReward: 'Conditional reward',
+                keywordConditionalRewardLegacy: 'Conditional reward',
+                keywordRequirements: 'Requirements',
+                keywordElse: 'Else',
             },
             zh: {
                 pageTitle: 'Mewgenics 事件图鉴',
                 headerTitle: 'Mewgenics 事件图鉴',
                 searchPlaceholder: '按事件标题或提示搜索...',
+                typeFilterAll: '所有类型',
                 totalEvents: '事件总数：',
                 showing: '显示：',
                 titleHeader: '标题',
                 choiceHeader: '猫咪选择',
                 promptHeader: '主要提示',
                 enterHeader: '进入',
+                typeHeader: '类型',
                 enterButton: '进入',
                 loading: '正在加载事件...',
                 noResults: '没有找到符合筛选条件的事件。',
@@ -1188,13 +1218,20 @@
                 finishButton: '完成',
                 goodResult: '好结果',
                 badResult: '坏结果',
+                eventKeyLabel: '代号',
+                ifLabel: '如果',
                 resultLabel: '结果',
                 selectOutcomePrompt: '请选择这次检定的结果：',
+                conditionalPrompt: '满足条件吗？',
+                conditionalMet: '满足条件',
+                conditionalNotMet: '不满足条件',
                 noResultData: '此选项没有结果数据。',
                 detailsLabel: '细节',
                 rewardLabel: '奖励',
                 rewardOther: '其他',
                 randomPoolLabel: '从列表中随机获得：',
+                poolLabel: '来自池：',
+                restrictLabel: '仅限：',
                 weightLabel: '权重 {weight}：',
                 optionLabel: '选项：',
                 promptLabel: '提示：',
@@ -1211,14 +1248,201 @@
                 tokenHim: '他',
                 tokenHe: '他',
                 tokenHeCap: '他',
-                keywordRandomPool: '随机池',
-                keywordGetItemFromPool: '获得物品',
-                keywordLoseItem: '失去物品',
-                keywordEventNowSameCat: '下一事件（同一只猫）',
+                keywordRandomPool: '随机选取一项',
+                keywordRandomPoolLuck: '随机选取一项（受幸运影响）',
+                keywordRandomChance: '随机概率',
+                keywordConditionalReward: '条件奖励',
+                keywordConditionalRewardLegacy: '条件奖励',
+                keywordRequirements: '条件',
+                keywordElse: '否则',
             }
         });
 
         const t = createTranslator(UI_TEXT);
+        let keywordMetaByKey = new Map();
+        let ignoredKeywords = new Set();
+        let nonResultKeywords = new Set();
+        let conditionalKeywords = new Set();
+        const abilityNameByCode = new Map();
+        const passiveNameByCode = new Map();
+        const itemNameByCode = new Map();
+        const itemPoolLabelByTag = new Map();
+        const EVENT_TYPE_LABELS = {
+            en: {
+                alley_events: 'Alley',
+                boneyard_events: 'Boneyard',
+                build_a_boss: 'Build a Boss',
+                bunker_events: 'Bunker',
+                caves_events: 'Caves',
+                core_events: 'Core',
+                crater_events: 'Crater',
+                dead_body: 'Dead Body',
+                debug_events: 'Debug',
+                desert_events: 'Desert',
+                future_events: 'Future',
+                iceage_events: 'Ice Age',
+                junkyard_events: 'Junkyard',
+                jurassic_events: 'Jurassic',
+                lab_events: 'Lab',
+                legacy_events: 'Legacy',
+                misc_events: 'Misc',
+                monster: 'Monster',
+                moon_events: 'Moon',
+                npc_events: 'NPC',
+                quest_events: 'Quest',
+                sequence_event_continuations: 'Sequence',
+                sewer_events: 'Sewer',
+                special_events: 'Special',
+                specific_events: 'Specific',
+                theend_events: 'The End',
+                treasure_box: 'Treasure Box',
+                wip_events: 'WIP',
+            },
+            zh: {
+                alley_events: '小巷',
+                boneyard_events: '白骨墓园',
+                build_a_boss: '打造首领',
+                bunker_events: '地堡',
+                caves_events: '洞窟',
+                core_events: '地核',
+                crater_events: '陨坑',
+                dead_body: '尸体',
+                debug_events: '调试',
+                desert_events: '沙漠',
+                future_events: '德·未来',
+                iceage_events: '冰河',
+                junkyard_events: '垃圾场',
+                jurassic_events: '侏罗纪',
+                lab_events: '实验室',
+                legacy_events: '遗产',
+                misc_events: '杂项',
+                monster: '怪物',
+                moon_events: '月球',
+                npc_events: 'NPC',
+                quest_events: '任务',
+                sequence_event_continuations: '序列',
+                sewer_events: '下水道',
+                special_events: '特殊',
+                specific_events: '特定',
+                theend_events: '终点',
+                treasure_box: '宝箱',
+                wip_events: '未完成',
+            }
+        };
+
+        async function loadKeywordMetadata() {
+            try {
+                const [rewardResponse, nonResultResponse] = await Promise.all([
+                    fetch('event_reward_keywords.json'),
+                    fetch('event_non_result_keywords.json'),
+                ]);
+                if (rewardResponse.ok) {
+                    const rewardData = await rewardResponse.json();
+                    keywordMetaByKey = new Map(
+                        (rewardData.result_keywords || []).map((entry) => [
+                            entry.key,
+                            entry,
+                        ])
+                    );
+                }
+                if (nonResultResponse.ok) {
+                    const nonResultData = await nonResultResponse.json();
+                    ignoredKeywords = new Set(
+                        (nonResultData.ignored_keywords || []).map((key) =>
+                            String(key).toLowerCase()
+                        )
+                    );
+                    nonResultKeywords = new Set(
+                        (nonResultData.non_result_keywords || []).map((key) =>
+                            String(key).toLowerCase()
+                        )
+                    );
+                    conditionalKeywords = new Set([
+                        'conditional_reward',
+                        'legacy_token_conditional_reward',
+                    ]);
+                }
+            } catch (error) {
+                console.warn('Failed to load keyword metadata:', error);
+            }
+        }
+
+        async function loadLookupData() {
+            try {
+                const [abilitiesRes, passivesRes, itemsRes] = await Promise.all([
+                    fetch('abilities_combined.json'),
+                    fetch('passives_combined.json'),
+                    fetch('items_db.json'),
+                ]);
+
+                if (abilitiesRes.ok) {
+                    const abilitiesData = await abilitiesRes.json();
+                    (abilitiesData.abilities || []).forEach((ability) => {
+                        const code = ability.ability_code || '';
+                        if (!code) {
+                            return;
+                        }
+                        abilityNameByCode.set(code, {
+                            name: ability.ability_name || code,
+                            texts: ability.ability_name_texts || {},
+                        });
+                    });
+                }
+
+                if (passivesRes.ok) {
+                    const passivesData = await passivesRes.json();
+                    (passivesData.passives || []).forEach((passive) => {
+                        const code = passive.passive_code || '';
+                        if (!code) {
+                            return;
+                        }
+                        passiveNameByCode.set(code, {
+                            name: passive.passive_name || code,
+                            texts: passive.passive_name_texts || {},
+                        });
+                    });
+                }
+
+                if (itemsRes.ok) {
+                    const itemsData = await itemsRes.json();
+                    const items = Array.isArray(itemsData)
+                        ? itemsData
+                        : (itemsData.items || itemsData);
+                    (items || []).forEach((item) => {
+                        const code = item.item_code || item.item_name || '';
+                        if (code) {
+                            itemNameByCode.set(code, {
+                                name: item.item_name || code,
+                                texts: item.item_name_texts || {},
+                            });
+                        }
+                        const pools = Array.isArray(item.item_pools)
+                            ? item.item_pools
+                            : [];
+                        pools.forEach((pool) => {
+                            if (typeof pool === 'string') {
+                                if (!itemPoolLabelByTag.has(pool)) {
+                                    itemPoolLabelByTag.set(pool, { label: pool, texts: null });
+                                }
+                                return;
+                            }
+                            if (pool && typeof pool === 'object') {
+                                const tag = pool.tag || '';
+                                if (!tag || itemPoolLabelByTag.has(tag)) {
+                                    return;
+                                }
+                                itemPoolLabelByTag.set(tag, {
+                                    label: tag,
+                                    texts: pool.tag_texts || null,
+                                });
+                            }
+                        });
+                    });
+                }
+            } catch (error) {
+                console.warn('Failed to load localization data:', error);
+            }
+        }
 
         const RARITY_LABELS = {
             en: {
@@ -1243,12 +1467,126 @@
             }
         };
 
+        const ITEM_KIND_LABELS = {
+            en: {
+                consumable: 'Consumable',
+                trinket: 'Trinket',
+                weapon: 'Weapon',
+                neck: 'Neck',
+                face: 'Face',
+                head: 'Head',
+            },
+            zh: {
+                consumable: '消耗品',
+                trinket: '饰品',
+                weapon: '武器',
+                neck: '项链',
+                face: '面部',
+                head: '头部',
+            }
+        };
+
+        const ABILITY_POOL_LABELS = {
+            en: {
+                BasicAttackPool: 'Default/Basic Attack',
+                CatAbilityPool: 'Default',
+                CatGenAbilityPool: 'Default/Generated Ability',
+                ColorlessAbilities: 'Default/Collarless Ability',
+            },
+            zh: {
+                BasicAttackPool: '默认/基础攻击',
+                CatAbilityPool: '默认',
+                CatGenAbilityPool: '默认/生成能力',
+                ColorlessAbilities: '默认/无项圈能力',
+            }
+        };
+
+        const ABILITY_GROUP_LABELS = {
+            en: {
+                attack: 'Attack',
+                defense: 'Defense',
+                move: 'Move',
+                misc: 'Misc',
+            },
+            zh: {
+                attack: '攻击',
+                defense: '防御',
+                move: '移动',
+                misc: '其他',
+            }
+        };
+
+        const PASSIVE_POOL_LABELS = {
+            en: {
+                all_disorders: 'All Disorders',
+                birth_defects: 'Birth Defects',
+                mental_disorders: 'Mental Disorders',
+                physical_disorders: 'Physical Disorders',
+                diseases: 'Diseases',
+                magic_disorders: 'Magic Disorders',
+                forbidden_spell_consequences: 'Forbidden Spell Consequences',
+                stomach_disorders: 'Stomach Disorders',
+                low_hygeine_in_house_disorders: 'Low Hygiene House Disorders',
+            },
+            zh: {
+                all_disorders: '全部病症',
+                birth_defects: '先天缺陷',
+                mental_disorders: '精神病症',
+                physical_disorders: '身体病症',
+                diseases: '疾病',
+                magic_disorders: '魔法病症',
+                forbidden_spell_consequences: '禁忌法术后果',
+                stomach_disorders: '胃部病症',
+                low_hygeine_in_house_disorders: '低卫生宅邸病症',
+            }
+        };
+
+        const CLASS_LABELS = {
+            en: {
+                fighter: 'Fighter',
+                thief: 'Thief',
+                tank: 'Tank',
+                mage: 'Mage',
+                medic: 'Medic',
+                hunter: 'Hunter',
+                necromancer: 'Necromancer',
+                butcher: 'Butcher',
+                monk: 'Monk',
+                druid: 'Druid',
+                psychic: 'Psychic',
+                tinkerer: 'Tinkerer',
+                jester: 'Jester',
+                colorless: 'Collarless',
+            },
+            zh: {
+                fighter: '战士',
+                thief: '盗贼',
+                tank: '坦克',
+                mage: '法师',
+                medic: '牧师',
+                hunter: '猎人',
+                necromancer: '死灵法师',
+                butcher: '屠夫',
+                monk: '武僧',
+                druid: '德鲁伊',
+                psychic: '灵能者',
+                tinkerer: '工匠',
+                jester: '小丑',
+                colorless: '无项圈',
+            }
+        };
+
 
         function applyUiLanguage() {
             document.title = t('pageTitle');
             document.getElementById('headerTitle').textContent = t('headerTitle');
             document.getElementById('headerWarning').textContent = t('headerWarning');
             document.getElementById('searchInput').placeholder = t('searchPlaceholder');
+            const typeFilter = document.getElementById('typeFilter');
+            if (typeFilter) {
+                const selectedType = typeFilter.value;
+                populateTypeFilter(selectedType);
+            }
             document.getElementById('navAbilities').textContent = t('navAbilities');
             document.getElementById('navItems').textContent = t('navItems');
             document.getElementById('navPassives').textContent = t('navPassives');
@@ -1268,6 +1606,10 @@
             document.getElementById('choiceHeader').innerHTML = t('choiceHeader') + '<span class="sort-indicator"></span>';
             document.getElementById('promptHeader').textContent = t('promptHeader');
             document.getElementById('enterHeader').textContent = t('enterHeader');
+            const typeHeader = document.getElementById('typeHeader');
+            if (typeHeader) {
+                typeHeader.textContent = t('typeHeader');
+            }
             document.getElementById('footerSource').textContent = t('footerSource');
             document.getElementById('footerCredit').textContent = t('footerCredit');
             document.getElementById('footerAuthor').textContent = t('footerAuthor');
@@ -1305,6 +1647,7 @@
                 document.getElementById('totalCount').textContent = allEvents.length;
                 applyUiLanguage();
                 updateClearButtonVisibility();
+                populateTypeFilter('');
                 filterEvents();
             } catch (error) {
                 console.error('Error loading events:', error);
@@ -1358,6 +1701,48 @@
             return getLocalizedTextOrKey(eventData.main_prompt_texts, eventData.main_prompt_key || '');
         }
 
+        function getEventTypeKey(eventData) {
+            const source = eventData?.source_file || '';
+            const normalized = source.replace(/\\/g, '/');
+            const fileName = normalized.split('/').pop() || '';
+            return fileName.replace(/\.gon$/i, '');
+        }
+
+        function getEventTypeLabel(eventData) {
+            const baseName = getEventTypeKey(eventData);
+            const labels = EVENT_TYPE_LABELS[currentLanguage] || EVENT_TYPE_LABELS.en;
+            return labels[baseName] || baseName.replace(/_/g, ' ');
+        }
+
+        function populateTypeFilter(selectedValue) {
+            const filter = document.getElementById('typeFilter');
+            if (!filter) {
+                return;
+            }
+            const typeKeys = new Set();
+            for (const eventData of allEvents) {
+                const key = getEventTypeKey(eventData);
+                if (key) {
+                    typeKeys.add(key);
+                }
+            }
+            const sortedKeys = Array.from(typeKeys).sort((a, b) => {
+                const labelA = (EVENT_TYPE_LABELS[currentLanguage]?.[a] || EVENT_TYPE_LABELS.en[a] || a).toLowerCase();
+                const labelB = (EVENT_TYPE_LABELS[currentLanguage]?.[b] || EVENT_TYPE_LABELS.en[b] || b).toLowerCase();
+                return labelA.localeCompare(labelB);
+            });
+            const currentValue = selectedValue || '';
+            const optionsHtml = [
+                `<option value="">${escapeHtml(t('typeFilterAll'))}</option>`,
+                ...sortedKeys.map((key) => {
+                    const label = EVENT_TYPE_LABELS[currentLanguage]?.[key] || EVENT_TYPE_LABELS.en[key] || key.replace(/_/g, ' ');
+                    const selected = key === currentValue ? ' selected' : '';
+                    return `<option value="${escapeHtml(key)}"${selected}>${escapeHtml(label)}</option>`;
+                })
+            ].join('');
+            filter.innerHTML = optionsHtml;
+        }
+
         function getOptionLabel(option) {
             return getLocalizedTextOrKey(option.label_texts, option.label_key || option.name || '');
         }
@@ -1367,7 +1752,7 @@
                 return '';
             }
             if (stat === 'coins') {
-                return 'coins';
+                return 'coin';
             }
             return mapFontIconName(stat);
         }
@@ -1383,26 +1768,69 @@
             return `<img src="eventicon/${iconName}.png" alt="${escapeHtml(stat)}" class="img-icon img-icon-event" onerror="this.style.display='none'">`;
         }
 
+        function formatCoinRequirement(option) {
+            if (!option || option.stat !== 'coins') {
+                return '';
+            }
+            const minValue = option.stat_min;
+            const maxValue = option.stat_max;
+            if (minValue === undefined && maxValue === undefined) {
+                return '';
+            }
+            if (minValue !== undefined && maxValue !== undefined) {
+                if (String(minValue) === String(maxValue)) {
+                    return String(minValue);
+                }
+                return `${minValue}-${maxValue}`;
+            }
+            return String(minValue ?? maxValue);
+        }
+
+        function normalizeCoinLabel(label) {
+            if (!label) {
+                return '';
+            }
+            return label.replace(/\s*\d+\s*$/, '').trim();
+        }
+
         function displayEvents(events) {
             const tbody = document.getElementById('tableBody');
             if (!events || events.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="4" class="no-results">${escapeHtml(t('noResults'))}</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="5" class="no-results">${escapeHtml(t('noResults'))}</td></tr>`;
                 document.getElementById('showingCount').textContent = '0';
                 return;
             }
 
             displayedEvents = events;
+            const titleCounts = new Map();
+            for (const entry of events) {
+                const title = getEventTitle(entry);
+                titleCounts.set(title, (titleCounts.get(title) || 0) + 1);
+            }
 
             tbody.innerHTML = events.map((eventData, index) => {
                 const title = getEventTitle(eventData);
                 const prompt = getEventPrompt(eventData);
                 const choice = formatCatChoice(eventData.cat_choice);
+                const eventKey = eventData.event_key || '';
+                const showKey = eventKey && (titleCounts.get(title) || 0) > 1;
+                const keyBadge = showKey
+                    ? `<span class="tag-badge">${escapeHtml(eventKey)}</span>`
+                    : '';
+                const titleHtml = `
+                    <div class="mutation-name">
+                        ${escapeHtml(title)}
+                        ${keyBadge ? `<div>${keyBadge}</div>` : ''}
+                    </div>
+                `;
+                const typeLabel = getEventTypeLabel(eventData);
                 return `
                     <tr>
-                        <td><div class="mutation-name">${escapeHtml(title)}</div></td>
+                        <td>${titleHtml}</td>
                         <td>${escapeHtml(choice)}</td>
                         <td><div class="description">${parseRichText(prompt)}</div></td>
                         <td><button class="enter-button" data-event-key="${escapeHtml(eventData.event_key || '')}">${escapeHtml(t('enterButton'))}</button></td>
+                        <td><span class="tag-badge">${escapeHtml(typeLabel)}</span></td>
                     </tr>
                 `;
             }).join('');
@@ -1424,6 +1852,7 @@
             const headerMap = {
                 title: 'titleHeader',
                 choice: 'choiceHeader',
+                type: 'typeHeader',
             };
             const header = document.getElementById(headerMap[column]);
             if (header) {
@@ -1441,6 +1870,9 @@
                 if (currentSort.column === 'choice') {
                     valueA = (a.cat_choice || '').toLowerCase();
                     valueB = (b.cat_choice || '').toLowerCase();
+                } else if (currentSort.column === 'type') {
+                    valueA = (getEventTypeLabel(a) || '').toLowerCase();
+                    valueB = (getEventTypeLabel(b) || '').toLowerCase();
                 } else {
                     valueA = (getEventTitle(a) || '').toLowerCase();
                     valueB = (getEventTitle(b) || '').toLowerCase();
@@ -1552,15 +1984,220 @@
             if (!token) {
                 return '';
             }
+            const meta = keywordMetaByKey.get(token);
+            if (meta && meta.labels) {
+                return meta.labels[currentLanguage] || meta.labels.en || token;
+            }
+            return '';
+        }
+
+        function getLocalizedEntryName(map, code) {
+            if (!code) {
+                return '';
+            }
+            const entry = map.get(code);
+            if (!entry) {
+                return code;
+            }
+            const localized = getLocalizedText(entry.texts, entry.name || '');
+            return localized || entry.name || code;
+        }
+
+        function getClassLabel(className) {
+            if (!className) {
+                return '';
+            }
+            const key = className.toLowerCase();
+            return CLASS_LABELS[currentLanguage]?.[key] || CLASS_LABELS.en[key] || className;
+        }
+
+        function localizeAbilityPoolTag(tag) {
+            if (!tag) {
+                return '';
+            }
+            const direct = ABILITY_POOL_LABELS[currentLanguage]?.[tag] || ABILITY_POOL_LABELS.en[tag];
+            if (direct) {
+                return direct;
+            }
+            const parts = String(tag).split('.');
+            if (parts.length < 2) {
+                return tag;
+            }
+            const className = parts[0];
+            const section = parts[1];
+            if (section === 'ability_groups' && parts[2]) {
+                const group = parts[2];
+                const groupLabel = ABILITY_GROUP_LABELS[currentLanguage]?.[group]
+                    || ABILITY_GROUP_LABELS.en[group]
+                    || group;
+                return `${getClassLabel(className)}/${groupLabel}`;
+            }
+            if (section === 'ability_pool') {
+                return getClassLabel(className);
+            }
+            if (section === 'attack_pool') {
+                const basicAttack = currentLanguage === 'zh' ? '基础攻击' : 'Basic Attack';
+                return `${getClassLabel(className)}/${basicAttack}`;
+            }
+            return tag;
+        }
+
+        function localizePassivePoolTag(tag) {
+            if (!tag) {
+                return '';
+            }
+            return PASSIVE_POOL_LABELS[currentLanguage]?.[tag]
+                || PASSIVE_POOL_LABELS.en[tag]
+                || tag;
+        }
+
+        function localizeItemPoolTag(tag) {
+            if (!tag) {
+                return '';
+            }
+            const entry = itemPoolLabelByTag.get(tag);
+            if (!entry) {
+                return tag;
+            }
+            if (entry.texts) {
+                return getLocalizedText(entry.texts, entry.label || tag) || entry.label || tag;
+            }
+            return entry.label || tag;
+        }
+
+        function localizeItemRestriction(value) {
+            if (!value) {
+                return '';
+            }
+            const normalized = value.toLowerCase();
+            const base = normalized.endsWith('s') ? normalized.slice(0, -1) : normalized;
+            return ITEM_KIND_LABELS[currentLanguage]?.[base]
+                || ITEM_KIND_LABELS.en[base]
+                || value;
+        }
+
+        function formatPoolRestriction(tokens, assumePoolTag) {
+            let poolTag = '';
+            let restrictTag = '';
+
+            for (let i = 0; i < tokens.length - 1; i += 1) {
+                if (tokens[i] === 'pool') {
+                    poolTag = tokens[i + 1];
+                }
+                if (tokens[i] === 'restrict') {
+                    restrictTag = tokens[i + 1];
+                }
+            }
+
+            if (!poolTag && assumePoolTag && tokens[0] && tokens[0] !== 'pool' && tokens[0] !== 'restrict') {
+                poolTag = tokens[0];
+            }
+
+            const parts = [];
+            if (poolTag) {
+                parts.push(`${t('poolLabel')} ${localizeItemPoolTag(poolTag)}`);
+            }
+            if (restrictTag) {
+                parts.push(`${t('restrictLabel')} ${localizeItemRestriction(restrictTag)}`);
+            }
+            return parts.length ? parts.join(' ') : tokens.join(' ');
+        }
+
+        function localizeItemPoolLine(line) {
+            const tokens = line.split(/\s+/).filter(Boolean);
+            if (tokens.length === 0) {
+                return line;
+            }
+            return formatPoolRestriction(tokens, false);
+        }
+
+        function localizeRewardBody(key, body) {
+            if (!body) {
+                return body;
+            }
+            const tokens = body.split(/\s+/).filter(Boolean);
+            if (tokens.length === 0) {
+                return body;
+            }
+            const itemKeys = new Set([
+                'get_item',
+                'lose_item',
+                'lose_specific_item',
+                'get_and_equip_item',
+                'get_parasite',
+            ]);
+            const itemPoolKeys = new Set([
+                'get_item_from_pool',
+                'get_and_equip_item_from_pool',
+                'get_full_item_set_from_pool',
+                'get_parasite_from_pool',
+            ]);
+            const abilityKeys = new Set([
+                'learn_ability',
+                'upgrade_ability',
+            ]);
+            const abilityPoolKeys = new Set([
+                'learn_ability_from_pool',
+            ]);
+            const passiveKeys = new Set([
+                'learn_passive',
+                'upgrade_passive',
+                'gain_disorder',
+            ]);
+            const passivePoolKeys = new Set([
+                'learn_passive_from_pool',
+                'gain_disorder_from_pool',
+                'party_gain_disorder_from_pool',
+                'party_gain_disorder_from_pool_exclude_self',
+            ]);
+
+            if (itemKeys.has(key)) {
+                tokens[0] = getLocalizedEntryName(itemNameByCode, tokens[0]);
+                return tokens.join(' ');
+            }
+            if (itemPoolKeys.has(key)) {
+                return formatPoolRestriction(tokens, true);
+            }
+            if (abilityKeys.has(key)) {
+                tokens[0] = getLocalizedEntryName(abilityNameByCode, tokens[0]);
+                return tokens.join(' ');
+            }
+            if (abilityPoolKeys.has(key)) {
+                tokens[0] = localizeAbilityPoolTag(tokens[0]);
+                return tokens.join(' ');
+            }
+            if (passiveKeys.has(key)) {
+                tokens[0] = getLocalizedEntryName(passiveNameByCode, tokens[0]);
+                return tokens.join(' ');
+            }
+            if (passivePoolKeys.has(key)) {
+                tokens[0] = localizePassivePoolTag(tokens[0]);
+                return tokens.join(' ');
+            }
+
+            if (key === 'pool' && tokens[0] === 'pool' && tokens[1]) {
+                return formatPoolRestriction(tokens, false);
+            }
+
+            return body;
+        }
+
+        function getStructuralTitle(token) {
             switch (token) {
                 case 'random_pool':
                     return t('keywordRandomPool');
-                case 'get_item_from_pool':
-                    return t('keywordGetItemFromPool');
-                case 'lose_item':
-                    return t('keywordLoseItem');
-                case 'event_now_same_cat':
-                    return t('keywordEventNowSameCat');
+                case 'random_pool_consider_luck':
+                    return t('keywordRandomPoolLuck');
+                case 'random_chance':
+                    return t('keywordRandomChance');
+                case 'conditional_reward':
+                    return t('keywordConditionalReward');
+                case 'legacy_token_conditional_reward':
+                    return t('keywordConditionalRewardLegacy');
+                case 'requirements':
+                    return t('keywordRequirements');
+                case 'else':
+                    return t('keywordElse');
                 default:
                     return '';
             }
@@ -1573,6 +2210,7 @@
             }
             const key = trimmed.split(/\s+/)[0];
             const title = getKeywordTitle(key);
+            const meta = keywordMetaByKey.get(key);
             if (!title) {
                 const rest = trimmed.slice(key.length).trim();
                 if (rest && /^[A-Za-z_][A-Za-z0-9_]*$/.test(key)) {
@@ -1589,13 +2227,18 @@
             if (key === 'get_item_from_pool' && body && !body.startsWith('{')) {
                 body = `pool ${body}`;
             }
-            const bodyHtml = body ? `<div class="event-keyword-body">${parseRichText(body)}</div>` : '';
+            const localizedBody = localizeRewardBody(key, body);
+            const bodyHtml = localizedBody
+                ? `<div class="event-keyword-body">${parseRichText(localizedBody)}</div>`
+                : '';
             let boxClass = 'event-keyword-box';
             if (key === 'get_item_from_pool') {
                 boxClass = 'event-keyword-box event-keyword-box-item';
-            } else if (key === 'lose_item') {
+            } else if (meta && meta.tone === 'negative') {
                 boxClass = 'event-keyword-box event-keyword-box-bad';
-            } else if (key === 'event_now_same_cat') {
+            } else if (meta && meta.tone === 'positive') {
+                boxClass = 'event-keyword-box event-keyword-box-positive';
+            } else {
                 boxClass = 'event-keyword-box event-keyword-box-neutral';
             }
             return `
@@ -1610,8 +2253,19 @@
             return line.split('//', 1)[0];
         }
 
-        function shouldSkipLine(line) {
-            const token = (line.trim().split(/\s+/)[0] || '').toLowerCase();
+        function getLineToken(line) {
+            return (line.trim().split(/\s+/)[0] || '').toLowerCase();
+        }
+
+        function shouldSkipLine(line, options = {}) {
+            const token = getLineToken(line);
+            const allowTokens = options.allowTokens || [];
+            if (allowTokens.includes(token)) {
+                return false;
+            }
+            if (ignoredKeywords.has(token)) {
+                return true;
+            }
             return token === 'set_frame'
                 || token === 'animation'
                 || token === 'animation_fail'
@@ -1705,7 +2359,15 @@
                 entries.push({ key, value });
             }
             for (const child of node.children) {
-                if (child.name === 'reward' || child.name === 'random_pool' || child.name === 'list' || child.name === 'entry') {
+                if (child.name === 'reward' || child.name === 'random_pool' || child.name === 'random_pool_consider_luck' || child.name === 'list' || child.name === 'entry') {
+                    continue;
+                }
+                if (isTransparentWrapper(child.name)) {
+                    entries.push(...collectDetailsFromNode(child));
+                    continue;
+                }
+                if (conditionalKeywords.has(child.name) || child.name === 'random_chance') {
+                    entries.push({ key: child.name, node: child });
                     continue;
                 }
                 const value = formatNodeValue(child);
@@ -1714,6 +2376,146 @@
                 }
             }
             return entries;
+        }
+
+        function collectMainDetails(code) {
+            if (!code) {
+                return [];
+            }
+            const tree = buildBlockTree(code);
+            const filteredChildren = (tree.children || []).filter((child) => child.name !== 'options').map((child) => {
+                if (child.name !== 'setup') {
+                    return cloneNode(child);
+                }
+                const setupClone = cloneNode(child);
+                setupClone.children = (setupClone.children || []).filter(
+                    (entry) => !conditionalKeywords.has(entry.name)
+                );
+                return setupClone;
+            }).filter((child) => {
+                if (!child) {
+                    return false;
+                }
+                if (child.name !== 'setup') {
+                    return true;
+                }
+                return (child.lines || []).length > 0 || (child.children || []).length > 0;
+            });
+            const filtered = {
+                name: tree.name,
+                lines: tree.lines,
+                children: filteredChildren,
+            };
+            return collectDetailsFromNode(filtered);
+        }
+
+        function extractRequirementLines(node) {
+            if (!node) {
+                return [];
+            }
+            const lines = [];
+            for (const line of node.lines || []) {
+                const trimmed = line.trim();
+                if (trimmed) {
+                    lines.push(trimmed);
+                }
+            }
+            for (const child of node.children || []) {
+                if (!child) {
+                    continue;
+                }
+                const value = formatNodeValue(child);
+                if (value) {
+                    lines.push(`${child.name} ${value}`);
+                } else {
+                    lines.push(child.name);
+                }
+            }
+            return lines;
+        }
+
+        function findFirstPromptKeyInNode(node) {
+            if (!node) {
+                return '';
+            }
+            for (const line of node.lines || []) {
+                if (line.trim().startsWith('prompt')) {
+                    return extractTextKeyFromLine(line);
+                }
+            }
+            for (const child of node.children || []) {
+                const found = findFirstPromptKeyInNode(child);
+                if (found) {
+                    return found;
+                }
+            }
+            return '';
+        }
+
+        function collectSetupConditionalModifiers(code, promptTextMap) {
+            if (!code) {
+                return [];
+            }
+            const tree = buildBlockTree(code);
+            const setupNodes = (tree.children || []).filter((child) => child && child.name === 'setup');
+            const modifiers = [];
+            for (const setupNode of setupNodes) {
+                for (const child of setupNode.children || []) {
+                    if (!child || !conditionalKeywords.has(child.name)) {
+                        continue;
+                    }
+                    const requirements = (child.children || []).find(
+                        (entry) => entry && entry.name === 'requirements'
+                    );
+                    const rewardNode = (child.children || []).find(
+                        (entry) => entry && entry.name === 'reward'
+                    );
+                    const elseNode = (child.children || []).find(
+                        (entry) => entry && entry.name === 'else'
+                    );
+                    const rewardPromptKey = findFirstPromptKeyInNode(rewardNode) || findFirstPromptKeyInNode(elseNode);
+                    const rewardPromptText = rewardPromptKey
+                        ? getPromptText(rewardPromptKey, promptTextMap)
+                        : '';
+                    if (!rewardPromptText) {
+                        continue;
+                    }
+                    modifiers.push({
+                        requirements: extractRequirementLines(requirements),
+                        prompt: rewardPromptText,
+                    });
+                }
+            }
+            return modifiers;
+        }
+
+        function renderSetupConditionalModifiers(modifiers) {
+            if (!modifiers || modifiers.length === 0) {
+                return '';
+            }
+            const itemsHtml = modifiers.map((modifier) => {
+                const requirementsText = (modifier.requirements || []).join('\n');
+                const requirementsHtml = requirementsText
+                    ? `<div class="event-raw-block">${escapeHtml(requirementsText)}</div>`
+                    : '';
+                const promptHtml = modifier.prompt
+                    ? `<div class="event-conditional-prompt">${parseRichText(modifier.prompt)}</div>`
+                    : '';
+                return `
+                    <div class="event-detail-card">
+                        <div class="event-detail-card-title">${escapeHtml(t('ifLabel'))}</div>
+                        <div class="event-detail-card-body">
+                            ${requirementsHtml}
+                            ${promptHtml}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            return `
+                <div class="event-reward-entry">
+                    <div class="event-detail-stack">${itemsHtml}</div>
+                </div>
+            `;
         }
 
         function collectTopLevelListNodes(node) {
@@ -1739,12 +2541,17 @@
             }
         }
 
-        function collectRewardNodes(node, results) {
+        function isTransparentWrapper(name) {
+            return name === 'good' || name === 'bad' || name === 'reward' || name === 'else';
+        }
+
+        function collectRewardNodes(node, results, skipRewards) {
+            const shouldSkip = Boolean(skipRewards || conditionalKeywords.has(node.name));
             for (const child of node.children) {
-                if (child.name === 'reward') {
+                if (child.name === 'reward' && !shouldSkip) {
                     results.push(child);
                 }
-                collectRewardNodes(child, results);
+                collectRewardNodes(child, results, shouldSkip);
             }
         }
 
@@ -1753,13 +2560,125 @@
             return langMap[rarity] || rarity;
         }
 
-        function parseOutcomeCode(code) {
-            if (!code) {
-                return { details: [], rewards: [] };
+        function cloneNode(node) {
+            return {
+                name: node.name,
+                lines: [...(node.lines || [])],
+                children: (node.children || []).map(cloneNode),
+            };
+        }
+
+        function findFirstConditionalNode(node) {
+            if (!node) {
+                return null;
             }
-            const tree = buildBlockTree(code);
+            if (conditionalKeywords.has(node.name) && hasRenderableConditionalContent(node)) {
+                return node;
+            }
+            for (const child of node.children || []) {
+                const found = findFirstConditionalNode(child);
+                if (found) {
+                    return found;
+                }
+            }
+            return null;
+        }
+
+        function replaceFirstConditionalNode(node, choice) {
+            if (!node) {
+                return { tree: node, replaced: false };
+            }
+            const cloned = {
+                name: node.name,
+                lines: [...(node.lines || [])],
+                children: [],
+            };
+            let replaced = false;
+            for (const child of node.children || []) {
+                if (!replaced && conditionalKeywords.has(child.name)) {
+                    replaced = true;
+                    const selectedName = choice === 'reward' ? 'reward' : 'else';
+                    const selected = (child.children || []).find(
+                        (entry) => entry && entry.name === selectedName
+                    );
+                    if (selected) {
+                        cloned.children.push(cloneNode(selected));
+                    }
+                    continue;
+                }
+                const result = replaceFirstConditionalNode(child, choice);
+                replaced = replaced || result.replaced;
+                cloned.children.push(result.tree);
+            }
+            return { tree: cloned, replaced };
+        }
+
+        function nodeToRawText(node, indent) {
+            const safeIndent = indent || '';
+            const lines = [];
+            for (const line of node.lines || []) {
+                if (line.trim()) {
+                    lines.push(`${safeIndent}${line}`);
+                }
+            }
+            for (const child of node.children || []) {
+                if (!child) {
+                    continue;
+                }
+                lines.push(`${safeIndent}${child.name} {`);
+                const childText = nodeToRawText(child, `${safeIndent}  `);
+                if (childText) {
+                    lines.push(childText);
+                }
+                lines.push(`${safeIndent}}`);
+            }
+            return lines.join('\n');
+        }
+
+        function getRequirementsRawText(node) {
+            if (!node) {
+                return '';
+            }
+            const requirements = (node.children || []).find(
+                (child) => child && child.name === 'requirements'
+            );
+            return requirements ? nodeToRawText(requirements).trim() : '';
+        }
+        function hasRenderableContent(node) {
+            if (!node) {
+                return false;
+            }
+            for (const line of node.lines || []) {
+                if (!shouldSkipLine(line)) {
+                    return true;
+                }
+            }
+            for (const child of node.children || []) {
+                if (hasRenderableContent(child)) {
+                    return true;
+                }
+            }
+            return false;
+        }
+        function hasRenderableConditionalContent(node) {
+            if (!node) {
+                return false;
+            }
+            const rewardNode = (node.children || []).find(
+                (child) => child && child.name === 'reward'
+            );
+            const elseNode = (node.children || []).find(
+                (child) => child && child.name === 'else'
+            );
+            return hasRenderableContent(rewardNode) || hasRenderableContent(elseNode);
+        }
+
+        function parseOutcomeTree(tree) {
+            if (!tree) {
+                return { details: [], rewards: [], rewardPresentation: '' };
+            }
             const rewardNodes = [];
-            collectRewardNodes(tree, rewardNodes);
+            collectRewardNodes(tree, rewardNodes, false);
             const details = collectDetailsFromNode(tree);
             let rewards = rewardNodes.map((node) => {
                 const rarityBlocks = [];
@@ -1786,14 +2705,46 @@
                     rewards = listNodes.map((node) => [{ rarity: 'other', node }]);
                 }
             }
-            return { details, rewards };
+            const rewardPresentation = rewards.length ? 'inline' : '';
+            return { details, rewards, rewardPresentation };
         }
 
-        function renderDetailsList(details) {
+        function renderStructuralNode(node, promptTextMap) {
+            if (!node) {
+                return '';
+            }
+            if (conditionalKeywords.has(node.name) && !hasRenderableConditionalContent(node)) {
+                return '';
+            }
+            const title = getStructuralTitle(node.name) || node.name;
+            const bodyHtml = renderRewardContent(node, promptTextMap);
+            if (!bodyHtml) {
+                return '';
+            }
+            return `
+                <div class="event-detail-card">
+                    <div class="event-detail-card-title">${escapeHtml(title)}</div>
+                    <div class="event-detail-card-body">${bodyHtml}</div>
+                </div>
+            `;
+        }
+
+        function parseOutcomeCode(code) {
+            if (!code) {
+                return { details: [], rewards: [], rewardPresentation: '' };
+            }
+            const tree = buildBlockTree(code);
+            return parseOutcomeTree(tree);
+        }
+
+        function renderDetailsList(details, promptTextMap) {
             if (!details || details.length === 0) {
                 return '';
             }
             const rows = details.map((entry) => {
+                if (entry.node) {
+                    return renderStructuralNode(entry.node, promptTextMap);
+                }
                 const key = (entry.key || '').trim();
                 const value = entry.value ? parseRichText(entry.value) : '';
                 if (getKeywordTitle(key)) {
@@ -1814,7 +2765,7 @@
             `;
         }
 
-        function renderRewardBoxes(rewardGroups, promptTextMap) {
+        function renderRewardGroups(rewardGroups, promptTextMap, showHeader) {
             if (!rewardGroups || rewardGroups.length === 0) {
                 return '';
             }
@@ -1824,10 +2775,10 @@
                 }
                 const itemsHtml = group.map((item) => {
                     const rarityName = item.rarity === 'other'
-                        ? t('rewardOther')
+                        ? ''
                         : getRarityLabel(item.rarity);
                     const isListNode = item.node && (item.node.name === 'random_pool' || item.node.name === 'list');
-                    const showTitle = !(item.rarity === 'other' && isListNode);
+                    const showTitle = Boolean(rarityName) && !(item.rarity === 'other' && isListNode);
                     const bodyHtml = item.node
                         ? renderRewardContent(item.node, promptTextMap)
                         : parseRichText(item.body || '');
@@ -1838,12 +2789,15 @@
                         </div>
                     `;
                 }).join('');
-                return `
-                    <div class="event-reward-box">
-                        <div class="event-reward-header">${escapeHtml(t('rewardLabel'))}</div>
-                        <div class="event-reward-grid">${itemsHtml}</div>
-                    </div>
-                `;
+                if (showHeader) {
+                    return `
+                        <div class="event-reward-box">
+                            <div class="event-reward-header">${escapeHtml(t('rewardLabel'))}</div>
+                            <div class="event-reward-grid">${itemsHtml}</div>
+                        </div>
+                    `;
+                }
+                return `<div class="event-reward-stack">${itemsHtml}</div>`;
             }).join('');
         }
 
@@ -1851,10 +2805,10 @@
             if (!node) {
                 return '';
             }
-            if (node.name === 'random_pool' || node.name === 'list') {
-                const title = node.name === 'random_pool'
-                    ? getKeywordTitle('random_pool')
-                    : t('randomPoolLabel');
+            if (node.name === 'random_pool' || node.name === 'random_pool_consider_luck' || node.name === 'list') {
+                const title = node.name === 'list'
+                    ? t('randomPoolLabel')
+                    : getStructuralTitle(node.name);
                 const childrenHtml = node.children.map((child) => {
                     return renderRewardContent(child, promptTextMap);
                 }).join('');
@@ -1866,11 +2820,22 @@
                 `;
             }
 
+            if (node.name === 'random_chance') {
+                return renderRandomChanceBlock(node, promptTextMap);
+            }
+
+            if (conditionalKeywords.has(node.name)) {
+                if (!hasRenderableConditionalContent(node)) {
+                    return '';
+                }
+                return renderConditionalRewardBlock(node, promptTextMap);
+            }
+
             if (node.name === 'get_item_from_pool') {
                 const title = getKeywordTitle('get_item_from_pool');
                 const linesHtml = node.lines
-                    .filter((line) => !shouldSkipLine(line))
-                    .map((line) => `<div>${parseRichText(line)}</div>`)
+                    .filter((line) => !shouldSkipLine(line, { allowTokens: ['pool', 'restrict'] }))
+                    .map((line) => `<div>${parseRichText(localizeItemPoolLine(line))}</div>`)
                     .join('');
                 const childrenHtml = node.children.map((child) => {
                     return renderRewardContent(child, promptTextMap);
@@ -1889,7 +2854,7 @@
                 let promptKey = '';
                 const otherLines = [];
                 for (const line of node.lines) {
-                    if (shouldSkipLine(line)) {
+                    if (shouldSkipLine(line, { allowTokens: ['prompt', 'weight'] })) {
                         continue;
                     }
                     if (line.startsWith('weight')) {
@@ -1907,13 +2872,12 @@
                     : '';
                 const hasKeywordOnlyLines = otherLines.length > 0
                     && otherLines.every((line) => {
-                        const token = (line.trim().split(/\s+/)[0] || '').toLowerCase();
+                        const token = getLineToken(line);
                         return Boolean(getKeywordTitle(token));
                     });
                 const hasNonKeywordLines = otherLines.length > 0 && !hasKeywordOnlyLines;
                 const hasPromptOnly = Boolean(promptKey) && otherLines.length === 0;
-                const shouldShowOther = !weightValue && (hasNonKeywordLines || hasPromptOnly);
-                const resolvedTitle = title || (shouldShowOther ? t('rewardOther') : '');
+                const resolvedTitle = title || '';
                 const promptText = getPromptText(promptKey, promptTextMap);
                 const promptHtml = promptText
                     ? `<div class="event-reward-entry-prompt">${parseRichText(promptText)}</div>`
@@ -1946,7 +2910,7 @@
 
             const parts = [];
             for (const line of node.lines) {
-                if (shouldSkipLine(line)) {
+                if (shouldSkipLine(line, { allowTokens: ['prompt'] })) {
                     continue;
                 }
                 if (line.startsWith('prompt')) {
@@ -1962,6 +2926,9 @@
                     return '';
                 }
                 if (child.name === 'random_pool' || child.name === 'list') {
+                    return renderRewardContent(child, promptTextMap);
+                }
+                if (isTransparentWrapper(child.name)) {
                     return renderRewardContent(child, promptTextMap);
                 }
                 const keywordTitle = getKeywordTitle(child.name);
@@ -1980,12 +2947,149 @@
             return `${parts.join('')}${nestedBlocks}`;
         }
 
+        function renderRandomChanceBlock(node, promptTextMap) {
+            const title = getStructuralTitle('random_chance') || node.name;
+            let chanceValue = '';
+            let promptKey = '';
+            const otherLines = [];
+            for (const line of node.lines) {
+                if (shouldSkipLine(line)) {
+                    continue;
+                }
+                if (line.startsWith('chance')) {
+                    chanceValue = line.slice('chance'.length).trim();
+                    continue;
+                }
+                if (line.startsWith('prompt')) {
+                    promptKey = extractTextKeyFromLine(line);
+                    continue;
+                }
+                otherLines.push(line);
+            }
+            const promptText = getPromptText(promptKey, promptTextMap);
+            const promptHtml = promptText
+                ? `<div class="event-reward-entry-prompt">${parseRichText(promptText)}</div>`
+                : '';
+            const chanceHtml = chanceValue
+                ? `<div class="event-reward-entry-title">${escapeHtml(`chance ${chanceValue}`)}</div>`
+                : '';
+            const linesHtml = otherLines.map((line) => renderKeywordLine(line)).join('');
+            const childrenHtml = node.children.map((child) => renderRewardContent(child, promptTextMap)).join('');
+            return `
+                <div class="event-reward-entry">
+                    <div class="event-reward-entry-title">${escapeHtml(title)}</div>
+                    ${chanceHtml}
+                    ${promptHtml}
+                    ${linesHtml}
+                    ${childrenHtml}
+                </div>
+            `;
+        }
+
+        function collectInlineEntries(node, promptTextMap) {
+            const entries = [];
+            for (const line of node.lines) {
+                if (shouldSkipLine(line, { allowTokens: ['prompt'] })) {
+                    continue;
+                }
+                if (line.startsWith('prompt')) {
+                    const promptKey = extractTextKeyFromLine(line);
+                    const promptText = getPromptText(promptKey, promptTextMap);
+                    entries.push({
+                        key: 'prompt',
+                        value: promptText || promptKey,
+                        isPrompt: true,
+                    });
+                    continue;
+                }
+                const parts = line.split(/\s+/);
+                const key = parts[0];
+                const value = line.slice(key.length).trim();
+                entries.push({ key, value });
+            }
+            for (const child of node.children) {
+                if (child.name === 'reward' || child.name === 'random_pool' || child.name === 'random_pool_consider_luck' || child.name === 'list' || child.name === 'entry') {
+                    continue;
+                }
+                const value = formatNodeValue(child);
+                if (value) {
+                    entries.push({ key: child.name, value });
+                }
+            }
+            return entries;
+        }
+
+        function renderEntryCards(entries) {
+            if (!entries || entries.length === 0) {
+                return '';
+            }
+            return entries.map((entry) => {
+                const key = entry.isPrompt
+                    ? escapeHtml(t('promptLabel'))
+                    : escapeHtml(entry.key || '');
+                const value = entry.value ? parseRichText(entry.value) : '';
+                return `
+                    <div class="event-detail-card">
+                        <div class="event-detail-card-title">${key}</div>
+                        <div class="event-detail-card-body">${value}</div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function renderConditionalRewardBlock(node, promptTextMap) {
+            const title = getStructuralTitle(node.name) || node.name;
+            const requirements = node.children.find((child) => child.name === 'requirements');
+            const rewardNode = node.children.find((child) => child.name === 'reward');
+            const elseNode = node.children.find((child) => child.name === 'else');
+            const requirementEntries = requirements
+                ? collectInlineEntries(requirements, promptTextMap)
+                : [];
+            const requirementsHtml = requirementEntries.length
+                ? `
+                    <div class="event-reward-entry">
+                        <div class="event-reward-entry-title">${escapeHtml(getStructuralTitle('requirements') || 'Requirements')}</div>
+                        <div class="event-detail-stack">${renderEntryCards(requirementEntries)}</div>
+                    </div>
+                `
+                : '';
+            const rewardHtml = rewardNode
+                ? `
+                    <div class="event-reward-entry">
+                        <div class="event-reward-entry-title">${escapeHtml(t('rewardLabel'))}</div>
+                        ${renderRewardContent(rewardNode, promptTextMap)}
+                    </div>
+                `
+                : '';
+            const elseHtml = elseNode
+                ? `
+                    <div class="event-reward-entry">
+                        <div class="event-reward-entry-title">${escapeHtml(getStructuralTitle('else') || 'Else')}</div>
+                        ${renderRewardContent(elseNode, promptTextMap)}
+                    </div>
+                `
+                : '';
+            return `
+                <div class="event-reward-entry">
+                    <div class="event-reward-entry-title">${escapeHtml(title)}</div>
+                    ${requirementsHtml}
+                    ${rewardHtml}
+                    ${elseHtml}
+                </div>
+            `;
+        }
+
         function filterEvents() {
             const search = document.getElementById('searchInput').value.toLowerCase();
             const showHidden = document.getElementById('showHiddenToggle')?.checked;
+            const typeFilter = document.getElementById('typeFilter');
+            const selectedType = typeFilter ? typeFilter.value : '';
 
             filteredEvents = allEvents.filter(eventData => {
                 if (!showHidden && !hasLocalizedTitle(eventData)) {
+                    return false;
+                }
+                if (selectedType && getEventTypeKey(eventData) !== selectedType) {
                     return false;
                 }
                 const title = (getEventTitle(eventData) || '').toLowerCase();
@@ -2036,6 +3140,32 @@
             closeEventPanel();
         }
 
+        function pushOutcomeOrConditional({ prompt, option, outcome, resultText, resolved, resultTree }) {
+            const tree = resultTree || buildBlockTree(resultText || '');
+            const conditionalNode = findFirstConditionalNode(tree);
+            if (conditionalNode) {
+                pushStep({
+                    type: 'conditional-choice',
+                    prompt,
+                    option,
+                    outcome,
+                    resolved,
+                    resultTree: tree,
+                    requirementsText: getRequirementsRawText(conditionalNode),
+                });
+                return;
+            }
+            pushStep({
+                type: 'result',
+                prompt,
+                option,
+                outcome,
+                resultText,
+                resolved,
+                resultTree: tree,
+            });
+        }
+
         function isFinalStep(step) {
             if (!step) {
                 return false;
@@ -2057,15 +3187,23 @@
                 const resolved = {
                     prompt_texts: eventData.outcome_prompt_texts || {},
                 };
-                pushStep({ type: 'result', prompt, outcome: 'good', resultText: eventData.outcome_code || '', resolved });
+                pushOutcomeOrConditional({
+                    prompt,
+                    outcome: 'good',
+                    resultText: eventData.outcome_code || '',
+                    resolved,
+                });
             } else {
-                pushStep({ type: 'options', prompt, options: eventData.options || [] });
+                pushStep({ type: 'options', prompt, options: eventData.options || [], mainCode: eventData.main_code || '' });
             }
 
             const panel = document.getElementById('eventPanel');
             const title = getEventTitle(eventData) || t('panelTitleFallback');
             document.getElementById('eventPanelTitle').textContent = title;
-            document.getElementById('eventPanelMeta').textContent = `${t('choiceHeader')}: ${formatCatChoice(eventData.cat_choice)}`;
+            const keyMeta = eventData.event_key
+                ? ` · ${t('eventKeyLabel')}: ${eventData.event_key}`
+                : '';
+            document.getElementById('eventPanelMeta').textContent = `${t('choiceHeader')}: ${formatCatChoice(eventData.cat_choice)}${keyMeta}`;
             panel.classList.add('open');
             panel.setAttribute('aria-hidden', 'false');
         }
@@ -2094,6 +3232,8 @@
                 body.innerHTML = renderResultChoiceStep(step, true);
             } else if (step.type === 'examine') {
                 body.innerHTML = renderResultChoiceStep(step, true);
+            } else if (step.type === 'conditional-choice') {
+                body.innerHTML = renderConditionalChoiceStep(step);
             } else if (step.type === 'result') {
                 body.innerHTML = renderResultStep(step);
             }
@@ -2109,16 +3249,31 @@
             const optionsHtml = (step.options || []).map((option, index) => {
                 const label = getOptionLabel(option);
                 const iconHtml = buildStatIconHtml(option.stat);
+                const coinsRequired = formatCoinRequirement(option);
+                const displayLabel = coinsRequired
+                    ? normalizeCoinLabel(label)
+                    : label;
+                const labelText = coinsRequired
+                    ? `${coinsRequired}: ${displayLabel}`
+                    : displayLabel;
                 const labelHtml = iconHtml
-                    ? `${iconHtml} ${escapeHtml(label)}`
-                    : escapeHtml(label);
+                    ? `${iconHtml} ${escapeHtml(labelText)}`
+                    : escapeHtml(labelText);
                 return `<button class="event-option-button" data-action="option" data-index="${index}">${labelHtml}</button>`;
             }).join('');
+            const setupModifiers = collectSetupConditionalModifiers(step.mainCode, {});
+            const setupModifiersHtml = renderSetupConditionalModifiers(setupModifiers);
+            const mainDetails = step.mainCode
+                ? collectMainDetails(step.mainCode)
+                : [];
+            const detailsHtml = renderDetailsList(mainDetails, {});
 
             return `
                 <div class="event-step-layout">
                     <div class="event-step-content">
                         <div class="event-step-prompt">${promptHtml}</div>
+                        ${setupModifiersHtml}
+                        ${detailsHtml}
                     </div>
                     <div class="event-step-actions">
                         <div class="event-option-grid">${optionsHtml}</div>
@@ -2146,15 +3301,42 @@
             `;
         }
 
+        function renderConditionalChoiceStep(step) {
+            const promptHtml = parseRichText(step.prompt || '');
+            const requirementsText = step.requirementsText || '';
+            const requirementsHtml = requirementsText
+                ? `<div class="event-raw-block">${escapeHtml(requirementsText)}</div>`
+                : '';
+            return `
+                <div class="event-step-layout">
+                    <div class="event-step-content">
+                        <div class="event-step-prompt">${promptHtml}</div>
+                        <div class="event-step-subtitle">${escapeHtml(t('conditionalPrompt'))}</div>
+                        ${requirementsHtml}
+                    </div>
+                    <div class="event-step-actions">
+                        <div class="event-result-grid">
+                            <button class="event-result-button" data-action="conditional" data-choice="reward">${escapeHtml(t('conditionalMet'))}</button>
+                            <button class="event-result-button" data-action="conditional" data-choice="else">${escapeHtml(t('conditionalNotMet'))}</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
         function renderResultStep(step) {
             const promptText = step.prompt || '';
             const promptHtml = parseRichText(promptText);
             const resultText = step.resultText || '';
             const resolved = step.resolved || step.option || {};
             const promptTextMap = resolved.prompt_texts || {};
-            const parsed = parseOutcomeCode(resultText);
-            const detailsHtml = renderDetailsList(parsed.details);
-            const rewardsHtml = renderRewardBoxes(parsed.rewards, promptTextMap);
+            const parsed = step.resultTree
+                ? parseOutcomeTree(step.resultTree)
+                : parseOutcomeCode(resultText);
+            const detailsHtml = renderDetailsList(parsed.details, promptTextMap);
+            const rewardsHtml = parsed.rewardPresentation
+                ? renderRewardGroups(parsed.rewards, promptTextMap, false)
+                : renderRewardGroups(parsed.rewards, promptTextMap, true);
             const hasContent = detailsHtml || rewardsHtml;
             return `
                 <div class="event-step-prompt">${promptHtml}</div>
@@ -2167,6 +3349,7 @@
             updateClearButtonVisibility();
             filterEvents();
         });
+        document.getElementById('typeFilter').addEventListener('change', filterEvents);
         document.getElementById('showHiddenToggle').addEventListener('change', filterEvents);
         document.getElementById('clearButton').addEventListener('click', clearSearch);
         document.querySelectorAll('.lang-link').forEach(button => {
@@ -2217,7 +3400,13 @@
                 const outcome = hasBad && !hasGood ? 'bad' : 'good';
                 const resultText = outcome === 'bad' ? resolved.bad_code : resolved.good_code;
                 const outcomePrompt = getOutcomePrompt(resolved, outcome) || step.prompt;
-                pushStep({ type: 'result', prompt: outcomePrompt, option, outcome, resultText, resolved });
+                pushOutcomeOrConditional({
+                    prompt: outcomePrompt,
+                    option,
+                    outcome,
+                    resultText,
+                    resolved,
+                });
             }
 
             if (action === 'result' && step && (step.type === 'result-choice' || step.type === 'examine')) {
@@ -2225,7 +3414,42 @@
                 const resolved = step.resolved || step.option || {};
                 const resultText = outcome === 'bad' ? resolved.bad_code : resolved.good_code;
                 const outcomePrompt = getOutcomePrompt(resolved, outcome) || step.prompt;
-                pushStep({ type: 'result', prompt: outcomePrompt, option: step.option, outcome, resultText, resolved });
+                pushOutcomeOrConditional({
+                    prompt: outcomePrompt,
+                    option: step.option,
+                    outcome,
+                    resultText,
+                    resolved,
+                });
+            }
+
+            if (action === 'conditional' && step && step.type === 'conditional-choice') {
+                const choice = actionButton.getAttribute('data-choice') === 'reward'
+                    ? 'reward'
+                    : 'else';
+                const replaced = replaceFirstConditionalNode(step.resultTree, choice);
+                const nextTree = replaced.tree;
+                const nextConditional = findFirstConditionalNode(nextTree);
+                if (nextConditional) {
+                    pushStep({
+                        type: 'conditional-choice',
+                        prompt: step.prompt,
+                        option: step.option,
+                        outcome: step.outcome,
+                        resolved: step.resolved,
+                        resultTree: nextTree,
+                        requirementsText: getRequirementsRawText(nextConditional),
+                    });
+                } else {
+                    pushStep({
+                        type: 'result',
+                        prompt: step.prompt,
+                        option: step.option,
+                        outcome: step.outcome,
+                        resolved: step.resolved,
+                        resultTree: nextTree,
+                    });
+                }
             }
         });
         document.getElementById('eventPanelBack').addEventListener('click', popStep);
@@ -2242,7 +3466,13 @@
             maybeShowAnnouncement();
         });
 
-        window.addEventListener('load', loadEvents);
+        async function initPage() {
+            await loadKeywordMetadata();
+            await loadLookupData();
+            await loadEvents();
+        }
+
+        window.addEventListener('load', initPage);
     </script>
 </body>
 

@@ -220,6 +220,14 @@
             align-items: center;
         }
 
+        .stats-select {
+            padding: 6px 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 0.95em;
+            background: white;
+        }
+
         .stats-note {
             flex-basis: 100%;
             font-size: 0.9em;
@@ -739,6 +747,15 @@
             font-size: 0.8em;
             color: #666;
             white-space: nowrap;
+        }
+
+        .tag.pool-tag {
+            cursor: pointer;
+        }
+
+        .tag.pool-tag:hover {
+            background: #e6e6e6;
+            border-color: #cfcfcf;
         }
 
         .tag-icon {
@@ -1461,6 +1478,12 @@
                 <span class="stat-label" id="showingLabel">Showing:</span>
                 <span class="stat-value" id="showingCount">0</span>
             </div>
+            <div class="stat-item">
+                <span class="stat-label" id="poolFilterLabel">Pool:</span>
+                <select id="poolFilter" class="stats-select">
+                    <option value="">Select Pool</option>
+                </select>
+            </div>
             <div class="stats-note" id="statsRangeNote">Range feature is WIP; the damage value shown at the left could
                 be imprecise, further finetuning is needed.</div>
         </div>
@@ -1579,6 +1602,8 @@
                 allClasses: 'All Classes',
                 totalAbilities: 'Total Abilities:',
                 showing: 'Showing:',
+                poolFilterLabel: 'Pool:',
+                selectPool: 'Select Pool',
                 statsRangeNote: 'Range feature is WIP; the damage value shown at the left could be imprecise, further finetuning is needed.',
                 sourceCommentsLabel: 'Source Comments:',
                 editorNotesLabel: 'Editor Notes:',
@@ -1646,6 +1671,8 @@
                 allClasses: '全部职业',
                 totalAbilities: '能力总数：',
                 showing: '显示：',
+                poolFilterLabel: '池：',
+                selectPool: '选择池',
                 statsRangeNote: '射程功能仍在开发中；左侧显示的伤害数值可能不够精确，仍需进一步微调。',
                 sourceCommentsLabel: '源码注释：',
                 editorNotesLabel: '编辑注释：',
@@ -1803,6 +1830,10 @@
             updateDetailToggleLabel();
             document.getElementById('totalLabel').textContent = t('totalAbilities');
             document.getElementById('showingLabel').textContent = t('showing');
+            const poolFilterLabel = document.getElementById('poolFilterLabel');
+            if (poolFilterLabel) {
+                poolFilterLabel.textContent = t('poolFilterLabel');
+            }
             const statsRangeNote = document.getElementById('statsRangeNote');
             if (statsRangeNote) {
                 statsRangeNote.textContent = t('statsRangeNote');
@@ -1850,6 +1881,9 @@
             const classFilter = document.getElementById('classFilter');
             const selectedClass = classFilter ? classFilter.value : '';
             populateClassFilter(selectedClass);
+            const poolFilter = document.getElementById('poolFilter');
+            const selectedPool = poolFilter ? poolFilter.value : '';
+            populatePoolFilter(selectedPool);
 
             const loadingMessage = document.getElementById('loadingMessage');
             if (loadingMessage) {
@@ -1986,6 +2020,67 @@
                 return `${getClassLabel(className)}/${basicAttack}`;
             }
             return tag;
+        }
+
+        function populatePoolFilter(selectedValue = '') {
+            const poolTags = new Map();
+            allAbilities.forEach(ability => {
+                const tags = Array.isArray(ability.ability_pools)
+                    ? ability.ability_pools
+                    : [];
+                tags.forEach(tag => {
+                    if (!poolTags.has(tag)) {
+                        poolTags.set(tag, localizePoolTag(tag));
+                    }
+                });
+            });
+
+            const select = document.getElementById('poolFilter');
+            if (!select) {
+                return;
+            }
+            select.innerHTML = '';
+
+            const allOption = document.createElement('option');
+            allOption.value = '';
+            allOption.textContent = t('allPools');
+            select.appendChild(allOption);
+
+            const sorted = Array.from(poolTags.entries())
+                .map(([tag, label]) => ({ tag, label }))
+                .sort((a, b) => a.label.localeCompare(b.label, currentLanguage));
+
+            sorted.forEach(({ tag, label }) => {
+                const option = document.createElement('option');
+                option.value = tag;
+                option.textContent = label || tag;
+                select.appendChild(option);
+            });
+
+            select.value = selectedValue;
+        }
+
+        function parseHashQuery(raw) {
+            if (!raw || !raw.startsWith('#')) {
+                return '';
+            }
+            const trimmed = raw.slice(1).trim();
+            if (trimmed.startsWith('(')) {
+                const end = trimmed.indexOf(')');
+                if (end > 1) {
+                    return trimmed.slice(1, end).trim();
+                }
+                return '';
+            }
+            return trimmed;
+        }
+
+        function searchByPool(tag) {
+            const searchInput = document.getElementById('searchInput');
+            const localizedTag = localizePoolTag(tag);
+            searchInput.value = `#(${localizedTag}) `;
+            searchInput.focus();
+            filterAbilities();
         }
 
         function getEditorNote(code) {
@@ -2365,7 +2460,10 @@
                     return true;
                 });
                 const poolTagsHtml = filteredPoolTags.length
-                    ? `<div class="ability-tags">${filteredPoolTags.map(tag => `<span class="tag">${escapeHtml(localizePoolTag(tag))}</span>`).join('')}</div>`
+                    ? `<div class="ability-tags">${filteredPoolTags.map(tag => {
+                        const tagArg = JSON.stringify(tag);
+                        return `<span class="tag pool-tag" onclick='searchByPool(${tagArg})'>${escapeHtml(localizePoolTag(tag))}</span>`;
+                    }).join('')}</div>`
                     : '-';
 
                 const descriptionPieces = [
@@ -2573,14 +2671,30 @@
         function filterAbilities() {
             const search = document.getElementById('searchInput').value.toLowerCase();
             const classFilter = document.getElementById('classFilter').value;
+            const poolFilter = document.getElementById('poolFilter')?.value || '';
 
             filteredAbilities = allAbilities.filter(ability => {
                 const localizedName = getLocalizedText(ability.ability_name_texts, ability.ability_name).toLowerCase();
                 const localizedDescription = getLocalizedText(ability.description_texts, ability.description).toLowerCase();
                 const codeName = (ability.ability_code || '').toLowerCase();
-                const matchesSearch = localizedName.includes(search)
-                    || localizedDescription.includes(search)
-                    || (codeName && codeName.includes(search));
+                let matchesSearch = true;
+                if (search.startsWith('#')) {
+                    const poolSearch = parseHashQuery(search).toLowerCase();
+                    if (poolSearch) {
+                        const poolTags = Array.isArray(ability.ability_pools)
+                            ? ability.ability_pools
+                            : [];
+                        matchesSearch = poolTags.some(tag => {
+                            const rawTag = String(tag).toLowerCase();
+                            const localizedTag = localizePoolTag(tag).toLowerCase();
+                            return rawTag.includes(poolSearch) || localizedTag.includes(poolSearch);
+                        });
+                    }
+                } else {
+                    matchesSearch = localizedName.includes(search)
+                        || localizedDescription.includes(search)
+                        || (codeName && codeName.includes(search));
+                }
 
                 let matchesClass = true;
                 if (classFilter) {
@@ -2592,7 +2706,15 @@
                     }
                 }
 
-                return matchesSearch && matchesClass;
+                let matchesPool = true;
+                if (poolFilter) {
+                    const poolTags = Array.isArray(ability.ability_pools)
+                        ? ability.ability_pools
+                        : [];
+                    matchesPool = poolTags.includes(poolFilter);
+                }
+
+                return matchesSearch && matchesClass && matchesPool;
             });
 
             displayAbilities(filteredAbilities);
@@ -2728,6 +2850,7 @@
         // Event listeners
         document.getElementById('searchInput').addEventListener('input', filterAbilities);
         document.getElementById('classFilter').addEventListener('change', filterAbilities);
+        document.getElementById('poolFilter').addEventListener('change', handlePoolSelection);
         document.querySelectorAll('.lang-link').forEach(button => {
             button.addEventListener('click', () => {
                 const selectedLang = button.getAttribute('data-lang');

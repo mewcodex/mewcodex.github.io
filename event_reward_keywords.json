@@ -1,0 +1,678 @@
+{
+    "source": "event_rewards_samples.gon",
+    "generated": "manual-curation",
+    "result_keywords": [
+        {
+            "key": "add_weather",
+            "tone": "neutral",
+            "labels": {
+                "en": "Add Weather",
+                "zh": "添加天气"
+            }
+        },
+        {
+            "key": "allow",
+            "tone": "neutral",
+            "labels": {
+                "en": "Allow (Unused)",
+                "zh": "允许（未使用）"
+            }
+        },
+        {
+            "key": "ally_ambush_next_fights",
+            "tone": "positive",
+            "labels": {
+                "en": "Ally Ambush Next Fights",
+                "zh": "友军伏击接下来的战斗"
+            }
+        },
+        {
+            "key": "ambush",
+            "tone": "negative",
+            "labels": {
+                "en": "Ambush",
+                "zh": "伏击"
+            }
+        },
+        {
+            "key": "ambush_next_basic_fights",
+            "tone": "negative",
+            "labels": {
+                "en": "Ambush Next Basic Fights",
+                "zh": "接下来普通战斗触发伏击"
+            }
+        },
+        {
+            "key": "battle",
+            "tone": "neutral",
+            "labels": {
+                "en": "Battle",
+                "zh": "战斗"
+            }
+        },
+        {
+            "key": "begin_chapter",
+            "tone": "neutral",
+            "labels": {
+                "en": "Begin Chapter",
+                "zh": "开始章节"
+            }
+        },
+        {
+            "key": "complete_item_quest",
+            "tone": "neutral",
+            "labels": {
+                "en": "Complete Item Quest",
+                "zh": "完成物品任务"
+            }
+        },
+        {
+            "key": "damage",
+            "tone": "negative",
+            "labels": {
+                "en": "Damage",
+                "zh": "伤害"
+            }
+        },
+        {
+            "key": "decrement_legacy_counter",
+            "tone": "negative",
+            "labels": {
+                "en": "Decrement Global Counter",
+                "zh": "减少全局计数"
+            }
+        },
+        {
+            "key": "event_now",
+            "tone": "neutral",
+            "labels": {
+                "en": "Start Event",
+                "zh": "立即触发事件"
+            }
+        },
+        {
+            "key": "event_now_same_cat",
+            "tone": "neutral",
+            "labels": {
+                "en": "Start Event With The Same Cat",
+                "zh": "立即触发事件（同一只猫）"
+            }
+        },
+        {
+            "key": "full_heal",
+            "tone": "positive",
+            "labels": {
+                "en": "Full Heal",
+                "zh": "完全恢复"
+            }
+        },
+        {
+            "key": "gain_cat_familiar",
+            "tone": "positive",
+            "labels": {
+                "en": "Gain a New Cat",
+                "zh": "获得新猫"
+            }
+        },
+        {
+            "key": "gain_coins",
+            "tone": "positive",
+            "labels": {
+                "en": "Gain Coins",
+                "zh": "获得金币"
+            }
+        },
+        {
+            "key": "gain_disorder",
+            "tone": "negative",
+            "labels": {
+                "en": "Gain Disorder",
+                "zh": "获得病症"
+            }
+        },
+        {
+            "key": "gain_disorder_from_pool",
+            "tone": "negative",
+            "labels": {
+                "en": "Gain Disorder From Pool",
+                "zh": "从池中获得病症"
+            }
+        },
+        {
+            "key": "gain_familiar",
+            "tone": "positive",
+            "labels": {
+                "en": "Gain Familiar",
+                "zh": "获得随从"
+            }
+        },
+        {
+            "key": "gain_food",
+            "tone": "positive",
+            "labels": {
+                "en": "Gain Food",
+                "zh": "获得食物"
+            }
+        },
+        {
+            "key": "gain_immortal_familiar",
+            "tone": "positive",
+            "labels": {
+                "en": "Gain Immortal Familiar",
+                "zh": "获得不死随从"
+            }
+        },
+        {
+            "key": "get_and_equip_item",
+            "tone": "positive",
+            "labels": {
+                "en": "Get And Equip Item",
+                "zh": "获得并装备物品"
+            }
+        },
+        {
+            "key": "get_and_equip_item_from_pool",
+            "tone": "positive",
+            "labels": {
+                "en": "Get And Equip Item From Pool",
+                "zh": "从池中获得并装备物品"
+            }
+        },
+        {
+            "key": "get_full_item_set_from_pool",
+            "tone": "positive",
+            "labels": {
+                "en": "Get Full Item Set From Pool",
+                "zh": "从池中获得整套装备"
+            }
+        },
+        {
+            "key": "get_item",
+            "tone": "positive",
+            "labels": {
+                "en": "Get Item",
+                "zh": "获得物品"
+            }
+        },
+        {
+            "key": "get_item_from_pool",
+            "tone": "positive",
+            "labels": {
+                "en": "Get Item From Pool",
+                "zh": "从池中获得物品"
+            }
+        },
+        {
+            "key": "get_parasite",
+            "tone": "positive",
+            "labels": {
+                "en": "Get Parasite",
+                "zh": "获得寄生虫"
+            }
+        },
+        {
+            "key": "get_parasite_from_pool",
+            "tone": "positive",
+            "labels": {
+                "en": "Get Parasite From Pool",
+                "zh": "从池中获得寄生虫"
+            }
+        },
+        {
+            "key": "global_effect_next_fight",
+            "tone": "neutral",
+            "labels": {
+                "en": "Global Effect Next Fight",
+                "zh": "下场战斗全局效果"
+            }
+        },
+        {
+            "key": "heal",
+            "tone": "positive",
+            "labels": {
+                "en": "Heal",
+                "zh": "治疗"
+            }
+        },
+        {
+            "key": "heal_disorder",
+            "tone": "positive",
+            "labels": {
+                "en": "Heal Disorder",
+                "zh": "治愈病症"
+            }
+        },
+        {
+            "key": "heal_injury",
+            "tone": "positive",
+            "labels": {
+                "en": "Heal Injury",
+                "zh": "治愈创伤"
+            }
+        },
+        {
+            "key": "hide_cat",
+            "tone": "neutral",
+            "labels": {
+                "en": "Hide Cat (Unused)",
+                "zh": "隐藏猫（未使用）"
+            }
+        },
+        {
+            "key": "increment_deja_vu",
+            "tone": "negative",
+            "labels": {
+                "en": "Increment Deja Vu",
+                "zh": "增加既视感"
+            }
+        },
+        {
+            "key": "increment_legacy_counter",
+            "tone": "positive",
+            "labels": {
+                "en": "Increment Global Counter",
+                "zh": "增加全局计数"
+            }
+        },
+        {
+            "key": "injury",
+            "tone": "negative",
+            "labels": {
+                "en": "Injury",
+                "zh": "创伤"
+            }
+        },
+        {
+            "key": "kill",
+            "tone": "negative",
+            "labels": {
+                "en": "Kill",
+                "zh": "死亡"
+            }
+        },
+        {
+            "key": "learn_ability",
+            "tone": "positive",
+            "labels": {
+                "en": "Learn Ability",
+                "zh": "学习技能"
+            }
+        },
+        {
+            "key": "learn_ability_from_pool",
+            "tone": "positive",
+            "labels": {
+                "en": "Learn Ability From Pool",
+                "zh": "从池中学习技能"
+            }
+        },
+        {
+            "key": "learn_passive",
+            "tone": "positive",
+            "labels": {
+                "en": "Learn Passive",
+                "zh": "学习被动"
+            }
+        },
+        {
+            "key": "learn_passive_from_pool",
+            "tone": "positive",
+            "labels": {
+                "en": "Learn Passive From Pool",
+                "zh": "从池中学习被动"
+            }
+        },
+        {
+            "key": "leave_party_temporarily",
+            "tone": "neutral",
+            "labels": {
+                "en": "Leave Party Temporarily",
+                "zh": "暂时离队"
+            }
+        },
+        {
+            "key": "level_up",
+            "tone": "positive",
+            "labels": {
+                "en": "Level Up",
+                "zh": "升级"
+            }
+        },
+        {
+            "key": "lose_all_equipped_items",
+            "tone": "negative",
+            "labels": {
+                "en": "Lose All Equipped Items",
+                "zh": "失去所有装备"
+            }
+        },
+        {
+            "key": "lose_item",
+            "tone": "negative",
+            "labels": {
+                "en": "Lose Item",
+                "zh": "失去物品"
+            }
+        },
+        {
+            "key": "lose_item_from_inventory",
+            "tone": "negative",
+            "labels": {
+                "en": "Lose Item From Inventory",
+                "zh": "从背包失去物品"
+            }
+        },
+        {
+            "key": "lose_specific_item",
+            "tone": "negative",
+            "labels": {
+                "en": "Lose Specific Item",
+                "zh": "失去指定物品"
+            }
+        },
+        {
+            "key": "make_old",
+            "tone": "negative",
+            "labels": {
+                "en": "Make Old",
+                "zh": "变老"
+            }
+        },
+        {
+            "key": "mutation",
+            "tone": "positive",
+            "labels": {
+                "en": "Mutation",
+                "zh": "突变"
+            }
+        },
+        {
+            "key": "next_event_bonus",
+            "tone": "positive",
+            "labels": {
+                "en": "Next Event Bonus",
+                "zh": "下次事件加成"
+            }
+        },
+        {
+            "key": "next_event_from_set",
+            "tone": "neutral",
+            "labels": {
+                "en": "Next Event From Set",
+                "zh": "从集合触发下一事件"
+            }
+        },
+        {
+            "key": "next_fight_from_set",
+            "tone": "neutral",
+            "labels": {
+                "en": "Next Fight From Set",
+                "zh": "从集合触发下一战斗"
+            }
+        },
+        {
+            "key": "override_end_option_prompt",
+            "tone": "neutral",
+            "labels": {
+                "en": "Modify Option Prompt",
+                "zh": "覆盖结束按钮文本"
+            }
+        },
+        {
+            "key": "party_damage",
+            "tone": "negative",
+            "labels": {
+                "en": "Party Damage",
+                "zh": "全队受伤"
+            }
+        },
+        {
+            "key": "party_gain_disorder_from_pool",
+            "tone": "negative",
+            "labels": {
+                "en": "Party Gain Disorder From Pool",
+                "zh": "全队从池中获得病症"
+            }
+        },
+        {
+            "key": "party_gain_disorder_from_pool_exclude_self",
+            "tone": "negative",
+            "labels": {
+                "en": "Other Cats Gain Disorder From Pool",
+                "zh": "全队从池中获得病症（不含自身）"
+            }
+        },
+        {
+            "key": "party_heal",
+            "tone": "positive",
+            "labels": {
+                "en": "Party Heal",
+                "zh": "全队治疗"
+            }
+        },
+        {
+            "key": "party_heal_disorder",
+            "tone": "positive",
+            "labels": {
+                "en": "Party Heal Disorder",
+                "zh": "全队治愈病症"
+            }
+        },
+        {
+            "key": "party_heal_injury",
+            "tone": "positive",
+            "labels": {
+                "en": "Party Heal Injury",
+                "zh": "全队治愈创伤"
+            }
+        },
+        {
+            "key": "party_injury",
+            "tone": "negative",
+            "labels": {
+                "en": "Party Injury",
+                "zh": "全队创伤"
+            }
+        },
+        {
+            "key": "party_permanent_stats",
+            "tone": "neutral",
+            "labels": {
+                "en": "Party Permanent Stats",
+                "zh": "全队永久属性"
+            }
+        },
+        {
+            "key": "party_random_mutation",
+            "tone": "positive",
+            "labels": {
+                "en": "Party Random Mutation",
+                "zh": "全队随机突变"
+            }
+        },
+        {
+            "key": "party_skip_next_fight_chance",
+            "tone": "neutral",
+            "labels": {
+                "en": "Party Skip Next Fight Chance",
+                "zh": "全队跳过下场战斗概率"
+            }
+        },
+        {
+            "key": "party_status_next_fight",
+            "tone": "neutral",
+            "labels": {
+                "en": "Party Status Next Fight",
+                "zh": "全队下场战斗状态"
+            }
+        },
+        {
+            "key": "permanent_stats",
+            "tone": "neutral",
+            "labels": {
+                "en": "Permanent Stats",
+                "zh": "永久属性"
+            }
+        },
+        {
+            "key": "random_mutation",
+            "tone": "positive",
+            "labels": {
+                "en": "Random Mutation",
+                "zh": "随机突变"
+            }
+        },
+        {
+            "key": "random_mutation_from_set",
+            "tone": "positive",
+            "labels": {
+                "en": "Random Mutation From Set",
+                "zh": "从集合随机突变"
+            }
+        },
+        {
+            "key": "report_luck",
+            "tone": "neutral",
+            "labels": {
+                "en": "Report Luck (Unused)",
+                "zh": "检定幸运"
+            }
+        },
+        {
+            "key": "scramble_abilities",
+            "tone": "neutral",
+            "labels": {
+                "en": "Scramble Abilities",
+                "zh": "重置技能"
+            }
+        },
+        {
+            "key": "scramble_basic_attack",
+            "tone": "neutral",
+            "labels": {
+                "en": "Scramble Basic Attack",
+                "zh": "重置基础攻击"
+            }
+        },
+        {
+            "key": "scramble_passives",
+            "tone": "neutral",
+            "labels": {
+                "en": "Scramble Passives",
+                "zh": "重置被动"
+            }
+        },
+        {
+            "key": "self_status_next_fight",
+            "tone": "neutral",
+            "labels": {
+                "en": "Self Status Next Fight",
+                "zh": "自身下场战斗状态"
+            }
+        },
+        {
+            "key": "set_adventure_token",
+            "tone": "neutral",
+            "labels": {
+                "en": "Set Adventure Token",
+                "zh": "设置冒险令牌"
+            }
+        },
+        {
+            "key": "set_age",
+            "tone": "neutral",
+            "labels": {
+                "en": "Set Age",
+                "zh": "设置年龄"
+            }
+        },
+        {
+            "key": "set_legacy_token",
+            "tone": "neutral",
+            "labels": {
+                "en": "Set Legacy Token",
+                "zh": "设置全局令牌"
+            }
+        },
+        {
+            "key": "shop_now",
+            "tone": "neutral",
+            "labels": {
+                "en": "Shop Now",
+                "zh": "立即商店"
+            }
+        },
+        {
+            "key": "skip_next_fight",
+            "tone": "neutral",
+            "labels": {
+                "en": "Skip Next Fight",
+                "zh": "跳过下场战斗"
+            }
+        },
+        {
+            "key": "spawn_reflection_next_fight",
+            "tone": "neutral",
+            "labels": {
+                "en": "Spawn Reflection Next Fight",
+                "zh": "下场战斗生成镜像"
+            }
+        },
+        {
+            "key": "spawn_unit_next_fight",
+            "tone": "neutral",
+            "labels": {
+                "en": "Spawn Unit Next Fight",
+                "zh": "下场战斗生成单位"
+            }
+        },
+        {
+            "key": "spin",
+            "tone": "neutral",
+            "labels": {
+                "en": "Try Again",
+                "zh": "再次转动"
+            }
+        },
+        {
+            "key": "transform_item",
+            "tone": "neutral",
+            "labels": {
+                "en": "Transform Item",
+                "zh": "转换物品"
+            }
+        },
+        {
+            "key": "unlock",
+            "tone": "neutral",
+            "labels": {
+                "en": "Unlock",
+                "zh": "解锁"
+            }
+        },
+        {
+            "key": "unlock_item_quest",
+            "tone": "neutral",
+            "labels": {
+                "en": "Unlock Item Quest",
+                "zh": "解锁物品任务"
+            }
+        },
+        {
+            "key": "upgrade_ability",
+            "tone": "positive",
+            "labels": {
+                "en": "Upgrade Ability",
+                "zh": "升级技能"
+            }
+        },
+        {
+            "key": "upgrade_passive",
+            "tone": "positive",
+            "labels": {
+                "en": "Upgrade Passive",
+                "zh": "升级被动"
+            }
+        }
+    ]
+}

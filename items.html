@@ -338,12 +338,22 @@
             display: flex;
             gap: 20px;
             border-bottom: 1px solid #ddd;
+            flex-wrap: wrap;
+            align-items: center;
         }
 
         .stat-item {
             display: flex;
             gap: 10px;
             align-items: center;
+        }
+
+        .stats-select {
+            padding: 6px 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 0.95em;
+            background: white;
         }
 
         .stat-label {
@@ -1027,6 +1037,18 @@
                 <span class="stat-label" id="showingLabel">Showing:</span>
                 <span class="stat-value" id="showingCount">0</span>
             </div>
+            <div class="stat-item">
+                <span class="stat-label" id="setFilterLabel">Set:</span>
+                <select id="setFilter" class="stats-select">
+                    <option value="">All Sets</option>
+                </select>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label" id="poolFilterLabel">Pool:</span>
+                <select id="poolFilter" class="stats-select">
+                    <option value="">All Pools</option>
+                </select>
+            </div>
         </div>
 
         <div class="table-wrapper">
@@ -1089,7 +1111,7 @@
             en: {
                 pageTitle: 'Mewgenics Item Viewer',
                 headerTitle: 'Mewgenics Item Viewer',
-                searchPlaceholder: 'Search by name/description or use #SetName for sets...',
+                searchPlaceholder: 'Search by name/description or use #SetName for sets, #(Pool Name) for pools...',
                 otherNoType: 'Other (No Type)',
                 otherNoRarity: 'Other (No Rarity)',
                 noneCursedRarity: 'None (Cursed)',
@@ -1100,6 +1122,10 @@
                 nonCursed: 'Non-Cursed Only',
                 totalItems: 'Total Items:',
                 showing: 'Showing:',
+                setFilterLabel: 'Set:',
+                poolFilterLabel: 'Pool:',
+                selectSet: 'Select Set',
+                selectPool: 'Select Pool',
                 sourceCommentsLabel: 'Source Comments:',
                 editorNotesLabel: 'Editor Notes:',
                 unlockRequirementsLabel: 'Unlock Requirements:',
@@ -1132,7 +1158,7 @@
             zh: {
                 pageTitle: 'Mewgenics 物品图鉴',
                 headerTitle: 'Mewgenics 物品图鉴',
-                searchPlaceholder: '按名称/描述搜索，或使用 #套装名 搜索套装...',
+                searchPlaceholder: '按名称/描述搜索，或使用 #套装名 搜索套装、#(池名) 搜索物品池...',
                 otherNoType: '其他（无类型）',
                 otherNoRarity: '其他（无稀有度）',
                 noneCursedRarity: '无（诅咒）',
@@ -1143,6 +1169,10 @@
                 nonCursed: '非诅咒物品',
                 totalItems: '物品总数：',
                 showing: '显示：',
+                setFilterLabel: '套装：',
+                poolFilterLabel: '池：',
+                selectSet: '选择套装',
+                selectPool: '选择池',
                 sourceCommentsLabel: '源码注释：',
                 editorNotesLabel: '编辑注释：',
                 unlockRequirementsLabel: '解锁条件：',
@@ -1366,6 +1396,18 @@
             return SET_LABELS[currentLanguage]?.[set] || SET_LABELS.en[set] || set;
         }
 
+        function parsePoolQuery(raw) {
+            if (!raw || !raw.startsWith('#(')) {
+                return '';
+            }
+            const trimmed = raw.slice(2).trim();
+            const end = trimmed.indexOf(')');
+            if (end > 0) {
+                return trimmed.slice(0, end).trim();
+            }
+            return '';
+        }
+
         function searchBySet(setName) {
             const searchInput = document.getElementById('searchInput');
 
@@ -1373,7 +1415,14 @@
             const setBonus = setBonusesData.find(sb => sb.set_code === setName);
             const localizedSetName = setBonus ? getSetBonusName(setBonus) : getSetLabel(setName);
 
-            searchInput.value = '#' + localizedSetName + ' ';
+            searchInput.value = `#${localizedSetName} `;
+            searchInput.focus();
+            filterItems();
+        }
+
+        function searchByPool(poolName) {
+            const searchInput = document.getElementById('searchInput');
+            searchInput.value = `#(${poolName}) `;
             searchInput.focus();
             filterItems();
         }
@@ -1435,6 +1484,14 @@
             document.getElementById('showHiddenLabel').textContent = t('showHidden');
             document.getElementById('totalLabel').textContent = t('totalItems');
             document.getElementById('showingLabel').textContent = t('showing');
+            const setFilterLabel = document.getElementById('setFilterLabel');
+            if (setFilterLabel) {
+                setFilterLabel.textContent = t('setFilterLabel');
+            }
+            const poolFilterLabel = document.getElementById('poolFilterLabel');
+            if (poolFilterLabel) {
+                poolFilterLabel.textContent = t('poolFilterLabel');
+            }
             document.getElementById('iconHeader').textContent = t('iconHeader');
             document.getElementById('nameHeader').textContent = t('nameHeader');
             document.getElementById('descHeader').textContent = t('descHeader');
@@ -1463,6 +1520,12 @@
             populateKindFilter(selectedKind);
             populateRarityFilter(selectedRarity);
             populateCursedFilter(selectedCursed);
+            const setFilter = document.getElementById('setFilter');
+            const selectedSet = setFilter ? setFilter.value : '';
+            populateSetFilter(selectedSet);
+            const poolFilter = document.getElementById('poolFilter');
+            const selectedPool = poolFilter ? poolFilter.value : '';
+            populatePoolFilter(selectedPool);
 
             const loadingMessage = document.getElementById('loadingMessage');
             if (loadingMessage) {
@@ -1655,6 +1718,93 @@
             select.value = selectedValue;
         }
 
+        function populateSetFilter(selectedValue = '') {
+            const setMap = new Map();
+            allItems.forEach(item => {
+                const sets = Array.isArray(item.sets) ? item.sets : [];
+                sets.forEach(setCode => {
+                    if (!setMap.has(setCode)) {
+                        const setBonus = setBonusesData.find(sb => sb.set_code === setCode);
+                        const label = setBonus ? getSetBonusName(setBonus) : getSetLabel(setCode);
+                        setMap.set(setCode, label);
+                    }
+                });
+            });
+
+            const select = document.getElementById('setFilter');
+            if (!select) {
+                return;
+            }
+            select.innerHTML = '';
+
+            const placeholder = document.createElement('option');
+            placeholder.value = '';
+            placeholder.textContent = t('selectSet');
+            select.appendChild(placeholder);
+
+            const sorted = Array.from(setMap.entries())
+                .map(([code, label]) => ({ code, label }))
+                .sort((a, b) => a.label.localeCompare(b.label, currentLanguage));
+
+            sorted.forEach(({ code, label }) => {
+                const option = document.createElement('option');
+                option.value = code;
+                option.textContent = label || code;
+                select.appendChild(option);
+            });
+
+            select.value = selectedValue;
+        }
+
+        function populatePoolFilter(selectedValue = '') {
+            const poolMap = new Map();
+            allItems.forEach(item => {
+                const pools = Array.isArray(item.item_pools) ? item.item_pools : [];
+                pools.forEach(pool => {
+                    if (typeof pool === 'string') {
+                        if (!poolMap.has(pool)) {
+                            poolMap.set(pool, pool);
+                        }
+                        return;
+                    }
+                    if (pool && typeof pool === 'object') {
+                        const tag = pool.tag || '';
+                        if (!tag) {
+                            return;
+                        }
+                        if (!poolMap.has(tag)) {
+                            const label = getLocalizedText(pool.tag_texts, tag) || tag;
+                            poolMap.set(tag, label);
+                        }
+                    }
+                });
+            });
+
+            const select = document.getElementById('poolFilter');
+            if (!select) {
+                return;
+            }
+            select.innerHTML = '';
+
+            const placeholder = document.createElement('option');
+            placeholder.value = '';
+            placeholder.textContent = t('selectPool');
+            select.appendChild(placeholder);
+
+            const sorted = Array.from(poolMap.entries())
+                .map(([tag, label]) => ({ tag, label }))
+                .sort((a, b) => a.label.localeCompare(b.label, currentLanguage));
+
+            sorted.forEach(({ tag, label }) => {
+                const option = document.createElement('option');
+                option.value = tag;
+                option.textContent = label || tag;
+                select.appendChild(option);
+            });
+
+            select.value = selectedValue;
+        }
+
 
         function makeRowId(prefix, code) {
             if (!code) {
@@ -1810,7 +1960,10 @@
                         })
                         .filter(Boolean);
                     if (poolTags.length > 0) {
-                        poolsHtml = `<div class="item-pools">${poolTags.map(tag => `<span class="item-pool-badge">${escapeHtml(tag)}</span>`).join('')}</div>`;
+                        poolsHtml = `<div class="item-pools">${poolTags.map(tag => {
+                            const tagArg = JSON.stringify(tag);
+                            return `<span class="item-pool-badge" onclick='searchByPool(${tagArg})' style="cursor: pointer;">${escapeHtml(tag)}</span>`;
+                        }).join('')}</div>`;
                     }
                 }
 
@@ -1933,6 +2086,8 @@
             const kindFilter = document.getElementById('kindFilter').value;
             const rarityFilter = document.getElementById('rarityFilter').value;
             const cursedFilter = document.getElementById('cursedFilter').value;
+            const setFilter = document.getElementById('setFilter')?.value || '';
+            const poolFilter = document.getElementById('poolFilter')?.value || '';
 
             filteredItems = allItems.filter(item => {
                 const localizedNameRaw = getLocalizedText(item.item_name_texts, item.item_name) || '';
@@ -1948,7 +2103,24 @@
                 const localizedDescription = getLocalizedText(item.description_texts, item.description).toLowerCase();
 
                 let matchesSearch = true;
-                if (search.startsWith('#')) {
+                if (search.startsWith('#(')) {
+                    // Pool search: #(Pool Name) (supports localized labels)
+                    const poolSearch = parsePoolQuery(search).toLowerCase();
+                    if (poolSearch) {
+                        const poolTags = Array.isArray(item.item_pools) ? item.item_pools : [];
+                        matchesSearch = poolTags.some(pool => {
+                            if (typeof pool === 'string') {
+                                return pool.toLowerCase().includes(poolSearch);
+                            }
+                            if (pool && typeof pool === 'object') {
+                                const rawTag = (pool.tag || '').toLowerCase();
+                                const localizedTag = getLocalizedText(pool.tag_texts, pool.tag || '').toLowerCase();
+                                return rawTag.includes(poolSearch) || localizedTag.includes(poolSearch);
+                            }
+                            return false;
+                        });
+                    }
+                } else if (search.startsWith('#')) {
                     // Set search: #SetName (supports both English and localized names)
                     const setSearch = search.substring(1).trim().toLowerCase();
                     if (setSearch) {
@@ -1980,6 +2152,25 @@
                     }
                 }
 
+                let matchesSet = true;
+                if (setFilter) {
+                    matchesSet = Array.isArray(item.sets) && item.sets.includes(setFilter);
+                }
+
+                let matchesPool = true;
+                if (poolFilter) {
+                    const pools = Array.isArray(item.item_pools) ? item.item_pools : [];
+                    matchesPool = pools.some(pool => {
+                        if (typeof pool === 'string') {
+                            return pool === poolFilter;
+                        }
+                        if (pool && typeof pool === 'object') {
+                            return pool.tag === poolFilter;
+                        }
+                        return false;
+                    });
+                }
+
                 // Handle rarity filter with special "__null__" value for items without a rarity
                 let matchesRarity = true;
                 if (rarityFilter) {
@@ -1996,7 +2187,7 @@
                     (cursedFilter === 'cursed' && item.cursed) ||
                     (cursedFilter === 'non-cursed' && !item.cursed);
 
-                return matchesSearch && matchesKind && matchesRarity && matchesCursed;
+                return matchesSearch && matchesKind && matchesRarity && matchesCursed && matchesSet && matchesPool;
             });
 
             updateFilterTags();
@@ -2009,7 +2200,9 @@
 
             tagsContainer.innerHTML = '';
 
-            if (search.startsWith('#')) {
+            if (search.startsWith('#(')) {
+                tagsContainer.classList.remove('visible');
+            } else if (search.startsWith('#')) {
                 const setSearch = search.substring(1).trim().toLowerCase();
                 if (setSearch) {
                     // Find matching set bonus
@@ -2358,6 +2551,8 @@
         document.getElementById('kindFilter').addEventListener('change', filterItems);
         document.getElementById('rarityFilter').addEventListener('change', filterItems);
         document.getElementById('cursedFilter').addEventListener('change', filterItems);
+        document.getElementById('setFilter').addEventListener('change', handleSetSelection);
+        document.getElementById('poolFilter').addEventListener('change', handlePoolSelection);
         document.querySelectorAll('.lang-link').forEach(button => {
             button.addEventListener('click', () => {
                 const selectedLang = button.getAttribute('data-lang');
