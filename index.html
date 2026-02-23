@@ -2060,6 +2060,19 @@
             select.value = selectedValue;
         }
 
+        function handlePoolSelection() {
+            const select = document.getElementById('poolFilter');
+            if (!select) {
+                return;
+            }
+            const selected = select.value;
+            if (!selected) {
+                return;
+            }
+            searchByPool(selected);
+            select.value = '';
+        }
+
         function parseHashQuery(raw) {
             if (!raw || !raw.startsWith('#')) {
                 return '';

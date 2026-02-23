@@ -1408,6 +1408,19 @@
             return '';
         }
 
+        function handlePoolSelection() {
+            const select = document.getElementById('poolFilter');
+            if (!select) {
+                return;
+            }
+            const selected = select.value;
+            if (!selected) {
+                return;
+            }
+            searchByPool(selected);
+            select.value = '';
+        }
+
         function searchBySet(setName) {
             const searchInput = document.getElementById('searchInput');
 
