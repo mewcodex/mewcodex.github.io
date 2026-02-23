@@ -2111,7 +2111,7 @@
             return formatPoolRestriction(tokens, false);
         }
 
-        function localizeRewardBody(key, body) {
+        function localizeRewardBody(key, body, promptTextMap) {
             if (!body) {
                 return body;
             }
@@ -2175,6 +2175,12 @@
                 return tokens.join(' ');
             }
 
+            if (key === 'override_end_option_prompt') {
+                const promptKey = extractTextKeyFromLine(body);
+                const localized = getPromptText(promptKey, promptTextMap);
+                return localized || promptKey || body;
+            }
+
             if (key === 'pool' && tokens[0] === 'pool' && tokens[1]) {
                 return formatPoolRestriction(tokens, false);
             }
@@ -2203,7 +2209,7 @@
             }
         }
 
-        function renderKeywordLine(line) {
+        function renderKeywordLine(line, promptTextMap) {
             const trimmed = line.trim();
             if (!trimmed) {
                 return '';
@@ -2227,7 +2233,7 @@
             if (key === 'get_item_from_pool' && body && !body.startsWith('{')) {
                 body = `pool ${body}`;
             }
-            const localizedBody = localizeRewardBody(key, body);
+            const localizedBody = localizeRewardBody(key, body, promptTextMap);
             const bodyHtml = localizedBody
                 ? `<div class="event-keyword-body">${parseRichText(localizedBody)}</div>`
                 : '';
@@ -2673,6 +2679,25 @@
             return hasRenderableContent(rewardNode) || hasRenderableContent(elseNode);
         }
 
+        function buildRewardGroupFromNode(node) {
+            const rarityBlocks = [];
+            const otherLines = [];
+            for (const line of node.lines || []) {
+                if (!shouldSkipLine(line)) {
+                    otherLines.push(line);
+                }
+            }
+            for (const child of node.children || []) {
+                if (child) {
+                    rarityBlocks.push({ rarity: child.name, node: child });
+                }
+            }
+            if (otherLines.length) {
+                rarityBlocks.push({ rarity: 'other', body: otherLines.join('; ') });
+            }
+            return rarityBlocks;
+        }
+
         function parseOutcomeTree(tree) {
             if (!tree) {
                 return { details: [], rewards: [], rewardPresentation: '' };
@@ -2680,24 +2705,7 @@
             const rewardNodes = [];
             collectRewardNodes(tree, rewardNodes, false);
             const details = collectDetailsFromNode(tree);
-            let rewards = rewardNodes.map((node) => {
-                const rarityBlocks = [];
-                const otherLines = [];
-                for (const line of node.lines) {
-                    if (!shouldSkipLine(line)) {
-                        otherLines.push(line);
-                    }
-                }
-                for (const child of node.children) {
-                    if (child) {
-                        rarityBlocks.push({ rarity: child.name, node: child });
-                    }
-                }
-                if (otherLines.length) {
-                    rarityBlocks.push({ rarity: 'other', body: otherLines.join('; ') });
-                }
-                return rarityBlocks;
-            });
+            let rewards = rewardNodes.map((node) => buildRewardGroupFromNode(node));
             if (rewards.length === 0) {
                 const listNodes = [];
                 collectListNodes(tree, listNodes);
@@ -2705,7 +2713,9 @@
                     rewards = listNodes.map((node) => [{ rarity: 'other', node }]);
                 }
             }
-            const rewardPresentation = rewards.length ? 'inline' : '';
+            const rewardPresentation = rewardNodes.length
+                ? 'boxed'
+                : (rewards.length ? 'inline' : '');
             return { details, rewards, rewardPresentation };
         }
 
@@ -2749,7 +2759,7 @@
                 const value = entry.value ? parseRichText(entry.value) : '';
                 if (getKeywordTitle(key)) {
                     const line = value ? `${key} ${entry.value}` : key;
-                    return renderKeywordLine(line);
+                    return renderKeywordLine(line, promptTextMap);
                 }
                 return `
                     <div class="event-detail-card">
@@ -2804,6 +2814,13 @@
         function renderRewardContent(node, promptTextMap) {
             if (!node) {
                 return '';
+            }
+            if (node.name === 'reward') {
+                const group = buildRewardGroupFromNode(node);
+                if (!group.length) {
+                    return '';
+                }
+                return renderRewardGroups([group], promptTextMap, true);
             }
             if (node.name === 'random_pool' || node.name === 'random_pool_consider_luck' || node.name === 'list') {
                 const title = node.name === 'list'
@@ -2883,7 +2900,7 @@
                     ? `<div class="event-reward-entry-prompt">${parseRichText(promptText)}</div>`
                     : '';
                 const linesHtml = otherLines.map((line) => {
-                    return renderKeywordLine(line);
+                    return renderKeywordLine(line, promptTextMap);
                 }).join('');
                 const childrenHtml = node.children.map((child) => {
                     return renderRewardContent(child, promptTextMap);
@@ -2918,7 +2935,7 @@
                     const promptText = getPromptText(key, promptTextMap);
                     parts.push(`<div>${parseRichText(promptText || key)}</div>`);
                 } else {
-                    parts.push(renderKeywordLine(line));
+                    parts.push(renderKeywordLine(line, promptTextMap));
                 }
             }
             const nestedBlocks = node.children.map((child) => {
@@ -2973,7 +2990,7 @@
             const chanceHtml = chanceValue
                 ? `<div class="event-reward-entry-title">${escapeHtml(`chance ${chanceValue}`)}</div>`
                 : '';
-            const linesHtml = otherLines.map((line) => renderKeywordLine(line)).join('');
+            const linesHtml = otherLines.map((line) => renderKeywordLine(line, promptTextMap)).join('');
             const childrenHtml = node.children.map((child) => renderRewardContent(child, promptTextMap)).join('');
             return `
                 <div class="event-reward-entry">
@@ -3284,12 +3301,24 @@
 
         function renderResultChoiceStep(step, showStat) {
             const promptHtml = parseRichText(step.prompt || '');
+            const stat = showStat ? (step.option?.stat || '') : '';
+            const coinRequirement = stat === 'coins' ? formatCoinRequirement(step.option) : '';
+            const statValue = stat && stat !== 'none'
+                ? (coinRequirement || stat)
+                : '';
+            const statIconHtml = stat && stat !== 'none'
+                ? buildStatIconHtml(stat)
+                : '';
+            const statHintHtml = statValue
+                ? `<div class="event-step-subtitle">${escapeHtml(t('statLabel'))} ${statIconHtml}${statIconHtml ? ' ' : ''}${escapeHtml(statValue)}</div>`
+                : '';
 
             return `
                 <div class="event-step-layout">
                     <div class="event-step-content">
                         <div class="event-step-prompt">${promptHtml}</div>
                         <div class="event-step-subtitle">${escapeHtml(t('selectOutcomePrompt'))}</div>
+                        ${statHintHtml}
                     </div>
                     <div class="event-step-actions">
                         <div class="event-result-grid">
@@ -3334,8 +3363,9 @@
                 ? parseOutcomeTree(step.resultTree)
                 : parseOutcomeCode(resultText);
             const detailsHtml = renderDetailsList(parsed.details, promptTextMap);
+            const showHeader = parsed.rewardPresentation === 'boxed';
             const rewardsHtml = parsed.rewardPresentation
-                ? renderRewardGroups(parsed.rewards, promptTextMap, false)
+                ? renderRewardGroups(parsed.rewards, promptTextMap, showHeader)
                 : renderRewardGroups(parsed.rewards, promptTextMap, true);
             const hasContent = detailsHtml || rewardsHtml;
             return `

@@ -135,7 +135,7 @@
             "tone": "negative",
             "labels": {
                 "en": "Gain Disorder From Pool",
-                "zh": "从池中获得病症"
+                "zh": "从病症池中随机获得病症"
             }
         },
         {
@@ -175,7 +175,7 @@
             "tone": "positive",
             "labels": {
                 "en": "Get And Equip Item From Pool",
-                "zh": "从池中获得并装备物品"
+                "zh": "从物品池中随机获得并装备物品"
             }
         },
         {
@@ -183,7 +183,7 @@
             "tone": "positive",
             "labels": {
                 "en": "Get Full Item Set From Pool",
-                "zh": "从池中获得整套装备"
+                "zh": "随机获得整套装备"
             }
         },
         {
@@ -199,7 +199,7 @@
             "tone": "positive",
             "labels": {
                 "en": "Get Item From Pool",
-                "zh": "从池中获得物品"
+                "zh": "从物品池中随机获得物品"
             }
         },
         {
@@ -215,7 +215,7 @@
             "tone": "positive",
             "labels": {
                 "en": "Get Parasite From Pool",
-                "zh": "从池中获得寄生虫"
+                "zh": "从物品池中随机获得寄生虫"
             }
         },
         {
@@ -303,7 +303,7 @@
             "tone": "positive",
             "labels": {
                 "en": "Learn Ability From Pool",
-                "zh": "从池中学习技能"
+                "zh": "从技能池中随机学习技能"
             }
         },
         {
@@ -319,7 +319,7 @@
             "tone": "positive",
             "labels": {
                 "en": "Learn Passive From Pool",
-                "zh": "从池中学习被动"
+                "zh": "随机获得被动"
             }
         },
         {
@@ -399,7 +399,7 @@
             "tone": "neutral",
             "labels": {
                 "en": "Next Event From Set",
-                "zh": "从集合触发下一事件"
+                "zh": "随机触发事件"
             }
         },
         {
@@ -407,7 +407,7 @@
             "tone": "neutral",
             "labels": {
                 "en": "Next Fight From Set",
-                "zh": "从集合触发下一战斗"
+                "zh": "随机触发战斗"
             }
         },
         {
@@ -431,7 +431,7 @@
             "tone": "negative",
             "labels": {
                 "en": "Party Gain Disorder From Pool",
-                "zh": "全队从池中获得病症"
+                "zh": "全队从病症池中随机获得病症"
             }
         },
         {
@@ -439,7 +439,7 @@
             "tone": "negative",
             "labels": {
                 "en": "Other Cats Gain Disorder From Pool",
-                "zh": "全队从池中获得病症（不含自身）"
+                "zh": "全队从病症池中随机获得病症（不含自身）"
             }
         },
         {
@@ -527,7 +527,7 @@
             "tone": "positive",
             "labels": {
                 "en": "Random Mutation From Set",
-                "zh": "从集合随机突变"
+                "zh": "随机获得突变"
             }
         },
         {
@@ -560,6 +560,14 @@
             "labels": {
                 "en": "Scramble Passives",
                 "zh": "重置被动"
+            }
+        },
+        {
+            "key": "self_damage",
+            "tone": "negative",
+            "labels": {
+                "en": "Self Damage",
+                "zh": "自身受伤"
             }
         },
         {
