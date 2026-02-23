@@ -1421,6 +1421,19 @@
             select.value = '';
         }
 
+        function handleSetSelection() {
+            const select = document.getElementById('setFilter');
+            if (!select) {
+                return;
+            }
+            const selected = select.value;
+            if (!selected) {
+                return;
+            }
+            searchBySet(selected);
+            select.value = '';
+        }
+
         function searchBySet(setName) {
             const searchInput = document.getElementById('searchInput');
 
