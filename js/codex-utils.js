@@ -22,6 +22,7 @@
         setLink('navAbilities', `index.html${lang}`);
         setLink('navPassives', `passives.html${lang}`);
         setLink('navItems', `items.html${lang}`);
+        setLink('navFurniture', `furniture.html${lang}`);
         setLink('navMutations', `mutations.html${lang}`);
         setLink('navAchievements', `achievements.html${lang}`);
         setLink('navCharacters', `characters.html${lang}`);

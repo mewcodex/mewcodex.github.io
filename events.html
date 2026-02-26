@@ -1015,6 +1015,7 @@
             <a href="index.html" id="navAbilities">Abilities</a>
             <a href="passives.html" id="navPassives">Passives</a>
             <a href="items.html" id="navItems">Items</a>
+            <a href="furniture.html" id="navFurniture">Furniture</a>
             <a href="mutations.html" id="navMutations">Mutations</a>
             <a href="events.html" class="active" id="navEvents">Events</a>
             <a href="achievements.html" id="navAchievements">Achievements</a>
@@ -1444,6 +1445,118 @@
             }
         }
 
+        const eventTextByKey = new Map();
+
+        function parseCsvRows(text) {
+            const rows = [];
+            let row = [];
+            let field = '';
+            let inQuotes = false;
+
+            for (let i = 0; i < text.length; i += 1) {
+                const ch = text[i];
+                if (ch === '"') {
+                    if (inQuotes && text[i + 1] === '"') {
+                        field += '"';
+                        i += 1;
+                    } else {
+                        inQuotes = !inQuotes;
+                    }
+                    continue;
+                }
+                if (ch === ',' && !inQuotes) {
+                    row.push(field);
+                    field = '';
+                    continue;
+                }
+                if ((ch === '\n' || ch === '\r') && !inQuotes) {
+                    if (ch === '\r' && text[i + 1] === '\n') {
+                        i += 1;
+                    }
+                    row.push(field);
+                    field = '';
+                    if (row.length > 1 || row[0]) {
+                        rows.push(row);
+                    }
+                    row = [];
+                    continue;
+                }
+                field += ch;
+            }
+            if (field.length || row.length) {
+                row.push(field);
+                rows.push(row);
+            }
+            return rows;
+        }
+
+        function readCsvEntries(text, preferredLang) {
+            const rows = parseCsvRows(text || '');
+            if (!rows.length) {
+                return;
+            }
+            const header = rows[0].map(value => value.trim());
+            const keyIndex = header.indexOf('KEY');
+            const enIndex = header.indexOf('en');
+            const langIndex = preferredLang ? header.indexOf(preferredLang) : -1;
+            if (keyIndex < 0 || enIndex < 0) {
+                return;
+            }
+            for (let i = 1; i < rows.length; i += 1) {
+                const row = rows[i];
+                const key = (row[keyIndex] || '').trim();
+                if (!key) {
+                    continue;
+                }
+                const entry = eventTextByKey.get(key) || { en: '', zh: '' };
+                const enValue = row[enIndex] || '';
+                if (enValue && !entry.en) {
+                    entry.en = enValue;
+                }
+                if (langIndex >= 0) {
+                    const localizedValue = row[langIndex] || '';
+                    if (localizedValue) {
+                        entry[preferredLang] = localizedValue;
+                    }
+                }
+                eventTextByKey.set(key, entry);
+            }
+        }
+
+        async function fetchCsvText(paths) {
+            for (const path of paths) {
+                try {
+                    const response = await fetch(path);
+                    if (response.ok) {
+                        return await response.text();
+                    }
+                } catch (error) {
+                    // Try next path.
+                }
+            }
+            return '';
+        }
+
+        async function loadEventTextCsv() {
+            try {
+                const [baseText, zhText] = await Promise.all([
+                    fetchCsvText(['text/events.csv', '../text/events.csv']),
+                    fetchCsvText([
+                        'text/events_zh.csv',
+                        '../translation/Mewgenics_CN_patch/data/text/events.csv'
+                    ]),
+                ]);
+                if (baseText) {
+                    readCsvEntries(baseText, '');
+                }
+                if (zhText) {
+                    readCsvEntries(zhText, 'zh');
+                }
+            } catch (error) {
+                console.warn('Failed to load events.csv:', error);
+            }
+        }
+
         const RARITY_LABELS = {
             en: {
                 common: 'Common',
@@ -1590,6 +1703,7 @@
             document.getElementById('navAbilities').textContent = t('navAbilities');
             document.getElementById('navItems').textContent = t('navItems');
             document.getElementById('navPassives').textContent = t('navPassives');
+            document.getElementById('navFurniture').textContent = t('navFurniture');
             document.getElementById('navMutations').textContent = t('navMutations');
             document.getElementById('navAchievements').textContent = t('navAchievements');
             document.getElementById('navCharacters').textContent = t('navCharacters');
@@ -1802,19 +1916,12 @@
             }
 
             displayedEvents = events;
-            const titleCounts = new Map();
-            for (const entry of events) {
-                const title = getEventTitle(entry);
-                titleCounts.set(title, (titleCounts.get(title) || 0) + 1);
-            }
-
             tbody.innerHTML = events.map((eventData, index) => {
                 const title = getEventTitle(eventData);
                 const prompt = getEventPrompt(eventData);
                 const choice = formatCatChoice(eventData.cat_choice);
                 const eventKey = eventData.event_key || '';
-                const showKey = eventKey && (titleCounts.get(title) || 0) > 1;
-                const keyBadge = showKey
+                const keyBadge = eventKey
                     ? `<span class="tag-badge">${escapeHtml(eventKey)}</span>`
                     : '';
                 const titleHtml = `
@@ -1973,7 +2080,15 @@
                 return '';
             }
             const texts = promptTextMap && promptTextMap[promptKey];
-            return getLocalizedTextOrKey(texts, promptKey);
+            const localized = getLocalizedText(texts, '');
+            if (localized) {
+                return localized;
+            }
+            const csvEntry = eventTextByKey.get(promptKey);
+            if (csvEntry) {
+                return csvEntry[currentLanguage] || csvEntry.en || promptKey;
+            }
+            return promptKey;
         }
 
         function formatWeightLabel(weight) {
@@ -2913,6 +3028,14 @@
                     return `<div class="event-reward-stack">${childrenHtml}</div>`;
                 }
                 if (!hasTitle && !hasPrompt && hasKeywordOnlyLines) {
+                    if (otherLines.length > 1 || childrenHtml) {
+                        return `
+                            <div class="event-reward-entry">
+                                ${linesHtml}
+                                ${childrenHtml}
+                            </div>
+                        `;
+                    }
                     return `<div class="event-reward-stack">${linesHtml}${childrenHtml}</div>`;
                 }
                 return `
@@ -2926,8 +3049,12 @@
             }
 
             const parts = [];
+            const allowRandomInStats = node.name === 'permanent_stats'
+                || node.name === 'party_permanent_stats'
+                || node.name === 'party_permanent_stats_exclude_self';
+            const allowTokens = allowRandomInStats ? ['prompt', 'random'] : ['prompt'];
             for (const line of node.lines) {
-                if (shouldSkipLine(line, { allowTokens: ['prompt'] })) {
+                if (shouldSkipLine(line, { allowTokens })) {
                     continue;
                 }
                 if (line.startsWith('prompt')) {
@@ -3499,6 +3626,7 @@
         async function initPage() {
             await loadKeywordMetadata();
             await loadLookupData();
+            await loadEventTextCsv();
             await loadEvents();
         }
 

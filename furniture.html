@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture Viewer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --theme: #9f978b;
+            --theme-dark: #7f776b;
+            --theme-light: #c9c1b7;
+            --theme-bg: #efece7;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #efece7 0%, #c9c1b7 100%);
+            min-height: 100vh;
+            padding: 36px;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            box-shadow: inset 0 0 140px rgba(32, 28, 22, 0.6), inset 0 0 300px rgba(32, 28, 22, 0.45);
+            z-index: 10;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid rgba(159, 151, 139, 0.35);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25), 0 0 0 6px rgba(159, 151, 139, 0.18);
+            overflow: hidden;
+            position: relative;
+            z-index: 0;
+        }
+
+        .language-toggle {
+            position: absolute;
+            top: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            z-index: 2;
+            font-size: 0.95em;
+        }
+
+        .language-toggle .lang-link {
+            background: rgba(245, 245, 245, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            padding: 4px 8px;
+            cursor: pointer;
+            color: #4b453d;
+            text-decoration: none;
+            font-weight: 600;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+            border-radius: 999px;
+        }
+
+        .language-toggle .lang-link.active {
+            color: #2f2a23;
+            background: rgba(245, 245, 245, 0.95);
+        }
+
+        .language-toggle .lang-separator {
+            color: #4b453d;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+        }
+
+        .header-image {
+            display: block;
+            width: 100%;
+            max-width: 960px;
+            height: 240px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .header-image-wrap {
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(135deg, #9f978b 0%, #7f776b 100%);
+            padding: 12px 16px;
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, #827a6e 0%, #6d6559 100%);
+            border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            padding: 0;
+            overflow-x: hidden;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+
+        .navbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .navbar a {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            padding: 14px 32px;
+            font-size: 1em;
+            font-weight: 500;
+            transition: all 0.2s;
+            border-bottom: 3px solid transparent;
+            position: relative;
+            flex: 0 0 auto;
+        }
+
+        .navbar a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        .navbar a.active {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border-bottom-color: #efece7;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #9f978b 0%, #7f776b 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .controls {
+            padding: 20px;
+            background: #f3f1ee;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .search-wrapper {
+            position: relative;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .controls input {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1em;
+            width: 100%;
+            padding-right: 35px;
+        }
+
+        .clear-button {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #999;
+            font-size: 1.3em;
+            cursor: pointer;
+            padding: 0;
+            width: 24px;
+            height: 24px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.2s;
+        }
+
+        .clear-button:hover {
+            background: #e0e0e0;
+            color: #666;
+        }
+
+        .clear-button.visible {
+            display: flex;
+        }
+
+        .stats {
+            padding: 15px 20px;
+            background: #f7f4f0;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .stat-label {
+            font-weight: bold;
+            color: #5b534a;
+        }
+
+        .stat-value {
+            color: #9f978b;
+            font-weight: bold;
+        }
+
+        .toggle {
+            position: relative;
+            width: 48px;
+            height: 24px;
+            display: inline-block;
+        }
+
+        .toggle input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #ddd;
+            border-radius: 999px;
+            transition: 0.2s ease;
+        }
+
+        .toggle-slider::before {
+            content: '';
+            position: absolute;
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background: white;
+            border-radius: 50%;
+            transition: 0.2s ease;
+        }
+
+        .toggle input:checked+.toggle-slider {
+            background: #9f978b;
+        }
+
+        .toggle input:checked+.toggle-slider::before {
+            transform: translateX(24px);
+        }
+
+        .toggle-text {
+            font-size: 0.9em;
+            color: #5b534a;
+            font-weight: 600;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 900px;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+            vertical-align: top;
+        }
+
+        th {
+            background: #f7f4f0;
+            font-weight: bold;
+            color: #5b534a;
+            position: sticky;
+            top: 0;
+            z-index: 5;
+        }
+
+        tr:nth-child(even) {
+            background: #faf9f7;
+        }
+
+        tr:hover {
+            background: #f5f2ee;
+        }
+
+        .image-cell {
+            width: 70px;
+        }
+
+        .furniture-icon-wrapper {
+            width: 56px;
+            height: 56px;
+            border-radius: 8px;
+            border: 1px solid rgba(159, 151, 139, 0.3);
+            background: #f1ede7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .furniture-icon {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+        }
+
+        .furniture-name {
+            font-weight: 600;
+            color: #333;
+            word-break: break-word;
+        }
+
+        .description {
+            color: #666;
+            font-size: 0.95em;
+            word-break: break-word;
+            max-width: 400px;
+            line-height: 1.4;
+        }
+
+        .furniture-stats,
+        .furniture-extra {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 4px;
+            font-size: 0.9em;
+        }
+
+        .furniture-stat {
+            display: inline-flex;
+            align-items: center;
+            gap: 3px;
+            color: #666;
+            font-weight: 400;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .furniture-stat.positive {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .furniture-stat.negative {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .img-icon {
+            display: inline-block;
+            height: 1em;
+            width: auto;
+            object-fit: contain;
+            vertical-align: -0.2em;
+            margin: 0 2px;
+        }
+
+        .img-icon-stat {
+            filter: brightness(0) saturate(100%);
+        }
+
+        .img-icon-stat.img-icon-no-filter {
+            filter: none;
+        }
+
+        .badge {
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-size: 0.85em;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .badge-yes {
+            background: rgba(79, 159, 101, 0.18);
+            color: #2f7d32;
+        }
+
+        .badge-no {
+            background: rgba(173, 60, 60, 0.15);
+            color: #b14d45;
+        }
+
+        .no-results {
+            padding: 40px;
+            text-align: center;
+            color: #999;
+            font-size: 1.1em;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90vh;
+            margin-top: 5%;
+            animation: slideIn 0.3s;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .modal-close:hover {
+            color: #ddd;
+        }
+
+        .footer {
+            padding: 20px;
+            background: #f5f5f5;
+            text-align: center;
+            color: #999;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 24px 16px;
+            }
+
+            th,
+            td {
+                padding: 8px;
+                font-size: 0.9em;
+            }
+
+            .furniture-icon-wrapper {
+                width: 48px;
+                height: 48px;
+            }
+
+            .furniture-icon {
+                width: 40px;
+                height: 40px;
+            }
+
+            .controls {
+                flex-direction: column;
+            }
+
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .navbar {
+                justify-content: flex-start;
+                overflow-x: auto;
+            }
+
+            .language-toggle {
+                top: 12px;
+                right: 12px;
+                left: auto;
+                transform: none;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="language-toggle" role="group" aria-label="Language">
+            <button type="button" class="lang-link" id="langButtonEn" data-lang="en">English</button>
+            <span class="lang-separator">/</span>
+            <button type="button" class="lang-link" id="langButtonZh" data-lang="zh">中文</button>
+        </div>
+        <div class="header-image-wrap">
+            <img src="header.jpg" alt="Mewgenics header" class="header-image">
+        </div>
+        <div class="navbar">
+            <a href="index.html" id="navAbilities">Abilities</a>
+            <a href="passives.html" id="navPassives">Passives</a>
+            <a href="items.html" id="navItems">Items</a>
+            <a href="furniture.html" class="active" id="navFurniture">Furniture</a>
+            <a href="mutations.html" id="navMutations">Mutations</a>
+            <a href="events.html" id="navEvents">Events</a>
+            <a href="achievements.html" id="navAchievements">Achievements</a>
+            <a href="characters.html" id="navCharacters">Characters</a>
+        </div>
+        <div class="header">
+            <h1 id="headerTitle">Mewgenics Furniture Viewer</h1>
+        </div>
+
+        <div class="controls">
+            <div class="search-wrapper">
+                <input type="text" id="searchInput" placeholder="Search by furniture name or description...">
+                <button class="clear-button" id="clearButton" title="Clear search">×</button>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-label" id="totalLabel">Total Furniture:</span>
+                <span class="stat-value" id="totalCount">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label" id="showingLabel">Showing:</span>
+                <span class="stat-value" id="showingCount">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label" id="imageLabel">Image:</span>
+                <span class="toggle-text" id="imageCommonLabel">Common</span>
+                <label class="toggle">
+                    <input type="checkbox" id="imageToggle">
+                    <span class="toggle-slider"></span>
+                </label>
+                <span class="toggle-text" id="imageRareLabel">Rare</span>
+            </div>
+        </div>
+
+        <div class="table-wrapper">
+            <table id="furnitureTable">
+                <thead>
+                    <tr>
+                        <th id="imageHeader" style="width: 70px;">Image</th>
+                        <th id="titleHeader" style="width: 200px;">Title</th>
+                        <th id="effectHeader">Effect</th>
+                        <th id="rareHeader" style="width: 140px;">Can Be Rare</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <tr>
+                        <td colspan="4" class="no-results" id="loadingMessage">Loading furniture...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="footer">
+            <p id="footerSource">Free fan site with data from game furniture definitions.</p>
+            <p id="footerCredit">Original game by Edmund McMillen and Tyler Glaiel.</p>
+            <p id="footerAuthor">Created by: Bilibili@Alriph</p>
+            <p id="footerTranslator">Chinese translation: Bilibili@地下丝绒和妮可</p>
+        </div>
+    </div>
+
+    <div id="imageModal" class="modal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script src="js/codex-utils.js"></script>
+    <script src="js/codex-i18n.js"></script>
+    <script>
+        let allFurniture = [];
+        let filteredFurniture = [];
+        let currentLanguage = initLanguage('en');
+        window.currentLanguage = currentLanguage;
+        let showRareImages = false;
+
+        const UI_TEXT = mergeUiText(COMMON_UI_TEXT, {
+            en: {
+                pageTitle: 'Mewgenics Furniture Viewer',
+                headerTitle: 'Mewgenics Furniture Viewer',
+                searchPlaceholder: 'Search by furniture name or description...',
+                totalFurniture: 'Total Furniture:',
+                showing: 'Showing:',
+                imageLabel: 'Image:',
+                imageCommon: 'Common',
+                imageRare: 'Rare',
+                imageHeader: 'Image',
+                titleHeader: 'Title',
+                effectHeader: 'Effect',
+                rareHeader: 'Can Be Rare',
+                removedLabel: '[removed]',
+                loading: 'Loading furniture...',
+                noResults: 'No furniture found matching your filters.',
+                yes: 'Yes',
+                no: 'No',
+                footerSource: 'Free fan site with data from game furniture definitions.',
+            },
+            zh: {
+                pageTitle: 'Mewgenics 家具图鉴',
+                headerTitle: 'Mewgenics 家具图鉴',
+                searchPlaceholder: '按家具名称或描述搜索...',
+                totalFurniture: '家具总数：',
+                showing: '显示：',
+                imageLabel: '图像：',
+                imageCommon: '普通',
+                imageRare: '稀有',
+                imageHeader: '图像',
+                titleHeader: '名称',
+                effectHeader: '效果',
+                rareHeader: '可稀有',
+                removedLabel: '[已移除]',
+                loading: '正在加载家具...',
+                noResults: '没有找到符合筛选条件的家具。',
+                yes: '是',
+                no: '否',
+                footerSource: '这是一个免费同人站点，数据来自游戏家具定义。',
+            }
+        });
+
+        const t = createTranslator(UI_TEXT);
+
+        function setLanguage(lang) {
+            codexSetLanguage(lang, () => {
+                currentLanguage = window.currentLanguage;
+                applyUiLanguage();
+                filterFurniture();
+            });
+        }
+
+        function applyUiLanguage() {
+            document.title = t('pageTitle');
+            document.getElementById('headerTitle').textContent = t('headerTitle');
+            document.getElementById('searchInput').placeholder = t('searchPlaceholder');
+            document.getElementById('navAbilities').textContent = t('navAbilities');
+            document.getElementById('navItems').textContent = t('navItems');
+            document.getElementById('navPassives').textContent = t('navPassives');
+            document.getElementById('navFurniture').textContent = t('navFurniture');
+            document.getElementById('navMutations').textContent = t('navMutations');
+            const navEvents = document.getElementById('navEvents');
+            if (navEvents) {
+                navEvents.textContent = t('navEvents');
+            }
+            document.getElementById('navAchievements').textContent = t('navAchievements');
+            document.getElementById('navCharacters').textContent = t('navCharacters');
+            document.getElementById('langButtonEn').textContent = t('languageEnglish');
+            document.getElementById('langButtonZh').textContent = t('languageChinese');
+            document.getElementById('totalLabel').textContent = t('totalFurniture');
+            document.getElementById('showingLabel').textContent = t('showing');
+            document.getElementById('imageLabel').textContent = t('imageLabel');
+            document.getElementById('imageHeader').textContent = t('imageHeader');
+            document.getElementById('titleHeader').textContent = t('titleHeader');
+            document.getElementById('effectHeader').textContent = t('effectHeader');
+            document.getElementById('rareHeader').textContent = t('rareHeader');
+            document.getElementById('footerSource').textContent = t('footerSource');
+            document.getElementById('footerCredit').textContent = t('footerCredit');
+            document.getElementById('footerAuthor').textContent = t('footerAuthor');
+            document.getElementById('footerTranslator').textContent = t('footerTranslator');
+            document.getElementById('loadingMessage').textContent = t('loading');
+            document.getElementById('imageCommonLabel').textContent = t('imageCommon');
+            document.getElementById('imageRareLabel').textContent = t('imageRare');
+            document.getElementById('langButtonEn').classList.toggle('active', currentLanguage === 'en');
+            document.getElementById('langButtonZh').classList.toggle('active', currentLanguage === 'zh');
+            updateNavbarLinks();
+        }
+
+        const getLocalizedTextSafe = (texts, fallback) => (
+            window.getLocalizedText ? window.getLocalizedText(texts, fallback) : (fallback || '')
+        );
+
+        function safeJsonParse(text) {
+            try {
+                return { ok: true, data: JSON.parse(text) };
+            } catch (error) {
+                try {
+                    const repaired = text
+                        .replace(/\\u(?![0-9a-fA-F]{4})/g, '\\\\u')
+                        .replace(/\\(?!["\\/bfnrtu])/g, '\\\\');
+                    return { ok: true, data: JSON.parse(repaired), repaired: true };
+                } catch (repairError) {
+                    return { ok: false, error, repairError };
+                }
+            }
+        }
+
+        function renderFurnitureStats(stats) {
+            if (!stats || Object.keys(stats).length === 0) return '';
+
+            const statOrder = ['comfort', 'appeal', 'stimulation', 'health', 'evolution'];
+            const statIconMap = {
+                comfort: 'comfort',
+                appeal: 'appeal',
+                stimulation: 'stimulation',
+                health: 'healthfurniture',
+                evolution: 'evolution'
+            };
+            const noFilterIcons = new Set(['health']);
+
+            const statsHtml = statOrder
+                .filter(stat => stats[stat] !== undefined)
+                .map(stat => {
+                    const value = stats[stat];
+                    const iconFile = statIconMap[stat];
+                    const sign = value > 0 ? '+' : '';
+                    const colorClass = value > 0 ? 'positive' : (value < 0 ? 'negative' : '');
+                    const className = noFilterIcons.has(iconFile)
+                        ? 'img-icon img-icon-stat img-icon-no-filter'
+                        : 'img-icon img-icon-stat';
+
+                    return `<span class="furniture-stat ${colorClass}">
+                                ${sign}${value}
+                                <img src="res/fonticon/${iconFile}.png" alt="${stat}" class="${className}" onerror="this.style.display='none'">
+                            </span>`;
+                })
+                .join('');
+
+            return statsHtml ? `<div class="furniture-stats">${statsHtml}</div>` : '';
+        }
+
+        function renderExtraStats() {
+            return '';
+        }
+
+        function openModal(src) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            modal.style.display = 'block';
+            modalImage.src = src;
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+
+        function parseRichText(text) {
+            if (!text) return '';
+            let html = escapeHtml(text);
+            html = html.replace(/\[(\d+\s+\d+)\]/g, '<code>[$1]</code>');
+            html = html.replace(/\[s:[^\]]+\]([\s\S]*?)\[\/s\]/g, '<i>$1</i>');
+            html = html.replace(/\[b\]([\s\S]*?)\[\/b\]/g, '<b>$1</b>');
+            html = html.replace(/\[img:([^\]]+)\]/g, function (match, iconName) {
+                const iconMap = { 'con': 'constitution' };
+                const noFilterIcons = new Set(['health', 'movement', 'hp']);
+                const mappedName = iconMap[iconName] || iconName;
+                const className = noFilterIcons.has(mappedName)
+                    ? 'img-icon img-icon-stat img-icon-no-filter'
+                    : 'img-icon img-icon-stat';
+                return `<img src="res/fonticon/${mappedName}.png" alt="${iconName}" title="${iconName}" class="${className}" onerror="this.style.display='none'">`;
+            });
+            html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
+            html = html.replace(/\n/g, '<br>');
+            return html;
+        }
+
+        function getImagePath(entry) {
+            if (!entry || !entry.sprite_id) return '';
+            const useRare = showRareImages && entry.has_rare && entry.can_be_rare !== false;
+            const frame = useRare ? 2 : 1;
+            return `FurnitureIcon/${entry.sprite_id}/${frame}.png`;
+        }
+
+        function displayFurniture(entries) {
+            const tbody = document.getElementById('tableBody');
+            if (entries.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="4" class="no-results">${escapeHtml(t('noResults'))}</td></tr>`;
+                document.getElementById('showingCount').textContent = '0';
+                return;
+            }
+
+            tbody.innerHTML = entries.map(entry => {
+                let localizedName = getLocalizedTextSafe(entry.name_texts, entry.furniture_name) || '';
+                if (!localizedName || localizedName.trim() === '') {
+                    localizedName = `\`${entry.furniture_code || ''}\``;
+                }
+                const localizedDesc = getLocalizedTextSafe(entry.desc_texts, entry.description) || '';
+                const statsHtml = renderFurnitureStats(entry.stats || {});
+                const extraStatsHtml = renderExtraStats();
+                const nameHtml = `<div class="furniture-name">${parseRichText(localizedName) || ''}</div>`;
+                const removedHtml = entry.removed
+                    ? `<div class="description"><b>${escapeHtml(t('removedLabel'))}</b></div>`
+                    : '';
+                const descHtml = localizedDesc ? `<div class="description">${parseRichText(localizedDesc)}</div>` : '';
+                const effectHtml = `${statsHtml}${extraStatsHtml}${removedHtml}${descHtml}` || '-';
+                const imagePath = getImagePath(entry);
+                const rareBadge = entry.can_be_rare ? 'badge-yes' : 'badge-no';
+
+                return `
+                    <tr>
+                        <td class="image-cell">
+                            <div class="furniture-icon-wrapper" onclick="openModal('${imagePath}')">
+                                <img src="${imagePath}" alt="${escapeHtml(localizedName)}" class="furniture-icon" onerror="this.style.display='none'">
+                            </div>
+                        </td>
+                        <td>
+                            ${nameHtml || '-'}
+                        </td>
+                        <td>
+                            ${effectHtml || '-'}
+                        </td>
+                        <td>
+                            <span class="badge ${rareBadge}">${escapeHtml(entry.can_be_rare ? t('yes') : t('no'))}</span>
+                        </td>
+                    </tr>
+                `;
+            }).join('');
+
+            document.getElementById('showingCount').textContent = entries.length;
+        }
+
+        function filterFurniture() {
+            const search = document.getElementById('searchInput').value.toLowerCase();
+            filteredFurniture = allFurniture.filter(entry => {
+                const name = (getLocalizedTextSafe(entry.name_texts, entry.furniture_name) || '').toLowerCase();
+                const desc = (getLocalizedTextSafe(entry.desc_texts, entry.description) || '').toLowerCase();
+                return name.includes(search) || desc.includes(search);
+            });
+            displayFurniture(filteredFurniture);
+        }
+
+        function updateClearButtonVisibility() {
+            const clearButton = document.getElementById('clearButton');
+            const searchInput = document.getElementById('searchInput');
+            clearButton.classList.toggle('visible', !!searchInput.value);
+        }
+
+        function clearSearch() {
+            const searchInput = document.getElementById('searchInput');
+            searchInput.value = '';
+            updateClearButtonVisibility();
+            filterFurniture();
+        }
+
+        async function loadFurniture() {
+            try {
+                const response = await fetch('furniture_db.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const rawText = await response.text();
+                const parsed = safeJsonParse(rawText);
+                if (!parsed.ok) {
+                    const message = parsed.error && parsed.error.message
+                        ? parsed.error.message
+                        : 'Unknown JSON error';
+                    throw new Error(`Invalid JSON: ${message}`);
+                }
+                if (parsed.repaired) {
+                    console.warn('Furniture JSON repaired due to invalid escapes.');
+                }
+                allFurniture = parsed.data;
+                filteredFurniture = allFurniture;
+                document.getElementById('totalCount').textContent = allFurniture.length;
+                applyUiLanguage();
+                displayFurniture(filteredFurniture);
+            } catch (error) {
+                console.error('Error loading furniture:', error);
+                document.getElementById('tableBody').innerHTML = `
+                    <tr><td colspan="4" class="no-results">
+                        <p>Error loading furniture: ${escapeHtml(error.message)}</p>
+                    </td></tr>
+                `;
+            }
+        }
+
+        document.getElementById('searchInput').addEventListener('input', () => {
+            updateClearButtonVisibility();
+            filterFurniture();
+        });
+        document.getElementById('clearButton').addEventListener('click', clearSearch);
+        document.getElementById('imageToggle').addEventListener('change', (event) => {
+            showRareImages = event.target.checked;
+            document.getElementById('imageCommonLabel').textContent = t('imageCommon');
+            document.getElementById('imageRareLabel').textContent = t('imageRare');
+            displayFurniture(filteredFurniture);
+        });
+        document.querySelectorAll('.lang-link').forEach(button => {
+            button.addEventListener('click', () => {
+                const selectedLang = button.getAttribute('data-lang');
+                setLanguage(selectedLang);
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            applyUiLanguage();
+        });
+
+        window.addEventListener('load', loadFurniture);
+    </script>
+</body>
+
+</html>

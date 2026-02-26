@@ -3,6 +3,7 @@
         en: {
             navAbilities: 'Abilities',
             navItems: 'Items',
+            navFurniture: 'Furniture',
             navPassives: 'Passives',
             navMutations: 'Mutations',
             navAchievements: 'Achievements',
@@ -23,6 +24,7 @@
         zh: {
             navAbilities: '能力',
             navItems: '物品',
+            navFurniture: '家具',
             navPassives: '被动',
             navMutations: '突变',
             navAchievements: '成就',

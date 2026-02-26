@@ -10304,6 +10304,14 @@
             "zh": "{catname} \u8bd5\u56fe\u628a\u95e8\u64ac\u5f00\uff0c\u4f46\u95e8\u731b\u5730\u5173\u4e0a\uff0c\r\n\u5939\u4f4f\u4e86\u5934\uff01\r\n"
           },
           "prompt_texts": {
+            "EVENT_LOCKEDDOOR_PROMPT1": {
+              "en": "Shop",
+              "zh": "\u5546\u5e97"
+            },
+            "EVENT_LOCKEDDOOR_PROMPT2": {
+              "en": "Rare shop!",
+              "zh": "\u7a00\u6709\u5546\u5e97\uff01"
+            },
             "EVENT_LOCKEDDOOR_REW1": {
               "en": "After fiddling with the handle, {catname} finds a way to open the door!\r\n\r\nIt leads to a small shop!",
               "zh": "\u6446\u5f04\u4e86\u4e00\u4f1a\u513f\u628a\u624b\u540e\uff0c\r\n{catname} \u627e\u5230\u4e86\u6253\u5f00\u95e8\u7684\u65b9\u6cd5\uff01\r\n\r\n\u901a\u5411\u4e00\u4e2a\u5c0f\u5546\u5e97\uff01"
@@ -10346,6 +10354,14 @@
             "zh": "{catname} \u84c4\u529b\u540e\u7528\u624b\u81c2\u72e0\u72e0\u5730\u649e\u5411\u575a\u786c\u7684\r\n\u6728\u95e8\u2026\u2026\r\n"
           },
           "prompt_texts": {
+            "EVENT_LOCKEDDOOR_PROMPT1": {
+              "en": "Shop",
+              "zh": "\u5546\u5e97"
+            },
+            "EVENT_LOCKEDDOOR_PROMPT2": {
+              "en": "Rare shop!",
+              "zh": "\u7a00\u6709\u5546\u5e97\uff01"
+            },
             "EVENT_LOCKEDDOOR_REW5": {
               "en": "{catname} proudly smashes down the door!\r\n\r\nA startled shopkeeper within the room beyond yells out, [i]Why can't you just use the handle like a normal cat?![/i]\r\n\r\nOops!",
               "zh": "{catname} \u81ea\u8c6a\u5730\u7838\u5f00\u4e86\u95e8\uff01\r\n\r\n\u623f\u95f4\u91cc\u53d7\u60ca\u7684\u5e97\u4e3b\u5927\u558a\u9053\uff0c\r\n[i]\u4e3a\u4ec0\u4e48\u4f60\u5c31\u4e0d\u80fd\u50cf\u53ea\u6b63\u5e38\u7684\u732b\u4e00\u6837\u7528\u628a\u624b\u5462\uff1f\r\n\uff01[/i]\r\n\r\n\u54ce\u5440\uff01"
@@ -13507,6 +13523,14 @@
             "zh": "{catname} \u96c6\u4e2d\u6ce8\u610f\u529b\u76ef\u7740\u964c\u751f\u4eba\u7684\u52a8\u4f5c\uff0c\r\n\u4f46{he}\u8fd8\u662f\u88ab\u6253\u4e86\u4e2a\u63aa\u624b\u4e0d\u53ca\uff0c\r\n\u5927\u5200\u6325\u4e0b\uff0c\u524a\u6389\u4e86{he}\u7684\u4e00\u6839\u811a\u8dbe\uff01\r\n\r\n[i]\u5c0f\u732b\uff0c\u4f60\u7684\u901f\u5ea6\u8fd8\u4e0d\u591f\u5feb\uff01[/i]\r\n"
           },
           "prompt_texts": {
+            "EVENT_MYSTERIOUSSTRANGER_END_AGAIN": {
+              "en": "Play again?",
+              "zh": "\u518d\u73a9\u4e00\u6b21\uff1f"
+            },
+            "EVENT_MYSTERIOUSSTRANGER_END_AGAIN2": {
+              "en": "Play again",
+              "zh": "\u518d\u73a9\u4e00\u6b21"
+            },
             "EVENT_MYSTERIOUSSTRANGER_REW1": {
               "en": "{catname} barely pulls {his} paw back at the last second!\r\n\r\n[i]Impressive... Have your winnings.[/i]\r\n",
               "zh": "{catname} \u5728\u6700\u540e\u4e00\u79d2\u52c9\u5f3a\u7f29\u56de\u4e86\u722a\u5b50\uff01\r\n\r\n[i]\u4ee4\u4eba\u5370\u8c61\u6df1\u523b\u2026\u2026\u62ff\u8d70\u4f60\u7684\u5956\u91d1\u5427\u3002\r\n[/i]\r\n"
@@ -13602,6 +13626,14 @@
             "zh": "{catname} \u96c6\u4e2d\u6ce8\u610f\u529b\u76ef\u7740\u964c\u751f\u4eba\u7684\u52a8\u4f5c\uff0c\r\n\u4f46{he}\u8fd8\u662f\u88ab\u6253\u4e86\u4e2a\u63aa\u624b\u4e0d\u53ca\uff0c\r\n\u5927\u5200\u6325\u4e0b\uff0c\u524a\u6389\u4e86{he}\u7684\u4e00\u6839\u811a\u8dbe\uff01\r\n\r\n[i]\u5c0f\u732b\uff0c\u4f60\u7684\u901f\u5ea6\u8fd8\u4e0d\u591f\u5feb\uff01[/i]\r\n"
           },
           "prompt_texts": {
+            "EVENT_MYSTERIOUSSTRANGER_END_AGAIN": {
+              "en": "Play again?",
+              "zh": "\u518d\u73a9\u4e00\u6b21\uff1f"
+            },
+            "EVENT_MYSTERIOUSSTRANGER_END_AGAIN2": {
+              "en": "Play again",
+              "zh": "\u518d\u73a9\u4e00\u6b21"
+            },
             "EVENT_MYSTERIOUSSTRANGER_REW1": {
               "en": "{catname} barely pulls {his} paw back at the last second!\r\n\r\n[i]Impressive... Have your winnings.[/i]\r\n",
               "zh": "{catname} \u5728\u6700\u540e\u4e00\u79d2\u52c9\u5f3a\u7f29\u56de\u4e86\u722a\u5b50\uff01\r\n\r\n[i]\u4ee4\u4eba\u5370\u8c61\u6df1\u523b\u2026\u2026\u62ff\u8d70\u4f60\u7684\u5956\u91d1\u5427\u3002\r\n[/i]\r\n"
@@ -13666,6 +13698,10 @@
             "zh": "\u5728\u5e10\u7bf7\u91cc\uff0c{catname} \u53d1\u73b0\u4e86\u4e00\u4e2a\u8863\u886b\u8934\u891b\u7684\u5e97\u4e3b\uff0c\r\n\u5e26\u7740\u51e0\u4ef6\u8d27\u7269\u3002"
           },
           "prompt_texts": {
+            "EVENT_MYSTERIOUSTENT_PROMPT": {
+              "en": "Enter Shop",
+              "zh": "\u8fdb\u5165\u5546\u5e97"
+            },
             "EVENT_MYSTERIOUSTENT_REW1": {
               "en": "{catname} pushes open the flap of the door. There is a warm fire lit inside!\r\n\r\nThe cats rest around the fire, waiting out the long cold night...\r\n",
               "zh": "{catname} \u63a8\u5f00\u4e86\u95e8\u5e18\u3002\u91cc\u9762\u70b9\u7740\u6e29\u6696\u7684\u706b\uff01\r\n\r\n\u732b\u54aa\u4eec\u56f4\u5728\u706b\u5806\u65c1\u4f11\u606f\uff0c\r\n\u7b49\u5f85\u6f2b\u957f\u5bd2\u591c\u7684\u8fc7\u53bb\u2026\u2026\r\n"
@@ -13746,17 +13782,21 @@
           "stat_min": null,
           "stat_max": null,
           "copy_results": null,
-          "good_prompt_key": "EVENT_MYSTERIOUSTOMB_REW1",
+          "good_prompt_key": "EVENT_MYSTERIOUSTOMB_END",
           "bad_prompt_key": "EVENT_MYSTERIOUSTOMB_REW3",
           "good_prompt_texts": {
-            "en": "{catname} lets out a stuttered growl as {he} barely manages to force the heavy door open...\r\n",
-            "zh": "{catname} \u53d1\u51fa\u65ad\u65ad\u7eed\u7eed\u7684\u4f4e\u543c\uff0c\r\n{he}\u52c9\u5f3a\u63a8\u5f00\u4e86\u6c89\u91cd\u7684\u5927\u95e8\u2026\u2026\r\n"
+            "en": "Peek inside",
+            "zh": "\u5411\u5185\u7aa5\u89c6"
           },
           "bad_prompt_texts": {
             "en": "{catname} tries to pull the heavy doors open but they are stuck fast.",
             "zh": "{catname} \u8bd5\u56fe\u62c9\u5f00\u6c89\u91cd\u7684\u5927\u95e8\uff0c\r\n\u4f46\u5b83\u4eec\u7eb9\u4e1d\u4e0d\u52a8\u3002"
           },
           "prompt_texts": {
+            "EVENT_MYSTERIOUSTOMB_END": {
+              "en": "Peek inside",
+              "zh": "\u5411\u5185\u7aa5\u89c6"
+            },
             "EVENT_MYSTERIOUSTOMB_REW1": {
               "en": "{catname} lets out a stuttered growl as {he} barely manages to force the heavy door open...\r\n",
               "zh": "{catname} \u53d1\u51fa\u65ad\u65ad\u7eed\u7eed\u7684\u4f4e\u543c\uff0c\r\n{he}\u52c9\u5f3a\u63a8\u5f00\u4e86\u6c89\u91cd\u7684\u5927\u95e8\u2026\u2026\r\n"
@@ -13837,17 +13877,21 @@
           "stat_min": null,
           "stat_max": null,
           "copy_results": null,
-          "good_prompt_key": "EVENT_MYSTERIOUSTOMB1_REW1",
+          "good_prompt_key": "EVENT_MYSTERIOUSTOMB1_END",
           "bad_prompt_key": "EVENT_MYSTERIOUSTOMB1_REW3",
           "good_prompt_texts": {
-            "en": "Poisoned darts fly out from the slots as {catname} runs down the stairs!\r\n\r\n{He} manages to dodge most of the darts but get stung by a few.",
-            "zh": "\u5f53 {catname} \u8dd1\u4e0b\u697c\u68af\u65f6\uff0c\u6d82\u6bd2\u98de\u9556\u4ece\u7f1d\u9699\u4e2d\u5c04\u51fa\uff01\r\n\r\n{He}\u8bbe\u6cd5\u8eb2\u5f00\u4e86\u5927\u90e8\u5206\u98de\u9556\uff0c\r\n\u4f46\u8fd8\u662f\u88ab\u624e\u4e2d\u4e86\u51e0\u4e0b\u3002"
+            "en": "Explore the level below",
+            "zh": "\u63a2\u7d22\u4e0b\u5c42\u533a\u57df"
           },
           "bad_prompt_texts": {
             "en": "As {catname} walks down the stairs, poisoned darts shoot out and stab {him}!\r\n\r\n{catname} tries to press on but gets riddled with more darts and runs screaming from the tomb!",
             "zh": "\u5f53 {catname} \u8d70\u4e0b\u697c\u68af\u65f6\uff0c\u6d82\u6bd2\u98de\u9556\u5c04\u51fa\u5e76\u523a\u4e2d\u4e86{him}\uff01\r\n\r\n{catname} \u8bd5\u56fe\u7ee7\u7eed\u524d\u8fdb\uff0c\u4f46\u88ab\u66f4\u591a\u7684\u98de\u9556\u624e\u6210\u4e86\u523a\u732c\uff0c\r\n\u5c16\u53eb\u7740\u9003\u79bb\u4e86\u5893\u7a74\uff01"
           },
           "prompt_texts": {
+            "EVENT_MYSTERIOUSTOMB1_END": {
+              "en": "Explore the level below",
+              "zh": "\u63a2\u7d22\u4e0b\u5c42\u533a\u57df"
+            },
             "EVENT_MYSTERIOUSTOMB1_REW1": {
               "en": "Poisoned darts fly out from the slots as {catname} runs down the stairs!\r\n\r\n{He} manages to dodge most of the darts but get stung by a few.",
               "zh": "\u5f53 {catname} \u8dd1\u4e0b\u697c\u68af\u65f6\uff0c\u6d82\u6bd2\u98de\u9556\u4ece\u7f1d\u9699\u4e2d\u5c04\u51fa\uff01\r\n\r\n{He}\u8bbe\u6cd5\u8eb2\u5f00\u4e86\u5927\u90e8\u5206\u98de\u9556\uff0c\r\n\u4f46\u8fd8\u662f\u88ab\u624e\u4e2d\u4e86\u51e0\u4e0b\u3002"
@@ -13939,6 +13983,18 @@
             "zh": "{catname} \u7684\u5c3e\u5df4\u56e0\u6050\u60e7\u800c\u98a4\u6296\uff0c\r\n\u80cc\u6bdb\u6839\u6839\u7ad6\u8d77\u2026\u2026\r\n\r\n{He}\u98de\u901f\u8dd1\u56de\u697c\u68af\u4ee5\u5bfb\u6c42\u5b89\u5168\uff01"
           },
           "prompt_texts": {
+            "EVENT_MYSTERIOUSTOMB2_END_NEXT": {
+              "en": "Look around",
+              "zh": "\u73af\u987e\u56db\u5468"
+            },
+            "EVENT_MYSTERIOUSTOMB2_END_RETREAT": {
+              "en": "Retreat!",
+              "zh": "\u64a4\u9000\uff01"
+            },
+            "EVENT_MYSTERIOUSTOMB2_END_RETRY": {
+              "en": "Try again?",
+              "zh": "\u518d\u8bd5\u4e00\u6b21\uff1f"
+            },
             "EVENT_MYSTERIOUSTOMB2_REW1": {
               "en": "Try as {he} might, {catname} cannot muster up the courage to go on.\r\n\r\n{catname} stands there for frozen what feels like an eon, {his} heart throbbing in {his} chest.",
               "zh": "\u5c3d\u7ba1{he}\u52aa\u529b\u5c1d\u8bd5\uff0c{catname} \u8fd8\u662f\u65e0\u6cd5\u9f13\u8d77\u52c7\u6c14\u7ee7\u7eed\u524d\u8fdb\u3002\r\n\r\n{catname} \u50f5\u5728\u539f\u5730\uff0c\u611f\u89c9\u50cf\u662f\u8fc7\u4e86\u4e00\u4e2a\u4e16\u7eaa\uff0c\r\n\u5fc3\u810f\u5728\u80f8\u8154\u91cc\u5267\u70c8\u8df3\u52a8\u3002"
@@ -14030,6 +14086,10 @@
             "zh": "\u5f53\u68fa\u76d6\u843d\u5730\u65f6\uff0c\r\n{catname} \u4fef\u89c6\u7740\u8eba\u5728\u91cc\u9762\u7684\u6728\u4e43\u4f0a\u2026\u2026\r\n\r\n\u5b83\u731b\u5730\u7741\u5f00\u773c\u775b\uff0c\u5f00\u59cb\u4ece\u77f3\u68fa\u4e2d\u5750\u8d77\uff01\r\n"
           },
           "prompt_texts": {
+            "EVENT_MYSTERIOUSTOMB3_END_MUMMY": {
+              "en": "Something else?",
+              "zh": "\u8fd8\u6709\u522b\u7684\u5417\uff1f"
+            },
             "EVENT_MYSTERIOUSTOMB3_REW1": {
               "en": "The treasure hoard of a long dead king lies within!\r\n\r\n{catname} retrieves the bounty and returns to the surface.\r\n",
               "zh": "\u91cc\u9762\u85cf\u7740\u4e00\u4f4d\u65e9\u5df2\u6b7b\u53bb\u7684\u56fd\u738b\u7684\u8d22\u5b9d\uff01\r\n\r\n{catname} \u53d6\u8d70\u8d4f\u91d1\u5e76\u8fd4\u56de\u4e86\u5730\u9762\u3002\r\n"
@@ -15305,6 +15365,10 @@
             "zh": "{catname} \u6325\u51fb\u76ae\u7eb3\u5854\uff0c\u4f46\u6253\u7a7a\u4e86\uff01"
           },
           "prompt_texts": {
+            "EVENT_SOMEKINDOFPINATA_AGAIN": {
+              "en": "Hit it again!",
+              "zh": "\u518d\u6253\u4e00\u6b21\uff01"
+            },
             "EVENT_SOMEKINDOFPINATA_REW1": {
               "en": "{catname} smashes the pi\u00f1ata into pieces and coins bounce all over the ground!\r\n",
               "zh": "{catname} \u5c06\u76ae\u7eb3\u5854\u6253\u6210\u788e\u7247\uff0c\r\n\u91d1\u5e01\u5728\u5730\u4e0a\u5230\u5904\u4e71\u8e66\uff01\r\n"
@@ -23842,6 +23906,10 @@
             "zh": "{catname} \u7aed\u5c3d\u5168\u529b\uff0c\u7ed3\u679c\u5374\u5f04\u4f24\u4e86{himself}\u3002"
           },
           "prompt_texts": {
+            "EVENT_USETHETOILET_AGAIN": {
+              "en": "Take another dump?",
+              "zh": "\u518d\u62c9\u4e00\u5768\uff1f"
+            },
             "EVENT_USETHETOILET_REW5": {
               "en": "{catname} sits on the toilet and moments later the party hears a satisfying 'sploosh' sound.\r\n\r\n{He} feels a lot better!\r\n",
               "zh": "{catname} \u5750\u5728\u9a6c\u6876\u4e0a\uff0c\r\n\u7247\u523b\u540e\u5c0f\u961f\u542c\u5230\u4e86\u4e00\u58f0\u4ee4\u4eba\u6ee1\u8db3\u7684\u201c\u6251\u901a\u201d\u58f0\u3002\r\n\r\n{He}\u611f\u89c9\u8212\u670d\u591a\u4e86\uff01\r\n"
