@@ -365,6 +365,7 @@
             align-items: flex-start;
             gap: 8px;
             margin-top: 6px;
+            min-height: 150px;
         }
 
         .shape-desc {
@@ -373,22 +374,14 @@
             gap: 4px;
         }
 
-        .shape-button {
-            border: 1px solid rgba(90, 82, 74, 0.3);
-            background: #efece7;
-            color: #5b534a;
-            font-size: 0.8em;
-            font-weight: 600;
-            padding: 4px 8px;
-            border-radius: 6px;
+        .shape-preview-button {
+            padding: 0;
+            border: none;
+            background: transparent;
             cursor: pointer;
         }
 
-        .shape-button:hover {
-            background: #e3ded7;
-        }
-
-        .shape-button:disabled {
+        .shape-preview-button:disabled {
             opacity: 0.5;
             cursor: not-allowed;
         }
@@ -587,6 +580,94 @@
             font-size: 0.9em;
         }
 
+        .pagination-controls {
+            padding: 12px 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            color: #5b534a;
+            font-size: 0.9em;
+        }
+
+        .pagination-controls button {
+            border: 1px solid rgba(159, 151, 139, 0.4);
+            background: #f7f4f0;
+            color: #5b534a;
+            border-radius: 6px;
+            padding: 4px 10px;
+            font-size: 0.9em;
+            cursor: pointer;
+        }
+
+        .pagination-controls button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .pagination-controls select {
+            border: 1px solid rgba(159, 151, 139, 0.4);
+            border-radius: 6px;
+            padding: 4px 8px;
+            font-size: 0.9em;
+        }
+
+        .shape-preview {
+            --shape-preview-cell-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: fit-content;
+            height: fit-content;
+            min-width: 150px;
+            min-height: 150px;
+            padding: 9px;
+            background: #f2efea;
+            border-radius: 6px;
+            border: 1px solid rgba(159, 151, 139, 0.35);
+            flex: 0 0 auto;
+        }
+
+        .shape-preview-grid {
+            display: grid;
+            gap: 0;
+        }
+
+        .shape-preview-cell {
+            width: var(--shape-preview-cell-size);
+            height: var(--shape-preview-cell-size);
+            background: transparent;
+            position: relative;
+        }
+
+        .shape-preview-cell-1 {
+            background: #c0c0c0;
+        }
+
+        .shape-preview-cell-2 {
+            background: #c0c0c0;
+        }
+
+        .shape-preview-cell-4 {
+            background: #e0e0e0;
+        }
+
+        .shape-preview-cell-5 {
+            background: #d0d0d0;
+            border: 1px dashed #2f2a23;
+        }
+
+        .shape-preview-dot {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 50%;
+            height: 50%;
+            background: #333;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+
         .footer {
             padding: 20px;
             background: #f5f5f5;
@@ -691,6 +772,21 @@
             </div>
         </div>
 
+        <div class="pagination-controls">
+            <span id="pageLabel">Page</span>
+            <button type="button" id="pagePrev">Prev</button>
+            <span id="pageInfo">1 / 1</span>
+            <button type="button" id="pageNext">Next</button>
+            <span id="pageSizeLabel">Per page</span>
+            <select id="pageSizeSelect">
+                <option value="10">10</option>
+                <option value="25">25</option>
+                <option value="50" selected>50</option>
+                <option value="100">100</option>
+                <option value="0" id="pageSizeAll">All</option>
+            </select>
+        </div>
+
         <div class="table-wrapper">
             <table id="furnitureTable">
                 <thead>
@@ -739,6 +835,8 @@
         window.currentLanguage = currentLanguage;
         let showRareImages = false;
         const shapeMatrixByCode = new Map();
+        let currentPage = 1;
+        let pageSize = 50;
 
         const UI_TEXT = mergeUiText(COMMON_UI_TEXT, {
             en: {
@@ -754,6 +852,11 @@
                 titleHeader: 'Title',
                 effectHeader: 'Effect',
                 rareHeader: 'Can Be Rare',
+                pageLabel: 'Page',
+                pagePrev: 'Prev',
+                pageNext: 'Next',
+                pageSize: 'Per page',
+                pageAll: 'All',
                 shapeButton: 'Shape',
                 shapeTitle: 'Furniture Shape',
                 shapeMissing: 'No shape data available.',
@@ -777,6 +880,11 @@
                 titleHeader: '名称',
                 effectHeader: '效果',
                 rareHeader: '可稀有',
+                pageLabel: '页',
+                pagePrev: '上一页',
+                pageNext: '下一页',
+                pageSize: '每页',
+                pageAll: '全部',
                 shapeButton: '形状',
                 shapeTitle: '家具形状',
                 shapeMissing: '没有形状数据。',
@@ -831,6 +939,11 @@
             document.getElementById('loadingMessage').textContent = t('loading');
             document.getElementById('imageCommonLabel').textContent = t('imageCommon');
             document.getElementById('imageRareLabel').textContent = t('imageRare');
+            document.getElementById('pageLabel').textContent = t('pageLabel');
+            document.getElementById('pagePrev').textContent = t('pagePrev');
+            document.getElementById('pageNext').textContent = t('pageNext');
+            document.getElementById('pageSizeLabel').textContent = t('pageSize');
+            document.getElementById('pageSizeAll').textContent = t('pageAll');
             document.getElementById('langButtonEn').classList.toggle('active', currentLanguage === 'en');
             document.getElementById('langButtonZh').classList.toggle('active', currentLanguage === 'zh');
             updateNavbarLinks();
@@ -997,15 +1110,69 @@
             return cell;
         }
 
+        function renderShapePreview(matrix) {
+            if (!Array.isArray(matrix) || matrix.length === 0) {
+                return '<div class="shape-preview"></div>';
+            }
+            const rows = matrix.length;
+            const cols = matrix[0].length;
+            let cells = '';
+            matrix.forEach(row => {
+                const rowText = String(row);
+                for (let i = 0; i < rowText.length; i += 1) {
+                    const value = Number.parseInt(rowText[i], 10);
+                    let cellClass = 'shape-preview-cell';
+                    let dot = '';
+                    if (value === 1) {
+                        cellClass += ' shape-preview-cell-1';
+                    } else if (value === 2) {
+                        cellClass += ' shape-preview-cell-2';
+                        dot = '<span class="shape-preview-dot"></span>';
+                    } else if (value === 3) {
+                        dot = '<span class="shape-preview-dot"></span>';
+                    } else if (value === 4) {
+                        cellClass += ' shape-preview-cell-4';
+                    } else if (value === 5) {
+                        cellClass += ' shape-preview-cell-5';
+                    }
+                    cells += `<div class="${cellClass}">${dot}</div>`;
+                }
+            });
+            return `
+                <div class="shape-preview">
+                    <div class="shape-preview-grid" style="grid-template-columns: repeat(${cols}, var(--shape-preview-cell-size)); grid-template-rows: repeat(${rows}, var(--shape-preview-cell-size));">
+                        ${cells}
+                    </div>
+                </div>
+            `;
+        }
+
         function displayFurniture(entries) {
             const tbody = document.getElementById('tableBody');
-            if (entries.length === 0) {
+            const totalEntries = entries.length;
+            const size = pageSize <= 0 ? totalEntries : pageSize;
+            const pageCount = totalEntries > 0 ? Math.ceil(totalEntries / size) : 1;
+            if (currentPage > pageCount) {
+                currentPage = pageCount;
+            }
+            if (currentPage < 1) {
+                currentPage = 1;
+            }
+            const startIndex = size === 0 ? 0 : (currentPage - 1) * size;
+            const pageEntries = size === 0
+                ? entries
+                : entries.slice(startIndex, startIndex + size);
+
+            if (totalEntries === 0) {
                 tbody.innerHTML = `<tr><td colspan="4" class="no-results">${escapeHtml(t('noResults'))}</td></tr>`;
                 document.getElementById('showingCount').textContent = '0';
+                document.getElementById('pageInfo').textContent = '0 / 0';
+                document.getElementById('pagePrev').disabled = true;
+                document.getElementById('pageNext').disabled = true;
                 return;
             }
 
-            tbody.innerHTML = entries.map(entry => {
+            tbody.innerHTML = pageEntries.map(entry => {
                 let localizedName = getLocalizedTextSafe(entry.name_texts, entry.furniture_name) || '';
                 if (!localizedName || localizedName.trim() === '') {
                     localizedName = `\`${entry.furniture_code || ''}\``;
@@ -1019,15 +1186,16 @@
                     : '';
                 const descHtml = localizedDesc ? `<div class="description">${parseRichText(localizedDesc)}</div>` : '';
                 const hasShape = Array.isArray(entry.shape_matrix) && entry.shape_matrix.length > 0;
-                const shapeButton = `
-                    <button class="shape-button" type="button" data-code="${escapeHtml(entry.furniture_code || '')}" ${hasShape ? '' : 'disabled'}>
-                        ${escapeHtml(t('shapeButton'))}
-                    </button>
-                `;
                 const descContent = `${statsHtml}${extraStatsHtml}${removedHtml}${descHtml}`;
                 const descBlock = descContent
                     ? `<div class="shape-desc">${descContent}</div>`
                     : '';
+                const shapePreview = renderShapePreview(entry.shape_matrix);
+                const shapeButton = `
+                    <button class="shape-preview-button" type="button" data-code="${escapeHtml(entry.furniture_code || '')}" ${hasShape ? '' : 'disabled'}>
+                        ${shapePreview}
+                    </button>
+                `;
                 const shapeRow = `<div class="shape-row">${shapeButton}${descBlock}</div>`;
                 const effectHtml = shapeRow || '-';
                 const imagePath = getImagePath(entry);
@@ -1054,7 +1222,10 @@
                 `;
             }).join('');
 
-            document.getElementById('showingCount').textContent = entries.length;
+            document.getElementById('showingCount').textContent = pageEntries.length;
+            document.getElementById('pageInfo').textContent = `${currentPage} / ${pageCount}`;
+            document.getElementById('pagePrev').disabled = currentPage <= 1;
+            document.getElementById('pageNext').disabled = currentPage >= pageCount;
         }
 
         function filterFurniture() {
@@ -1064,6 +1235,7 @@
                 const desc = (getLocalizedTextSafe(entry.desc_texts, entry.description) || '').toLowerCase();
                 return name.includes(search) || desc.includes(search);
             });
+            currentPage = 1;
             displayFurniture(filteredFurniture);
         }
 
@@ -1124,8 +1296,26 @@
             document.getElementById('imageRareLabel').textContent = t('imageRare');
             displayFurniture(filteredFurniture);
         });
+        document.getElementById('pagePrev').addEventListener('click', () => {
+            if (currentPage > 1) {
+                currentPage -= 1;
+                displayFurniture(filteredFurniture);
+            }
+        });
+        document.getElementById('pageNext').addEventListener('click', () => {
+            currentPage += 1;
+            displayFurniture(filteredFurniture);
+        });
+        document.getElementById('pageSizeSelect').addEventListener('change', (event) => {
+            pageSize = Number.parseInt(event.target.value, 10);
+            if (Number.isNaN(pageSize)) {
+                pageSize = 50;
+            }
+            currentPage = 1;
+            displayFurniture(filteredFurniture);
+        });
         document.getElementById('tableBody').addEventListener('click', (event) => {
-            const button = event.target.closest('.shape-button');
+            const button = event.target.closest('.shape-preview-button');
             if (!button || button.disabled) {
                 return;
             }
