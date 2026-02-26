@@ -360,6 +360,39 @@
             font-size: 0.9em;
         }
 
+        .shape-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-top: 6px;
+        }
+
+        .shape-desc {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .shape-button {
+            border: 1px solid rgba(90, 82, 74, 0.3);
+            background: #efece7;
+            color: #5b534a;
+            font-size: 0.8em;
+            font-weight: 600;
+            padding: 4px 8px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .shape-button:hover {
+            background: #e3ded7;
+        }
+
+        .shape-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
         .furniture-stat {
             display: inline-flex;
             align-items: center;
@@ -477,6 +510,81 @@
 
         .modal-close:hover {
             color: #ddd;
+        }
+
+        .shape-modal-content {
+            background: #fff;
+            border-radius: 10px;
+            padding: 18px;
+            width: fit-content;
+            max-width: 90vw;
+            max-height: 90vh;
+            margin: 6% auto;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+            animation: slideIn 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .shape-modal-title {
+            font-size: 1.1em;
+            font-weight: 700;
+            color: #3f3a33;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .shape-grid {
+            --shape-cell-size: 33px;
+            display: grid;
+            gap: 3px;
+            background: #f2efea;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid rgba(159, 151, 139, 0.35);
+            margin: 0 auto;
+        }
+
+        .shape-cell {
+            width: var(--shape-cell-size);
+            height: var(--shape-cell-size);
+            border: 1px solid rgba(140, 132, 122, 0.2);
+            background: transparent;
+            position: relative;
+        }
+
+        .shape-cell-1 {
+            background: #c0c0c0;
+        }
+
+        .shape-cell-2 {
+            background: #c0c0c0;
+        }
+
+        .shape-cell-4 {
+            background: #e0e0e0;
+        }
+
+        .shape-cell-5 {
+            background: #d0d0d0;
+            border: 1px dashed #2f2a23;
+        }
+
+        .shape-dot {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 50%;
+            height: 50%;
+            background: #333;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .shape-empty {
+            color: #777;
+            font-size: 0.9em;
         }
 
         .footer {
@@ -614,6 +722,14 @@
         <img class="modal-content" id="modalImage">
     </div>
 
+    <div id="shapeModal" class="modal">
+        <span class="modal-close" onclick="closeShapeModal()">&times;</span>
+        <div class="shape-modal-content">
+            <div class="shape-modal-title" id="shapeModalTitle">Shape</div>
+            <div class="shape-grid" id="shapeGrid"></div>
+        </div>
+    </div>
+
     <script src="js/codex-utils.js"></script>
     <script src="js/codex-i18n.js"></script>
     <script>
@@ -622,6 +738,7 @@
         let currentLanguage = initLanguage('en');
         window.currentLanguage = currentLanguage;
         let showRareImages = false;
+        const shapeMatrixByCode = new Map();
 
         const UI_TEXT = mergeUiText(COMMON_UI_TEXT, {
             en: {
@@ -637,6 +754,9 @@
                 titleHeader: 'Title',
                 effectHeader: 'Effect',
                 rareHeader: 'Can Be Rare',
+                shapeButton: 'Shape',
+                shapeTitle: 'Furniture Shape',
+                shapeMissing: 'No shape data available.',
                 removedLabel: '[removed]',
                 loading: 'Loading furniture...',
                 noResults: 'No furniture found matching your filters.',
@@ -657,6 +777,9 @@
                 titleHeader: '名称',
                 effectHeader: '效果',
                 rareHeader: '可稀有',
+                shapeButton: '形状',
+                shapeTitle: '家具形状',
+                shapeMissing: '没有形状数据。',
                 removedLabel: '[已移除]',
                 loading: '正在加载家具...',
                 noResults: '没有找到符合筛选条件的家具。',
@@ -700,6 +823,7 @@
             document.getElementById('titleHeader').textContent = t('titleHeader');
             document.getElementById('effectHeader').textContent = t('effectHeader');
             document.getElementById('rareHeader').textContent = t('rareHeader');
+            document.getElementById('shapeModalTitle').textContent = t('shapeTitle');
             document.getElementById('footerSource').textContent = t('footerSource');
             document.getElementById('footerCredit').textContent = t('footerCredit');
             document.getElementById('footerAuthor').textContent = t('footerAuthor');
@@ -769,11 +893,12 @@
             return '';
         }
 
-        function openModal(src) {
+        function openModal(src, name) {
             const modal = document.getElementById('imageModal');
             const modalImage = document.getElementById('modalImage');
-            modal.style.display = 'block';
             modalImage.src = src;
+            modalImage.alt = name || '';
+            modal.style.display = 'block';
         }
 
         function closeModal() {
@@ -807,6 +932,71 @@
             return `FurnitureIcon/${entry.sprite_id}/${frame}.png`;
         }
 
+        function buildShapeMatrixMap(entries) {
+            shapeMatrixByCode.clear();
+            entries.forEach(entry => {
+                if (!entry || !entry.furniture_code) return;
+                if (Array.isArray(entry.shape_matrix)) {
+                    shapeMatrixByCode.set(entry.furniture_code, entry.shape_matrix);
+                }
+            });
+        }
+
+        function openShapeModal(code) {
+            const modal = document.getElementById('shapeModal');
+            const matrix = shapeMatrixByCode.get(code) || null;
+            renderShapeGrid(matrix);
+            modal.style.display = 'block';
+        }
+
+        function closeShapeModal() {
+            document.getElementById('shapeModal').style.display = 'none';
+        }
+
+        function renderShapeGrid(matrix) {
+            const grid = document.getElementById('shapeGrid');
+            grid.innerHTML = '';
+            if (!Array.isArray(matrix) || matrix.length === 0) {
+                grid.innerHTML = `<div class="shape-empty">${escapeHtml(t('shapeMissing'))}</div>`;
+                return;
+            }
+            const rows = matrix.length;
+            const cols = matrix[0].length;
+            grid.style.gridTemplateColumns = `repeat(${cols}, var(--shape-cell-size))`;
+            grid.style.gridTemplateRows = `repeat(${rows}, var(--shape-cell-size))`;
+            const fragment = document.createDocumentFragment();
+            matrix.forEach(row => {
+                const rowText = String(row);
+                for (let i = 0; i < rowText.length; i += 1) {
+                    const value = Number.parseInt(rowText[i], 10);
+                    fragment.appendChild(buildShapeCell(value));
+                }
+            });
+            grid.appendChild(fragment);
+        }
+
+        function buildShapeCell(value) {
+            const cell = document.createElement('div');
+            cell.className = 'shape-cell';
+            if (value === 1) {
+                cell.classList.add('shape-cell-1');
+                const dot = document.createElement('span');
+                dot.className = 'shape-dot';
+                cell.appendChild(dot);
+            } else if (value === 2) {
+                cell.classList.add('shape-cell-2');
+            } else if (value === 3) {
+                const dot = document.createElement('span');
+                dot.className = 'shape-dot';
+                cell.appendChild(dot);
+            } else if (value === 4) {
+                cell.classList.add('shape-cell-4');
+            } else if (value === 5) {
+                cell.classList.add('shape-cell-5');
+            }
+            return cell;
+        }
+
         function displayFurniture(entries) {
             const tbody = document.getElementById('tableBody');
             if (entries.length === 0) {
@@ -828,14 +1018,26 @@
                     ? `<div class="description"><b>${escapeHtml(t('removedLabel'))}</b></div>`
                     : '';
                 const descHtml = localizedDesc ? `<div class="description">${parseRichText(localizedDesc)}</div>` : '';
-                const effectHtml = `${statsHtml}${extraStatsHtml}${removedHtml}${descHtml}` || '-';
+                const hasShape = Array.isArray(entry.shape_matrix) && entry.shape_matrix.length > 0;
+                const shapeButton = `
+                    <button class="shape-button" type="button" data-code="${escapeHtml(entry.furniture_code || '')}" ${hasShape ? '' : 'disabled'}>
+                        ${escapeHtml(t('shapeButton'))}
+                    </button>
+                `;
+                const descContent = `${statsHtml}${extraStatsHtml}${removedHtml}${descHtml}`;
+                const descBlock = descContent
+                    ? `<div class="shape-desc">${descContent}</div>`
+                    : '';
+                const shapeRow = `<div class="shape-row">${shapeButton}${descBlock}</div>`;
+                const effectHtml = shapeRow || '-';
                 const imagePath = getImagePath(entry);
+                const safeName = (localizedName || '').replace(/'/g, "\\'");
                 const rareBadge = entry.can_be_rare ? 'badge-yes' : 'badge-no';
 
                 return `
                     <tr>
                         <td class="image-cell">
-                            <div class="furniture-icon-wrapper" onclick="openModal('${imagePath}')">
+                            <div class="furniture-icon-wrapper" onclick="openModal('${imagePath}', '${safeName}')">
                                 <img src="${imagePath}" alt="${escapeHtml(localizedName)}" class="furniture-icon" onerror="this.style.display='none'">
                             </div>
                         </td>
@@ -896,6 +1098,7 @@
                     console.warn('Furniture JSON repaired due to invalid escapes.');
                 }
                 allFurniture = parsed.data;
+                buildShapeMatrixMap(allFurniture);
                 filteredFurniture = allFurniture;
                 document.getElementById('totalCount').textContent = allFurniture.length;
                 applyUiLanguage();
@@ -920,6 +1123,26 @@
             document.getElementById('imageCommonLabel').textContent = t('imageCommon');
             document.getElementById('imageRareLabel').textContent = t('imageRare');
             displayFurniture(filteredFurniture);
+        });
+        document.getElementById('tableBody').addEventListener('click', (event) => {
+            const button = event.target.closest('.shape-button');
+            if (!button || button.disabled) {
+                return;
+            }
+            const code = button.getAttribute('data-code');
+            if (code) {
+                openShapeModal(code);
+            }
+        });
+        document.getElementById('shapeModal').addEventListener('click', (event) => {
+            if (event.target && event.target.id === 'shapeModal') {
+                closeShapeModal();
+            }
+        });
+        document.getElementById('imageModal').addEventListener('click', (event) => {
+            if (event.target && event.target.id === 'imageModal') {
+                closeModal();
+            }
         });
         document.querySelectorAll('.lang-link').forEach(button => {
             button.addEventListener('click', () => {
