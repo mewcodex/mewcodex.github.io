@@ -474,16 +474,7 @@
         <div class="header-image-wrap">
             <img src="header.jpg" alt="Mewgenics header" class="header-image">
         </div>
-        <div class="navbar">
-            <a href="index.html" id="navAbilities">Abilities</a>
-            <a href="passives.html" id="navPassives">Passives</a>
-            <a href="items.html" id="navItems">Items</a>
-            <a href="furniture.html" id="navFurniture">Furniture</a>
-            <a href="mutations.html" id="navMutations">Mutations</a>
-            <a href="events.html" id="navEvents">Events</a>
-            <a href="achievements.html" class="active" id="navAchievements">Achievements</a>
-            <a href="characters.html" id="navCharacters">Characters</a>
-        </div>
+        <div id="navbarMount"></div>
         <div class="header">
             <h1 id="headerTitle">Mewgenics Achievements</h1>
         </div>
@@ -548,6 +539,10 @@
 
     <script src="js/codex-utils.js"></script>
     <script src="js/codex-i18n.js"></script>
+    <script src="js/codex-components.js"></script>
+    <script>
+        renderNavbar('navbarMount', 'achievements');
+    </script>
     <script src="announcement.js"></script>
     <script>
         let allAbilities = [];
@@ -758,6 +753,16 @@
             }
             document.getElementById('navAchievements').textContent = t('navAchievements');
             document.getElementById('navCharacters').textContent = t('navCharacters');
+            document.getElementById('navItemSet').textContent = t('navItemSet');
+            const navMisc = document.getElementById('navMisc');
+            if (navMisc) {
+                const navMiscLabel = navMisc.querySelector('.nav-dropdown-label');
+                if (navMiscLabel) {
+                    navMiscLabel.textContent = t('navMisc');
+                } else {
+                    navMisc.textContent = t('navMisc');
+                }
+            }
             document.getElementById('langButtonEn').textContent = t('languageEnglish');
             document.getElementById('langButtonZh').textContent = t('languageChinese');
             document.getElementById('classTableTitle').textContent = t('classTableTitle');

@@ -27,6 +27,7 @@
         setLink('navAchievements', `achievements.html${lang}`);
         setLink('navCharacters', `characters.html${lang}`);
         setLink('navEvents', `events.html${lang}`);
+        setLink('navItemSet', `item_set_quick.html${lang}`);
     }
 
     function getLocalizedText(texts, fallback) {

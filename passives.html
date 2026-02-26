@@ -239,6 +239,47 @@
             align-items: center;
         }
 
+        .pagination-controls {
+            padding: 12px 20px;
+            display: flex;
+            justify-content: center;
+            background: #f7f4f0;
+            border-bottom: 1px solid #ddd;
+            color: #5b534a;
+            font-size: 0.9em;
+        }
+
+        .pagination-controls-inner {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            justify-content: flex-start;
+            width: 100%;
+        }
+
+        .pagination-controls button {
+            border: 1px solid rgba(159, 151, 139, 0.4);
+            background: #f7f4f0;
+            color: #5b534a;
+            border-radius: 6px;
+            padding: 4px 10px;
+            font-size: 0.9em;
+            cursor: pointer;
+        }
+
+        .pagination-controls button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .pagination-controls select {
+            border: 1px solid rgba(159, 151, 139, 0.4);
+            border-radius: 6px;
+            padding: 4px 8px;
+            font-size: 0.9em;
+        }
+
         .stat-item {
             display: flex;
             gap: 10px;
@@ -897,16 +938,7 @@
         <div class="header-image-wrap">
             <img src="header.jpg" alt="Mewgenics header" class="header-image">
         </div>
-        <div class="navbar">
-            <a href="index.html" id="navAbilities">Abilities</a>
-            <a href="passives.html" class="active" id="navPassives">Passives</a>
-            <a href="items.html" id="navItems">Items</a>
-            <a href="furniture.html" id="navFurniture">Furniture</a>
-            <a href="mutations.html" id="navMutations">Mutations</a>
-            <a href="events.html" id="navEvents">Events</a>
-            <a href="achievements.html" id="navAchievements">Achievements</a>
-            <a href="characters.html" id="navCharacters">Characters</a>
-        </div>
+        <div id="navbarMount"></div>
         <div class="header">
             <h1 id="headerTitle">Mewgenics Passive Abilities Viewer</h1>
         </div>
@@ -945,6 +977,8 @@
             </div>
         </div>
 
+        <div id="pagerTop"></div>
+
         <div class="table-wrapper">
             <table id="passivesTable">
                 <thead>
@@ -966,6 +1000,8 @@
             </table>
         </div>
 
+        <div id="pagerBottom"></div>
+
         <div class="footer">
             <p id="footerSource">Free fan site with data from game passive definitions and sprite mappings.</p>
             <p id="footerCredit">Original game by Edmund McMillen and Tyler Glaiel.</p>
@@ -982,6 +1018,12 @@
 
     <script src="js/codex-utils.js"></script>
     <script src="js/codex-i18n.js"></script>
+    <script src="js/codex-components.js"></script>
+    <script>
+        renderNavbar('navbarMount', 'passives');
+        renderPager('pagerTop');
+        renderPager('pagerBottom', 'Bottom');
+    </script>
     <script src="announcement.js"></script>
     <script>
         let allPassives = [];
@@ -989,6 +1031,11 @@
         let currentLanguage = initLanguage('en');
         window.currentLanguage = currentLanguage;
         let currentSort = { column: null, direction: 'asc' };
+        let currentPage = 1;
+        let pageSize = 50;
+        let currentDisplayPassives = [];
+        let hashPromoteKey = null;
+        let hashPromoteActive = false;
         let editorNotes = {};
         const ANNOUNCEMENT_SEEN_KEY = 'codexAnnouncementSeen_v1';
 
@@ -1009,6 +1056,10 @@
                 allClasses: 'All Classes',
                 totalPassives: 'Total Passives:',
                 showing: 'Showing:',
+                pagePrev: 'Prev',
+                pageNext: 'Next',
+                pageSize: 'Per page',
+                pageAll: 'All',
                 poolFilterLabel: 'Pool:',
                 selectPool: 'Select Pool',
                 sourceCommentsLabel: 'Source Comments:',
@@ -1036,6 +1087,10 @@
                 allClasses: '全部职业',
                 totalPassives: '被动总数：',
                 showing: '显示：',
+                pagePrev: '上一页',
+                pageNext: '下一页',
+                pageSize: '每页',
+                pageAll: '全部',
                 poolFilterLabel: '池：',
                 selectPool: '选择池',
                 sourceCommentsLabel: '源码注释：',
@@ -1150,11 +1205,29 @@
             }
             document.getElementById('navAchievements').textContent = t('navAchievements');
             document.getElementById('navCharacters').textContent = t('navCharacters');
+            document.getElementById('navItemSet').textContent = t('navItemSet');
+            const navMisc = document.getElementById('navMisc');
+            if (navMisc) {
+                const navMiscLabel = navMisc.querySelector('.nav-dropdown-label');
+                if (navMiscLabel) {
+                    navMiscLabel.textContent = t('navMisc');
+                } else {
+                    navMisc.textContent = t('navMisc');
+                }
+            }
             document.getElementById('langButtonEn').textContent = t('languageEnglish');
             document.getElementById('langButtonZh').textContent = t('languageChinese');
             document.getElementById('showHiddenLabel').textContent = t('showHidden');
             document.getElementById('totalLabel').textContent = t('totalPassives');
             document.getElementById('showingLabel').textContent = t('showing');
+            document.getElementById('pagePrev').textContent = t('pagePrev');
+            document.getElementById('pageNext').textContent = t('pageNext');
+            document.getElementById('pageSizeLabel').textContent = t('pageSize');
+            document.getElementById('pageSizeAll').textContent = t('pageAll');
+            document.getElementById('pagePrevBottom').textContent = t('pagePrev');
+            document.getElementById('pageNextBottom').textContent = t('pageNext');
+            document.getElementById('pageSizeLabelBottom').textContent = t('pageSize');
+            document.getElementById('pageSizeAllBottom').textContent = t('pageAll');
             const poolFilterLabel = document.getElementById('poolFilterLabel');
             if (poolFilterLabel) {
                 poolFilterLabel.textContent = t('poolFilterLabel');
@@ -1447,6 +1520,32 @@
             return `${prefix}-${safe}`;
         }
 
+        function getHashKey(prefix) {
+            const hash = window.location.hash ? window.location.hash.slice(1) : '';
+            if (!hash) {
+                return '';
+            }
+            const decoded = decodeURIComponent(hash);
+            const prefixToken = `${prefix}-`;
+            if (decoded.startsWith(prefixToken)) {
+                return decoded.slice(prefixToken.length);
+            }
+            return decoded;
+        }
+
+        function updateHashPromotion(prefix) {
+            const key = getHashKey(prefix);
+            if (key) {
+                hashPromoteKey = key;
+                hashPromoteActive = true;
+            }
+        }
+
+        function clearHashPromotion() {
+            hashPromoteKey = null;
+            hashPromoteActive = false;
+        }
+
         function scrollToHash(prefix) {
             const hash = window.location.hash ? window.location.hash.slice(1) : '';
             if (!hash) {
@@ -1519,14 +1618,47 @@
                 const hasTitle = hasRenderedText(passive.passive_name_texts, passive.passive_name);
                 return showHidden || (hasIcon && hasTitle);
             });
+            let orderedPassives = visiblePassives;
+            if (hashPromoteActive && hashPromoteKey) {
+                const targetIndex = visiblePassives.findIndex(passive => (passive.passive_code || '') === hashPromoteKey);
+                if (targetIndex > 0) {
+                    const target = visiblePassives[targetIndex];
+                    orderedPassives = [
+                        target,
+                        ...visiblePassives.slice(0, targetIndex),
+                        ...visiblePassives.slice(targetIndex + 1)
+                    ];
+                }
+            }
 
-            if (visiblePassives.length === 0) {
+            currentDisplayPassives = orderedPassives;
+            const totalEntries = orderedPassives.length;
+            const size = pageSize <= 0 ? totalEntries : pageSize;
+            const pageCount = totalEntries > 0 ? Math.ceil(totalEntries / size) : 1;
+            if (currentPage > pageCount) {
+                currentPage = pageCount;
+            }
+            if (currentPage < 1) {
+                currentPage = 1;
+            }
+            const startIndex = size === 0 ? 0 : (currentPage - 1) * size;
+            const pageEntries = size === 0
+                ? orderedPassives
+                : orderedPassives.slice(startIndex, startIndex + size);
+
+            if (totalEntries === 0) {
                 tbody.innerHTML = `<tr><td colspan="6" class="no-results">${escapeHtml(t('noResults'))}</td></tr>`;
                 document.getElementById('showingCount').textContent = '0';
+                document.getElementById('pageInfo').textContent = '0 / 0';
+                document.getElementById('pageInfoBottom').textContent = '0 / 0';
+                document.getElementById('pagePrev').disabled = true;
+                document.getElementById('pageNext').disabled = true;
+                document.getElementById('pagePrevBottom').disabled = true;
+                document.getElementById('pageNextBottom').disabled = true;
                 return;
             }
 
-            tbody.innerHTML = visiblePassives.map(passive => {
+            tbody.innerHTML = pageEntries.map(passive => {
                 const localizedName = getLocalizedText(passive.passive_name_texts, passive.passive_name);
                 const localizedDescription = getLocalizedText(passive.description_texts, passive.description);
                 const localizedDescription2 = getLocalizedText(passive.description2_texts, passive.description_2);
@@ -1598,11 +1730,19 @@
                 `;
             }).join('');
 
-            document.getElementById('showingCount').textContent = visiblePassives.length;
+            document.getElementById('showingCount').textContent = pageEntries.length;
+            document.getElementById('pageInfo').textContent = `${currentPage} / ${pageCount}`;
+            document.getElementById('pagePrev').disabled = currentPage <= 1;
+            document.getElementById('pageNext').disabled = currentPage >= pageCount;
+            document.getElementById('pageInfoBottom').textContent = `${currentPage} / ${pageCount}`;
+            document.getElementById('pagePrevBottom').disabled = currentPage <= 1;
+            document.getElementById('pageNextBottom').disabled = currentPage >= pageCount;
+            document.getElementById('pageSizeSelectBottom').value = String(pageSize);
             requestAnimationFrame(() => scrollToHash('passive'));
         }
 
         function sortBy(column) {
+            clearHashPromotion();
             // Toggle direction if clicking same column, otherwise default to ascending
             if (currentSort.column === column) {
                 currentSort.direction = currentSort.direction === 'asc' ? 'desc' : 'asc';
@@ -1637,6 +1777,7 @@
                 return 0;
             });
 
+            currentPage = 1;
             displayPassives(sortedPassives);
         }
 
@@ -1698,6 +1839,7 @@
 
         // Filter passives
         function filterPassives() {
+            clearHashPromotion();
             const search = document.getElementById('searchInput').value.toLowerCase();
             const classFilter = document.getElementById('classFilter').value;
             const poolFilter = document.getElementById('poolFilter')?.value || '';
@@ -1743,6 +1885,7 @@
                 return matchesSearch && matchesClass && matchesPool;
             });
 
+            currentPage = 1;
             displayPassives(filteredPassives);
         }
 
@@ -1784,10 +1927,56 @@
             });
         });
         document.getElementById('showHiddenToggle').addEventListener('change', filterPassives);
-        window.addEventListener('hashchange', () => scrollToHash('passive'));
+        document.getElementById('pagePrev').addEventListener('click', () => {
+            if (currentPage > 1) {
+                currentPage -= 1;
+                displayPassives(currentDisplayPassives);
+            }
+        });
+        document.getElementById('pageNext').addEventListener('click', () => {
+            currentPage += 1;
+            displayPassives(currentDisplayPassives);
+        });
+        document.getElementById('pageSizeSelect').addEventListener('change', (event) => {
+            clearHashPromotion();
+            pageSize = Number.parseInt(event.target.value, 10);
+            if (Number.isNaN(pageSize)) {
+                pageSize = 50;
+            }
+            currentPage = 1;
+            displayPassives(currentDisplayPassives);
+        });
+        document.getElementById('pagePrevBottom').addEventListener('click', () => {
+            if (currentPage > 1) {
+                currentPage -= 1;
+                displayPassives(currentDisplayPassives);
+            }
+        });
+        document.getElementById('pageNextBottom').addEventListener('click', () => {
+            currentPage += 1;
+            displayPassives(currentDisplayPassives);
+        });
+        document.getElementById('pageSizeSelectBottom').addEventListener('change', (event) => {
+            clearHashPromotion();
+            pageSize = Number.parseInt(event.target.value, 10);
+            if (Number.isNaN(pageSize)) {
+                pageSize = 50;
+            }
+            currentPage = 1;
+            displayPassives(currentDisplayPassives);
+        });
+        window.addEventListener('hashchange', () => {
+            updateHashPromotion('passive');
+            currentPage = 1;
+            if (currentDisplayPassives.length) {
+                displayPassives(currentDisplayPassives);
+            }
+            scrollToHash('passive');
+        });
 
         // Apply language immediately when DOM is ready (before data loads)
         document.addEventListener('DOMContentLoaded', () => {
+            updateHashPromotion('passive');
             applyUiLanguage();
             initAnnouncement();
             maybeShowAnnouncement();

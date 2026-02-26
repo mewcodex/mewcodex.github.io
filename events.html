@@ -264,6 +264,47 @@
             border-bottom: 1px solid #ddd;
         }
 
+        .pagination-controls {
+            padding: 12px 20px;
+            display: flex;
+            justify-content: center;
+            background: #f7f4f0;
+            border-bottom: 1px solid #ddd;
+            color: #5b534a;
+            font-size: 0.9em;
+        }
+
+        .pagination-controls-inner {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            justify-content: flex-start;
+            width: 100%;
+        }
+
+        .pagination-controls button {
+            border: 1px solid rgba(159, 151, 139, 0.4);
+            background: #f7f4f0;
+            color: #5b534a;
+            border-radius: 6px;
+            padding: 4px 10px;
+            font-size: 0.9em;
+            cursor: pointer;
+        }
+
+        .pagination-controls button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .pagination-controls select {
+            border: 1px solid rgba(159, 151, 139, 0.4);
+            border-radius: 6px;
+            padding: 4px 8px;
+            font-size: 0.9em;
+        }
+
         .stat-item {
             display: flex;
             gap: 10px;
@@ -1011,16 +1052,7 @@
         <div class="header-image-wrap">
             <img src="header.jpg" alt="Mewgenics header" class="header-image">
         </div>
-        <div class="navbar">
-            <a href="index.html" id="navAbilities">Abilities</a>
-            <a href="passives.html" id="navPassives">Passives</a>
-            <a href="items.html" id="navItems">Items</a>
-            <a href="furniture.html" id="navFurniture">Furniture</a>
-            <a href="mutations.html" id="navMutations">Mutations</a>
-            <a href="events.html" class="active" id="navEvents">Events</a>
-            <a href="achievements.html" id="navAchievements">Achievements</a>
-            <a href="characters.html" id="navCharacters">Characters</a>
-        </div>
+        <div id="navbarMount"></div>
         <div class="header">
             <h1 id="headerTitle">Mewgenics Events Viewer</h1>
             <div class="header-warning" id="headerWarning">DEMO: Early beta testing. Results may be incorrect, including
@@ -1055,6 +1087,8 @@
             </div>
         </div>
 
+        <div id="pagerTop"></div>
+
         <div class="table-wrapper">
             <table id="eventsTable">
                 <thead>
@@ -1076,6 +1110,8 @@
                 </tbody>
             </table>
         </div>
+
+        <div id="pagerBottom"></div>
 
         <div class="event-panel" id="eventPanel" aria-hidden="true">
             <div class="event-panel-card" role="dialog" aria-modal="true" aria-labelledby="eventPanelTitle">
@@ -1105,6 +1141,12 @@
 
     <script src="js/codex-utils.js"></script>
     <script src="js/codex-i18n.js"></script>
+    <script src="js/codex-components.js"></script>
+    <script>
+        renderNavbar('navbarMount', 'events');
+        renderPager('pagerTop');
+        renderPager('pagerBottom', 'Bottom');
+    </script>
     <script src="announcement.js"></script>
     <script>
         let allEvents = [];
@@ -1114,6 +1156,9 @@
         let currentLanguage = initLanguage('en');
         window.currentLanguage = currentLanguage;
         let currentSort = { column: 'title', direction: 'asc' };
+        let currentPage = 1;
+        let pageSize = 50;
+        let currentDisplayEvents = [];
         let currentEvent = null;
         let stepStack = [];
         const ANNOUNCEMENT_SEEN_KEY = 'codexAnnouncementSeen_v1';
@@ -1140,6 +1185,10 @@
                 typeFilterAll: 'All types',
                 totalEvents: 'Total Events:',
                 showing: 'Showing:',
+                pagePrev: 'Prev',
+                pageNext: 'Next',
+                pageSize: 'Per page',
+                pageAll: 'All',
                 titleHeader: 'Title',
                 choiceHeader: 'Cat Choice',
                 promptHeader: 'Main Prompt',
@@ -1202,6 +1251,10 @@
                 typeFilterAll: '所有类型',
                 totalEvents: '事件总数：',
                 showing: '显示：',
+                pagePrev: '上一页',
+                pageNext: '下一页',
+                pageSize: '每页',
+                pageAll: '全部',
                 titleHeader: '标题',
                 choiceHeader: '猫咪选择',
                 promptHeader: '主要提示',
@@ -1707,6 +1760,16 @@
             document.getElementById('navMutations').textContent = t('navMutations');
             document.getElementById('navAchievements').textContent = t('navAchievements');
             document.getElementById('navCharacters').textContent = t('navCharacters');
+            document.getElementById('navItemSet').textContent = t('navItemSet');
+            const navMisc = document.getElementById('navMisc');
+            if (navMisc) {
+                const navMiscLabel = navMisc.querySelector('.nav-dropdown-label');
+                if (navMiscLabel) {
+                    navMiscLabel.textContent = t('navMisc');
+                } else {
+                    navMisc.textContent = t('navMisc');
+                }
+            }
             const navEvents = document.getElementById('navEvents');
             if (navEvents) {
                 navEvents.textContent = t('navEvents');
@@ -1715,6 +1778,14 @@
             document.getElementById('langButtonZh').textContent = t('languageChinese');
             document.getElementById('totalLabel').textContent = t('totalEvents');
             document.getElementById('showingLabel').textContent = t('showing');
+            document.getElementById('pagePrev').textContent = t('pagePrev');
+            document.getElementById('pageNext').textContent = t('pageNext');
+            document.getElementById('pageSizeLabel').textContent = t('pageSize');
+            document.getElementById('pageSizeAll').textContent = t('pageAll');
+            document.getElementById('pagePrevBottom').textContent = t('pagePrev');
+            document.getElementById('pageNextBottom').textContent = t('pageNext');
+            document.getElementById('pageSizeLabelBottom').textContent = t('pageSize');
+            document.getElementById('pageSizeAllBottom').textContent = t('pageAll');
             document.getElementById('showHiddenLabel').textContent = t('showHiddenLabel');
             document.getElementById('titleHeader').innerHTML = t('titleHeader') + '<span class="sort-indicator"></span>';
             document.getElementById('choiceHeader').innerHTML = t('choiceHeader') + '<span class="sort-indicator"></span>';
@@ -1909,14 +1980,36 @@
 
         function displayEvents(events) {
             const tbody = document.getElementById('tableBody');
-            if (!events || events.length === 0) {
+            const safeEvents = Array.isArray(events) ? events : [];
+            currentDisplayEvents = safeEvents;
+            const totalEntries = safeEvents.length;
+            const size = pageSize <= 0 ? totalEntries : pageSize;
+            const pageCount = totalEntries > 0 ? Math.ceil(totalEntries / size) : 1;
+            if (currentPage > pageCount) {
+                currentPage = pageCount;
+            }
+            if (currentPage < 1) {
+                currentPage = 1;
+            }
+            const startIndex = size === 0 ? 0 : (currentPage - 1) * size;
+            const pageEntries = size === 0
+                ? safeEvents
+                : safeEvents.slice(startIndex, startIndex + size);
+
+            if (totalEntries === 0) {
                 tbody.innerHTML = `<tr><td colspan="5" class="no-results">${escapeHtml(t('noResults'))}</td></tr>`;
                 document.getElementById('showingCount').textContent = '0';
+                document.getElementById('pageInfo').textContent = '0 / 0';
+                document.getElementById('pageInfoBottom').textContent = '0 / 0';
+                document.getElementById('pagePrev').disabled = true;
+                document.getElementById('pageNext').disabled = true;
+                document.getElementById('pagePrevBottom').disabled = true;
+                document.getElementById('pageNextBottom').disabled = true;
                 return;
             }
 
-            displayedEvents = events;
-            tbody.innerHTML = events.map((eventData, index) => {
+            displayedEvents = pageEntries;
+            tbody.innerHTML = pageEntries.map((eventData, index) => {
                 const title = getEventTitle(eventData);
                 const prompt = getEventPrompt(eventData);
                 const choice = formatCatChoice(eventData.cat_choice);
@@ -1942,7 +2035,14 @@
                 `;
             }).join('');
 
-            document.getElementById('showingCount').textContent = events.length;
+            document.getElementById('showingCount').textContent = pageEntries.length;
+            document.getElementById('pageInfo').textContent = `${currentPage} / ${pageCount}`;
+            document.getElementById('pagePrev').disabled = currentPage <= 1;
+            document.getElementById('pageNext').disabled = currentPage >= pageCount;
+            document.getElementById('pageInfoBottom').textContent = `${currentPage} / ${pageCount}`;
+            document.getElementById('pagePrevBottom').disabled = currentPage <= 1;
+            document.getElementById('pageNextBottom').disabled = currentPage >= pageCount;
+            document.getElementById('pageSizeSelectBottom').value = String(pageSize);
         }
 
         function sortBy(column) {
@@ -1966,6 +2066,7 @@
                 header.classList.add(`sort-${currentSort.direction}`);
             }
 
+            currentPage = 1;
             displayEvents(sortEvents(filteredEvents));
         }
 
@@ -3247,6 +3348,7 @@
                     || key.includes(search);
             });
 
+            currentPage = 1;
             displayEvents(sortEvents(filteredEvents));
         }
 
@@ -3514,6 +3616,42 @@
                 const selectedLang = button.getAttribute('data-lang');
                 setLanguage(selectedLang);
             });
+        });
+        document.getElementById('pagePrev').addEventListener('click', () => {
+            if (currentPage > 1) {
+                currentPage -= 1;
+                displayEvents(sortEvents(currentDisplayEvents));
+            }
+        });
+        document.getElementById('pageNext').addEventListener('click', () => {
+            currentPage += 1;
+            displayEvents(sortEvents(currentDisplayEvents));
+        });
+        document.getElementById('pageSizeSelect').addEventListener('change', (event) => {
+            pageSize = Number.parseInt(event.target.value, 10);
+            if (Number.isNaN(pageSize)) {
+                pageSize = 50;
+            }
+            currentPage = 1;
+            displayEvents(sortEvents(currentDisplayEvents));
+        });
+        document.getElementById('pagePrevBottom').addEventListener('click', () => {
+            if (currentPage > 1) {
+                currentPage -= 1;
+                displayEvents(sortEvents(currentDisplayEvents));
+            }
+        });
+        document.getElementById('pageNextBottom').addEventListener('click', () => {
+            currentPage += 1;
+            displayEvents(sortEvents(currentDisplayEvents));
+        });
+        document.getElementById('pageSizeSelectBottom').addEventListener('change', (event) => {
+            pageSize = Number.parseInt(event.target.value, 10);
+            if (Number.isNaN(pageSize)) {
+                pageSize = 50;
+            }
+            currentPage = 1;
+            displayEvents(sortEvents(currentDisplayEvents));
         });
         document.getElementById('tableBody').addEventListener('click', (event) => {
             const button = event.target.closest('.enter-button');

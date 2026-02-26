@@ -214,6 +214,47 @@
             align-items: center;
         }
 
+        .pagination-controls {
+            padding: 12px 20px;
+            display: flex;
+            justify-content: center;
+            background: #f7f4f0;
+            border-bottom: 1px solid #ddd;
+            color: #5b534a;
+            font-size: 0.9em;
+        }
+
+        .pagination-controls-inner {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            justify-content: flex-start;
+            width: 100%;
+        }
+
+        .pagination-controls button {
+            border: 1px solid rgba(159, 151, 139, 0.4);
+            background: #f7f4f0;
+            color: #5b534a;
+            border-radius: 6px;
+            padding: 4px 10px;
+            font-size: 0.9em;
+            cursor: pointer;
+        }
+
+        .pagination-controls button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .pagination-controls select {
+            border: 1px solid rgba(159, 151, 139, 0.4);
+            border-radius: 6px;
+            padding: 4px 8px;
+            font-size: 0.9em;
+        }
+
         .stat-item {
             display: flex;
             gap: 10px;
@@ -1441,16 +1482,7 @@
         <div class="header-image-wrap">
             <img src="header.jpg" alt="Mewgenics header" class="header-image">
         </div>
-        <div class="navbar">
-            <a href="index.html" class="active" id="navAbilities">Abilities</a>
-            <a href="passives.html" id="navPassives">Passives</a>
-            <a href="items.html" id="navItems">Items</a>
-            <a href="furniture.html" id="navFurniture">Furniture</a>
-            <a href="mutations.html" id="navMutations">Mutations</a>
-            <a href="events.html" id="navEvents">Events</a>
-            <a href="achievements.html" id="navAchievements">Achievements</a>
-            <a href="characters.html" id="navCharacters">Characters</a>
-        </div>
+        <div id="navbarMount"></div>
         <div class="header">
             <h1 id="headerTitle">Mewgenics Ability Viewer</h1>
         </div>
@@ -1489,6 +1521,8 @@
                 be imprecise, further finetuning is needed.</div>
         </div>
 
+        <div id="pagerTop"></div>
+
         <div class="table-wrapper">
             <table id="abilitiesTable">
                 <thead>
@@ -1516,6 +1550,8 @@
                 </tbody>
             </table>
         </div>
+
+        <div id="pagerBottom"></div>
 
         <div class="footer">
             <p id="footerSource">Free fan site with data from game ability definitions and sprite mappings.</p>
@@ -1569,6 +1605,12 @@
 
     <script src="js/codex-utils.js"></script>
     <script src="js/codex-i18n.js"></script>
+    <script src="js/codex-components.js"></script>
+    <script>
+        renderNavbar('navbarMount', 'abilities');
+        renderPager('pagerTop');
+        renderPager('pagerBottom', 'Bottom');
+    </script>
     <script src="js/target-renderer.js"></script>
     <script src="announcement.js"></script>
     <script>
@@ -1577,6 +1619,11 @@
         let currentLanguage = initLanguage('en');
         window.currentLanguage = currentLanguage;
         let currentSort = { column: null, direction: 'asc' };
+        let currentPage = 1;
+        let pageSize = 50;
+        let currentDisplayAbilities = [];
+        let hashPromoteKey = null;
+        let hashPromoteActive = false;
         let editorNotes = {};
         let targetRenderer;
         let showDetailedValues = false;
@@ -1603,6 +1650,10 @@
                 allClasses: 'All Classes',
                 totalAbilities: 'Total Abilities:',
                 showing: 'Showing:',
+                pagePrev: 'Prev',
+                pageNext: 'Next',
+                pageSize: 'Per page',
+                pageAll: 'All',
                 poolFilterLabel: 'Pool:',
                 selectPool: 'Select Pool',
                 statsRangeNote: 'Range feature is WIP; the damage value shown at the left could be imprecise, further finetuning is needed.',
@@ -1672,6 +1723,10 @@
                 allClasses: '全部职业',
                 totalAbilities: '能力总数：',
                 showing: '显示：',
+                pagePrev: '上一页',
+                pageNext: '下一页',
+                pageSize: '每页',
+                pageAll: '全部',
                 poolFilterLabel: '池：',
                 selectPool: '选择池',
                 statsRangeNote: '射程功能仍在开发中；左侧显示的伤害数值可能不够精确，仍需进一步微调。',
@@ -1826,12 +1881,30 @@
             }
             document.getElementById('navAchievements').textContent = t('navAchievements');
             document.getElementById('navCharacters').textContent = t('navCharacters');
+            document.getElementById('navItemSet').textContent = t('navItemSet');
+            const navMisc = document.getElementById('navMisc');
+            if (navMisc) {
+                const navMiscLabel = navMisc.querySelector('.nav-dropdown-label');
+                if (navMiscLabel) {
+                    navMiscLabel.textContent = t('navMisc');
+                } else {
+                    navMisc.textContent = t('navMisc');
+                }
+            }
             document.getElementById('langButtonEn').textContent = t('languageEnglish');
             document.getElementById('langButtonZh').textContent = t('languageChinese');
             document.getElementById('showHiddenLabel').textContent = t('showHidden');
             updateDetailToggleLabel();
             document.getElementById('totalLabel').textContent = t('totalAbilities');
             document.getElementById('showingLabel').textContent = t('showing');
+            document.getElementById('pagePrev').textContent = t('pagePrev');
+            document.getElementById('pageNext').textContent = t('pageNext');
+            document.getElementById('pageSizeLabel').textContent = t('pageSize');
+            document.getElementById('pageSizeAll').textContent = t('pageAll');
+            document.getElementById('pagePrevBottom').textContent = t('pagePrev');
+            document.getElementById('pageNextBottom').textContent = t('pageNext');
+            document.getElementById('pageSizeLabelBottom').textContent = t('pageSize');
+            document.getElementById('pageSizeAllBottom').textContent = t('pageAll');
             const poolFilterLabel = document.getElementById('poolFilterLabel');
             if (poolFilterLabel) {
                 poolFilterLabel.textContent = t('poolFilterLabel');
@@ -2166,6 +2239,32 @@
             return `${prefix}-${safe}`;
         }
 
+        function getHashKey(prefix) {
+            const hash = window.location.hash ? window.location.hash.slice(1) : '';
+            if (!hash) {
+                return '';
+            }
+            const decoded = decodeURIComponent(hash);
+            const prefixToken = `${prefix}-`;
+            if (decoded.startsWith(prefixToken)) {
+                return decoded.slice(prefixToken.length);
+            }
+            return decoded;
+        }
+
+        function updateHashPromotion(prefix) {
+            const key = getHashKey(prefix);
+            if (key) {
+                hashPromoteKey = key;
+                hashPromoteActive = true;
+            }
+        }
+
+        function clearHashPromotion() {
+            hashPromoteKey = null;
+            hashPromoteActive = false;
+        }
+
         function scrollToHash(prefix) {
             const hash = window.location.hash ? window.location.hash.slice(1) : '';
             if (!hash) {
@@ -2194,14 +2293,47 @@
                     hasRenderedText(ability.description2_texts, ability.description_2);
                 return showHidden || (hasIcon && hasTitle && hasDescription);
             });
+            let orderedAbilities = visibleAbilities;
+            if (hashPromoteActive && hashPromoteKey) {
+                const targetIndex = visibleAbilities.findIndex(ability => (ability.ability_code || '') === hashPromoteKey);
+                if (targetIndex > 0) {
+                    const target = visibleAbilities[targetIndex];
+                    orderedAbilities = [
+                        target,
+                        ...visibleAbilities.slice(0, targetIndex),
+                        ...visibleAbilities.slice(targetIndex + 1)
+                    ];
+                }
+            }
 
-            if (visibleAbilities.length === 0) {
+            currentDisplayAbilities = orderedAbilities;
+            const totalEntries = orderedAbilities.length;
+            const size = pageSize <= 0 ? totalEntries : pageSize;
+            const pageCount = totalEntries > 0 ? Math.ceil(totalEntries / size) : 1;
+            if (currentPage > pageCount) {
+                currentPage = pageCount;
+            }
+            if (currentPage < 1) {
+                currentPage = 1;
+            }
+            const startIndex = size === 0 ? 0 : (currentPage - 1) * size;
+            const pageEntries = size === 0
+                ? orderedAbilities
+                : orderedAbilities.slice(startIndex, startIndex + size);
+
+            if (totalEntries === 0) {
                 tbody.innerHTML = `<tr><td colspan="6" class="no-results">${escapeHtml(t('noResults'))}</td></tr>`;
                 document.getElementById('showingCount').textContent = '0';
+                document.getElementById('pageInfo').textContent = '0 / 0';
+                document.getElementById('pageInfoBottom').textContent = '0 / 0';
+                document.getElementById('pagePrev').disabled = true;
+                document.getElementById('pageNext').disabled = true;
+                document.getElementById('pagePrevBottom').disabled = true;
+                document.getElementById('pageNextBottom').disabled = true;
                 return;
             }
 
-            tbody.innerHTML = visibleAbilities.map(ability => {
+            tbody.innerHTML = pageEntries.map(ability => {
                 const localizedName = getLocalizedText(ability.ability_name_texts, ability.ability_name);
                 const baseName = localizedName || ability.ability_name || ability.ability_code || '';
                 const displayName = baseName;
@@ -2565,11 +2697,19 @@
                 `;
             }).join('');
 
-            document.getElementById('showingCount').textContent = visibleAbilities.length;
+            document.getElementById('showingCount').textContent = pageEntries.length;
+            document.getElementById('pageInfo').textContent = `${currentPage} / ${pageCount}`;
+            document.getElementById('pagePrev').disabled = currentPage <= 1;
+            document.getElementById('pageNext').disabled = currentPage >= pageCount;
+            document.getElementById('pageInfoBottom').textContent = `${currentPage} / ${pageCount}`;
+            document.getElementById('pagePrevBottom').disabled = currentPage <= 1;
+            document.getElementById('pageNextBottom').disabled = currentPage >= pageCount;
+            document.getElementById('pageSizeSelectBottom').value = String(pageSize);
             requestAnimationFrame(() => scrollToHash('ability'));
         }
 
         function sortBy(column) {
+            clearHashPromotion();
             // Toggle direction if clicking same column, otherwise default to ascending
             if (currentSort.column === column) {
                 currentSort.direction = currentSort.direction === 'asc' ? 'desc' : 'asc';
@@ -2604,6 +2744,7 @@
                 return 0;
             });
 
+            currentPage = 1;
             displayAbilities(sortedAbilities);
         }
 
@@ -2684,6 +2825,7 @@
 
         // Filter abilities
         function filterAbilities() {
+            clearHashPromotion();
             const search = document.getElementById('searchInput').value.toLowerCase();
             const classFilter = document.getElementById('classFilter').value;
             const poolFilter = document.getElementById('poolFilter')?.value || '';
@@ -2732,6 +2874,7 @@
                 return matchesSearch && matchesClass && matchesPool;
             });
 
+            currentPage = 1;
             displayAbilities(filteredAbilities);
         }
 
@@ -2891,10 +3034,56 @@
         document.getElementById('formulaClose').addEventListener('click', () => {
             document.getElementById('formulaModal').style.display = 'none';
         });
-        window.addEventListener('hashchange', () => scrollToHash('ability'));
+        document.getElementById('pagePrev').addEventListener('click', () => {
+            if (currentPage > 1) {
+                currentPage -= 1;
+                displayAbilities(currentDisplayAbilities);
+            }
+        });
+        document.getElementById('pageNext').addEventListener('click', () => {
+            currentPage += 1;
+            displayAbilities(currentDisplayAbilities);
+        });
+        document.getElementById('pageSizeSelect').addEventListener('change', (event) => {
+            clearHashPromotion();
+            pageSize = Number.parseInt(event.target.value, 10);
+            if (Number.isNaN(pageSize)) {
+                pageSize = 50;
+            }
+            currentPage = 1;
+            displayAbilities(currentDisplayAbilities);
+        });
+        document.getElementById('pagePrevBottom').addEventListener('click', () => {
+            if (currentPage > 1) {
+                currentPage -= 1;
+                displayAbilities(currentDisplayAbilities);
+            }
+        });
+        document.getElementById('pageNextBottom').addEventListener('click', () => {
+            currentPage += 1;
+            displayAbilities(currentDisplayAbilities);
+        });
+        document.getElementById('pageSizeSelectBottom').addEventListener('change', (event) => {
+            clearHashPromotion();
+            pageSize = Number.parseInt(event.target.value, 10);
+            if (Number.isNaN(pageSize)) {
+                pageSize = 50;
+            }
+            currentPage = 1;
+            displayAbilities(currentDisplayAbilities);
+        });
+        window.addEventListener('hashchange', () => {
+            updateHashPromotion('ability');
+            currentPage = 1;
+            if (currentDisplayAbilities.length) {
+                displayAbilities(currentDisplayAbilities);
+            }
+            scrollToHash('ability');
+        });
 
         // Apply language immediately when DOM is ready (before data loads)
         document.addEventListener('DOMContentLoaded', () => {
+            updateHashPromotion('ability');
             applyUiLanguage();
             if (targetRenderer && typeof targetRenderer.init === 'function') {
                 targetRenderer.init();

@@ -581,13 +581,22 @@
         }
 
         .pagination-controls {
-            padding: 12px 20px 0;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: center;
+            background: #f7f4f0;
+            border-bottom: 1px solid #ddd;
+            color: #5b534a;
+            font-size: 0.9em;
+        }
+
+        .pagination-controls-inner {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
             align-items: center;
-            color: #5b534a;
-            font-size: 0.9em;
+            justify-content: flex-start;
+            width: 100%;
         }
 
         .pagination-controls button {
@@ -731,16 +740,7 @@
         <div class="header-image-wrap">
             <img src="header.jpg" alt="Mewgenics header" class="header-image">
         </div>
-        <div class="navbar">
-            <a href="index.html" id="navAbilities">Abilities</a>
-            <a href="passives.html" id="navPassives">Passives</a>
-            <a href="items.html" id="navItems">Items</a>
-            <a href="furniture.html" class="active" id="navFurniture">Furniture</a>
-            <a href="mutations.html" id="navMutations">Mutations</a>
-            <a href="events.html" id="navEvents">Events</a>
-            <a href="achievements.html" id="navAchievements">Achievements</a>
-            <a href="characters.html" id="navCharacters">Characters</a>
-        </div>
+        <div id="navbarMount"></div>
         <div class="header">
             <h1 id="headerTitle">Mewgenics Furniture Viewer</h1>
         </div>
@@ -772,20 +772,7 @@
             </div>
         </div>
 
-        <div class="pagination-controls">
-            <span id="pageLabel">Page</span>
-            <button type="button" id="pagePrev">Prev</button>
-            <span id="pageInfo">1 / 1</span>
-            <button type="button" id="pageNext">Next</button>
-            <span id="pageSizeLabel">Per page</span>
-            <select id="pageSizeSelect">
-                <option value="10">10</option>
-                <option value="25">25</option>
-                <option value="50" selected>50</option>
-                <option value="100">100</option>
-                <option value="0" id="pageSizeAll">All</option>
-            </select>
-        </div>
+        <div id="pagerTop"></div>
 
         <div class="table-wrapper">
             <table id="furnitureTable">
@@ -804,6 +791,8 @@
                 </tbody>
             </table>
         </div>
+
+        <div id="pagerBottom"></div>
 
         <div class="footer">
             <p id="footerSource">Free fan site with data from game furniture definitions.</p>
@@ -828,6 +817,12 @@
 
     <script src="js/codex-utils.js"></script>
     <script src="js/codex-i18n.js"></script>
+    <script src="js/codex-components.js"></script>
+    <script>
+        renderNavbar('navbarMount', 'furniture');
+        renderPager('pagerTop');
+        renderPager('pagerBottom', 'Bottom');
+    </script>
     <script>
         let allFurniture = [];
         let filteredFurniture = [];
@@ -907,6 +902,13 @@
             });
         }
 
+        function setText(id, value) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.textContent = value;
+            }
+        }
+
         function applyUiLanguage() {
             document.title = t('pageTitle');
             document.getElementById('headerTitle').textContent = t('headerTitle');
@@ -922,6 +924,16 @@
             }
             document.getElementById('navAchievements').textContent = t('navAchievements');
             document.getElementById('navCharacters').textContent = t('navCharacters');
+            document.getElementById('navItemSet').textContent = t('navItemSet');
+            const navMisc = document.getElementById('navMisc');
+            if (navMisc) {
+                const navMiscLabel = navMisc.querySelector('.nav-dropdown-label');
+                if (navMiscLabel) {
+                    navMiscLabel.textContent = t('navMisc');
+                } else {
+                    navMisc.textContent = t('navMisc');
+                }
+            }
             document.getElementById('langButtonEn').textContent = t('languageEnglish');
             document.getElementById('langButtonZh').textContent = t('languageChinese');
             document.getElementById('totalLabel').textContent = t('totalFurniture');
@@ -936,14 +948,22 @@
             document.getElementById('footerCredit').textContent = t('footerCredit');
             document.getElementById('footerAuthor').textContent = t('footerAuthor');
             document.getElementById('footerTranslator').textContent = t('footerTranslator');
-            document.getElementById('loadingMessage').textContent = t('loading');
+            const loadingMessage = document.getElementById('loadingMessage');
+            if (loadingMessage) {
+                loadingMessage.textContent = t('loading');
+            }
             document.getElementById('imageCommonLabel').textContent = t('imageCommon');
             document.getElementById('imageRareLabel').textContent = t('imageRare');
-            document.getElementById('pageLabel').textContent = t('pageLabel');
-            document.getElementById('pagePrev').textContent = t('pagePrev');
-            document.getElementById('pageNext').textContent = t('pageNext');
-            document.getElementById('pageSizeLabel').textContent = t('pageSize');
-            document.getElementById('pageSizeAll').textContent = t('pageAll');
+            setText('pageLabel', t('pageLabel'));
+            setText('pagePrev', t('pagePrev'));
+            setText('pageNext', t('pageNext'));
+            setText('pageSizeLabel', t('pageSize'));
+            setText('pageSizeAll', t('pageAll'));
+            setText('pageLabelBottom', t('pageLabel'));
+            setText('pagePrevBottom', t('pagePrev'));
+            setText('pageNextBottom', t('pageNext'));
+            setText('pageSizeLabelBottom', t('pageSize'));
+            setText('pageSizeAllBottom', t('pageAll'));
             document.getElementById('langButtonEn').classList.toggle('active', currentLanguage === 'en');
             document.getElementById('langButtonZh').classList.toggle('active', currentLanguage === 'zh');
             updateNavbarLinks();
@@ -1167,8 +1187,11 @@
                 tbody.innerHTML = `<tr><td colspan="4" class="no-results">${escapeHtml(t('noResults'))}</td></tr>`;
                 document.getElementById('showingCount').textContent = '0';
                 document.getElementById('pageInfo').textContent = '0 / 0';
+                document.getElementById('pageInfoBottom').textContent = '0 / 0';
                 document.getElementById('pagePrev').disabled = true;
                 document.getElementById('pageNext').disabled = true;
+                document.getElementById('pagePrevBottom').disabled = true;
+                document.getElementById('pageNextBottom').disabled = true;
                 return;
             }
 
@@ -1226,6 +1249,10 @@
             document.getElementById('pageInfo').textContent = `${currentPage} / ${pageCount}`;
             document.getElementById('pagePrev').disabled = currentPage <= 1;
             document.getElementById('pageNext').disabled = currentPage >= pageCount;
+            document.getElementById('pageInfoBottom').textContent = `${currentPage} / ${pageCount}`;
+            document.getElementById('pagePrevBottom').disabled = currentPage <= 1;
+            document.getElementById('pageNextBottom').disabled = currentPage >= pageCount;
+            document.getElementById('pageSizeSelectBottom').value = String(pageSize);
         }
 
         function filterFurniture() {
@@ -1307,6 +1334,24 @@
             displayFurniture(filteredFurniture);
         });
         document.getElementById('pageSizeSelect').addEventListener('change', (event) => {
+            pageSize = Number.parseInt(event.target.value, 10);
+            if (Number.isNaN(pageSize)) {
+                pageSize = 50;
+            }
+            currentPage = 1;
+            displayFurniture(filteredFurniture);
+        });
+        document.getElementById('pagePrevBottom').addEventListener('click', () => {
+            if (currentPage > 1) {
+                currentPage -= 1;
+                displayFurniture(filteredFurniture);
+            }
+        });
+        document.getElementById('pageNextBottom').addEventListener('click', () => {
+            currentPage += 1;
+            displayFurniture(filteredFurniture);
+        });
+        document.getElementById('pageSizeSelectBottom').addEventListener('change', (event) => {
             pageSize = Number.parseInt(event.target.value, 10);
             if (Number.isNaN(pageSize)) {
                 pageSize = 50;

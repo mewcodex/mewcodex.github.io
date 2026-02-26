@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Set Quick Check</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --theme: #9f978b;
+            --theme-dark: #7f776b;
+            --theme-light: #c9c1b7;
+            --theme-bg: #efece7;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #efece7 0%, #c9c1b7 100%);
+            min-height: 100vh;
+            padding: 36px;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            box-shadow: inset 0 0 140px rgba(32, 28, 22, 0.6), inset 0 0 300px rgba(32, 28, 22, 0.45);
+            z-index: 10;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid rgba(159, 151, 139, 0.35);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25), 0 0 0 6px rgba(159, 151, 139, 0.18);
+            overflow: hidden;
+            position: relative;
+            z-index: 0;
+        }
+
+        .language-toggle {
+            position: absolute;
+            top: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            z-index: 2;
+            font-size: 0.95em;
+        }
+
+        .language-toggle .lang-link {
+            background: rgba(245, 245, 245, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            padding: 4px 8px;
+            cursor: pointer;
+            color: #4b453d;
+            text-decoration: none;
+            font-weight: 600;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+            border-radius: 999px;
+        }
+
+        .language-toggle .lang-link.active {
+            color: #2f2a23;
+            background: rgba(245, 245, 245, 0.95);
+        }
+
+        .language-toggle .lang-separator {
+            color: #4b453d;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+        }
+
+        .header-image {
+            display: block;
+            width: 100%;
+            max-width: 960px;
+            height: 240px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .header-image-wrap {
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(135deg, #9f978b 0%, #7f776b 100%);
+            padding: 12px 16px;
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, #827a6e 0%, #6d6559 100%);
+            border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            padding: 0;
+            overflow-x: hidden;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+
+        .navbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .navbar a {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            padding: 14px 32px;
+            font-size: 1em;
+            font-weight: 500;
+            transition: all 0.2s;
+            border-bottom: 3px solid transparent;
+            position: relative;
+            flex: 0 0 auto;
+        }
+
+        .navbar a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        .navbar a.active {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border-bottom-color: #efece7;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #9f978b 0%, #7f776b 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.4em;
+            margin-bottom: 8px;
+        }
+
+        .set-rows {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            padding: 10px 16px 12px;
+            background: #f7f4f0;
+        }
+
+        .set-rows.card-layout {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 3px;
+            padding: 10px 3px 12px;
+        }
+
+        .set-row {
+            display: grid;
+            grid-template-columns: minmax(0, 0.7fr) minmax(0, 2fr);
+            gap: 20px;
+            padding: 8px 12px;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid rgba(159, 151, 139, 0.35);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+        }
+
+        .set-rows.card-layout .set-row {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 12px;
+        }
+
+        .set-info {
+            text-align: right;
+        }
+
+        .set-rows.card-layout .set-info {
+            text-align: left;
+        }
+
+        .set-items-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .set-rows.card-layout .set-items-row {
+            margin-top: 2px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-content: flex-start;
+        }
+
+        .set-item-link {
+            display: inline-flex;
+            text-decoration: none;
+        }
+
+        .set-item-wrapper {
+            display: inline-block;
+            width: 66px;
+            height: 66px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+        }
+
+        .set-item-icon {
+            width: 46px;
+            height: 46px;
+            object-fit: contain;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .set-item-link:hover .set-item-icon {
+            transform: translate(-50%, -50%) scale(1.08);
+        }
+
+        .img-icon {
+            display: inline-block;
+            height: 1em;
+            width: auto;
+            object-fit: contain;
+            vertical-align: -0.2em;
+            margin: 0 2px;
+        }
+
+        .img-icon-shield {
+            width: auto;
+            height: 1em;
+            object-fit: contain;
+        }
+
+        .img-icon-stat {
+            filter: brightness(0) saturate(100%);
+        }
+
+        .img-icon-stat.img-icon-no-filter {
+            filter: none;
+        }
+
+        .set-bonus-info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            align-items: flex-end;
+        }
+
+        .set-rows.card-layout .set-bonus-info {
+            align-items: flex-start;
+        }
+
+        .set-bonus-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #2f2a23;
+        }
+
+
+        .set-bonus-stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: flex-end;
+        }
+
+        .set-rows.card-layout .set-bonus-stats {
+            justify-content: flex-start;
+        }
+
+        .layout-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px 16px 0;
+            background: #f7f4f0;
+        }
+
+        .layout-toggle button {
+            border: 1px solid rgba(159, 151, 139, 0.4);
+            background: #f7f4f0;
+            color: #5b534a;
+            border-radius: 999px;
+            padding: 4px 12px;
+            font-size: 0.9em;
+            cursor: pointer;
+        }
+
+        .layout-toggle button.active {
+            background: rgba(159, 151, 139, 0.2);
+            color: #2f2a23;
+            border-color: rgba(159, 151, 139, 0.6);
+        }
+
+        .set-bonus-stat {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            color: #6d6559;
+        }
+
+        .set-bonus-desc {
+            color: #555;
+            line-height: 1.45;
+        }
+
+        code {
+            background: #e8e8e8;
+            border-radius: 3px;
+            padding: 2px 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #333;
+            font-style: normal;
+        }
+
+        .empty-state {
+            color: #777;
+            font-size: 0.95em;
+            padding: 4px 2px;
+        }
+
+        .footer {
+            padding: 20px;
+            background: #f5f5f5;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 1000px) {
+            .set-row {
+                grid-template-columns: 1fr;
+            }
+
+            .set-rows.card-layout {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 700px) {
+            .set-rows.card-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="language-toggle" role="group" aria-label="Language">
+            <button type="button" class="lang-link" id="langButtonEn" data-lang="en">English</button>
+            <span class="lang-separator">/</span>
+            <button type="button" class="lang-link" id="langButtonZh" data-lang="zh">中文</button>
+        </div>
+        <div class="header-image-wrap">
+            <img src="header.jpg" alt="Mewgenics header" class="header-image">
+        </div>
+        <div id="navbarMount"></div>
+        <div class="header">
+            <h1 id="headerTitle">Item Set Quick Check</h1>
+        </div>
+
+        <div class="layout-toggle" role="group" aria-label="Layout">
+            <button type="button" id="layoutCards">Cards</button>
+            <button type="button" id="layoutRows">Rows</button>
+        </div>
+
+        <div class="set-rows" id="setRows"></div>
+
+        <div class="footer">
+            <p id="footerSource">Free fan site with data from game item definitions.</p>
+            <p id="footerCredit">Original game by Edmund McMillen and Tyler Glaiel.</p>
+            <p id="footerAuthor">Created by: Bilibili@Alriph</p>
+            <p id="footerTranslator">Chinese translation: Bilibili@地下丝绒和妮可</p>
+        </div>
+    </div>
+
+    <script src="js/codex-utils.js"></script>
+    <script src="js/codex-i18n.js"></script>
+    <script src="js/codex-components.js"></script>
+    <script>
+        renderNavbar('navbarMount', 'item-set');
+    </script>
+    <script>
+        let allItems = [];
+        let setBonusesData = [];
+        let currentLanguage = initLanguage('en');
+        window.currentLanguage = currentLanguage;
+        let currentLayout = 'cards';
+
+        const UI_TEXT = mergeUiText(COMMON_UI_TEXT, {
+            en: {
+                pageTitle: 'Item Set Quick Check',
+                headerTitle: 'Item Set Quick Check',
+                noItems: 'No items found for this set.',
+                loading: 'Loading data...',
+                auxCatName: '`cat name`',
+                strAuxPassiveName: '`random passive ability`',
+                strAuxPassiveDesc: '`random passive ability description`',
+                strAuxItemDesc: '`random item description`',
+                strAuxActiveName: '`random active ability`',
+                strAuxActiveDesc: '`random active ability description`',
+                footerSource: 'Free fan site with data from game item definitions.',
+                layoutCards: 'Cards',
+                layoutRows: 'Rows'
+            },
+            zh: {
+                pageTitle: '套装速查',
+                headerTitle: '套装速查',
+                noItems: '此套装未找到物品。',
+                loading: '正在加载数据...',
+                auxCatName: '`猫名`',
+                strAuxPassiveName: '`随机被动能力`',
+                strAuxPassiveDesc: '`随机被动能力描述`',
+                strAuxItemDesc: '`随机物品描述`',
+                strAuxActiveName: '`随机主动能力`',
+                strAuxActiveDesc: '`随机主动能力描述`',
+                footerSource: '这是一个免费同人站点，数据来自游戏物品定义。',
+                layoutCards: '卡片',
+                layoutRows: '列表'
+            }
+        });
+
+        const t = createTranslator(UI_TEXT);
+
+        const getLayoutFromUrl = () => {
+            const layoutParam = getUrlParameter('layout');
+            if (layoutParam === 'rows' || layoutParam === 'cards') {
+                return layoutParam;
+            }
+            return null;
+        };
+
+        function applyLayout(layout) {
+            const setRows = document.getElementById('setRows');
+            if (setRows) {
+                setRows.classList.toggle('card-layout', layout === 'cards');
+            }
+            const cardsButton = document.getElementById('layoutCards');
+            const rowsButton = document.getElementById('layoutRows');
+            if (cardsButton && rowsButton) {
+                cardsButton.classList.toggle('active', layout === 'cards');
+                rowsButton.classList.toggle('active', layout === 'rows');
+            }
+            if (layout === 'cards') {
+                requestAnimationFrame(syncCardRowHeights);
+            }
+        }
+
+        function setLayout(layout) {
+            currentLayout = layout;
+            applyLayout(layout);
+            setUrlParameter('layout', layout);
+        }
+
+        function getCardColumnCount() {
+            const setRows = document.getElementById('setRows');
+            if (!setRows) {
+                return 1;
+            }
+            const template = window.getComputedStyle(setRows).gridTemplateColumns;
+            const count = template.split(' ').filter(Boolean).length;
+            return Math.max(1, count);
+        }
+
+        function syncCardRowHeights() {
+            if (currentLayout !== 'cards') {
+                return;
+            }
+            const setRows = document.getElementById('setRows');
+            if (!setRows) {
+                return;
+            }
+            const cards = Array.from(setRows.querySelectorAll('.set-row'));
+            if (cards.length === 0) {
+                return;
+            }
+            const cols = getCardColumnCount();
+            const infoBlocks = cards.map(card => card.querySelector('.set-info'));
+            infoBlocks.forEach(info => {
+                if (info) {
+                    info.style.minHeight = '';
+                }
+            });
+            for (let i = 0; i < cards.length; i += cols) {
+                const rowCards = cards.slice(i, i + cols);
+                let maxHeight = 0;
+                rowCards.forEach(card => {
+                    const info = card.querySelector('.set-info');
+                    if (info) {
+                        const height = info.scrollHeight;
+                        if (height > maxHeight) {
+                            maxHeight = height;
+                        }
+                    }
+                });
+                rowCards.forEach(card => {
+                    const info = card.querySelector('.set-info');
+                    if (info) {
+                        info.style.minHeight = `${maxHeight}px`;
+                    }
+                });
+            }
+        }
+
+        function setLanguage(lang) {
+            codexSetLanguage(lang, () => {
+                currentLanguage = window.currentLanguage;
+                applyUiLanguage();
+                renderAllSets();
+            });
+        }
+
+        function applyUiLanguage() {
+            document.title = t('pageTitle');
+            document.getElementById('headerTitle').textContent = t('headerTitle');
+            document.getElementById('navAbilities').textContent = t('navAbilities');
+            document.getElementById('navItems').textContent = t('navItems');
+            document.getElementById('navPassives').textContent = t('navPassives');
+            document.getElementById('navFurniture').textContent = t('navFurniture');
+            document.getElementById('navMutations').textContent = t('navMutations');
+            const navEvents = document.getElementById('navEvents');
+            if (navEvents) {
+                navEvents.textContent = t('navEvents');
+            }
+            document.getElementById('navAchievements').textContent = t('navAchievements');
+            document.getElementById('navCharacters').textContent = t('navCharacters');
+            document.getElementById('navItemSet').textContent = t('navItemSet');
+            const navMisc = document.getElementById('navMisc');
+            if (navMisc) {
+                const navMiscLabel = navMisc.querySelector('.nav-dropdown-label');
+                if (navMiscLabel) {
+                    navMiscLabel.textContent = t('navMisc');
+                } else {
+                    navMisc.textContent = t('navMisc');
+                }
+            }
+            document.getElementById('langButtonEn').textContent = t('languageEnglish');
+            document.getElementById('langButtonZh').textContent = t('languageChinese');
+            document.getElementById('footerSource').textContent = t('footerSource');
+            document.getElementById('footerCredit').textContent = t('footerCredit');
+            document.getElementById('footerAuthor').textContent = t('footerAuthor');
+            document.getElementById('footerTranslator').textContent = t('footerTranslator');
+            document.getElementById('langButtonEn').classList.toggle('active', currentLanguage === 'en');
+            document.getElementById('langButtonZh').classList.toggle('active', currentLanguage === 'zh');
+            document.getElementById('layoutCards').textContent = t('layoutCards');
+            document.getElementById('layoutRows').textContent = t('layoutRows');
+            applyLayout(currentLayout);
+            updateNavbarLinks();
+        }
+
+        function getSetBonusName(setBonus) {
+            if (currentLanguage === 'zh' && setBonus.name_texts && setBonus.name_texts.zh) {
+                return setBonus.name_texts.zh.replace(/套装加成！?$/, '').trim() || setBonus.set_code;
+            }
+            if (setBonus.name_texts && setBonus.name_texts.en) {
+                return setBonus.name_texts.en.replace(/\s+Set Bonus!?$/i, '').trim() || setBonus.set_code;
+            }
+            return setBonus.set_code;
+        }
+
+        function renderSetBonusStats(stats) {
+            if (!stats || Object.keys(stats).length === 0) return '';
+
+            const statOrder = ['str', 'dex', 'int', 'con', 'cha', 'lck', 'spd', 'shield', 'divine_shield'];
+            const statIconMap = {
+                'str': 'str',
+                'dex': 'dex',
+                'int': 'int',
+                'con': 'constitution',
+                'cha': 'cha',
+                'lck': 'lck',
+                'spd': 'spd',
+                'shield': 'shield',
+                'divine_shield': 'divineshield'
+            };
+
+            const statsHtml = statOrder
+                .filter(stat => stats[stat] !== undefined)
+                .map(stat => {
+                    const value = stats[stat];
+                    const iconFile = statIconMap[stat];
+                    const isShield = stat === 'shield' || stat === 'divine_shield';
+                    const className = isShield
+                        ? 'img-icon img-icon-shield'
+                        : 'img-icon img-icon-stat';
+                    const sign = value > 0 ? '+' : '';
+                    const colorClass = value > 0 ? 'positive' : (value < 0 ? 'negative' : '');
+
+                    return `<span class="set-bonus-stat ${colorClass}">
+                                ${sign}${value}
+                                <img src="res/fonticon/${iconFile}.png" alt="${stat}" class="${className}" onerror="this.style.display='none'">
+                            </span>`;
+                })
+                .join('');
+
+            return statsHtml ? `<div class="set-bonus-stats">${statsHtml}</div>` : '';
+        }
+
+        function renderSetBonusInfo(setBonus) {
+            if (!setBonus) {
+                return '';
+            }
+            let html = '<div class="set-bonus-info">';
+            const title = getSetBonusName(setBonus);
+            html += `<div class="set-bonus-title">${escapeHtml(title)}</div>`;
+
+            if (setBonus.stats && Object.keys(setBonus.stats).length > 0) {
+                html += renderSetBonusStats(setBonus.stats);
+            }
+
+            const desc = currentLanguage === 'zh' && setBonus.desc_texts && setBonus.desc_texts.zh
+                ? setBonus.desc_texts.zh
+                : (setBonus.desc_texts ? setBonus.desc_texts.en : '');
+            if (desc) {
+                html += `<div class="set-bonus-desc">${parseRichText(desc)}</div>`;
+            }
+
+            html += '</div>';
+            return html;
+        }
+
+        function parseRichText(text) {
+            if (!text) return '';
+
+            let html = escapeHtml(text);
+            html = html.replace(/\[s:[^\]]+\]([\s\S]*?)\[\/s\]/g, '<i>$1</i>');
+            html = html.replace(/\[b\]([\s\S]*?)\[\/b\]/g, '<b>$1</b>');
+            html = html.replace(/\[img:([^\]]+)\]/g, function (match, iconName) {
+                const iconMap = { 'con': 'constitution' };
+                const noFilterIcons = new Set(['health', 'movement', 'hp']);
+                const mappedName = iconMap[iconName] || iconName;
+                const isShield = iconName === 'shield' || iconName === 'divineshield';
+                const baseClass = isShield
+                    ? 'img-icon img-icon-shield'
+                    : 'img-icon img-icon-stat';
+                const className = noFilterIcons.has(mappedName)
+                    ? `${baseClass} img-icon-no-filter`
+                    : baseClass;
+
+                return `<img src="res/fonticon/${mappedName}.png" alt="${iconName}" title="${iconName}" class="${className}" onerror="this.style.display='none'">`;
+            });
+            html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
+            html = html.replace(/\n/g, '<br>');
+
+            return html;
+        }
+
+
+        function resolveItemText(text, item) {
+            let output = text || '';
+            if (item.aux) {
+                output = output.replace(/{aux}/g, item.aux);
+            }
+            output = output.replace(/{aux_cat_name}/g, t('auxCatName'));
+            output = output.replace(/{str_aux_passive_name}/g, t('strAuxPassiveName'));
+            output = output.replace(/{str_aux_passive_desc}/g, t('strAuxPassiveDesc'));
+            output = output.replace(/{str_aux_item_desc}/g, t('strAuxItemDesc'));
+            output = output.replace(/{str_aux_active_name}/g, t('strAuxActiveName'));
+            output = output.replace(/{str_aux_active_desc}/g, t('strAuxActiveDesc'));
+            return output;
+        }
+
+        function getItemDisplayName(item) {
+            let localizedName = getLocalizedText(item.item_name_texts, item.item_name) || '';
+            if (!localizedName || localizedName.trim() === '') {
+                localizedName = `\`${item.item_name || item.item_code || ''}\``;
+            }
+            return resolveItemText(localizedName, item);
+        }
+
+        function getItemIconPath(item) {
+            const kindMap = {
+                'trinket': 'TrinketIcon',
+                'weapon': 'WeaponIcon',
+                'neck': 'NeckItemIcon',
+                'face': 'FaceItemIcon',
+                'head': 'HeadItemIcon'
+            };
+            const folder = kindMap[item.kind] || 'TrinketIcon';
+            return `${folder}/${item.frame}.png`;
+        }
+
+        function getRarityBackgroundPath(item) {
+            if (item.rarity === 'quest' || item.rarity === 'sidequest') {
+                return `rarity/${item.rarity}${item.cursed ? 'cursed' : ''}.png`;
+            }
+            if (item.cursed) {
+                return 'rarity/cursed.png';
+            }
+            if (!item.rarity) return 'rarity/unknown.png';
+            if (item.rarity === 'uncommmon') {
+                return `rarity/${item.is_consumable ? 'consumable_' : ''}uncommon.png`;
+            }
+            const prefix = item.is_consumable ? 'consumable_' : '';
+            return `rarity/${prefix}${item.rarity}.png`;
+        }
+
+        function renderSetItemsRow(items) {
+            if (!items || items.length === 0) {
+                return `<div class="empty-state">${escapeHtml(t('noItems'))}</div>`;
+            }
+            const lang = currentLanguage !== 'en' ? `?lang=${currentLanguage}` : '';
+            return items.map(item => {
+                const name = getItemDisplayName(item);
+                const iconPath = item.frame !== null && item.frame !== undefined ? getItemIconPath(item) : '';
+                const rarityBg = getRarityBackgroundPath(item);
+                const itemCode = item.item_code || item.item_name || '';
+                const link = itemCode ? `items.html${lang}#${encodeURIComponent(itemCode)}` : `items.html${lang}`;
+                if (!iconPath) {
+                    return '';
+                }
+                return `
+                    <a href="${link}" class="set-item-link" title="${escapeHtml(name)}">
+                        <span class="set-item-wrapper" style="background-image: url('${rarityBg}')">
+                            <img src="${iconPath}" class="set-item-icon" alt="${escapeHtml(name)}" onerror="this.style.display='none'">
+                        </span>
+                    </a>
+                `;
+            }).join('');
+        }
+
+        function getItemRarityRank(item) {
+            const rawRarity = (item.rarity || '').toString().toLowerCase().trim();
+            const normalized = rawRarity.replace(/\s+/g, '_');
+            const rarityRank = {
+                quest: 100,
+                sidequest: 90,
+                very_rare: 80,
+                veryrare: 80,
+                rare: 70,
+                uncommon: 60,
+                uncommmon: 60,
+                medium: 50,
+                common: 50
+            };
+            if (normalized === 'quest') {
+                return item.cursed ? 95 : 100;
+            }
+            if (normalized === 'sidequest') {
+                return item.cursed ? 85 : 90;
+            }
+            if (item.cursed) {
+                return -1;
+            }
+            const base = rarityRank[normalized] ?? 0;
+            return base;
+        }
+
+        function compareItemsByRarity(a, b) {
+            const rankDiff = getItemRarityRank(b) - getItemRarityRank(a);
+            if (rankDiff !== 0) {
+                return rankDiff;
+            }
+            const nameA = getItemDisplayName(a);
+            const nameB = getItemDisplayName(b);
+            if (nameA && nameB) {
+                const nameDiff = nameA.localeCompare(nameB, currentLanguage);
+                if (nameDiff !== 0) {
+                    return nameDiff;
+                }
+            }
+            const codeA = a.item_code || a.item_name || '';
+            const codeB = b.item_code || b.item_name || '';
+            return codeA.localeCompare(codeB, currentLanguage);
+        }
+
+        function renderAllSets() {
+            const setRows = document.getElementById('setRows');
+            if (!setRows) {
+                return;
+            }
+            if (!setBonusesData || setBonusesData.length === 0) {
+                setRows.innerHTML = `<div class="empty-state">${escapeHtml(t('loading'))}</div>`;
+                return;
+            }
+
+            const compareRaritySequence = (itemsA, itemsB) => {
+                const maxLen = Math.max(itemsA.length, itemsB.length);
+                for (let i = 0; i < maxLen; i += 1) {
+                    const itemA = itemsA[i];
+                    const itemB = itemsB[i];
+                    if (!itemA && !itemB) {
+                        break;
+                    }
+                    if (!itemA) {
+                        return 1;
+                    }
+                    if (!itemB) {
+                        return -1;
+                    }
+                    const rankDiff = getItemRarityRank(itemB) - getItemRarityRank(itemA);
+                    if (rankDiff !== 0) {
+                        return rankDiff;
+                    }
+                }
+                return 0;
+            };
+
+            const sorted = [...setBonusesData]
+                .map(setBonus => {
+                    const items = allItems
+                        .filter(item => Array.isArray(item.sets) && item.sets.includes(setBonus.set_code))
+                        .sort(compareItemsByRarity);
+                    return { setBonus, items, itemCount: items.length };
+                })
+                .sort((a, b) => {
+                    if (b.itemCount !== a.itemCount) {
+                        return b.itemCount - a.itemCount;
+                    }
+                    const raritySequenceDiff = compareRaritySequence(a.items, b.items);
+                    if (raritySequenceDiff !== 0) {
+                        return raritySequenceDiff;
+                    }
+                    return getSetBonusName(a.setBonus).localeCompare(getSetBonusName(b.setBonus), currentLanguage);
+                });
+
+            setRows.innerHTML = sorted.map(entry => {
+                const itemsHtml = renderSetItemsRow(entry.items);
+                const infoHtml = renderSetBonusInfo(entry.setBonus);
+                return `
+                    <div class="set-row">
+                        <div class="set-info">${infoHtml}</div>
+                        <div class="set-items-row">${itemsHtml}</div>
+                    </div>
+                `;
+            }).join('');
+            requestAnimationFrame(syncCardRowHeights);
+        }
+
+        async function loadData() {
+            try {
+                const [itemsResponse, setResponse] = await Promise.all([
+                    fetch('items_db.json'),
+                    fetch('set_bonuses_db.json')
+                ]);
+                if (!itemsResponse.ok) {
+                    throw new Error(`HTTP error! status: ${itemsResponse.status}`);
+                }
+                allItems = await itemsResponse.json();
+                if (setResponse.ok) {
+                    const setDb = await setResponse.json();
+                    setBonusesData = setDb.set_bonuses || [];
+                }
+                applyUiLanguage();
+                renderAllSets();
+            } catch (error) {
+                const setRows = document.getElementById('setRows');
+                if (setRows) {
+                    setRows.innerHTML = `<div class="empty-state">${escapeHtml(error.message)}</div>`;
+                }
+            }
+        }
+        document.querySelectorAll('.lang-link').forEach(button => {
+            button.addEventListener('click', () => {
+                const selectedLang = button.getAttribute('data-lang');
+                setLanguage(selectedLang);
+            });
+        });
+
+        document.getElementById('layoutCards').addEventListener('click', () => setLayout('cards'));
+        document.getElementById('layoutRows').addEventListener('click', () => setLayout('rows'));
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const initialLayout = getLayoutFromUrl() || 'cards';
+            currentLayout = initialLayout;
+            applyLayout(currentLayout);
+            applyUiLanguage();
+        });
+
+        let layoutResizeTimer;
+        window.addEventListener('resize', () => {
+            if (currentLayout !== 'cards') {
+                return;
+            }
+            window.clearTimeout(layoutResizeTimer);
+            layoutResizeTimer = window.setTimeout(syncCardRowHeights, 50);
+        });
+
+        window.addEventListener('load', loadData);
+    </script>
+</body>
+
+</html>
