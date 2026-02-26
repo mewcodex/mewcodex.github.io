@@ -11,7 +11,8 @@
                 display: flex;
             }
             .navbar {
-                overflow: visible;
+                overflow-x: auto;
+                overflow-y: visible;
             }
             .navbar .nav-dropdown-toggle {
                 display: inline-flex;
