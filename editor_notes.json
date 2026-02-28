@@ -15,6 +15,18 @@
         "en": "Literally.",
         "zh": "字面意思。"
     },
+    "AncestorsSkull": {
+        "en": "Exclusive to the Ancestor's Bones node.",
+        "zh": "仅能通过先祖骸骨节点获得。"
+    },
+    "AncestorsJaw": {
+        "en": "Exclusive to the Ancestor's Bones node.",
+        "zh": "仅能通过先祖骸骨节点获得。"
+    },
+    "AncestorsBones": {
+        "en": "Exclusive to the Ancestor's Bones node.",
+        "zh": "仅能通过先祖骸骨节点获得。"
+    },
     "LongStrider": {
         "en": "Source Code Comment: \"CUT\"",
         "zh": "源代码注释：“删减内容”"
@@ -32,40 +44,40 @@
         "zh": "源代码注释：“moved from Fighter”"
     },
     "Gargantuan": {
-        "en": "Source Code Comment: \"Given by a MonkeyPaw event wish.\"",
-        "zh": "源代码注释：“Given by a MonkeyPaw event wish.”"
+        "en": "Source Code Comment: \"Given by a MonkeyPaw event wish.\" Exclusive for events: Monkey Paw Wish.",
+        "zh": "源代码注释：“Given by a MonkeyPaw event wish.” 事件专属：猴爪许愿。"
     },
     "BrainDead": {
-        "en": "Source Code Comment: \"Given by a MonkeyPaw event wish.\"",
-        "zh": "源代码注释：“Given by a MonkeyPaw event wish.”"
+        "en": "Source Code Comment: \"Given by a MonkeyPaw event wish.\" Exclusive for events: Monkey Paw Wish.",
+        "zh": "源代码注释：“Given by a MonkeyPaw event wish.” 事件专属：猴爪许愿。"
     },
     "TamperedGenes": {
-        "en": "Source Code Comment: \"Given by a MonkeyPaw event wish.\"",
-        "zh": "源代码注释：“Given by a MonkeyPaw event wish.”"
+        "en": "Source Code Comment: \"Given by a MonkeyPaw event wish.\" Exclusive for events: Monkey Paw Wish.",
+        "zh": "源代码注释：“Given by a MonkeyPaw event wish.” 事件专属：猴爪许愿。"
     },
     "SensoryOverloadFace": {
-        "en": "Source Code Comment: \"Given by a MonkeyPaw event wish.\"",
-        "zh": "源代码注释：“Given by a MonkeyPaw event wish.”"
+        "en": "Source Code Comment: \"Given by a MonkeyPaw event wish.\" Exclusive for events: Monkey Paw Wish.",
+        "zh": "源代码注释：“Given by a MonkeyPaw event wish.” 事件专属：猴爪许愿。"
     },
     "SensoryOverloadTrinket": {
-        "en": "Source Code Comment: \"Given by a MonkeyPaw event wish.\"",
-        "zh": "源代码注释：“Given by a MonkeyPaw event wish.”"
+        "en": "Source Code Comment: \"Given by a MonkeyPaw event wish.\" Exclusive for events: Monkey Paw Wish.",
+        "zh": "源代码注释：“Given by a MonkeyPaw event wish.” 事件专属：猴爪许愿。"
     },
     "SensoryOverloadHead": {
-        "en": "Source Code Comment: \"Given by a MonkeyPaw event wish.\"",
-        "zh": "源代码注释：“Given by a MonkeyPaw event wish.”"
+        "en": "Source Code Comment: \"Given by a MonkeyPaw event wish.\" Exclusive for events: Monkey Paw Wish.",
+        "zh": "源代码注释：“Given by a MonkeyPaw event wish.” 事件专属：猴爪许愿。"
     },
     "SensoryOverloadNeck": {
-        "en": "Source Code Comment: \"Given by a MonkeyPaw event wish.\"",
-        "zh": "源代码注释：“Given by a MonkeyPaw event wish.”"
+        "en": "Source Code Comment: \"Given by a MonkeyPaw event wish.\" Exclusive for events: Monkey Paw Wish.",
+        "zh": "源代码注释：“Given by a MonkeyPaw event wish.” 事件专属：猴爪许愿。"
     },
     "SensoryOverloadWeapon": {
-        "en": "Source Code Comment: \"Given by a MonkeyPaw event wish.\"",
-        "zh": "源代码注释：“Given by a MonkeyPaw event wish.”"
+        "en": "Source Code Comment: \"Given by a MonkeyPaw event wish.\" Exclusive for events: Monkey Paw Wish.",
+        "zh": "源代码注释：“Given by a MonkeyPaw event wish.” 事件专属：猴爪许愿。"
     },
     "EternalYouth": {
-        "en": "Source Code Comment: \"Given by the fountain event\"",
-        "zh": "源代码注释：“Given by the fountain event”"
+        "en": "Source Code Comment: \"Given by the fountain event\" Exclusive for events: Fountain.",
+        "zh": "源代码注释：“Given by the fountain event” 事件专属：喷泉。"
     },
     "DownsSyndrome": {
         "en": "Source Code Comment: \"might be cool to make the head larger but keep the face the same size\"",
@@ -76,8 +88,8 @@
         "zh": "源代码注释：“might be cool to make the mouth larger”"
     },
     "DarkOne": {
-        "en": "Source Code Comment: \"Aquired from Core event 'Demonic Idol'\"",
-        "zh": "源代码注释：“Aquired from Core event 'Demonic Idol'”"
+        "en": "Source Code Comment: \"Aquired from Core event 'Demonic Idol'\" Exclusive for events: Demonic Idol.",
+        "zh": "源代码注释：“Aquired from Core event 'Demonic Idol'” 事件专属：恶魔神像。"
     },
     "DeathChill": {
         "en": "Source Code Comment: \"CUT\"",
@@ -459,85 +471,37 @@
         "en": "Source Code Comment: \"alternate basic attack for Blacksmith passive\"",
         "zh": "源代码注释：“alternate basic attack for Blacksmith passive”"
     },
-    "ThickHide": {
-        "en": "Source Code Comment: \"Aquired from DeadMammoth event\"",
-        "zh": "源代码注释：“Aquired from DeadMammoth event”"
-    },
-    "BigToe": {
-        "en": "Source Code Comment: \"Aquired from Big Toe event\"",
-        "zh": "源代码注释：“Aquired from Big Toe event”"
-    },
-    "RaptorEgg": {
-        "en": "Source Code Comment: \"Aquired from Nest of Eggs event\"",
-        "zh": "源代码注释：“Aquired from Nest of Eggs event”"
-    },
-    "MarkOfTheBeast": {
-        "en": "Source Code Comment: \"Unique item given from Baphomet event\"",
-        "zh": "源代码注释：“Unique item given from Baphomet event”"
-    },
-    "SlagTight": {
-        "en": "Source Code Comment: \"Unique item given from Jagged Pathway event\"",
-        "zh": "源代码注释：“Unique item given from Jagged Pathway event”"
-    },
-    "MetalRod": {
-        "en": "Source Code Comment: \"Unique item given from Wall of Cats event\"",
-        "zh": "源代码注释：“Unique item given from Wall of Cats event”"
-    },
-    "BigToeCursed": {
-        "en": "Source Code Comment: \"Aquired from Big Toe event\"",
-        "zh": "源代码注释：“Aquired from Big Toe event”"
-    },
-    "GoldenIdol": {
-        "en": "Source Code Comment: \"Aquired from PitOfSnakes event\"",
-        "zh": "源代码注释：“Aquired from PitOfSnakes event”"
-    },
     "SuperDunceCap": {
         "en": "Source Code Comment: \"test item\"",
         "zh": "源代码注释：“test item”"
     },
-    "EyeOfRa": {
-        "en": "Source Code Comment: \"Unique item from looting the Mysterious Tomb.\"",
-        "zh": "源代码注释：“Unique item from looting the Mysterious Tomb.”"
-    },
     "JarOfRadiation": {
-        "en": "Source Code Comment: \"end of turn: deal 1 damage to everything (pestillence). take it to throbbing king corpse\"",
-        "zh": "源代码注释：“end of turn: deal 1 damage to everything (pestillence). take it to throbbing king corpse”"
+        "en": "Unlocked from main story quests.",
+        "zh": "主线任务解锁。"
     },
     "JarOfRadiatedBlood": {
-        "en": "Source Code Comment: \"when the cat holding the jar takes damage, spawn a clot. the clot evolves into a mini me of the cat that holding the jar\"",
-        "zh": "源代码注释：“when the cat holding the jar takes damage, spawn a clot. the clot evolves into a mini me of the cat that holding the jar”"
+        "en": "Transforms from Jar of Radiation.",
+        "zh": "由辐射之罐转化而来。"
     },
-    "SharkTooth": {
-        "en": "Source Code Comment: \"Aquired from Giant Sleeping Shark event.\"",
-        "zh": "源代码注释：“Aquired from Giant Sleeping Shark event.”"
+    "CryogenicTimeChamber_Empty": {
+        "en": "Unlocked from main story quests.",
+        "zh": "主线任务解锁。"
+    },
+    "JarOfChaos": {
+        "en": "Transforms from Jar of Radiated Blood.",
+        "zh": "由辐射血罐转化而来。"
+    },
+    "JarOfNothing": {
+        "en": "Transforms from Jar Of Chaos.",
+        "zh": "由混沌之罐转化而来。"
     },
     "Whistle": {
         "en": "Source Code Comment: \"refresh when a familiar dies\"",
         "zh": "源代码注释：“refresh when a familiar dies”"
     },
-    "EnchantingPoop": {
-        "en": "Source Code Comment: \"Aquired from various Poop events\"",
-        "zh": "源代码注释：“Aquired from various Poop events”"
-    },
     "VideoGameCart": {
         "en": "Source Code Comment: \"this item will have no effect till dlc.. figure it out later.\"",
         "zh": "源代码注释：“这个物品在DLC发布前不会生效……之后再慢慢研究吧。”"
-    },
-    "PharaohStaff": {
-        "en": "Source Code Comment: \"Unique item from looting the Mysterious Tomb.\"",
-        "zh": "源代码注释：“Unique item from looting the Mysterious Tomb.”"
-    },
-    "SlagMight": {
-        "en": "Source Code Comment: \"Unique from Jagged Pathway event\"",
-        "zh": "源代码注释：“Unique from Jagged Pathway event”"
-    },
-    "MomsToeNail": {
-        "en": "Source Code Comment: \"Unique from BigToe event\"",
-        "zh": "源代码注释：“Unique from BigToe event”"
-    },
-    "AlienBlaster": {
-        "en": "Source Code Comment: \"Unique from CrashedObject event\"",
-        "zh": "源代码注释：“Unique from CrashedObject event”"
     },
     "TeslaCannon": {
         "en": "Source Code Comment: \"this is a Tinkerer Tech 3 item\"",
@@ -586,5 +550,177 @@
     "MomsKnife": {
         "zh": "解锁条件：妈刀事件力量检定通过后作为稀有奖励小概率解锁。",
         "en": "Unlock condition: Unlocked as a rare reward with a small chance after passing the strength check in the Mom's Knife event."
+    },
+    "PersuasionDevice_Fixed": {
+        "en": "Acquired from Dr. Beanie's side quest for Persuasion Device.",
+        "zh": "通过“比尼博士”的支线任务（说服装置）获得。"
+    },
+    "ChaosDevice_Fixed": {
+        "en": "Acquired from Dr. Beanie's side quest for Chaos Device.",
+        "zh": "通过“比尼博士”的支线任务（混沌装置）获得。"
+    },
+    "MagicMirror_Fixed": {
+        "en": "Acquired from Dr. Beanie's side quest for Magic Mirror (Broken).",
+        "zh": "通过“比尼博士”的支线任务（魔镜 (破碎)）获得。"
+    },
+    "MeStone_Fixed": {
+        "en": "Acquired from Dr. Beanie's side quest for Me Stone.",
+        "zh": "通过“比尼博士”的支线任务（自我之石）获得。"
+    },
+    "AngryFace_Fixed": {
+        "en": "Acquired from Dr. Beanie's side quest for Angry Face.",
+        "zh": "通过“比尼博士”的支线任务（愤怒脸）获得。"
+    },
+    "FartFace_Fixed": {
+        "en": "Acquired from Dr. Beanie's side quest for Fart Face.",
+        "zh": "通过“比尼博士”的支线任务（放屁脸）获得。"
+    },
+    "SpiderInjector_Fixed": {
+        "en": "Acquired from Dr. Beanie's side quest for Spider Injector.",
+        "zh": "通过“比尼博士”的支线任务（蜘蛛注射器）获得。"
+    },
+    "PartyDetonator_Fixed": {
+        "en": "Acquired from Dr. Beanie's side quest for Party Detonator.",
+        "zh": "通过“比尼博士”的支线任务（派对引爆器）获得。"
+    },
+    "AirHorn_Fixed": {
+        "en": "Acquired from Dr. Beanie's side quest for Air Horn.",
+        "zh": "通过“比尼博士”的支线任务（气喇叭）获得。"
+    },
+    "TheLoner_Fixed": {
+        "en": "Acquired from Dr. Beanie's side quest for The Loner.",
+        "zh": "通过“比尼博士”的支线任务（独行者）获得。"
+    },
+    "GlassCannon_Fixed": {
+        "en": "Acquired from Dr. Beanie's side quest for Glass Cannon.",
+        "zh": "通过“比尼博士”的支线任务（玻璃大炮）获得。"
+    },
+    "PrincessHat_Fixed": {
+        "en": "Acquired from Dr. Beanie's side quest for Princess Hat.",
+        "zh": "通过“比尼博士”的支线任务（公主帽）获得。"
+    },
+    "HardPill_Fixed": {
+        "en": "Acquired from Dr. Beanie's side quest for Unidentified Pills.",
+        "zh": "通过“比尼博士”的支线任务（未鉴定药丸）获得。"
+    },
+    "BubbleBoy_Fixed": {
+        "en": "Acquired from Dr. Beanie's side quest for Bubble Boy.",
+        "zh": "通过“比尼博士”的支线任务（泡泡男孩）获得。"
+    },
+    "Redacted_Fixed": {
+        "en": "Acquired from Dr. Beanie's side quest for Redacted.",
+        "zh": "通过“比尼博士”的支线任务（绝密）获得。"
+    },
+    "Stopwatch_Fixed": {
+        "en": "Acquired from Dr. Beanie's side quest for Stopwatch.",
+        "zh": "通过“比尼博士”的支线任务（秒表）获得。"
+    },
+    "StorageLocker_Fixed": {
+        "en": "Acquired from Dr. Beanie's side quest for Storage Locker.",
+        "zh": "通过“比尼博士”的支线任务（储物柜）获得。"
+    },
+    "MysteriousDice_Fixed": {
+        "en": "Acquired from Dr. Beanie's side quest for Mysterious Dice.",
+        "zh": "通过“比尼博士”的支线任务（神秘骰子）获得。"
+    },
+    "ExperimentalTreatment_Fixed": {
+        "en": "Acquired from Dr. Beanie's side quest for Experimental Treatment.",
+        "zh": "通过“比尼博士”的支线任务（实验性疗法）获得。"
+    },
+    "UltraVision3000_Fixed": {
+        "en": "Acquired from Dr. Beanie's side quest for Ultra Vision 3000.",
+        "zh": "通过“比尼博士”的支线任务（超视觉 3000）获得。"
+    },
+    "NuclearKnife_Fixed": {
+        "en": "Acquired from Dr. Beanie's side quest for Nuclear Knife.",
+        "zh": "通过“比尼博士”的支线任务（核能刀）获得。"
+    },
+    "NuclearKnife_Glowing": {
+        "en": "Transforms from Nuclear Knife. Acquired from Dr. Beanie.",
+        "zh": "由核能刀转化而来。来自比尼博士。"
+    },
+    "AirHorn": {
+        "en": "Acquired from Dr. Beanie.",
+        "zh": "来自比尼博士。"
+    },
+    "AngryFace": {
+        "en": "Acquired from Dr. Beanie.",
+        "zh": "来自比尼博士。"
+    },
+    "BubbleBoy": {
+        "en": "Acquired from Dr. Beanie.",
+        "zh": "来自比尼博士。"
+    },
+    "ChaosDevice": {
+        "en": "Acquired from Dr. Beanie.",
+        "zh": "来自比尼博士。"
+    },
+    "ExperimentalTreatment": {
+        "en": "Acquired from Dr. Beanie.",
+        "zh": "来自比尼博士。"
+    },
+    "FartFace": {
+        "en": "Acquired from Dr. Beanie.",
+        "zh": "来自比尼博士。"
+    },
+    "GlassCannon": {
+        "en": "Acquired from Dr. Beanie.",
+        "zh": "来自比尼博士。"
+    },
+    "HardPill": {
+        "en": "Acquired from Dr. Beanie.",
+        "zh": "来自比尼博士。"
+    },
+    "MagicMirror": {
+        "en": "Acquired from Dr. Beanie.",
+        "zh": "来自比尼博士。"
+    },
+    "MeStone": {
+        "en": "Acquired from Dr. Beanie.",
+        "zh": "来自比尼博士。"
+    },
+    "MysteriousDice": {
+        "en": "Acquired from Dr. Beanie.",
+        "zh": "来自比尼博士。"
+    },
+    "NuclearKnife": {
+        "en": "Acquired from Dr. Beanie.",
+        "zh": "来自比尼博士。"
+    },
+    "PartyDetonator": {
+        "en": "Acquired from Dr. Beanie.",
+        "zh": "来自比尼博士。"
+    },
+    "PersuasionDevice": {
+        "en": "Acquired from Dr. Beanie.",
+        "zh": "来自比尼博士。"
+    },
+    "PrincessHat": {
+        "en": "Acquired from Dr. Beanie.",
+        "zh": "来自比尼博士。"
+    },
+    "Redacted": {
+        "en": "Acquired from Dr. Beanie.",
+        "zh": "来自比尼博士。"
+    },
+    "SpiderInjector": {
+        "en": "Acquired from Dr. Beanie.",
+        "zh": "来自比尼博士。"
+    },
+    "Stopwatch": {
+        "en": "Acquired from Dr. Beanie.",
+        "zh": "来自比尼博士。"
+    },
+    "StorageLocker": {
+        "en": "Acquired from Dr. Beanie.",
+        "zh": "来自比尼博士。"
+    },
+    "TheLoner": {
+        "en": "Acquired from Dr. Beanie.",
+        "zh": "来自比尼博士。"
+    },
+    "UltraVision3000": {
+        "en": "Acquired from Dr. Beanie.",
+        "zh": "来自比尼博士。"
     }
 }

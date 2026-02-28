@@ -168,7 +168,17 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/misc_events.gon",
-      "start_line": 1528
+      "start_line": 1528,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "chapter_common"
+        },
+        {
+          "type": "item_pool",
+          "code": "chapter_rare"
+        }
+      ]
     },
     {
       "event_key": "AFewCoins",
@@ -301,7 +311,13 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/treasure_box.gon",
-      "start_line": 1084
+      "start_line": 1084,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "Coin_items"
+        }
+      ]
     },
     {
       "event_key": "ALargePoop",
@@ -449,7 +465,29 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/dead_body.gon",
-      "start_line": 1155
+      "start_line": 1155,
+      "refs": [
+        {
+          "type": "item",
+          "code": "EnchantingPoop"
+        },
+        {
+          "type": "item",
+          "code": "FecalHood_Cursed"
+        },
+        {
+          "type": "item",
+          "code": "FecalMask_Cursed"
+        },
+        {
+          "type": "item_pool",
+          "code": "chapter"
+        },
+        {
+          "type": "item_pool",
+          "code": "poop_items"
+        }
+      ]
     },
     {
       "event_key": "AMegaHugePoop",
@@ -597,7 +635,41 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/dead_body.gon",
-      "start_line": 1279
+      "start_line": 1279,
+      "refs": [
+        {
+          "type": "item",
+          "code": "EnchantingPoop"
+        },
+        {
+          "type": "item",
+          "code": "FecalHood_Cursed"
+        },
+        {
+          "type": "item",
+          "code": "FecalMask_Cursed"
+        },
+        {
+          "type": "item",
+          "code": "FecalNecklace_Cursed"
+        },
+        {
+          "type": "item_pool",
+          "code": "chapter"
+        },
+        {
+          "type": "item_pool",
+          "code": "chapter_common"
+        },
+        {
+          "type": "item_pool",
+          "code": "chapter_rare"
+        },
+        {
+          "type": "item_pool",
+          "code": "poop_items"
+        }
+      ]
     },
     {
       "event_key": "APoop",
@@ -745,7 +817,21 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/dead_body.gon",
-      "start_line": 1040
+      "start_line": 1040,
+      "refs": [
+        {
+          "type": "item",
+          "code": "EnchantingPoop_Cursed"
+        },
+        {
+          "type": "item_pool",
+          "code": "consumables"
+        },
+        {
+          "type": "item_pool",
+          "code": "poop_items"
+        }
+      ]
     },
     {
       "event_key": "APuzzleBox",
@@ -836,7 +922,13 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/treasure_box.gon",
-      "start_line": 1175
+      "start_line": 1175,
+      "refs": [
+        {
+          "type": "item",
+          "code": "PuzzleBox"
+        }
+      ]
     },
     {
       "event_key": "ARock",
@@ -961,7 +1053,21 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/treasure_box.gon",
-      "start_line": 869
+      "start_line": 869,
+      "refs": [
+        {
+          "type": "item",
+          "code": "CursedRock"
+        },
+        {
+          "type": "item",
+          "code": "Geode"
+        },
+        {
+          "type": "item_pool",
+          "code": "rock_items"
+        }
+      ]
     },
     {
       "event_key": "ASmallPileOfStones",
@@ -1109,7 +1215,21 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/dead_body.gon",
-      "start_line": 2488
+      "start_line": 2488,
+      "refs": [
+        {
+          "type": "item",
+          "code": "CursedRock"
+        },
+        {
+          "type": "item",
+          "code": "Rocks"
+        },
+        {
+          "type": "item_pool",
+          "code": "rock_items"
+        }
+      ]
     },
     {
       "event_key": "BallOfCancer",
@@ -1257,7 +1377,13 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/theend_events.gon",
-      "start_line": 1
+      "start_line": 1,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "meat_items"
+        }
+      ]
     },
     {
       "event_key": "BallOfFlesh",
@@ -1359,7 +1485,13 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/monster.gon",
-      "start_line": 465
+      "start_line": 465,
+      "refs": [
+        {
+          "type": "item",
+          "code": "BoneMarrow"
+        }
+      ]
     },
     {
       "event_key": "Baphomet",
@@ -1495,7 +1627,17 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/misc_events.gon",
-      "start_line": 1401
+      "start_line": 1401,
+      "refs": [
+        {
+          "type": "item",
+          "code": "MarkOfTheBeast"
+        },
+        {
+          "type": "item_pool",
+          "code": "chapter_rare"
+        }
+      ]
     },
     {
       "event_key": "BarbedWireFence",
@@ -1635,7 +1777,17 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/junkyard_events.gon",
-      "start_line": 93
+      "start_line": 93,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "barbed_armor"
+        },
+        {
+          "type": "item_pool",
+          "code": "barbed_items"
+        }
+      ]
     },
     {
       "event_key": "Beanies1",
@@ -1718,7 +1870,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/npc_events.gon",
-      "start_line": 199
+      "start_line": 199,
+      "refs": []
     },
     {
       "event_key": "Beanies2",
@@ -1801,7 +1954,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/npc_events.gon",
-      "start_line": 264
+      "start_line": 264,
+      "refs": []
     },
     {
       "event_key": "BearTrap",
@@ -1907,7 +2061,17 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/misc_events.gon",
-      "start_line": 1299
+      "start_line": 1299,
+      "refs": [
+        {
+          "type": "item",
+          "code": "BearTrapMask"
+        },
+        {
+          "type": "item",
+          "code": "BearTraps"
+        }
+      ]
     },
     {
       "event_key": "BigToe",
@@ -2055,7 +2219,37 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/boneyard_events.gon",
-      "start_line": 397
+      "start_line": 397,
+      "refs": [
+        {
+          "type": "item",
+          "code": "BigToe"
+        },
+        {
+          "type": "item",
+          "code": "BigToeCursed"
+        },
+        {
+          "type": "item",
+          "code": "ButterflyKnife"
+        },
+        {
+          "type": "item",
+          "code": "CarvingKnife"
+        },
+        {
+          "type": "item",
+          "code": "MomsToeNail"
+        },
+        {
+          "type": "item",
+          "code": "RazorBlade"
+        },
+        {
+          "type": "item_pool",
+          "code": "[CarvingKnife"
+        }
+      ]
     },
     {
       "event_key": "Blessing",
@@ -2155,7 +2349,25 @@
       "fixed_outcome": true,
       "options": [],
       "source_file": "G:/gpak-all/data/events/special_events.gon",
-      "start_line": 136
+      "start_line": 136,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "chapter"
+        },
+        {
+          "type": "item_pool",
+          "code": "consumables"
+        },
+        {
+          "type": "item_pool",
+          "code": "rare"
+        },
+        {
+          "type": "item_pool",
+          "code": "treasure_easy"
+        }
+      ]
     },
     {
       "event_key": "BloodStain",
@@ -2285,7 +2497,17 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/dead_body.gon",
-      "start_line": 1660
+      "start_line": 1660,
+      "refs": [
+        {
+          "type": "item",
+          "code": "CrimsonMask_Cursed"
+        },
+        {
+          "type": "item_pool",
+          "code": "parasites"
+        }
+      ]
     },
     {
       "event_key": "BodyOfGlorg",
@@ -2410,7 +2632,13 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/npc_events.gon",
-      "start_line": 1597
+      "start_line": 1597,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "parasites"
+        }
+      ]
     },
     {
       "event_key": "BodyOfGlorg_Gift",
@@ -2513,7 +2741,21 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/sequence_event_continuations.gon",
-      "start_line": 1251
+      "start_line": 1251,
+      "refs": [
+        {
+          "type": "item",
+          "code": "Beepis"
+        },
+        {
+          "type": "item",
+          "code": "Cunch"
+        },
+        {
+          "type": "item",
+          "code": "Feebis"
+        }
+      ]
     },
     {
       "event_key": "BonePile",
@@ -2653,7 +2895,29 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/dead_body.gon",
-      "start_line": 292
+      "start_line": 292,
+      "refs": [
+        {
+          "type": "item",
+          "code": "BoneMarrow"
+        },
+        {
+          "type": "item",
+          "code": "SnaggleTooth"
+        },
+        {
+          "type": "item_pool",
+          "code": "bone_armor"
+        },
+        {
+          "type": "item_pool",
+          "code": "bone_equipment"
+        },
+        {
+          "type": "item_pool",
+          "code": "bone_weapons"
+        }
+      ]
     },
     {
       "event_key": "Bottle",
@@ -2774,7 +3038,17 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/treasure_box.gon",
-      "start_line": 231
+      "start_line": 231,
+      "refs": [
+        {
+          "type": "item",
+          "code": "Bottles"
+        },
+        {
+          "type": "item",
+          "code": "GlassShard"
+        }
+      ]
     },
     {
       "event_key": "BottleOfViperBooze",
@@ -2907,7 +3181,17 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/dead_body.gon",
-      "start_line": 2890
+      "start_line": 2890,
+      "refs": [
+        {
+          "type": "item",
+          "code": "Bottles"
+        },
+        {
+          "type": "item",
+          "code": "ViperBottle"
+        }
+      ]
     },
     {
       "event_key": "BoxMonster",
@@ -3009,7 +3293,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/monster.gon",
-      "start_line": 390
+      "start_line": 390,
+      "refs": []
     },
     {
       "event_key": "BoxWithAHole",
@@ -3157,7 +3442,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/junkyard_events.gon",
-      "start_line": 457
+      "start_line": 457,
+      "refs": []
     },
     {
       "event_key": "BrokenCanister",
@@ -3263,7 +3549,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/sewer_events.gon",
-      "start_line": 290
+      "start_line": 290,
+      "refs": []
     },
     {
       "event_key": "BrokenTV",
@@ -3396,7 +3683,25 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/treasure_box.gon",
-      "start_line": 2404
+      "start_line": 2404,
+      "refs": [
+        {
+          "type": "item",
+          "code": "Conductor"
+        },
+        {
+          "type": "item",
+          "code": "FreyedWires"
+        },
+        {
+          "type": "item",
+          "code": "GlassShard"
+        },
+        {
+          "type": "item",
+          "code": "OddRemote"
+        }
+      ]
     },
     {
       "event_key": "Butch1",
@@ -3480,7 +3785,17 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/npc_events.gon",
-      "start_line": 1
+      "start_line": 1,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "chapter_common"
+        },
+        {
+          "type": "item_pool",
+          "code": "chapter_rare"
+        }
+      ]
     },
     {
       "event_key": "Butch2",
@@ -3564,7 +3879,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/npc_events.gon",
-      "start_line": 69
+      "start_line": 69,
+      "refs": []
     },
     {
       "event_key": "Butch3",
@@ -3648,7 +3964,37 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/npc_events.gon",
-      "start_line": 133
+      "start_line": 133,
+      "refs": [
+        {
+          "type": "item",
+          "code": "BagOfGlass"
+        },
+        {
+          "type": "item",
+          "code": "Callus"
+        },
+        {
+          "type": "item",
+          "code": "GlassShard"
+        },
+        {
+          "type": "item",
+          "code": "RazorBlade"
+        },
+        {
+          "type": "item",
+          "code": "RustyRazor"
+        },
+        {
+          "type": "item_pool",
+          "code": "[GlassShard,"
+        },
+        {
+          "type": "item_pool",
+          "code": "chapter_rare"
+        }
+      ]
     },
     {
       "event_key": "Butch_Tutorial",
@@ -3724,7 +4070,13 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/specific_events.gon",
-      "start_line": 93
+      "start_line": 93,
+      "refs": [
+        {
+          "type": "item",
+          "code": "Catnip"
+        }
+      ]
     },
     {
       "event_key": "CatBed",
@@ -3815,7 +4167,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/misc_events.gon",
-      "start_line": 1702
+      "start_line": 1702,
+      "refs": []
     },
     {
       "event_key": "CatHole",
@@ -3963,7 +4316,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/misc_events.gon",
-      "start_line": 1
+      "start_line": 1,
+      "refs": []
     },
     {
       "event_key": "CatOrgy",
@@ -4111,7 +4465,45 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/misc_events.gon",
-      "start_line": 435
+      "start_line": 435,
+      "refs": [
+        {
+          "type": "item",
+          "code": "CatHideArmor"
+        },
+        {
+          "type": "item",
+          "code": "CatHideHat"
+        },
+        {
+          "type": "item",
+          "code": "CatHideMask"
+        },
+        {
+          "type": "item",
+          "code": "Catnip"
+        },
+        {
+          "type": "item",
+          "code": "GutsHeart"
+        },
+        {
+          "type": "item",
+          "code": "GutsIntestines"
+        },
+        {
+          "type": "item",
+          "code": "GutsLiver"
+        },
+        {
+          "type": "item_pool",
+          "code": "consumables"
+        },
+        {
+          "type": "item_pool",
+          "code": "parasites"
+        }
+      ]
     },
     {
       "event_key": "CatPelts",
@@ -4259,7 +4651,29 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/dead_body.gon",
-      "start_line": 661
+      "start_line": 661,
+      "refs": [
+        {
+          "type": "item",
+          "code": "CatHideArmor"
+        },
+        {
+          "type": "item",
+          "code": "CatHideHat"
+        },
+        {
+          "type": "item",
+          "code": "CatHideMask"
+        },
+        {
+          "type": "item_pool",
+          "code": "[CatHideHat"
+        },
+        {
+          "type": "item_pool",
+          "code": "consumables"
+        }
+      ]
     },
     {
       "event_key": "Clam",
@@ -4392,7 +4806,21 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/treasure_box.gon",
-      "start_line": 2203
+      "start_line": 2203,
+      "refs": [
+        {
+          "type": "item",
+          "code": "Clam"
+        },
+        {
+          "type": "item",
+          "code": "Pearl"
+        },
+        {
+          "type": "item",
+          "code": "TinyPebble"
+        }
+      ]
     },
     {
       "event_key": "CloggedPipes",
@@ -4498,7 +4926,17 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/sewer_events.gon",
-      "start_line": 1
+      "start_line": 1,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "chapter_rare"
+        },
+        {
+          "type": "item_pool",
+          "code": "sludge_armor"
+        }
+      ]
     },
     {
       "event_key": "ClosedWindow",
@@ -4627,7 +5065,25 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/alley_events.gon",
-      "start_line": 108
+      "start_line": 108,
+      "refs": [
+        {
+          "type": "item",
+          "code": "FaceShards"
+        },
+        {
+          "type": "item",
+          "code": "PawShards"
+        },
+        {
+          "type": "item_pool",
+          "code": "consumables"
+        },
+        {
+          "type": "item_pool",
+          "code": "treasure_easy"
+        }
+      ]
     },
     {
       "event_key": "Coffin",
@@ -4760,7 +5216,17 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/treasure_box.gon",
-      "start_line": 2101
+      "start_line": 2101,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "bone_equipment"
+        },
+        {
+          "type": "item_pool",
+          "code": "fleshhead_items"
+        }
+      ]
     },
     {
       "event_key": "ComputerConsole",
@@ -4866,7 +5332,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/future_events.gon",
-      "start_line": 111
+      "start_line": 111,
+      "refs": []
     },
     {
       "event_key": "CrackInTheEarth",
@@ -4999,7 +5466,17 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/theend_events.gon",
-      "start_line": 193
+      "start_line": 193,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "chapter_common"
+        },
+        {
+          "type": "item_pool",
+          "code": "chapter_rare"
+        }
+      ]
     },
     {
       "event_key": "CrackInTheWall",
@@ -5144,7 +5621,17 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/caves_events.gon",
-      "start_line": 323
+      "start_line": 323,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "chapter_common"
+        },
+        {
+          "type": "item_pool",
+          "code": "chapter_rare"
+        }
+      ]
     },
     {
       "event_key": "CrashedObject",
@@ -5292,7 +5779,17 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/moon_events.gon",
-      "start_line": 1
+      "start_line": 1,
+      "refs": [
+        {
+          "type": "item",
+          "code": "AlienBlaster"
+        },
+        {
+          "type": "item_pool",
+          "code": "tech_items"
+        }
+      ]
     },
     {
       "event_key": "Crate",
@@ -5394,7 +5891,25 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/treasure_box.gon",
-      "start_line": 1
+      "start_line": 1,
+      "refs": [
+        {
+          "type": "item",
+          "code": "FurnitureBox"
+        },
+        {
+          "type": "item_pool",
+          "code": "chapter"
+        },
+        {
+          "type": "item_pool",
+          "code": "consumables"
+        },
+        {
+          "type": "item_pool",
+          "code": "weapons"
+        }
+      ]
     },
     {
       "event_key": "CraterWeatherEvent",
@@ -5578,7 +6093,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/specific_events.gon",
-      "start_line": 1
+      "start_line": 1,
+      "refs": []
     },
     {
       "event_key": "DarkDen",
@@ -5669,7 +6185,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/npc_events.gon",
-      "start_line": 1361
+      "start_line": 1361,
+      "refs": []
     },
     {
       "event_key": "DeadCat",
@@ -5821,7 +6338,33 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/dead_body.gon",
-      "start_line": 156
+      "start_line": 156,
+      "refs": [
+        {
+          "type": "item",
+          "code": "Catnip"
+        },
+        {
+          "type": "item",
+          "code": "CatnipBig"
+        },
+        {
+          "type": "item",
+          "code": "KiloOfCatnip"
+        },
+        {
+          "type": "item_pool",
+          "code": "[Catnip,"
+        },
+        {
+          "type": "item_pool",
+          "code": "cat_armor"
+        },
+        {
+          "type": "item_pool",
+          "code": "consumables"
+        }
+      ]
     },
     {
       "event_key": "DeadMammoth",
@@ -5969,7 +6512,25 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/iceage_events.gon",
-      "start_line": 70
+      "start_line": 70,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "bone_armor"
+        },
+        {
+          "type": "item_pool",
+          "code": "bone_equipment"
+        },
+        {
+          "type": "item_pool",
+          "code": "flesh_items"
+        },
+        {
+          "type": "item_pool",
+          "code": "hide_items"
+        }
+      ]
     },
     {
       "event_key": "DeadRat",
@@ -6121,7 +6682,17 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/dead_body.gon",
-      "start_line": 1
+      "start_line": 1,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "food"
+        },
+        {
+          "type": "item_pool",
+          "code": "rat_trinkets"
+        }
+      ]
     },
     {
       "event_key": "Death",
@@ -6292,7 +6863,17 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/misc_events.gon",
-      "start_line": 2278
+      "start_line": 2278,
+      "refs": [
+        {
+          "type": "item",
+          "code": "DeathsScythe"
+        },
+        {
+          "type": "item",
+          "code": "MysteriousBone"
+        }
+      ]
     },
     {
       "event_key": "DecayingCarcass",
@@ -6440,7 +7021,17 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/dead_body.gon",
-      "start_line": 918
+      "start_line": 918,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "good_parasites"
+        },
+        {
+          "type": "item_pool",
+          "code": "parasites"
+        }
+      ]
     },
     {
       "event_key": "DemonicIdol",
@@ -6630,7 +7221,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/core_events.gon",
-      "start_line": 1
+      "start_line": 1,
+      "refs": []
     },
     {
       "event_key": "Dumpster",
@@ -6728,7 +7320,21 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/treasure_box.gon",
-      "start_line": 71
+      "start_line": 71,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "any_chapter"
+        },
+        {
+          "type": "item_pool",
+          "code": "chapter"
+        },
+        {
+          "type": "item_pool",
+          "code": "consumables"
+        }
+      ]
     },
     {
       "event_key": "DustStorm",
@@ -6834,7 +7440,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/misc_events.gon",
-      "start_line": 2120
+      "start_line": 2120,
+      "refs": []
     },
     {
       "event_key": "DyingFetus",
@@ -6982,7 +7589,25 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/caves_events.gon",
-      "start_line": 1
+      "start_line": 1,
+      "refs": [
+        {
+          "type": "item",
+          "code": "GutsHeart"
+        },
+        {
+          "type": "item",
+          "code": "GutsIntestines"
+        },
+        {
+          "type": "item",
+          "code": "GutsLiver"
+        },
+        {
+          "type": "item_pool",
+          "code": "[GutsHeart"
+        }
+      ]
     },
     {
       "event_key": "ElephantsFoot",
@@ -7073,7 +7698,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/bunker_events.gon",
-      "start_line": 147
+      "start_line": 147,
+      "refs": []
     },
     {
       "event_key": "ElephantsFootCloser",
@@ -7164,7 +7790,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/sequence_event_continuations.gon",
-      "start_line": 631
+      "start_line": 631,
+      "refs": []
     },
     {
       "event_key": "ElephantsFootEvenCloser",
@@ -7255,7 +7882,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/sequence_event_continuations.gon",
-      "start_line": 700
+      "start_line": 700,
+      "refs": []
     },
     {
       "event_key": "ExtraLife",
@@ -7278,7 +7906,13 @@
       "fixed_outcome": true,
       "options": [],
       "source_file": "G:/gpak-all/data/events/special_events.gon",
-      "start_line": 740
+      "start_line": 740,
+      "refs": [
+        {
+          "type": "item",
+          "code": "Neverstone"
+        }
+      ]
     },
     {
       "event_key": "Fetus",
@@ -7418,7 +8052,13 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/dead_body.gon",
-      "start_line": 1551
+      "start_line": 1551,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "parasites"
+        }
+      ]
     },
     {
       "event_key": "Fountain",
@@ -7509,7 +8149,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/dead_body.gon",
-      "start_line": 3267
+      "start_line": 3267,
+      "refs": []
     },
     {
       "event_key": "Frank1",
@@ -7593,7 +8234,21 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/npc_events.gon",
-      "start_line": 339
+      "start_line": 339,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "chapter"
+        },
+        {
+          "type": "item_pool",
+          "code": "consumables"
+        },
+        {
+          "type": "item_pool",
+          "code": "poop_items"
+        }
+      ]
     },
     {
       "event_key": "Frank2",
@@ -7677,7 +8332,21 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/npc_events.gon",
-      "start_line": 400
+      "start_line": 400,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "chapter"
+        },
+        {
+          "type": "item_pool",
+          "code": "chapter_rare"
+        },
+        {
+          "type": "item_pool",
+          "code": "consumables"
+        }
+      ]
     },
     {
       "event_key": "FrozenHumanoid",
@@ -7768,7 +8437,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/iceage_events.gon",
-      "start_line": 1
+      "start_line": 1,
+      "refs": []
     },
     {
       "event_key": "FruitBasket",
@@ -7916,7 +8586,25 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/dead_body.gon",
-      "start_line": 2614
+      "start_line": 2614,
+      "refs": [
+        {
+          "type": "item",
+          "code": "BagOfSeeds"
+        },
+        {
+          "type": "item",
+          "code": "GlowingSeed"
+        },
+        {
+          "type": "item",
+          "code": "MagicSeed"
+        },
+        {
+          "type": "item_pool",
+          "code": "[MagicSeed,"
+        }
+      ]
     },
     {
       "event_key": "GenieLamp",
@@ -8007,7 +8695,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/treasure_box.gon",
-      "start_line": 429
+      "start_line": 429,
+      "refs": []
     },
     {
       "event_key": "Genie_Bad",
@@ -8122,7 +8811,13 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/sequence_event_continuations.gon",
-      "start_line": 99
+      "start_line": 99,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "parasites"
+        }
+      ]
     },
     {
       "event_key": "Genie_Good",
@@ -8237,7 +8932,13 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/sequence_event_continuations.gon",
-      "start_line": 3
+      "start_line": 3,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "chapter_rare"
+        }
+      ]
     },
     {
       "event_key": "GiantSleepingShark",
@@ -8385,7 +9086,13 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/sewer_events.gon",
-      "start_line": 384
+      "start_line": 384,
+      "refs": [
+        {
+          "type": "item",
+          "code": "SharkTooth"
+        }
+      ]
     },
     {
       "event_key": "GratingInTheFloor",
@@ -8518,7 +9225,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/treasure_box.gon",
-      "start_line": 2299
+      "start_line": 2299,
+      "refs": []
     },
     {
       "event_key": "GutPile",
@@ -8666,7 +9374,25 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/dead_body.gon",
-      "start_line": 412
+      "start_line": 412,
+      "refs": [
+        {
+          "type": "item",
+          "code": "AlluringDoodie"
+        },
+        {
+          "type": "item_pool",
+          "code": "food"
+        },
+        {
+          "type": "item_pool",
+          "code": "guts_items"
+        },
+        {
+          "type": "item_pool",
+          "code": "parasites"
+        }
+      ]
     },
     {
       "event_key": "Hairball",
@@ -8799,7 +9525,17 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/dead_body.gon",
-      "start_line": 2997
+      "start_line": 2997,
+      "refs": [
+        {
+          "type": "item",
+          "code": "CursedHairball"
+        },
+        {
+          "type": "item",
+          "code": "RatBeezer"
+        }
+      ]
     },
     {
       "event_key": "Happening",
@@ -9026,7 +9762,8 @@
       "fixed_outcome": true,
       "options": [],
       "source_file": "G:/gpak-all/data/events/special_events.gon",
-      "start_line": 293
+      "start_line": 293,
+      "refs": []
     },
     {
       "event_key": "HeadInATire",
@@ -9174,7 +9911,33 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/junkyard_events.gon",
-      "start_line": 329
+      "start_line": 329,
+      "refs": [
+        {
+          "type": "item",
+          "code": "BonesHat"
+        },
+        {
+          "type": "item",
+          "code": "BonesMask"
+        },
+        {
+          "type": "item",
+          "code": "HumanBrain"
+        },
+        {
+          "type": "item",
+          "code": "HumanFleshMask"
+        },
+        {
+          "type": "item",
+          "code": "HumanHead"
+        },
+        {
+          "type": "item_pool",
+          "code": "[BonesMask,"
+        }
+      ]
     },
     {
       "event_key": "HoleInTheEarth",
@@ -9307,7 +10070,37 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/misc_events.gon",
-      "start_line": 1894
+      "start_line": 1894,
+      "refs": [
+        {
+          "type": "item",
+          "code": "BurningCoal"
+        },
+        {
+          "type": "item",
+          "code": "Ember"
+        },
+        {
+          "type": "item",
+          "code": "FireFlower"
+        },
+        {
+          "type": "item",
+          "code": "MatchStick"
+        },
+        {
+          "type": "item_pool",
+          "code": "[Ember,"
+        },
+        {
+          "type": "item_pool",
+          "code": "chapter_common"
+        },
+        {
+          "type": "item_pool",
+          "code": "demon_themed_items"
+        }
+      ]
     },
     {
       "event_key": "HollowSkull",
@@ -9413,7 +10206,25 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/treasure_box.gon",
-      "start_line": 944
+      "start_line": 944,
+      "refs": [
+        {
+          "type": "item",
+          "code": "BonesHat"
+        },
+        {
+          "type": "item",
+          "code": "DryBoneHat"
+        },
+        {
+          "type": "item",
+          "code": "Molars"
+        },
+        {
+          "type": "item_pool",
+          "code": "[BonesHat,"
+        }
+      ]
     },
     {
       "event_key": "HumanSkin",
@@ -9561,7 +10372,13 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/dead_body.gon",
-      "start_line": 2743
+      "start_line": 2743,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "consumables"
+        }
+      ]
     },
     {
       "event_key": "Jack",
@@ -9782,7 +10599,25 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/npc_events.gon",
-      "start_line": 856
+      "start_line": 856,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "chapter_rare"
+        },
+        {
+          "type": "item_pool",
+          "code": "rare"
+        },
+        {
+          "type": "item_pool",
+          "code": "uncommon"
+        },
+        {
+          "type": "item_pool",
+          "code": "very_rare"
+        }
+      ]
     },
     {
       "event_key": "JaggedPathway",
@@ -9888,7 +10723,17 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/core_events.gon",
-      "start_line": 194
+      "start_line": 194,
+      "refs": [
+        {
+          "type": "item",
+          "code": "SlagTight"
+        },
+        {
+          "type": "item_pool",
+          "code": "chapter_specific_item"
+        }
+      ]
     },
     {
       "event_key": "JaggedPathwayStalactite",
@@ -9982,7 +10827,13 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/sequence_event_continuations.gon",
-      "start_line": 870
+      "start_line": 870,
+      "refs": [
+        {
+          "type": "item",
+          "code": "SlagMight"
+        }
+      ]
     },
     {
       "event_key": "KnifeInTheWall",
@@ -10050,7 +10901,13 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/alley_events.gon",
-      "start_line": 440
+      "start_line": 440,
+      "refs": [
+        {
+          "type": "item",
+          "code": "MomsKnife"
+        }
+      ]
     },
     {
       "event_key": "LeakingMeat",
@@ -10156,7 +11013,25 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/caves_events.gon",
-      "start_line": 619
+      "start_line": 619,
+      "refs": [
+        {
+          "type": "item",
+          "code": "CrimsonMask_Cursed"
+        },
+        {
+          "type": "item",
+          "code": "PoundOfFlesh_Cursed"
+        },
+        {
+          "type": "item",
+          "code": "RedCap_Cursed"
+        },
+        {
+          "type": "item_pool",
+          "code": "[CrimsonMask_Cursed"
+        }
+      ]
     },
     {
       "event_key": "LockedCrate",
@@ -10262,7 +11137,17 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/bunker_events.gon",
-      "start_line": 1
+      "start_line": 1,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "chapter_common"
+        },
+        {
+          "type": "item_pool",
+          "code": "chapter_specific_item"
+        }
+      ]
     },
     {
       "event_key": "LockedDoor",
@@ -10411,7 +11296,13 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/misc_events.gon",
-      "start_line": 990
+      "start_line": 990,
+      "refs": [
+        {
+          "type": "item",
+          "code": "BadSplinters"
+        }
+      ]
     },
     {
       "event_key": "LockedTrunk",
@@ -10513,7 +11404,13 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/junkyard_events.gon",
-      "start_line": 1
+      "start_line": 1,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "junkyard_items"
+        }
+      ]
     },
     {
       "event_key": "Locket",
@@ -10646,7 +11543,13 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/treasure_box.gon",
-      "start_line": 1503
+      "start_line": 1503,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "isaac_items"
+        }
+      ]
     },
     {
       "event_key": "MeatGolem",
@@ -10776,7 +11679,17 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/legacy_events.gon",
-      "start_line": 205
+      "start_line": 205,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "chapter_common"
+        },
+        {
+          "type": "item_pool",
+          "code": "chapter_rare"
+        }
+      ]
     },
     {
       "event_key": "Meteor",
@@ -10909,7 +11822,33 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/crater_events.gon",
-      "start_line": 137
+      "start_line": 137,
+      "refs": [
+        {
+          "type": "item",
+          "code": "AmoebaFace"
+        },
+        {
+          "type": "item",
+          "code": "AmoebaHat"
+        },
+        {
+          "type": "item",
+          "code": "AmoebaNeck"
+        },
+        {
+          "type": "item_pool",
+          "code": "[AmoebaHat"
+        },
+        {
+          "type": "item_pool",
+          "code": "chapter_common"
+        },
+        {
+          "type": "item_pool",
+          "code": "chapter_rare"
+        }
+      ]
     },
     {
       "event_key": "Mirage",
@@ -11019,7 +11958,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/desert_events.gon",
-      "start_line": 1
+      "start_line": 1,
+      "refs": []
     },
     {
       "event_key": "Mirror",
@@ -11152,7 +12092,29 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/misc_events.gon",
-      "start_line": 868
+      "start_line": 868,
+      "refs": [
+        {
+          "type": "item",
+          "code": "BagOfGlass"
+        },
+        {
+          "type": "item",
+          "code": "BrokenWindow"
+        },
+        {
+          "type": "item",
+          "code": "GlassShard"
+        },
+        {
+          "type": "item_pool",
+          "code": "[GlassShard,"
+        },
+        {
+          "type": "item_pool",
+          "code": "chapter_rare"
+        }
+      ]
     },
     {
       "event_key": "MonkeyPaw1",
@@ -11232,7 +12194,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/legacy_events.gon",
-      "start_line": 1
+      "start_line": 1,
+      "refs": []
     },
     {
       "event_key": "MonkeyPaw2",
@@ -11312,7 +12275,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/legacy_events.gon",
-      "start_line": 53
+      "start_line": 53,
+      "refs": []
     },
     {
       "event_key": "MonkeyPaw3",
@@ -11392,7 +12356,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/legacy_events.gon",
-      "start_line": 105
+      "start_line": 105,
+      "refs": []
     },
     {
       "event_key": "MonkeyPaw4",
@@ -11472,7 +12437,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/legacy_events.gon",
-      "start_line": 155
+      "start_line": 155,
+      "refs": []
     },
     {
       "event_key": "MonkeyPawWish",
@@ -11602,7 +12568,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/sequence_event_continuations.gon",
-      "start_line": 220
+      "start_line": 220,
+      "refs": []
     },
     {
       "event_key": "MouseNest",
@@ -11708,7 +12675,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/alley_events.gon",
-      "start_line": 210
+      "start_line": 210,
+      "refs": []
     },
     {
       "event_key": "MouseTrap",
@@ -11810,7 +12778,17 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/misc_events.gon",
-      "start_line": 351
+      "start_line": 351,
+      "refs": [
+        {
+          "type": "item",
+          "code": "HeadCheese"
+        },
+        {
+          "type": "item_pool",
+          "code": "food"
+        }
+      ]
     },
     {
       "event_key": "MummifiedCorpse",
@@ -11958,7 +12936,21 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/dead_body.gon",
-      "start_line": 1422
+      "start_line": 1422,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "chapter_rare"
+        },
+        {
+          "type": "item_pool",
+          "code": "deadcat_equipment"
+        },
+        {
+          "type": "item_pool",
+          "code": "parasites"
+        }
+      ]
     },
     {
       "event_key": "Mushroom",
@@ -12106,7 +13098,49 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/dead_body.gon",
-      "start_line": 2175
+      "start_line": 2175,
+      "refs": [
+        {
+          "type": "item",
+          "code": "BlackMushroom"
+        },
+        {
+          "type": "item",
+          "code": "Mushrooms"
+        },
+        {
+          "type": "item",
+          "code": "PurpleMushroom"
+        },
+        {
+          "type": "item",
+          "code": "RedMushroom"
+        },
+        {
+          "type": "item",
+          "code": "SpottedMushroom"
+        },
+        {
+          "type": "item_pool",
+          "code": "[Mushrooms,"
+        },
+        {
+          "type": "item_pool",
+          "code": "[SpottedMushroom,"
+        },
+        {
+          "type": "item_pool",
+          "code": "bone_armor"
+        },
+        {
+          "type": "item_pool",
+          "code": "cat_armor"
+        },
+        {
+          "type": "item_pool",
+          "code": "rotten_armor"
+        }
+      ]
     },
     {
       "event_key": "MysteriousBuilding",
@@ -12197,7 +13231,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/theend_events.gon",
-      "start_line": 133
+      "start_line": 133,
+      "refs": []
     },
     {
       "event_key": "MysteriousCave",
@@ -12288,7 +13323,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/jurassic_events.gon",
-      "start_line": 1
+      "start_line": 1,
+      "refs": []
     },
     {
       "event_key": "MysteriousCave1",
@@ -12379,7 +13415,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/sequence_event_continuations.gon",
-      "start_line": 955
+      "start_line": 955,
+      "refs": []
     },
     {
       "event_key": "MysteriousCave2",
@@ -12443,7 +13480,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/sequence_event_continuations.gon",
-      "start_line": 1038
+      "start_line": 1038,
+      "refs": []
     },
     {
       "event_key": "MysteriousCave3",
@@ -12507,7 +13545,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/sequence_event_continuations.gon",
-      "start_line": 1095
+      "start_line": 1095,
+      "refs": []
     },
     {
       "event_key": "MysteriousChamber",
@@ -12655,7 +13694,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/future_events.gon",
-      "start_line": 231
+      "start_line": 231,
+      "refs": []
     },
     {
       "event_key": "MysteriousCrater",
@@ -12746,7 +13786,25 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/crater_events.gon",
-      "start_line": 272
+      "start_line": 272,
+      "refs": [
+        {
+          "type": "item",
+          "code": "AmoebaFace"
+        },
+        {
+          "type": "item",
+          "code": "AmoebaHat"
+        },
+        {
+          "type": "item",
+          "code": "AmoebaNeck"
+        },
+        {
+          "type": "item_pool",
+          "code": "chapter_common"
+        }
+      ]
     },
     {
       "event_key": "MysteriousCreature",
@@ -12852,7 +13910,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/boneyard_events.gon",
-      "start_line": 611
+      "start_line": 611,
+      "refs": []
     },
     {
       "event_key": "MysteriousJar",
@@ -12982,7 +14041,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/lab_events.gon",
-      "start_line": 270
+      "start_line": 270,
+      "refs": []
     },
     {
       "event_key": "MysteriousMachine",
@@ -13073,7 +14133,13 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/npc_events.gon",
-      "start_line": 1526
+      "start_line": 1526,
+      "refs": [
+        {
+          "type": "item",
+          "code": "Technology"
+        }
+      ]
     },
     {
       "event_key": "MysteriousMachine_Bad",
@@ -13176,7 +14242,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/sequence_event_continuations.gon",
-      "start_line": 1199
+      "start_line": 1199,
+      "refs": []
     },
     {
       "event_key": "MysteriousMachine_Good",
@@ -13279,7 +14346,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/sequence_event_continuations.gon",
-      "start_line": 1147
+      "start_line": 1147,
+      "refs": []
     },
     {
       "event_key": "MysteriousManual",
@@ -13370,7 +14438,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/bunker_events.gon",
-      "start_line": 87
+      "start_line": 87,
+      "refs": []
     },
     {
       "event_key": "MysteriousObelisk",
@@ -13481,7 +14550,25 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/moon_events.gon",
-      "start_line": 177
+      "start_line": 177,
+      "refs": [
+        {
+          "type": "item",
+          "code": "ObeliskArmor"
+        },
+        {
+          "type": "item",
+          "code": "ObeliskHat"
+        },
+        {
+          "type": "item",
+          "code": "ObeliskMask"
+        },
+        {
+          "type": "item_pool",
+          "code": "[ObeliskMask"
+        }
+      ]
     },
     {
       "event_key": "MysteriousStranger",
@@ -13584,7 +14671,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/core_events.gon",
-      "start_line": 282
+      "start_line": 282,
+      "refs": []
     },
     {
       "event_key": "MysteriousStrangerForced",
@@ -13656,7 +14744,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/sequence_event_continuations.gon",
-      "start_line": 771
+      "start_line": 771,
+      "refs": []
     },
     {
       "event_key": "MysteriousTent",
@@ -13751,7 +14840,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/iceage_events.gon",
-      "start_line": 211
+      "start_line": 211,
+      "refs": []
     },
     {
       "event_key": "MysteriousTomb",
@@ -13846,7 +14936,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/desert_events.gon",
-      "start_line": 244
+      "start_line": 244,
+      "refs": []
     },
     {
       "event_key": "MysteriousTomb1",
@@ -13941,7 +15032,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/sequence_event_continuations.gon",
-      "start_line": 376
+      "start_line": 376,
+      "refs": []
     },
     {
       "event_key": "MysteriousTomb2",
@@ -14044,7 +15136,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/sequence_event_continuations.gon",
-      "start_line": 445
+      "start_line": 445,
+      "refs": []
     },
     {
       "event_key": "MysteriousTomb3",
@@ -14139,7 +15232,17 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/sequence_event_continuations.gon",
-      "start_line": 519
+      "start_line": 519,
+      "refs": [
+        {
+          "type": "item",
+          "code": "EyeOfRa"
+        },
+        {
+          "type": "item_pool",
+          "code": "chapter_rare"
+        }
+      ]
     },
     {
       "event_key": "MysteriousTomb4",
@@ -14203,7 +15306,17 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/sequence_event_continuations.gon",
-      "start_line": 582
+      "start_line": 582,
+      "refs": [
+        {
+          "type": "item",
+          "code": "BrainInAJar"
+        },
+        {
+          "type": "item",
+          "code": "PharaohStaff"
+        }
+      ]
     },
     {
       "event_key": "Needles",
@@ -14363,7 +15476,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/lab_events.gon",
-      "start_line": 1
+      "start_line": 1,
+      "refs": []
     },
     {
       "event_key": "NestOfEggs",
@@ -14511,7 +15625,17 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/jurassic_events.gon",
-      "start_line": 153
+      "start_line": 153,
+      "refs": [
+        {
+          "type": "item",
+          "code": "RaptorEgg"
+        },
+        {
+          "type": "item_pool",
+          "code": "raptor_nest_eggs"
+        }
+      ]
     },
     {
       "event_key": "Oasis",
@@ -14602,7 +15726,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/desert_events.gon",
-      "start_line": 182
+      "start_line": 182,
+      "refs": []
     },
     {
       "event_key": "OddDevice",
@@ -14708,7 +15833,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/lab_events.gon",
-      "start_line": 421
+      "start_line": 421,
+      "refs": []
     },
     {
       "event_key": "OldCan",
@@ -14833,7 +15959,21 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/treasure_box.gon",
-      "start_line": 775
+      "start_line": 775,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "can_items_common"
+        },
+        {
+          "type": "item_pool",
+          "code": "can_items_rare"
+        },
+        {
+          "type": "item_pool",
+          "code": "parasites"
+        }
+      ]
     },
     {
       "event_key": "OminousSign",
@@ -14981,7 +16121,17 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/dead_body.gon",
-      "start_line": 1925
+      "start_line": 1925,
+      "refs": [
+        {
+          "type": "item",
+          "code": "CursedStickman"
+        },
+        {
+          "type": "item_pool",
+          "code": "rat_trinkets"
+        }
+      ]
     },
     {
       "event_key": "OrganGrinder1",
@@ -15084,7 +16234,13 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/npc_events.gon",
-      "start_line": 795
+      "start_line": 795,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "parasites"
+        }
+      ]
     },
     {
       "event_key": "PileOfSkulls",
@@ -15190,7 +16346,13 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/boneyard_events.gon",
-      "start_line": 276
+      "start_line": 276,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "bone_equipment"
+        }
+      ]
     },
     {
       "event_key": "PillBottle",
@@ -15323,7 +16485,13 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/treasure_box.gon",
-      "start_line": 1796
+      "start_line": 1796,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "pills"
+        }
+      ]
     },
     {
       "event_key": "Pinata",
@@ -15430,7 +16598,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/treasure_box.gon",
-      "start_line": 334
+      "start_line": 334,
+      "refs": []
     },
     {
       "event_key": "PitOfSnakes",
@@ -15578,7 +16747,13 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/crater_events.gon",
-      "start_line": 1
+      "start_line": 1,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "chapter_rare"
+        }
+      ]
     },
     {
       "event_key": "Quest_BrokenTimeMachine",
@@ -15708,7 +16883,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/quest_events.gon",
-      "start_line": 1383
+      "start_line": 1383,
+      "refs": []
     },
     {
       "event_key": "Quest_CoreObelisk",
@@ -15853,7 +17029,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/quest_events.gon",
-      "start_line": 916
+      "start_line": 916,
+      "refs": []
     },
     {
       "event_key": "Quest_CoreObeliskGlowing",
@@ -15998,7 +17175,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/quest_events.gon",
-      "start_line": 1100
+      "start_line": 1100,
+      "refs": []
     },
     {
       "event_key": "Quest_CoreObeliskRaised",
@@ -16143,7 +17321,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/quest_events.gon",
-      "start_line": 1008
+      "start_line": 1008,
+      "refs": []
     },
     {
       "event_key": "Quest_DeadGod",
@@ -16226,7 +17405,13 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/quest_events.gon",
-      "start_line": 2077
+      "start_line": 2077,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "godly_items"
+        }
+      ]
     },
     {
       "event_key": "Quest_DeadKing",
@@ -16363,7 +17548,13 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/quest_events.gon",
-      "start_line": 511
+      "start_line": 511,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "bloody_items"
+        }
+      ]
     },
     {
       "event_key": "Quest_DimensionXPortal",
@@ -16439,7 +17630,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/quest_events.gon",
-      "start_line": 1204
+      "start_line": 1204,
+      "refs": []
     },
     {
       "event_key": "Quest_DimensionXRift",
@@ -16580,7 +17772,13 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/quest_events.gon",
-      "start_line": 1253
+      "start_line": 1253,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "glitched_items"
+        }
+      ]
     },
     {
       "event_key": "Quest_MeatWorldAltar",
@@ -16706,7 +17904,13 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/quest_events.gon",
-      "start_line": 368
+      "start_line": 368,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "blood_altar_items"
+        }
+      ]
     },
     {
       "event_key": "Quest_MoonObelisk",
@@ -16851,7 +18055,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/quest_events.gon",
-      "start_line": 628
+      "start_line": 628,
+      "refs": []
     },
     {
       "event_key": "Quest_MoonObeliskGlowing",
@@ -16996,7 +18201,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/quest_events.gon",
-      "start_line": 812
+      "start_line": 812,
+      "refs": []
     },
     {
       "event_key": "Quest_MoonObeliskRaised",
@@ -17141,7 +18347,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/quest_events.gon",
-      "start_line": 720
+      "start_line": 720,
+      "refs": []
     },
     {
       "event_key": "Quest_Orb",
@@ -17263,7 +18470,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/quest_events.gon",
-      "start_line": 1947
+      "start_line": 1947,
+      "refs": []
     },
     {
       "event_key": "Quest_ThrobbingArtery",
@@ -17381,7 +18589,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/quest_events.gon",
-      "start_line": 5
+      "start_line": 5,
+      "refs": []
     },
     {
       "event_key": "Quest_ThrobbingArtery2",
@@ -17468,7 +18677,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/quest_events.gon",
-      "start_line": 119
+      "start_line": 119,
+      "refs": []
     },
     {
       "event_key": "Quest_TimeMachine",
@@ -17571,7 +18781,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/quest_events.gon",
-      "start_line": 1466
+      "start_line": 1466,
+      "refs": []
     },
     {
       "event_key": "Quest_TimeMachineFuture",
@@ -17647,7 +18858,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/quest_events.gon",
-      "start_line": 1649
+      "start_line": 1649,
+      "refs": []
     },
     {
       "event_key": "Quest_TimeMachineIceAge",
@@ -17723,7 +18935,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/quest_events.gon",
-      "start_line": 1543
+      "start_line": 1543,
+      "refs": []
     },
     {
       "event_key": "Quest_TimeMachineJurassic",
@@ -17799,7 +19012,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/quest_events.gon",
-      "start_line": 1596
+      "start_line": 1596,
+      "refs": []
     },
     {
       "event_key": "Quest_TimeMachineTheEnd",
@@ -17875,7 +19089,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/quest_events.gon",
-      "start_line": 1702
+      "start_line": 1702,
+      "refs": []
     },
     {
       "event_key": "Quest_Volcano",
@@ -18066,7 +19281,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/quest_events.gon",
-      "start_line": 1761
+      "start_line": 1761,
+      "refs": []
     },
     {
       "event_key": "Quest_WallOfFlesh",
@@ -18188,7 +19404,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/quest_events.gon",
-      "start_line": 190
+      "start_line": 190,
+      "refs": []
     },
     {
       "event_key": "Quest_WallOfFlesh2",
@@ -18279,7 +19496,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/quest_events.gon",
-      "start_line": 302
+      "start_line": 302,
+      "refs": []
     },
     {
       "event_key": "RacyMagazine",
@@ -18385,7 +19603,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/treasure_box.gon",
-      "start_line": 1704
+      "start_line": 1704,
+      "refs": []
     },
     {
       "event_key": "RatMob",
@@ -18529,7 +19748,17 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/monster.gon",
-      "start_line": 1
+      "start_line": 1,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "food"
+        },
+        {
+          "type": "item_pool",
+          "code": "rat_trinkets"
+        }
+      ]
     },
     {
       "event_key": "RottenMeat",
@@ -18681,7 +19910,21 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/dead_body.gon",
-      "start_line": 1791
+      "start_line": 1791,
+      "refs": [
+        {
+          "type": "item",
+          "code": "RottenMeat"
+        },
+        {
+          "type": "item_pool",
+          "code": "bone_weapons"
+        },
+        {
+          "type": "item_pool",
+          "code": "parasites"
+        }
+      ]
     },
     {
       "event_key": "Safe",
@@ -18779,7 +20022,25 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/treasure_box.gon",
-      "start_line": 154
+      "start_line": 154,
+      "refs": [
+        {
+          "type": "item",
+          "code": "ChildSkull"
+        },
+        {
+          "type": "item",
+          "code": "FurnitureBox"
+        },
+        {
+          "type": "item_pool",
+          "code": "chapter"
+        },
+        {
+          "type": "item_pool",
+          "code": "unique"
+        }
+      ]
     },
     {
       "event_key": "SealedCrypt",
@@ -18871,7 +20132,13 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/boneyard_events.gon",
-      "start_line": 1
+      "start_line": 1,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "chapter_rare"
+        }
+      ]
     },
     {
       "event_key": "SeveredHead",
@@ -19019,7 +20286,21 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/dead_body.gon",
-      "start_line": 544
+      "start_line": 544,
+      "refs": [
+        {
+          "type": "item",
+          "code": "BlinkingEyeball"
+        },
+        {
+          "type": "item",
+          "code": "CursedHairball"
+        },
+        {
+          "type": "item",
+          "code": "GoldenTooth"
+        }
+      ]
     },
     {
       "event_key": "ShinyThingInAPool",
@@ -19125,7 +20406,17 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/sewer_events.gon",
-      "start_line": 91
+      "start_line": 91,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "current_chapter_rare"
+        },
+        {
+          "type": "item_pool",
+          "code": "rare"
+        }
+      ]
     },
     {
       "event_key": "SmallBird",
@@ -19258,7 +20549,17 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/misc_events.gon",
-      "start_line": 1085
+      "start_line": 1085,
+      "refs": [
+        {
+          "type": "item",
+          "code": "BirdPoopHat"
+        },
+        {
+          "type": "item_pool",
+          "code": "Bird_items"
+        }
+      ]
     },
     {
       "event_key": "SmallBlackHole",
@@ -19330,7 +20631,13 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/moon_events.gon",
-      "start_line": 267
+      "start_line": 267,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "chapter_rare"
+        }
+      ]
     },
     {
       "event_key": "SmellyBag",
@@ -19478,7 +20785,29 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/dead_body.gon",
-      "start_line": 2310
+      "start_line": 2310,
+      "refs": [
+        {
+          "type": "item",
+          "code": "PutridPile"
+        },
+        {
+          "type": "item_pool",
+          "code": "chapter_common"
+        },
+        {
+          "type": "item_pool",
+          "code": "consumables"
+        },
+        {
+          "type": "item_pool",
+          "code": "parasites"
+        },
+        {
+          "type": "item_pool",
+          "code": "sludge_armor"
+        }
+      ]
     },
     {
       "event_key": "SomethingWhisperingFromTheDarkness",
@@ -19584,7 +20913,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/caves_events.gon",
-      "start_line": 227
+      "start_line": 227,
+      "refs": []
     },
     {
       "event_key": "SpiderWebs",
@@ -19686,7 +21016,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/misc_events.gon",
-      "start_line": 776
+      "start_line": 776,
+      "refs": []
     },
     {
       "event_key": "SpookieApparation",
@@ -19788,7 +21119,17 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/monster.gon",
-      "start_line": 539
+      "start_line": 539,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "chapter_common"
+        },
+        {
+          "type": "item_pool",
+          "code": "isaac_items"
+        }
+      ]
     },
     {
       "event_key": "StacyMutant1",
@@ -19919,7 +21260,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/build_a_boss.gon",
-      "start_line": 1
+      "start_line": 1,
+      "refs": []
     },
     {
       "event_key": "StacyMutant2",
@@ -20049,7 +21391,13 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/build_a_boss.gon",
-      "start_line": 91
+      "start_line": 91,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "parasites"
+        }
+      ]
     },
     {
       "event_key": "StacyMutant3",
@@ -20179,7 +21527,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/build_a_boss.gon",
-      "start_line": 169
+      "start_line": 169,
+      "refs": []
     },
     {
       "event_key": "StacyMutant4",
@@ -20313,7 +21662,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/build_a_boss.gon",
-      "start_line": 252
+      "start_line": 252,
+      "refs": []
     },
     {
       "event_key": "Stain",
@@ -20404,7 +21754,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/dead_body.gon",
-      "start_line": 799
+      "start_line": 799,
+      "refs": []
     },
     {
       "event_key": "StartDigging",
@@ -20534,7 +21885,17 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/junkyard_events.gon",
-      "start_line": 606
+      "start_line": 606,
+      "refs": [
+        {
+          "type": "item",
+          "code": "PawShards"
+        },
+        {
+          "type": "item_pool",
+          "code": "junkyard_items"
+        }
+      ]
     },
     {
       "event_key": "StevenFetus",
@@ -20632,7 +21993,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/npc_events.gon",
-      "start_line": 1219
+      "start_line": 1219,
+      "refs": []
     },
     {
       "event_key": "StrangeFlowers",
@@ -20780,7 +22142,25 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/dead_body.gon",
-      "start_line": 2048
+      "start_line": 2048,
+      "refs": [
+        {
+          "type": "item",
+          "code": "BagOfGrass"
+        },
+        {
+          "type": "item",
+          "code": "CatnipBig"
+        },
+        {
+          "type": "item",
+          "code": "SeedBombs"
+        },
+        {
+          "type": "item",
+          "code": "StrangeMarble"
+        }
+      ]
     },
     {
       "event_key": "StrayCat",
@@ -21043,7 +22423,37 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/monster.gon",
-      "start_line": 131
+      "start_line": 131,
+      "refs": [
+        {
+          "type": "item",
+          "code": "Catnip"
+        },
+        {
+          "type": "item",
+          "code": "CatnipBig"
+        },
+        {
+          "type": "item",
+          "code": "FoodBig"
+        },
+        {
+          "type": "item",
+          "code": "FoodMedium"
+        },
+        {
+          "type": "item_pool",
+          "code": "[FoodMedium"
+        },
+        {
+          "type": "item_pool",
+          "code": "consumables"
+        },
+        {
+          "type": "item_pool",
+          "code": "deadcat_equipment"
+        }
+      ]
     },
     {
       "event_key": "StrongCurrent",
@@ -21183,7 +22593,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/misc_events.gon",
-      "start_line": 1190
+      "start_line": 1190,
+      "refs": []
     },
     {
       "event_key": "StuckCorpse",
@@ -21289,7 +22700,33 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/caves_events.gon",
-      "start_line": 136
+      "start_line": 136,
+      "refs": [
+        {
+          "type": "item",
+          "code": "MinerArmor"
+        },
+        {
+          "type": "item",
+          "code": "MinerHat"
+        },
+        {
+          "type": "item",
+          "code": "MinerMask"
+        },
+        {
+          "type": "item_pool",
+          "code": "[MinerHat,"
+        },
+        {
+          "type": "item_pool",
+          "code": "bone_equipment"
+        },
+        {
+          "type": "item_pool",
+          "code": "chapter_rare"
+        }
+      ]
     },
     {
       "event_key": "TallFence",
@@ -21418,7 +22855,25 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/misc_events.gon",
-      "start_line": 254
+      "start_line": 254,
+      "refs": [
+        {
+          "type": "item",
+          "code": "BadSplinters"
+        },
+        {
+          "type": "item",
+          "code": "Splinters"
+        },
+        {
+          "type": "item_pool",
+          "code": "consumables"
+        },
+        {
+          "type": "item_pool",
+          "code": "treasure_easy"
+        }
+      ]
     },
     {
       "event_key": "TallGrass",
@@ -21566,7 +23021,25 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/dead_body.gon",
-      "start_line": 3097
+      "start_line": 3097,
+      "refs": [
+        {
+          "type": "item",
+          "code": "Catnip"
+        },
+        {
+          "type": "item",
+          "code": "CatnipBig"
+        },
+        {
+          "type": "item",
+          "code": "KiloOfCatnip"
+        },
+        {
+          "type": "item_pool",
+          "code": "grass_items"
+        }
+      ]
     },
     {
       "event_key": "TapeRecorder",
@@ -21699,7 +23172,13 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/misc_events.gon",
-      "start_line": 1780
+      "start_line": 1780,
+      "refs": [
+        {
+          "type": "item",
+          "code": "Chainsaw"
+        }
+      ]
     },
     {
       "event_key": "TarPits",
@@ -21805,7 +23284,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/jurassic_events.gon",
-      "start_line": 66
+      "start_line": 66,
+      "refs": []
     },
     {
       "event_key": "TestAbilityMods",
@@ -21889,7 +23369,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/debug_events.gon",
-      "start_line": 450
+      "start_line": 450,
+      "refs": []
     },
     {
       "event_key": "TestAbilityPool",
@@ -21969,7 +23450,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/debug_events.gon",
-      "start_line": 53
+      "start_line": 53,
+      "refs": []
     },
     {
       "event_key": "TestCutsceneResult",
@@ -22065,7 +23547,13 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/debug_events.gon",
-      "start_line": 375
+      "start_line": 375,
+      "refs": [
+        {
+          "type": "item",
+          "code": "CryogenicTimeChamber_Full"
+        }
+      ]
     },
     {
       "event_key": "TestHealInjuriesDisorders",
@@ -22145,7 +23633,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/debug_events.gon",
-      "start_line": 169
+      "start_line": 169,
+      "refs": []
     },
     {
       "event_key": "TestLegacyEvent",
@@ -22213,7 +23702,13 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/debug_events.gon",
-      "start_line": 1
+      "start_line": 1,
+      "refs": [
+        {
+          "type": "item",
+          "code": "MomsKnife"
+        }
+      ]
     },
     {
       "event_key": "TestLimitOptions",
@@ -22293,7 +23788,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/debug_events.gon",
-      "start_line": 316
+      "start_line": 316,
+      "refs": []
     },
     {
       "event_key": "TestLoseFace",
@@ -22373,7 +23869,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/debug_events.gon",
-      "start_line": 235
+      "start_line": 235,
+      "refs": []
     },
     {
       "event_key": "TestMisc",
@@ -22437,7 +23934,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/debug_events.gon",
-      "start_line": 503
+      "start_line": 503,
+      "refs": []
     },
     {
       "event_key": "TestMutations",
@@ -22517,7 +24015,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/debug_events.gon",
-      "start_line": 109
+      "start_line": 109,
+      "refs": []
     },
     {
       "event_key": "TimeCapsule",
@@ -22650,7 +24149,109 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/treasure_box.gon",
-      "start_line": 1236
+      "start_line": 1236,
+      "refs": [
+        {
+          "type": "item",
+          "code": "BigRockHat"
+        },
+        {
+          "type": "item",
+          "code": "BigRockMask"
+        },
+        {
+          "type": "item",
+          "code": "BigRockNecklace"
+        },
+        {
+          "type": "item",
+          "code": "CavemanBeard"
+        },
+        {
+          "type": "item",
+          "code": "CavemanEyebrows"
+        },
+        {
+          "type": "item",
+          "code": "CavemanNecklace"
+        },
+        {
+          "type": "item",
+          "code": "CavemanWig"
+        },
+        {
+          "type": "item",
+          "code": "DinoHat"
+        },
+        {
+          "type": "item",
+          "code": "DinoMask"
+        },
+        {
+          "type": "item",
+          "code": "DinoNecklace"
+        },
+        {
+          "type": "item",
+          "code": "FrozenHat"
+        },
+        {
+          "type": "item",
+          "code": "FrozenMask"
+        },
+        {
+          "type": "item",
+          "code": "FrozenNecklace"
+        },
+        {
+          "type": "item",
+          "code": "LeafyHat"
+        },
+        {
+          "type": "item",
+          "code": "LeafyMask"
+        },
+        {
+          "type": "item",
+          "code": "LeafyNecklace"
+        },
+        {
+          "type": "item",
+          "code": "PawShards"
+        },
+        {
+          "type": "item",
+          "code": "PhoenixHat"
+        },
+        {
+          "type": "item",
+          "code": "PhoenixMask"
+        },
+        {
+          "type": "item",
+          "code": "PhoenixNecklace"
+        },
+        {
+          "type": "item",
+          "code": "SaberToothedHat"
+        },
+        {
+          "type": "item",
+          "code": "SaberToothedPelt"
+        },
+        {
+          "type": "item",
+          "code": "SabertoothTigerPelt"
+        },
+        {
+          "type": "item_pool",
+          "code": "any_chapter"
+        },
+        {
+          "type": "item_pool",
+          "code": "chapter_rare"
+        }
+      ]
     },
     {
       "event_key": "Tink1",
@@ -22734,7 +24335,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/npc_events.gon",
-      "start_line": 461
+      "start_line": 461,
+      "refs": []
     },
     {
       "event_key": "Tink2",
@@ -22818,7 +24420,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/npc_events.gon",
-      "start_line": 527
+      "start_line": 527,
+      "refs": []
     },
     {
       "event_key": "ToxicWaste",
@@ -22966,7 +24569,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/treasure_box.gon",
-      "start_line": 494
+      "start_line": 494,
+      "refs": []
     },
     {
       "event_key": "Tracy1",
@@ -23177,7 +24781,53 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/npc_events.gon",
-      "start_line": 593
+      "start_line": 593,
+      "refs": [
+        {
+          "type": "item",
+          "code": "BrainCandy"
+        },
+        {
+          "type": "item",
+          "code": "Clover"
+        },
+        {
+          "type": "item",
+          "code": "DiscoBiscuit"
+        },
+        {
+          "type": "item",
+          "code": "Percs"
+        },
+        {
+          "type": "item",
+          "code": "RoidRage"
+        },
+        {
+          "type": "item",
+          "code": "SpeedBall"
+        },
+        {
+          "type": "item",
+          "code": "Upper"
+        },
+        {
+          "type": "item_pool",
+          "code": "chapter"
+        },
+        {
+          "type": "item_pool",
+          "code": "chapter_rare"
+        },
+        {
+          "type": "item_pool",
+          "code": "consumables"
+        },
+        {
+          "type": "item_pool",
+          "code": "cursed_items"
+        }
+      ]
     },
     {
       "event_key": "Tragedy",
@@ -23268,7 +24918,17 @@
       "fixed_outcome": true,
       "options": [],
       "source_file": "G:/gpak-all/data/events/special_events.gon",
-      "start_line": 3
+      "start_line": 3,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "cursed_items"
+        },
+        {
+          "type": "item_pool",
+          "code": "parasites"
+        }
+      ]
     },
     {
       "event_key": "TrashBags",
@@ -23416,7 +25076,37 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/junkyard_events.gon",
-      "start_line": 199
+      "start_line": 199,
+      "refs": [
+        {
+          "type": "item",
+          "code": "SludgeHat"
+        },
+        {
+          "type": "item",
+          "code": "SludgeMask"
+        },
+        {
+          "type": "item",
+          "code": "SludgeNeck"
+        },
+        {
+          "type": "item_pool",
+          "code": "flesh_items"
+        },
+        {
+          "type": "item_pool",
+          "code": "junkyard_items"
+        },
+        {
+          "type": "item_pool",
+          "code": "recycled_items"
+        },
+        {
+          "type": "item_pool",
+          "code": "sludge_armor"
+        }
+      ]
     },
     {
       "event_key": "TrashBin",
@@ -23514,7 +25204,17 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/alley_events.gon",
-      "start_line": 1
+      "start_line": 1,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "food"
+        },
+        {
+          "type": "item_pool",
+          "code": "sludge_armor"
+        }
+      ]
     },
     {
       "event_key": "TraverseTheNecropolis",
@@ -23614,7 +25314,13 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/boneyard_events.gon",
-      "start_line": 532
+      "start_line": 532,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "flesh_items"
+        }
+      ]
     },
     {
       "event_key": "TunaCan",
@@ -23716,7 +25422,29 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/treasure_box.gon",
-      "start_line": 1018
+      "start_line": 1018,
+      "refs": [
+        {
+          "type": "item",
+          "code": "FishHook"
+        },
+        {
+          "type": "item",
+          "code": "FishNecklace"
+        },
+        {
+          "type": "item",
+          "code": "GlassShard"
+        },
+        {
+          "type": "item",
+          "code": "Pearl"
+        },
+        {
+          "type": "item_pool",
+          "code": "[Pearl,"
+        }
+      ]
     },
     {
       "event_key": "UnmarkedGrave",
@@ -23822,7 +25550,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/boneyard_events.gon",
-      "start_line": 177
+      "start_line": 177,
+      "refs": []
     },
     {
       "event_key": "UseTheToilet",
@@ -23959,7 +25688,8 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/sewer_events.gon",
-      "start_line": 184
+      "start_line": 184,
+      "refs": []
     },
     {
       "event_key": "VendingMachine",
@@ -24096,7 +25826,21 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/future_events.gon",
-      "start_line": 1
+      "start_line": 1,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "chapter_common"
+        },
+        {
+          "type": "item_pool",
+          "code": "consumables"
+        },
+        {
+          "type": "item_pool",
+          "code": "tech_items"
+        }
+      ]
     },
     {
       "event_key": "VibratingMeteor",
@@ -24187,7 +25931,25 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/misc_events.gon",
-      "start_line": 2206
+      "start_line": 2206,
+      "refs": [
+        {
+          "type": "item",
+          "code": "LargeMeteor"
+        },
+        {
+          "type": "item",
+          "code": "SmallMeteor"
+        },
+        {
+          "type": "item",
+          "code": "VibratingMeteorite"
+        },
+        {
+          "type": "item_pool",
+          "code": "[VibratingMeteorite,"
+        }
+      ]
     },
     {
       "event_key": "WallOfCats",
@@ -24335,7 +26097,21 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/alley_events.gon",
-      "start_line": 300
+      "start_line": 300,
+      "refs": [
+        {
+          "type": "item",
+          "code": "MetalRod"
+        },
+        {
+          "type": "item_pool",
+          "code": "chapter_common"
+        },
+        {
+          "type": "item_pool",
+          "code": "chapter_rare"
+        }
+      ]
     },
     {
       "event_key": "WatchingEyeballs",
@@ -24483,7 +26259,21 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/misc_events.gon",
-      "start_line": 647
+      "start_line": 647,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "Coin_items"
+        },
+        {
+          "type": "item_pool",
+          "code": "Eye_items"
+        },
+        {
+          "type": "item_pool",
+          "code": "food"
+        }
+      ]
     },
     {
       "event_key": "WatchingHead",
@@ -24581,7 +26371,17 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/monster.gon",
-      "start_line": 618
+      "start_line": 618,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "eyes_nonrare"
+        },
+        {
+          "type": "item_pool",
+          "code": "fleshhead_items"
+        }
+      ]
     },
     {
       "event_key": "WatchingHead2",
@@ -24637,7 +26437,13 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/sequence_event_continuations.gon",
-      "start_line": 182
+      "start_line": 182,
+      "refs": [
+        {
+          "type": "item",
+          "code": "HumanBrain"
+        }
+      ]
     },
     {
       "event_key": "WeirdEgg",
@@ -24770,7 +26576,13 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/treasure_box.gon",
-      "start_line": 1598
+      "start_line": 1598,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "raptor_nest_eggs"
+        }
+      ]
     },
     {
       "event_key": "WhiteRabbit",
@@ -24903,7 +26715,13 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/npc_events.gon",
-      "start_line": 1428
+      "start_line": 1428,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "bone_equipment"
+        }
+      ]
     },
     {
       "event_key": "WomansPurse",
@@ -25036,7 +26854,17 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/treasure_box.gon",
-      "start_line": 655
+      "start_line": 655,
+      "refs": [
+        {
+          "type": "item_pool",
+          "code": "mom_items"
+        },
+        {
+          "type": "item_pool",
+          "code": "pills"
+        }
+      ]
     },
     {
       "event_key": "WrithingPileOfMaggots",
@@ -25184,7 +27012,53 @@
         }
       ],
       "source_file": "G:/gpak-all/data/events/misc_events.gon",
-      "start_line": 1998
+      "start_line": 1998,
+      "refs": [
+        {
+          "type": "item",
+          "code": "EyeWorm"
+        },
+        {
+          "type": "item",
+          "code": "Heartworm"
+        },
+        {
+          "type": "item",
+          "code": "Hookworm"
+        },
+        {
+          "type": "item",
+          "code": "Parousworm"
+        },
+        {
+          "type": "item",
+          "code": "Pinworm"
+        },
+        {
+          "type": "item",
+          "code": "Ringworm"
+        },
+        {
+          "type": "item",
+          "code": "Roundworm"
+        },
+        {
+          "type": "item",
+          "code": "Tapeworm"
+        },
+        {
+          "type": "item_pool",
+          "code": "[Tapeworm,"
+        },
+        {
+          "type": "item_pool",
+          "code": "consumables"
+        },
+        {
+          "type": "item_pool",
+          "code": "grub_armor"
+        }
+      ]
     }
   ]
 }

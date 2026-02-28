@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mewgenics Mutations Viewer</title>
+    <title>Mutations Viewer | Mewgenics Encyclopedia</title>
     <style>
         * {
             margin: 0;
@@ -174,6 +174,11 @@
             margin-bottom: 10px;
         }
 
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
         .controls {
             padding: 20px;
             background: #f3f1ee;
@@ -313,6 +318,13 @@
             color: #333;
         }
 
+        .source-comment a,
+        .source-comment a:visited,
+        .source-comment a:hover,
+        .source-comment a:active {
+            color: inherit;
+        }
+
         thead th {
             padding: 15px;
             text-align: left;
@@ -355,6 +367,12 @@
 
         tbody tr:hover {
             background: #f9f9f9;
+        }
+
+        .hash-target {
+            outline: 2px solid #d8b55b;
+            outline-offset: -2px;
+            background: rgba(255, 244, 204, 0.35);
         }
 
         tbody td {
@@ -640,7 +658,8 @@
         </div>
         <div id="navbarMount"></div>
         <div class="header">
-            <h1 id="headerTitle">Mewgenics Mutations Viewer</h1>
+            <h1 id="headerTitle">Mewgenics Encyclopedia</h1>
+            <p id="headerSubtitle">Mutations Viewer</p>
         </div>
 
         <div class="controls">
@@ -721,9 +740,22 @@
         let currentPage = 1;
         let pageSize = 50;
         let currentDisplayMutations = [];
+        let hashPromoteKey = null;
+        let hashPromoteActive = false;
         let partLabelMap = new Map();
         let editorNotes = {};
         const ANNOUNCEMENT_SEEN_KEY = 'codexAnnouncementSeen_v1';
+        let refIndex = new Map();
+
+        if (typeof window.fetchJsonWithFallback !== 'function') {
+            window.fetchJsonWithFallback = async function (url, label) {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return await response.json();
+            };
+        }
 
         const PART_ORDER = ['body', 'head', 'tail', 'legs', 'mouth', 'ears', 'eyes', 'eyebrows', 'fur'];
 
@@ -748,8 +780,9 @@
 
         const UI_TEXT = mergeUiText(COMMON_UI_TEXT, {
             en: {
-                pageTitle: 'Mewgenics Mutations Viewer',
-                headerTitle: 'Mewgenics Mutations Viewer',
+                pageTitle: 'Mutations Viewer | Mewgenics Encyclopedia',
+                headerTitle: 'Mewgenics Encyclopedia',
+                headerSubtitle: 'Mutations Viewer',
                 searchPlaceholder: 'Search by mutation name, tags, or description...',
                 allParts: 'All Parts',
                 allMutations: 'All Mutations',
@@ -770,6 +803,7 @@
                 loading: 'Loading mutations...',
                 noResults: 'No mutations found matching your filters.',
                 editorNotesLabel: 'Editor Notes:',
+                referencesLabel: 'References:',
                 errorLoading: 'Error loading mutations:',
                 solution: 'Solution:',
                 runServer: 'Run the server script to browse the mutations:',
@@ -777,8 +811,9 @@
                 footerSource: 'Free fan site with data from game mutation definitions.',
             },
             zh: {
-                pageTitle: 'Mewgenics 突变图鉴',
-                headerTitle: 'Mewgenics 突变图鉴',
+                pageTitle: '突变图鉴 | Mewgenics 百科',
+                headerTitle: 'Mewgenics 百科',
+                headerSubtitle: '突变图鉴',
                 searchPlaceholder: '按突变名称、标签或描述搜索...',
                 allParts: '全部部位',
                 allMutations: '全部突变',
@@ -799,6 +834,7 @@
                 loading: '正在加载突变...',
                 noResults: '没有找到符合筛选条件的突变。',
                 editorNotesLabel: '编辑注释：',
+                referencesLabel: '引用：',
                 errorLoading: '加载突变失败：',
                 solution: '解决方法：',
                 runServer: '运行本地服务器脚本以浏览突变：',
@@ -813,10 +849,13 @@
         function applyUiLanguage() {
             document.title = t('pageTitle');
             document.getElementById('headerTitle').textContent = t('headerTitle');
+            document.getElementById('headerSubtitle').textContent = t('headerSubtitle');
             document.getElementById('searchInput').placeholder = t('searchPlaceholder');
             document.getElementById('navAbilities').textContent = t('navAbilities');
             document.getElementById('navItems').textContent = t('navItems');
             document.getElementById('navPassives').textContent = t('navPassives');
+            document.getElementById('navWeather').textContent = t('navWeather');
+            document.getElementById('navKeywords').textContent = t('navKeywords');
             document.getElementById('navFurniture').textContent = t('navFurniture');
             document.getElementById('navMutations').textContent = t('navMutations');
             const navEvents = document.getElementById('navEvents');
@@ -878,18 +917,16 @@
 
         async function loadMutations() {
             try {
-                const [response, notesResponse] = await Promise.all([
-                    fetch('mutations_combined.json'),
-                    fetch('editor_notes.json')
+                const [data, notesData, refsData] = await Promise.all([
+                    fetchJsonWithFallback('mutations_combined.json', 'mutations'),
+                    fetchJsonWithFallback('editor_notes.json', 'editor notes').catch(() => ({})),
+                    fetchJsonWithFallback('refs_index.json', 'refs index').catch(() => null)
                 ]);
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                const data = await response.json();
-                if (notesResponse.ok) {
-                    editorNotes = await notesResponse.json();
+                editorNotes = notesData || {};
+                if (refsData) {
+                    buildRefIndex(refsData);
                 } else {
-                    editorNotes = {};
+                    refIndex = new Map();
                 }
                 allMutations = data.mutations || [];
                 filteredMutations = allMutations;
@@ -1084,11 +1121,112 @@
             return '';
         }
 
+        function buildRefIndex(data) {
+            const map = new Map();
+            const refs = Array.isArray(data?.refs) ? data.refs : [];
+            refs.forEach(entry => {
+                if (entry?.reverse) {
+                    return;
+                }
+                const ref = entry?.ref || {};
+                if (!ref.type || !ref.code) {
+                    return;
+                }
+                map.set(`${ref.type}:${ref.code}`, entry);
+            });
+            refIndex = map;
+        }
+
+        function getRefLabel(ref) {
+            if (!ref || !ref.type || !ref.code) {
+                return '';
+            }
+            const entry = refIndex.get(`${ref.type}:${ref.code}`);
+            const text = entry?.text || {};
+            return text[currentLanguage] || text.en || ref.code || '';
+        }
+
+        function getRefLink(ref) {
+            if (!ref || !ref.type || !ref.code) {
+                return '';
+            }
+            if (ref.type === 'achievement' || ref.type === 'item_pool') {
+                return '';
+            }
+            const lang = currentLanguage !== 'en' ? `?lang=${currentLanguage}` : '';
+            const code = encodeURIComponent(ref.code);
+            if (ref.type === 'ability') {
+                return `index.html${lang}#${code}`;
+            }
+            if (ref.type === 'passive') {
+                return `passives.html${lang}#${code}`;
+            }
+            if (ref.type === 'item') {
+                return `items.html${lang}#${code}`;
+            }
+            if (ref.type === 'mutation') {
+                return `mutations.html${lang}#${code}`;
+            }
+            if (ref.type === 'event') {
+                return `events.html${lang}#${code}`;
+            }
+            return '';
+        }
+
+        function buildRefsHtml(refs) {
+            if (!Array.isArray(refs) || refs.length === 0) {
+                return '';
+            }
+            const unique = new Map();
+            refs.forEach(ref => {
+                if (!ref || !ref.type || !ref.code) {
+                    return;
+                }
+                const key = `${ref.type}:${ref.code}`;
+                unique.set(key, ref);
+            });
+            const links = Array.from(unique.values()).map(ref => {
+                const label = getRefLabel(ref) || ref.code;
+                const href = getRefLink(ref);
+                if (href) {
+                    return `<a href="${href}">${escapeHtml(label)}</a>`;
+                }
+                return `<span>${escapeHtml(label)}</span>`;
+            });
+            if (!links.length) {
+                return '';
+            }
+            return `<div class="source-comment">${escapeHtml(t('referencesLabel'))} ${links.join(' ')}</div>`;
+        }
+
+
+        function mergeRefs(...refsLists) {
+            const merged = [];
+            refsLists.forEach(list => {
+                if (Array.isArray(list)) {
+                    merged.push(...list);
+                }
+            });
+            return merged;
+        }
+
         function displayMutations(mutations) {
             const tbody = document.getElementById('tableBody');
             const safeMutations = Array.isArray(mutations) ? mutations : [];
-            currentDisplayMutations = safeMutations;
-            const totalEntries = safeMutations.length;
+            let orderedMutations = safeMutations;
+            if (hashPromoteActive && hashPromoteKey) {
+                const targetIndex = safeMutations.findIndex(mutation => mutationMatchesHash(mutation, hashPromoteKey));
+                if (targetIndex > 0) {
+                    const target = safeMutations[targetIndex];
+                    orderedMutations = [
+                        target,
+                        ...safeMutations.slice(0, targetIndex),
+                        ...safeMutations.slice(targetIndex + 1)
+                    ];
+                }
+            }
+            currentDisplayMutations = orderedMutations;
+            const totalEntries = orderedMutations.length;
             const size = pageSize <= 0 ? totalEntries : pageSize;
             const pageCount = totalEntries > 0 ? Math.ceil(totalEntries / size) : 1;
             if (currentPage > pageCount) {
@@ -1099,8 +1237,8 @@
             }
             const startIndex = size === 0 ? 0 : (currentPage - 1) * size;
             const pageEntries = size === 0
-                ? safeMutations
-                : safeMutations.slice(startIndex, startIndex + size);
+                ? orderedMutations
+                : orderedMutations.slice(startIndex, startIndex + size);
 
             if (totalEntries === 0) {
                 tbody.innerHTML = `<tr><td colspan="4" class="no-results">${escapeHtml(t('noResults'))}</td></tr>`;
@@ -1120,18 +1258,29 @@
                 const statsHtml = formatStatsHtml(mutation.stats || {});
                 const typeLabel = getTypeLabel(mutation);
                 const tagsHtml = formatTags(mutation.tags || []);
+                const refsHtml = buildRefsHtml(mergeRefs(mutation.refs, mutation.refs_upgraded));
                 const editorNote = getEditorNote(mutation);
                 const editorHtml = editorNote
                     ? `<div class="source-comment">${escapeHtml(t('editorNotesLabel'))} ${escapeHtml(editorNote)}</div>`
                     : '';
+                const hashKeys = getMutationHashCandidates(mutation)
+                    .map(normalizeHashKey)
+                    .filter(Boolean);
+                const hashAttr = hashKeys.length
+                    ? ` data-hash-keys="|${escapeHtml(hashKeys.join('|'))}|"`
+                    : '';
+                const mutationCode = getMutationRefCode(mutation);
+                const rowIdSeed = mutationCode || (mutation.mutation_id ?? mutation.display_name ?? mutation.desc_key ?? '');
+                const rowId = makeRowId('mutation', rowIdSeed);
 
                 return `
-                    <tr>
+                    <tr id="${escapeHtml(rowId)}"${hashAttr}>
                         <td><div class="mutation-name">${escapeHtml(mutation.display_name || '')}</div></td>
                         <td>${escapeHtml(typeLabel)}</td>
                         <td>
                             ${statsHtml}
                             <div class="description">${parseRichText(description)}</div>
+                            ${refsHtml}
                             ${editorHtml}
                         </td>
                         <td>${tagsHtml}</td>
@@ -1147,9 +1296,11 @@
             document.getElementById('pagePrevBottom').disabled = currentPage <= 1;
             document.getElementById('pageNextBottom').disabled = currentPage >= pageCount;
             document.getElementById('pageSizeSelectBottom').value = String(pageSize);
+            requestAnimationFrame(() => scrollToHash('mutation'));
         }
 
         function sortBy(column) {
+            clearHashPromotion();
             if (currentSort.column === column) {
                 currentSort.direction = currentSort.direction === 'asc' ? 'desc' : 'asc';
             } else {
@@ -1257,7 +1408,117 @@
             return html;
         }
 
+        function normalizeHashKey(value) {
+            return String(value || '').trim().toLowerCase();
+        }
+
+        function getMutationRefCode(mutation) {
+            if (!mutation) {
+                return '';
+            }
+            if (mutation.part && mutation.mutation_id !== null && mutation.mutation_id !== undefined) {
+                return `${mutation.part}:${mutation.mutation_id}`;
+            }
+            return mutation.mutation_id !== null && mutation.mutation_id !== undefined
+                ? String(mutation.mutation_id)
+                : '';
+        }
+
+        function getMutationHashCandidates(mutation) {
+            if (!mutation) {
+                return [];
+            }
+            const candidates = [];
+            const mutationCode = getMutationRefCode(mutation);
+            if (mutationCode) {
+                candidates.push(mutationCode);
+            }
+            if (mutation.mutation_id !== null && mutation.mutation_id !== undefined) {
+                candidates.push(String(mutation.mutation_id));
+            }
+            if (mutation.display_name) {
+                candidates.push(mutation.display_name);
+            }
+            if (mutation.desc_key) {
+                candidates.push(mutation.desc_key);
+            }
+            if (mutation.raw_comment) {
+                candidates.push(mutation.raw_comment);
+            }
+            return candidates;
+        }
+
+        function mutationMatchesHash(mutation, hashKey) {
+            const normalized = normalizeHashKey(hashKey);
+            return getMutationHashCandidates(mutation)
+                .some(candidate => normalizeHashKey(candidate) === normalized);
+        }
+
+        function makeRowId(prefix, code) {
+            if (!code) {
+                return '';
+            }
+            const safe = String(code).replace(/[^A-Za-z0-9_-]+/g, '-');
+            return `${prefix}-${safe}`;
+        }
+
+        function getHashKey(prefix) {
+            const hash = window.location.hash ? window.location.hash.slice(1) : '';
+            if (!hash) {
+                return '';
+            }
+            const decoded = decodeURIComponent(hash);
+            const prefixToken = `${prefix}-`;
+            if (decoded.startsWith(prefixToken)) {
+                return decoded.slice(prefixToken.length);
+            }
+            return decoded;
+        }
+
+        function updateHashPromotion(prefix) {
+            const key = getHashKey(prefix);
+            if (key) {
+                hashPromoteKey = key;
+                hashPromoteActive = true;
+            }
+        }
+
+        function clearHashPromotion() {
+            hashPromoteKey = null;
+            hashPromoteActive = false;
+        }
+
+        function escapeCssValue(value) {
+            if (typeof CSS !== 'undefined' && CSS.escape) {
+                return CSS.escape(value);
+            }
+            return value.replace(/[^A-Za-z0-9_-]/g, '\\$&');
+        }
+
+        function scrollToHash(prefix) {
+            const hash = window.location.hash ? window.location.hash.slice(1) : '';
+            if (!hash) {
+                return;
+            }
+            const decoded = decodeURIComponent(hash);
+            const direct = document.getElementById(decoded);
+            const rowId = makeRowId(prefix, decoded);
+            let target = direct || (rowId ? document.getElementById(rowId) : null);
+            if (!target) {
+                const normalized = normalizeHashKey(decoded);
+                const safe = escapeCssValue(normalized);
+                target = document.querySelector(`[data-hash-keys*="|${safe}|"]`);
+            }
+            if (!target) {
+                return;
+            }
+            target.classList.add('hash-target');
+            target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            setTimeout(() => target.classList.remove('hash-target'), 2000);
+        }
+
         function filterMutations() {
+            clearHashPromotion();
             const search = document.getElementById('searchInput').value.toLowerCase();
             const partFilter = document.getElementById('partFilter').value;
             const birthFilter = document.getElementById('birthDefectFilter').value;
@@ -1317,6 +1578,7 @@
             displayMutations(sortMutations(currentDisplayMutations));
         });
         document.getElementById('pageSizeSelect').addEventListener('change', (event) => {
+            clearHashPromotion();
             pageSize = Number.parseInt(event.target.value, 10);
             if (Number.isNaN(pageSize)) {
                 pageSize = 50;
@@ -1335,6 +1597,7 @@
             displayMutations(sortMutations(currentDisplayMutations));
         });
         document.getElementById('pageSizeSelectBottom').addEventListener('change', (event) => {
+            clearHashPromotion();
             pageSize = Number.parseInt(event.target.value, 10);
             if (Number.isNaN(pageSize)) {
                 pageSize = 50;
@@ -1342,7 +1605,16 @@
             currentPage = 1;
             displayMutations(sortMutations(currentDisplayMutations));
         });
+        window.addEventListener('hashchange', () => {
+            updateHashPromotion('mutation');
+            currentPage = 1;
+            if (currentDisplayMutations.length) {
+                displayMutations(sortMutations(currentDisplayMutations));
+            }
+            scrollToHash('mutation');
+        });
         document.addEventListener('DOMContentLoaded', () => {
+            updateHashPromotion('mutation');
             applyUiLanguage();
             initAnnouncement();
             maybeShowAnnouncement();

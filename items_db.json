@@ -1401,8 +1401,8 @@
       "Sludge"
     ],
     "stats": {
-      "shield": 1,
-      "cha": -1
+      "cha": -1,
+      "shield": 1
     },
     "durability": null,
     "aux": null,
@@ -1447,8 +1447,8 @@
       "Sludge"
     ],
     "stats": {
-      "shield": 1,
-      "cha": -1
+      "cha": -1,
+      "shield": 1
     },
     "durability": null,
     "aux": null,
@@ -1493,8 +1493,8 @@
       "Sludge"
     ],
     "stats": {
-      "shield": 1,
-      "cha": -1
+      "cha": -1,
+      "shield": 1
     },
     "durability": null,
     "aux": null,
@@ -3027,8 +3027,8 @@
       "Rock"
     ],
     "stats": {
-      "shield": 6,
-      "spd": -1
+      "spd": -1,
+      "shield": 6
     },
     "durability": null,
     "aux": null,
@@ -3073,8 +3073,8 @@
       "Rock"
     ],
     "stats": {
-      "shield": 6,
-      "spd": -1
+      "spd": -1,
+      "shield": 6
     },
     "durability": null,
     "aux": null,
@@ -3119,8 +3119,8 @@
       "Rock"
     ],
     "stats": {
-      "shield": 6,
-      "spd": -1
+      "spd": -1,
+      "shield": 6
     },
     "durability": null,
     "aux": null,
@@ -3277,8 +3277,8 @@
       "Gemstone"
     ],
     "stats": {
-      "shield": 1,
-      "cha": 1
+      "cha": 1,
+      "shield": 1
     },
     "durability": null,
     "aux": null,
@@ -3316,8 +3316,8 @@
       "Gemstone"
     ],
     "stats": {
-      "shield": 1,
-      "cha": 1
+      "cha": 1,
+      "shield": 1
     },
     "durability": null,
     "aux": null,
@@ -3355,8 +3355,8 @@
       "Gemstone"
     ],
     "stats": {
-      "shield": 1,
-      "cha": 1
+      "cha": 1,
+      "shield": 1
     },
     "durability": null,
     "aux": null,
@@ -4254,6 +4254,33 @@
     ]
   },
   {
+    "item_code": "CrimsonMask_Cursed",
+    "item_name": "Crimson Mask",
+    "item_name_texts": {
+      "en": "Crimson Mask",
+      "zh": "猩红面具"
+    },
+    "description": "+1 Damage.\nGain +1 Damage when you kill an enemy.",
+    "description_texts": {
+      "en": "+1 Damage.\nGain +1 Damage when you kill an enemy.",
+      "zh": "+1 伤害。\n当你击杀敌人时获得 +1 伤害。"
+    },
+    "kind": "face",
+    "rarity": "rare",
+    "is_consumable": false,
+    "frame": 57,
+    "sets": [
+      "Meat"
+    ],
+    "stats": null,
+    "durability": null,
+    "aux": null,
+    "name_key": "ARMOR_CRIMSONMASK_NAME",
+    "desc_key": "ARMOR_CRIMSONMASK_DESC",
+    "cursed": true,
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+  },
+  {
     "item_code": "RedCap",
     "item_name": "Red Cap",
     "item_name_texts": {
@@ -4295,6 +4322,33 @@
         }
       }
     ]
+  },
+  {
+    "item_code": "RedCap_Cursed",
+    "item_name": "Red Cap",
+    "item_name_texts": {
+      "en": "Red Cap",
+      "zh": "红软帽"
+    },
+    "description": "+1 Damage.\nGain +1 Damage when you kill an enemy.",
+    "description_texts": {
+      "en": "+1 Damage.\nGain +1 Damage when you kill an enemy.",
+      "zh": "+1 伤害。\n当你击杀敌人时获得 +1 伤害。"
+    },
+    "kind": "head",
+    "rarity": "rare",
+    "is_consumable": false,
+    "frame": 50,
+    "sets": [
+      "Meat"
+    ],
+    "stats": null,
+    "durability": null,
+    "aux": null,
+    "name_key": "ARMOR_REDCAP_NAME",
+    "desc_key": "ARMOR_REDCAP_DESC",
+    "cursed": true,
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
   },
   {
     "item_code": "PoundOfFlesh",
@@ -4352,6 +4406,33 @@
         }
       }
     ]
+  },
+  {
+    "item_code": "PoundOfFlesh_Cursed",
+    "item_name": "Pound of Flesh",
+    "item_name_texts": {
+      "en": "Pound of Flesh",
+      "zh": "一磅肉"
+    },
+    "description": "+1 Damage.\nGain +1 Damage when you kill an enemy.",
+    "description_texts": {
+      "en": "+1 Damage.\nGain +1 Damage when you kill an enemy.",
+      "zh": "+1 伤害。\n当你击杀敌人时获得 +1 伤害。"
+    },
+    "kind": "neck",
+    "rarity": "rare",
+    "is_consumable": false,
+    "frame": 48,
+    "sets": [
+      "Meat"
+    ],
+    "stats": null,
+    "durability": null,
+    "aux": null,
+    "name_key": "ARMOR_POUNDOFFLESH_NAME",
+    "desc_key": "ARMOR_POUNDOFFLESH_DESC",
+    "cursed": true,
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
   },
   {
     "item_code": "FecalMask",
@@ -4487,6 +4568,93 @@
         }
       }
     ]
+  },
+  {
+    "item_code": "FecalMask_Cursed",
+    "item_name": "Fecal Mask",
+    "item_name_texts": {
+      "en": "Fecal Mask",
+      "zh": "粪便面具"
+    },
+    "description": "Poisonous 1.",
+    "description_texts": {
+      "en": "Poisonous 1.",
+      "zh": "带毒 1。"
+    },
+    "kind": "face",
+    "rarity": "common",
+    "is_consumable": false,
+    "frame": 60,
+    "sets": [
+      "Fecal"
+    ],
+    "stats": {
+      "cha": -1
+    },
+    "durability": null,
+    "aux": null,
+    "name_key": "ARMOR_FECALMASK_NAME",
+    "desc_key": "ARMOR_FECALMASK_DESC",
+    "cursed": true,
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+  },
+  {
+    "item_code": "FecalHood_Cursed",
+    "item_name": "Fecal Hood",
+    "item_name_texts": {
+      "en": "Fecal Hood",
+      "zh": "粪便兜帽"
+    },
+    "description": "Poisonous 1.",
+    "description_texts": {
+      "en": "Poisonous 1.",
+      "zh": "带毒 1。"
+    },
+    "kind": "head",
+    "rarity": "common",
+    "is_consumable": false,
+    "frame": 57,
+    "sets": [
+      "Fecal"
+    ],
+    "stats": {
+      "cha": -1
+    },
+    "durability": null,
+    "aux": null,
+    "name_key": "ARMOR_FECALHOOD_NAME",
+    "desc_key": "ARMOR_FECALHOOD_DESC",
+    "cursed": true,
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
+  },
+  {
+    "item_code": "FecalNecklace_Cursed",
+    "item_name": "Fecal Necklace",
+    "item_name_texts": {
+      "en": "Fecal Necklace",
+      "zh": "粪便项链"
+    },
+    "description": "Poisonous 1.",
+    "description_texts": {
+      "en": "Poisonous 1.",
+      "zh": "带毒 1。"
+    },
+    "kind": "neck",
+    "rarity": "common",
+    "is_consumable": false,
+    "frame": 52,
+    "sets": [
+      "Fecal"
+    ],
+    "stats": {
+      "cha": -1
+    },
+    "durability": null,
+    "aux": null,
+    "name_key": "ARMOR_FECALNECKLACE_NAME",
+    "desc_key": "ARMOR_FECALNECKLACE_DESC",
+    "cursed": true,
+    "source_file": "G:/gpak-all/data/items/armor_sets.gon"
   },
   {
     "item_code": "LeafyMask",
@@ -5079,8 +5247,8 @@
       "HumanFlesh"
     ],
     "stats": {
-      "cha": -1,
-      "con": 2
+      "con": 2,
+      "cha": -1
     },
     "durability": null,
     "aux": null,
@@ -5132,8 +5300,8 @@
       "HumanFlesh"
     ],
     "stats": {
-      "cha": -1,
-      "str": 2
+      "str": 2,
+      "cha": -1
     },
     "durability": null,
     "aux": null,
@@ -5821,8 +5989,8 @@
       "Planet"
     ],
     "stats": {
-      "shield": 1,
-      "int": -1
+      "int": -1,
+      "shield": 1
     },
     "durability": null,
     "aux": null,
@@ -5932,8 +6100,8 @@
       "Debris"
     ],
     "stats": {
-      "shield": 2,
-      "dex": -1
+      "dex": -1,
+      "shield": 2
     },
     "durability": null,
     "aux": null,
@@ -5971,8 +6139,8 @@
       "Debris"
     ],
     "stats": {
-      "shield": 2,
-      "dex": -1
+      "dex": -1,
+      "shield": 2
     },
     "durability": null,
     "aux": null,
@@ -6010,8 +6178,8 @@
       "Debris"
     ],
     "stats": {
-      "shield": 2,
-      "dex": -1
+      "dex": -1,
+      "shield": 2
     },
     "durability": null,
     "aux": null,
@@ -6772,8 +6940,8 @@
       "Lead"
     ],
     "stats": {
-      "shield": 6,
-      "spd": -1
+      "spd": -1,
+      "shield": 6
     },
     "durability": null,
     "aux": null,
@@ -6811,8 +6979,8 @@
       "Lead"
     ],
     "stats": {
-      "shield": 6,
-      "spd": -1
+      "spd": -1,
+      "shield": 6
     },
     "durability": null,
     "aux": null,
@@ -6850,8 +7018,8 @@
       "Lead"
     ],
     "stats": {
-      "shield": 6,
-      "spd": -1
+      "spd": -1,
+      "shield": 6
     },
     "durability": null,
     "aux": null,
@@ -8989,9 +9157,9 @@
       "dex": 1,
       "int": 1,
       "con": 1,
-      "spd": 1,
+      "cha": 1,
       "lck": 1,
-      "cha": 1
+      "spd": 1
     },
     "durability": null,
     "aux": null,
@@ -9045,9 +9213,9 @@
       "dex": 1,
       "int": 1,
       "con": 1,
-      "spd": 1,
+      "cha": 1,
       "lck": 1,
-      "cha": 1
+      "spd": 1
     },
     "durability": null,
     "aux": null,
@@ -9102,9 +9270,9 @@
       "dex": 1,
       "int": 1,
       "con": 1,
-      "spd": 1,
+      "cha": 1,
       "lck": 1,
-      "cha": 1
+      "spd": 1
     },
     "durability": null,
     "aux": null,
@@ -9528,8 +9696,8 @@
       "Brick"
     ],
     "stats": {
-      "shield": 4,
-      "spd": -1
+      "spd": -1,
+      "shield": 4
     },
     "durability": null,
     "aux": null,
@@ -9567,8 +9735,8 @@
       "Brick"
     ],
     "stats": {
-      "shield": 4,
-      "spd": -1
+      "spd": -1,
+      "shield": 4
     },
     "durability": null,
     "aux": null,
@@ -9606,8 +9774,8 @@
       "Brick"
     ],
     "stats": {
-      "shield": 4,
-      "spd": -1
+      "spd": -1,
+      "shield": 4
     },
     "durability": null,
     "aux": null,
@@ -11378,8 +11546,8 @@
       "Caveman"
     ],
     "stats": {
-      "int": -1,
-      "str": 2
+      "str": 2,
+      "int": -1
     },
     "durability": null,
     "aux": null,
@@ -12097,7 +12265,41 @@
     "name_key": "ITEM_PERSUASIONDEVICE_NAME",
     "desc_key": "ITEM_PERSUASIONDEVICE_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/beanies_quest_items.gon"
+    "source_file": "G:/gpak-all/data/items/beanies_quest_items.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_PersuasionDevice"
+      }
+    ]
+  },
+  {
+    "item_code": "PersuasionDevice_Fixed",
+    "item_name": "Persuasion Device",
+    "item_name_texts": {
+      "en": "Persuasion Device",
+      "zh": "说服装置"
+    },
+    "description": "Use to permanently charm a non-boss enemy. It joins your party.\n[s:.7](Usable once per battle.)[/s]",
+    "description_texts": {
+      "en": "Use to permanently charm a non-boss enemy. It joins your party.\n[s:.7](Usable once per battle.)[/s]",
+      "zh": "使用以永久魅惑一个非Boss敌人。\n它会加入你的队伍。\n[s:.7](每场战斗限用一次。)[/s]"
+    },
+    "kind": "weapon",
+    "rarity": "rare",
+    "is_consumable": false,
+    "frame": 169,
+    "sets": null,
+    "stats": {
+      "spd": -2
+    },
+    "durability": null,
+    "aux": null,
+    "name_key": "ITEM_PERSUASIONDEVICE_NAME",
+    "desc_key": "ITEM_PERSUASIONDEVICE_FIXED_DESC",
+    "cursed": false,
+    "source_file": "G:/gpak-all/data/items/beanies_quest_items.gon",
+    "description_notes": "same?"
   },
   {
     "item_code": "ChaosDevice",
@@ -12438,7 +12640,13 @@
     "name_key": "ITEM_PARTYDETONATOR_NAME",
     "desc_key": "ITEM_PARTYDETONATOR_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/beanies_quest_items.gon"
+    "source_file": "G:/gpak-all/data/items/beanies_quest_items.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_PartyDetonator"
+      }
+    ]
   },
   {
     "item_code": "PartyDetonator_Fixed",
@@ -12463,7 +12671,13 @@
     "name_key": "ITEM_PARTYDETONATOR_FIXED_NAME",
     "desc_key": "ITEM_PARTYDETONATOR_FIXED_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/beanies_quest_items.gon"
+    "source_file": "G:/gpak-all/data/items/beanies_quest_items.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_PartyDetonatorFixed"
+      }
+    ]
   },
   {
     "item_code": "AirHorn",
@@ -12488,7 +12702,13 @@
     "name_key": "ITEM_AIRHORN_NAME",
     "desc_key": "ITEM_AIRHORN_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/beanies_quest_items.gon"
+    "source_file": "G:/gpak-all/data/items/beanies_quest_items.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_AirHorn"
+      }
+    ]
   },
   {
     "item_code": "AirHorn_Fixed",
@@ -12513,7 +12733,13 @@
     "name_key": "ITEM_AIRHORN_FIXED_NAME",
     "desc_key": "ITEM_AIRHORN_FIXED_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/beanies_quest_items.gon"
+    "source_file": "G:/gpak-all/data/items/beanies_quest_items.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_AirHornFixed"
+      }
+    ]
   },
   {
     "item_code": "TheLoner",
@@ -12540,7 +12766,13 @@
     "name_key": "ITEM_THELONER_NAME",
     "desc_key": "ITEM_THELONER_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/beanies_quest_items.gon"
+    "source_file": "G:/gpak-all/data/items/beanies_quest_items.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_TheLoner"
+      }
+    ]
   },
   {
     "item_code": "TheLoner_Fixed",
@@ -12568,7 +12800,13 @@
     "name_key": "ITEM_THELONER_FIXED_NAME",
     "desc_key": "ITEM_THELONER_FIXED_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/beanies_quest_items.gon"
+    "source_file": "G:/gpak-all/data/items/beanies_quest_items.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_TheLonerFixed"
+      }
+    ]
   },
   {
     "item_code": "GlassCannon",
@@ -12593,7 +12831,13 @@
     "name_key": "ITEM_GLASSCANNON_NAME",
     "desc_key": "ITEM_GLASSCANNON_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/beanies_quest_items.gon"
+    "source_file": "G:/gpak-all/data/items/beanies_quest_items.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_GlassCannon"
+      }
+    ]
   },
   {
     "item_code": "GlassCannon_Fixed",
@@ -12618,7 +12862,13 @@
     "name_key": "ITEM_GLASSCANNON_FIXED_NAME",
     "desc_key": "ITEM_GLASSCANNON_FIXED_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/beanies_quest_items.gon"
+    "source_file": "G:/gpak-all/data/items/beanies_quest_items.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_GlassCannonFixed"
+      }
+    ]
   },
   {
     "item_code": "PrincessHat",
@@ -12776,7 +13026,13 @@
     "name_key": "ITEM_BUBBLEBOY_FIXED_NAME",
     "desc_key": "ITEM_BUBBLEBOY_FIXED_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/beanies_quest_items.gon"
+    "source_file": "G:/gpak-all/data/items/beanies_quest_items.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_BubbleBoyFixed"
+      }
+    ]
   },
   {
     "item_code": "Redacted",
@@ -12876,7 +13132,13 @@
     "name_key": "ITEM_STOPWATCH_FIXED_NAME",
     "desc_key": "ITEM_STOPWATCH_FIXED_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/beanies_quest_items.gon"
+    "source_file": "G:/gpak-all/data/items/beanies_quest_items.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_StopwatchFixed"
+      }
+    ]
   },
   {
     "item_code": "StorageLocker",
@@ -12976,7 +13238,13 @@
     "name_key": "ITEM_MYSTERIOUSDICE_FIXED_NAME",
     "desc_key": "ITEM_MYSTERIOUSDICE_FIXED_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/beanies_quest_items.gon"
+    "source_file": "G:/gpak-all/data/items/beanies_quest_items.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_TheD6"
+      }
+    ]
   },
   {
     "item_code": "ExperimentalTreatment",
@@ -13113,7 +13381,13 @@
     "name_key": "ITEM_NUCLEARKNIFE_NAME",
     "desc_key": "ITEM_NUCLEARKNIFE_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/beanies_quest_items.gon"
+    "source_file": "G:/gpak-all/data/items/beanies_quest_items.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_NuclearKnife"
+      }
+    ]
   },
   {
     "item_code": "NuclearKnife_Glowing",
@@ -13136,11 +13410,17 @@
     ],
     "stats": null,
     "durability": null,
-    "aux": "10",
+    "aux": 10,
     "name_key": "ITEM_NUCLEARKNIFE_GLOWING_NAME",
     "desc_key": "ITEM_NUCLEARKNIFE_GLOWING_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/beanies_quest_items.gon"
+    "source_file": "G:/gpak-all/data/items/beanies_quest_items.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_NuclearKnife"
+      }
+    ]
   },
   {
     "item_code": "NuclearKnife_Fixed",
@@ -13167,7 +13447,13 @@
     "name_key": "ITEM_NUCLEARKNIFE_FIXED_NAME",
     "desc_key": "ITEM_NUCLEARKNIFE_FIXED_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/beanies_quest_items.gon"
+    "source_file": "G:/gpak-all/data/items/beanies_quest_items.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_NuclearKnifeFixed"
+      }
+    ]
   },
   {
     "item_code": "FoodMedium",
@@ -13188,11 +13474,17 @@
     "sets": null,
     "stats": null,
     "durability": "1",
-    "aux": "12",
+    "aux": 12,
     "name_key": "ITEM_ASNACK_NAME",
     "desc_key": "ITEM_ASNACK_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_Heal"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/basic consumables",
@@ -13236,11 +13528,17 @@
     "sets": null,
     "stats": null,
     "durability": "1",
-    "aux": "24",
+    "aux": 24,
     "name_key": "ITEM_CATFOOD_NAME",
     "desc_key": "ITEM_CATFOOD_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_Heal"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/basic consumables",
@@ -13284,11 +13582,17 @@
     "sets": null,
     "stats": null,
     "durability": "3",
-    "aux": "15",
+    "aux": 15,
     "name_key": "ITEM_ROTISSERIECHICKEN_NAME",
     "desc_key": "ITEM_ROTISSERIECHICKEN_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_Heal"
+      }
+    ],
     "item_pools": [
       {
         "tag": "bird/chicken",
@@ -13346,11 +13650,17 @@
     "sets": null,
     "stats": null,
     "durability": "1",
-    "aux": "7",
+    "aux": 7,
     "name_key": "ITEM_SMALLCATNIPBAGGY_NAME",
     "desc_key": "ITEM_SMALLCATNIPBAGGY_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_Catnip"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/basic consumables",
@@ -13387,11 +13697,17 @@
     "sets": null,
     "stats": null,
     "durability": "1",
-    "aux": "12",
+    "aux": 12,
     "name_key": "ITEM_LARGECATNIPBAGGY_NAME",
     "desc_key": "ITEM_LARGECATNIPBAGGY_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_Catnip"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/grass_items",
@@ -13435,11 +13751,17 @@
     "sets": null,
     "stats": null,
     "durability": "1",
-    "aux": "5",
+    "aux": 5,
     "name_key": "ITEM_ROIDRAGE_NAME",
     "desc_key": "ITEM_ROIDRAGE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_StrBuff"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/basic consumables",
@@ -13483,11 +13805,17 @@
     "sets": null,
     "stats": null,
     "durability": "1",
-    "aux": "5",
+    "aux": 5,
     "name_key": "ITEM_SPEEDBALL_NAME",
     "desc_key": "ITEM_SPEEDBALL_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_DexBuff"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/basic consumables",
@@ -13531,11 +13859,17 @@
     "sets": null,
     "stats": null,
     "durability": "1",
-    "aux": "5",
+    "aux": 5,
     "name_key": "ITEM_BRAINCANDY_NAME",
     "desc_key": "ITEM_BRAINCANDY_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_IntBuff"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/basic consumables",
@@ -13579,11 +13913,17 @@
     "sets": null,
     "stats": null,
     "durability": "1",
-    "aux": "5",
+    "aux": 5,
     "name_key": "ITEM_DISCOBISCUIT_NAME",
     "desc_key": "ITEM_DISCOBISCUIT_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_ChaBuff"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/basic consumables",
@@ -13627,11 +13967,17 @@
     "sets": null,
     "stats": null,
     "durability": "1",
-    "aux": "5",
+    "aux": 5,
     "name_key": "ITEM_CLOVER_NAME",
     "desc_key": "ITEM_CLOVER_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_LckBuff"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/basic consumables",
@@ -13675,11 +14021,17 @@
     "sets": null,
     "stats": null,
     "durability": "1",
-    "aux": "5",
+    "aux": 5,
     "name_key": "ITEM_UPPER_NAME",
     "desc_key": "ITEM_UPPER_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_SpdBuff"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/basic consumables",
@@ -13723,11 +14075,17 @@
     "sets": null,
     "stats": null,
     "durability": "1",
-    "aux": "10",
+    "aux": 10,
     "name_key": "ITEM_PERCS_NAME",
     "desc_key": "ITEM_PERCS_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_Shield"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/basic consumables",
@@ -13776,6 +14134,12 @@
     "desc_key": "ITEM_ANTIDOTE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_Antidote"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/basic consumables",
@@ -13816,7 +14180,13 @@
     "name_key": "ITEM_KIDNEY_NAME",
     "desc_key": "ITEM_KIDNEY_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/consumables.gon"
+    "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_Kidney"
+      }
+    ]
   },
   {
     "item_code": "Enema",
@@ -13842,6 +14212,12 @@
     "desc_key": "ITEM_ENEMA_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_Enema"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/consumable",
@@ -13871,11 +14247,17 @@
     "sets": null,
     "stats": null,
     "durability": "1",
-    "aux": "25",
+    "aux": 25,
     "name_key": "ITEM_SITRUSBERRY_NAME",
     "desc_key": "ITEM_SITRUSBERRY_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_HealPercent"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/consumable",
@@ -13910,6 +14292,12 @@
     "desc_key": "ITEM_SMELLINGSALTS_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_SmellingSalts"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/consumable",
@@ -13944,6 +14332,12 @@
     "desc_key": "ITEM_LARD_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_Lard"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/consumable",
@@ -13978,6 +14372,12 @@
     "desc_key": "ITEM_KILOOFCATNIP_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_KiloOfCatnip"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/grass_items",
@@ -14014,11 +14414,17 @@
     "sets": null,
     "stats": null,
     "durability": "5",
-    "aux": "10",
+    "aux": 10,
     "name_key": "ITEM_BAGOFGRASS_NAME",
     "desc_key": "ITEM_BAGOFGRASS_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_Catnip"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/grass_items",
@@ -14054,12 +14460,18 @@
     "frame": 72,
     "sets": null,
     "stats": null,
-    "durability": "[2 4]",
+    "durability": "[2, 4]",
     "aux": null,
     "name_key": "ITEM_VIPERBOTTLE_NAME",
     "desc_key": "ITEM_VIPERBOTTLE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_ViperBottle"
+      }
+    ],
     "description_notes": "wip"
   },
   {
@@ -14088,6 +14500,12 @@
     "desc_key": "ITEM_SUPERBANDAGE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_SuperBandage"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/consumable",
@@ -14125,6 +14543,12 @@
     "desc_key": "ITEM_ROTTENMEAT_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_RottenMeat"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/meat_items",
@@ -14162,12 +14586,18 @@
       "Druid"
     ],
     "stats": null,
-    "durability": "[2 4]",
-    "aux": "2",
+    "durability": "[2, 4]",
+    "aux": 2,
     "name_key": "ITEM_MUSHROOMS_NAME",
     "desc_key": "ITEM_MUSHROOMS_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_AllStatsBuff"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/consumable",
@@ -14202,6 +14632,12 @@
     "desc_key": "ITEM_STAR_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_Star"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/consumable",
@@ -14238,6 +14674,12 @@
     "desc_key": "ITEM_BULLSEYE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_Bullseye"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/consumable",
@@ -14272,6 +14714,12 @@
     "desc_key": "ITEM_STEMCELLS_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_StemCells"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/consumable",
@@ -14303,11 +14751,17 @@
     ],
     "stats": null,
     "durability": "1",
-    "aux": "8",
+    "aux": 8,
     "name_key": "ITEM_EYEBALL_NAME",
     "desc_key": "ITEM_EYEBALL_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_Heal"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/Eye_items",
@@ -14350,12 +14804,18 @@
     "frame": 132,
     "sets": null,
     "stats": null,
-    "durability": "[2 6]",
+    "durability": "[2, 6]",
     "aux": null,
     "name_key": "ITEM_WITCHSEYE_NAME",
     "desc_key": "ITEM_WITCHSEYE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_WitchsEye"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/Eye_items",
@@ -14398,12 +14858,18 @@
     "frame": 136,
     "sets": null,
     "stats": null,
-    "durability": "[1 3]",
+    "durability": "[1, 3]",
     "aux": null,
     "name_key": "ITEM_FORBIDDENFRUIT_NAME",
     "desc_key": "ITEM_FORBIDDENFRUIT_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_ForbiddenFruit"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/consumable",
@@ -14438,6 +14904,12 @@
     "desc_key": "ITEM_PCP_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_PCP"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/consumable",
@@ -14474,6 +14946,12 @@
     "desc_key": "ITEM_WISHBONE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_WishBone"
+      }
+    ],
     "item_pools": [
       {
         "tag": "bird/turkey",
@@ -14515,6 +14993,12 @@
     "desc_key": "ITEM_METALCOAT_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_MetalCoat"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -14549,6 +15033,12 @@
     "desc_key": "ITEM_SHOEPOLISH_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_ShoePolish"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -14584,7 +15074,13 @@
     "name_key": "ITEM_PEARL_NAME",
     "desc_key": "ITEM_PEARL_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/consumables.gon"
+    "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_Pearl"
+      }
+    ]
   },
   {
     "item_code": "BigToe",
@@ -14611,7 +15107,13 @@
     "name_key": "ITEM_BIGTOE_NAME",
     "desc_key": "ITEM_BIGTOE_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/consumables.gon"
+    "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_BigToe"
+      }
+    ]
   },
   {
     "item_code": "RaptorEgg",
@@ -14637,6 +15139,12 @@
     "desc_key": "ITEM_RAPTOREGG_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_RaptorEgg"
+      }
+    ],
     "item_pools": [
       {
         "tag": "bird/chicken",
@@ -14680,6 +15188,12 @@
     "desc_key": "ITEM_FIGHTERSEAL_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_FighterSeal"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/class_seals",
@@ -14716,6 +15230,12 @@
     "desc_key": "ITEM_HUNTERSEAL_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_HunterSeal"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/class_seals",
@@ -14752,6 +15272,12 @@
     "desc_key": "ITEM_TANKSEAL_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_TankSeal"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/class_seals",
@@ -14788,6 +15314,12 @@
     "desc_key": "ITEM_CLERICSEAL_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_ClericSeal"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/class_seals",
@@ -14824,6 +15356,12 @@
     "desc_key": "ITEM_THIEFSEAL_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_ThiefSeal"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/class_seals",
@@ -14860,6 +15398,12 @@
     "desc_key": "ITEM_MAGESEAL_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_MageSeal"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/class_seals",
@@ -14894,6 +15438,12 @@
     "desc_key": "ITEM_COLORLESSSEAL_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_ColorlessSeal"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/class_seals",
@@ -14930,6 +15480,12 @@
     "desc_key": "ITEM_PSYCHICSEAL_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_PsychicSeal"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/class_seals",
@@ -14966,6 +15522,12 @@
     "desc_key": "ITEM_JESTERSEAL_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_JesterSeal"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/class_seals",
@@ -15002,6 +15564,12 @@
     "desc_key": "ITEM_TINKERERSEAL_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_TinkererSeal"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/class_seals",
@@ -15038,6 +15606,12 @@
     "desc_key": "ITEM_BUTCHERSEAL_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_ButcherSeal"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/class_seals",
@@ -15074,6 +15648,12 @@
     "desc_key": "ITEM_DRUIDSEAL_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_DruidSeal"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/class_seals",
@@ -15108,6 +15688,12 @@
     "desc_key": "ITEM_MONKSEAL_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_MonkSeal"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/class_seals",
@@ -15144,6 +15730,12 @@
     "desc_key": "ITEM_NECROMANCERSEAL_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_NecromancerSeal"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/class_seals",
@@ -15173,11 +15765,17 @@
     "sets": null,
     "stats": null,
     "durability": "7",
-    "aux": "15",
+    "aux": 15,
     "name_key": "ITEM_TURKEY_NAME",
     "desc_key": "ITEM_TURKEY_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_Heal"
+      }
+    ],
     "item_pools": [
       {
         "tag": "bird/turkey",
@@ -15216,11 +15814,17 @@
     ],
     "stats": null,
     "durability": "2",
-    "aux": "20",
+    "aux": 20,
     "name_key": "ITEM_DEADHUMMINGBIRD_NAME",
     "desc_key": "ITEM_DEADHUMMINGBIRD_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_EatHummingbird"
+      }
+    ],
     "item_pools": [
       {
         "tag": "bird/hummingbird",
@@ -15249,12 +15853,18 @@
     "frame": 277,
     "sets": null,
     "stats": null,
-    "durability": "[1 3]",
+    "durability": "[1, 3]",
     "aux": null,
     "name_key": "ITEM_UNSTABLEDNA_NAME",
     "desc_key": "ITEM_UNSTABLEDNA_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/consumables.gon"
+    "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_UnstableDNA"
+      }
+    ]
   },
   {
     "item_code": "RedPill",
@@ -15280,6 +15890,12 @@
     "desc_key": "ITEM_REDPILL_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_RedPill"
+      }
+    ],
     "description_notes": "see DISORDER_CHUNGUS_NAME"
   },
   {
@@ -15305,7 +15921,13 @@
     "name_key": "ITEM_FORBIDDENPILL_NAME",
     "desc_key": "ITEM_FORBIDDENPILL_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/consumables.gon"
+    "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_ForbiddenPill"
+      }
+    ]
   },
   {
     "item_code": "MissingNipple",
@@ -15330,7 +15952,13 @@
     "name_key": "ITEM_MISSINGNIPPLE_NAME",
     "desc_key": "ITEM_MISSINGNIPPLE_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/consumables.gon"
+    "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_Nipple"
+      }
+    ]
   },
   {
     "item_code": "Experimentx",
@@ -15358,6 +15986,12 @@
     "desc_key": "ITEM_EXPERIMENTX_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_ExperimentX"
+      }
+    ],
     "item_pools": [
       {
         "tag": "chapter/lab",
@@ -15394,6 +16028,12 @@
     "desc_key": "ITEM_STEVENSCONSUMABLE1_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_Steven1"
+      }
+    ],
     "unlock_requirements": [
       {
         "type": "beat_house_boss",
@@ -15442,6 +16082,12 @@
     "desc_key": "ITEM_STEVENSCONSUMABLE2_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_Steven2"
+      }
+    ],
     "unlock_requirements": [
       {
         "type": "beat_house_boss",
@@ -15491,6 +16137,12 @@
     "desc_key": "ITEM_JOKERCARD_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_JokerCard"
+      }
+    ],
     "unlock_requirements": [
       {
         "type": "complete_checklist_with_class",
@@ -15532,7 +16184,13 @@
     "name_key": "ITEM_GIZZARD_NAME",
     "desc_key": "ITEM_GIZZARD_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/consumables.gon"
+    "source_file": "G:/gpak-all/data/items/consumables.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_Gizzard"
+      }
+    ]
   },
   {
     "item_code": "AlluringDoodie",
@@ -15598,6 +16256,12 @@
     "desc_key": "ITEM_CHILDSSKULL_DESC",
     "cursed": true,
     "source_file": "G:/gpak-all/data/items/cursed_items.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "IsaacBasicAttack"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/mom_items",
@@ -15674,8 +16338,8 @@
     "frame": 22,
     "sets": null,
     "stats": {
-      "con": -1,
-      "str": 1
+      "str": 1,
+      "con": -1
     },
     "durability": null,
     "aux": null,
@@ -15882,7 +16546,7 @@
     "sets": null,
     "stats": null,
     "durability": null,
-    "aux": "3",
+    "aux": 3,
     "name_key": "ITEM_VIBRATINGMETEORITE_NAME",
     "desc_key": "ITEM_VIBRATINGMETEORITE_DESC",
     "cursed": true,
@@ -15915,8 +16579,8 @@
     "frame": 56,
     "sets": null,
     "stats": {
-      "shield": 6,
-      "str": -2
+      "str": -2,
+      "shield": 6
     },
     "durability": null,
     "aux": null,
@@ -16016,7 +16680,7 @@
     "sets": null,
     "stats": null,
     "durability": null,
-    "aux": "2",
+    "aux": 2,
     "name_key": "ARMOR_CALLUS_NAME",
     "desc_key": "ARMOR_CALLUS_DESC",
     "cursed": true,
@@ -16085,7 +16749,13 @@
     "name_key": "ITEM_METALROD_NAME",
     "desc_key": "ITEM_METALRODHAT_DESC",
     "cursed": true,
-    "source_file": "G:/gpak-all/data/items/cursed_items.gon"
+    "source_file": "G:/gpak-all/data/items/cursed_items.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_MetalRod"
+      }
+    ]
   },
   {
     "item_code": "BigToeCursed",
@@ -16133,226 +16803,11 @@
       "lck": -2
     },
     "durability": null,
-    "aux": "500",
+    "aux": 500,
     "name_key": "ITEM_GOLDENIDOL_NAME",
     "desc_key": "ITEM_GOLDENIDOL_DESC",
     "cursed": true,
     "source_file": "G:/gpak-all/data/items/cursed_items.gon"
-  },
-  {
-    "item_code": "MageCollar",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "neck",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 6,
-    "sets": null,
-    "stats": {
-      "int": 2
-    },
-    "durability": null,
-    "aux": null,
-    "name_key": "\"\"",
-    "desc_key": "\"\"",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
-  },
-  {
-    "item_code": "MetalPlate",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "face",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 18,
-    "sets": null,
-    "stats": {
-      "con": 2
-    },
-    "durability": null,
-    "aux": null,
-    "name_key": "\"\"",
-    "desc_key": "\"\"",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
-  },
-  {
-    "item_code": "HuntersPatch",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "face",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 19,
-    "sets": null,
-    "stats": {
-      "dex": 2
-    },
-    "durability": null,
-    "aux": null,
-    "name_key": "\"\"",
-    "desc_key": "\"\"",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
-  },
-  {
-    "item_code": "AngelicAura",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "neck",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 7,
-    "sets": null,
-    "stats": {
-      "int": 1,
-      "con": 1
-    },
-    "durability": null,
-    "aux": null,
-    "name_key": "\"\"",
-    "desc_key": "\"\"",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
-  },
-  {
-    "item_code": "CoinBag",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "head",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 13,
-    "sets": null,
-    "stats": null,
-    "durability": null,
-    "aux": null,
-    "name_key": "\"\"",
-    "desc_key": "\"\"",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
-  },
-  {
-    "item_code": "SamsonsChains",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "neck",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 8,
-    "sets": null,
-    "stats": {
-      "str": 2
-    },
-    "durability": null,
-    "aux": null,
-    "name_key": "\"\"",
-    "desc_key": "\"\"",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
-  },
-  {
-    "item_code": "Banana",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "head",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 14,
-    "sets": null,
-    "stats": {
-      "cha": -1
-    },
-    "durability": null,
-    "aux": null,
-    "name_key": "\"\"",
-    "desc_key": "\"\"",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
-  },
-  {
-    "item_code": "Slime",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "neck",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 14,
-    "sets": null,
-    "stats": {
-      "cha": -1
-    },
-    "durability": null,
-    "aux": null,
-    "name_key": "\"\"",
-    "desc_key": "\"\"",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
   },
   {
     "item_code": "GunslingerPistol",
@@ -16375,86 +16830,15 @@
     "durability": "6",
     "aux": null,
     "name_key": "ITEM_GUNSLINGERPISTOL_NAME",
-    "desc_key": "\"\"",
+    "desc_key": "",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
-  },
-  {
-    "item_code": "WesternHat",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "face",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 52,
-    "sets": null,
-    "stats": null,
-    "durability": null,
-    "aux": null,
-    "name_key": "\"\"",
-    "desc_key": "\"\"",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
-  },
-  {
-    "item_code": "Poncho",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "neck",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 43,
-    "sets": null,
-    "stats": null,
-    "durability": null,
-    "aux": null,
-    "name_key": "\"\"",
-    "desc_key": "\"\"",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
-  },
-  {
-    "item_code": "AtomicMark",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "face",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 64,
-    "sets": null,
-    "stats": {
-      "int": 2
-    },
-    "durability": null,
-    "aux": null,
-    "name_key": "\"\"",
-    "desc_key": "\"\"",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
+    "source_file": "G:/gpak-all/data/items/enemy_items.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_GunslingerPistol"
+      }
+    ]
   },
   {
     "item_code": "AstroTaser",
@@ -16477,9 +16861,15 @@
     "durability": null,
     "aux": null,
     "name_key": "ITEM_ASTROTASER_NAME",
-    "desc_key": "\"\"",
+    "desc_key": "",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
+    "source_file": "G:/gpak-all/data/items/enemy_items.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_AstroTaser"
+      }
+    ]
   },
   {
     "item_code": "OddRemote_Enemy",
@@ -16504,309 +16894,13 @@
     "name_key": "ITEM_ODDREMOTE_NAME",
     "desc_key": "ITEM_ODDREMOTE_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
-  },
-  {
-    "item_code": "Pebble",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "head",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 92,
-    "sets": null,
-    "stats": {
-      "shield": 2
-    },
-    "durability": null,
-    "aux": null,
-    "name_key": "\"\"",
-    "desc_key": "\"\"",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
-  },
-  {
-    "item_code": "Dreadlocks",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "head",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 93,
-    "sets": null,
-    "stats": null,
-    "durability": null,
-    "aux": null,
-    "name_key": "\"\"",
-    "desc_key": "\"\"",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
-  },
-  {
-    "item_code": "BabyHair",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "head",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 94,
-    "sets": null,
-    "stats": null,
-    "durability": null,
-    "aux": null,
-    "name_key": "\"\"",
-    "desc_key": "\"\"",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
-  },
-  {
-    "item_code": "BulbHead",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "head",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 95,
-    "sets": null,
-    "stats": null,
-    "durability": null,
-    "aux": null,
-    "name_key": "\"\"",
-    "desc_key": "\"\"",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
-  },
-  {
-    "item_code": "MuggerMask",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "face",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 113,
-    "sets": null,
-    "stats": null,
-    "durability": null,
-    "aux": null,
-    "name_key": "\"\"",
-    "desc_key": "\"\"",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
-  },
-  {
-    "item_code": "NecromancerMask",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "face",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 120,
-    "sets": null,
-    "stats": null,
-    "durability": null,
-    "aux": null,
-    "name_key": "\"\"",
-    "desc_key": "\"\"",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
-  },
-  {
-    "item_code": "TinkererHat",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "head",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 120,
-    "sets": null,
-    "stats": null,
-    "durability": null,
-    "aux": null,
-    "name_key": "\"\"",
-    "desc_key": "\"\"",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
-  },
-  {
-    "item_code": "ButcherMask",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "face",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 122,
-    "sets": null,
-    "stats": null,
-    "durability": null,
-    "aux": null,
-    "name_key": "\"\"",
-    "desc_key": "\"\"",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
-  },
-  {
-    "item_code": "PsychicMask",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "face",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 121,
-    "sets": null,
-    "stats": null,
-    "durability": null,
-    "aux": null,
-    "name_key": "\"\"",
-    "desc_key": "\"\"",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
-  },
-  {
-    "item_code": "JesterHat",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "head",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 121,
-    "sets": null,
-    "stats": null,
-    "durability": null,
-    "aux": null,
-    "name_key": "\"\"",
-    "desc_key": "\"\"",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
-  },
-  {
-    "item_code": "MonkMask",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "face",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 123,
-    "sets": null,
-    "stats": null,
-    "durability": null,
-    "aux": null,
-    "name_key": "\"\"",
-    "desc_key": "\"\"",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
-  },
-  {
-    "item_code": "DruidNeck",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "neck",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 120,
-    "sets": null,
-    "stats": null,
-    "durability": null,
-    "aux": null,
-    "name_key": "\"\"",
-    "desc_key": "\"\"",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
+    "source_file": "G:/gpak-all/data/items/enemy_items.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_OddRemoteEnemy"
+      }
+    ]
   },
   {
     "item_code": "TerminatorShotgun",
@@ -16829,9 +16923,15 @@
     "durability": null,
     "aux": null,
     "name_key": "ITEM_SHOTGUN_NAME",
-    "desc_key": "\"\"",
+    "desc_key": "",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
+    "source_file": "G:/gpak-all/data/items/enemy_items.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_TerminatorShotgun"
+      }
+    ]
   },
   {
     "item_code": "TerminatorSniper",
@@ -16854,9 +16954,15 @@
     "durability": null,
     "aux": null,
     "name_key": "ITEM_SNIPERRIFLE_NAME",
-    "desc_key": "\"\"",
+    "desc_key": "",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
+    "source_file": "G:/gpak-all/data/items/enemy_items.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_TerminatorSniper"
+      }
+    ]
   },
   {
     "item_code": "TerminatorUzi",
@@ -16879,9 +16985,15 @@
     "durability": null,
     "aux": null,
     "name_key": "ITEM_UZI_NAME",
-    "desc_key": "\"\"",
+    "desc_key": "",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
+    "source_file": "G:/gpak-all/data/items/enemy_items.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_TerminatorUzi"
+      }
+    ]
   },
   {
     "item_code": "TerminatorCoolGlasses",
@@ -16904,32 +17016,7 @@
     "durability": null,
     "aux": null,
     "name_key": "ARMOR_COOLMASK_NAME",
-    "desc_key": "\"\"",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
-  },
-  {
-    "item_code": "TerminatorCoolGlasses2",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "face",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 94,
-    "sets": null,
-    "stats": null,
-    "durability": null,
-    "aux": null,
-    "name_key": "\"\"",
-    "desc_key": "\"\"",
+    "desc_key": "",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/enemy_items.gon"
   },
@@ -16954,449 +17041,15 @@
     "durability": null,
     "aux": null,
     "name_key": "ITEM_CAVECATCLUB_NAME",
-    "desc_key": "\"\"",
+    "desc_key": "",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
-  },
-  {
-    "item_code": "SuperDunceCap",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "head",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 91,
-    "sets": null,
-    "stats": {
-      "int": -10
-    },
-    "durability": null,
-    "aux": null,
-    "name_key": "\"\"",
-    "desc_key": "\"\"",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
-  },
-  {
-    "item_code": "MageCollar_Terminator",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "neck",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 137,
-    "sets": null,
-    "stats": {
-      "int": 2
-    },
-    "durability": null,
-    "aux": null,
-    "name_key": "\"\"",
-    "desc_key": "\"\"",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
-  },
-  {
-    "item_code": "MetalPlate_Terminator",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "face",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 153,
-    "sets": null,
-    "stats": {
-      "con": 2
-    },
-    "durability": null,
-    "aux": null,
-    "name_key": "\"\"",
-    "desc_key": "\"\"",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
-  },
-  {
-    "item_code": "HuntersPatch_Terminator",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "face",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 149,
-    "sets": null,
-    "stats": {
-      "dex": 2
-    },
-    "durability": null,
-    "aux": null,
-    "name_key": "\"\"",
-    "desc_key": "\"\"",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
-  },
-  {
-    "item_code": "AngelicAura_Terminator",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "neck",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 139,
-    "sets": null,
-    "stats": {
-      "int": 1,
-      "con": 1
-    },
-    "durability": null,
-    "aux": null,
-    "name_key": "\"\"",
-    "desc_key": "\"\"",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
-  },
-  {
-    "item_code": "CoinBag_Terminator",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "head",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 164,
-    "sets": null,
-    "stats": null,
-    "durability": null,
-    "aux": null,
-    "name_key": "\"\"",
-    "desc_key": "\"\"",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
-  },
-  {
-    "item_code": "SamsonsChains_Terminator",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "neck",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 138,
-    "sets": null,
-    "stats": {
-      "str": 2
-    },
-    "durability": null,
-    "aux": null,
-    "name_key": "\"\"",
-    "desc_key": "\"\"",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
-  },
-  {
-    "item_code": "NecromancerMask_Terminator",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "face",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 150,
-    "sets": null,
-    "stats": null,
-    "durability": null,
-    "aux": null,
-    "name_key": "\"\"",
-    "desc_key": "\"\"",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
-  },
-  {
-    "item_code": "TinkererHat_Terminator",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "head",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 166,
-    "sets": null,
-    "stats": null,
-    "durability": null,
-    "aux": null,
-    "name_key": "\"\"",
-    "desc_key": "\"\"",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
-  },
-  {
-    "item_code": "ButcherMask_Terminator",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "face",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 152,
-    "sets": null,
-    "stats": null,
-    "durability": null,
-    "aux": null,
-    "name_key": "\"\"",
-    "desc_key": "\"\"",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
-  },
-  {
-    "item_code": "PsychicMask_Terminator",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "face",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 151,
-    "sets": null,
-    "stats": null,
-    "durability": null,
-    "aux": null,
-    "name_key": "\"\"",
-    "desc_key": "\"\"",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
-  },
-  {
-    "item_code": "JesterHat_Terminator",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "head",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 167,
-    "sets": null,
-    "stats": null,
-    "durability": null,
-    "aux": null,
-    "name_key": "\"\"",
-    "desc_key": "\"\"",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
-  },
-  {
-    "item_code": "MonkMask_Terminator",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "head",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 165,
-    "sets": null,
-    "stats": null,
-    "durability": null,
-    "aux": null,
-    "name_key": "\"\"",
-    "desc_key": "\"\"",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
-  },
-  {
-    "item_code": "DruidNeck_Terminator",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "neck",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 140,
-    "sets": null,
-    "stats": null,
-    "durability": null,
-    "aux": null,
-    "name_key": "\"\"",
-    "desc_key": "\"\"",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
-  },
-  {
-    "item_code": "Pebble_Terminator",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "head",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 169,
-    "sets": null,
-    "stats": {
-      "shield": 2
-    },
-    "durability": null,
-    "aux": null,
-    "name_key": "\"\"",
-    "desc_key": "\"\"",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
-  },
-  {
-    "item_code": "LoansharksFedora",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "head",
-    "rarity": "very_rare",
-    "is_consumable": false,
-    "frame": 192,
-    "sets": null,
-    "stats": null,
-    "durability": null,
-    "aux": null,
-    "name_key": "\"\"",
-    "desc_key": "\"\"",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
-  },
-  {
-    "item_code": "Rabiesface",
-    "item_name": "",
-    "item_name_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "description": "",
-    "description_texts": {
-      "en": "",
-      "zh": ""
-    },
-    "kind": "face",
-    "rarity": null,
-    "is_consumable": false,
-    "frame": 11,
-    "sets": null,
-    "stats": null,
-    "durability": null,
-    "aux": null,
-    "name_key": "\"\"",
-    "desc_key": "\"\"",
-    "cursed": false,
-    "source_file": "G:/gpak-all/data/items/enemy_items.gon"
+    "source_file": "G:/gpak-all/data/items/enemy_items.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_CaveCatClub"
+      }
+    ]
   },
   {
     "item_code": "Mustache",
@@ -17494,8 +17147,8 @@
     ],
     "stats": {
       "str": -2,
-      "cha": 1,
       "int": 1,
+      "cha": 1,
       "shield": 2
     },
     "durability": null,
@@ -18870,8 +18523,8 @@
       "Gemstone"
     ],
     "stats": {
-      "shield": 4,
-      "cha": 1
+      "cha": 1,
+      "shield": 4
     },
     "durability": null,
     "aux": null,
@@ -18911,8 +18564,8 @@
     ],
     "stats": {
       "cha": 2,
-      "shield": 6,
-      "spd": -1
+      "spd": -1,
+      "shield": 6
     },
     "durability": null,
     "aux": null,
@@ -18951,8 +18604,8 @@
       "Cyborg"
     ],
     "stats": {
-      "shield": 7,
-      "int": 1
+      "int": 1,
+      "shield": 7
     },
     "durability": null,
     "aux": null,
@@ -20642,11 +20295,11 @@
     "stats": {
       "str": -1,
       "dex": -1,
-      "con": -1,
       "int": -1,
-      "spd": -1,
+      "con": -1,
       "cha": -1,
-      "lck": -1
+      "lck": -1,
+      "spd": -1
     },
     "durability": null,
     "aux": null,
@@ -20720,8 +20373,8 @@
       "Used"
     ],
     "stats": {
-      "shield": 4,
-      "lck": -7
+      "lck": -7,
+      "shield": 4
     },
     "durability": null,
     "aux": null,
@@ -21292,11 +20945,11 @@
     "stats": {
       "str": 1,
       "dex": 1,
-      "con": 1,
       "int": 1,
+      "con": 1,
       "cha": 1,
-      "spd": 1,
-      "lck": 1
+      "lck": 1,
+      "spd": 1
     },
     "durability": null,
     "aux": null,
@@ -21636,8 +21289,8 @@
     "sets": null,
     "stats": {
       "str": 2,
-      "spd": -4,
-      "con": 1
+      "con": 1,
+      "spd": -4
     },
     "durability": null,
     "aux": null,
@@ -21960,8 +21613,8 @@
       "Bone"
     ],
     "stats": {
-      "shield": 3,
-      "str": 2
+      "str": 2,
+      "shield": 3
     },
     "durability": null,
     "aux": null,
@@ -21969,6 +21622,12 @@
     "desc_key": "ARMOR_COWSKULL_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/head_items.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "BasicTankMelee"
+      }
+    ],
     "item_pools": [
       {
         "tag": "chapter/desert",
@@ -22475,7 +22134,13 @@
     "name_key": "ITEM_THROBBINGGRISTLE_NAME",
     "desc_key": "ITEM_THROBBINGGRISTLE_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/legacy_quest_items.gon"
+    "source_file": "G:/gpak-all/data/items/legacy_quest_items.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_ThrobbingGristle"
+      }
+    ]
   },
   {
     "item_code": "PutridLeech",
@@ -22559,7 +22224,13 @@
     "name_key": "ITEM_SCALDINGORB_NAME",
     "desc_key": "ITEM_SCALDINGORB_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/legacy_quest_items.gon"
+    "source_file": "G:/gpak-all/data/items/legacy_quest_items.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_ScaldingOrb"
+      }
+    ]
   },
   {
     "item_code": "BlackShard",
@@ -22582,11 +22253,17 @@
     ],
     "stats": null,
     "durability": null,
-    "aux": "1",
+    "aux": 1,
     "name_key": "ITEM_BLACKSHARD_NAME",
     "desc_key": "ITEM_BLACKSHARD_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/legacy_quest_items.gon"
+    "source_file": "G:/gpak-all/data/items/legacy_quest_items.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_BlackShard"
+      }
+    ]
   },
   {
     "item_code": "BlackShard_Glowing",
@@ -22613,7 +22290,13 @@
     "name_key": "ITEM_BLACKSHARD_GLOWING_NAME",
     "desc_key": "ITEM_BLACKSHARD_GLOWING_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/legacy_quest_items.gon"
+    "source_file": "G:/gpak-all/data/items/legacy_quest_items.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_BlackShard_Glowing"
+      }
+    ]
   },
   {
     "item_code": "PyrophinasCollar",
@@ -22803,7 +22486,13 @@
     "name_key": "ITEM_SIGNALAMPLIFIER_NAME",
     "desc_key": "ITEM_SIGNALAMPLIFIER_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/legacy_quest_items.gon"
+    "source_file": "G:/gpak-all/data/items/legacy_quest_items.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_SignalAmplifier"
+      }
+    ]
   },
   {
     "item_code": "JarOfRadiation",
@@ -22884,7 +22573,13 @@
     "name_key": "ITEM_JAROFCHAOS_NAME",
     "desc_key": "ITEM_JAROFCHAOS_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/legacy_quest_items.gon"
+    "source_file": "G:/gpak-all/data/items/legacy_quest_items.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "cm_JarOfChaos"
+      }
+    ]
   },
   {
     "item_code": "JarOfNothing",
@@ -22931,8 +22626,8 @@
       "Radioactive"
     ],
     "stats": {
-      "shield": 10,
-      "spd": -2
+      "spd": -2,
+      "shield": 10
     },
     "durability": null,
     "aux": null,
@@ -23060,9 +22755,9 @@
     "sets": null,
     "stats": {
       "str": 1,
+      "int": -1,
       "con": 1,
       "cha": 1,
-      "int": -1,
       "spd": -1
     },
     "durability": null,
@@ -23288,8 +22983,8 @@
     "frame": 51,
     "sets": null,
     "stats": {
-      "spd": -1,
-      "dex": -1
+      "dex": -1,
+      "spd": -1
     },
     "durability": null,
     "aux": null,
@@ -23365,9 +23060,9 @@
     "frame": 54,
     "sets": null,
     "stats": {
-      "shield": 4,
+      "cha": 2,
       "spd": -2,
-      "cha": 2
+      "shield": 4
     },
     "durability": null,
     "aux": null,
@@ -24695,14 +24390,14 @@
       "Cleric"
     ],
     "stats": {
-      "divine_shield": 1,
       "str": 1,
       "dex": 1,
+      "int": 1,
       "con": 1,
       "cha": 1,
-      "int": 1,
+      "lck": 1,
       "spd": 1,
-      "lck": 1
+      "divine_shield": 1
     },
     "durability": null,
     "aux": null,
@@ -24780,8 +24475,8 @@
       "Lucky"
     ],
     "stats": {
-      "shield": 2,
-      "lck": 1
+      "lck": 1,
+      "shield": 2
     },
     "durability": null,
     "aux": null,
@@ -25053,7 +24748,13 @@
     "name_key": "ARMOR_CHUBSCOLLAR_NAME",
     "desc_key": "ARMOR_CHUBSCOLLAR_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/neck_items.gon"
+    "source_file": "G:/gpak-all/data/items/neck_items.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "BasicSpin"
+      }
+    ]
   },
   {
     "item_code": "Blubber",
@@ -25076,8 +24777,8 @@
     ],
     "stats": {
       "con": 7,
-      "spd": -5,
-      "cha": -2
+      "cha": -2,
+      "spd": -5
     },
     "durability": null,
     "aux": null,
@@ -25350,8 +25051,8 @@
       "Rock"
     ],
     "stats": {
-      "shield": 6,
-      "spd": -2
+      "spd": -2,
+      "shield": 6
     },
     "durability": null,
     "aux": null,
@@ -25784,8 +25485,8 @@
       "Parasite"
     ],
     "stats": {
-      "con": -1,
-      "str": -1
+      "str": -1,
+      "con": -1
     },
     "durability": null,
     "aux": null,
@@ -25895,8 +25596,8 @@
     "frame": 13,
     "sets": null,
     "stats": {
-      "spd": -1,
-      "cha": -1
+      "cha": -1,
+      "spd": -1
     },
     "durability": null,
     "aux": null,
@@ -26000,7 +25701,13 @@
     "name_key": "PARASITE_SPIDERWEBBER_NAME",
     "desc_key": "PARASITE_SPIDERWEBBER_DESC",
     "cursed": true,
-    "source_file": "G:/gpak-all/data/items/parasites.gon"
+    "source_file": "G:/gpak-all/data/items/parasites.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_SpiderWebber"
+      }
+    ]
   },
   {
     "item_code": "AmoebaHat",
@@ -26022,8 +25729,8 @@
       "Amoeba"
     ],
     "stats": {
-      "shield": 4,
-      "int": -1
+      "int": -1,
+      "shield": 4
     },
     "durability": null,
     "aux": null,
@@ -26052,8 +25759,8 @@
       "Amoeba"
     ],
     "stats": {
-      "shield": 4,
-      "con": -1
+      "con": -1,
+      "shield": 4
     },
     "durability": null,
     "aux": null,
@@ -26082,8 +25789,8 @@
       "Amoeba"
     ],
     "stats": {
-      "shield": 4,
-      "cha": -1
+      "cha": -1,
+      "shield": 4
     },
     "durability": null,
     "aux": null,
@@ -26264,9 +25971,9 @@
       "Parasite"
     ],
     "stats": {
-      "cha": -2,
       "str": 2,
-      "dex": 2
+      "dex": 2,
+      "cha": -2
     },
     "durability": null,
     "aux": null,
@@ -26449,11 +26156,9 @@
     "sets": [
       "Parasite"
     ],
-    "stats": {
-      "int": 0
-    },
+    "stats": null,
     "durability": null,
-    "aux": "1",
+    "aux": 1,
     "name_key": "ARMOR_NAEGLERIAFOWLERI_NAME",
     "desc_key": "ARMOR_NAEGLERIAFOWLERI_DESC",
     "cursed": true,
@@ -26487,9 +26192,7 @@
     "sets": [
       "Parasite"
     ],
-    "stats": {
-      "con": 0
-    },
+    "stats": null,
     "durability": null,
     "aux": null,
     "name_key": "ARMOR_MALARIA_NAME",
@@ -26649,13 +26352,13 @@
     "frame": 189,
     "sets": null,
     "stats": {
-      "con": -1,
       "str": -1,
       "dex": -1,
-      "lck": -1,
       "int": -1,
-      "spd": -1,
-      "cha": -1
+      "con": -1,
+      "cha": -1,
+      "lck": -1,
+      "spd": -1
     },
     "durability": null,
     "aux": null,
@@ -26864,7 +26567,13 @@
     "name_key": "ARMOR_FEEBIS_NAME",
     "desc_key": "ARMOR_FEEBIS_DESC",
     "cursed": true,
-    "source_file": "G:/gpak-all/data/items/parasites.gon"
+    "source_file": "G:/gpak-all/data/items/parasites.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "BasicPoke"
+      }
+    ]
   },
   {
     "item_code": "Cunch",
@@ -26939,7 +26648,13 @@
     "name_key": "ITEM_STANCESWITCHER_NAME",
     "desc_key": "ITEM_STANCESWITCHER_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/special_class_items.gon"
+    "source_file": "G:/gpak-all/data/items/special_class_items.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_MonkStyleChange"
+      }
+    ]
   },
   {
     "item_code": "ButcherHook",
@@ -26964,7 +26679,13 @@
     "name_key": "ITEM_MEATHOOK_NAME",
     "desc_key": "ITEM_MEATHOOK_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/special_class_items.gon"
+    "source_file": "G:/gpak-all/data/items/special_class_items.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_MeatHookB"
+      }
+    ]
   },
   {
     "item_code": "ButcherHook_Temporary",
@@ -26989,7 +26710,13 @@
     "name_key": "ITEM_MEATHOOK_NAME",
     "desc_key": "ITEM_MEATHOOKTEMP_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/special_class_items.gon"
+    "source_file": "G:/gpak-all/data/items/special_class_items.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_MeatHookB"
+      }
+    ]
   },
   {
     "item_code": "Necro_SoulDagger_Uncharged",
@@ -27014,7 +26741,13 @@
     "name_key": "ITEM_SOULDAGGER_NAME",
     "desc_key": "ITEM_SOULDAGGER_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/special_class_items.gon"
+    "source_file": "G:/gpak-all/data/items/special_class_items.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_NecroSoulDagger"
+      }
+    ]
   },
   {
     "item_code": "Necro_SoulDagger_Charged",
@@ -27039,7 +26772,13 @@
     "name_key": "ITEM_SOULDAGGERCHARGED_NAME",
     "desc_key": "ITEM_SOULDAGGERCHARGED_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/special_class_items.gon"
+    "source_file": "G:/gpak-all/data/items/special_class_items.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_NecroSoulDaggerCharged"
+      }
+    ]
   },
   {
     "item_code": "SleepDart",
@@ -27064,7 +26803,13 @@
     "name_key": "ITEM_SLEEPDART_NAME",
     "desc_key": "ITEM_SLEEPDART_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/special_class_items.gon"
+    "source_file": "G:/gpak-all/data/items/special_class_items.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_SleepDart"
+      }
+    ]
   },
   {
     "item_code": "SleepDart2",
@@ -27089,7 +26834,13 @@
     "name_key": "ITEM_SLEEPDART_NAME",
     "desc_key": "ITEM_SLEEPDART_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/special_class_items.gon"
+    "source_file": "G:/gpak-all/data/items/special_class_items.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_SleepDart"
+      }
+    ]
   },
   {
     "item_code": "RatTail",
@@ -27991,6 +27742,12 @@
     "desc_key": "ITEM_SELFDESTRUCTBUTTON_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tr_SelfDestruct"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -28277,6 +28034,12 @@
     "desc_key": "ITEM_PAWN_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_Pawn"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -28311,6 +28074,12 @@
     "desc_key": "ITEM_KNIGHT_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_Knight"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -28345,6 +28114,12 @@
     "desc_key": "ITEM_ROOK_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_Rook"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -28379,6 +28154,12 @@
     "desc_key": "ITEM_QUEEN_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_Queen"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -28965,7 +28746,7 @@
       "lck": 4
     },
     "durability": null,
-    "aux": "125",
+    "aux": 125,
     "name_key": "ITEM_GOLDENTOOTH_NAME",
     "desc_key": "ITEM_GOLDENTOOTH_DESC",
     "cursed": false,
@@ -28994,7 +28775,13 @@
     "name_key": "ITEM_WATERBOTTLEFULL_NAME",
     "desc_key": "ITEM_WATERBOTTLEFULL_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/trinkets.gon"
+    "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_WaterBottle_Full"
+      }
+    ]
   },
   {
     "item_code": "WaterBottle_Half",
@@ -29019,7 +28806,13 @@
     "name_key": "ITEM_WATERBOTTLEHALF_NAME",
     "desc_key": "ITEM_WATERBOTTLEHALF_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/trinkets.gon"
+    "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_WaterBottle_Half"
+      }
+    ]
   },
   {
     "item_code": "WaterBottle_Empty",
@@ -29044,7 +28837,13 @@
     "name_key": "ITEM_WATERBOTTLEEMPTY_NAME",
     "desc_key": "ITEM_WATERBOTTLEMPTY_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/trinkets.gon"
+    "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_WaterBottle_Empty"
+      }
+    ]
   },
   {
     "item_code": "BloodyCoin",
@@ -29070,6 +28869,12 @@
     "desc_key": "ITEM_BLOODYCOIN_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_BloodyCoin"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/Coin_items",
@@ -29111,6 +28916,12 @@
     "desc_key": "ITEM_GLOWINGCOIN_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_GlowingCoin"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/Coin_items",
@@ -29152,6 +28963,12 @@
     "desc_key": "ITEM_ELECTRICCOIN_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_ElectricCoin"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/Coin_items",
@@ -29193,6 +29010,12 @@
     "desc_key": "ITEM_COUNTERFEITCOIN_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_CounterfeitCoin"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/Coin_items",
@@ -29237,6 +29060,12 @@
     "desc_key": "ITEM_WHISTLE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_Whistle"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -29273,6 +29102,12 @@
     "desc_key": "ITEM_METRONOME_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_Metronome"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -29443,6 +29278,12 @@
     "desc_key": "ITEM_RAGEJUICE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_RageJuice"
+      }
+    ],
     "unlock_requirements": [
       {
         "type": "complete_chapter_with_class",
@@ -29586,6 +29427,12 @@
     "desc_key": "ITEM_BAGOFSEEDS_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_BagOfSeeds"
+      }
+    ],
     "unlock_requirements": [
       {
         "type": "complete_checklist_with_class",
@@ -29735,6 +29582,12 @@
     "desc_key": "ITEM_TECHNOLOGY_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_Technology"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/isaac_items",
@@ -29821,6 +29674,12 @@
     "desc_key": "ITEM_REDDRINK_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_RedDrink"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -29855,6 +29714,12 @@
     "desc_key": "ITEM_GREENDRINK_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_GreenDrink"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -29889,6 +29754,12 @@
     "desc_key": "ITEM_PURPLEDRINK_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_PurpleDrink"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -29923,6 +29794,12 @@
     "desc_key": "ITEM_LILBATTERY_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_LilBattery"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -29957,6 +29834,12 @@
     "desc_key": "ITEM_CARVINGKNIFE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_CarvingKnife"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -29991,6 +29874,12 @@
     "desc_key": "ITEM_RAZORBLADE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_RazorBlade"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/isaac_items",
@@ -30034,6 +29923,12 @@
     "desc_key": "ITEM_TELEPORT_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_Teleport"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/isaac_items",
@@ -30622,6 +30517,12 @@
     "desc_key": "ITEM_CATONINETAILS_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_CatONineTails"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -30652,12 +30553,18 @@
       "Slimy"
     ],
     "stats": null,
-    "durability": "[5 8]",
+    "durability": "[5, 8]",
     "aux": null,
     "name_key": "ITEM_GLUE_NAME",
     "desc_key": "ITEM_GLUE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_Glue"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -30694,6 +30601,12 @@
     "desc_key": "ITEM_MYSHADOW_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_MyShadow"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -30722,12 +30635,18 @@
     "frame": 134,
     "sets": null,
     "stats": null,
-    "durability": "[4 6]",
+    "durability": "[4, 6]",
     "aux": null,
     "name_key": "ITEM_EGGSACK_NAME",
     "desc_key": "ITEM_EGGSACK_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_EggSack"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -30759,12 +30678,18 @@
       "Rock"
     ],
     "stats": null,
-    "durability": "[5 7]",
+    "durability": "[5, 7]",
     "aux": null,
     "name_key": "ITEM_GORGONSEYE_NAME",
     "desc_key": "ITEM_GORGONSEYE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_GorgonsEye"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/Eye_items",
@@ -30809,12 +30734,18 @@
       "Paper"
     ],
     "stats": null,
-    "durability": "[5 8]",
+    "durability": "[5, 8]",
     "aux": null,
     "name_key": "ITEM_HOTLUNCH_NAME",
     "desc_key": "ITEM_HOTLUNCH_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_HotLunch"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -30849,6 +30780,12 @@
     "desc_key": "ITEM_BUTTERBEAN_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_ButterBean"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/isaac_items",
@@ -31245,6 +31182,33 @@
     ]
   },
   {
+    "item_code": "EnchantingPoop_Cursed",
+    "item_name": "Enchanting Poop",
+    "item_name_texts": {
+      "en": "Enchanting Poop",
+      "zh": "附魔便便"
+    },
+    "description": "Spawn a poop at the start of each battle.",
+    "description_texts": {
+      "en": "Spawn a poop at the start of each battle.",
+      "zh": "每场战斗开始时生成一坨便便。"
+    },
+    "kind": "trinket",
+    "rarity": null,
+    "is_consumable": false,
+    "frame": 159,
+    "sets": [
+      "Fecal"
+    ],
+    "stats": null,
+    "durability": null,
+    "aux": null,
+    "name_key": "ITEM_ENCHANTINGPOOP_NAME",
+    "desc_key": "ITEM_ENCHANTINGPOOP_DESC",
+    "cursed": true,
+    "source_file": "G:/gpak-all/data/items/trinkets.gon"
+  },
+  {
     "item_code": "LunchBox",
     "item_name": "Lunch Box",
     "item_name_texts": {
@@ -31268,6 +31232,12 @@
     "desc_key": "ITEM_LUNCHBOX_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_LunchBox"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -31502,6 +31472,12 @@
     "desc_key": "ITEM_TAROTDECK_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_TarotDeck"
+      }
+    ],
     "unlock_requirements": [
       {
         "type": "complete_chapter_with_class",
@@ -31593,6 +31569,12 @@
     "desc_key": "ITEM_SPELLBOOK_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_SpellBook"
+      }
+    ],
     "unlock_requirements": [
       {
         "type": "complete_checklist_with_class",
@@ -31633,6 +31615,12 @@
     "desc_key": "ITEM_BAGOFBAGS_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_BagOfBags"
+      }
+    ],
     "unlock_requirements": [
       {
         "type": "complete_checklist_with_class",
@@ -31675,6 +31663,12 @@
     "desc_key": "ITEM_STEROIDS_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_Steroids"
+      }
+    ],
     "unlock_requirements": [
       {
         "type": "complete_checklist_with_class",
@@ -31717,6 +31711,12 @@
     "desc_key": "ITEM_HOLYWATER_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_HolyWater"
+      }
+    ],
     "unlock_requirements": [
       {
         "type": "complete_chapter_with_class",
@@ -31765,6 +31765,12 @@
     "desc_key": "ITEM_TANKJUICE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_TankJuice"
+      }
+    ],
     "unlock_requirements": [
       {
         "type": "complete_chapter_with_class",
@@ -31820,6 +31826,12 @@
     "desc_key": "ITEM_HUNTERSFLUTE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_HuntersFlute"
+      }
+    ],
     "unlock_requirements": [
       {
         "type": "complete_chapter_with_class",
@@ -31868,6 +31880,12 @@
     "desc_key": "ITEM_FRIENDSHIPBRACELET_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_FriendshipBracelet"
+      }
+    ],
     "unlock_requirements": [
       {
         "type": "complete_checklist_with_class",
@@ -31912,6 +31930,12 @@
     "desc_key": "ITEM_CAMBIONCONCEPTION_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_CambionConception"
+      }
+    ],
     "unlock_requirements": [
       {
         "type": "complete_checklist_with_class",
@@ -31954,6 +31978,12 @@
     "desc_key": "ITEM_EMPTYHAND_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_EmptyHand"
+      }
+    ],
     "unlock_requirements": [
       {
         "type": "complete_chapter_with_class",
@@ -32002,6 +32032,12 @@
     "desc_key": "ITEM_FIREWORKS_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_Fireworks"
+      }
+    ],
     "unlock_requirements": [
       {
         "type": "complete_checklist_with_class",
@@ -32044,6 +32080,12 @@
     "desc_key": "ITEM_SACKOFMEAT_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_SackOfMeat"
+      }
+    ],
     "unlock_requirements": [
       {
         "type": "complete_checklist_with_class",
@@ -32100,6 +32142,12 @@
     "desc_key": "ITEM_DRUIDSWHISTLE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_DruidsWhistle"
+      }
+    ],
     "unlock_requirements": [
       {
         "type": "complete_chapter_with_class",
@@ -32309,6 +32357,12 @@
     "desc_key": "ITEM_BISHOP_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_Bishop"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -32504,11 +32558,17 @@
     "sets": null,
     "stats": null,
     "durability": null,
-    "aux": "-1",
+    "aux": -1,
     "name_key": "ITEM_SOULJAR_FULL_NAME",
     "desc_key": "ITEM_SOULJAR_FULL_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/trinkets.gon"
+    "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_SoulJar"
+      }
+    ]
   },
   {
     "item_code": "PetrifiedPinky",
@@ -32628,6 +32688,12 @@
     "desc_key": "ITEM_ESTUSFLASK_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_EstusFlask"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -32661,7 +32727,13 @@
     "name_key": "ITEM_ESTUSFLASK_NAME",
     "desc_key": "ITEM_ESTUSFLASK_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/trinkets.gon"
+    "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_EstusFlask"
+      }
+    ]
   },
   {
     "item_code": "EstusFlask_Empty",
@@ -32802,6 +32874,12 @@
     "desc_key": "ITEM_IPECAC_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "BasicExplosiveShot"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/isaac_items",
@@ -33062,6 +33140,12 @@
     "desc_key": "ITEM_BLOODYRAZOR_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_BloodyRazor"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/bloody_items",
@@ -33181,7 +33265,13 @@
     "name_key": "ITEM_GREENWHISTLE_NAME",
     "desc_key": "ITEM_GREENWHISTLE_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/trinkets.gon"
+    "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_LegWhistle"
+      }
+    ]
   },
   {
     "item_code": "MothersLove",
@@ -33203,8 +33293,8 @@
       "Mother"
     ],
     "stats": {
-      "shield": 6,
-      "lck": 6
+      "lck": 6,
+      "shield": 6
     },
     "durability": null,
     "aux": null,
@@ -33238,7 +33328,13 @@
     "name_key": "ITEM_PENTAGRAMSIGIL_NAME",
     "desc_key": "ITEM_PENTAGRAMSIGIL_DESC",
     "cursed": true,
-    "source_file": "G:/gpak-all/data/items/trinkets.gon"
+    "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_Pentagram"
+      }
+    ]
   },
   {
     "item_code": "LuciferSigil",
@@ -33391,11 +33487,11 @@
     "stats": {
       "str": 1,
       "dex": 1,
-      "con": 1,
       "int": 1,
-      "spd": 1,
+      "con": 1,
       "cha": 1,
-      "lck": 1
+      "lck": 1,
+      "spd": 1
     },
     "durability": null,
     "aux": null,
@@ -33451,6 +33547,12 @@
     "desc_key": "ITEM_GLITCH_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_Glitch"
+      }
+    ],
     "item_pools": [
       {
         "tag": "chapter/dimensionx",
@@ -33589,6 +33691,12 @@
     "desc_key": "ITEM_GALLONOFWATER_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_WaterBottle_Half"
+      }
+    ],
     "item_pools": [
       {
         "tag": "chapter/desert",
@@ -33763,8 +33871,8 @@
       "Steven"
     ],
     "stats": {
-      "shield": 4,
-      "con": -3
+      "con": -3,
+      "shield": 4
     },
     "durability": null,
     "aux": null,
@@ -34024,8 +34132,8 @@
     "frame": 295,
     "sets": null,
     "stats": {
-      "spd": -5,
       "lck": 5,
+      "spd": -5,
       "shield": 4
     },
     "durability": null,
@@ -34137,6 +34245,12 @@
     "desc_key": "ITEM_THEBOXCHEST_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_SpawnTheLost"
+      }
+    ],
     "unlock_requirements": [
       {
         "type": "fully_complete_difficulty",
@@ -34179,6 +34293,12 @@
     "desc_key": "ITEM_THEBOX_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_Reset"
+      }
+    ],
     "unlock_requirements": [
       {
         "type": "fully_complete_difficulty",
@@ -34221,6 +34341,12 @@
     "desc_key": "ITEM_THEBLACKBOX_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/trinkets.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "tk_TheBlackBox"
+      }
+    ],
     "unlock_requirements": [
       {
         "type": "fully_complete_difficulty",
@@ -34288,6 +34414,12 @@
     "desc_key": "ITEM_SHARDOFGLASS_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_GlassShard"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -34301,6 +34433,40 @@
         "tag_texts": {
           "en": "general/weapon",
           "zh": "通用/武器"
+        }
+      }
+    ]
+  },
+  {
+    "item_code": "TinkererGlassShard",
+    "item_name": "Shard of Glass",
+    "item_name_texts": {
+      "en": "Shard of Glass",
+      "zh": "玻璃碎片"
+    },
+    "description": "Use: A melee attack that inflicts Bleed.",
+    "description_texts": {
+      "en": "Use: A melee attack that inflicts Bleed.",
+      "zh": "使用：一次近战攻击，造成流血。"
+    },
+    "kind": "weapon",
+    "rarity": "common",
+    "is_consumable": false,
+    "frame": 2,
+    "sets": null,
+    "stats": null,
+    "durability": "[4, 9]",
+    "aux": null,
+    "name_key": "ITEM_SHARDOFGLASS_NAME",
+    "desc_key": "ITEM_SHARDOFGLASS_DESC",
+    "cursed": false,
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "item_pools": [
+      {
+        "tag": "ability/tinkerer 0",
+        "tag_texts": {
+          "en": "ability/tinkerer 0",
+          "zh": "技能/tinkerer 0"
         }
       }
     ]
@@ -34331,6 +34497,12 @@
     "desc_key": "ITEM_RAILROADSPIKE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_RailSpikes"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -34374,6 +34546,12 @@
     "desc_key": "ITEM_NAILBOARD_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_NailBoard"
+      }
+    ],
     "item_pools": [
       {
         "tag": "ability/tinkerer 2",
@@ -34424,6 +34602,12 @@
     "desc_key": "ITEM_LILSLUGGER_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_LilSlugger"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -34468,6 +34652,12 @@
     "desc_key": "ITEM_CHUMBUCKET_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_ChumBucket"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -34512,6 +34702,12 @@
     "desc_key": "ITEM_MEATHOOKTEMP_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_MeatHook"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -34553,6 +34749,12 @@
     "desc_key": "ITEM_KEBAB_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Kebab"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -34596,6 +34798,12 @@
     "desc_key": "ITEM_PIPE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Pipe"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -34634,11 +34842,17 @@
     ],
     "stats": null,
     "durability": "9",
-    "aux": "1",
+    "aux": 1,
     "name_key": "ITEM_OBSIDIANCHUNK_NAME",
     "desc_key": "ITEM_OBSIDIANCHUNK_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_ObsidianChunk"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/demon_themed_items",
@@ -34689,6 +34903,12 @@
     "desc_key": "ITEM_SOULCLAW_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_SoulClaw"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -34730,6 +34950,12 @@
     "desc_key": "ITEM_BOMB_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Bomb"
+      }
+    ],
     "item_pools": [
       {
         "tag": "ability/bombs 1",
@@ -34808,6 +35034,12 @@
     "desc_key": "ITEM_BONECLUB_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_BoneClub"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/bone_equipment",
@@ -34873,12 +35105,18 @@
       "Bone"
     ],
     "stats": null,
-    "durability": "[10 20]",
+    "durability": "[10, 20]",
     "aux": null,
     "name_key": "ITEM_MOLAR_NAME",
     "desc_key": "ITEM_MOLAR_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Molars"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/bone_equipment",
@@ -34950,6 +35188,12 @@
     "desc_key": "ITEM_WHETSTONE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Whetstone"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -34985,12 +35229,18 @@
     "frame": 25,
     "sets": null,
     "stats": null,
-    "durability": "[8 12]",
+    "durability": "[8, 12]",
     "aux": null,
     "name_key": "ITEM_MODDEDHAIRSPRAY_NAME",
     "desc_key": "ITEM_MODDEDHAIRSPRAY_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_HairSpray"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -35028,12 +35278,18 @@
       "Cool"
     ],
     "stats": null,
-    "durability": "[8 12]",
+    "durability": "[8, 12]",
     "aux": null,
     "name_key": "ITEM_LIGHTER_NAME",
     "desc_key": "ITEM_LIGHTER_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Lighter"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -35075,6 +35331,12 @@
     "desc_key": "ITEM_SEEDBOMBS_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_SeedBomb"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/grass_items",
@@ -35117,7 +35379,47 @@
     "frame": 30,
     "sets": null,
     "stats": null,
-    "durability": "[3 6]",
+    "durability": "[3, 6]",
+    "aux": null,
+    "name_key": "ITEM_BATTERY_NAME",
+    "desc_key": "ITEM_BATTERY_DESC",
+    "cursed": false,
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Battery"
+      }
+    ],
+    "item_pools": [
+      {
+        "tag": "general/weapon",
+        "tag_texts": {
+          "en": "general/weapon",
+          "zh": "通用/武器"
+        }
+      }
+    ]
+  },
+  {
+    "item_code": "TinkererBattery",
+    "item_name": "Battery",
+    "item_name_texts": {
+      "en": "Battery",
+      "zh": "电池"
+    },
+    "description": "Use: A ranged lightning attack with a 10% chance to Stun.",
+    "description_texts": {
+      "en": "Use: A ranged lightning attack with a 10% chance to Stun.",
+      "zh": "使用：远程闪电攻击，\n有 10% 几率造成晕眩。"
+    },
+    "kind": "weapon",
+    "rarity": "uncommon",
+    "is_consumable": false,
+    "frame": 30,
+    "sets": null,
+    "stats": null,
+    "durability": "[2, 3]",
     "aux": null,
     "name_key": "ITEM_BATTERY_NAME",
     "desc_key": "ITEM_BATTERY_DESC",
@@ -35125,10 +35427,10 @@
     "source_file": "G:/gpak-all/data/items/weapons.gon",
     "item_pools": [
       {
-        "tag": "general/weapon",
+        "tag": "ability/tinkerer 0",
         "tag_texts": {
-          "en": "general/weapon",
-          "zh": "通用/武器"
+          "en": "ability/tinkerer 0",
+          "zh": "技能/tinkerer 0"
         }
       }
     ]
@@ -35159,6 +35461,12 @@
     "desc_key": "ITEM_OLDHOSE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Hose"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -35200,6 +35508,12 @@
     "desc_key": "ITEM_SIXPACK_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_SixPack"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/can_items_common",
@@ -35250,6 +35564,12 @@
     "desc_key": "ITEM_ICECUBES_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_IceCubes"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -35293,6 +35613,12 @@
     "desc_key": "ITEM_DRYICE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_DryIce"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -35334,6 +35660,12 @@
     "desc_key": "ITEM_BOTTLES_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Bottles"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -35347,6 +35679,40 @@
         "tag_texts": {
           "en": "general/weapon",
           "zh": "通用/武器"
+        }
+      }
+    ]
+  },
+  {
+    "item_code": "TinkererBottles",
+    "item_name": "Bottles",
+    "item_name_texts": {
+      "en": "Bottles",
+      "zh": "瓶子"
+    },
+    "description": "Use: A lobbed attack that spawns a glass tile.",
+    "description_texts": {
+      "en": "Use: A lobbed attack that spawns a glass tile.",
+      "zh": "使用：抛射攻击，生成一个玻璃地块。"
+    },
+    "kind": "weapon",
+    "rarity": "common",
+    "is_consumable": false,
+    "frame": 17,
+    "sets": null,
+    "stats": null,
+    "durability": "4",
+    "aux": null,
+    "name_key": "ITEM_BOTTLES_NAME",
+    "desc_key": "ITEM_BOTTLES_DESC",
+    "cursed": false,
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "item_pools": [
+      {
+        "tag": "ability/tinkerer 1",
+        "tag_texts": {
+          "en": "ability/tinkerer 1",
+          "zh": "技能/tinkerer 1"
         }
       }
     ]
@@ -35377,6 +35743,12 @@
     "desc_key": "ITEM_STICK_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Stick"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -35393,6 +35765,83 @@
         }
       }
     ]
+  },
+  {
+    "item_code": "TinkererStick",
+    "item_name": "Stick",
+    "item_name_texts": {
+      "en": "Stick",
+      "zh": "木棍"
+    },
+    "description": "Use: A melee attack with +1 reach.",
+    "description_texts": {
+      "en": "Use: A melee attack with +1 reach.",
+      "zh": "使用：一次近战攻击，+1 近战范围。"
+    },
+    "kind": "weapon",
+    "rarity": "common",
+    "is_consumable": false,
+    "frame": 16,
+    "sets": [
+      "Wood"
+    ],
+    "stats": null,
+    "durability": "[2, 4]",
+    "aux": null,
+    "name_key": "ITEM_STICK_NAME",
+    "desc_key": "ITEM_STICK_DESC",
+    "cursed": false,
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "item_pools": [
+      {
+        "tag": "ability/allsticks 0",
+        "tag_texts": {
+          "en": "ability/allsticks 0",
+          "zh": "技能/allsticks 0"
+        }
+      },
+      {
+        "tag": "ability/stick 0",
+        "tag_texts": {
+          "en": "ability/stick 0",
+          "zh": "技能/stick 0"
+        }
+      },
+      {
+        "tag": "ability/tinkerer 0",
+        "tag_texts": {
+          "en": "ability/tinkerer 0",
+          "zh": "技能/tinkerer 0"
+        }
+      }
+    ]
+  },
+  {
+    "item_code": "TutorialStick",
+    "item_name": "Stick",
+    "item_name_texts": {
+      "en": "Stick",
+      "zh": "木棍"
+    },
+    "description": "Use: A melee attack with +1 reach.",
+    "description_texts": {
+      "en": "Use: A melee attack with +1 reach.",
+      "zh": "使用：一次近战攻击，+1 近战范围。"
+    },
+    "kind": "weapon",
+    "rarity": "common",
+    "is_consumable": false,
+    "frame": 16,
+    "sets": [
+      "Wood"
+    ],
+    "stats": null,
+    "durability": "4",
+    "aux": null,
+    "name_key": "ITEM_STICK_NAME",
+    "desc_key": "ITEM_STICK_DESC",
+    "cursed": false,
+    "source_file": "G:/gpak-all/data/items/weapons.gon"
   },
   {
     "item_code": "RubberFist",
@@ -35420,6 +35869,12 @@
     "desc_key": "ITEM_RUBBERFIST_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_RubberFist"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -35465,6 +35920,12 @@
     "desc_key": "ITEM_BARBEDPAW_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_BarbedPaw"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/barbed_items",
@@ -35508,11 +35969,17 @@
     "sets": null,
     "stats": null,
     "durability": "13",
-    "aux": "1",
+    "aux": 1,
     "name_key": "ITEM_GNARLEDCLAW_NAME",
     "desc_key": "ITEM_GNARLEDCLAW_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_GnarledClaw"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -35556,6 +36023,12 @@
     "desc_key": "ITEM_GARBAGE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Garbage"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/weapon",
@@ -35590,6 +36063,12 @@
     "desc_key": "ITEM_SHOTGUN_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Shotgun"
+      }
+    ],
     "item_pools": [
       {
         "tag": "ability/tinkerer 3",
@@ -35652,6 +36131,12 @@
     "desc_key": "ITEM_REVOLVER_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Revolver"
+      }
+    ],
     "item_pools": [
       {
         "tag": "bird/eagle",
@@ -35701,12 +36186,18 @@
     "frame": 52,
     "sets": null,
     "stats": null,
-    "durability": "[2 4]",
+    "durability": "[2, 4]",
     "aux": null,
     "name_key": "ITEM_SNIPERRIFLE_NAME",
     "desc_key": "ITEM_SNIPERRIFLE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Sniper"
+      }
+    ],
     "item_pools": [
       {
         "tag": "bird/eagle",
@@ -35762,6 +36253,12 @@
     "desc_key": "ITEM_SMALLBOMB_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_SmallBomb"
+      }
+    ],
     "item_pools": [
       {
         "tag": "ability/bombs 0",
@@ -35818,12 +36315,18 @@
     "frame": 72,
     "sets": null,
     "stats": null,
-    "durability": "[3 7]",
+    "durability": "[3, 7]",
     "aux": null,
     "name_key": "ITEM_POGOSTICK_NAME",
     "desc_key": "ITEM_POGOSTICK_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_PogoStick"
+      }
+    ],
     "item_pools": [
       {
         "tag": "ability/tinkerer 0",
@@ -35859,12 +36362,18 @@
     "frame": 73,
     "sets": null,
     "stats": null,
-    "durability": "[4 8]",
+    "durability": "[4, 8]",
     "aux": null,
     "name_key": "ITEM_SPITBALL_NAME",
     "desc_key": "ITEM_SPITBALL_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Spitball"
+      }
+    ],
     "item_pools": [
       {
         "tag": "ability/tinkerer 0",
@@ -35902,12 +36411,18 @@
       "Experimental"
     ],
     "stats": null,
-    "durability": "[3 6]",
+    "durability": "[3, 6]",
     "aux": null,
     "name_key": "ITEM_MINIJETPACK_NAME",
     "desc_key": "ITEM_MINIJETPACK_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_MiniJetpack"
+      }
+    ],
     "item_pools": [
       {
         "tag": "ability/tinkerer 1",
@@ -35945,12 +36460,18 @@
       "Wood"
     ],
     "stats": null,
-    "durability": "[8 12]",
+    "durability": "[8, 12]",
     "aux": null,
     "name_key": "ITEM_BIGSTICK_NAME",
     "desc_key": "ITEM_BIGSTICK_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_BigStick"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -35964,6 +36485,56 @@
         "tag_texts": {
           "en": "general/weapon",
           "zh": "通用/武器"
+        }
+      }
+    ]
+  },
+  {
+    "item_code": "TinkererBigStick",
+    "item_name": "Big Stick",
+    "item_name_texts": {
+      "en": "Big Stick",
+      "zh": "大木棍"
+    },
+    "description": "Use: A melee attack with +2 reach.",
+    "description_texts": {
+      "en": "Use: A melee attack with +2 reach.",
+      "zh": "使用：近战攻击，+2 近战范围。"
+    },
+    "kind": "weapon",
+    "rarity": "uncommon",
+    "is_consumable": false,
+    "frame": 75,
+    "sets": [
+      "Wood"
+    ],
+    "stats": null,
+    "durability": "[5, 8]",
+    "aux": null,
+    "name_key": "ITEM_BIGSTICK_NAME",
+    "desc_key": "ITEM_BIGSTICK_DESC",
+    "cursed": false,
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "item_pools": [
+      {
+        "tag": "ability/allsticks 0",
+        "tag_texts": {
+          "en": "ability/allsticks 0",
+          "zh": "技能/allsticks 0"
+        }
+      },
+      {
+        "tag": "ability/stick 1",
+        "tag_texts": {
+          "en": "ability/stick 1",
+          "zh": "技能/stick 1"
+        }
+      },
+      {
+        "tag": "ability/tinkerer 1",
+        "tag_texts": {
+          "en": "ability/tinkerer 1",
+          "zh": "技能/tinkerer 1"
         }
       }
     ]
@@ -35988,12 +36559,18 @@
       "Wood"
     ],
     "stats": null,
-    "durability": "[8 12]",
+    "durability": "[8, 12]",
     "aux": null,
     "name_key": "ITEM_BIGGESTSTICK_NAME",
     "desc_key": "ITEM_BIGGESTSTICK_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_BiggestStick"
+      }
+    ],
     "item_pools": [
       {
         "tag": "ability/allsticks 1",
@@ -36014,6 +36591,70 @@
         "tag_texts": {
           "en": "general/weapon",
           "zh": "通用/武器"
+        }
+      }
+    ]
+  },
+  {
+    "item_code": "TinkererBiggestStick",
+    "item_name": "Biggest Stick",
+    "item_name_texts": {
+      "en": "Biggest Stick",
+      "zh": "最大号的木棍"
+    },
+    "description": "Use: A melee attack with +3 reach.",
+    "description_texts": {
+      "en": "Use: A melee attack with +3 reach.",
+      "zh": "使用：近战攻击，+3 近战范围。"
+    },
+    "kind": "weapon",
+    "rarity": "rare",
+    "is_consumable": false,
+    "frame": 82,
+    "sets": [
+      "Wood"
+    ],
+    "stats": null,
+    "durability": "[5, 8]",
+    "aux": null,
+    "name_key": "ITEM_BIGGESTSTICK_NAME",
+    "desc_key": "ITEM_BIGGESTSTICK_DESC",
+    "cursed": false,
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "item_pools": [
+      {
+        "tag": "ability/allsticks 0",
+        "tag_texts": {
+          "en": "ability/allsticks 0",
+          "zh": "技能/allsticks 0"
+        }
+      },
+      {
+        "tag": "ability/allsticks 1",
+        "tag_texts": {
+          "en": "ability/allsticks 1",
+          "zh": "技能/allsticks 1"
+        }
+      },
+      {
+        "tag": "ability/allsticks 2",
+        "tag_texts": {
+          "en": "ability/allsticks 2",
+          "zh": "技能/allsticks 2"
+        }
+      },
+      {
+        "tag": "ability/stick 2",
+        "tag_texts": {
+          "en": "ability/stick 2",
+          "zh": "技能/stick 2"
+        }
+      },
+      {
+        "tag": "ability/tinkerer 2",
+        "tag_texts": {
+          "en": "ability/tinkerer 2",
+          "zh": "技能/tinkerer 2"
         }
       }
     ]
@@ -36044,6 +36685,12 @@
     "desc_key": "ITEM_LOG_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Log"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -36057,6 +36704,77 @@
         "tag_texts": {
           "en": "general/weapon",
           "zh": "通用/武器"
+        }
+      }
+    ]
+  },
+  {
+    "item_code": "TinkererLog",
+    "item_name": "Log",
+    "item_name_texts": {
+      "en": "Log",
+      "zh": "原木"
+    },
+    "description": "Use: A wide attack that hits all units in an area.",
+    "description_texts": {
+      "en": "Use: A wide attack that hits all units in an area.",
+      "zh": "使用：击中区域内所有单位的广域攻击。"
+    },
+    "kind": "weapon",
+    "rarity": "very_rare",
+    "is_consumable": false,
+    "frame": 76,
+    "sets": [
+      "Wood"
+    ],
+    "stats": null,
+    "durability": "4",
+    "aux": null,
+    "name_key": "ITEM_LOG_NAME",
+    "desc_key": "ITEM_LOG_DESC",
+    "cursed": false,
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "item_pools": [
+      {
+        "tag": "ability/allsticks 0",
+        "tag_texts": {
+          "en": "ability/allsticks 0",
+          "zh": "技能/allsticks 0"
+        }
+      },
+      {
+        "tag": "ability/allsticks 1",
+        "tag_texts": {
+          "en": "ability/allsticks 1",
+          "zh": "技能/allsticks 1"
+        }
+      },
+      {
+        "tag": "ability/allsticks 2",
+        "tag_texts": {
+          "en": "ability/allsticks 2",
+          "zh": "技能/allsticks 2"
+        }
+      },
+      {
+        "tag": "ability/allsticks 3",
+        "tag_texts": {
+          "en": "ability/allsticks 3",
+          "zh": "技能/allsticks 3"
+        }
+      },
+      {
+        "tag": "ability/stick 3",
+        "tag_texts": {
+          "en": "ability/stick 3",
+          "zh": "技能/stick 3"
+        }
+      },
+      {
+        "tag": "ability/tinkerer 3",
+        "tag_texts": {
+          "en": "ability/tinkerer 3",
+          "zh": "技能/tinkerer 3"
         }
       }
     ]
@@ -36085,6 +36803,12 @@
     "desc_key": "ITEM_TASER_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Taser"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -36098,6 +36822,40 @@
         "tag_texts": {
           "en": "general/weapon",
           "zh": "通用/武器"
+        }
+      }
+    ]
+  },
+  {
+    "item_code": "TinkererTaser",
+    "item_name": "Zapper",
+    "item_name_texts": {
+      "en": "Zapper",
+      "zh": "电击器"
+    },
+    "description": "Use: A ranged electric attack that inflicts Stun.",
+    "description_texts": {
+      "en": "Use: A ranged electric attack that inflicts Stun.",
+      "zh": "使用：一次远程电击攻击，\n造成晕眩。"
+    },
+    "kind": "weapon",
+    "rarity": "rare",
+    "is_consumable": false,
+    "frame": 84,
+    "sets": null,
+    "stats": null,
+    "durability": "3",
+    "aux": null,
+    "name_key": "ITEM_TASER_NAME",
+    "desc_key": "ITEM_TASER_DESC",
+    "cursed": false,
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "item_pools": [
+      {
+        "tag": "ability/tinkerer 2",
+        "tag_texts": {
+          "en": "ability/tinkerer 2",
+          "zh": "技能/tinkerer 2"
         }
       }
     ]
@@ -36128,6 +36886,12 @@
     "desc_key": "ITEM_DEATHBOT_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Deathbot"
+      }
+    ],
     "item_pools": [
       {
         "tag": "ability/tinkerer 2",
@@ -36171,6 +36935,12 @@
     "desc_key": "ITEM_CROSSBOW_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Crossbow"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -36184,6 +36954,42 @@
         "tag_texts": {
           "en": "general/weapon",
           "zh": "通用/武器"
+        }
+      }
+    ]
+  },
+  {
+    "item_code": "TinkererCrossbow",
+    "item_name": "Crossbow",
+    "item_name_texts": {
+      "en": "Crossbow",
+      "zh": "十字弩"
+    },
+    "description": "Use: A ranged attack that ignores shield and inflicts Bleed 1.",
+    "description_texts": {
+      "en": "Use: A ranged attack that ignores shield and inflicts Bleed 1.",
+      "zh": "使用：远程攻击，\n无视护盾并施加 1 层流血。"
+    },
+    "kind": "weapon",
+    "rarity": "rare",
+    "is_consumable": false,
+    "frame": 80,
+    "sets": [
+      "Wood"
+    ],
+    "stats": null,
+    "durability": "4",
+    "aux": null,
+    "name_key": "ITEM_CROSSBOW_NAME",
+    "desc_key": "ITEM_CROSSBOW_DESC",
+    "cursed": false,
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "item_pools": [
+      {
+        "tag": "ability/tinkerer 2",
+        "tag_texts": {
+          "en": "ability/tinkerer 2",
+          "zh": "技能/tinkerer 2"
         }
       }
     ]
@@ -36212,6 +37018,12 @@
     "desc_key": "ITEM_BUCKETOFACID_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_BucketOfAcid"
+      }
+    ],
     "item_pools": [
       {
         "tag": "ability/tinkerer 2",
@@ -36247,12 +37059,18 @@
     "frame": 79,
     "sets": null,
     "stats": null,
-    "durability": "[2 4]",
+    "durability": "[2, 4]",
     "aux": null,
     "name_key": "ITEM_STUNGUN_NAME",
     "desc_key": "ITEM_STUNGUN_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_StunGun"
+      }
+    ],
     "item_pools": [
       {
         "tag": "ability/tinkerer 1",
@@ -36290,12 +37108,18 @@
       "Wood"
     ],
     "stats": null,
-    "durability": "[5 9]",
+    "durability": "[5, 9]",
     "aux": null,
     "name_key": "ITEM_SLINGSHOT_NAME",
     "desc_key": "ITEM_SLINGSHOT_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_SlingShot"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -36309,6 +37133,42 @@
         "tag_texts": {
           "en": "general/weapon",
           "zh": "通用/武器"
+        }
+      }
+    ]
+  },
+  {
+    "item_code": "TinkererSlingShot",
+    "item_name": "Slingshot",
+    "item_name_texts": {
+      "en": "Slingshot",
+      "zh": "弹弓"
+    },
+    "description": "Use: A ranged attack with a 33% chance to inflict Blind 2.",
+    "description_texts": {
+      "en": "Use: A ranged attack with a 33% chance to inflict Blind 2.",
+      "zh": "使用：一次远程攻击，\n有 33% 的几率造成 2 层致盲。"
+    },
+    "kind": "weapon",
+    "rarity": "uncommon",
+    "is_consumable": false,
+    "frame": 83,
+    "sets": [
+      "Wood"
+    ],
+    "stats": null,
+    "durability": "[4, 7]",
+    "aux": null,
+    "name_key": "ITEM_SLINGSHOT_NAME",
+    "desc_key": "ITEM_SLINGSHOT_DESC",
+    "cursed": false,
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "item_pools": [
+      {
+        "tag": "ability/tinkerer 1",
+        "tag_texts": {
+          "en": "ability/tinkerer 1",
+          "zh": "技能/tinkerer 1"
         }
       }
     ]
@@ -36337,6 +37197,12 @@
     "desc_key": "ITEM_UZI_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Uzi"
+      }
+    ],
     "item_pools": [
       {
         "tag": "ability/tinkerer 3",
@@ -36379,12 +37245,18 @@
     "frame": 152,
     "sets": null,
     "stats": null,
-    "durability": "[2 4]",
+    "durability": "[2, 4]",
     "aux": null,
     "name_key": "ITEM_22RIFLE_NAME",
     "desc_key": "ITEM_22RIFLE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_22Rifle"
+      }
+    ],
     "item_pools": [
       {
         "tag": "ability/tinkerer 3",
@@ -36442,6 +37314,12 @@
     "desc_key": "ITEM_BAGOFROCKS_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_BagOfRocks"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/rock_items",
@@ -36492,6 +37370,12 @@
     "desc_key": "ITEM_TEXTBOOK_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Textbook"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -36529,12 +37413,18 @@
       "Fatty"
     ],
     "stats": null,
-    "durability": "[4 7]",
+    "durability": "[4, 7]",
     "aux": null,
     "name_key": "ITEM_BUCKETOFLARD_NAME",
     "desc_key": "ITEM_BUCKETOFLARD_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_BucketOfLard"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -36576,6 +37466,12 @@
     "desc_key": "ITEM_NAILGUN_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_NailGun"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -36617,6 +37513,12 @@
     "desc_key": "ITEM_STRONGMAGNET_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_StrongMagnet"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -36652,12 +37554,18 @@
     "frame": 94,
     "sets": null,
     "stats": null,
-    "durability": "[9 16]",
+    "durability": "[9, 16]",
     "aux": null,
     "name_key": "ITEM_SAWBLADES_NAME",
     "desc_key": "ITEM_SAWBLADES_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_SawBlades"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -36695,12 +37603,18 @@
       "Experimental"
     ],
     "stats": null,
-    "durability": "[6 8]",
+    "durability": "[6, 8]",
     "aux": null,
     "name_key": "ITEM_ODDREMOTE_NAME",
     "desc_key": "ITEM_ODDREMOTE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_OddRemote"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -36744,6 +37658,12 @@
     "desc_key": "ITEM_BUTTERFLYKNIFE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_ButterflyKnife"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -36788,6 +37708,12 @@
     "desc_key": "ITEM_BEARTRAPS_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_BearTraps"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -36823,12 +37749,18 @@
     "frame": 89,
     "sets": null,
     "stats": null,
-    "durability": "[6 9]",
+    "durability": "[6, 9]",
     "aux": null,
     "name_key": "ITEM_RUSTYRAZOR_NAME",
     "desc_key": "ITEM_RUSTYRAZOR_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_RustyRazor"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -36872,6 +37804,12 @@
     "desc_key": "ITEM_BRICKS_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Bricks"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -36915,6 +37853,12 @@
     "desc_key": "ITEM_MJOLNIR_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Mjolnir"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -36959,6 +37903,12 @@
     "desc_key": "ITEM_BLACKJACK_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Blackjack"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -37002,6 +37952,12 @@
     "desc_key": "ITEM_BIGSPRING_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_BigSpring"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -37043,6 +37999,12 @@
     "desc_key": "ITEM_GRENADE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Grenade"
+      }
+    ],
     "item_pools": [
       {
         "tag": "bird/eagle",
@@ -37094,12 +38056,18 @@
       "Paper"
     ],
     "stats": null,
-    "durability": "[10 16]",
+    "durability": "[10, 16]",
     "aux": null,
     "name_key": "ITEM_PINWHEEL_NAME",
     "desc_key": "ITEM_PINWHEEL_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Pinwheel"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -37143,6 +38111,12 @@
     "desc_key": "ITEM_CRISPPAPER_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_CrispPaper"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -37180,12 +38154,18 @@
       "Druid"
     ],
     "stats": null,
-    "durability": "[2 4]",
+    "durability": "[2, 4]",
     "aux": null,
     "name_key": "ITEM_PURPLEMUSHROOM_NAME",
     "desc_key": "ITEM_PURPLEMUSHROOM_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_PurpleMushroom"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -37229,6 +38209,12 @@
     "desc_key": "ITEM_BLACKMUSHROOM_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_BlackMushroom"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -37272,6 +38258,12 @@
     "desc_key": "ITEM_REDMUSHROOM_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_RedMushroom"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -37315,6 +38307,12 @@
     "desc_key": "ITEM_POISONVIAL_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_PoisonVial"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -37350,12 +38348,18 @@
     "frame": 42,
     "sets": null,
     "stats": null,
-    "durability": "[6 10]",
+    "durability": "[6, 10]",
     "aux": null,
     "name_key": "ITEM_POPCAP_NAME",
     "desc_key": "ITEM_POPCAP_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_PopCap"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -37397,6 +38401,12 @@
     "desc_key": "ITEM_CREEPYPHOTO_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_CreepyPhoto"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -37440,6 +38450,12 @@
     "desc_key": "ITEM_FINGERBONE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_FingerBone"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/bone_equipment",
@@ -37504,6 +38520,12 @@
     "desc_key": "ITEM_SPRINGBOARD_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_SpringBoard"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -37545,6 +38567,12 @@
     "desc_key": "ITEM_SHOVEL_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Shovel"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -37580,12 +38608,18 @@
     "frame": 38,
     "sets": null,
     "stats": null,
-    "durability": "[6 8]",
+    "durability": "[6, 8]",
     "aux": null,
     "name_key": "ITEM_TROWEL_NAME",
     "desc_key": "ITEM_TROWEL_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Trowel"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -37629,6 +38663,12 @@
     "desc_key": "ITEM_STAFFOFFLAME_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_StaffOfFlame"
+      }
+    ],
     "unlock_requirements": [
       {
         "type": "complete_chapter_with_class",
@@ -37678,12 +38718,18 @@
       "Thief"
     ],
     "stats": null,
-    "durability": "[10 14]",
+    "durability": "[10, 14]",
     "aux": null,
     "name_key": "ITEM_LACEDNEEDLE_NAME",
     "desc_key": "ITEM_LACEDNEEDLE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_LacedNeedle"
+      }
+    ],
     "unlock_requirements": [
       {
         "type": "complete_chapter_with_class",
@@ -37739,6 +38785,12 @@
     "desc_key": "ITEM_BATTLEAXE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_BattleAxe"
+      }
+    ],
     "unlock_requirements": [
       {
         "type": "complete_chapter_with_class",
@@ -37794,6 +38846,12 @@
     "desc_key": "ITEM_ANOINTINGOIL_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_AnointingOil"
+      }
+    ],
     "unlock_requirements": [
       {
         "type": "complete_chapter_with_class",
@@ -37842,6 +38900,12 @@
     "desc_key": "ITEM_GIRDER_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Girder"
+      }
+    ],
     "unlock_requirements": [
       {
         "type": "complete_chapter_with_class",
@@ -37890,6 +38954,12 @@
     "desc_key": "ITEM_INFINITYARROW_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_InfinityArrow"
+      }
+    ],
     "unlock_requirements": [
       {
         "type": "complete_chapter_with_class",
@@ -37938,6 +39008,12 @@
     "desc_key": "ITEM_BENTSPOON_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_BentSpoon"
+      }
+    ],
     "unlock_requirements": [
       {
         "type": "complete_chapter_with_class",
@@ -37987,6 +39063,12 @@
     "desc_key": "ITEM_UNDERWORLDSTAFF_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_UnderworldStaff"
+      }
+    ],
     "unlock_requirements": [
       {
         "type": "complete_chapter_with_class",
@@ -38036,6 +39118,12 @@
     "desc_key": "ITEM_BO_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Bo"
+      }
+    ],
     "unlock_requirements": [
       {
         "type": "complete_chapter_with_class",
@@ -38084,6 +39172,12 @@
     "desc_key": "ITEM_BALLPEENHAMMER_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_BallPeenHammer"
+      }
+    ],
     "unlock_requirements": [
       {
         "type": "complete_chapter_with_class",
@@ -38132,6 +39226,12 @@
     "desc_key": "ITEM_BUTCHERSCLEAVER_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_ButchersCleaver"
+      }
+    ],
     "unlock_requirements": [
       {
         "type": "complete_chapter_with_class",
@@ -38181,6 +39281,12 @@
     "desc_key": "ITEM_RAINSTAFF_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_RainStaff"
+      }
+    ],
     "unlock_requirements": [
       {
         "type": "complete_chapter_with_class",
@@ -38227,6 +39333,12 @@
     "desc_key": "ITEM_LILKITTY_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_LilKitty"
+      }
+    ],
     "unlock_requirements": [
       {
         "type": "complete_chapter_with_class",
@@ -38275,6 +39387,12 @@
     "desc_key": "ITEM_TRACTORBEAM_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_TractorBeam"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -38316,6 +39434,12 @@
     "desc_key": "ITEM_ROLLOFPENNIES_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_RollOfPennies"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/Coin_items",
@@ -38367,6 +39491,12 @@
     "desc_key": "ITEM_GRAPPLINGHOOK_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_GrapplingHook"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -38410,6 +39540,12 @@
     "desc_key": "ITEM_CHAINSAW_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Chainsaw"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -38453,6 +39589,12 @@
     "desc_key": "ITEM_BURNINGCOAL_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_BurningCoal"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -38496,6 +39638,12 @@
     "desc_key": "ITEM_RAINBOWREMOTE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_RainbowRemote"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -38539,6 +39687,12 @@
     "desc_key": "ITEM_RUBBERBAT_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_RubberBat"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -38580,6 +39734,12 @@
     "desc_key": "ITEM_RUSTEDROD_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_RustedRod"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -38623,6 +39783,12 @@
     "desc_key": "ITEM_MEATCLEAVER_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_MeatCleaver"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -38664,6 +39830,12 @@
     "desc_key": "ITEM_SHARPSTRAW_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_SharpStraw"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -38705,6 +39877,12 @@
     "desc_key": "ITEM_BAGOFGLASS_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_BagOfGlass"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -38748,6 +39926,12 @@
     "desc_key": "ITEM_BAGOFMEAT_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_BagOfMeat"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/meat_items",
@@ -38798,6 +39982,12 @@
     "desc_key": "ITEM_BAGOFGLITTER_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_BagOfGlitter"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -38839,6 +40029,12 @@
     "desc_key": "ITEM_BAGOFSTUFF_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_BagOfStuff"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -38882,6 +40078,12 @@
     "desc_key": "ITEM_PICKAXE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Pickaxe"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -38923,6 +40125,12 @@
     "desc_key": "ITEM_ROCKETLAUNCHER_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_RocketLauncher"
+      }
+    ],
     "item_pools": [
       {
         "tag": "ability/tinkerer 3",
@@ -38985,6 +40193,12 @@
     "desc_key": "ITEM_FREYEDWIRES_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_FreyedWires"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -39026,6 +40240,12 @@
     "desc_key": "ITEM_OLDEXTINGUISHER_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_OldExtinguisher"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -39069,6 +40289,12 @@
     "desc_key": "ITEM_TRASHCANLID_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_TrashCanLid"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -39112,6 +40338,12 @@
     "desc_key": "ITEM_MININUKE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_MiniNuke"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -39156,6 +40388,12 @@
     "desc_key": "ITEM_KANDARIAN_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Kandarian"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -39200,6 +40438,12 @@
     "desc_key": "ITEM_GEODE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Geode"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/rock_items",
@@ -39250,6 +40494,12 @@
     "desc_key": "ITEM_ROCKS_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Rocks"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/rock_items",
@@ -39300,6 +40550,12 @@
     "desc_key": "ITEM_EXTRALIMB_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_ExtraLimb"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/blood_altar_items",
@@ -39350,6 +40606,12 @@
     "desc_key": "ITEM_GRIPTRAINER_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_GripTrainer"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -39391,6 +40653,12 @@
     "desc_key": "ITEM_SHOEHORN_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_ShoeHorn"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -39432,6 +40700,12 @@
     "desc_key": "ITEM_CHEESE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Cheese"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -39473,6 +40747,12 @@
     "desc_key": "ITEM_LIPFILLER_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_LipFiller"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -39514,6 +40794,12 @@
     "desc_key": "ITEM_ENERGYDRINK_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_EnergyDrink"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/can_items_rare",
@@ -39566,6 +40852,12 @@
     "desc_key": "ITEM_CATPAW_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_CatPaw"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/blood_altar_items",
@@ -39616,6 +40908,12 @@
     "desc_key": "ITEM_FLOWERMIX_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_FlowerMix"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -39660,6 +40958,12 @@
     "desc_key": "ITEM_PUZZLEBOX_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_PuzzleBox"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -39701,6 +41005,12 @@
     "desc_key": "ITEM_CROWBAR_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Crowbar"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -39744,6 +41054,12 @@
     "desc_key": "ITEM_FIREFLOWER_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_FireFlower"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -39787,6 +41103,12 @@
     "desc_key": "ITEM_BIBLE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Bible"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -39828,6 +41150,12 @@
     "desc_key": "ITEM_CARBATTERY_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_CarBattery"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -39911,7 +41239,13 @@
     "name_key": "ITEM_MODELINGCLAY_NAME",
     "desc_key": "ITEM_MODELINGCLAY_DEFAULT_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/weapons.gon"
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_ModelingClay"
+      }
+    ]
   },
   {
     "item_code": "PharaohStaff",
@@ -39936,7 +41270,13 @@
     "name_key": "ITEM_PHARAOHSTAFF_NAME",
     "desc_key": "ITEM_PHARAOHSTAFF_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/weapons.gon"
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_PharaohStaff"
+      }
+    ]
   },
   {
     "item_code": "SlagMight",
@@ -39963,7 +41303,13 @@
     "name_key": "ITEM_SLAGMIGHT_NAME",
     "desc_key": "ITEM_SLAGMIGHT_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/weapons.gon"
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_SlagMight"
+      }
+    ]
   },
   {
     "item_code": "MomsToeNail",
@@ -39991,6 +41337,12 @@
     "desc_key": "ITEM_MOMSTOENAIL_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_MomsToeNail"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/mom_items",
@@ -40026,7 +41378,13 @@
     "name_key": "ITEM_ALIENBLASTER_NAME",
     "desc_key": "ITEM_ALIENBLASTER_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/weapons.gon"
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_AlienBlaster"
+      }
+    ]
   },
   {
     "item_code": "PolymorphRemote",
@@ -40052,6 +41410,12 @@
     "desc_key": "ITEM_POLYMORPHREMOTE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_PolymorphRemote"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -40086,6 +41450,12 @@
     "desc_key": "ITEM_MELONBALLER_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_MelonBaller"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -40122,6 +41492,12 @@
     "desc_key": "ITEM_ETHERSOAKEDRAG_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_EtherSoakedRag"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -40156,6 +41532,12 @@
     "desc_key": "ITEM_DEATHSSCYTHE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_DeathsScythe"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -40193,6 +41575,12 @@
     "desc_key": "ITEM_NECRONOMICON_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Necronomicon"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -40229,6 +41617,12 @@
     "desc_key": "ITEM_JITTE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Jitte"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -40265,6 +41659,12 @@
     "desc_key": "ITEM_ANARCHISTCOOKBOOK_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_AnarchistCookbook"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -40301,6 +41701,12 @@
     "desc_key": "ITEM_MOMSKNIFE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_MomsKnife"
+      }
+    ],
     "unlock_requirements": [
       {
         "type": "event_unlock",
@@ -40357,6 +41763,12 @@
     "desc_key": "ITEM_MYSTERIOUSBONE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_MysteriousBone"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -40393,6 +41805,12 @@
     "desc_key": "ITEM_HOLYGRAIL_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_HolyGrail"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -40427,6 +41845,12 @@
     "desc_key": "ITEM_SPEAROFDESTINY_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_SpearOfDestiny"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -40465,6 +41889,12 @@
     "desc_key": "ITEM_HEAVYMACE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_HeavyMace"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -40503,6 +41933,12 @@
     "desc_key": "ITEM_URANIUMROD_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_UraniumRod"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -40537,6 +41973,12 @@
     "desc_key": "ITEM_OCARINA_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Ocarina"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -40572,7 +42014,13 @@
     "name_key": "ITEM_SMALLMETEOR_NAME",
     "desc_key": "ITEM_SMALLMETEOR_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/weapons.gon"
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "None"
+      }
+    ]
   },
   {
     "item_code": "GlowingBone",
@@ -40599,7 +42047,13 @@
     "name_key": "ITEM_GLOWINGBONE_NAME",
     "desc_key": "ITEM_GLOWINGBONE_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/weapons.gon"
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "None"
+      }
+    ]
   },
   {
     "item_code": "IrradiatedObject",
@@ -40626,7 +42080,343 @@
     "name_key": "ITEM_IRRADIATEDOBJECT_NAME",
     "desc_key": "ITEM_IRRADIATEDOBJECT_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/weapons.gon"
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_IrradiatedObject"
+      }
+    ]
+  },
+  {
+    "item_code": "IrradiatedObject_Burn",
+    "item_name": "Irradiated Object",
+    "item_name_texts": {
+      "en": "Irradiated Object",
+      "zh": "受辐射物体"
+    },
+    "description": "Use: A melee attack that inflicts Burn 1.\n{str_aux_item_desc}\n[s:.7](Usable once per battle.)[/s]",
+    "description_texts": {
+      "en": "Use: A melee attack that inflicts Burn 1.\n{str_aux_item_desc}\n[s:.7](Usable once per battle.)[/s]",
+      "zh": "使用：施加 1 层燃烧的近战攻击。\n{str_aux_item_desc}\n[s:.7](每场战斗限用一次。)[/s]"
+    },
+    "kind": "weapon",
+    "rarity": "rare",
+    "is_consumable": false,
+    "frame": 176,
+    "sets": [
+      "Radioactive"
+    ],
+    "stats": null,
+    "durability": null,
+    "aux": null,
+    "name_key": "ITEM_IRRADIATEDOBJECT_NAME",
+    "desc_key": "ITEM_IRRADIATEDOBJECT_BURN_DESC",
+    "cursed": false,
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_IrradiatedObject_Burn"
+      }
+    ]
+  },
+  {
+    "item_code": "IrradiatedObject_Stun",
+    "item_name": "Irradiated Object",
+    "item_name_texts": {
+      "en": "Irradiated Object",
+      "zh": "受辐射物体"
+    },
+    "description": "Use: A melee attack that inflicts Stun 1.\n{str_aux_item_desc}\n[s:.7](Usable once per battle.)[/s]",
+    "description_texts": {
+      "en": "Use: A melee attack that inflicts Stun 1.\n{str_aux_item_desc}\n[s:.7](Usable once per battle.)[/s]",
+      "zh": "使用：施加 1 层晕眩的近战攻击。\n{str_aux_item_desc}\n[s:.7](每场战斗限用一次。)[/s]"
+    },
+    "kind": "weapon",
+    "rarity": "rare",
+    "is_consumable": false,
+    "frame": 176,
+    "sets": [
+      "Radioactive"
+    ],
+    "stats": null,
+    "durability": null,
+    "aux": null,
+    "name_key": "ITEM_IRRADIATEDOBJECT_NAME",
+    "desc_key": "ITEM_IRRADIATEDOBJECT_STUN_DESC",
+    "cursed": false,
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_IrradiatedObject_Stun"
+      }
+    ]
+  },
+  {
+    "item_code": "IrradiatedObject_Bleed",
+    "item_name": "Irradiated Object",
+    "item_name_texts": {
+      "en": "Irradiated Object",
+      "zh": "受辐射物体"
+    },
+    "description": "Use: A melee attack that inflicts Bleed 1.\n{str_aux_item_desc}\n[s:.7](Usable once per battle.)[/s]",
+    "description_texts": {
+      "en": "Use: A melee attack that inflicts Bleed 1.\n{str_aux_item_desc}\n[s:.7](Usable once per battle.)[/s]",
+      "zh": "使用：施加 1 层流血的近战攻击。\n{str_aux_item_desc}\n[s:.7](每场战斗限用一次。)[/s]"
+    },
+    "kind": "weapon",
+    "rarity": "rare",
+    "is_consumable": false,
+    "frame": 176,
+    "sets": [
+      "Radioactive"
+    ],
+    "stats": null,
+    "durability": null,
+    "aux": null,
+    "name_key": "ITEM_IRRADIATEDOBJECT_NAME",
+    "desc_key": "ITEM_IRRADIATEDOBJECT_BLEED_DESC",
+    "cursed": false,
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_IrradiatedObject_Bleed"
+      }
+    ]
+  },
+  {
+    "item_code": "IrradiatedObject_Bruise",
+    "item_name": "Irradiated Object",
+    "item_name_texts": {
+      "en": "Irradiated Object",
+      "zh": "受辐射物体"
+    },
+    "description": "Use: A melee attack that inflicts Bruise 1.\n{str_aux_item_desc}\n[s:.7](Usable once per battle.)[/s]",
+    "description_texts": {
+      "en": "Use: A melee attack that inflicts Bruise 1.\n{str_aux_item_desc}\n[s:.7](Usable once per battle.)[/s]",
+      "zh": "使用：施加 1 层淤伤的近战攻击。\n{str_aux_item_desc}\n[s:.7](每场战斗限用一次。)[/s]"
+    },
+    "kind": "weapon",
+    "rarity": "rare",
+    "is_consumable": false,
+    "frame": 176,
+    "sets": [
+      "Radioactive"
+    ],
+    "stats": null,
+    "durability": null,
+    "aux": null,
+    "name_key": "ITEM_IRRADIATEDOBJECT_NAME",
+    "desc_key": "ITEM_IRRADIATEDOBJECT_BRUISE_DESC",
+    "cursed": false,
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_IrradiatedObject_Bruise"
+      }
+    ]
+  },
+  {
+    "item_code": "IrradiatedObject_Poison",
+    "item_name": "Irradiated Object",
+    "item_name_texts": {
+      "en": "Irradiated Object",
+      "zh": "受辐射物体"
+    },
+    "description": "Use: A melee attack that inflicts Poison 1.\n{str_aux_item_desc}\n[s:.7](Usable once per battle.)[/s]",
+    "description_texts": {
+      "en": "Use: A melee attack that inflicts Poison 1.\n{str_aux_item_desc}\n[s:.7](Usable once per battle.)[/s]",
+      "zh": "使用：施加 1 层中毒的近战攻击。\n{str_aux_item_desc}\n[s:.7](每场战斗限用一次。)[/s]"
+    },
+    "kind": "weapon",
+    "rarity": "rare",
+    "is_consumable": false,
+    "frame": 176,
+    "sets": [
+      "Radioactive"
+    ],
+    "stats": null,
+    "durability": null,
+    "aux": null,
+    "name_key": "ITEM_IRRADIATEDOBJECT_NAME",
+    "desc_key": "ITEM_IRRADIATEDOBJECT_POISON_DESC",
+    "cursed": false,
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_IrradiatedObject_Poison"
+      }
+    ]
+  },
+  {
+    "item_code": "IrradiatedObject_Sleep",
+    "item_name": "Irradiated Object",
+    "item_name_texts": {
+      "en": "Irradiated Object",
+      "zh": "受辐射物体"
+    },
+    "description": "Use: A melee attack that inflicts Sleep 1.\n{str_aux_item_desc}\n[s:.7](Usable once per battle.)[/s]",
+    "description_texts": {
+      "en": "Use: A melee attack that inflicts Sleep 1.\n{str_aux_item_desc}\n[s:.7](Usable once per battle.)[/s]",
+      "zh": "使用：施加 1 层睡眠的近战攻击。\n{str_aux_item_desc}\n[s:.7](每场战斗限用一次。)[/s]"
+    },
+    "kind": "weapon",
+    "rarity": "rare",
+    "is_consumable": false,
+    "frame": 176,
+    "sets": [
+      "Radioactive"
+    ],
+    "stats": null,
+    "durability": null,
+    "aux": null,
+    "name_key": "ITEM_IRRADIATEDOBJECT_NAME",
+    "desc_key": "ITEM_IRRADIATEDOBJECT_SLEEP_DESC",
+    "cursed": false,
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_IrradiatedObject_Sleep"
+      }
+    ]
+  },
+  {
+    "item_code": "IrradiatedObject_Fear",
+    "item_name": "Irradiated Object",
+    "item_name_texts": {
+      "en": "Irradiated Object",
+      "zh": "受辐射物体"
+    },
+    "description": "Use: A melee attack that inflicts Fear 1.\n{str_aux_item_desc}\n[s:.7](Usable once per battle.)[/s]",
+    "description_texts": {
+      "en": "Use: A melee attack that inflicts Fear 1.\n{str_aux_item_desc}\n[s:.7](Usable once per battle.)[/s]",
+      "zh": "使用：施加 1 层恐惧的近战攻击。\n{str_aux_item_desc}\n[s:.7](每场战斗限用一次。)[/s]"
+    },
+    "kind": "weapon",
+    "rarity": "rare",
+    "is_consumable": false,
+    "frame": 176,
+    "sets": [
+      "Radioactive"
+    ],
+    "stats": null,
+    "durability": null,
+    "aux": null,
+    "name_key": "ITEM_IRRADIATEDOBJECT_NAME",
+    "desc_key": "ITEM_IRRADIATEDOBJECT_FEAR_DESC",
+    "cursed": false,
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_IrradiatedObject_Fear"
+      }
+    ]
+  },
+  {
+    "item_code": "IrradiatedObject_Charmed",
+    "item_name": "Irradiated Object",
+    "item_name_texts": {
+      "en": "Irradiated Object",
+      "zh": "受辐射物体"
+    },
+    "description": "Use: A melee attack that inflicts Charmed 1.\n{str_aux_item_desc}\n[s:.7](Usable once per battle.)[/s]",
+    "description_texts": {
+      "en": "Use: A melee attack that inflicts Charmed 1.\n{str_aux_item_desc}\n[s:.7](Usable once per battle.)[/s]",
+      "zh": "使用：施加 1 层魅惑的近战攻击。\n{str_aux_item_desc}\n[s:.7](每场战斗限用一次。)[/s]"
+    },
+    "kind": "weapon",
+    "rarity": "rare",
+    "is_consumable": false,
+    "frame": 176,
+    "sets": [
+      "Radioactive"
+    ],
+    "stats": null,
+    "durability": null,
+    "aux": null,
+    "name_key": "ITEM_IRRADIATEDOBJECT_NAME",
+    "desc_key": "ITEM_IRRADIATEDOBJECT_CHARMED_DESC",
+    "cursed": false,
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_IrradiatedObject_Charmed"
+      }
+    ]
+  },
+  {
+    "item_code": "IrradiatedObject_Weakness",
+    "item_name": "Irradiated Object",
+    "item_name_texts": {
+      "en": "Irradiated Object",
+      "zh": "受辐射物体"
+    },
+    "description": "Use: A melee attack that inflicts Weakness 1.\n{str_aux_item_desc}\n[s:.7](Usable once per battle.)[/s]",
+    "description_texts": {
+      "en": "Use: A melee attack that inflicts Weakness 1.\n{str_aux_item_desc}\n[s:.7](Usable once per battle.)[/s]",
+      "zh": "使用：施加 1 层虚弱的近战攻击。\n{str_aux_item_desc}\n[s:.7](每场战斗限用一次。)[/s]"
+    },
+    "kind": "weapon",
+    "rarity": "rare",
+    "is_consumable": false,
+    "frame": 176,
+    "sets": [
+      "Radioactive"
+    ],
+    "stats": null,
+    "durability": null,
+    "aux": null,
+    "name_key": "ITEM_IRRADIATEDOBJECT_NAME",
+    "desc_key": "ITEM_IRRADIATEDOBJECT_WEAKNESS_DESC",
+    "cursed": false,
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_IrradiatedObject_Weakness"
+      }
+    ]
+  },
+  {
+    "item_code": "IrradiatedObject_Confusion",
+    "item_name": "Irradiated Object",
+    "item_name_texts": {
+      "en": "Irradiated Object",
+      "zh": "受辐射物体"
+    },
+    "description": "Use: A melee attack that inflicts Confusion 1.\n{str_aux_item_desc}\n[s:.7](Usable once per battle.)[/s]",
+    "description_texts": {
+      "en": "Use: A melee attack that inflicts Confusion 1.\n{str_aux_item_desc}\n[s:.7](Usable once per battle.)[/s]",
+      "zh": "使用：施加 1 层混乱的近战攻击。\n{str_aux_item_desc}\n[s:.7](每场战斗限用一次。)[/s]"
+    },
+    "kind": "weapon",
+    "rarity": "rare",
+    "is_consumable": false,
+    "frame": 176,
+    "sets": [
+      "Radioactive"
+    ],
+    "stats": null,
+    "durability": null,
+    "aux": null,
+    "name_key": "ITEM_IRRADIATEDOBJECT_NAME",
+    "desc_key": "ITEM_IRRADIATEDOBJECT_CONFUSION_DESC",
+    "cursed": false,
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_IrradiatedObject_Confusion"
+      }
+    ]
   },
   {
     "item_code": "SteelBall",
@@ -40652,6 +42442,12 @@
     "desc_key": "ITEM_STEELBALL_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_SteelBall"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -40688,6 +42484,12 @@
     "desc_key": "ITEM_USASHIELD_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_USAShield"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -40724,6 +42526,12 @@
     "desc_key": "ITEM_TESLACANNON_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_TeslaCannon"
+      }
+    ],
     "item_pools": [
       {
         "tag": "ability/tinkerer 3",
@@ -40760,6 +42568,12 @@
     "desc_key": "ITEM_MEATBOMB_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_SmallBomb"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/bloody_items",
@@ -40796,6 +42610,12 @@
     "desc_key": "ITEM_BLOODYSTICK_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Stick"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/bloody_items",
@@ -40830,6 +42650,12 @@
     "desc_key": "ITEM_BUCKETOFBLOOD_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_BucketOfLard"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/bloody_items",
@@ -40864,6 +42690,12 @@
     "desc_key": "ITEM_BLOODYBUTTERFLYKNIFE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_BloodyButterflyKnife"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/bloody_items",
@@ -40901,6 +42733,12 @@
     "desc_key": "ITEM_BLOODYBEARTRAPS_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_BearTraps"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/bloody_items",
@@ -40935,6 +42773,12 @@
     "desc_key": "ITEM_BLOODYBAGOFGLASS_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_BloodyBagOfGlass"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/bloody_items",
@@ -40969,6 +42813,12 @@
     "desc_key": "ITEM_MEATSLUGGER_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_MeatSlugger"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/bloody_items",
@@ -41006,6 +42856,12 @@
     "desc_key": "ITEM_BLOODYMEATHOOK_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_BloodyMeatHook"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/bloody_items",
@@ -41040,6 +42896,12 @@
     "desc_key": "ITEM_BLOODYSOULCLAW_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_BloodySoulClaw"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/bloody_items",
@@ -41074,6 +42936,12 @@
     "desc_key": "ITEM_BLOODBUCKET_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_ChumBucket"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/bloody_items",
@@ -41108,6 +42976,12 @@
     "desc_key": "ITEM_BLOODYSPIKES_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_RailSpikes"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/bloody_items",
@@ -41142,6 +43016,12 @@
     "desc_key": "ITEM_BOTTLESOFBLOOD_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_BloodBottles"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/bloody_items",
@@ -41178,6 +43058,12 @@
     "desc_key": "ITEM_BLESSEDANOINTINGOIL_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_BlessedAnointingOil"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/godly_items",
@@ -41212,6 +43098,12 @@
     "desc_key": "ITEM_HARPYSCLAW_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_HarpyClaw"
+      }
+    ],
     "item_pools": [
       {
         "tag": "bird/harpy",
@@ -41248,6 +43140,12 @@
     "desc_key": "ITEM_RATBOMB_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_RatBomb"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/rat_trinkets",
@@ -41281,7 +43179,13 @@
     "name_key": "ITEM_SPINNERETS_NAME",
     "desc_key": "ITEM_SPINNERETS_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/weapons.gon"
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_SpiderWebber"
+      }
+    ]
   },
   {
     "item_code": "ZodiacsSixshooter",
@@ -41308,7 +43212,13 @@
     "name_key": "ITEM_ZODIACSSIXSHOOTER_NAME",
     "desc_key": "ITEM_ZODIACSSIXSHOOTER_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/weapons.gon"
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_ZodiacsSixshooter"
+      }
+    ]
   },
   {
     "item_code": "GambitsDice",
@@ -41333,7 +43243,13 @@
     "name_key": "ITEM_GAMBITSDICE_NAME",
     "desc_key": "ITEM_GAMBITSDICE_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/weapons.gon"
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_GambitsDice"
+      }
+    ]
   },
   {
     "item_code": "JohnnysStool",
@@ -41360,7 +43276,13 @@
     "name_key": "ITEM_JOHNNYSSTOOL_NAME",
     "desc_key": "ITEM_JOHNNYSSTOOL_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/weapons.gon"
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Stoolatk"
+      }
+    ]
   },
   {
     "item_code": "AlienTech",
@@ -41387,7 +43309,13 @@
     "name_key": "ITEM_ALIENTECH_NAME",
     "desc_key": "ITEM_ALIENTECH_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/weapons.gon"
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "AlienBeam"
+      }
+    ]
   },
   {
     "item_code": "Stacy100",
@@ -41412,7 +43340,13 @@
     "name_key": "ITEM_STACY100_NAME",
     "desc_key": "ITEM_STACY100_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/weapons.gon"
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_SpawnStacy"
+      }
+    ]
   },
   {
     "item_code": "BungasBone",
@@ -41439,7 +43373,13 @@
     "name_key": "ITEM_BUNGASBONE_NAME",
     "desc_key": "ITEM_BUNGASBONE_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/weapons.gon"
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_BungaClub"
+      }
+    ]
   },
   {
     "item_code": "HitlersPistol",
@@ -41464,7 +43404,13 @@
     "name_key": "ITEM_HITLERSPISTOL_NAME",
     "desc_key": "ITEM_HITLERSPISTOL_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/weapons.gon"
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Lugar"
+      }
+    ]
   },
   {
     "item_code": "Bug",
@@ -41490,6 +43436,16 @@
     "desc_key": "ITEM_BUG_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "BasicMetronome"
+      },
+      {
+        "type": "ability",
+        "code": "wp_OddRemote"
+      }
+    ],
     "item_pools": [
       {
         "tag": "chapter/dimensionx",
@@ -41524,6 +43480,12 @@
     "desc_key": "ITEM_FATE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Fate"
+      }
+    ],
     "item_pools": [
       {
         "tag": "chapter/jurassic",
@@ -41560,6 +43522,12 @@
     "desc_key": "ITEM_MAMMOTHTUSK_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_TuskThrow"
+      }
+    ],
     "item_pools": [
       {
         "tag": "chapter/iceage",
@@ -41590,11 +43558,11 @@
     "stats": {
       "str": 1,
       "dex": 1,
-      "con": 1,
-      "spd": 1,
       "int": 1,
+      "con": 1,
+      "cha": 1,
       "lck": 1,
-      "cha": 1
+      "spd": 1
     },
     "durability": null,
     "aux": null,
@@ -41602,6 +43570,12 @@
     "desc_key": "ITEM_AMERICANFLAG_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Rally"
+      }
+    ],
     "item_pools": [
       {
         "tag": "chapter/moon",
@@ -41639,6 +43613,12 @@
     "desc_key": "ITEM_BOOKOFBELIAL_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_BookofBelial"
+      }
+    ],
     "item_pools": [
       {
         "tag": "chapter/core",
@@ -41675,6 +43655,12 @@
     "desc_key": "ITEM_MEGAALIENBLASTER_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_MegaAlienBlaster"
+      }
+    ],
     "item_pools": [
       {
         "tag": "chapter/moon",
@@ -41712,7 +43698,13 @@
     "name_key": "ITEM_HELLHOOK_NAME",
     "desc_key": "ITEM_HELLHOOK_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/weapons.gon"
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_MeatHookB"
+      }
+    ]
   },
   {
     "item_code": "DemonCore",
@@ -41740,6 +43732,12 @@
     "desc_key": "ITEM_DEMONCORE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_DemonDoom"
+      }
+    ],
     "item_pools": [
       {
         "tag": "chapter/bunker",
@@ -41776,6 +43774,12 @@
     "desc_key": "ITEM_BAGOFCHUM_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_ChumShot"
+      }
+    ],
     "item_pools": [
       {
         "tag": "chapter/junkyard",
@@ -41819,6 +43823,12 @@
     "desc_key": "ITEM_GOLDENPICKAXE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_GoldPickaxe"
+      }
+    ],
     "item_pools": [
       {
         "tag": "chapter/caves",
@@ -41853,6 +43863,12 @@
     "desc_key": "ITEM_MANHOLECOVER_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Manhole"
+      }
+    ],
     "item_pools": [
       {
         "tag": "chapter/sewer",
@@ -41889,6 +43905,12 @@
     "desc_key": "ITEM_TINASLARYNX_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_TinaScream"
+      }
+    ],
     "unlock_requirements": [
       {
         "type": "beat_house_boss",
@@ -41937,6 +43959,12 @@
     "desc_key": "ITEM_ROBOTICARM_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_FuryArm"
+      }
+    ],
     "unlock_requirements": [
       {
         "type": "beat_house_boss",
@@ -41983,6 +44011,12 @@
     "desc_key": "ITEM_STEVENSSHOTGUN_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_ShotgunSteven"
+      }
+    ],
     "unlock_requirements": [
       {
         "type": "beat_chapter_boss",
@@ -42026,11 +44060,17 @@
     ],
     "stats": null,
     "durability": "99",
-    "aux": "1",
+    "aux": 1,
     "name_key": "ITEM_STEVENSGRISTLE_NAME",
     "desc_key": "ITEM_STEVENSGRISTLE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_GnarledClaw"
+      }
+    ],
     "unlock_requirements": [
       {
         "type": "beat_house_boss",
@@ -42079,6 +44119,12 @@
     "desc_key": "ITEM_STEVENSBAGOFROCKS_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_StevensBagOfRocks"
+      }
+    ],
     "unlock_requirements": [
       {
         "type": "beat_house_boss",
@@ -42127,6 +44173,12 @@
     "desc_key": "ITEM_STEVENSBOTTLE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_StevensBottles"
+      }
+    ],
     "unlock_requirements": [
       {
         "type": "beat_house_boss",
@@ -42175,6 +44227,12 @@
     "desc_key": "ITEM_STEVENWEAPON1_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_StevenWeapon1"
+      }
+    ],
     "unlock_requirements": [
       {
         "type": "beat_house_boss",
@@ -42223,6 +44281,12 @@
     "desc_key": "ITEM_STEVENWEAPON2_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_StevenWeapon2"
+      }
+    ],
     "unlock_requirements": [
       {
         "type": "beat_house_boss",
@@ -42271,6 +44335,12 @@
     "desc_key": "ITEM_TOYGUN_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_BangGun"
+      }
+    ],
     "unlock_requirements": [
       {
         "type": "complete_chapter_with_class",
@@ -42317,6 +44387,12 @@
     "desc_key": "ITEM_PLIERS_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Pliers"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -42353,6 +44429,12 @@
     "desc_key": "ITEM_FEATHERDARTS_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_FeatherDarts"
+      }
+    ],
     "item_pools": [
       {
         "tag": "general/general",
@@ -42389,6 +44471,12 @@
     "desc_key": "ITEM_FEATHEREDWING_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_FeatheredWing"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/Bird_items",
@@ -42418,11 +44506,17 @@
     "sets": null,
     "stats": null,
     "durability": null,
-    "aux": "10",
+    "aux": 10,
     "name_key": "ITEM_MONEYBAG_SMALL_NAME",
     "desc_key": "ITEM_MONEYBAG_SMALL_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_MoneyBag_Small"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/Coin_items",
@@ -42452,11 +44546,17 @@
     "sets": null,
     "stats": null,
     "durability": null,
-    "aux": "25",
+    "aux": 25,
     "name_key": "ITEM_MONEYBAG_MEDIUM_NAME",
     "desc_key": "ITEM_MONEYBAG_MEDIUM_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_MoneyBag_Medium"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/Coin_items",
@@ -42486,11 +44586,17 @@
     "sets": null,
     "stats": null,
     "durability": null,
-    "aux": "50",
+    "aux": 50,
     "name_key": "ITEM_MONEYBAG_LARGE_NAME",
     "desc_key": "ITEM_MONEYBAG_LARGE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_MoneyBag_Large"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/Coin_items",
@@ -42520,11 +44626,17 @@
     "sets": null,
     "stats": null,
     "durability": null,
-    "aux": "100",
+    "aux": 100,
     "name_key": "ITEM_MONEYBAG_HUGE_NAME",
     "desc_key": "ITEM_MONEYBAG_HUGE_DESC",
     "cursed": false,
     "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_MoneyBag_Huge"
+      }
+    ],
     "item_pools": [
       {
         "tag": "event/Coin_items",
@@ -42560,7 +44672,13 @@
     "name_key": "ITEM_THEPACT_NAME",
     "desc_key": "ITEM_THEPACT_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/weapons.gon"
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_ThePact"
+      }
+    ]
   },
   {
     "item_code": "Probe",
@@ -42587,6 +44705,12 @@
     "name_key": "ITEM_PROBE_NAME",
     "desc_key": "ITEM_PROBE_DESC",
     "cursed": false,
-    "source_file": "G:/gpak-all/data/items/weapons.gon"
+    "source_file": "G:/gpak-all/data/items/weapons.gon",
+    "refs": [
+      {
+        "type": "ability",
+        "code": "wp_Probe"
+      }
+    ]
   }
 ]

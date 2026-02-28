@@ -42,6 +42,8 @@
         "Butcher.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -77,6 +79,8 @@
         "Butcher.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -112,6 +116,8 @@
         "Butcher.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -147,6 +153,8 @@
         "Butcher.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -182,6 +190,8 @@
         "Butcher.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -217,6 +227,8 @@
         "Butcher.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -252,6 +264,8 @@
         "Butcher.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -287,6 +301,8 @@
         "Butcher.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -322,6 +338,8 @@
         "Butcher.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -357,6 +375,8 @@
         "Butcher.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -392,6 +412,8 @@
         "Butcher.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -427,6 +449,8 @@
         "Butcher.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -462,6 +486,8 @@
         "Butcher.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -497,6 +523,8 @@
         "Butcher.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -532,6 +560,8 @@
         "Butcher.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -567,6 +597,8 @@
         "Butcher.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -613,6 +645,8 @@
         "Butcher.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -648,6 +682,8 @@
         "Butcher.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -683,6 +719,8 @@
         "Butcher.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -718,6 +756,8 @@
         "Butcher.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -753,6 +793,8 @@
         "Butcher.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -788,6 +830,8 @@
         "Butcher.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -833,6 +877,8 @@
           }
         }
       ],
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -868,6 +914,8 @@
         "Butcher.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -903,6 +951,8 @@
         "Butcher.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -938,6 +988,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -973,6 +1025,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1008,6 +1062,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1043,6 +1099,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1078,6 +1136,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1114,6 +1174,8 @@
         "Colorless.tutorial_levelup_passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1144,6 +1206,8 @@
       "stats_level2_upgraded": null,
       "passive_pools": [],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1179,6 +1243,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1214,6 +1280,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1249,6 +1317,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1284,6 +1354,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1319,6 +1391,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1354,6 +1428,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1389,6 +1465,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1425,6 +1503,8 @@
         "Colorless.tutorial_levelup_passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1460,6 +1540,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1505,6 +1587,8 @@
           }
         }
       ],
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1540,6 +1624,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1575,6 +1661,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1614,6 +1702,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1649,6 +1739,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1684,6 +1776,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1719,6 +1813,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1754,6 +1850,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1789,6 +1887,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1824,6 +1924,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1859,6 +1961,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1894,6 +1998,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1929,6 +2035,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -1965,6 +2073,8 @@
         "Colorless.tutorial_levelup_passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2000,6 +2110,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2035,6 +2147,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2070,6 +2184,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2105,6 +2221,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2140,6 +2258,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2175,6 +2295,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2210,6 +2332,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2245,6 +2369,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2280,6 +2406,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2315,6 +2443,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2350,6 +2480,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2403,6 +2535,8 @@
           }
         }
       ],
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2458,6 +2592,8 @@
           }
         }
       ],
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2513,6 +2649,8 @@
           }
         }
       ],
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2568,6 +2706,8 @@
           }
         }
       ],
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2621,6 +2761,8 @@
           }
         }
       ],
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2676,6 +2818,8 @@
           }
         }
       ],
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2731,6 +2875,8 @@
           }
         }
       ],
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2784,6 +2930,8 @@
           }
         }
       ],
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2837,6 +2985,8 @@
           }
         }
       ],
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2890,6 +3040,8 @@
           }
         }
       ],
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2943,6 +3095,8 @@
           }
         }
       ],
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -2998,6 +3152,8 @@
           }
         }
       ],
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3037,6 +3193,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3072,6 +3230,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3107,6 +3267,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3143,6 +3305,8 @@
         "Colorless.tutorial_levelup_passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3176,6 +3340,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3211,6 +3377,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3246,6 +3414,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3279,6 +3449,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3314,6 +3486,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3367,6 +3541,8 @@
           }
         }
       ],
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3402,6 +3578,8 @@
         "Colorless.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3435,6 +3613,8 @@
       "stats_level2_upgraded": null,
       "passive_pools": [],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3468,6 +3648,8 @@
       "stats_level2_upgraded": null,
       "passive_pools": [],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3513,6 +3695,8 @@
           }
         }
       ],
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3546,6 +3730,8 @@
         "diseases"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3582,6 +3768,8 @@
         "low_hygeine_in_house_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3626,6 +3814,8 @@
         "mental_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3661,6 +3851,8 @@
         "physical_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3697,6 +3889,8 @@
         "physical_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3733,6 +3927,8 @@
         "physical_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3768,6 +3964,8 @@
         "physical_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3803,6 +4001,8 @@
         "physical_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3836,6 +4036,8 @@
         "physical_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3871,6 +4073,8 @@
         "mental_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3904,6 +4108,8 @@
         "diseases"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3938,6 +4144,8 @@
         "physical_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -3971,6 +4179,8 @@
         "physical_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4006,6 +4216,8 @@
         "mental_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4042,6 +4254,8 @@
         "stomach_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4075,6 +4289,8 @@
         "mental_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4109,6 +4325,8 @@
         "forbidden_spell_consequences"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4142,6 +4360,8 @@
         "mental_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4177,6 +4397,8 @@
         "physical_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4211,6 +4433,8 @@
         "low_hygeine_in_house_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4246,6 +4470,8 @@
         "mental_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4281,6 +4507,8 @@
         "mental_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4314,6 +4542,8 @@
         "mental_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4347,6 +4577,8 @@
         "mental_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4383,6 +4615,8 @@
         "stomach_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4417,6 +4651,8 @@
         "mental_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4451,6 +4687,8 @@
         "physical_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4484,6 +4722,8 @@
         "mental_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4518,6 +4758,8 @@
         "mental_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4551,6 +4793,8 @@
         "mental_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4584,6 +4828,8 @@
         "mental_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4618,6 +4864,8 @@
         "physical_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4651,6 +4899,8 @@
         "mental_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4684,6 +4934,8 @@
         "physical_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4717,6 +4969,8 @@
         "mental_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4750,6 +5004,8 @@
         "mental_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4783,6 +5039,8 @@
         "physical_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4816,6 +5074,8 @@
         "physical_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4849,6 +5109,8 @@
         "physical_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4884,6 +5146,8 @@
         "physical_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4918,6 +5182,8 @@
         "low_hygeine_in_house_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4952,6 +5218,8 @@
         "low_hygeine_in_house_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -4994,6 +5262,8 @@
         "mental_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5032,6 +5302,8 @@
         "low_hygeine_in_house_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5073,6 +5345,8 @@
         "magic_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5108,6 +5382,8 @@
         "physical_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5141,6 +5417,8 @@
         "physical_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5176,6 +5454,8 @@
         "stomach_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5213,6 +5493,8 @@
         "low_hygeine_in_house_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5246,6 +5528,8 @@
         "diseases"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5279,6 +5563,8 @@
         "mental_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5313,6 +5599,8 @@
         "mental_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5347,6 +5635,8 @@
         "mental_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5381,6 +5671,8 @@
         "mental_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5417,6 +5709,8 @@
         "stomach_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5450,6 +5744,8 @@
         "mental_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5483,6 +5779,8 @@
         "mental_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5517,6 +5815,8 @@
         "physical_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5551,6 +5851,8 @@
         "low_hygeine_in_house_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5585,6 +5887,8 @@
         "physical_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5619,6 +5923,8 @@
         "physical_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5652,6 +5958,8 @@
         "physical_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5686,6 +5994,8 @@
         "mental_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5721,6 +6031,8 @@
         "birth_defects"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5755,6 +6067,8 @@
         "mental_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5787,6 +6101,8 @@
         "birth_defects"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5821,6 +6137,8 @@
         "physical_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5855,6 +6173,8 @@
         "physical_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5889,6 +6209,8 @@
         "mental_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5922,6 +6244,8 @@
         "magic_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5956,6 +6280,8 @@
         "mental_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -5989,6 +6315,8 @@
         "low_hygeine_in_house_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6022,6 +6350,8 @@
         "magic_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6055,6 +6385,8 @@
         "mental_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6089,6 +6421,8 @@
         "mental_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6123,6 +6457,8 @@
         "mental_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6158,6 +6494,8 @@
         "stomach_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6192,6 +6530,8 @@
         "mental_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6226,6 +6566,8 @@
         "physical_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6260,6 +6602,8 @@
         "mental_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6294,6 +6638,8 @@
         "low_hygeine_in_house_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6328,6 +6674,8 @@
         "low_hygeine_in_house_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6362,6 +6710,8 @@
         "low_hygeine_in_house_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6397,6 +6747,8 @@
         "mental_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6430,6 +6782,8 @@
         "diseases"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6466,6 +6820,8 @@
       "stats_level2_upgraded": null,
       "passive_pools": [],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6504,6 +6860,8 @@
         "birth_defects"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6541,6 +6899,8 @@
         "birth_defects"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6576,6 +6936,8 @@
         "mental_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6609,6 +6971,8 @@
         "mental_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6643,6 +7007,8 @@
         "mental_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6678,6 +7044,8 @@
         "physical_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6714,6 +7082,8 @@
         "physical_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6747,6 +7117,8 @@
         "mental_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6780,6 +7152,8 @@
         "mental_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6815,6 +7189,8 @@
         "mental_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6850,6 +7226,8 @@
         "stomach_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6883,6 +7261,8 @@
         "physical_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6916,6 +7296,8 @@
         "magic_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6951,6 +7333,8 @@
         "physical_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -6985,6 +7369,8 @@
         "physical_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7019,6 +7405,8 @@
       "stats_level2_upgraded": null,
       "passive_pools": [],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7052,6 +7440,8 @@
       "stats_level2_upgraded": null,
       "passive_pools": [],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7082,6 +7472,8 @@
       "stats_level2_upgraded": null,
       "passive_pools": [],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7112,6 +7504,8 @@
       "stats_level2_upgraded": null,
       "passive_pools": [],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7142,6 +7536,8 @@
       "stats_level2_upgraded": null,
       "passive_pools": [],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7172,6 +7568,8 @@
       "stats_level2_upgraded": null,
       "passive_pools": [],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7202,6 +7600,8 @@
       "stats_level2_upgraded": null,
       "passive_pools": [],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7232,6 +7632,8 @@
       "stats_level2_upgraded": null,
       "passive_pools": [],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7262,6 +7664,8 @@
       "stats_level2_upgraded": null,
       "passive_pools": [],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7292,6 +7696,8 @@
       "stats_level2_upgraded": null,
       "passive_pools": [],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7325,6 +7731,8 @@
         "birth_defects"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7358,6 +7766,8 @@
         "birth_defects"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7395,6 +7805,8 @@
         "birth_defects"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7430,6 +7842,8 @@
         "birth_defects"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7462,6 +7876,8 @@
         "birth_defects"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7492,6 +7908,8 @@
       "stats_level2_upgraded": null,
       "passive_pools": [],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7529,6 +7947,8 @@
         "mental_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7559,6 +7979,8 @@
       "stats_level2_upgraded": null,
       "passive_pools": [],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7592,6 +8014,8 @@
         "physical_disorders"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7624,6 +8048,8 @@
       "stats_level2_upgraded": null,
       "passive_pools": [],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7654,6 +8080,8 @@
       "stats_level2_upgraded": null,
       "passive_pools": [],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7684,6 +8112,8 @@
       "stats_level2_upgraded": null,
       "passive_pools": [],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7714,6 +8144,8 @@
       "stats_level2_upgraded": null,
       "passive_pools": [],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7743,6 +8175,8 @@
       "stats_level2_upgraded": null,
       "passive_pools": [],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": "purposely empty",
       "desc2_notes": null
     },
@@ -7778,6 +8212,8 @@
         "Druid.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7813,6 +8249,8 @@
         "Druid.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7850,6 +8288,8 @@
         "Druid.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7885,6 +8325,8 @@
         "Druid.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7920,6 +8362,8 @@
         "Druid.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7955,6 +8399,8 @@
         "Druid.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -7990,6 +8436,8 @@
         "Druid.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8025,6 +8473,8 @@
         "Druid.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8060,6 +8510,8 @@
         "Druid.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8095,6 +8547,8 @@
         "Druid.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8130,6 +8584,8 @@
         "Druid.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8165,6 +8621,8 @@
         "Druid.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8200,6 +8658,8 @@
         "Druid.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8237,6 +8697,8 @@
         "Druid.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8272,6 +8734,8 @@
         "Druid.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8307,6 +8771,8 @@
         "Druid.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8342,6 +8808,8 @@
         "Druid.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8381,6 +8849,8 @@
         "Druid.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8416,6 +8886,8 @@
         "Druid.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8461,6 +8933,8 @@
           }
         }
       ],
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8503,6 +8977,8 @@
         "Druid.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8538,6 +9014,8 @@
         "Druid.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8573,6 +9051,8 @@
         "Druid.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8608,6 +9088,8 @@
         "Druid.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8643,6 +9125,8 @@
         "Druid.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8678,6 +9162,8 @@
         "Fighter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8713,6 +9199,8 @@
         "Fighter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8748,6 +9236,8 @@
         "Fighter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8785,6 +9275,8 @@
         "Fighter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8820,6 +9312,8 @@
         "Fighter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8855,6 +9349,8 @@
         "Fighter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8898,6 +9394,8 @@
         "Fighter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8933,6 +9431,8 @@
         "Fighter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -8968,6 +9468,8 @@
         "Fighter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9003,6 +9505,8 @@
         "Fighter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9043,6 +9547,8 @@
         "Fighter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9078,6 +9584,8 @@
         "Fighter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9113,6 +9621,8 @@
         "Fighter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9148,6 +9658,8 @@
         "Fighter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9187,6 +9699,8 @@
         "Fighter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9222,6 +9736,8 @@
         "Fighter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9257,6 +9773,8 @@
         "Fighter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9296,6 +9814,8 @@
         "Fighter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9331,6 +9851,13 @@
         "Fighter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [
+        {
+          "type": "item",
+          "code": "BoneClub"
+        }
+      ],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9376,6 +9903,8 @@
           }
         }
       ],
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9411,6 +9940,8 @@
         "Fighter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9446,6 +9977,8 @@
         "Fighter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9481,6 +10014,8 @@
         "Fighter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9516,6 +10051,8 @@
         "Fighter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9551,6 +10088,8 @@
         "Fighter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9586,6 +10125,8 @@
         "Hunter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9621,6 +10162,8 @@
         "Hunter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9656,6 +10199,8 @@
         "Hunter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9691,6 +10236,8 @@
         "Hunter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9726,6 +10273,8 @@
         "Hunter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9761,6 +10310,8 @@
         "Hunter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9796,6 +10347,8 @@
         "Hunter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9831,6 +10384,8 @@
         "Hunter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9866,6 +10421,8 @@
         "Hunter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9901,6 +10458,8 @@
         "Hunter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9936,6 +10495,8 @@
         "Hunter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -9971,6 +10532,8 @@
         "Hunter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10006,6 +10569,8 @@
         "Hunter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10041,6 +10606,8 @@
         "Hunter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10076,6 +10643,8 @@
         "Hunter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10113,6 +10682,8 @@
         "Hunter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10148,6 +10719,8 @@
         "Hunter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10183,6 +10756,8 @@
         "Hunter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10218,6 +10793,8 @@
         "Hunter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10253,6 +10830,8 @@
         "Hunter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10288,6 +10867,8 @@
         "Hunter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10323,6 +10904,8 @@
         "Hunter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10358,6 +10941,8 @@
         "Hunter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10393,6 +10978,8 @@
         "Hunter.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10438,6 +11025,8 @@
           }
         }
       ],
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10481,6 +11070,8 @@
           }
         }
       ],
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10526,6 +11117,8 @@
           }
         }
       ],
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10561,6 +11154,8 @@
         "Mage.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10600,6 +11195,8 @@
         "Mage.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10635,6 +11232,8 @@
         "Mage.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10670,6 +11269,8 @@
         "Mage.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10705,6 +11306,8 @@
         "Mage.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10740,6 +11343,8 @@
         "Mage.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10775,6 +11380,8 @@
         "Mage.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10810,6 +11417,8 @@
         "Mage.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10845,6 +11454,8 @@
         "Mage.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10878,6 +11489,8 @@
       "stats_level2_upgraded": null,
       "passive_pools": [],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10913,6 +11526,8 @@
         "Mage.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10958,6 +11573,8 @@
           }
         }
       ],
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -10993,6 +11610,8 @@
         "Mage.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11028,6 +11647,8 @@
         "Mage.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11063,6 +11684,8 @@
         "Mage.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11098,6 +11721,8 @@
         "Mage.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11133,6 +11758,8 @@
         "Mage.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11168,6 +11795,8 @@
         "Mage.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11203,6 +11832,8 @@
         "Mage.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11238,6 +11869,8 @@
         "Mage.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11273,6 +11906,8 @@
         "Mage.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11308,6 +11943,8 @@
         "Mage.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11343,6 +11980,8 @@
         "Mage.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11378,6 +12017,8 @@
         "Mage.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11413,6 +12054,8 @@
         "Mage.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11448,6 +12091,8 @@
         "Mage.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11483,6 +12128,8 @@
         "Medic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11518,6 +12165,8 @@
         "Medic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11553,6 +12202,8 @@
         "Medic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11588,6 +12239,8 @@
         "Medic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11633,6 +12286,8 @@
           }
         }
       ],
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11671,6 +12326,8 @@
         "Medic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11706,6 +12363,8 @@
         "Medic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11745,6 +12404,8 @@
         "Medic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11780,6 +12441,8 @@
         "Medic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11815,6 +12478,8 @@
         "Medic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11854,6 +12519,8 @@
         "Medic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11889,6 +12556,8 @@
         "Medic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11926,6 +12595,8 @@
         "Medic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11961,6 +12632,8 @@
         "Medic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -11996,6 +12669,8 @@
         "Medic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12031,6 +12706,8 @@
         "Medic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12066,6 +12743,8 @@
         "Medic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12101,6 +12780,8 @@
         "Medic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12136,6 +12817,8 @@
         "Medic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12171,6 +12854,8 @@
         "Medic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12206,6 +12891,8 @@
         "Medic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12241,6 +12928,8 @@
         "Medic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12276,6 +12965,8 @@
         "Medic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12311,6 +13002,8 @@
         "Medic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12346,6 +13039,8 @@
         "Medic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12381,6 +13076,8 @@
         "Monk.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12416,6 +13113,8 @@
         "Monk.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12451,6 +13150,8 @@
         "Monk.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12486,6 +13187,8 @@
         "Monk.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12523,6 +13226,8 @@
         "Monk.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12562,6 +13267,8 @@
         "Monk.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12597,6 +13304,8 @@
         "Monk.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12632,6 +13341,8 @@
         "Monk.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12667,6 +13378,8 @@
         "Monk.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12705,6 +13418,8 @@
         "Monk.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12740,6 +13455,8 @@
         "Monk.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12775,6 +13492,8 @@
         "Monk.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12810,6 +13529,8 @@
         "Monk.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12845,6 +13566,8 @@
         "Monk.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12880,6 +13603,8 @@
         "Monk.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12925,6 +13650,8 @@
           }
         }
       ],
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12964,6 +13691,8 @@
         "Monk.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -12999,6 +13728,8 @@
         "Monk.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13040,6 +13771,8 @@
         "Monk.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13075,6 +13808,8 @@
         "Monk.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13110,6 +13845,8 @@
         "Monk.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13145,6 +13882,8 @@
         "Monk.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13180,6 +13919,8 @@
         "Monk.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13215,6 +13956,8 @@
         "Monk.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13250,6 +13993,8 @@
         "Monk.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13285,6 +14030,8 @@
         "Necromancer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13320,6 +14067,8 @@
         "Necromancer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13355,6 +14104,8 @@
         "Necromancer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13390,6 +14141,8 @@
         "Necromancer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13425,6 +14178,8 @@
         "Necromancer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13460,6 +14215,8 @@
         "Necromancer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13505,6 +14262,8 @@
           }
         }
       ],
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13540,6 +14299,8 @@
         "Necromancer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13575,6 +14336,8 @@
         "Necromancer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13610,6 +14373,8 @@
         "Necromancer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13645,6 +14410,8 @@
         "Necromancer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13680,6 +14447,8 @@
         "Necromancer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13715,6 +14484,8 @@
         "Necromancer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13750,6 +14521,8 @@
         "Necromancer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13785,6 +14558,8 @@
         "Necromancer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13820,6 +14595,8 @@
         "Necromancer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13855,6 +14632,8 @@
         "Necromancer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13890,6 +14669,8 @@
         "Necromancer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13925,6 +14706,8 @@
         "Necromancer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13960,6 +14743,8 @@
         "Necromancer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -13995,6 +14780,8 @@
         "Necromancer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14030,6 +14817,8 @@
         "Necromancer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14065,6 +14854,8 @@
         "Necromancer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14100,6 +14891,8 @@
         "Necromancer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14135,6 +14928,8 @@
         "Necromancer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14170,6 +14965,8 @@
         "Psychic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14205,6 +15002,8 @@
         "Psychic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14240,6 +15039,8 @@
         "Psychic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14275,6 +15076,8 @@
         "Psychic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14310,6 +15113,8 @@
         "Psychic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14345,6 +15150,8 @@
         "Psychic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14380,6 +15187,8 @@
         "Psychic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14415,6 +15224,8 @@
         "Psychic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14450,6 +15261,8 @@
         "Psychic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14485,6 +15298,8 @@
         "Psychic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14520,6 +15335,8 @@
         "Psychic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14555,6 +15372,8 @@
         "Psychic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14590,6 +15409,8 @@
         "Psychic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14627,6 +15448,8 @@
         "Psychic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14662,6 +15485,8 @@
         "Psychic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14697,6 +15522,8 @@
         "Psychic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14736,6 +15563,8 @@
         "Psychic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14771,6 +15600,8 @@
         "Psychic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14806,6 +15637,8 @@
         "Psychic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14841,6 +15674,8 @@
         "Psychic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14886,6 +15721,8 @@
           }
         }
       ],
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14921,6 +15758,8 @@
         "Psychic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14956,6 +15795,8 @@
         "Psychic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -14991,6 +15832,8 @@
         "Psychic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15026,6 +15869,8 @@
         "Psychic.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15061,6 +15906,8 @@
         "Tank.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15096,6 +15943,8 @@
         "Tank.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15131,6 +15980,8 @@
         "Tank.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15166,6 +16017,8 @@
         "Tank.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15190,6 +16043,8 @@
       "stats_level2_upgraded": null,
       "passive_pools": [],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15227,6 +16082,8 @@
         "Tank.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15262,6 +16119,8 @@
         "Tank.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15297,6 +16156,8 @@
         "Tank.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15336,6 +16197,8 @@
         "Tank.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15371,6 +16234,8 @@
         "Tank.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15406,6 +16271,8 @@
         "Tank.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15445,6 +16312,8 @@
         "Tank.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15480,6 +16349,8 @@
         "Tank.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15515,6 +16386,8 @@
         "Tank.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15554,6 +16427,8 @@
         "Tank.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15593,6 +16468,8 @@
         "Tank.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15628,6 +16505,8 @@
         "Tank.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15663,6 +16542,8 @@
         "Tank.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15698,6 +16579,8 @@
         "Tank.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15737,6 +16620,8 @@
         "Tank.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15772,6 +16657,8 @@
         "Tank.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15807,6 +16694,8 @@
         "Tank.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15842,6 +16731,8 @@
         "Tank.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15877,6 +16768,8 @@
         "Tank.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15916,6 +16809,8 @@
         "Tank.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15961,6 +16856,8 @@
           }
         }
       ],
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -15996,6 +16893,8 @@
         "Thief.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -16031,6 +16930,8 @@
         "Thief.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -16066,6 +16967,8 @@
         "Thief.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -16101,6 +17004,8 @@
         "Thief.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -16136,6 +17041,8 @@
         "Thief.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -16171,6 +17078,8 @@
         "Thief.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -16204,6 +17113,8 @@
       "stats_level2_upgraded": null,
       "passive_pools": [],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -16239,6 +17150,8 @@
         "Thief.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -16274,6 +17187,8 @@
         "Thief.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -16309,6 +17224,8 @@
         "Thief.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -16344,6 +17261,8 @@
         "Thief.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -16389,6 +17308,8 @@
           }
         }
       ],
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -16424,6 +17345,8 @@
         "Thief.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -16459,6 +17382,8 @@
         "Thief.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -16494,6 +17419,8 @@
         "Thief.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -16529,6 +17456,8 @@
         "Thief.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -16564,6 +17493,8 @@
         "Thief.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -16599,6 +17530,8 @@
         "Thief.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -16634,6 +17567,8 @@
         "Thief.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -16669,6 +17604,8 @@
         "Thief.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -16704,6 +17641,8 @@
         "Thief.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -16739,6 +17678,8 @@
         "Thief.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -16774,6 +17715,8 @@
         "Thief.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -16809,6 +17752,8 @@
         "Thief.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -16844,6 +17789,8 @@
         "Thief.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -16879,6 +17826,8 @@
         "Thief.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -16914,6 +17863,8 @@
         "Tinkerer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -16949,6 +17900,8 @@
         "Tinkerer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -16984,6 +17937,8 @@
         "Tinkerer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -17019,6 +17974,8 @@
         "Tinkerer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -17064,6 +18021,8 @@
           }
         }
       ],
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -17099,6 +18058,8 @@
         "Tinkerer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -17134,6 +18095,8 @@
         "Tinkerer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -17169,6 +18132,8 @@
         "Tinkerer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -17204,6 +18169,8 @@
         "Tinkerer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -17239,6 +18206,8 @@
         "Tinkerer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -17274,6 +18243,8 @@
         "Tinkerer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -17309,6 +18280,8 @@
         "Tinkerer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -17344,6 +18317,8 @@
         "Tinkerer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -17379,6 +18354,8 @@
         "Tinkerer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -17414,6 +18391,8 @@
         "Tinkerer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -17449,6 +18428,8 @@
         "Tinkerer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -17484,6 +18465,8 @@
         "Tinkerer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -17519,6 +18502,8 @@
         "Tinkerer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -17554,6 +18539,8 @@
         "Tinkerer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -17589,6 +18576,8 @@
         "Tinkerer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -17624,6 +18613,8 @@
         "Tinkerer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -17659,6 +18650,8 @@
         "Tinkerer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -17694,6 +18687,8 @@
         "Tinkerer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -17729,6 +18724,8 @@
         "Tinkerer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -17764,6 +18761,8 @@
         "Tinkerer.passive_pool"
       ],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -17794,6 +18793,8 @@
       "stats_level2_upgraded": null,
       "passive_pools": [],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -17824,6 +18825,8 @@
       "stats_level2_upgraded": null,
       "passive_pools": [],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -17854,6 +18857,8 @@
       "stats_level2_upgraded": null,
       "passive_pools": [],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -17884,6 +18889,8 @@
       "stats_level2_upgraded": null,
       "passive_pools": [],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -17914,6 +18921,8 @@
       "stats_level2_upgraded": null,
       "passive_pools": [],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -17944,6 +18953,8 @@
       "stats_level2_upgraded": null,
       "passive_pools": [],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -17974,6 +18985,8 @@
       "stats_level2_upgraded": null,
       "passive_pools": [],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -18004,6 +19017,8 @@
       "stats_level2_upgraded": null,
       "passive_pools": [],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -18034,6 +19049,8 @@
       "stats_level2_upgraded": null,
       "passive_pools": [],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -18064,6 +19081,8 @@
       "stats_level2_upgraded": null,
       "passive_pools": [],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -18094,6 +19113,8 @@
       "stats_level2_upgraded": null,
       "passive_pools": [],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -18124,6 +19145,8 @@
       "stats_level2_upgraded": null,
       "passive_pools": [],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -18154,6 +19177,8 @@
       "stats_level2_upgraded": null,
       "passive_pools": [],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     },
@@ -18184,6 +19209,8 @@
       "stats_level2_upgraded": null,
       "passive_pools": [],
       "unlock_requirements": null,
+      "refs": [],
+      "refs_upgraded": null,
       "desc_notes": null,
       "desc2_notes": null
     }

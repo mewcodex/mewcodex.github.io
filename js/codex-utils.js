@@ -1,4 +1,29 @@
 (function () {
+    function parseJsonWithFallback(text, label) {
+        try {
+            return JSON.parse(text);
+        } catch (error) {
+            const sanitized = text.replace(/\\u(?![0-9a-fA-F]{4})/g, '\\\\u');
+            if (sanitized !== text) {
+                try {
+                    console.warn(`Recovered JSON parse error in ${label || 'response'}.`);
+                    return JSON.parse(sanitized);
+                } catch (sanitizedError) {
+                    console.error('Fallback JSON parse failed:', sanitizedError);
+                }
+            }
+            throw error;
+        }
+    }
+
+    async function fetchJsonWithFallback(url, label) {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const text = await response.text();
+        return parseJsonWithFallback(text, label || url);
+    }
     function getUrlParameter(name) {
         const urlParams = new URLSearchParams(window.location.search);
         return urlParams.get(name);
@@ -22,6 +47,8 @@
         setLink('navAbilities', `index.html${lang}`);
         setLink('navPassives', `passives.html${lang}`);
         setLink('navItems', `items.html${lang}`);
+        setLink('navWeather', `weather.html${lang}`);
+        setLink('navKeywords', `keywords.html${lang}`);
         setLink('navFurniture', `furniture.html${lang}`);
         setLink('navMutations', `mutations.html${lang}`);
         setLink('navAchievements', `achievements.html${lang}`);
@@ -60,4 +87,5 @@
     window.getLocalizedText = getLocalizedText;
     window.escapeHtml = escapeHtml;
     window.mapFontIconName = mapFontIconName;
+    window.fetchJsonWithFallback = fetchJsonWithFallback;
 })();

@@ -102,6 +102,8 @@
         const miscItems = [
             { key: 'item-set', id: 'navItemSet', href: 'item_set_quick.html', label: 'Item Set' },
             { key: 'achievements', id: 'navAchievements', href: 'achievements.html', label: 'Achievements' },
+            { key: 'weather', id: 'navWeather', href: 'weather.html', label: 'Weather' },
+            { key: 'keywords', id: 'navKeywords', href: 'keywords.html', label: 'Keywords' },
             { key: 'mutations', id: 'navMutations', href: 'mutations.html', label: 'Mutations' },
             { key: 'characters', id: 'navCharacters', href: 'characters.html', label: 'Characters' }
         ];

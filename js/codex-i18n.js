@@ -3,6 +3,8 @@
         en: {
             navAbilities: 'Abilities',
             navItems: 'Items',
+            navWeather: 'Weather',
+            navKeywords: 'Keywords',
             navFurniture: 'Furniture',
             navPassives: 'Passives',
             navMutations: 'Mutations',
@@ -26,6 +28,8 @@
         zh: {
             navAbilities: '能力',
             navItems: '物品',
+            navWeather: '天气',
+            navKeywords: '关键词',
             navFurniture: '家具',
             navPassives: '被动',
             navMutations: '突变',

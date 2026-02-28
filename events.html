@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mewgenics Events Viewer</title>
+    <title>Events Viewer | Mewgenics Encyclopedia</title>
     <style>
         * {
             margin: 0;
@@ -179,6 +179,11 @@
         .header h1 {
             font-size: 2.5em;
             margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
         }
 
         .controls {
@@ -771,6 +776,12 @@
             background: #f9f9f9;
         }
 
+        .hash-target {
+            outline: 2px solid #d8b55b;
+            outline-offset: -2px;
+            background: rgba(255, 244, 204, 0.35);
+        }
+
         tbody td {
             padding: 12px 15px;
             vertical-align: top;
@@ -798,6 +809,13 @@
             border-radius: 2px;
         }
 
+        .source-comment a,
+        .source-comment a:visited,
+        .source-comment a:hover,
+        .source-comment a:active {
+            color: inherit;
+        }
+
         .no-results {
             text-align: center;
             padding: 20px;
@@ -813,6 +831,40 @@
             border-radius: 999px;
             font-size: 0.85em;
             margin: 2px 4px 2px 0;
+        }
+
+        .ref-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            align-items: center;
+            margin-top: 8px;
+        }
+
+        .ref-label {
+            font-size: 0.85em;
+            color: #6d6559;
+            font-weight: 600;
+        }
+
+        .ref-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 3px 8px;
+            border-radius: 999px;
+            background: rgba(159, 151, 139, 0.18);
+            border: 1px solid rgba(159, 151, 139, 0.35);
+            color: #5b534a;
+            font-size: 0.85em;
+            text-decoration: none;
+        }
+
+        .ref-link:hover {
+            background: rgba(159, 151, 139, 0.3);
+        }
+
+        .ref-link.ref-link-text {
+            cursor: default;
         }
 
         code {
@@ -1054,7 +1106,8 @@
         </div>
         <div id="navbarMount"></div>
         <div class="header">
-            <h1 id="headerTitle">Mewgenics Events Viewer</h1>
+            <h1 id="headerTitle">Mewgenics Encyclopedia</h1>
+            <p id="headerSubtitle">Events Viewer</p>
             <div class="header-warning" id="headerWarning">DEMO: Early beta testing. Results may be incorrect, including
                 localization.</div>
         </div>
@@ -1159,15 +1212,28 @@
         let currentPage = 1;
         let pageSize = 50;
         let currentDisplayEvents = [];
+        let hashPromoteKey = null;
+        let hashPromoteActive = false;
+        let refIndex = new Map();
         let currentEvent = null;
         let stepStack = [];
         const ANNOUNCEMENT_SEEN_KEY = 'codexAnnouncementSeen_v1';
+
+        if (typeof window.fetchJsonWithFallback !== 'function') {
+            window.fetchJsonWithFallback = async function (url, label) {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return await response.json();
+            };
+        }
 
         function setLanguage(lang) {
             codexSetLanguage(lang, () => {
                 currentLanguage = window.currentLanguage;
                 applyUiLanguage();
-                filterEvents();
+                filterEvents(true);
             });
         }
 
@@ -1179,8 +1245,9 @@
 
         const UI_TEXT = mergeUiText(COMMON_UI_TEXT, {
             en: {
-                pageTitle: 'Mewgenics Events Viewer',
-                headerTitle: 'Mewgenics Events Viewer',
+                pageTitle: 'Events Viewer | Mewgenics Encyclopedia',
+                headerTitle: 'Mewgenics Encyclopedia',
+                headerSubtitle: 'Events Viewer',
                 searchPlaceholder: 'Search by event title or prompt...',
                 typeFilterAll: 'All types',
                 totalEvents: 'Total Events:',
@@ -1245,8 +1312,9 @@
                 keywordElse: 'Else',
             },
             zh: {
-                pageTitle: 'Mewgenics 事件图鉴',
-                headerTitle: 'Mewgenics 事件图鉴',
+                pageTitle: '事件图鉴 | Mewgenics 百科',
+                headerTitle: 'Mewgenics 百科',
+                headerSubtitle: '事件图鉴',
                 searchPlaceholder: '按事件标题或提示搜索...',
                 typeFilterAll: '所有类型',
                 totalEvents: '事件总数：',
@@ -1386,12 +1454,11 @@
 
         async function loadKeywordMetadata() {
             try {
-                const [rewardResponse, nonResultResponse] = await Promise.all([
-                    fetch('event_reward_keywords.json'),
-                    fetch('event_non_result_keywords.json'),
+                const [rewardData, nonResultData] = await Promise.all([
+                    fetchJsonWithFallback('event_reward_keywords.json', 'event reward keywords').catch(() => null),
+                    fetchJsonWithFallback('event_non_result_keywords.json', 'event non-result keywords').catch(() => null),
                 ]);
-                if (rewardResponse.ok) {
-                    const rewardData = await rewardResponse.json();
+                if (rewardData) {
                     keywordMetaByKey = new Map(
                         (rewardData.result_keywords || []).map((entry) => [
                             entry.key,
@@ -1399,8 +1466,7 @@
                         ])
                     );
                 }
-                if (nonResultResponse.ok) {
-                    const nonResultData = await nonResultResponse.json();
+                if (nonResultData) {
                     ignoredKeywords = new Set(
                         (nonResultData.ignored_keywords || []).map((key) =>
                             String(key).toLowerCase()
@@ -1423,14 +1489,13 @@
 
         async function loadLookupData() {
             try {
-                const [abilitiesRes, passivesRes, itemsRes] = await Promise.all([
-                    fetch('abilities_combined.json'),
-                    fetch('passives_combined.json'),
-                    fetch('items_db.json'),
+                const [abilitiesData, passivesData, itemsData] = await Promise.all([
+                    fetchJsonWithFallback('abilities_combined.json', 'abilities').catch(() => null),
+                    fetchJsonWithFallback('passives_combined.json', 'passives').catch(() => null),
+                    fetchJsonWithFallback('items_db.json', 'items').catch(() => null),
                 ]);
 
-                if (abilitiesRes.ok) {
-                    const abilitiesData = await abilitiesRes.json();
+                if (abilitiesData) {
                     (abilitiesData.abilities || []).forEach((ability) => {
                         const code = ability.ability_code || '';
                         if (!code) {
@@ -1443,8 +1508,7 @@
                     });
                 }
 
-                if (passivesRes.ok) {
-                    const passivesData = await passivesRes.json();
+                if (passivesData) {
                     (passivesData.passives || []).forEach((passive) => {
                         const code = passive.passive_code || '';
                         if (!code) {
@@ -1457,8 +1521,7 @@
                     });
                 }
 
-                if (itemsRes.ok) {
-                    const itemsData = await itemsRes.json();
+                if (itemsData) {
                     const items = Array.isArray(itemsData)
                         ? itemsData
                         : (itemsData.items || itemsData);
@@ -1746,6 +1809,7 @@
         function applyUiLanguage() {
             document.title = t('pageTitle');
             document.getElementById('headerTitle').textContent = t('headerTitle');
+            document.getElementById('headerSubtitle').textContent = t('headerSubtitle');
             document.getElementById('headerWarning').textContent = t('headerWarning');
             document.getElementById('searchInput').placeholder = t('searchPlaceholder');
             const typeFilter = document.getElementById('typeFilter');
@@ -1756,6 +1820,8 @@
             document.getElementById('navAbilities').textContent = t('navAbilities');
             document.getElementById('navItems').textContent = t('navItems');
             document.getElementById('navPassives').textContent = t('navPassives');
+            document.getElementById('navWeather').textContent = t('navWeather');
+            document.getElementById('navKeywords').textContent = t('navKeywords');
             document.getElementById('navFurniture').textContent = t('navFurniture');
             document.getElementById('navMutations').textContent = t('navMutations');
             document.getElementById('navAchievements').textContent = t('navAchievements');
@@ -1820,11 +1886,7 @@
 
         async function loadEvents() {
             try {
-                const response = await fetch('events_combined.json');
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                const data = await response.json();
+                const data = await fetchJsonWithFallback('events_combined.json', 'events');
                 allEvents = data.events || [];
                 filteredEvents = allEvents;
                 eventsByKey = new Map(allEvents.map((eventData) => [eventData.event_key, eventData]));
@@ -1833,7 +1895,8 @@
                 applyUiLanguage();
                 updateClearButtonVisibility();
                 populateTypeFilter('');
-                filterEvents();
+                updateHashPromotion('event');
+                filterEvents(true);
             } catch (error) {
                 console.error('Error loading events:', error);
                 const errorMsg = `
@@ -1897,6 +1960,84 @@
             const baseName = getEventTypeKey(eventData);
             const labels = EVENT_TYPE_LABELS[currentLanguage] || EVENT_TYPE_LABELS.en;
             return labels[baseName] || baseName.replace(/_/g, ' ');
+        }
+
+        function buildRefIndex(data) {
+            const map = new Map();
+            const refs = Array.isArray(data?.refs) ? data.refs : [];
+            refs.forEach(entry => {
+                if (entry?.reverse) {
+                    return;
+                }
+                const ref = entry?.ref || {};
+                if (!ref.type || !ref.code) {
+                    return;
+                }
+                map.set(`${ref.type}:${ref.code}`, entry);
+            });
+            refIndex = map;
+        }
+
+        function getRefLabel(ref) {
+            if (!ref || !ref.type || !ref.code) {
+                return '';
+            }
+            const entry = refIndex.get(`${ref.type}:${ref.code}`);
+            const text = entry?.text || {};
+            return text[currentLanguage] || text.en || ref.code || '';
+        }
+
+        function getRefLink(ref) {
+            if (!ref || !ref.type || !ref.code) {
+                return '';
+            }
+            if (ref.type === 'achievement' || ref.type === 'item_pool') {
+                return '';
+            }
+            const lang = currentLanguage !== 'en' ? `?lang=${currentLanguage}` : '';
+            const code = encodeURIComponent(ref.code);
+            if (ref.type === 'ability') {
+                return `index.html${lang}#${code}`;
+            }
+            if (ref.type === 'passive') {
+                return `passives.html${lang}#${code}`;
+            }
+            if (ref.type === 'item') {
+                return `items.html${lang}#${code}`;
+            }
+            if (ref.type === 'mutation') {
+                return `mutations.html${lang}#${code}`;
+            }
+            if (ref.type === 'event') {
+                return `events.html${lang}#${code}`;
+            }
+            return '';
+        }
+
+        function buildRefsHtml(refs) {
+            if (!Array.isArray(refs) || refs.length === 0) {
+                return '';
+            }
+            const unique = new Map();
+            refs.forEach(ref => {
+                if (!ref || !ref.type || !ref.code) {
+                    return;
+                }
+                const key = `${ref.type}:${ref.code}`;
+                unique.set(key, ref);
+            });
+            const links = Array.from(unique.values()).map(ref => {
+                const label = getRefLabel(ref) || ref.code;
+                const href = getRefLink(ref);
+                if (href) {
+                    return `<a href="${href}">${escapeHtml(label)}</a>`;
+                }
+                return `<span>${escapeHtml(label)}</span>`;
+            });
+            if (!links.length) {
+                return '';
+            }
+            return `<div class="source-comment">${escapeHtml(t('referencesLabel'))} ${links.join(' ')}</div>`;
         }
 
         function populateTypeFilter(selectedValue) {
@@ -1978,11 +2119,79 @@
             return label.replace(/\s*\d+\s*$/, '').trim();
         }
 
+        function normalizeHashKey(value) {
+            return String(value || '').trim().toLowerCase();
+        }
+
+        function makeRowId(prefix, code) {
+            if (!code) {
+                return '';
+            }
+            const safe = String(code).replace(/[^A-Za-z0-9_-]+/g, '-');
+            return `${prefix}-${safe}`;
+        }
+
+        function getHashKey(prefix) {
+            const hash = window.location.hash ? window.location.hash.slice(1) : '';
+            if (!hash) {
+                return '';
+            }
+            const decoded = decodeURIComponent(hash);
+            const prefixToken = `${prefix}-`;
+            if (decoded.startsWith(prefixToken)) {
+                return decoded.slice(prefixToken.length);
+            }
+            return decoded;
+        }
+
+        function updateHashPromotion(prefix) {
+            const key = getHashKey(prefix);
+            if (key) {
+                hashPromoteKey = key;
+                hashPromoteActive = true;
+            }
+        }
+
+        function clearHashPromotion() {
+            hashPromoteKey = null;
+            hashPromoteActive = false;
+        }
+
+        function scrollToHash(prefix) {
+            const hash = window.location.hash ? window.location.hash.slice(1) : '';
+            if (!hash) {
+                return;
+            }
+            const decoded = decodeURIComponent(hash);
+            const direct = document.getElementById(decoded);
+            const rowId = makeRowId(prefix, decoded);
+            const target = direct || (rowId ? document.getElementById(rowId) : null);
+            if (!target) {
+                return;
+            }
+            target.classList.add('hash-target');
+            target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            setTimeout(() => target.classList.remove('hash-target'), 2000);
+        }
+
         function displayEvents(events) {
             const tbody = document.getElementById('tableBody');
             const safeEvents = Array.isArray(events) ? events : [];
-            currentDisplayEvents = safeEvents;
-            const totalEntries = safeEvents.length;
+            let orderedEvents = safeEvents;
+            if (hashPromoteActive && hashPromoteKey) {
+                const normalizedKey = normalizeHashKey(hashPromoteKey);
+                const targetIndex = safeEvents.findIndex(eventData => normalizeHashKey(eventData.event_key) === normalizedKey);
+                if (targetIndex > 0) {
+                    const target = safeEvents[targetIndex];
+                    orderedEvents = [
+                        target,
+                        ...safeEvents.slice(0, targetIndex),
+                        ...safeEvents.slice(targetIndex + 1)
+                    ];
+                }
+            }
+            currentDisplayEvents = orderedEvents;
+            const totalEntries = orderedEvents.length;
             const size = pageSize <= 0 ? totalEntries : pageSize;
             const pageCount = totalEntries > 0 ? Math.ceil(totalEntries / size) : 1;
             if (currentPage > pageCount) {
@@ -1993,8 +2202,8 @@
             }
             const startIndex = size === 0 ? 0 : (currentPage - 1) * size;
             const pageEntries = size === 0
-                ? safeEvents
-                : safeEvents.slice(startIndex, startIndex + size);
+                ? orderedEvents
+                : orderedEvents.slice(startIndex, startIndex + size);
 
             if (totalEntries === 0) {
                 tbody.innerHTML = `<tr><td colspan="5" class="no-results">${escapeHtml(t('noResults'))}</td></tr>`;
@@ -2024,11 +2233,16 @@
                     </div>
                 `;
                 const typeLabel = getEventTypeLabel(eventData);
+                const refsHtml = buildRefsHtml(eventData.refs);
+                const rowId = makeRowId('event', eventKey);
+                const hashAttr = eventKey
+                    ? ` data-hash-keys="|${escapeHtml(normalizeHashKey(eventKey))}|"`
+                    : '';
                 return `
-                    <tr>
+                    <tr id="${escapeHtml(rowId)}"${hashAttr}>
                         <td>${titleHtml}</td>
                         <td>${escapeHtml(choice)}</td>
-                        <td><div class="description">${parseRichText(prompt)}</div></td>
+                        <td><div class="description">${parseRichText(prompt)}</div>${refsHtml}</td>
                         <td><button class="enter-button" data-event-key="${escapeHtml(eventData.event_key || '')}">${escapeHtml(t('enterButton'))}</button></td>
                         <td><span class="tag-badge">${escapeHtml(typeLabel)}</span></td>
                     </tr>
@@ -2043,9 +2257,11 @@
             document.getElementById('pagePrevBottom').disabled = currentPage <= 1;
             document.getElementById('pageNextBottom').disabled = currentPage >= pageCount;
             document.getElementById('pageSizeSelectBottom').value = String(pageSize);
+            requestAnimationFrame(() => scrollToHash('event'));
         }
 
         function sortBy(column) {
+            clearHashPromotion();
             if (currentSort.column === column) {
                 currentSort.direction = currentSort.direction === 'asc' ? 'desc' : 'asc';
             } else {
@@ -3324,9 +3540,17 @@
             `;
         }
 
-        function filterEvents() {
+        function filterEvents(preserveHash = false) {
+            if (!preserveHash) {
+                clearHashPromotion();
+            }
             const search = document.getElementById('searchInput').value.toLowerCase();
-            const showHidden = document.getElementById('showHiddenToggle')?.checked;
+            const showHiddenToggle = document.getElementById('showHiddenToggle');
+            const hashActive = hashPromoteActive && hashPromoteKey;
+            if (hashActive && showHiddenToggle && !showHiddenToggle.checked) {
+                showHiddenToggle.checked = true;
+            }
+            const showHidden = showHiddenToggle?.checked;
             const typeFilter = document.getElementById('typeFilter');
             const selectedType = typeFilter ? typeFilter.value : '';
 
@@ -3628,6 +3852,7 @@
             displayEvents(sortEvents(currentDisplayEvents));
         });
         document.getElementById('pageSizeSelect').addEventListener('change', (event) => {
+            clearHashPromotion();
             pageSize = Number.parseInt(event.target.value, 10);
             if (Number.isNaN(pageSize)) {
                 pageSize = 50;
@@ -3646,6 +3871,7 @@
             displayEvents(sortEvents(currentDisplayEvents));
         });
         document.getElementById('pageSizeSelectBottom').addEventListener('change', (event) => {
+            clearHashPromotion();
             pageSize = Number.parseInt(event.target.value, 10);
             if (Number.isNaN(pageSize)) {
                 pageSize = 50;
@@ -3755,7 +3981,14 @@
                 closeEventPanel();
             }
         });
+        window.addEventListener('hashchange', () => {
+            updateHashPromotion('event');
+            currentPage = 1;
+            filterEvents(true);
+            scrollToHash('event');
+        });
         document.addEventListener('DOMContentLoaded', () => {
+            updateHashPromotion('event');
             applyUiLanguage();
             initAnnouncement();
             maybeShowAnnouncement();
@@ -3765,6 +3998,12 @@
             await loadKeywordMetadata();
             await loadLookupData();
             await loadEventTextCsv();
+            const refsData = await fetchJsonWithFallback('refs_index.json', 'refs index').catch(() => null);
+            if (refsData) {
+                buildRefIndex(refsData);
+            } else {
+                refIndex = new Map();
+            }
             await loadEvents();
         }
 

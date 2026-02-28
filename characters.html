@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Characters Viewer</title>
+    <title>Characters Viewer | Mewgenics Encyclopedia</title>
     <style>
         * {
             margin: 0;
@@ -147,6 +147,11 @@
         .header h1 {
             font-size: 2.5em;
             margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
         }
 
         .controls {
@@ -302,6 +307,10 @@
             width: 100%;
             min-width: 960px;
             border-collapse: collapse;
+        }
+
+        .corpse-column {
+            display: none;
         }
 
         thead {
@@ -663,6 +672,13 @@
             background: #f9f9f9;
             border-left: 3px solid #9f978b;
             border-radius: 2px;
+        }
+
+        .source-comment a,
+        .source-comment a:visited,
+        .source-comment a:hover,
+        .source-comment a:active {
+            color: inherit;
         }
 
         .passive-stats {
@@ -1058,7 +1074,8 @@
         </div>
         <div id="navbarMount"></div>
         <div class="header">
-            <h1 id="headerTitle">Mewgenics Characters Viewer</h1>
+            <h1 id="headerTitle">Mewgenics Encyclopedia</h1>
+            <p id="headerSubtitle">Characters Viewer</p>
         </div>
 
         <div class="controls">
@@ -1112,7 +1129,8 @@
                         <th id="factionHeader" class="sortable" style="width: 140px;" onclick="sortBy('faction')">
                             Faction<span class="sort-indicator"></span></th>
                         <th id="sizeHeader" style="width: 100px;">Size</th>
-                        <th id="corpseHeader" class="sortable" style="width: 120px;" onclick="sortBy('corpse_health')">
+                        <th id="corpseHeader" class="sortable corpse-column" style="width: 120px;"
+                            onclick="sortBy('corpse_health')">
                             Corpse
                             Health<span class="sort-indicator"></span></th>
                         <th id="killHeader" class="sortable" style="width: 140px;" onclick="sortBy('kill_required')">
@@ -1163,6 +1181,9 @@
         let pageSize = 50;
         let currentDisplayCharacters = [];
         let characterByKey = new Map();
+        let refIndex = new Map();
+        let hashPromoteKey = null;
+        let hashPromoteActive = false;
         const ANNOUNCEMENT_SEEN_KEY = 'codexAnnouncementSeen_v1';
 
         function setLanguage(lang) {
@@ -1175,8 +1196,9 @@
 
         const UI_TEXT = mergeUiText(COMMON_UI_TEXT, {
             en: {
-                pageTitle: 'Mewgenics Characters Viewer',
-                headerTitle: 'Mewgenics Characters Viewer',
+                pageTitle: 'Characters Viewer | Mewgenics Encyclopedia',
+                headerTitle: 'Mewgenics Encyclopedia',
+                headerSubtitle: 'Characters Viewer',
                 searchPlaceholder: 'Search by character name or description...',
                 allFactions: 'All Factions',
                 allSizes: 'All Sizes',
@@ -1213,11 +1235,15 @@
                 tagFilterLabel: 'Tag',
                 removeFilter: 'Remove filter',
                 showHidden: 'Show Hidden',
+                referencesLabel: 'Boss rewards:',
+                rewardCommon: 'Common',
+                rewardRare: 'Rare',
                 spawnedByPlaceholder: '`owner\'s name`',
             },
             zh: {
-                pageTitle: 'Mewgenics 角色图鉴',
-                headerTitle: 'Mewgenics 角色图鉴',
+                pageTitle: '角色图鉴 | Mewgenics 百科',
+                headerTitle: 'Mewgenics 百科',
+                headerSubtitle: '角色图鉴',
                 searchPlaceholder: '按角色名称或描述搜索...',
                 allFactions: '全部阵营',
                 allSizes: '全部尺寸',
@@ -1254,6 +1280,9 @@
                 tagFilterLabel: '标签',
                 removeFilter: '移除筛选',
                 showHidden: '显示隐藏项',
+                referencesLabel: 'Boss 掉落：',
+                rewardCommon: '普通',
+                rewardRare: '稀有',
                 spawnedByPlaceholder: '`主人名字`',
             }
         });
@@ -1297,10 +1326,13 @@
         function applyUiLanguage() {
             document.title = t('pageTitle');
             document.getElementById('headerTitle').textContent = t('headerTitle');
+            document.getElementById('headerSubtitle').textContent = t('headerSubtitle');
             document.getElementById('searchInput').placeholder = t('searchPlaceholder');
             document.getElementById('navAbilities').textContent = t('navAbilities');
             document.getElementById('navItems').textContent = t('navItems');
             document.getElementById('navPassives').textContent = t('navPassives');
+            document.getElementById('navWeather').textContent = t('navWeather');
+            document.getElementById('navKeywords').textContent = t('navKeywords');
             document.getElementById('navFurniture').textContent = t('navFurniture');
             document.getElementById('navMutations').textContent = t('navMutations');
             const navEvents = document.getElementById('navEvents');
@@ -1376,18 +1408,29 @@
 
         async function loadCharacters() {
             try {
-                const response = await fetch('characters_db.json');
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
+                const [charactersResponse, refsData] = await Promise.all([
+                    fetch('characters_db.json'),
+                    fetch('refs_index.json')
+                        .then(response => (response.ok ? response.json() : null))
+                        .catch(() => null),
+                ]);
+                if (!charactersResponse.ok) {
+                    throw new Error(`HTTP error! status: ${charactersResponse.status}`);
                 }
-                const data = await response.json();
+                const data = await charactersResponse.json();
                 allCharacters = data.characters || [];
                 filteredCharacters = allCharacters;
                 buildCharacterMap();
+                if (refsData) {
+                    buildRefIndex(refsData);
+                } else {
+                    refIndex = new Map();
+                }
 
                 document.getElementById('totalCount').textContent = allCharacters.length;
                 applyUiLanguage();
-                filterCharacters();
+                updateHashPromotion('character');
+                filterCharacters(true);
             } catch (error) {
                 console.error('Error loading characters:', error);
                 const errorMsg = `
@@ -1492,6 +1535,110 @@
                     characterByKey.set(character.character_key, character);
                 }
             });
+        }
+
+        function buildRefIndex(data) {
+            const map = new Map();
+            const refs = Array.isArray(data?.refs) ? data.refs : [];
+            refs.forEach(entry => {
+                if (entry?.reverse) {
+                    return;
+                }
+                const ref = entry?.ref || {};
+                if (!ref.type || !ref.code) {
+                    return;
+                }
+                map.set(`${ref.type}:${ref.code}`, entry);
+            });
+            refIndex = map;
+        }
+
+        function getRewardNoteLabel(note) {
+            if (!note) {
+                return '';
+            }
+            if (note === 'common') {
+                return t('rewardCommon');
+            }
+            if (note === 'rare') {
+                return t('rewardRare');
+            }
+            return note;
+        }
+
+        function getRefLabel(ref) {
+            if (!ref || !ref.type || !ref.code) {
+                return '';
+            }
+            const entry = refIndex.get(`${ref.type}:${ref.code}`);
+            const text = entry?.text || {};
+            return text[currentLanguage] || text.en || ref.code || '';
+        }
+
+        function getRefLink(ref) {
+            if (!ref || !ref.type || !ref.code) {
+                return '';
+            }
+            if (ref.type === 'achievement' || ref.type === 'item_pool') {
+                return '';
+            }
+            const lang = currentLanguage !== 'en' ? `?lang=${currentLanguage}` : '';
+            const code = encodeURIComponent(ref.code);
+            if (ref.type === 'ability') {
+                return `index.html${lang}#${code}`;
+            }
+            if (ref.type === 'passive') {
+                return `passives.html${lang}#${code}`;
+            }
+            if (ref.type === 'item') {
+                return `items.html${lang}#${code}`;
+            }
+            if (ref.type === 'mutation') {
+                return `mutations.html${lang}#${code}`;
+            }
+            if (ref.type === 'event') {
+                return `events.html${lang}#${code}`;
+            }
+            if (ref.type === 'character') {
+                return `characters.html${lang}#${code}`;
+            }
+            return '';
+        }
+
+        function buildRefsHtml(refs) {
+            if (!Array.isArray(refs) || refs.length === 0) {
+                return '';
+            }
+            const unique = new Map();
+            refs.forEach(ref => {
+                if (!ref || !ref.type || !ref.code) {
+                    return;
+                }
+                const key = `${ref.type}:${ref.code}:${ref.note || ''}`;
+                unique.set(key, ref);
+            });
+            const uniqueRefs = Array.from(unique.values());
+            const labelCounts = new Map();
+            uniqueRefs.forEach(ref => {
+                const label = getRefLabel(ref) || ref.code;
+                labelCounts.set(label, (labelCounts.get(label) || 0) + 1);
+            });
+            const links = uniqueRefs.map(ref => {
+                const label = getRefLabel(ref) || ref.code;
+                const needsCode = (labelCounts.get(label) || 0) > 1;
+                const labeled = needsCode ? `${label} (${ref.code})` : label;
+                const noteLabel = getRewardNoteLabel(ref.note);
+                const display = noteLabel ? `${labeled} (${noteLabel})` : labeled;
+                const href = getRefLink(ref);
+                if (href) {
+                    return `<a href="${href}">${escapeHtml(display)}</a>`;
+                }
+                return `<span>${escapeHtml(display)}</span>`;
+            });
+            if (!links.length) {
+                return '';
+            }
+            return `<div class="source-comment">${escapeHtml(t('referencesLabel'))} ${links.join(' ')}</div>`;
         }
 
         function getCharacterNameByKey(characterKey) {
@@ -1604,6 +1751,61 @@
                     </div>`;
         }
 
+        function normalizeHashKey(value) {
+            return String(value || '').trim().toLowerCase();
+        }
+
+        function makeRowId(prefix, code) {
+            if (!code) {
+                return '';
+            }
+            const safe = String(code).replace(/[^A-Za-z0-9_-]+/g, '-');
+            return `${prefix}-${safe}`;
+        }
+
+        function getHashKey(prefix) {
+            const hash = window.location.hash ? window.location.hash.slice(1) : '';
+            if (!hash) {
+                return '';
+            }
+            const decoded = decodeURIComponent(hash);
+            const prefixToken = `${prefix}-`;
+            if (decoded.startsWith(prefixToken)) {
+                return decoded.slice(prefixToken.length);
+            }
+            return decoded;
+        }
+
+        function updateHashPromotion(prefix) {
+            const key = getHashKey(prefix);
+            if (key) {
+                hashPromoteKey = key;
+                hashPromoteActive = true;
+            }
+        }
+
+        function clearHashPromotion() {
+            hashPromoteKey = null;
+            hashPromoteActive = false;
+        }
+
+        function scrollToHash(prefix) {
+            const hash = window.location.hash ? window.location.hash.slice(1) : '';
+            if (!hash) {
+                return;
+            }
+            const decoded = decodeURIComponent(hash);
+            const direct = document.getElementById(decoded);
+            const rowId = makeRowId(prefix, decoded);
+            const target = direct || (rowId ? document.getElementById(rowId) : null);
+            if (!target) {
+                return;
+            }
+            target.classList.add('hash-target');
+            target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            setTimeout(() => target.classList.remove('hash-target'), 2000);
+        }
+
         function formatMetaLine(parts) {
             if (!parts.length) {
                 return '';
@@ -1625,8 +1827,23 @@
         function displayCharacters(characters) {
             const tbody = document.getElementById('tableBody');
             const safeCharacters = Array.isArray(characters) ? characters : [];
-            currentDisplayCharacters = safeCharacters;
-            const totalEntries = safeCharacters.length;
+            let orderedCharacters = safeCharacters;
+            if (hashPromoteActive && hashPromoteKey) {
+                const normalizedKey = normalizeHashKey(hashPromoteKey);
+                const targetIndex = safeCharacters.findIndex(character =>
+                    normalizeHashKey(character?.character_key) === normalizedKey
+                );
+                if (targetIndex > 0) {
+                    const target = safeCharacters[targetIndex];
+                    orderedCharacters = [
+                        target,
+                        ...safeCharacters.slice(0, targetIndex),
+                        ...safeCharacters.slice(targetIndex + 1)
+                    ];
+                }
+            }
+            currentDisplayCharacters = orderedCharacters;
+            const totalEntries = orderedCharacters.length;
             const size = pageSize <= 0 ? totalEntries : pageSize;
             const pageCount = totalEntries > 0 ? Math.ceil(totalEntries / size) : 1;
             if (currentPage > pageCount) {
@@ -1637,8 +1854,8 @@
             }
             const startIndex = size === 0 ? 0 : (currentPage - 1) * size;
             const pageEntries = size === 0
-                ? safeCharacters
-                : safeCharacters.slice(startIndex, startIndex + size);
+                ? orderedCharacters
+                : orderedCharacters.slice(startIndex, startIndex + size);
 
             if (totalEntries === 0) {
                 tbody.innerHTML = `<tr><td colspan="8" class="no-results">${escapeHtml(t('noResults'))}</td></tr>`;
@@ -1653,6 +1870,7 @@
             }
 
             tbody.innerHTML = pageEntries.map(character => {
+                const rowId = makeRowId('character', character.character_key || '');
                 const localizedName = getCharacterDisplayName(character);
                 const localizedDescription = getLocalizedText(
                     character.tooltip_texts,
@@ -1661,6 +1879,7 @@
                 const description = replaceSpawnedBy(localizedDescription || '-')
                 const tagsHtml = formatTags(character);
                 const statPanel = formatStatPanel(character);
+                const refsHtml = buildRefsHtml(character.refs);
                 const corpseHealth = character.properties?.corpse_health ?? '-';
                 const killRequired = formatKillRequired(character.kill_required);
                 const sizeValue = character.properties?.size || '1x1';
@@ -1688,7 +1907,7 @@
                 }
 
                 return `
-                    <tr>
+                    <tr id="${escapeHtml(rowId)}">
                         <td class="portrait-cell">${portraitHtml}</td>
                         <td>
                             <div class="character-name">${parseRichText(localizedName)}</div>
@@ -1699,6 +1918,7 @@
                             <div class="character-desc-wrap">
                                 <div class="character-desc-text">
                                     <div class="description">${parseRichText(description)}</div>
+                                    ${refsHtml}
                                 </div>
                                 ${statPanel}
                             </div>
@@ -1706,7 +1926,7 @@
                         <td>${tagsHtml}</td>
                         <td>${escapeHtml(getFactionLabel(character.faction) || '-')}</td>
                         <td><span class="${sizeClass}">${escapeHtml(sizeValue)}</span></td>
-                        <td>${escapeHtml(corpseHealth.toString())}</td>
+                        <td class="corpse-column">${escapeHtml(corpseHealth.toString())}</td>
                         <td>${escapeHtml(killRequired)}</td>
                     </tr>
                 `;
@@ -1720,9 +1940,11 @@
             document.getElementById('pagePrevBottom').disabled = currentPage <= 1;
             document.getElementById('pageNextBottom').disabled = currentPage >= pageCount;
             document.getElementById('pageSizeSelectBottom').value = String(pageSize);
+            requestAnimationFrame(() => scrollToHash('character'));
         }
 
         function sortBy(column) {
+            clearHashPromotion();
             // Toggle direction if clicking same column, otherwise default to ascending
             if (currentSort.column === column) {
                 currentSort.direction = currentSort.direction === 'asc' ? 'desc' : 'asc';
@@ -1931,13 +2153,21 @@
         }
 
         // Filter passives
-        function filterCharacters() {
+        function filterCharacters(preserveHash = false) {
+            if (!preserveHash) {
+                clearHashPromotion();
+            }
             const search = document.getElementById('searchInput').value.toLowerCase();
             const factionFilter = document.getElementById('factionFilter').value;
             const sizeFilter = document.getElementById('sizeFilter').value;
             const killFilter = document.getElementById('killFilter').value;
             const tagSearch = search.startsWith('#') ? search.substring(1).trim() : '';
-            const showHidden = document.getElementById('showHiddenToggle')?.checked;
+            const showHiddenToggle = document.getElementById('showHiddenToggle');
+            const hashActive = hashPromoteActive && hashPromoteKey;
+            if (hashActive && showHiddenToggle && !showHiddenToggle.checked) {
+                showHiddenToggle.checked = true;
+            }
+            const showHidden = showHiddenToggle?.checked;
 
             filteredCharacters = allCharacters.filter(character => {
                 const localizedName = getCharacterDisplayName(character).toLowerCase();
@@ -2015,6 +2245,7 @@
             displayCharacters(sortCharacters(currentDisplayCharacters));
         });
         document.getElementById('pageSizeSelect').addEventListener('change', (event) => {
+            clearHashPromotion();
             pageSize = Number.parseInt(event.target.value, 10);
             if (Number.isNaN(pageSize)) {
                 pageSize = 50;
@@ -2033,6 +2264,7 @@
             displayCharacters(sortCharacters(currentDisplayCharacters));
         });
         document.getElementById('pageSizeSelectBottom').addEventListener('change', (event) => {
+            clearHashPromotion();
             pageSize = Number.parseInt(event.target.value, 10);
             if (Number.isNaN(pageSize)) {
                 pageSize = 50;
@@ -2047,8 +2279,16 @@
             });
         });
 
+        window.addEventListener('hashchange', () => {
+            updateHashPromotion('character');
+            currentPage = 1;
+            filterCharacters(true);
+            scrollToHash('character');
+        });
+
         // Apply language immediately when DOM is ready (before data loads)
         document.addEventListener('DOMContentLoaded', () => {
+            updateHashPromotion('character');
             applyUiLanguage();
             initAnnouncement();
             maybeShowAnnouncement();

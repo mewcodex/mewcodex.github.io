@@ -1,0 +1,4419 @@
+{
+  "generated_from": {
+    "keyword_tooltips": "G:/gpak-all/data/keyword_tooltips.gon",
+    "text_dir": "G:/gpak-all/data/text"
+  },
+  "count": 249,
+  "rows": [
+    {
+      "row_code": "Adrenaline",
+      "effect_code": "Adrenaline",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ADRENALINE_NAME",
+      "tooltip_key": "KEYWORD_ADRENALINE_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Adrenaline",
+        "zh": "\u80be\u4e0a\u817a\u7d20"
+      },
+      "tooltip_texts": {
+        "en": "Keeps Exhaustion at 0.\n+25% Crit Chance.\n+25% Block Chance.",
+        "zh": "\u5c06\u75b2\u52b3\u4fdd\u6301\u5728 0\u3002\r\n+25% \u66b4\u51fb\u7387\u3002\r\n+25% \u683c\u6321\u7387\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "AllStatsUp_pos",
+      "effect_code": "AllStatsUp",
+      "variant": "pos",
+      "alias_of": null,
+      "name_key": "KEYWORD_ALLSTATSUP_NAME",
+      "tooltip_key": null,
+      "tooltip_stacks_key": "KEYWORD_ALLSTATSUP_DESC",
+      "name_texts": {
+        "en": "All Stats Up",
+        "zh": "\u5168\u5c5e\u6027\u63d0\u5347"
+      },
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {
+        "en": "All Stats increased by {stacks}",
+        "zh": "\u5168\u5c5e\u6027\u589e\u52a0 {stacks} \u70b9\u3002"
+      }
+    },
+    {
+      "row_code": "AllStatsUp_neg",
+      "effect_code": "AllStatsUp",
+      "variant": "neg",
+      "alias_of": null,
+      "name_key": "KEYWORD_ALLSTATSDOWN_NAME",
+      "tooltip_key": null,
+      "tooltip_stacks_key": "KEYWORD_ALLSTATSDOWN_DESC",
+      "name_texts": {
+        "en": "All Stats Down",
+        "zh": "\u5168\u5c5e\u6027\u4e0b\u964d"
+      },
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {
+        "en": "All Stats decreased by {absstacks}",
+        "zh": "\u5168\u5c5e\u6027\u51cf\u5c11 {absstacks} \u70b9\u3002"
+      }
+    },
+    {
+      "row_code": "AlphaCat",
+      "effect_code": "AlphaCat",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ALPHA_NAME",
+      "tooltip_key": "KEYWORD_ALPHA_DESC_STACKLESS",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "The Alpha",
+        "zh": "\u9996\u9886"
+      },
+      "tooltip_texts": {
+        "en": "No effects on its own. Only one unit can be The Alpha. Certain spells and abilities provide bonuses for The Alpha.",
+        "zh": "\u81ea\u8eab\u65e0\u6548\u679c\u3002\u53ea\u80fd\u6709\u4e00\u4e2a\u5355\u4f4d\u6210\u4e3a\u9996\u9886\u3002\r\n\u67d0\u4e9b\u6cd5\u672f\u548c\u6280\u80fd\u4f1a\u4e3a\u9996\u9886\u63d0\u4f9b\u52a0\u6210\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "Ammo",
+      "effect_code": "Ammo",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_AMMO_NAME",
+      "tooltip_key": null,
+      "tooltip_stacks_key": "KEYWORD_AMMO_DESC",
+      "name_texts": {
+        "en": "Ammo",
+        "zh": "\u5f39\u836f"
+      },
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {
+        "en": "{stacks} shots left.",
+        "zh": "\u5269\u4f59 {stacks} \u53d1\u3002"
+      }
+    },
+    {
+      "row_code": "Appeal",
+      "effect_code": "Appeal",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_APPEAL_NAME",
+      "tooltip_key": "KEYWORD_APPEAL_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "[img:appeal] Appeal",
+        "zh": "[img:appeal] \u5438\u5f15\u529b"
+      },
+      "tooltip_texts": {
+        "en": "Affects the quality of the stray cats that show up each day",
+        "zh": "\u5f71\u54cd\u6bcf\u5929\u51fa\u73b0\u7684\u6d41\u6d6a\u732b\u7684\u54c1\u8d28\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "Attraction",
+      "effect_code": "Attraction",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ATTRACTION_NAME",
+      "tooltip_key": "KEYWORD_ATTRACTION_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_ATTRACTION_DESC",
+      "name_texts": {
+        "en": "Attraction",
+        "zh": "\u5438\u5f15"
+      },
+      "tooltip_texts": {
+        "en": "Moves towards you at the start of its turn.",
+        "zh": "\u5728\u56de\u5408\u5f00\u59cb\u65f6\u5411\u4f60\u79fb\u52a8\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "The thing attracting you is gone. Does nothing.",
+        "zh": "\u5438\u5f15\u4f60\u7684\u76ee\u6807\u5df2\u6d88\u5931\u3002\u65e0\u6548\u679c\u3002"
+      }
+    },
+    {
+      "row_code": "Attraction_reference_applier",
+      "effect_code": "Attraction",
+      "variant": "reference_applier",
+      "alias_of": null,
+      "name_key": "KEYWORD_ATTRACTION_REF",
+      "tooltip_key": "KEYWORD_ATTRACTION_DESC_REF",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Attraction",
+        "zh": "\u5438\u5f15"
+      },
+      "tooltip_texts": {
+        "en": "Moves towards {applier} at the start of its turn.",
+        "zh": "\u5728\u56de\u5408\u5f00\u59cb\u65f6\u5411 {applier} \u79fb\u52a8\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "BackflipWhenTargeted",
+      "effect_code": "BackflipWhenTargeted",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_BACKFLIP_NAME",
+      "tooltip_key": "KEYWORD_BACKFLIP_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Backflip",
+        "zh": "\u540e\u7a7a\u7ffb"
+      },
+      "tooltip_texts": {
+        "en": "Backflips out of the way the next time it's targeted.",
+        "zh": "\u4e0b\u4e00\u6b21\u88ab\u4f5c\u4e3a\u76ee\u6807\u65f6\uff0c\r\n\u901a\u8fc7\u540e\u7a7a\u7ffb\u95ea\u907f\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "Bleed",
+      "effect_code": "Bleed",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_BLEED_NAME",
+      "tooltip_key": "KEYWORD_BLEED_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_BLEED_DESC",
+      "name_texts": {
+        "en": "Bleed",
+        "zh": "\u6d41\u8840"
+      },
+      "tooltip_texts": {
+        "en": "Takes damage at the end of the round, then increase Bleed by 1.",
+        "zh": "\u5728\u56de\u5408\u7ed3\u675f\u65f6\u53d7\u5230\u4f24\u5bb3\uff0c\r\n\u7136\u540e\u6d41\u8840\u5c42\u6570\u589e\u52a0 1\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "Takes {stacks} damage at the end of the round, then increase Bleed by 1.",
+        "zh": "\u5728\u56de\u5408\u7ed3\u675f\u65f6\u53d7\u5230 {stacks} \u70b9\u4f24\u5bb3\uff0c\r\n\u7136\u540e\u6d41\u8840\u5c42\u6570\u589e\u52a0 1\u3002"
+      }
+    },
+    {
+      "row_code": "BleedThorns",
+      "effect_code": "BleedThorns",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_BLEEDTHORNS_NAME",
+      "tooltip_key": "KEYWORD_BLEEDTHORNS_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_BLEEDTHORNS_DESC",
+      "name_texts": {
+        "en": "Bleed Thorns",
+        "zh": "\u6d41\u8840\u8346\u68d8"
+      },
+      "tooltip_texts": {
+        "en": "Deals damage and inflicts Bleed to units that contact you.",
+        "zh": "\u5bf9\u63a5\u89e6\u4f60\u7684\u5355\u4f4d\u9020\u6210\u4f24\u5bb3\u5e76\u65bd\u52a0\u6d41\u8840\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "Deals {stacks} damage and inflicts Bleed {stacks} to units that contact you.",
+        "zh": "\u5bf9\u63a5\u89e6\u4f60\u7684\r\n\u5355\u4f4d\u9020\u6210 {stacks} \u70b9\u4f24\u5bb3\u5e76\u65bd\u52a0 {stacks} \u5c42\u6d41\u8840\u3002"
+      }
+    },
+    {
+      "row_code": "BlessingOfPeace",
+      "effect_code": "BlessingOfPeace",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_BLESSINGOFPEACE_NAME",
+      "tooltip_key": "KEYWORD_BLESSINGOFPEACE_DESC_STACKLESS",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Blessing of Peace",
+        "zh": "\u548c\u5e73\u795d\u798f"
+      },
+      "tooltip_texts": {
+        "en": "Gain [img:divineshield] at the end of your turn. Lose this when you deal damage.",
+        "zh": "\u56de\u5408\u7ed3\u675f\u65f6\u83b7\u5f97 [img:divineshield]\u3002\r\n\u9020\u6210\u4f24\u5bb3\u65f6\u5931\u53bb\u6b64\u6548\u679c\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "Blind_pos",
+      "effect_code": "Blind",
+      "variant": "pos",
+      "alias_of": null,
+      "name_key": "KEYWORD_BLIND_NAME",
+      "tooltip_key": null,
+      "tooltip_stacks_key": "KEYWORD_BLIND_DESC",
+      "name_texts": {
+        "en": "Blind",
+        "zh": "\u81f4\u76f2"
+      },
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {
+        "en": "30% miss chance for the next {stacks} turns.",
+        "zh": "\u63a5\u4e0b\u6765\u7684 {stacks} \u56de\u5408\u5185\u6709 30% \u7684\u672a\u547d\u4e2d\u7387\u3002"
+      }
+    },
+    {
+      "row_code": "Blind_neg",
+      "effect_code": "Blind",
+      "variant": "neg",
+      "alias_of": null,
+      "name_key": "KEYWORD_BLIND_NAME",
+      "tooltip_key": null,
+      "tooltip_stacks_key": "KEYWORD_PERMABLIND_DESC",
+      "name_texts": {
+        "en": "Blind",
+        "zh": "\u81f4\u76f2"
+      },
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "Bloodzerked",
+      "effect_code": "Bloodzerked",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_BLOODZERK_NAME",
+      "tooltip_key": null,
+      "tooltip_stacks_key": "KEYWORD_BLOODZERK_DESC",
+      "name_texts": {
+        "en": "Bloodzerked",
+        "zh": "\u8840\u6012"
+      },
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {
+        "en": "When you deal health damage to a bleeding unit, heal that much health.",
+        "zh": "\u5f53\u4f60\u5bf9\u6d41\u8840\u5355\u4f4d\u9020\u6210\u751f\u547d\u503c\u4f24\u5bb3\u65f6\uff0c\r\n\u6062\u590d\u7b49\u91cf\u7684\u751f\u547d\u503c\u3002"
+      }
+    },
+    {
+      "row_code": "BodyGuard",
+      "effect_code": "BodyGuard",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_BODYGUARD_NAME",
+      "tooltip_key": "KEYWORD_BODYGUARD_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Body Guard",
+        "zh": "\u62a4\u536b"
+      },
+      "tooltip_texts": {
+        "en": "The next time an ally is targeted, swap places with them first.",
+        "zh": "\u4e0b\u4e00\u6b21\u76df\u53cb\u88ab\u4f5c\u4e3a\u76ee\u6807\u65f6\uff0c\r\n\u5148\u4e0e\u5176\u4ea4\u6362\u4f4d\u7f6e\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "Bounty",
+      "effect_code": "Bounty",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_BOUNTY_NAME",
+      "tooltip_key": "KEYWORD_BOUNTY_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_BOUNTY_DESC",
+      "name_texts": {
+        "en": "Bounty",
+        "zh": "\u8d4f\u91d1"
+      },
+      "tooltip_texts": {
+        "en": "Takes 25% extra damage. If killed, gain coins.",
+        "zh": "\u53d7\u5230\u7684\u4f24\u5bb3\u589e\u52a0 25%\u3002\r\n\u5982\u679c\u88ab\u51fb\u6740\uff0c\u83b7\u5f97\u91d1\u5e01\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "Takes 25% extra damage. If killed, gain {stacks} coins.",
+        "zh": "\u53d7\u5230\u7684\u4f24\u5bb3\u589e\u52a0 25%\u3002\r\n\u5982\u679c\u88ab\u51fb\u6740\uff0c\u83b7\u5f97 {stacks} \u679a\u91d1\u5e01\u3002"
+      }
+    },
+    {
+      "row_code": "Brace",
+      "effect_code": "Brace",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_BRACE_NAME",
+      "tooltip_key": "KEYWORD_BRACE_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_BRACE_DESC",
+      "name_texts": {
+        "en": "Brace",
+        "zh": "\u62a4\u7532"
+      },
+      "tooltip_texts": {
+        "en": "Reduces all incoming damage.",
+        "zh": "\u51cf\u5c11\u6240\u6709\u53d7\u5230\u7684\u4f24\u5bb3\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "Takes {stacks} less damage from all sources.",
+        "zh": "\u53d7\u5230\u7684\u6240\u6709\u4f24\u5bb3\u51cf\u5c11 {stacks} \u70b9\u3002"
+      }
+    },
+    {
+      "row_code": "Brittle",
+      "effect_code": "Brittle",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_BRITTLE_NAME",
+      "tooltip_key": "KEYWORD_BRITTLE_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Brittle",
+        "zh": "\u8106\u88c2"
+      },
+      "tooltip_texts": {
+        "en": "This item has a 25% chance to break when you take damage.",
+        "zh": "\u5f53\u4f60\u53d7\u5230\u4f24\u5bb3\u65f6\uff0c\r\n\u6b64\u7269\u54c1\u6709 25% \u7684\u51e0\u7387\u7834\u788e\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "Bruise",
+      "effect_code": "Bruise",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_BRUISE_NAME",
+      "tooltip_key": "KEYWORD_BRUISE_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_BRUISE_DESC",
+      "name_texts": {
+        "en": "Bruise",
+        "zh": "\u6de4\u4f24"
+      },
+      "tooltip_texts": {
+        "en": "Increases all incoming physical damage.",
+        "zh": "\u589e\u52a0\u6240\u6709\u53d7\u5230\u7684\u7269\u7406\u4f24\u5bb3\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "Takes {stacks} more damage from physical sources.",
+        "zh": "\u53d7\u5230\u7684\u7269\u7406\u4f24\u5bb3\u589e\u52a0 {stacks} \u70b9\u3002"
+      }
+    },
+    {
+      "row_code": "Burn",
+      "effect_code": "Burn",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_BURN_NAME",
+      "tooltip_key": "KEYWORD_BURN_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_BURN_DESC",
+      "name_texts": {
+        "en": "Burn",
+        "zh": "\u71c3\u70e7"
+      },
+      "tooltip_texts": {
+        "en": "Takes damage at start of its turn, then decrease Burn by 1.",
+        "zh": "\u56de\u5408\u5f00\u59cb\u65f6\u53d7\u5230\u4f24\u5bb3\uff0c\r\n\u7136\u540e\u71c3\u70e7\u5c42\u6570\u51cf\u5c11 1\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "Takes {stacks} damage at start of its turn, then decrease Burn by 1.",
+        "zh": "\u56de\u5408\u5f00\u59cb\u65f6\u53d7\u5230 {stacks} \u70b9\u4f24\u5bb3\uff0c\r\n\u7136\u540e\u71c3\u70e7\u5c42\u6570\u51cf\u5c11 1\u3002"
+      }
+    },
+    {
+      "row_code": "CapturedFamiliarIcon",
+      "effect_code": "CapturedFamiliarIcon",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_CAPTUREDFAMILIAR_NAME",
+      "tooltip_key": "KEYWORD_CAPTUREDFAMILIAR_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Captured Familiar",
+        "zh": "\u6355\u83b7\u7684\u4f7f\u9b54"
+      },
+      "tooltip_texts": {
+        "en": "Was once an enemy, is now on your team. Will follow you to future battles if it doesn't die.",
+        "zh": "\u66fe\u7ecf\u662f\u654c\u4eba\uff0c\u73b0\u5728\u52a0\u5165\u4e86\u4f60\u7684\u961f\u4f0d\u3002\r\n\u5982\u679c\u4e0d\u6b7b\uff0c\u5c06\u4f1a\u8ddf\u968f\u4f60\u8fdb\u5165\u540e\u7eed\u7684\u6218\u6597\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "ChampionUpgradeNextMinion",
+      "effect_code": "ChampionUpgradeNextMinion",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_PROMOTE_NAME",
+      "tooltip_key": "KEYWORD_PROMOTE_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Promote",
+        "zh": "\u664b\u5347"
+      },
+      "tooltip_texts": {
+        "en": "The next familiar you spawn is upgraded into a [img:champion] Champion.",
+        "zh": "\u4f60\u751f\u6210\u7684\u4e0b\u4e00\u4e2a\u4f7f\u9b54\u5c06\u5347\u7ea7\u4e3a [img:champion] \u51a0\u519b\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "Charge",
+      "effect_code": "Charge",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_CHARGE_NAME",
+      "tooltip_key": "KEYWORD_CHARGE_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_CHARGE_DESC",
+      "name_texts": {
+        "en": "Charge",
+        "zh": "\u5145\u80fd"
+      },
+      "tooltip_texts": {
+        "en": "Gains mana at the start of its next turn.",
+        "zh": "\u4e0b\u56de\u5408\u5f00\u59cb\u65f6\u83b7\u5f97\u6cd5\u529b\u503c\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "Gains {stacks} mana at the start of its next turn.",
+        "zh": "\u4e0b\u56de\u5408\u5f00\u59cb\u65f6\u83b7\u5f97 {stacks} \u70b9\u6cd5\u529b\u503c\u3002"
+      }
+    },
+    {
+      "row_code": "ChargeFists",
+      "effect_code": "ChargeFists",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_CHARGEFISTS_NAME",
+      "tooltip_key": "KEYWORD_CHARGEFISTS_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_CHARGEFISTS_DESC",
+      "name_texts": {
+        "en": "Charge Fists",
+        "zh": "\u5145\u80fd\u62f3"
+      },
+      "tooltip_texts": {
+        "en": "Your basic attack emits Sparkles until the end of the turn.",
+        "zh": "\u76f4\u5230\u56de\u5408\u7ed3\u675f\uff0c\u4f60\u7684\u57fa\u7840\u653b\u51fb\u4f1a\u53d1\u5c04\u706b\u82b1\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "Your basic attack emits {stacks} Sparkles until the end of the turn.",
+        "zh": "\u76f4\u5230\u56de\u5408\u7ed3\u675f\uff0c\r\n\u4f60\u7684\u57fa\u7840\u653b\u51fb\u4f1a\u53d1\u5c04 {stacks} \u4e2a\u706b\u82b1\u3002"
+      }
+    },
+    {
+      "row_code": "CharismaUp_pos",
+      "effect_code": "CharismaUp",
+      "variant": "pos",
+      "alias_of": null,
+      "name_key": "KEYWORD_CHAUP_NAME",
+      "tooltip_key": null,
+      "tooltip_stacks_key": "KEYWORD_CHAUP_DESC",
+      "name_texts": {
+        "en": "Charisma Up",
+        "zh": "\u9b45\u529b\u63d0\u5347"
+      },
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {
+        "en": "Charisma increased by {stacks}.\nCharisma affects max mana and initial mana.",
+        "zh": "\u9b45\u529b\u589e\u52a0 {stacks} \u70b9\u3002\r\n\u9b45\u529b\u5f71\u54cd\u6700\u5927\u6cd5\u529b\u503c\u548c\u521d\u59cb\u6cd5\u529b\u503c\u3002"
+      }
+    },
+    {
+      "row_code": "CharismaUp_neg",
+      "effect_code": "CharismaUp",
+      "variant": "neg",
+      "alias_of": null,
+      "name_key": "KEYWORD_CHADOWN_NAME",
+      "tooltip_key": null,
+      "tooltip_stacks_key": "KEYWORD_CHADOWN_DESC",
+      "name_texts": {
+        "en": "Charisma Down",
+        "zh": "\u9b45\u529b\u4e0b\u964d"
+      },
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {
+        "en": "Charisma decreased by {absstacks}.\nCharisma affects max mana and initial mana.",
+        "zh": "\u9b45\u529b\u51cf\u5c11 {absstacks} \u70b9\u3002\r\n\u9b45\u529b\u5f71\u54cd\u6700\u5927\u6cd5\u529b\u503c\u548c\u521d\u59cb\u6cd5\u529b\u503c\u3002"
+      }
+    },
+    {
+      "row_code": "Charmed",
+      "effect_code": "Charmed",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_CHARMED_NAME",
+      "tooltip_key": "KEYWORD_CHARMED_DESC_STACKLESS",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Charmed",
+        "zh": "\u9b45\u60d1"
+      },
+      "tooltip_texts": {
+        "en": "Behaves as if it's on your team.",
+        "zh": "\u8868\u73b0\u5f97\u50cf\u662f\u4f60\u961f\u4f0d\u7684\u4e00\u5458\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "Cleave",
+      "effect_code": "Cleave",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_CLEAVE_NAME",
+      "tooltip_key": "KEYWORD_CLEAVE_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Cleave",
+        "zh": "\u5207\u5272"
+      },
+      "tooltip_texts": {
+        "en": "Cuts a chunk of meat off what it hits.",
+        "zh": "\u780d\u4e0b\u547d\u4e2d\u76ee\u6807\u7684\u4e00\u5757\u8089\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "Comfort",
+      "effect_code": "Comfort",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_COMFORT_NAME",
+      "tooltip_key": "KEYWORD_COMFORT_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "[img:comfort] Comfort",
+        "zh": "[img:comfort] \u8212\u9002\u5ea6"
+      },
+      "tooltip_texts": {
+        "en": "Affects how often cats will breed or fight.",
+        "zh": "\u5f71\u54cd\u732b\u54aa\u7e41\u6b96\u6216\u6253\u67b6\u7684\u9891\u7387\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "Confusion",
+      "effect_code": "Confusion",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_CONFUSION_NAME",
+      "tooltip_key": "KEYWORD_CONFUSION_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_CONFUSION_DESC",
+      "name_texts": {
+        "en": "Confusion",
+        "zh": "\u6df7\u4e71"
+      },
+      "tooltip_texts": {
+        "en": "When performing an action, 25% chance to instead hit itself equal to its strength.",
+        "zh": "\u6267\u884c\u884c\u52a8\u65f6\uff0c\r\n\u6709 25% \u7684\u51e0\u7387\u6539\u4e3a\u653b\u51fb\u81ea\u5df1\uff0c\r\n\u4f24\u5bb3\u7b49\u540c\u4e8e\u5176\u529b\u91cf\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "When performing an action, 25% chance to instead hit itself equal to its strength. Lasts {stacks} turns.",
+        "zh": "\u6267\u884c\u884c\u52a8\u65f6\uff0c\r\n\u6709 25% \u7684\u51e0\u7387\u6539\u4e3a\u653b\u51fb\u81ea\u5df1\uff0c\r\n\u4f24\u5bb3\u7b49\u540c\u4e8e\u5176\u529b\u91cf\u3002\u6301\u7eed {stacks} \u56de\u5408\u3002"
+      }
+    },
+    {
+      "row_code": "ConstitutionUp_pos",
+      "effect_code": "ConstitutionUp",
+      "variant": "pos",
+      "alias_of": null,
+      "name_key": "KEYWORD_CONUP_NAME",
+      "tooltip_key": null,
+      "tooltip_stacks_key": "KEYWORD_CONUP_DESC",
+      "name_texts": {
+        "en": "Constitution Up",
+        "zh": "\u4f53\u8d28\u63d0\u5347"
+      },
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {
+        "en": "Constitution increased by {stacks}.\nConstitution affects max health and post-battle health regen.",
+        "zh": "\u4f53\u8d28\u589e\u52a0 {stacks} \u70b9\u3002\r\n\u4f53\u8d28\u5f71\u54cd\u6700\u5927\u751f\u547d\u503c\u548c\u6218\u540e\u751f\u547d\u6062\u590d\u3002"
+      }
+    },
+    {
+      "row_code": "ConstitutionUp_neg",
+      "effect_code": "ConstitutionUp",
+      "variant": "neg",
+      "alias_of": null,
+      "name_key": "KEYWORD_CONDOWN_NAME",
+      "tooltip_key": null,
+      "tooltip_stacks_key": "KEYWORD_CONDOWN_DESC",
+      "name_texts": {
+        "en": "Constitution Down",
+        "zh": "\u4f53\u8d28\u4e0b\u964d"
+      },
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {
+        "en": "Constitution decreased by {absstacks}.\nConstitution affects max health and post-battle health regen.",
+        "zh": "\u4f53\u8d28\u51cf\u5c11 {absstacks} \u70b9\u3002\r\n\u4f53\u8d28\u5f71\u54cd\u6700\u5927\u751f\u547d\u503c\u548c\u6218\u540e\u751f\u547d\u6062\u590d\u3002"
+      }
+    },
+    {
+      "row_code": "CounterNextAttacks",
+      "effect_code": "CounterNextAttacks",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_COUNTER_NAME",
+      "tooltip_key": null,
+      "tooltip_stacks_key": "KEYWORD_COUNTER_DESC_STACKS",
+      "name_texts": {
+        "en": "Counter Attack",
+        "zh": "\u53cd\u51fb"
+      },
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {
+        "en": "Attack the next {stacks} things that damage you automatically.",
+        "zh": "\u81ea\u52a8\u653b\u51fb\u63a5\u4e0b\u6765\u7684 {stacks} \u4e2a\u5bf9\u4f60\u9020\u6210\u4f24\u5bb3\u7684\u76ee\u6807\u3002"
+      }
+    },
+    {
+      "row_code": "CritChanceUp",
+      "effect_code": "CritChanceUp",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_CRITCHANCE_NAME",
+      "tooltip_key": null,
+      "tooltip_stacks_key": "KEYWORD_CRITCHANCE_DESC",
+      "name_texts": {
+        "en": "Crit Chance Up",
+        "zh": "\u66b4\u51fb\u7387\u63d0\u5347"
+      },
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {
+        "en": "Crit Chance increased by {stacks}%",
+        "zh": "\u66b4\u51fb\u7387\u63d0\u5347 {stacks}%"
+      }
+    },
+    {
+      "row_code": "CurrentWeaponAddPoison",
+      "effect_code": "CurrentWeaponAddPoison",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_WPOISONLACE_NAME",
+      "tooltip_key": "KEYWORD_WPOISONLACE_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_WPOISONLACE_DESC",
+      "name_texts": {
+        "en": "Poison Lace (Weapon)",
+        "zh": "\u6d82\u6bd2 (\u6b66\u5668)"
+      },
+      "tooltip_texts": {
+        "en": "Your weapon inflicts Poison.",
+        "zh": "\u4f60\u7684\u6b66\u5668\u65bd\u52a0\u4e2d\u6bd2\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "Your weapon inflicts +{stacks} Poison.",
+        "zh": "\u4f60\u7684\u6b66\u5668\u65bd\u52a0 +{stacks} \u5c42\u4e2d\u6bd2\u3002"
+      }
+    },
+    {
+      "row_code": "Cursed",
+      "effect_code": "Cursed",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_CURSED_NAME",
+      "tooltip_key": "KEYWORD_CURSED_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Cursed",
+        "zh": "\u8bc5\u5492"
+      },
+      "tooltip_texts": {
+        "en": "This item cannot be unequipped once equipped.",
+        "zh": "\u6b64\u7269\u54c1\u88c5\u5907\u540e\u65e0\u6cd5\u5378\u4e0b\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "DamageUp_pos",
+      "effect_code": "DamageUp",
+      "variant": "pos",
+      "alias_of": null,
+      "name_key": "KEYWORD_DAMAGEUP_NAME",
+      "tooltip_key": "KEYWORD_DAMAGEUP_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_DAMAGEUP_DESC",
+      "name_texts": {
+        "en": "Damage Up",
+        "zh": "\u4f24\u5bb3\u63d0\u5347"
+      },
+      "tooltip_texts": {
+        "en": "Increases the damage (or heal) of its basic attack.",
+        "zh": "\u589e\u52a0\u5176\u57fa\u7840\u653b\u51fb\u7684\u4f24\u5bb3\uff08\u6216\u6cbb\u7597\u91cf\uff09\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "Basic attack damage increased by {stacks}.",
+        "zh": "\u57fa\u7840\u653b\u51fb\u4f24\u5bb3\u589e\u52a0 {stacks} \u70b9\u3002"
+      }
+    },
+    {
+      "row_code": "DamageUp_neg",
+      "effect_code": "DamageUp",
+      "variant": "neg",
+      "alias_of": null,
+      "name_key": "KEYWORD_DAMAGEDOWN_NAME",
+      "tooltip_key": "KEYWORD_DAMAGEDOWN_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_DAMAGEDOWN_DESC",
+      "name_texts": {
+        "en": "Damage Down",
+        "zh": "\u4f24\u5bb3\u4e0b\u964d"
+      },
+      "tooltip_texts": {
+        "en": "Decreases the damage (or heal) of its basic attack.",
+        "zh": "\u51cf\u5c11\u5176\u57fa\u7840\u653b\u51fb\u7684\u4f24\u5bb3\uff08\u6216\u6cbb\u7597\u91cf\uff09\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "Basic attack damage decreased by {absstacks}.",
+        "zh": "\u57fa\u7840\u653b\u51fb\u4f24\u5bb3\u51cf\u5c11 {absstacks} \u70b9\u3002"
+      }
+    },
+    {
+      "row_code": "DelayedPain",
+      "effect_code": "DelayedPain",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_DELAYEDPAIN_NAME",
+      "tooltip_key": "KEYWORD_DELAYEDPAIN_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_DELAYEDPAIN_DESC",
+      "name_texts": {
+        "en": "Delayed Pain",
+        "zh": "\u5ef6\u8fdf\u75db\u695a"
+      },
+      "tooltip_texts": {
+        "en": "Delayed damage is taken all at once at the end of your turn.",
+        "zh": "\u5ef6\u8fdf\u4f24\u5bb3\u5c06\u5728\u4f60\u56de\u5408\u7ed3\u675f\u65f6\u4e00\u6b21\u6027\u7ed3\u7b97\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "Takes {stacks} damage at the end of its turn.",
+        "zh": "\u5728\u56de\u5408\u7ed3\u675f\u65f6\u53d7\u5230 {stacks} \u70b9\u4f24\u5bb3\u3002"
+      }
+    },
+    {
+      "row_code": "DemonicGlyph_Bite",
+      "effect_code": "DemonicGlyph_Bite",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_TOR_BITE_NAME",
+      "tooltip_key": "KEYWORD_TOR_BITE_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Lucifer Rune",
+        "zh": "\u8def\u897f\u6cd5\u7b26\u6587"
+      },
+      "tooltip_texts": {
+        "en": "Imbues its owner with an extra turn and the power to Bite",
+        "zh": "\u8d4b\u4e88\u62e5\u6709\u8005\u989d\u5916\u56de\u5408\u4ee5\u53ca\u6495\u54ac\u7684\u80fd\u529b\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "DemonicGlyph_Bounce",
+      "effect_code": "DemonicGlyph_Bounce",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_TOR_BOUNCE_NAME",
+      "tooltip_key": "KEYWORD_TOR_BOUNCE_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Chaos Rune",
+        "zh": "\u6df7\u6c8c\u7b26\u6587"
+      },
+      "tooltip_texts": {
+        "en": "Imbues its owner with the ability to repel attackers.",
+        "zh": "\u8d4b\u4e88\u62e5\u6709\u8005\u51fb\u9000\u653b\u51fb\u8005\u7684\u80fd\u529b\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "DemonicGlyph_Fire",
+      "effect_code": "DemonicGlyph_Fire",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_TOR_FIRE_NAME",
+      "tooltip_key": "KEYWORD_TOR_FIRE_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Brimstone Rune",
+        "zh": "\u786b\u78fa\u7b26\u6587"
+      },
+      "tooltip_texts": {
+        "en": "Imbues its owner's basic attack with +2 Damage and +2 Burn.",
+        "zh": "\u8d4b\u4e88\u62e5\u6709\u8005\u7684\r\n\u57fa\u7840\u653b\u51fb +2 \u4f24\u5bb3\u548c +2 \u71c3\u70e7\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "DemonicGlyph_Movement",
+      "effect_code": "DemonicGlyph_Movement",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_TOR_MOVE_NAME",
+      "tooltip_key": "KEYWORD_TOR_MOVE_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Hexagram Rune",
+        "zh": "\u516d\u8292\u661f\u7b26\u6587"
+      },
+      "tooltip_texts": {
+        "en": "Imbues its owner with +1 Movement Range and +3 Trample Damage",
+        "zh": "\u8d4b\u4e88\u62e5\u6709\u8005 +1 \u79fb\u52a8\u8ddd\u79bb\u548c\r\n +3 \u8df5\u8e0f\u4f24\u5bb3"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "DemonicGlyph_Summon",
+      "effect_code": "DemonicGlyph_Summon",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_TOR_SUMMON_NAME",
+      "tooltip_key": "KEYWORD_TOR_SUMMON_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Pentagram Rune",
+        "zh": "\u4e94\u8292\u661f\u7b26\u6587"
+      },
+      "tooltip_texts": {
+        "en": "Imbues its owner with an extra turn and the power to Summon",
+        "zh": "\u8d4b\u4e88\u62e5\u6709\u8005\u989d\u5916\u56de\u5408\u4ee5\u53ca\u53ec\u5524\u7684\u80fd\u529b\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "DexterityUp_pos",
+      "effect_code": "DexterityUp",
+      "variant": "pos",
+      "alias_of": null,
+      "name_key": "KEYWORD_DEXUP_NAME",
+      "tooltip_key": null,
+      "tooltip_stacks_key": "KEYWORD_DEXUP_DESC",
+      "name_texts": {
+        "en": "Dexterity Up",
+        "zh": "\u7075\u5de7\u63d0\u5347"
+      },
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {
+        "en": "Dexterity increased by {stacks}.\nDexterity affects ranged attack and ranged ability damage.",
+        "zh": "\u7075\u5de7\u589e\u52a0 {stacks} \u70b9\u3002\r\n\u7075\u5de7\u5f71\u54cd\u8fdc\u7a0b\u653b\u51fb\u548c\u8fdc\u7a0b\u6280\u80fd\u4f24\u5bb3\u3002"
+      }
+    },
+    {
+      "row_code": "DexterityUp_neg",
+      "effect_code": "DexterityUp",
+      "variant": "neg",
+      "alias_of": null,
+      "name_key": "KEYWORD_DEXDOWN_NAME",
+      "tooltip_key": null,
+      "tooltip_stacks_key": "KEYWORD_DEXDOWN_DESC",
+      "name_texts": {
+        "en": "Dexterity Down",
+        "zh": "\u7075\u5de7\u4e0b\u964d"
+      },
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {
+        "en": "Dexterity decreased by {absstacks}.\nDexterity affects ranged attack and ranged ability damage.",
+        "zh": "\u7075\u5de7\u51cf\u5c11 {absstacks} \u70b9\u3002\r\n\u7075\u5de7\u5f71\u54cd\u8fdc\u7a0b\u653b\u51fb\u548c\u8fdc\u7a0b\u6280\u80fd\u4f24\u5bb3\u3002"
+      }
+    },
+    {
+      "row_code": "DiminishingHealthRegen",
+      "effect_code": "DiminishingHealthRegen",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_DIMINISHREGEN_NAME",
+      "tooltip_key": "KEYWORD_DIMINISHREGEN_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_DIMINISHREGEN_DESC",
+      "name_texts": {
+        "en": "Health Regen (Diminishing)",
+        "zh": "\u751f\u547d\u6062\u590d (\u9012\u51cf)"
+      },
+      "tooltip_texts": {
+        "en": "Regen health at the end of its turn, then decreases Health Regen by 1.",
+        "zh": "\u5728\u56de\u5408\u7ed3\u675f\u65f6\u6062\u590d\u751f\u547d\u503c\uff0c\r\n\u7136\u540e\u751f\u547d\u6062\u590d\u51cf\u5c11 1\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "Regen {stacks} health at the end of its turn, then decreases Health Regen by 1.",
+        "zh": "\u56de\u5408\u7ed3\u675f\u65f6\u6062\u590d {stacks} \u70b9\u751f\u547d\u503c\uff0c\r\n\u7136\u540e\u751f\u547d\u6062\u590d\u51cf\u5c11 1\u3002"
+      }
+    },
+    {
+      "row_code": "DivineShield",
+      "effect_code": "DivineShield",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_DIVINESHIELD_NAME",
+      "tooltip_key": "KEYWORD_DIVINESHIELD_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Holy Shield",
+        "zh": "\u5723\u76fe"
+      },
+      "tooltip_texts": {
+        "en": "Blocks an entire instance of incoming damage.",
+        "zh": "\u62b5\u6321\u4e00\u6b21\u5b8c\u6574\u7684\u53d7\u51fb\u4f24\u5bb3\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "Dodge",
+      "effect_code": "Dodge",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_DODGE_NAME",
+      "tooltip_key": "KEYWORD_DODGE_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_DODGE_DESC",
+      "name_texts": {
+        "en": "Dodge",
+        "zh": "\u95ea\u907f"
+      },
+      "tooltip_texts": {
+        "en": "Dodges the next attack.",
+        "zh": "\u95ea\u907f\u4e0b\u4e00\u6b21\u653b\u51fb\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "Dodges the next {stacks} attacks.",
+        "zh": "\u95ea\u907f\u63a5\u4e0b\u6765\u7684 {stacks} \u6b21\u653b\u51fb\u3002"
+      }
+    },
+    {
+      "row_code": "DodgeChance_Status",
+      "effect_code": "DodgeChance_Status",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_DODGECHANCE_NAME",
+      "tooltip_key": null,
+      "tooltip_stacks_key": "KEYWORD_DODGECHANCE_DESC",
+      "name_texts": {
+        "en": "Dodge Chance",
+        "zh": "\u95ea\u907f\u7387"
+      },
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {
+        "en": "Dodge Chance increased by {stacks}%.",
+        "zh": "\u95ea\u907f\u7387\u63d0\u5347 {stacks}%\u3002"
+      }
+    },
+    {
+      "row_code": "Doomed",
+      "effect_code": "Doomed",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_DOOMED_NAME",
+      "tooltip_key": "KEYWORD_DOOMED_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Doomed",
+        "zh": "\u6b7b\u5492"
+      },
+      "tooltip_texts": {
+        "en": "Ticks down at the end of your turn. When it hits 0, Die.",
+        "zh": "\u5728\u4f60\u7684\u56de\u5408\u7ed3\u675f\u65f6\u5012\u6570\u3002\r\n\u5f53\u964d\u81f3 0 \u65f6\uff0c\u6b7b\u4ea1\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "DoubleCast",
+      "effect_code": "DoubleCast",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_DOUBLECAST_NAME",
+      "tooltip_key": "KEYWORD_DOUBLECAST_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Double Action",
+        "zh": "\u53cc\u91cd\u884c\u52a8"
+      },
+      "tooltip_texts": {
+        "en": "The next ability you use is used an additional time for free.",
+        "zh": "\u4f60\u4f7f\u7528\u7684\u4e0b\u4e00\u4e2a\u6280\u80fd\u4f1a\u514d\u8d39\u989d\u5916\u65bd\u653e\u4e00\u6b21\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "DoubleCastSpell",
+      "effect_code": "DoubleCastSpell",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_DOUBLECASTSPELL_NAME",
+      "tooltip_key": "KEYWORD_DOUBLECASTSPELL_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Double Cast",
+        "zh": "\u53cc\u91cd\u65bd\u6cd5"
+      },
+      "tooltip_texts": {
+        "en": "The next spell you cast is cast an additional time for free.",
+        "zh": "\u4f60\u65bd\u653e\u7684\u4e0b\u4e00\u4e2a\u6cd5\u672f\u4f1a\u514d\u8d39\u989d\u5916\u65bd\u653e\u4e00\u6b21\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "DoubleCastSpellThisTurn",
+      "effect_code": "DoubleCastSpellThisTurn",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_DOUBLECASTTHISTURN_NAME",
+      "tooltip_key": "KEYWORD_DOUBLECASTTHISTURN_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Double Cast (This Turn)",
+        "zh": "\u53cc\u91cd\u65bd\u6cd5 (\u672c\u56de\u5408)"
+      },
+      "tooltip_texts": {
+        "en": "The next spell you cast this turn is cast an additional time for free.",
+        "zh": "\u4f60\u672c\u56de\u5408\u65bd\u653e\u7684\u4e0b\u4e00\u4e2a\u6cd5\u672f\u4f1a\u514d\u8d39\u989d\u5916\u65bd\u653e\u4e00\u6b21\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "Drowsy",
+      "effect_code": "Drowsy",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_DROWSY_NAME",
+      "tooltip_key": "KEYWORD_DROWSY_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Drowsy",
+        "zh": "\u56f0\u5026"
+      },
+      "tooltip_texts": {
+        "en": "Falls asleep at the end of its turn.",
+        "zh": "\u5728\u56de\u5408\u7ed3\u675f\u65f6\u9677\u5165\u7761\u7720\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "DybbukPossessed",
+      "effect_code": "DybbukPossessed",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_DYBBUKED_NAME",
+      "tooltip_key": "KEYWORD_DYBBUKED_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Possessed by Dybbuk",
+        "zh": "\u88ab\u6234\u5e03\u514b\u9644\u8eab"
+      },
+      "tooltip_texts": {
+        "en": "This cat is possessed by Dybbuk. Down this cat to exorcise him.",
+        "zh": "\u8fd9\u53ea\u732b\u88ab\u6234\u5e03\u514b\u9644\u8eab\u4e86\u3002\r\n\u51fb\u5012\u8fd9\u53ea\u732b\u4ee5\u9a71\u9010\u4ed6\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "EliteBuff_Absorbant",
+      "effect_code": "EliteBuff_Absorbant",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ELITE_ABSORBANT_NAME",
+      "tooltip_key": "KEYWORD_ELITE_ABSORBANT_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Elite Buff: Absorbent",
+        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u5438\u6536"
+      },
+      "tooltip_texts": {
+        "en": "Drains all unused mana from units when they end their turn, and deals damage to them equal to the amount of mana drained.",
+        "zh": "\u5f53\u5355\u4f4d\u7ed3\u675f\u56de\u5408\u65f6\uff0c\r\n\u5438\u53d6\u5176\u6240\u6709\u672a\u4f7f\u7528\u7684\u6cd5\u529b\u503c\uff0c\r\n\u5e76\u9020\u6210\u7b49\u540c\u4e8e\u5438\u53d6\u6cd5\u529b\u503c\u7684\u4f24\u5bb3\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "EliteBuff_BossFlaming",
+      "effect_code": "EliteBuff_BossFlaming",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ELITE_BOSSFLAMING_NAME",
+      "tooltip_key": "KEYWORD_ELITE_BOSSFLAMING_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Elite Buff: Flaming",
+        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u71c3\u70e7"
+      },
+      "tooltip_texts": {
+        "en": "Fire Immune. Leaves a trail of fire. Applies Burn 1 to attackers.",
+        "zh": "\u706b\u7130\u514d\u75ab\u3002\u7559\u4e0b\u4e00\u6761\u706b\u7130\u8def\u5f84\u3002\r\n\u5bf9\u653b\u51fb\u8005\u65bd\u52a0 1 \u5c42\u71c3\u70e7\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "EliteBuff_BossMad",
+      "effect_code": "EliteBuff_BossMad",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ELITE_BOSSMAD_NAME",
+      "tooltip_key": "KEYWORD_ELITE_BOSSMAD_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Elite Buff: Mad",
+        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u75af\u72c2"
+      },
+      "tooltip_texts": {
+        "en": "Madness. Gains +1 all stats and heals 4 when it gets a kill.",
+        "zh": "\u75af\u72c2\u3002\r\n\u51fb\u6740\u65f6\u83b7\u5f97\u5168\u5c5e\u6027 +1 \u5e76\u6062\r\n\u590d 4 \u70b9\u751f\u547d\u503c\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "EliteBuff_BossShielded1",
+      "effect_code": "EliteBuff_BossShielded1",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ELITE_BOSSSHIELDED1_NAME",
+      "tooltip_key": "KEYWORD_ELITE_BOSSSHIELDED1_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Elite Buff: Shielded",
+        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u62a4\u76fe"
+      },
+      "tooltip_texts": {
+        "en": "At the start of each round, if it has less than 4 [img:shield], set [img:shield] to 4. -20% max health.",
+        "zh": "\u5728\u6bcf\u56de\u5408\u5f00\u59cb\u65f6\uff0c\r\n\u5982\u679c\u62e5\u6709\u7684 [img:shield] \u5c11\u4e8e 4\uff0c\r\n\u5219\u5c06 [img:shield] \u8bbe\u4e3a 4\u3002\r\n-20% \u6700\u5927\u751f\u547d\u503c\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "EliteBuff_BossShielded2",
+      "effect_code": "EliteBuff_BossShielded2",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ELITE_BOSSSHIELDED2_NAME",
+      "tooltip_key": "KEYWORD_ELITE_BOSSSHIELDED2_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Elite Buff: Shielded",
+        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u62a4\u76fe"
+      },
+      "tooltip_texts": {
+        "en": "At the start of each round, if it has less than 8 [img:shield], set [img:shield] to 8. -20% max health.",
+        "zh": "\u5728\u6bcf\u56de\u5408\u5f00\u59cb\u65f6\uff0c\r\n\u5982\u679c\u62e5\u6709\u7684 [img:shield] \u5c11\u4e8e 8\uff0c\r\n\u5219\u5c06 [img:shield] \u8bbe\u4e3a 8\u3002\r\n-20% \u6700\u5927\u751f\u547d\u503c\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "EliteBuff_BossShielded3",
+      "effect_code": "EliteBuff_BossShielded3",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ELITE_BOSSSHIELDED3_NAME",
+      "tooltip_key": "KEYWORD_ELITE_BOSSSHIELDED3_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Elite Buff: Shielded",
+        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u62a4\u76fe"
+      },
+      "tooltip_texts": {
+        "en": "At the start of each round, if it has less than 12 [img:shield], set [img:shield] to 12. -20% max health.",
+        "zh": "\u5728\u6bcf\u56de\u5408\u5f00\u59cb\u65f6\uff0c\r\n\u5982\u679c\u62e5\u6709\u7684 [img:shield] \u5c11\u4e8e 12\uff0c\r\n\u5219\u5c06 [img:shield] \u8bbe\u4e3a 12\u3002\r\n-20% \u6700\u5927\u751f\u547d\u503c\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "EliteBuff_BossShielded4",
+      "effect_code": "EliteBuff_BossShielded4",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ELITE_BOSSSHIELDED4_NAME",
+      "tooltip_key": "KEYWORD_ELITE_BOSSSHIELDED4_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Elite Buff: Shielded",
+        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u62a4\u76fe"
+      },
+      "tooltip_texts": {
+        "en": "At the start of each round, if it has less than 16 [img:shield], set [img:shield] to 16. -20% max health.",
+        "zh": "\u5728\u6bcf\u56de\u5408\u5f00\u59cb\u65f6\uff0c\r\n\u5982\u679c\u62e5\u6709\u7684 [img:shield] \u5c11\u4e8e 16\uff0c\r\n\u5219\u5c06 [img:shield] \u8bbe\u4e3a 16\u3002\r\n-20% \u6700\u5927\u751f\u547d\u503c\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "EliteBuff_BossSpiky",
+      "effect_code": "EliteBuff_BossSpiky",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ELITE_BOSSSPIKY_NAME",
+      "tooltip_key": "KEYWORD_ELITE_BOSSSPIKY_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Elite Buff: Spiky",
+        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u5c16\u523a"
+      },
+      "tooltip_texts": {
+        "en": "+1 Thorns",
+        "zh": "+1 \u8346\u68d8"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "EliteBuff_BossTough",
+      "effect_code": "EliteBuff_BossTough",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ELITE_BOSSTOUGH_NAME",
+      "tooltip_key": "KEYWORD_ELITE_BOSSTOUGH_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Elite Buff: Tough",
+        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u5f3a\u97e7"
+      },
+      "tooltip_texts": {
+        "en": "+1 Brace",
+        "zh": "+1 \u62a4\u7532"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "EliteBuff_Bouncy",
+      "effect_code": "EliteBuff_Bouncy",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ELITE_BOUNCY_NAME",
+      "tooltip_key": "KEYWORD_ELITE_BOUNCY_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Elite Buff: Bouncy",
+        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u5f39\u529b"
+      },
+      "tooltip_texts": {
+        "en": "When hit, bounces itself and its attacker apart.",
+        "zh": "\u88ab\u51fb\u4e2d\u65f6\uff0c\u5c06\u81ea\u8eab\u4e0e\u653b\u51fb\u8005\u4e92\u76f8\u5f39\u5f00\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "EliteBuff_Creepy",
+      "effect_code": "EliteBuff_Creepy",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ELITE_CREEPY_NAME",
+      "tooltip_key": "KEYWORD_ELITE_CREEPY_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Elite Buff: Creepy",
+        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u60ca\u609a"
+      },
+      "tooltip_texts": {
+        "en": "Basic attack inflicts Poison. Leaves a trail of creep.",
+        "zh": "\u57fa\u7840\u653b\u51fb\u65bd\u52a0\u4e2d\u6bd2\u3002\u7559\u4e0b\u4e00\u6761\u7c98\u6db2\u8def\u5f84\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "EliteBuff_Damaging",
+      "effect_code": "EliteBuff_Damaging",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ELITE_DAMAGING_NAME",
+      "tooltip_key": "KEYWORD_ELITE_DAMAGING_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Elite Buff: Damaging",
+        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u4f24\u5bb3"
+      },
+      "tooltip_texts": {
+        "en": "+2 Damage",
+        "zh": "+2 \u4f24\u5bb3"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "EliteBuff_Depressing",
+      "effect_code": "EliteBuff_Depressing",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ELITE_DEPRESSING_NAME",
+      "tooltip_key": "KEYWORD_ELITE_DEPRESSING_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Elite Buff: Depressing",
+        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u6d88\u6c89"
+      },
+      "tooltip_texts": {
+        "en": "While alive, its enemies have -1 to all stats.",
+        "zh": "\u5b58\u6d3b\u671f\u95f4\uff0c\u5176\u654c\u4eba\u5168\u5c5e\u6027 -1\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "EliteBuff_Evolving",
+      "effect_code": "EliteBuff_Evolving",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ELITE_EVOLVING_NAME",
+      "tooltip_key": "KEYWORD_ELITE_EVOLVING_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Elite Buff: Evolving",
+        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u8fdb\u5316"
+      },
+      "tooltip_texts": {
+        "en": "At the end of each round, gain a random Elite Buff.",
+        "zh": "\u6bcf\u56de\u5408\u7ed3\u675f\u65f6\uff0c\u83b7\u5f97\u4e00\u4e2a\u968f\u673a\u7684\u7cbe\u82f1\u589e\u76ca\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "EliteBuff_Flaming",
+      "effect_code": "EliteBuff_Flaming",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ELITE_FLAMING_NAME",
+      "tooltip_key": "KEYWORD_ELITE_FLAMING_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Elite Buff: Flaming",
+        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u71c3\u70e7"
+      },
+      "tooltip_texts": {
+        "en": "Fire Immune. Leaves a trail of fire.",
+        "zh": "\u706b\u7130\u514d\u75ab\u3002\u7559\u4e0b\u4e00\u6761\u706b\u7130\u8def\u5f84\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "EliteBuff_Hardy",
+      "effect_code": "EliteBuff_Hardy",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ELITE_HARDY_NAME",
+      "tooltip_key": "KEYWORD_ELITE_HARDY_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Elite Buff: Hardy",
+        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u575a\u6bc5"
+      },
+      "tooltip_texts": {
+        "en": "Immune to stuns.",
+        "zh": "\u514d\u75ab\u6655\u7729\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "EliteBuff_Healthy",
+      "effect_code": "EliteBuff_Healthy",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ELITE_HEALTHY_NAME",
+      "tooltip_key": "KEYWORD_ELITE_HEALTHY_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Elite Buff: Healthy",
+        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u5065\u58ee"
+      },
+      "tooltip_texts": {
+        "en": "+3 Health Regen. +20 unfilled max health.",
+        "zh": "+3 \u751f\u547d\u6062\u590d\u3002\r\n+20 \u672a\u586b\u5145\u7684\u6700\u5927\u751f\u547d\u503c\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "EliteBuff_Infested",
+      "effect_code": "EliteBuff_Infested",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ELITE_INFESTED_NAME",
+      "tooltip_key": "KEYWORD_ELITE_INFESTED_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Elite Buff: Infested",
+        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u5bc4\u751f"
+      },
+      "tooltip_texts": {
+        "en": "Spawns a fly swarm when it dies.",
+        "zh": "\u6b7b\u4ea1\u65f6\u751f\u6210\u8747\u7fa4\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "EliteBuff_Lucky",
+      "effect_code": "EliteBuff_Lucky",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ELITE_LUCKY_NAME",
+      "tooltip_key": "KEYWORD_ELITE_LUCKY_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Elite Buff: Lucky",
+        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u5e78\u8fd0"
+      },
+      "tooltip_texts": {
+        "en": "+3 [img:lck]. +10% Crit Chance. +10% Dodge Chance.",
+        "zh": "+3 [img:lck]\u3002+10% \u66b4\u51fb\u7387\u3002\r\n+10% \u95ea\u907f\u7387\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "EliteBuff_Mad",
+      "effect_code": "EliteBuff_Mad",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ELITE_MAD_NAME",
+      "tooltip_key": "KEYWORD_ELITE_MAD_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Elite Buff: Mad",
+        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u75af\u72c2"
+      },
+      "tooltip_texts": {
+        "en": "Madness. Takes an extra turn per round. Gains +1 all stats and heals 4 when it gets a kill.",
+        "zh": "\u75af\u72c2\u3002\u6bcf\u56de\u5408\u989d\u5916\u884c\u52a8\u4e00\u6b21\u3002\r\n\u51fb\u6740\u65f6\u83b7\u5f97\u5168\u5c5e\u6027 +1 \u5e76\u6062\r\n\u590d 4 \u70b9\u751f\u547d\u503c\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "EliteBuff_Mega",
+      "effect_code": "EliteBuff_Mega",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ELITE_MEGA_NAME",
+      "tooltip_key": "KEYWORD_ELITE_MEGA_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Elite Buff: Mega",
+        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u5de8\u578b"
+      },
+      "tooltip_texts": {
+        "en": "Takes one less turn per round. +50% health and damage",
+        "zh": "\u6bcf\u56de\u5408\u51cf\u5c11\u4e00\u6b21\u884c\u52a8\u3002\r\n+50% \u751f\u547d\u503c\u548c\u4f24\u5bb3"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "EliteBuff_Mirror",
+      "effect_code": "EliteBuff_Mirror",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ELITE_MIRROR_NAME",
+      "tooltip_key": "KEYWORD_ELITE_MIRROR_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Elite Buff: Mirror",
+        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u955c\u50cf"
+      },
+      "tooltip_texts": {
+        "en": "Reflects all projectiles. Takes 2 damage when it reflects a projectile.",
+        "zh": "\u53cd\u5c04\u6240\u6709\u6295\u5c04\u7269\u3002\r\n\u53cd\u5c04\u6295\u5c04\u7269\u65f6\u53d7\u5230 2 \u70b9\u4f24\u5bb3\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "EliteBuff_Plow",
+      "effect_code": "EliteBuff_Plow",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ELITE_PLOW_NAME",
+      "tooltip_key": "KEYWORD_ELITE_PLOW_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Elite Buff: Plow",
+        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u7281\u5730"
+      },
+      "tooltip_texts": {
+        "en": "Trample. Moves one space towards attackers when damaged.",
+        "zh": "\u8df5\u8e0f\u3002\u53d7\u5230\u4f24\u5bb3\u65f6\u5411\u653b\u51fb\u8005\u79fb\u52a8\u4e00\u683c\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "EliteBuff_Protected",
+      "effect_code": "EliteBuff_Protected",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ELITE_PROTECTED_NAME",
+      "tooltip_key": "KEYWORD_ELITE_PROTECTED_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Elite Buff: Protected",
+        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u53d7\u4fdd\u62a4"
+      },
+      "tooltip_texts": {
+        "en": "At the end of each turn, set [img:divineshield] to 1 if it had no [img:divineshield]. -20% max health.",
+        "zh": "\u5728\u6bcf\u56de\u5408\u7ed3\u675f\u65f6\uff0c\u5982\u679c\u672a\u62e5\u6709 [img:divineshield]\uff0c\r\n\u5219\u5c06 [img:divineshield] \u8bbe\u4e3a 1\u3002\r\n-20% \u6700\u5927\u751f\u547d\u503c\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "EliteBuff_Reactive",
+      "effect_code": "EliteBuff_Reactive",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ELITE_REACTIVE_NAME",
+      "tooltip_key": "KEYWORD_ELITE_REACTIVE_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Elite Buff: Reactive",
+        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u53cd\u5e94"
+      },
+      "tooltip_texts": {
+        "en": "+1 Kinetic Spikes",
+        "zh": "+1 \u52a8\u80fd\u5c16\u523a"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "EliteBuff_Resonant",
+      "effect_code": "EliteBuff_Resonant",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ELITE_RESONANT_NAME",
+      "tooltip_key": "KEYWORD_ELITE_RESONANT_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Elite Buff: Resonant",
+        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u5171\u9e23"
+      },
+      "tooltip_texts": {
+        "en": "Whenever an enemy casts a spell, gain All Stats Up 1 and heal 1.",
+        "zh": "\u6bcf\u5f53\u654c\u4eba\u65bd\u653e\u6cd5\u672f\u65f6\uff0c\r\n\u83b7\u5f97 1 \u5c42\u5168\u5c5e\u6027\u63d0\u5347\u5e76\u6062\u590d 1 \u70b9\u751f\u547d\u503c\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "EliteBuff_Sandy",
+      "effect_code": "EliteBuff_Sandy",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ELITE_SANDY_NAME",
+      "tooltip_key": "KEYWORD_ELITE_SANDY_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Elite Buff: Sandy",
+        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u6c99\u5c18"
+      },
+      "tooltip_texts": {
+        "en": "+10% Dodge Chance. Starts a sandstorm when it dies.",
+        "zh": "+10% \u95ea\u907f\u7387\u3002\u6b7b\u4ea1\u65f6\u5f15\u53d1\u6c99\u5c18\u66b4\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "EliteBuff_Shielded1",
+      "effect_code": "EliteBuff_Shielded1",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ELITE_SHIELDED1_NAME",
+      "tooltip_key": "KEYWORD_ELITE_SHIELDED1_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Elite Buff: Shielded",
+        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u62a4\u76fe"
+      },
+      "tooltip_texts": {
+        "en": "At the start of each round, if it has less than 3 [img:shield], set [img:shield] to 3. -20% max health.",
+        "zh": "\u5728\u6bcf\u56de\u5408\u5f00\u59cb\u65f6\uff0c\r\n\u5982\u679c\u62e5\u6709\u7684 [img:shield] \u5c11\u4e8e 3\uff0c\r\n\u5219\u5c06 [img:shield] \u8bbe\u4e3a 3\u3002\r\n-20% \u6700\u5927\u751f\u547d\u503c\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "EliteBuff_Shielded2",
+      "effect_code": "EliteBuff_Shielded2",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ELITE_SHIELDED2_NAME",
+      "tooltip_key": "KEYWORD_ELITE_SHIELDED2_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Elite Buff: Shielded",
+        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u62a4\u76fe"
+      },
+      "tooltip_texts": {
+        "en": "At the start of each round, if it has less than 5 [img:shield], set [img:shield] to 5. -20% max health.",
+        "zh": "\u5728\u6bcf\u56de\u5408\u5f00\u59cb\u65f6\uff0c\r\n\u5982\u679c\u62e5\u6709\u7684 [img:shield] \u5c11\u4e8e 5\uff0c\r\n\u5219\u5c06 [img:shield] \u8bbe\u4e3a 5\u3002\r\n-20% \u6700\u5927\u751f\u547d\u503c\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "EliteBuff_Shielded3",
+      "effect_code": "EliteBuff_Shielded3",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ELITE_SHIELDED3_NAME",
+      "tooltip_key": "KEYWORD_ELITE_SHIELDED3_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Elite Buff: Shielded",
+        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u62a4\u76fe"
+      },
+      "tooltip_texts": {
+        "en": "At the start of each round, if it has less than 7 [img:shield], set [img:shield] to 7. -20% max health.",
+        "zh": "\u5728\u6bcf\u56de\u5408\u5f00\u59cb\u65f6\uff0c\r\n\u5982\u679c\u62e5\u6709\u7684 [img:shield] \u5c11\u4e8e 7\uff0c\r\n\u5219\u5c06 [img:shield] \u8bbe\u4e3a 7\u3002\r\n-20% \u6700\u5927\u751f\u547d\u503c\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "EliteBuff_Shielded4",
+      "effect_code": "EliteBuff_Shielded4",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ELITE_SHIELDED4_NAME",
+      "tooltip_key": "KEYWORD_ELITE_SHIELDED4_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Elite Buff: Shielded",
+        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u62a4\u76fe"
+      },
+      "tooltip_texts": {
+        "en": "At the start of each round, if it has less than 9 [img:shield], set [img:shield] to 9. -20% max health.",
+        "zh": "\u5728\u6bcf\u56de\u5408\u5f00\u59cb\u65f6\uff0c\r\n\u5982\u679c\u62e5\u6709\u7684 [img:shield] \u5c11\u4e8e 9\uff0c\r\n\u5219\u5c06 [img:shield] \u8bbe\u4e3a 9\u3002\r\n-20% \u6700\u5927\u751f\u547d\u503c\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "EliteBuff_SlightlyDepressing",
+      "effect_code": "EliteBuff_SlightlyDepressing",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ELITE_SLIGHTLYDEPRESSING_NAME",
+      "tooltip_key": "KEYWORD_ELITE_SLIGHTLYDEPRESSING_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Elite Buff: Slightly Depressing",
+        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u8f7b\u5fae\u6d88\u6c89"
+      },
+      "tooltip_texts": {
+        "en": "While alive, adjacent enemies have -1 to all stats.",
+        "zh": "\u5b58\u6d3b\u671f\u95f4\uff0c\u76f8\u90bb\u654c\u4eba\u7684\u5168\u5c5e\u6027 -1\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "EliteBuff_Speedy",
+      "effect_code": "EliteBuff_Speedy",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ELITE_SPEEDY_NAME",
+      "tooltip_key": "KEYWORD_ELITE_SPEEDY_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Elite Buff: Speedy",
+        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u8fc5\u6377"
+      },
+      "tooltip_texts": {
+        "en": "+4 [img:spd]",
+        "zh": "+4 [img:spd]"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "EliteBuff_Spiky",
+      "effect_code": "EliteBuff_Spiky",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ELITE_SPIKY_NAME",
+      "tooltip_key": "KEYWORD_ELITE_SPIKY_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Elite Buff: Spiky",
+        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u5c16\u523a"
+      },
+      "tooltip_texts": {
+        "en": "+2 Thorns",
+        "zh": "+2 \u8346\u68d8"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "EliteBuff_Static",
+      "effect_code": "EliteBuff_Static",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ELITE_STATIC_NAME",
+      "tooltip_key": "KEYWORD_ELITE_STATIC_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Elite Buff: Static",
+        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u9759\u7535"
+      },
+      "tooltip_texts": {
+        "en": "Arcs 1 electric damage to neighbors whenever it moves.",
+        "zh": "\u6bcf\u6b21\u79fb\u52a8\u65f6\u5bf9\u76f8\u90bb\u5355\u4f4d\u9020\u6210 1 \u70b9\u7535\u51fb\u4f24\u5bb3\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "EliteBuff_Sticky",
+      "effect_code": "EliteBuff_Sticky",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ELITE_STICKY_NAME",
+      "tooltip_key": "KEYWORD_ELITE_STICKY_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Elite Buff: Sticky",
+        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u7c98\u6027"
+      },
+      "tooltip_texts": {
+        "en": "Anything that contacts or attacks this gets Tarred 1.",
+        "zh": "\u4efb\u4f55\u63a5\u89e6\u6216\u653b\u51fb\u6b64\u5355\u4f4d\u7684\r\n\u76ee\u6807\u5c06\u53d7\u5230 1 \u5c42\u7126\u6cb9\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "EliteBuff_SubUndying",
+      "effect_code": "EliteBuff_SubUndying",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ELITE_SUBUNDYING_NAME",
+      "tooltip_key": "KEYWORD_ELITE_SUBUNDYING_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Elite Buff: Undying",
+        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u4e0d\u673d"
+      },
+      "tooltip_texts": {
+        "en": "Revives to 50% health at the end of the round.",
+        "zh": "\u56de\u5408\u7ed3\u675f\u65f6\u4ee5 50% \u751f\u547d\u503c\u91cd\u751f\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "EliteBuff_Tough",
+      "effect_code": "EliteBuff_Tough",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ELITE_TOUGH_NAME",
+      "tooltip_key": "KEYWORD_ELITE_TOUGH_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Elite Buff: Tough",
+        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u5f3a\u97e7"
+      },
+      "tooltip_texts": {
+        "en": "+2 Brace",
+        "zh": "+2 \u62a4\u7532"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "EliteBuff_Twin",
+      "effect_code": "EliteBuff_Twin",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ELITE_TWIN_NAME",
+      "tooltip_key": "KEYWORD_ELITE_TWIN_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Elite Buff: Twin",
+        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u53cc\u751f"
+      },
+      "tooltip_texts": {
+        "en": "Half health. Comes with a twin.",
+        "zh": "\u751f\u547d\u503c\u51cf\u534a\u3002\u4f34\u968f\u53cc\u751f\u4f53\u51fa\u73b0\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "EliteBuff_Undying",
+      "effect_code": "EliteBuff_Undying",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ELITE_UNDYING_NAME",
+      "tooltip_key": "KEYWORD_ELITE_UNDYING_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Elite Buff: Undying",
+        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u4e0d\u673d"
+      },
+      "tooltip_texts": {
+        "en": "Revives to 50% health at the end of the round. +2 Corpse Health.",
+        "zh": "\u56de\u5408\u7ed3\u675f\u65f6\u4ee5 50% \u751f\u547d\u503c\u91cd\u751f\u3002\r\n+2 \u5c38\u4f53\u751f\u547d\u503c\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "EliteUpgradeNextMinion",
+      "effect_code": "EliteUpgradeNextMinion",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_PROMOTE2_NAME",
+      "tooltip_key": "KEYWORD_PROMOTE2_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Promote+",
+        "zh": "\u664b\u5347+"
+      },
+      "tooltip_texts": {
+        "en": "The next familiar you spawn is upgraded into an [img:elite] Elite.",
+        "zh": "\u4f60\u751f\u6210\u7684\u4e0b\u4e00\u4e2a\u4f7f\u9b54\u5c06\u5347\u7ea7\u4e3a [img:elite] \u7cbe\u82f1\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "EmptyMind",
+      "effect_code": "EmptyMind",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_EMPTYMIND_NAME",
+      "tooltip_key": "KEYWORD_EMPTYMIND_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Empty Mind",
+        "zh": "\u65e0\u5ff5"
+      },
+      "tooltip_texts": {
+        "en": "Spells are disabled. Whenever it gets a kill, it takes an extra turn.",
+        "zh": "\u65e0\u6cd5\u4f7f\u7528\u6cd5\u672f\u3002\u6bcf\u5f53\u5b8c\u6210\u51fb\u6740\u65f6\uff0c\r\n\u83b7\u5f97\u4e00\u4e2a\u989d\u5916\u56de\u5408\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "Enrage",
+      "effect_code": "Enrage",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "Enrage",
+      "tooltip_key": null,
+      "tooltip_stacks_key": null,
+      "name_texts": {},
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "EventBounty",
+      "effect_code": "EventBounty",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_EVENTBOUNTY_NAME",
+      "tooltip_key": null,
+      "tooltip_stacks_key": "KEYWORD_EVENTBOUNTY_DESC",
+      "name_texts": {
+        "en": "Bounty",
+        "zh": "\u8d4f\u91d1"
+      },
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {
+        "en": "Hunted by the bounty hunter.",
+        "zh": "\u88ab\u8d4f\u91d1\u730e\u4eba\u8ffd\u6355\u3002"
+      }
+    },
+    {
+      "row_code": "Evolution",
+      "effect_code": "Evolution",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_EVOLUTION_NAME",
+      "tooltip_key": "KEYWORD_EVOLUTION_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "[img:evolution] Mutation",
+        "zh": "[img:evolution] \u7a81\u53d8"
+      },
+      "tooltip_texts": {
+        "en": "Adds a chance for cats to receive random mutations each night.",
+        "zh": "\u589e\u52a0\u732b\u54aa\u6bcf\u665a\u83b7\u5f97\u968f\u673a\u7a81\u53d8\u7684\u51e0\u7387\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "Exhaustion",
+      "effect_code": "Exhaustion",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_EXHAUSTION_NAME",
+      "tooltip_key": "KEYWORD_EXHAUSTION_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_EXHAUSTION_DESC",
+      "name_texts": {
+        "en": "Exhaustion",
+        "zh": "\u75b2\u52b3"
+      },
+      "tooltip_texts": {
+        "en": "Takes unblockable damage at the start of its turn, then increase Exhaustion by 1. Decreases mana and health gain. Combat regen disabled.",
+        "zh": "\u5728\u56de\u5408\u5f00\u59cb\u65f6\u53d7\u5230\u4e0d\u53ef\u683c\u6321\u4f24\u5bb3\uff0c\r\n\u7136\u540e\u75b2\u52b3\u589e\u52a0 1\u3002\r\n\u51cf\u5c11\u6cd5\u529b\u548c\u751f\u547d\u503c\u83b7\u53d6\u3002\r\n\u6218\u6597\u6062\u590d\u5931\u6548\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "Takes {stacks} unblockable damage at the start of its turn, then increase Exhaustion by 1. Whenever it would gain mana or health, gain {stacks} less mana or health. Combat regen disabled. Cannot be removed. It's time to finish the fight.",
+        "zh": "\u5728\u56de\u5408\u5f00\u59cb\u65f6\u53d7\u5230 {stacks} \u70b9\u4e0d\u53ef\u683c\u6321\u4f24\u5bb3\uff0c\r\n\u7136\u540e\u75b2\u52b3\u589e\u52a0 1\u3002\r\n\u6bcf\u5f53\u83b7\u5f97\u6cd5\u529b\u6216\u751f\u547d\u503c\u65f6\uff0c\r\n\u83b7\u5f97\u7684\u6570\u503c\u51cf\u5c11 {stacks}\u3002\u6218\u6597\u6062\u590d\u5931\u6548\u3002\r\n\u4e0d\u53ef\u79fb\u9664\u3002\u662f\u65f6\u5019\u7ed3\u675f\u6218\u6597\u4e86\u3002"
+      }
+    },
+    {
+      "row_code": "ExtraBasicAttacks_Status",
+      "effect_code": "ExtraBasicAttacks_Status",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_EXTRAATTACK_NAME",
+      "tooltip_key": null,
+      "tooltip_stacks_key": "KEYWORD_EXTRAATTACK_DESC",
+      "name_texts": {
+        "en": "Extra Attacks",
+        "zh": "\u989d\u5916\u653b\u51fb"
+      },
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {
+        "en": "Can attack {stacks} extra times each turn.",
+        "zh": "\u6bcf\u56de\u5408\u53ef\u4ee5\u989d\u5916\u653b\u51fb {stacks} \u6b21\u3002"
+      }
+    },
+    {
+      "row_code": "ExtraBasicMoves_Status",
+      "effect_code": "ExtraBasicMoves_Status",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_EXTRAMOVE_NAME",
+      "tooltip_key": null,
+      "tooltip_stacks_key": "KEYWORD_EXTRAMOVE_DESC",
+      "name_texts": {
+        "en": "Extra Moves",
+        "zh": "\u989d\u5916\u79fb\u52a8"
+      },
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {
+        "en": "Can move {stacks} extra times each turn.",
+        "zh": "\u6bcf\u56de\u5408\u53ef\u4ee5\u989d\u5916\u79fb\u52a8 {stacks} \u6b21\u3002"
+      }
+    },
+    {
+      "row_code": "Fear",
+      "effect_code": "Fear",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_FEAR_NAME",
+      "tooltip_key": "KEYWORD_FEAR_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Fear",
+        "zh": "\u6050\u60e7"
+      },
+      "tooltip_texts": {
+        "en": "Moves as far away from enemies as it can at the start of its turn.",
+        "zh": "\u5728\u56de\u5408\u5f00\u59cb\u65f6\u5c3d\u53ef\u80fd\u8fdc\u79bb\u654c\u4eba\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "FinalBossHitCountdownBoris",
+      "effect_code": "FinalBossHitCountdownBoris",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_CHILDPULSE_NAME",
+      "tooltip_key": "KEYWORD_CHILDPULSE_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "The Child's Flame",
+        "zh": "\u5723\u5b50\u4e4b\u706b"
+      },
+      "tooltip_texts": {
+        "en": "Counts down every time it gets hit. At 0, releases a pulse.",
+        "zh": "\u6bcf\u6b21\u53d7\u5230\u653b\u51fb\u65f6\u5012\u8ba1\u65f6\u3002\u5f53\u5f52\u96f6\u65f6\uff0c\r\n\u91ca\u653e\u8109\u51b2\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "FinalBossHitCountdownExplosive",
+      "effect_code": "FinalBossHitCountdownExplosive",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_CHILDWRATH_NAME",
+      "tooltip_key": "KEYWORD_CHILDWRATH_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "The Child's Flame",
+        "zh": "\u5723\u5b50\u4e4b\u706b"
+      },
+      "tooltip_texts": {
+        "en": "Counts down every time it gets hit. At 0, unleash a wrath of holy light.",
+        "zh": "\u6bcf\u6b21\u53d7\u5230\u653b\u51fb\u65f6\u5012\u8ba1\u65f6\u3002\u5f53\u5f52\u96f6\u65f6\uff0c\r\n\u91ca\u653e\u795e\u5723\u4e4b\u5149\u7684\u6124\u6012\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "FinalBossHitCountdownHoly",
+      "effect_code": "FinalBossHitCountdownHoly",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_CHILDHOLY_NAME",
+      "tooltip_key": "KEYWORD_CHILDHOLY_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "The Child's Flame",
+        "zh": "\u5723\u5b50\u4e4b\u706b"
+      },
+      "tooltip_texts": {
+        "en": "Counts down every time it gets hit. At 0, unleash the holy beams.",
+        "zh": "\u6bcf\u6b21\u53d7\u5230\u653b\u51fb\u65f6\u5012\u8ba1\u65f6\u3002\u5f53\u5f52\u96f6\u65f6\uff0c\r\n\u91ca\u653e\u795e\u5723\u5149\u675f\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "FireArmor",
+      "effect_code": "FireArmor",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "FireArmor",
+      "tooltip_key": null,
+      "tooltip_stacks_key": null,
+      "name_texts": {},
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "FireArmor2",
+      "effect_code": "FireArmor2",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "FireArmor2",
+      "tooltip_key": null,
+      "tooltip_stacks_key": null,
+      "name_texts": {},
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "Flammable",
+      "effect_code": "Flammable",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_FLAMMABLE_NAME",
+      "tooltip_key": "KEYWORD_FLAMMABLE_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Flammable",
+        "zh": "\u6613\u71c3"
+      },
+      "tooltip_texts": {
+        "en": "This item burns up when hit with fire.",
+        "zh": "\u5f53\u88ab\u706b\u7130\u51fb\u4e2d\u65f6\uff0c\u6b64\u7269\u54c1\u4f1a\u70e7\u6bc1\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "Flying",
+      "effect_code": "Flying",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_FLYING_NAME",
+      "tooltip_key": "KEYWORD_FLYING_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Flying",
+        "zh": "\u98de\u884c"
+      },
+      "tooltip_texts": {
+        "en": "Ignores tiles and can pass over units and objects.",
+        "zh": "\u65e0\u89c6\u5730\u5757\uff0c\u5e76\u53ef\u8d8a\u8fc7\u5355\u4f4d\u548c\u7269\u4f53\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "Fragile",
+      "effect_code": "Fragile",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_FRAGILE_NAME",
+      "tooltip_key": "KEYWORD_FRAGILE_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Fragile",
+        "zh": "\u6613\u788e"
+      },
+      "tooltip_texts": {
+        "en": "This item breaks when you're downed.",
+        "zh": "\u5f53\u4f60\u5012\u5730\u65f6\uff0c\u6b64\u7269\u54c1\u4f1a\u7834\u788e\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "FreeSpell",
+      "effect_code": "FreeSpell",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_FREESPELL_NAME",
+      "tooltip_key": "KEYWORD_FREESPELL_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Free Spell",
+        "zh": "\u514d\u8d39\u6cd5\u672f"
+      },
+      "tooltip_texts": {
+        "en": "The next spell you cast costs 0 mana.",
+        "zh": "\u4f60\u65bd\u653e\u7684\u4e0b\u4e00\u4e2a\u6cd5\u672f\u6d88\u8017 0 \u6cd5\u529b\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "Freeze",
+      "effect_code": "Freeze",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_FREEZE_NAME",
+      "tooltip_key": "KEYWORD_FREEZE_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Freeze",
+        "zh": "\u51bb\u7ed3"
+      },
+      "tooltip_texts": {
+        "en": "Cannot take damage. Unfreezes at the start of its turn.",
+        "zh": "\u4e0d\u4f1a\u53d7\u5230\u4f24\u5bb3\u3002\u5728\u56de\u5408\u5f00\u59cb\u65f6\u89e3\u9664\u51bb\u7ed3\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "Grappled",
+      "effect_code": "Grappled",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_GRAPPLED_NAME",
+      "tooltip_key": "KEYWORD_GRAPPLED_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Grappled",
+        "zh": "\u88ab\u64d2\u62b1"
+      },
+      "tooltip_texts": {
+        "en": "Immobile as long as it's next to the thing that grappled it.",
+        "zh": "\u53ea\u8981\u5728\u64d2\u62b1\u8005\u8eab\u65c1\uff0c\u5c31\u4e00\u76f4\u5b9a\u8eab\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "HealRandomInjury",
+      "effect_code": "HealRandomInjury",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_HEALRANDOMINJURY_NAME",
+      "tooltip_key": "KEYWORD_HEALRANDOMINJURY_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Cure Random Injury",
+        "zh": "\u6cbb\u6108\u968f\u673a\u521b\u4f24"
+      },
+      "tooltip_texts": {
+        "en": "Cure a random injury that was permanently lowering one of your stats, if you have any.",
+        "zh": "\u6cbb\u6108\u4e00\u4e2a\u6c38\u4e45\u964d\u4f4e\u4f60\u5c5e\u6027\u7684\u968f\u673a\u521b\u4f24\uff08\u5982\u679c\u6709\uff09\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "Health",
+      "effect_code": "Health",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_HEALTH_NAME",
+      "tooltip_key": "KEYWORD_HEALTH_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "[img:health] Health",
+        "zh": "[img:health] \u5065\u5eb7\u5ea6"
+      },
+      "tooltip_texts": {
+        "en": "Affects lifespan and chance to develop or cure disorders each night",
+        "zh": "\u5f71\u54cd\u5bff\u547d\u4ee5\u53ca\u6bcf\u665a\u60a3\u4e0a\u6216\u6cbb\u6108\u75c5\u75c7\u7684\u51e0\u7387\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "HealthRegenUp",
+      "effect_code": "HealthRegenUp",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_HEALTHREGEN_NAME",
+      "tooltip_key": "KEYWORD_HEALTHREGEN_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_HEALTHREGEN_DESC",
+      "name_texts": {
+        "en": "Health Regen",
+        "zh": "\u751f\u547d\u6062\u590d"
+      },
+      "tooltip_texts": {
+        "en": "Regenerates health at the end of its turn.",
+        "zh": "\u5728\u56de\u5408\u7ed3\u675f\u65f6\u6062\u590d\u751f\u547d\u503c\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "Regenerate {stacks} health at the end of its turn.",
+        "zh": "\u5728\u56de\u5408\u7ed3\u675f\u65f6\u6062\u590d {stacks} \u70b9\u751f\u547d\u503c\u3002"
+      }
+    },
+    {
+      "row_code": "HeatWave",
+      "effect_code": "HeatWave",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_DEHYDRATED_NAME",
+      "tooltip_key": "KEYWORD_DEHYDRATED_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {},
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "HeavierHits",
+      "effect_code": "HeavierHits",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_HEAVIERHITS_NAME",
+      "tooltip_key": null,
+      "tooltip_stacks_key": "KEYWORD_HEAVIERHITS_DESC_STACKS",
+      "name_texts": {
+        "en": "Heavier Hits",
+        "zh": "\u66f4\u6c89\u91cd\u6253\u51fb"
+      },
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {
+        "en": "Physical damage inflicts Bruise {stacks} this turn.",
+        "zh": "\u672c\u56de\u5408\u7269\u7406\u4f24\u5bb3\u65bd\u52a0 {stacks} \u5c42\u6de4\u4f24\u3002"
+      }
+    },
+    {
+      "row_code": "HeavyHits",
+      "effect_code": "HeavyHits",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_HEAVYHITS_NAME",
+      "tooltip_key": null,
+      "tooltip_stacks_key": "KEYWORD_HEAVYHITS_DESC_STACKS",
+      "name_texts": {
+        "en": "Heavy Hits",
+        "zh": "\u6c89\u91cd\u6253\u51fb"
+      },
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {
+        "en": "Basic attack inflicts Bruise {stacks} this turn.",
+        "zh": "\u672c\u56de\u5408\u57fa\u7840\u653b\u51fb\u65bd\u52a0 {stacks} \u5c42\u6de4\u4f24\u3002"
+      }
+    },
+    {
+      "row_code": "Hex",
+      "effect_code": "Hex",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_HEX_NAME",
+      "tooltip_key": "KEYWORD_HEX_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_HEX_DESC",
+      "name_texts": {
+        "en": "Hex",
+        "zh": "\u5996\u672f"
+      },
+      "tooltip_texts": {
+        "en": "Spells cost more mana to cast.",
+        "zh": "\u65bd\u653e\u6cd5\u672f\u6d88\u8017\u66f4\u591a\u6cd5\u529b\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "Spells cost {stacks} more mana to cast.",
+        "zh": "\u65bd\u653e\u6cd5\u672f\u6d88\u8017\u7684\u6cd5\u529b\u589e\u52a0 {stacks} \u70b9\u3002"
+      }
+    },
+    {
+      "row_code": "IceArmor",
+      "effect_code": "IceArmor",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "IceArmor",
+      "tooltip_key": null,
+      "tooltip_stacks_key": null,
+      "name_texts": {},
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "ImbueBleed",
+      "effect_code": "ImbueBleed",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "ImbueBleed",
+      "tooltip_key": "Next physical attack inflicts Bleed",
+      "tooltip_stacks_key": "Next physical attack inflicts Bleed {stacks}",
+      "name_texts": {},
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "ImbueKnockOutCoin",
+      "effect_code": "ImbueKnockOutCoin",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "ImbueKnockOutCoin",
+      "tooltip_key": null,
+      "tooltip_stacks_key": null,
+      "name_texts": {},
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "ImbueManaLeech",
+      "effect_code": "ImbueManaLeech",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "ImbueManaLeech",
+      "tooltip_key": null,
+      "tooltip_stacks_key": null,
+      "name_texts": {},
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "ImbuePoison",
+      "effect_code": "ImbuePoison",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "ImbuePoison",
+      "tooltip_key": null,
+      "tooltip_stacks_key": null,
+      "name_texts": {},
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "ImbueRandomStatDown",
+      "effect_code": "ImbueRandomStatDown",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "ImbueRandomStatDown",
+      "tooltip_key": null,
+      "tooltip_stacks_key": null,
+      "name_texts": {},
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "ImbueWeakness",
+      "effect_code": "ImbueWeakness",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "ImbueWeakness",
+      "tooltip_key": null,
+      "tooltip_stacks_key": null,
+      "name_texts": {},
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "Immobile",
+      "effect_code": "Immobile",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_IMMOBILE_NAME",
+      "tooltip_key": "KEYWORD_IMMOBILE_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Immobile",
+        "zh": "\u5b9a\u8eab"
+      },
+      "tooltip_texts": {
+        "en": "Cannot move.",
+        "zh": "\u65e0\u6cd5\u79fb\u52a8\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "Infested",
+      "effect_code": "Infested",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_INFESTED_NAME",
+      "tooltip_key": "KEYWORD_INFESTED_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Infested",
+        "zh": "\u5bc4\u751f"
+      },
+      "tooltip_texts": {
+        "en": "The things infesting this pop out when it dies, destroying its corpse.",
+        "zh": "\u6b7b\u4ea1\u65f6\u5bc4\u751f\u7269\u4f1a\u94bb\u51fa\uff0c\u6467\u6bc1\u5176\u5c38\u4f53\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "IntelligenceUp_pos",
+      "effect_code": "IntelligenceUp",
+      "variant": "pos",
+      "alias_of": null,
+      "name_key": "KEYWORD_INTUP_NAME",
+      "tooltip_key": null,
+      "tooltip_stacks_key": "KEYWORD_INTUP_DESC",
+      "name_texts": {
+        "en": "Intelligence Up",
+        "zh": "\u667a\u529b\u63d0\u5347"
+      },
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {
+        "en": "Intelligence increased by {stacks}.\nIntelligence affects mana regen.",
+        "zh": "\u667a\u529b\u589e\u52a0 {stacks} \u70b9\u3002\r\n\u667a\u529b\u5f71\u54cd\u6cd5\u529b\u6062\u590d\u3002"
+      }
+    },
+    {
+      "row_code": "IntelligenceUp_neg",
+      "effect_code": "IntelligenceUp",
+      "variant": "neg",
+      "alias_of": null,
+      "name_key": "KEYWORD_INTDOWN_NAME",
+      "tooltip_key": null,
+      "tooltip_stacks_key": "KEYWORD_INTDOWN_DESC",
+      "name_texts": {
+        "en": "Intelligence Down",
+        "zh": "\u667a\u529b\u4e0b\u964d"
+      },
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {
+        "en": "Intelligence decreased by {absstacks}.\nIntelligence affects mana regen.",
+        "zh": "\u667a\u529b\u51cf\u5c11 {absstacks} \u70b9\u3002\r\n\u667a\u529b\u5f71\u54cd\u6cd5\u529b\u6062\u590d\u3002"
+      }
+    },
+    {
+      "row_code": "Invulnerable",
+      "effect_code": "Invulnerable",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_INVULNERABLE_NAME",
+      "tooltip_key": "KEYWORD_INVULNERABLE_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Invulnerable",
+        "zh": "\u65e0\u654c"
+      },
+      "tooltip_texts": {
+        "en": "Does not take damage.",
+        "zh": "\u4e0d\u4f1a\u53d7\u5230\u4f24\u5bb3\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "KineticSpikes",
+      "effect_code": "KineticSpikes",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_KINETICSPPIKES_NAME",
+      "tooltip_key": "KEYWORD_KINETICSPPIKES_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_KINETICSPPIKES_DESC",
+      "name_texts": {
+        "en": "Kinetic Spikes",
+        "zh": "\u52a8\u80fd\u5c16\u523a"
+      },
+      "tooltip_texts": {
+        "en": "When this takes damage, emit Sparkles.",
+        "zh": "\u53d7\u5230\u4f24\u5bb3\u65f6\uff0c\u53d1\u5c04\u706b\u82b1\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "When this takes damage, emit {stacks} Sparkles.",
+        "zh": "\u53d7\u5230\u4f24\u5bb3\u65f6\uff0c\u53d1\u5c04 {stacks} \u4e2a\u706b\u82b1\u3002"
+      }
+    },
+    {
+      "row_code": "Knockback",
+      "effect_code": "Knockback",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "Knockback",
+      "tooltip_key": null,
+      "tooltip_stacks_key": null,
+      "name_texts": {},
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "LateBloomer",
+      "effect_code": "LateBloomer",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_LATEBLOOMER_NAME",
+      "tooltip_key": null,
+      "tooltip_stacks_key": "KEYWORD_LATEBLOOMER_DESC",
+      "name_texts": {
+        "en": "Late Bloomer",
+        "zh": "\u5927\u5668\u665a\u6210"
+      },
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {
+        "en": "Gain All Stats Up 3 in {stacks} turns.",
+        "zh": "\u5728 {stacks} \u56de\u5408\u540e\u83b7\u5f97\u5168\u5c5e\u6027\u63d0\u5347 3\u3002"
+      }
+    },
+    {
+      "row_code": "Leech",
+      "effect_code": "Leech",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_LIFESTEAL_NAME",
+      "tooltip_key": "KEYWORD_LIFESTEAL2_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Lifesteal",
+        "zh": "\u751f\u547d\u5077\u53d6"
+      },
+      "tooltip_texts": {
+        "en": "Heals you equal to the amount of health damage dealt.",
+        "zh": "\u6839\u636e\u9020\u6210\u7684\u4f24\u5bb3\u91cf\u4e3a\u4f60\u6062\u590d\u751f\u547d\u503c\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "Leeches",
+      "effect_code": "Leeches",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_LEECHES_NAME",
+      "tooltip_key": "KEYWORD_LEECHES_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_LEECHES_DESC",
+      "name_texts": {
+        "en": "Leeches",
+        "zh": "\u6c34\u86ed"
+      },
+      "tooltip_texts": {
+        "en": "Drains health from the leeched unit at the end of your turn.",
+        "zh": "\u5728\u4f60\u7684\u56de\u5408\u7ed3\u675f\u65f6\u4ece\u88ab\u5bc4\u751f\u5355\u4f4d\u5438\u53d6\u751f\u547d\u503c\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "Drains {stacks} health at the end of the round.",
+        "zh": "\u5728\u56de\u5408\u7ed3\u675f\u65f6\u5438\u53d6 {stacks} \u70b9\u751f\u547d\u503c\u3002"
+      }
+    },
+    {
+      "row_code": "Leeches_reference_applier",
+      "effect_code": "Leeches",
+      "variant": "reference_applier",
+      "alias_of": null,
+      "name_key": "KEYWORD_LEECHES_NAME_APPLIER",
+      "tooltip_key": "KEYWORD_LEECHES_DESC_APPLIER",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "{applier's} Leeches.",
+        "zh": "{applier} \u7684\u6c34\u86ed\u3002"
+      },
+      "tooltip_texts": {
+        "en": "Drains {stacks} health at the end of {applier's} turn and gives it to {applier}.",
+        "zh": "\u5728 {applier} \u7684\u56de\u5408\u7ed3\u675f\u65f6\u5438\u53d6 {stacks} \u70b9\u751f\u547d\u503c\u5e76\u7ed9\u4e88 {applier}\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "Lifesteal",
+      "effect_code": "Lifesteal",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_LIFESTEAL_NAME",
+      "tooltip_key": "KEYWORD_LIFESTEAL_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_LIFESTEAL_DESC",
+      "name_texts": {
+        "en": "Lifesteal",
+        "zh": "\u751f\u547d\u5077\u53d6"
+      },
+      "tooltip_texts": {
+        "en": "Your next basic attack heals you for the amount of health damage it inflicts.",
+        "zh": "\u4f60\u7684\u4e0b\u4e00\u6b21\u57fa\u7840\u653b\u51fb\u4f1a\u6839\u636e\u9020\u6210\u7684\r\n\u4f24\u5bb3\u91cf\u4e3a\u4f60\u6062\u590d\u751f\u547d\u503c\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "The next {stacks} basic attacks you do heal you for the amount of health damage they inflict.",
+        "zh": "\u4f60\u63a5\u4e0b\u6765\u7684 {stacks} \u6b21\u57fa\u7840\u653b\u51fb\u4f1a\u6839\u636e\u9020\u6210\u7684\r\n\u4f24\u5bb3\u91cf\u4e3a\u4f60\u6062\u590d\u751f\u547d\u503c\u3002"
+      }
+    },
+    {
+      "row_code": "LoseShieldNextTurn",
+      "effect_code": "LoseShieldNextTurn",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "LoseShieldNextTurn",
+      "tooltip_key": null,
+      "tooltip_stacks_key": null,
+      "name_texts": {},
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "LuckUp_pos",
+      "effect_code": "LuckUp",
+      "variant": "pos",
+      "alias_of": null,
+      "name_key": "KEYWORD_LCKUP_NAME",
+      "tooltip_key": null,
+      "tooltip_stacks_key": "KEYWORD_LCKUP_DESC",
+      "name_texts": {
+        "en": "Luck Up",
+        "zh": "\u5e78\u8fd0\u63d0\u5347"
+      },
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {
+        "en": "Luck increased by {stacks}.\nLuck affects base crit chance and all randomness.",
+        "zh": "\u5e78\u8fd0\u589e\u52a0 {stacks} \u70b9\u3002\r\n\u5e78\u8fd0\u5f71\u54cd\u57fa\u7840\u66b4\u51fb\u7387\u548c\u6240\u6709\u968f\u673a\u6027\u3002"
+      }
+    },
+    {
+      "row_code": "LuckUp_neg",
+      "effect_code": "LuckUp",
+      "variant": "neg",
+      "alias_of": null,
+      "name_key": "KEYWORD_LCKDOWN_NAME",
+      "tooltip_key": null,
+      "tooltip_stacks_key": "KEYWORD_LCKDOWN_DESC",
+      "name_texts": {
+        "en": "Luck Down",
+        "zh": "\u5e78\u8fd0\u4e0b\u964d"
+      },
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {
+        "en": "Luck decreased by {absstacks}.\nLuck affects base crit chance and all randomness.",
+        "zh": "\u5e78\u8fd0\u51cf\u5c11 {absstacks} \u70b9\u3002\r\n\u5e78\u8fd0\u5f71\u54cd\u57fa\u7840\u66b4\u51fb\u7387\u548c\u6240\u6709\u968f\u673a\u6027\u3002"
+      }
+    },
+    {
+      "row_code": "Madness",
+      "effect_code": "Madness",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_MADNESS_NAME",
+      "tooltip_key": "KEYWORD_MADNESS_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Madness",
+        "zh": "\u75af\u72c2"
+      },
+      "tooltip_texts": {
+        "en": "Thinks everything is an enemy. Uncontrollable.",
+        "zh": "\u89c6\u4e00\u5207\u4e3a\u654c\u3002\u4e0d\u53d7\u63a7\u5236\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "MagicWeakness",
+      "effect_code": "MagicWeakness",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_MAGICWEAKNESS_NAME",
+      "tooltip_key": "KEYWORD_MAGICWEAKNESS_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Magic Weakness",
+        "zh": "\u9b54\u6cd5\u5f31\u70b9"
+      },
+      "tooltip_texts": {
+        "en": "Incoming magic damage has 100% Crit Chance and can't miss.",
+        "zh": "\u53d7\u5230\u7684\r\n\u9b54\u6cd5\u4f24\u5bb3\u5177\u6709 100% \u66b4\u51fb\u7387\u4e14\u5fc5\u5b9a\u547d\u4e2d\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "ManaLeeches",
+      "effect_code": "ManaLeeches",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_MANALEECHES_NAME",
+      "tooltip_key": "KEYWORD_MANALEECHES_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_MANALEECHES_DESC",
+      "name_texts": {
+        "en": "Mana Leeches",
+        "zh": "\u6cd5\u529b\u6c34\u86ed"
+      },
+      "tooltip_texts": {
+        "en": "Drains mana from the leeched unit at the end of your turn.",
+        "zh": "\u5728\u4f60\u7684\u56de\u5408\u7ed3\u675f\u65f6\u4ece\u88ab\u5bc4\u751f\u5355\u4f4d\u5438\u53d6\u6cd5\u529b\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "Drains {stacks} mana at the end of the round.",
+        "zh": "\u5728\u56de\u5408\u7ed3\u675f\u65f6\u5438\u53d6 {stacks} \u70b9\u6cd5\u529b\u3002"
+      }
+    },
+    {
+      "row_code": "ManaLeeches_reference_applier",
+      "effect_code": "ManaLeeches",
+      "variant": "reference_applier",
+      "alias_of": null,
+      "name_key": "KEYWORD_MANALEECHES_NAME_APPLIER",
+      "tooltip_key": "KEYWORD_MANALEECHES_DESC_APPLIER",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "{applier's} Mana Leeches",
+        "zh": "{applier} \u7684\u6cd5\u529b\u6c34\u86ed"
+      },
+      "tooltip_texts": {
+        "en": "Drains {stacks} mana at the end of {applier's} turn and gives it to {applier}.",
+        "zh": "\u5728 {applier} \u7684\u56de\u5408\u7ed3\u675f\u65f6\u5438\u53d6 {stacks} \u70b9\u6cd5\u529b\u5e76\u7ed9\u4e88 {applier}\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "Marked",
+      "effect_code": "Marked",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_MARKED_NAME",
+      "tooltip_key": "KEYWORD_MARKED_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Marked",
+        "zh": "\u6807\u8bb0"
+      },
+      "tooltip_texts": {
+        "en": "Incoming physical damage has 100% Crit Chance, ignores shield, and can't miss.",
+        "zh": "\u53d7\u5230\u7684\u7269\u7406\u4f24\u5bb3\u5177\u6709 100% \u66b4\u51fb\u7387\uff0c\r\n\u65e0\u89c6\u62a4\u76fe\uff0c\u4e14\u5fc5\u5b9a\u547d\u4e2d\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "Meaty",
+      "effect_code": "Meaty",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_MEATY_NAME",
+      "tooltip_key": "KEYWORD_MEATY_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Meaty",
+        "zh": "\u591a\u8089"
+      },
+      "tooltip_texts": {
+        "en": "Turns into meat when it dies.",
+        "zh": "\u6b7b\u4ea1\u65f6\u53d8\u6210\u8089\u5757\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "Metal",
+      "effect_code": "Metal",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_METAL_NAME",
+      "tooltip_key": "KEYWORD_METAL_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Metal",
+        "zh": "\u91d1\u5c5e"
+      },
+      "tooltip_texts": {
+        "en": "This item is electrically conductive.",
+        "zh": "\u6b64\u7269\u54c1\u5bfc\u7535\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "MissChance",
+      "effect_code": "MissChance",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_MISSCHANCE_NAME",
+      "tooltip_key": null,
+      "tooltip_stacks_key": "KEYWORD_MISSCHANCE_DESC",
+      "name_texts": {
+        "en": "Miss Chance",
+        "zh": "\u672a\u547d\u4e2d\u7387"
+      },
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {
+        "en": "Miss chance increased by {stacks}%.",
+        "zh": "\u672a\u547d\u4e2d\u7387\u589e\u52a0 {stacks}%\u3002"
+      }
+    },
+    {
+      "row_code": "MoveQuivered",
+      "effect_code": "MoveQuivered",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_BONUSMOVE_NAME",
+      "tooltip_key": null,
+      "tooltip_stacks_key": "KEYWORD_BONUSMOVE_DESC_STACKS",
+      "name_texts": {
+        "en": "Bonus Move",
+        "zh": "\u5956\u52b1\u79fb\u52a8"
+      },
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {
+        "en": "{stacks} extra basic moves that are saved across turns if unused.",
+        "zh": "{stacks} \u6b21\u989d\u5916\u7684\u57fa\u7840\u79fb\u52a8\uff0c\u5982\u679c\u672a\u4f7f\u7528\uff0c\r\n\u53ef\u4ee5\u4fdd\u7559\u5230\u540e\u7eed\u56de\u5408\u3002"
+      }
+    },
+    {
+      "row_code": "MovementUp_pos",
+      "effect_code": "MovementUp",
+      "variant": "pos",
+      "alias_of": null,
+      "name_key": "KEYWORD_MOVEMENTUP_NAME",
+      "tooltip_key": "KEYWORD_MOVEMENTUP_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_MOVEMENTUP_DESC",
+      "name_texts": {
+        "en": "Movement Up",
+        "zh": "\u79fb\u52a8\u529b\u63d0\u5347"
+      },
+      "tooltip_texts": {
+        "en": "Increases your basic movement's range.",
+        "zh": "\u589e\u52a0\u4f60\u7684\u57fa\u7840\u79fb\u52a8\u8ddd\u79bb\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "Basic movement range increased by {stacks}.",
+        "zh": "\u57fa\u7840\u79fb\u52a8\u8ddd\u79bb\u589e\u52a0 {stacks}\u3002"
+      }
+    },
+    {
+      "row_code": "MovementUp_neg",
+      "effect_code": "MovementUp",
+      "variant": "neg",
+      "alias_of": null,
+      "name_key": "KEYWORD_MOVEMENTDOWN_NAME",
+      "tooltip_key": "KEYWORD_MOVEMENTDOWN_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_MOVEMENTDOWN_DESC",
+      "name_texts": {
+        "en": "Movement Down",
+        "zh": "\u79fb\u52a8\u529b\u4e0b\u964d"
+      },
+      "tooltip_texts": {
+        "en": "Decreases your basic movement's range.",
+        "zh": "\u51cf\u5c11\u4f60\u7684\u57fa\u7840\u79fb\u52a8\u8ddd\u79bb\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "Basic movement range decreased by {stacks}.",
+        "zh": "\u57fa\u7840\u79fb\u52a8\u8ddd\u79bb\u51cf\u5c11 {stacks}\u3002"
+      }
+    },
+    {
+      "row_code": "Muted",
+      "effect_code": "Muted",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_MUTED_NAME",
+      "tooltip_key": "KEYWORD_MUTED_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_MUTED_DESC",
+      "name_texts": {
+        "en": "Muted",
+        "zh": "\u6c89\u9ed8"
+      },
+      "tooltip_texts": {
+        "en": "Disables a random spell until the applier is killed.",
+        "zh": "\u7981\u7528\u4e00\u4e2a\u968f\u673a\u6cd5\u672f\uff0c\u76f4\u5230\u65bd\u52a0\u8005\u6b7b\u4ea1\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "{stacks} of your spells are disabled until {applier} dies.",
+        "zh": "{stacks} \u4e2a\u6cd5\u672f\u88ab\u7981\u7528\uff0c\u76f4\u5230 {applier} \u6b7b\u4ea1\u3002"
+      }
+    },
+    {
+      "row_code": "NextAbilityHeals",
+      "effect_code": "NextAbilityHeals",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "NextAbilityHeals",
+      "tooltip_key": null,
+      "tooltip_stacks_key": null,
+      "name_texts": {},
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "NextAbilityIncreaseRange",
+      "effect_code": "NextAbilityIncreaseRange",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "NextAbilityIncreaseRange",
+      "tooltip_key": null,
+      "tooltip_stacks_key": null,
+      "name_texts": {},
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "NextAttackBonusRange",
+      "effect_code": "NextAttackBonusRange",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_BONUSRANGE_NAME",
+      "tooltip_key": "KEYWORD_BONUSRANGE_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_BONUSRANGE_DESC",
+      "name_texts": {
+        "en": "Bonus Range",
+        "zh": "\u989d\u5916\u5c04\u7a0b"
+      },
+      "tooltip_texts": {
+        "en": "Increases the range of your next basic attack.",
+        "zh": "\u589e\u52a0\u4f60\u4e0b\u4e00\u6b21\u57fa\u7840\u653b\u51fb\u7684\u5c04\u7a0b\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "Your next basic attack has +{stacks} range.",
+        "zh": "\u4f60\u7684\u4e0b\u4e00\u6b21\u57fa\u7840\u653b\u51fb\u62e5\u6709 +{stacks} \u5c04\u7a0b\u3002"
+      }
+    },
+    {
+      "row_code": "NextDamageReduceAndHealAllies",
+      "effect_code": "NextDamageReduceAndHealAllies",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "NextDamageReduceAndHealAllies",
+      "tooltip_key": null,
+      "tooltip_stacks_key": null,
+      "name_texts": {},
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "NextDamageReduceAndPushback",
+      "effect_code": "NextDamageReduceAndPushback",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "NextDamageReduceAndPushback",
+      "tooltip_key": null,
+      "tooltip_stacks_key": null,
+      "name_texts": {},
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "NextDamageReduceThisTurn",
+      "effect_code": "NextDamageReduceThisTurn",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "NextDamageReduceThisTurn",
+      "tooltip_key": null,
+      "tooltip_stacks_key": null,
+      "name_texts": {},
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "NextMoveRangeIncrease",
+      "effect_code": "NextMoveRangeIncrease",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "NextMoveRangeIncrease",
+      "tooltip_key": null,
+      "tooltip_stacks_key": null,
+      "name_texts": {},
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "NextSpellHealEqualToMana",
+      "effect_code": "NextSpellHealEqualToMana",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "NextSpellHealEqualToMana",
+      "tooltip_key": null,
+      "tooltip_stacks_key": null,
+      "name_texts": {},
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "NextTurnDoubleRangedDamage",
+      "effect_code": "NextTurnDoubleRangedDamage",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_DOUBLERANGEDDMG_NAME",
+      "tooltip_key": "KEYWORD_DOUBLERANGEDDMG_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Double Ranged Damage",
+        "zh": "\u8fdc\u7a0b\u4f24\u5bb3\u7ffb\u500d"
+      },
+      "tooltip_texts": {
+        "en": "All ranged physical attacks and abilities deal double damage.",
+        "zh": "\u6240\u6709\u8fdc\u7a0b\u7269\u7406\u653b\u51fb\u548c\u6280\u80fd\u9020\u6210\u7684\u4f24\u5bb3\u7ffb\u500d\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "NoHealthRegen",
+      "effect_code": "NoHealthRegen",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_NOHEALTHREGEN_NAME",
+      "tooltip_key": "KEYWORD_NOHEALTHREGEN_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "No Health Regen",
+        "zh": "\u65e0\u751f\u547d\u6062\u590d"
+      },
+      "tooltip_texts": {
+        "en": "Health won't regen automatically and does not regen at the end of battle.",
+        "zh": "\u751f\u547d\u503c\u4e0d\u4f1a\u81ea\u52a8\u6062\u590d\uff0c\r\n\u6218\u6597\u7ed3\u675f\u65f6\u4e5f\u4e0d\u4f1a\u6062\u590d\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "NoManaRegen",
+      "effect_code": "NoManaRegen",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_NOMANAREGEN_NAME",
+      "tooltip_key": "KEYWORD_NOMANAREGEN_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "No Mana Regen",
+        "zh": "\u65e0\u6cd5\u529b\u6062\u590d"
+      },
+      "tooltip_texts": {
+        "en": "Mana won't regen automatically.",
+        "zh": "\u6cd5\u529b\u503c\u4e0d\u4f1a\u81ea\u52a8\u6062\u590d\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "OldStealth",
+      "effect_code": "OldStealth",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "OldStealth",
+      "tooltip_key": null,
+      "tooltip_stacks_key": null,
+      "name_texts": {},
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "Ostracized",
+      "effect_code": "Ostracized",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_OSTRACIZED_NAME",
+      "tooltip_key": "KEYWORD_OSTRACIZED_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Ostracized",
+        "zh": "\u88ab\u6392\u6324"
+      },
+      "tooltip_texts": {
+        "en": "Every unit sees this as an enemy and will attack it with priority.",
+        "zh": "\u6240\u6709\u5355\u4f4d\u90fd\u4f1a\u5c06\u5176\u89c6\u4e3a\u654c\u4eba\u5e76\u4f18\u5148\u653b\u51fb\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "PermanentConfusion",
+      "effect_code": "PermanentConfusion",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_CONFUSION_NAME",
+      "tooltip_key": "KEYWORD_CONFUSION_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_CONFUSION_DESC_STACKLESS",
+      "name_texts": {
+        "en": "Confusion",
+        "zh": "\u6df7\u4e71"
+      },
+      "tooltip_texts": {
+        "en": "When performing an action, 25% chance to instead hit itself equal to its strength.",
+        "zh": "\u6267\u884c\u884c\u52a8\u65f6\uff0c\r\n\u6709 25% \u7684\u51e0\u7387\u6539\u4e3a\u653b\u51fb\u81ea\u5df1\uff0c\r\n\u4f24\u5bb3\u7b49\u540c\u4e8e\u5176\u529b\u91cf\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "When performing an action, 25% chance to instead hit itself equal to its strength.",
+        "zh": "\u6267\u884c\u884c\u52a8\u65f6\uff0c\r\n\u6709 25% \u7684\u51e0\u7387\u6539\u4e3a\u653b\u51fb\u81ea\u5df1\uff0c\r\n\u4f24\u5bb3\u7b49\u540c\u4e8e\u5176\u529b\u91cf\u3002"
+      }
+    },
+    {
+      "row_code": "Petrify",
+      "effect_code": "Petrify",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_PETRIFY_NAME",
+      "tooltip_key": "KEYWORD_PETRIFY_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_PETRIFY_DESC",
+      "name_texts": {
+        "en": "Petrify",
+        "zh": "\u77f3\u5316"
+      },
+      "tooltip_texts": {
+        "en": "Becomes a rock temporarily.",
+        "zh": "\u6682\u65f6\u53d8\u6210\u5ca9\u77f3\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "It's a rock for {stacks} turns.",
+        "zh": "\u53d8\u6210\u5ca9\u77f3\uff0c\u6301\u7eed {stacks} \u56de\u5408\u3002"
+      }
+    },
+    {
+      "row_code": "Poison",
+      "effect_code": "Poison",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_POISON_NAME",
+      "tooltip_key": "KEYWORD_POISON_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_POISON_DESC",
+      "name_texts": {
+        "en": "Poison",
+        "zh": "\u4e2d\u6bd2"
+      },
+      "tooltip_texts": {
+        "en": "Takes damage at the start of every turn. Incoming healing is less effective but cures 1 Poison.",
+        "zh": "\u5728\u6bcf\u4e2a\u56de\u5408\u5f00\u59cb\u65f6\u53d7\u5230\u4f24\u5bb3\u3002\r\n\u53d7\u5230\u7684\u6cbb\u7597\u6548\u679c\u964d\u4f4e\uff0c\r\n\u4f46\u4f1a\u6cbb\u6108 1 \u5c42\u4e2d\u6bd2\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "Takes {stacks} damage at the start of each of its turns. Incoming healing is less effective but cures 1 Poison.",
+        "zh": "\u5728\u6bcf\u4e2a\u56de\u5408\u5f00\u59cb\u65f6\u53d7\u5230 {stacks} \u70b9\u4f24\u5bb3\u3002\r\n\u53d7\u5230\u7684\u6cbb\u7597\u6548\u679c\u964d\u4f4e\uff0c\r\n\u4f46\u4f1a\u6cbb\u6108 1 \u5c42\u4e2d\u6bd2\u3002"
+      }
+    },
+    {
+      "row_code": "PoisonLace",
+      "effect_code": "PoisonLace",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_POISONLACE_NAME",
+      "tooltip_key": "KEYWORD_POISONLACE_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_POISONLACE_DESC",
+      "name_texts": {
+        "en": "Poison Lace",
+        "zh": "\u6d82\u6bd2"
+      },
+      "tooltip_texts": {
+        "en": "Basic attack inflicts Poison.",
+        "zh": "\u57fa\u7840\u653b\u51fb\u65bd\u52a0\u4e2d\u6bd2\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "Basic attack inflicts +{stacks} Poison.",
+        "zh": "\u57fa\u7840\u653b\u51fb\u65bd\u52a0 +{stacks} \u5c42\u4e2d\u6bd2\u3002"
+      }
+    },
+    {
+      "row_code": "PoisonThorns",
+      "effect_code": "PoisonThorns",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_POISONOUS_NAME",
+      "tooltip_key": "KEYWORD_POISONOUS_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_POISONOUS_DESC",
+      "name_texts": {
+        "en": "Poisonous",
+        "zh": "\u5e26\u6bd2"
+      },
+      "tooltip_texts": {
+        "en": "Inflicts Poison to units that contact you.",
+        "zh": "\u5bf9\u63a5\u89e6\u4f60\u7684\u5355\u4f4d\u65bd\u52a0\u4e2d\u6bd2\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "Inflicts Poison {stacks} to units that contact you.",
+        "zh": "\u5bf9\u63a5\u89e6\u4f60\u7684\u5355\u4f4d\u65bd\u52a0 {stacks} \u5c42\u4e2d\u6bd2\u3002"
+      }
+    },
+    {
+      "row_code": "Possessed",
+      "effect_code": "Possessed",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_POSSESED_NAME",
+      "tooltip_key": "KEYWORD_POSSESSED_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_POSSESSED_DESC",
+      "name_texts": {
+        "en": "Possessed",
+        "zh": "\u88ab\u9644\u8eab"
+      },
+      "tooltip_texts": {
+        "en": "Takes an extra Charmed turn.",
+        "zh": "\u83b7\u5f97\u4e00\u4e2a\u989d\u5916\u7684\u9b45\u60d1\u56de\u5408\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "Takes {stacks} extra turns and is uncontrollable and charmed on those turns.",
+        "zh": "\u83b7\u5f97 {stacks} \u4e2a\u989d\u5916\u56de\u5408\uff0c\r\n\u5728\u8fd9\u4e9b\u56de\u5408\u4e2d\u65e0\u6cd5\u63a7\u5236\u4e14\u5904\u4e8e\u9b45\u60d1\u72b6\u6001\u3002"
+      }
+    },
+    {
+      "row_code": "PreEmptiveCounterNextAttacks",
+      "effect_code": "PreEmptiveCounterNextAttacks",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_PREEMTIVECOUNTER_NAME",
+      "tooltip_key": "KEYWORD_PREEMTIVECOUNTER_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_PREEMTIVECOUNTER_DESC",
+      "name_texts": {
+        "en": "Preemptive Counter",
+        "zh": "\u5148\u5236\u53cd\u51fb"
+      },
+      "tooltip_texts": {
+        "en": "Attack the next thing that targets you before it attacks you, automatically.",
+        "zh": "\u81ea\u52a8\u5728\u4e0b\u4e00\u4e2a\u76ee\u6807\u653b\u51fb\u4f60\u4e4b\u524d\u5bf9\u5176\u8fdb\u884c\u653b\u51fb\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "Attack the next {stacks} things that target you before they attack you, automatically.",
+        "zh": "\u81ea\u52a8\u5728\u63a5\u4e0b\u6765\u7684\r\n {stacks} \u4e2a\u76ee\u6807\u653b\u51fb\u4f60\u4e4b\u524d\u5bf9\u5176\u8fdb\u884c\u653b\u51fb\u3002"
+      }
+    },
+    {
+      "row_code": "ProbeCharmed",
+      "effect_code": "ProbeCharmed",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_PROBED_NAME",
+      "tooltip_key": "KEYWORD_PROBED_DESC_STACKLESS",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Probed",
+        "zh": "\u690d\u5165\u63a2\u9488"
+      },
+      "tooltip_texts": {
+        "en": "Behaves as if it's on your team. Attacks from allies will break the probe.",
+        "zh": "\u8868\u73b0\u5f97\u50cf\u662f\u4f60\u961f\u4f0d\u7684\u4e00\u5458\u3002\r\n\u6765\u81ea\u76df\u53cb\u7684\u653b\u51fb\u4f1a\u7834\u574f\u63a2\u9488\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "Quivered",
+      "effect_code": "Quivered",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_QUIVERED_NAME",
+      "tooltip_key": null,
+      "tooltip_stacks_key": "KEYWORD_QUIVERED_DESC",
+      "name_texts": {
+        "en": "Bonus Attack",
+        "zh": "\u5956\u52b1\u653b\u51fb"
+      },
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {
+        "en": "{stacks} extra basic attacks that are saved across turns if unused.",
+        "zh": "{stacks} \u6b21\u989d\u5916\u57fa\u7840\u653b\u51fb\uff0c\u5982\u679c\u672a\u4f7f\u7528\uff0c\r\n\u53ef\u4fdd\u7559\u81f3\u4e0b\u4e00\u56de\u5408\u3002"
+      }
+    },
+    {
+      "row_code": "RandomInjury",
+      "effect_code": "RandomInjury",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_RANDOMINJURY_NAME",
+      "tooltip_key": "KEYWORD_RANDOMINJURY_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Random Injury",
+        "zh": "\u968f\u673a\u521b\u4f24"
+      },
+      "tooltip_texts": {
+        "en": "Gain a random injury that lowers one of your stats by 1, permanently.",
+        "zh": "\u83b7\u5f97\u4e00\u4e2a\u968f\u673a\u521b\u4f24\uff0c\r\n\u6c38\u4e45\u4f7f\u4f60\u7684\u4e00\u9879\u5c5e\u6027\u964d\u4f4e 1 \u70b9\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "RandomMagicMissile",
+      "effect_code": "RandomMagicMissile",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_SPARKLE_NAME",
+      "tooltip_key": "KEYWORD_SPARKLE_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Sparkle",
+        "zh": "\u706b\u82b1"
+      },
+      "tooltip_texts": {
+        "en": "A projectile that deals 1 magic damage to a random enemy.",
+        "zh": "\u4e00\u4e2a\u5bf9\u968f\u673a\u654c\u4eba\u9020\u6210 1 \u70b9\u9b54\u6cd5\u4f24\u5bb3\u7684\u6295\u5c04\u7269\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "RangeUp",
+      "effect_code": "RangeUp",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_RANGEUP_NAME",
+      "tooltip_key": "KEYWORD_RANGEUP_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_RANGEUP_DESC",
+      "name_texts": {
+        "en": "Range Up",
+        "zh": "\u5c04\u7a0b\u63d0\u5347"
+      },
+      "tooltip_texts": {
+        "en": "Increases the range of your basic attack and projectile abilities.",
+        "zh": "\u589e\u52a0\u4f60\u7684\u57fa\u7840\u653b\u51fb\u548c\u6295\u5c04\u7269\u6280\u80fd\u7684\u5c04\u7a0b\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "Range increased by {stacks}.",
+        "zh": "\u5c04\u7a0b\u589e\u52a0 {stacks}\u3002"
+      }
+    },
+    {
+      "row_code": "Reduce",
+      "effect_code": "Reduce",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "Reduce",
+      "tooltip_key": null,
+      "tooltip_stacks_key": null,
+      "name_texts": {},
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "ReduceManaCost",
+      "effect_code": "ReduceManaCost",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_REDUCEMANACOST_NAME",
+      "tooltip_key": "KEYWORD_REDUCEMANACOST_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_REDUCEMANACOST_DESC",
+      "name_texts": {
+        "en": "Insight",
+        "zh": "\u6d1e\u5bdf"
+      },
+      "tooltip_texts": {
+        "en": "Spells cost less mana to cast.",
+        "zh": "\u65bd\u653e\u6cd5\u672f\u6d88\u8017\u7684\u6cd5\u529b\u503c\u51cf\u5c11\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "Spells cost {stacks} less mana to cast.",
+        "zh": "\u65bd\u653e\u6cd5\u672f\u6d88\u8017\u7684\u6cd5\u529b\u503c\u51cf\u5c11 {stacks} \u70b9\u3002"
+      }
+    },
+    {
+      "row_code": "ReduceManaCostExcludeBrainstorm",
+      "effect_code": "ReduceManaCostExcludeBrainstorm",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_INSIGHT_NAME",
+      "tooltip_key": "KEYWORD_INSIGHT_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_INSIGHT_DESC",
+      "name_texts": {
+        "en": "Insight",
+        "zh": "\u6d1e\u5bdf"
+      },
+      "tooltip_texts": {
+        "en": "Spells cost less mana to cast, excluding Brainstorm. (cannot reduce cost to 0).",
+        "zh": "\u65bd\u653e\u6cd5\u672f\u6d88\u8017\u7684\u6cd5\u529b\u503c\u51cf\u5c11\uff0c\r\n\u5934\u8111\u98ce\u66b4\u9664\u5916\uff08\u6d88\u8017\u65e0\u6cd5\u964d\u81f3 0\uff09\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "Spells cost {stacks} less mana to cast, excluding Brainstorm.",
+        "zh": "\u65bd\u653e\u6cd5\u672f\u6d88\u8017\u7684\u6cd5\u529b\u503c\u51cf\u5c11 {stacks} \u70b9\uff0c\r\n\u5934\u8111\u98ce\u66b4\u9664\u5916\u3002"
+      }
+    },
+    {
+      "row_code": "Reflect",
+      "effect_code": "Reflect",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_REFLECT_NAME",
+      "tooltip_key": null,
+      "tooltip_stacks_key": "KEYWORD_REFLECT_DESC",
+      "name_texts": {
+        "en": "Reflect",
+        "zh": "\u53cd\u5c04"
+      },
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {
+        "en": "Reflects the next {stacks} projectiles you are hit with back at the attacker.",
+        "zh": "\u5c06\u63a5\u4e0b\u6765\u51fb\u4e2d\u4f60\u7684 {stacks} \u4e2a\u6295\u5c04\u7269\u53cd\u5c04\u7ed9\u653b\u51fb\u8005\u3002"
+      }
+    },
+    {
+      "row_code": "Reload",
+      "effect_code": "Reload",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_RELOAD_NAME",
+      "tooltip_key": "KEYWORD_RELOAD_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Reload",
+        "zh": "\u88c5\u586b"
+      },
+      "tooltip_texts": {
+        "en": "This action starts disabled and does not refresh on its own after use. Meet the condition to refresh it.",
+        "zh": "\u6b64\u884c\u52a8\u521d\u59cb\u4e3a\u7981\u7528\u72b6\u6001\uff0c\r\n\u4f7f\u7528\u540e\u4e0d\u4f1a\u81ea\u52a8\u5237\u65b0\u3002\r\n\u6ee1\u8db3\u6761\u4ef6\u4ee5\u5237\u65b0\u5b83\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "ReloadB",
+      "effect_code": "ReloadB",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_RELOAD_NAME",
+      "tooltip_key": "KEYWORD_RELOADB_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Reload",
+        "zh": "\u88c5\u586b"
+      },
+      "tooltip_texts": {
+        "en": "This action does not refresh on its own after use. Meet the condition to refresh it.",
+        "zh": "\u6b64\u884c\u52a8\u4f7f\u7528\u540e\u4e0d\u4f1a\u81ea\u52a8\u5237\u65b0\u3002\r\n\u6ee1\u8db3\u6761\u4ef6\u4ee5\u5237\u65b0\u5b83\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "ReviveNextRound",
+      "effect_code": "ReviveNextRound",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_AUTOREVIVE_NAME",
+      "tooltip_key": "KEYWORD_AUTOREVIVE_DESC",
+      "tooltip_stacks_key": "KEYWORD_AUTOREVIVE_DESC",
+      "name_texts": {
+        "en": "Auto Revive",
+        "zh": "\u81ea\u52a8\u590d\u6d3b"
+      },
+      "tooltip_texts": {
+        "en": "Revives at the end of the next round.",
+        "zh": "\u5728\u4e0b\u4e00\u56de\u5408\u7ed3\u675f\u65f6\u590d\u6d3b\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "Revives at the end of the next round.",
+        "zh": "\u5728\u4e0b\u4e00\u56de\u5408\u7ed3\u675f\u65f6\u590d\u6d3b\u3002"
+      }
+    },
+    {
+      "row_code": "Robot",
+      "effect_code": "Robot",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ENERGIZED_NAME",
+      "tooltip_key": "KEYWORD_ENERGIZED_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Energized",
+        "zh": "\u7cbe\u529b\u5145\u6c9b"
+      },
+      "tooltip_texts": {
+        "en": "Takes an extra turn. Cannot be Energized again until after that turn ends.",
+        "zh": "\u83b7\u5f97\u4e00\u4e2a\u989d\u5916\u56de\u5408\u3002\r\n\u5728\u8be5\u56de\u5408\u7ed3\u675f\u524d\u65e0\u6cd5\u518d\u6b21\u83b7\u5f97\u7cbe\u529b\u5145\u6c9b\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "Rot",
+      "effect_code": "Rot",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ROT_NAME",
+      "tooltip_key": "KEYWORD_ROT_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Rot",
+        "zh": "\u8150\u70c2"
+      },
+      "tooltip_texts": {
+        "en": "Hatches a Fly at the end of its turn. Damage from worms and bugs always crits against this.",
+        "zh": "\u5728\u5176\u56de\u5408\u7ed3\u675f\u65f6\u5b75\u5316\u4e00\u53ea\u82cd\u8747\u3002\r\n\u8815\u866b\u548c\u866b\u7c7b\u5bf9\u5176\u9020\u6210\u7684\u4f24\u5bb3\u5fc5\u5b9a\u66b4\u51fb\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "SafeDoomed",
+      "effect_code": "SafeDoomed",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_SAFEDOOMED_NAME",
+      "tooltip_key": "KEYWORD_SAFEDOOMED_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Doomed",
+        "zh": "\u6b7b\u5492"
+      },
+      "tooltip_texts": {
+        "en": "Ticks down at the end of your turn. When it hits 0, Die (without being injured).",
+        "zh": "\u5728\u4f60\u7684\u56de\u5408\u7ed3\u675f\u65f6\u5012\u6570\u3002\r\n\u5f53\u5012\u6570\u5f52\u96f6\u65f6\u6b7b\u4ea1\uff08\u4e0d\u4f1a\u9020\u6210\u521b\u4f24\uff09\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "Scrambled",
+      "effect_code": "Scrambled",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_SCRAMBLED_NAME",
+      "tooltip_key": "KEYWORD_SCRAMBLED_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Scrambled",
+        "zh": "\u9519\u4e71"
+      },
+      "tooltip_texts": {
+        "en": "Abilities are scrambled, temporarily.",
+        "zh": "\u6280\u80fd\u6682\u65f6\u88ab\u6253\u4e71\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "SerratedClaws",
+      "effect_code": "SerratedClaws",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_SERRATED_NAME",
+      "tooltip_key": "KEYWORD_SERRATED_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_SERRATED_DESC",
+      "name_texts": {
+        "en": "Serrated Claws",
+        "zh": "\u952f\u9f7f\u5229\u722a"
+      },
+      "tooltip_texts": {
+        "en": "Basic attack inflicts Bleed.",
+        "zh": "\u57fa\u7840\u653b\u51fb\u65bd\u52a0\u6d41\u8840\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "Basic attack inflicts +{stacks} Bleed.",
+        "zh": "\u57fa\u7840\u653b\u51fb\u65bd\u52a0 +{stacks} \u5c42\u6d41\u8840\u3002"
+      }
+    },
+    {
+      "row_code": "Shield",
+      "effect_code": "Shield",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_SHIELD_NAME",
+      "tooltip_key": "KEYWORD_SHIELD_DESC_STACKLESS",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Shield",
+        "zh": "\u62a4\u76fe"
+      },
+      "tooltip_texts": {
+        "en": "Blocks incoming damage.",
+        "zh": "\u683c\u6321\u5373\u5c06\u53d7\u5230\u7684\u4f24\u5bb3\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "ShortCircuit",
+      "effect_code": "ShortCircuit",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_SHORTCIRCUIT_NAME",
+      "tooltip_key": "KEYWORD_SHORTCIRCUIT_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Short Circuit",
+        "zh": "\u77ed\u8def"
+      },
+      "tooltip_texts": {
+        "en": "All actions are disabled. Cast Break Circuit to break.",
+        "zh": "\u6240\u6709\u884c\u52a8\u88ab\u7981\u7528\u3002\r\n\u65bd\u653e\u201c\u7834\u574f\u56de\u8def\u201d\u4ee5\u89e3\u9664\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "SkipNextTurn",
+      "effect_code": "SkipNextTurn",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "SkipNextTurn",
+      "tooltip_key": null,
+      "tooltip_stacks_key": null,
+      "name_texts": {},
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "Sleep",
+      "effect_code": "Sleep",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_SLEEP_NAME",
+      "tooltip_key": "KEYWORD_SLEEP_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_SLEEP_DESC",
+      "name_texts": {
+        "en": "Sleep",
+        "zh": "\u7761\u7720"
+      },
+      "tooltip_texts": {
+        "en": "Skip the next turn. Being attacked has a chance to wake you up.",
+        "zh": "\u8df3\u8fc7\u4e0b\u4e00\u56de\u5408\u3002\u53d7\u5230\u653b\u51fb\u6709\u51e0\u7387\u4f1a\u9192\u6765\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "Skip the next {stacks} turns. Being attacked has a chance to wake you up.",
+        "zh": "\u8df3\u8fc7\u63a5\u4e0b\u6765\u7684 {stacks} \u4e2a\u56de\u5408\u3002\r\n\u53d7\u5230\u653b\u51fb\u6709\u51e0\u7387\u4f1a\u9192\u6765\u3002"
+      }
+    },
+    {
+      "row_code": "SleepParalysis",
+      "effect_code": "SleepParalysis",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_SLEEPPAR_NAME",
+      "tooltip_key": null,
+      "tooltip_stacks_key": "KEYWORD_SLEEPPAR_DESC",
+      "name_texts": {
+        "en": "Sleep (Paralysis)",
+        "zh": "\u7761\u7720 (\u9ebb\u75f9)"
+      },
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {
+        "en": "You are asleep until your sleep paralysis demon is killed.",
+        "zh": "\u4f60\u4f1a\u4e00\u76f4\u6c89\u7761\uff0c\r\n\u76f4\u5230\u4f60\u7684\u7761\u7720\u762b\u75ea\u6076\u9b54\u88ab\u6740\u6b7b\u3002"
+      }
+    },
+    {
+      "row_code": "Slow_pos",
+      "effect_code": "Slow",
+      "variant": "pos",
+      "alias_of": null,
+      "name_key": "KEYWORD_SLOW_NAME",
+      "tooltip_key": "KEYWORD_SLOW_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_SLOW_DESC",
+      "name_texts": {
+        "en": "Slow",
+        "zh": "\u51cf\u901f"
+      },
+      "tooltip_texts": {
+        "en": "Movement range is reduced to 2. Takes its turn later.",
+        "zh": "\u79fb\u52a8\u8ddd\u79bb\u964d\u4f4e\u81f3 2\u3002\r\n\u56de\u5408\u884c\u52a8\u987a\u4f4d\u5ef6\u540e\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "Movement range is reduced to 2 for the next {stacks} turns. Takes its turn later.",
+        "zh": "\u5728\u63a5\u4e0b\u6765\u7684 {stacks} \u4e2a\u56de\u5408\u4e2d\uff0c\r\n\u79fb\u52a8\u8ddd\u79bb\u964d\u4f4e\u81f3 2\u3002\r\n\u56de\u5408\u884c\u52a8\u987a\u4f4d\u5ef6\u540e\u3002"
+      }
+    },
+    {
+      "row_code": "Slow_neg",
+      "effect_code": "Slow",
+      "variant": "neg",
+      "alias_of": null,
+      "name_key": "KEYWORD_SLOW_NAME",
+      "tooltip_key": "KEYWORD_SLOW_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_SLOW_DESC_STACKLESS",
+      "name_texts": {
+        "en": "Slow",
+        "zh": "\u51cf\u901f"
+      },
+      "tooltip_texts": {
+        "en": "Movement range is reduced to 2. Takes its turn later.",
+        "zh": "\u79fb\u52a8\u8ddd\u79bb\u964d\u4f4e\u81f3 2\u3002\r\n\u56de\u5408\u884c\u52a8\u987a\u4f4d\u5ef6\u540e\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "Movement range is reduced to 2. Takes its turn later.",
+        "zh": "\u79fb\u52a8\u8ddd\u79bb\u964d\u4f4e\u81f3 2\u3002\r\n\u56de\u5408\u884c\u52a8\u987a\u4f4d\u5ef6\u540e\u3002"
+      }
+    },
+    {
+      "row_code": "SoulLink",
+      "effect_code": "SoulLink",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_SOULLINK_NAME",
+      "tooltip_key": "KEYWORD_SOULLINK_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Soul Link",
+        "zh": "\u7075\u9b42\u94fe\u63a5"
+      },
+      "tooltip_texts": {
+        "en": "Whenever a soul linked character loses health, all soul linked characters lose that health as well.",
+        "zh": "\u5f53\u4e00\u540d\u7075\u9b42\u94fe\u63a5\u7684\u89d2\u8272\u5931\u53bb\u751f\u547d\u503c\u65f6\uff0c\r\n\u6240\u6709\u7075\u9b42\u94fe\u63a5\u7684\u89d2\u8272\u90fd\u4f1a\u5931\u53bb\u540c\u7b49\u751f\u547d\u503c\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "SpeedUp_pos",
+      "effect_code": "SpeedUp",
+      "variant": "pos",
+      "alias_of": null,
+      "name_key": "KEYWORD_SPDUP_NAME",
+      "tooltip_key": null,
+      "tooltip_stacks_key": "KEYWORD_SPDUP_DESC",
+      "name_texts": {
+        "en": "Speed Up",
+        "zh": "\u901f\u5ea6\u63d0\u5347"
+      },
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {
+        "en": "Speed increased by {stacks}.\nSpeed affects movement range and turn order.",
+        "zh": "\u901f\u5ea6\u589e\u52a0 {stacks} \u70b9\u3002\r\n\u901f\u5ea6\u5f71\u54cd\u79fb\u52a8\u8ddd\u79bb\u548c\u884c\u52a8\u987a\u5e8f\u3002"
+      }
+    },
+    {
+      "row_code": "SpeedUp_neg",
+      "effect_code": "SpeedUp",
+      "variant": "neg",
+      "alias_of": null,
+      "name_key": "KEYWORD_SPDDOWN_NAME",
+      "tooltip_key": null,
+      "tooltip_stacks_key": "KEYWORD_SPWDDOWN_DESC",
+      "name_texts": {
+        "en": "Speed Down",
+        "zh": "\u901f\u5ea6\u4e0b\u964d"
+      },
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {
+        "en": "Speed decreased by {absstacks}.\nSpeed affects movement range and turn order.",
+        "zh": "\u901f\u5ea6\u51cf\u5c11 {absstacks} \u70b9\u3002\r\n\u901f\u5ea6\u5f71\u54cd\u79fb\u52a8\u8ddd\u79bb\u548c\u884c\u52a8\u987a\u5e8f\u3002"
+      }
+    },
+    {
+      "row_code": "SpellDamageUp",
+      "effect_code": "SpellDamageUp",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_MAGICDMGUP_NAME",
+      "tooltip_key": "KEYWORD_MAGICDMGUP_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_MAGICDMGUP_DESC",
+      "name_texts": {
+        "en": "Magic Damage Up",
+        "zh": "\u9b54\u6cd5\u4f24\u5bb3\u63d0\u5347"
+      },
+      "tooltip_texts": {
+        "en": "Increases any magical damage you deal.",
+        "zh": "\u589e\u52a0\u4f60\u9020\u6210\u7684\u6240\u6709\u9b54\u6cd5\u4f24\u5bb3\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "Magic damage you inflict does {stacks} extra damage.",
+        "zh": "\u4f60\u9020\u6210\u7684\u9b54\u6cd5\u4f24\u5bb3\u589e\u52a0 {stacks} \u70b9\u3002"
+      }
+    },
+    {
+      "row_code": "SpellShield",
+      "effect_code": "SpellShield",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "SpellShield",
+      "tooltip_key": null,
+      "tooltip_stacks_key": null,
+      "name_texts": {},
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "SpiderInfested",
+      "effect_code": "SpiderInfested",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_SPIDERINFESTED_NAME",
+      "tooltip_key": "KEYWORD_SPIDERINFESTED_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Infested",
+        "zh": "\u5bc4\u751f"
+      },
+      "tooltip_texts": {
+        "en": "The spiders infesting this pop out when it dies, destroying its corpse.",
+        "zh": "\u5bc4\u751f\u5728\u6b64\u7684\u8718\u86db\u4f1a\u5728\u5176\u6b7b\u4ea1\u65f6\u94bb\u51fa\uff0c\r\n\u5e76\u6467\u6bc1\u5c38\u4f53\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "StatBounty",
+      "effect_code": "StatBounty",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_STATBOUNTY_NAME",
+      "tooltip_key": "KEYWORD_STATBOUNTY_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_STATBOUNTY_DESC",
+      "name_texts": {
+        "en": "Stat Bounty",
+        "zh": "\u5c5e\u6027\u8d4f\u91d1"
+      },
+      "tooltip_texts": {
+        "en": "Whoever kills this gets All Stats Up.",
+        "zh": "\u65e0\u8bba\u8c01\u51fb\u6740\u76ee\u6807\uff0c\u90fd\u5c06\u83b7\u5f97\u5168\u5c5e\u6027\u63d0\u5347\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "Whoever kills this gets All Stats Up {stacks}.",
+        "zh": "\u65e0\u8bba\u8c01\u51fb\u6740\u76ee\u6807\uff0c\r\n\u90fd\u5c06\u83b7\u5f97 {stacks} \u5c42\u5168\u5c5e\u6027\u63d0\u5347\u3002"
+      }
+    },
+    {
+      "row_code": "Stealth",
+      "effect_code": "Stealth",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_STEALTH_NAME",
+      "tooltip_key": "KEYWORD_STEALTH_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Stealth",
+        "zh": "\u6f5c\u884c"
+      },
+      "tooltip_texts": {
+        "en": "50% Dodge Chance. Lose Stealth when you get hit.",
+        "zh": "50% \u95ea\u907f\u7387\u3002\r\n\u53d7\u5230\u653b\u51fb\u65f6\u5931\u53bb\u6f5c\u884c\u72b6\u6001\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "StealthUntilBasicAttack",
+      "effect_code": "StealthUntilBasicAttack",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_STEALTHUNTIL_NAME",
+      "tooltip_key": "KEYWORD_STEALTHUNTIL_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Stealth",
+        "zh": "\u6f5c\u884c"
+      },
+      "tooltip_texts": {
+        "en": "50% Dodge Chance. Lose Stealth when you get hit or use your basic attack.",
+        "zh": "50% \u95ea\u907f\u7387\u3002\r\n\u53d7\u5230\u653b\u51fb\u6216\u4f7f\u7528\u57fa\u7840\u653b\u51fb\u65f6\u5931\u53bb\u6f5c\u884c\u72b6\u6001\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "Stimulation",
+      "effect_code": "Stimulation",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_STIMULATION_NAME",
+      "tooltip_key": "KEYWORD_STIMULATION_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "[img:stimulation] Stimulation",
+        "zh": "[img:stimulation] \u523a\u6fc0\u5ea6"
+      },
+      "tooltip_texts": {
+        "en": "Affects the quality of newborn kittens.",
+        "zh": "\u5f71\u54cd\u65b0\u751f\u5c0f\u732b\u7684\u54c1\u8d28\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "StrengthUp_pos",
+      "effect_code": "StrengthUp",
+      "variant": "pos",
+      "alias_of": null,
+      "name_key": "KEYWORD_STRUP_NAME",
+      "tooltip_key": null,
+      "tooltip_stacks_key": "KEYWORD_STRUP_DESC",
+      "name_texts": {
+        "en": "Strength Up",
+        "zh": "\u529b\u91cf\u63d0\u5347"
+      },
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {
+        "en": "Strength increased by {stacks}.\nStrength affects melee attack and melee ability damage.",
+        "zh": "\u529b\u91cf\u589e\u52a0 {stacks} \u70b9\u3002\r\n\u529b\u91cf\u5f71\u54cd\u8fd1\u6218\u653b\u51fb\u548c\u8fd1\u6218\u6280\u80fd\u4f24\u5bb3\u3002"
+      }
+    },
+    {
+      "row_code": "StrengthUp_neg",
+      "effect_code": "StrengthUp",
+      "variant": "neg",
+      "alias_of": null,
+      "name_key": "KEYWORD_STRDOWN_NAME",
+      "tooltip_key": null,
+      "tooltip_stacks_key": "KEYWORD_STRDOWN_DESC",
+      "name_texts": {
+        "en": "Strength Down",
+        "zh": "\u529b\u91cf\u4e0b\u964d"
+      },
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {
+        "en": "Strength decreased by {absstacks}.\nStrength affects melee attack and melee ability damage.",
+        "zh": "\u529b\u91cf\u51cf\u5c11 {absstacks} \u70b9\u3002\r\n\u529b\u91cf\u5f71\u54cd\u8fd1\u6218\u653b\u51fb\u548c\u8fd1\u6218\u6280\u80fd\u4f24\u5bb3\u3002"
+      }
+    },
+    {
+      "row_code": "Stun",
+      "effect_code": "Stun",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_STUN_NAME",
+      "tooltip_key": "KEYWORD_STUN_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_STUN_DESC",
+      "name_texts": {
+        "en": "Stun",
+        "zh": "\u6655\u7729"
+      },
+      "tooltip_texts": {
+        "en": "Skip the next turn.",
+        "zh": "\u8df3\u8fc7\u4e0b\u4e00\u56de\u5408\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "Skip the next {stacks} turns.",
+        "zh": "\u8df3\u8fc7\u63a5\u4e0b\u6765\u7684 {stacks} \u4e2a\u56de\u5408\u3002"
+      }
+    },
+    {
+      "row_code": "Switcheroo",
+      "effect_code": "Switcheroo",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "Switcheroo",
+      "tooltip_key": null,
+      "tooltip_stacks_key": null,
+      "name_texts": {},
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "TVBotDie",
+      "effect_code": "TVBotDie",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "ENEMY_TVBOT_DIE_NAME",
+      "tooltip_key": "ENEMY_TVBOT_DIE_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {},
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "TVBotDumb",
+      "effect_code": "TVBotDumb",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "ENEMY_TVBOT_DUMB_NAME",
+      "tooltip_key": "ENEMY_TVBOT_DUMB_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {},
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "TVBotObey",
+      "effect_code": "TVBotObey",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "ENEMY_TVBOT_OBEY_NAME",
+      "tooltip_key": "ENEMY_TVBOT_OBEY_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {},
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "TVBotStop",
+      "effect_code": "TVBotStop",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "ENEMY_TVBOT_STOP_NAME",
+      "tooltip_key": "ENEMY_TVBOT_STOP_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {},
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "Tangled",
+      "effect_code": "Tangled",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_TANGLED_NAME",
+      "tooltip_key": "KEYWORD_TANGLED_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Entangled",
+        "zh": "\u7f20\u7ed5"
+      },
+      "tooltip_texts": {
+        "en": "Immobile. Use basic attack to break free.",
+        "zh": "\u5b9a\u8eab\u3002\u4f7f\u7528\u57fa\u7840\u653b\u51fb\u53ef\u6323\u8131\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "Tarred",
+      "effect_code": "Tarred",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_TARRED_NAME",
+      "tooltip_key": "KEYWORD_TARRED_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_TARRED_DESC",
+      "name_texts": {
+        "en": "Tarred",
+        "zh": "\u7126\u6cb9"
+      },
+      "tooltip_texts": {
+        "en": "Decreases speed. Flammable.",
+        "zh": "\u964d\u4f4e\u901f\u5ea6\u3002\u6613\u71c3\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "Speed decreased by {stacks}. Flammable.\nSpeed affects movement range and turn order.",
+        "zh": "\u901f\u5ea6\u964d\u4f4e {stacks} \u70b9\u3002\u6613\u71c3\u3002\r\n\u901f\u5ea6\u5f71\u54cd\u79fb\u52a8\u8ddd\u79bb\u548c\u884c\u52a8\u987a\u5e8f\u3002"
+      }
+    },
+    {
+      "row_code": "Taunted",
+      "effect_code": "Taunted",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "Taunted",
+      "tooltip_key": null,
+      "tooltip_stacks_key": null,
+      "name_texts": {},
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "Taunting",
+      "effect_code": "Taunting",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "Taunting",
+      "tooltip_key": null,
+      "tooltip_stacks_key": null,
+      "name_texts": {},
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "Tech",
+      "effect_code": "Tech",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_TECH_NAME",
+      "tooltip_key": "KEYWORD_TECH_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Tech",
+        "zh": "\u79d1\u6280"
+      },
+      "tooltip_texts": {
+        "en": "Increases the quality of the next item you craft or the next familiar you spawn.\nUp to 3 Tech can be used at a time.",
+        "zh": "\u63d0\u9ad8\u4f60\u5236\u4f5c\u7684\u4e0b\u4e00\u4e2a\u7269\u54c1\u6216\u751f\u6210\u7684\r\n\u4e0b\u4e00\u4e2a\u4f7f\u9b54\u7684\u54c1\u8d28\u3002\r\n\u4e00\u6b21\u6700\u591a\u6d88\u8017 3 \u5c42\u79d1\u6280\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "TempBackstab",
+      "effect_code": "TempBackstab",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_TEMPBACKSTAB_NAME",
+      "tooltip_key": "KEYWORD_TEMPBACKSTAB_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_TEMPBACKSTAB_DESC",
+      "name_texts": {
+        "en": "Backstab Bonus",
+        "zh": "\u80cc\u523a\u52a0\u6210"
+      },
+      "tooltip_texts": {
+        "en": "Increases the damage your Backstabs deal.",
+        "zh": "\u589e\u52a0\u4f60\u7684\u80cc\u523a\u9020\u6210\u7684\u4f24\u5bb3\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "+{stacks}% Backstab Damage this turn. (Plus the default 25% backstab bonus.)",
+        "zh": "\u672c\u56de\u5408 +{stacks}% \u80cc\u523a\u4f24\u5bb3\u3002\r\n\uff08\u53e0\u52a0\u9ed8\u8ba4\u7684 25% \u80cc\u523a\u52a0\u6210\u3002\r\n\uff09"
+      }
+    },
+    {
+      "row_code": "TempCounterAttack",
+      "effect_code": "TempCounterAttack",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_TEMPCOUNTER_NAME",
+      "tooltip_key": "KEYWORD_TEMPCOUNTER_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Counter Attack",
+        "zh": "\u53cd\u51fb"
+      },
+      "tooltip_texts": {
+        "en": "Attack things that damage you automatically.",
+        "zh": "\u81ea\u52a8\u653b\u51fb\u4f24\u5bb3\u4f60\u7684\u76ee\u6807\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "TempInitiativeChange_pos",
+      "effect_code": "TempInitiativeChange",
+      "variant": "pos",
+      "alias_of": null,
+      "name_key": "KEYWORD_TEMPINIT_NAME",
+      "tooltip_key": "KEYWORD_TEMPINIT_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Initiative Up",
+        "zh": "\u5148\u653b\u63d0\u5347"
+      },
+      "tooltip_texts": {
+        "en": "You take your turn earlier in the round.",
+        "zh": "\u4f60\u5728\u56de\u5408\u4e2d\u66f4\u65e9\u884c\u52a8\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "TempInitiativeChange_neg",
+      "effect_code": "TempInitiativeChange",
+      "variant": "neg",
+      "alias_of": null,
+      "name_key": "KEYWORD_TEMPINITDOWN_NAME",
+      "tooltip_key": "KEYWORD_TEMPINIT_DESC",
+      "tooltip_stacks_key": "KEYWORD_TEMPINITDOWN_DESC",
+      "name_texts": {
+        "en": "Initiative Down",
+        "zh": "\u5148\u653b\u4e0b\u964d"
+      },
+      "tooltip_texts": {
+        "en": "You take your turn earlier in the round.",
+        "zh": "\u4f60\u5728\u56de\u5408\u4e2d\u66f4\u65e9\u884c\u52a8\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "You take your turn later in the round.",
+        "zh": "\u4f60\u5728\u56de\u5408\u4e2d\u66f4\u665a\u884c\u52a8\u3002"
+      }
+    },
+    {
+      "row_code": "TempInjuryImmunity",
+      "effect_code": "TempInjuryImmunity",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_TEMPIMMUNE_NAME",
+      "tooltip_key": null,
+      "tooltip_stacks_key": "KEYWORD_TEMPIMMUNE_DESC",
+      "name_texts": {
+        "en": "Injury Immunity",
+        "zh": "\u521b\u4f24\u514d\u75ab"
+      },
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {
+        "en": "Cannot receive Injuries for any reason. Lasts {stacks} turns.",
+        "zh": "\u65e0\u8bba\u56e0\u4f55\u539f\u56e0\u90fd\u4e0d\u4f1a\u53d7\u5230\u521b\u4f24\u3002\r\n\u6301\u7eed {stacks} \u56de\u5408\u3002"
+      }
+    },
+    {
+      "row_code": "TempManaCostReduction",
+      "effect_code": "TempManaCostReduction",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_TEMPMANAREDUCTION_NAME",
+      "tooltip_key": "KEYWORD_TEMPMANAREDUCTION_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_TEMPMANAREDUCTION_DESC",
+      "name_texts": {
+        "en": "Insight",
+        "zh": "\u6d1e\u5bdf"
+      },
+      "tooltip_texts": {
+        "en": "Spells cost less mana to cast until the end of the turn.",
+        "zh": "\u76f4\u5230\u56de\u5408\u7ed3\u675f\uff0c\u65bd\u653e\u6cd5\u672f\u6d88\u8017\u7684\u6cd5\u529b\u503c\u51cf\u5c11\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "Spells cost {stacks} less mana to cast until the end of the turn.",
+        "zh": "\u76f4\u5230\u56de\u5408\u7ed3\u675f\uff0c\r\n\u65bd\u653e\u6cd5\u672f\u6d88\u8017\u7684\u6cd5\u529b\u503c\u51cf\u5c11 {stacks} \u70b9\u3002"
+      }
+    },
+    {
+      "row_code": "TempPreEmptiveCounterAttack",
+      "effect_code": "TempPreEmptiveCounterAttack",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_PRECOUNTER_NAME",
+      "tooltip_key": "KEYWORD_PRECOUNTER_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Preemptive Counter",
+        "zh": "\u5148\u5236\u53cd\u51fb"
+      },
+      "tooltip_texts": {
+        "en": "Attack things that target you before they attack you, automatically.",
+        "zh": "\u5728\u7784\u51c6\u4f60\u7684\u76ee\u6807\u653b\u51fb\u4f60\u4e4b\u524d\u81ea\u52a8\u5bf9\u5176\u8fdb\u884c\u653b\u51fb\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "TempRangeUp",
+      "effect_code": "TempRangeUp",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_TEMPRANGE_NAME",
+      "tooltip_key": "KEYWORD_TEMPRANGE_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_TEMPRANGE_DESC",
+      "name_texts": {
+        "en": "Range Up (Temporary)",
+        "zh": "\u5c04\u7a0b\u63d0\u5347 (\u4e34\u65f6)"
+      },
+      "tooltip_texts": {
+        "en": "Increases the range of your basic attack and projectile abilities until the end of the turn.",
+        "zh": "\u589e\u52a0\u4f60\u7684\u57fa\u7840\u653b\u51fb\u548c\u6295\u5c04\u7269\u6280\u80fd\u7684\u5c04\u7a0b\uff0c\r\n\u76f4\u5230\u56de\u5408\u7ed3\u675f\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "Range increased by {stacks} until the end of the turn.",
+        "zh": "\u5c04\u7a0b\u589e\u52a0 {stacks}\uff0c\u76f4\u5230\u56de\u5408\u7ed3\u675f\u3002"
+      }
+    },
+    {
+      "row_code": "TemporaryItem",
+      "effect_code": "TemporaryItem",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_TEMPITEM_NAME",
+      "tooltip_key": "KEYWORD_TEMPITEM_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Temporary Item",
+        "zh": "\u4e34\u65f6\u7269\u54c1"
+      },
+      "tooltip_texts": {
+        "en": "Is lost at the end of the battle.",
+        "zh": "\u5728\u6218\u6597\u7ed3\u675f\u65f6\u4e22\u5931\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "Thorns",
+      "effect_code": "Thorns",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_THORNS_NAME",
+      "tooltip_key": "KEYWORD_THORNS_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_THORNS_DESC",
+      "name_texts": {
+        "en": "Thorns",
+        "zh": "\u8346\u68d8"
+      },
+      "tooltip_texts": {
+        "en": "Deals damage to units that contact you.",
+        "zh": "\u5bf9\u63a5\u89e6\u4f60\u7684\u5355\u4f4d\u9020\u6210\u4f24\u5bb3\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "Deals {stacks} damage to units that contact you.",
+        "zh": "\u53ef\u4ee5\u5bf9\u63a5\u89e6\u4f60\u7684\u5355\u4f4d\u9020\u6210 {stacks} \u70b9\u4f24\u5bb3\u3002"
+      }
+    },
+    {
+      "row_code": "TilesMovedToCritChance",
+      "effect_code": "TilesMovedToCritChance",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "TilesMovedToCritChance",
+      "tooltip_key": null,
+      "tooltip_stacks_key": null,
+      "name_texts": {},
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "TilesMovedToHealth",
+      "effect_code": "TilesMovedToHealth",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "TilesMovedToHealth",
+      "tooltip_key": null,
+      "tooltip_stacks_key": null,
+      "name_texts": {},
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "TilesMovedToMana",
+      "effect_code": "TilesMovedToMana",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "TilesMovedToMana",
+      "tooltip_key": null,
+      "tooltip_stacks_key": null,
+      "name_texts": {},
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "TilesMovedToNeighborHeal",
+      "effect_code": "TilesMovedToNeighborHeal",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "TilesMovedToNeighborHeal",
+      "tooltip_key": null,
+      "tooltip_stacks_key": null,
+      "name_texts": {},
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "TilesMovedToStrength",
+      "effect_code": "TilesMovedToStrength",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "TilesMovedToStrength",
+      "tooltip_key": null,
+      "tooltip_stacks_key": null,
+      "name_texts": {},
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "TowerDefenseStatus",
+      "effect_code": "TowerDefenseStatus",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_SENTRY_NAME",
+      "tooltip_key": "KEYWORD_SENTRY_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Sentry Mode",
+        "zh": "\u54e8\u5175\u6a21\u5f0f"
+      },
+      "tooltip_texts": {
+        "en": "The next time an enemy ends its movement in your basic attack range, attack it.",
+        "zh": "\u5f53\u654c\u4eba\u4e0b\u4e00\u6b21\u5728\u4f60\u7684\u57fa\u7840\u653b\u51fb\u8303\u56f4\u5185\u7ed3\u675f\u79fb\u52a8\u65f6\uff0c\r\n\u5bf9\u5176\u8fdb\u884c\u653b\u51fb\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "TowerDefenseStatus2",
+      "effect_code": "TowerDefenseStatus2",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_SENTRYPLUS_NAME",
+      "tooltip_key": "KEYWORD_SENTRYPLUS_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_SENTRYPLUS_DESC",
+      "name_texts": {
+        "en": "Sentry Mode+",
+        "zh": "\u54e8\u5175\u6a21\u5f0f+"
+      },
+      "tooltip_texts": {
+        "en": "When an enemy ends its movement in your basic attack range, attack it.",
+        "zh": "\u5f53\u654c\u4eba\u5728\u4f60\u7684\u57fa\u7840\u653b\u51fb\u8303\u56f4\u5185\u7ed3\u675f\u79fb\u52a8\u65f6\uff0c\r\n\u5bf9\u5176\u8fdb\u884c\u653b\u51fb\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "When an enemy ends its movement in your basic attack range, attack it. Lasts {stacks} turns.",
+        "zh": "\u5f53\u654c\u4eba\u57fa\u7840\u653b\u51fb\u8303\u56f4\u5185\u7ed3\u675f\u79fb\u52a8\u65f6\uff0c\r\n\u5bf9\u5176\u8fdb\u884c\u653b\u51fb\u3002\u6301\u7eed {stacks} \u56de\u5408\u3002"
+      }
+    },
+    {
+      "row_code": "TrailBlazer",
+      "effect_code": "TrailBlazer",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "Trail Blazer",
+      "tooltip_key": null,
+      "tooltip_stacks_key": null,
+      "name_texts": {},
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "Trample",
+      "effect_code": "Trample",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_TRAMPLE_NAME",
+      "tooltip_key": "KEYWORD_TRAMPLE_DESC_STACKLESS",
+      "tooltip_stacks_key": null,
+      "name_texts": {},
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "TransformInXTurns",
+      "effect_code": "TransformInXTurns",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_TRANSFORM_NAME",
+      "tooltip_key": "KEYWORD_TRANSFORM_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Transformation",
+        "zh": "\u53d8\u8eab"
+      },
+      "tooltip_texts": {
+        "en": "Transforms when the timer hits 0.",
+        "zh": "\u5012\u8ba1\u65f6\u5f52\u96f6\u65f6\u53d8\u8eab\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "Weakness",
+      "effect_code": "Weakness",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_WEAKNESS_NAME",
+      "tooltip_key": "KEYWORD_WEAKNESS_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_WEAKNESS_DESC",
+      "name_texts": {
+        "en": "Weakness",
+        "zh": "\u865a\u5f31"
+      },
+      "tooltip_texts": {
+        "en": "-2 [img:dex], -2 [img:str], -2 [img:spd], temporarily.",
+        "zh": "-2 [img:dex]\uff0c-2 [img:str]\uff0c-2 [img:spd]\uff0c\u4e34\u65f6\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "-2 [img:dex], -2 [img:str], -2 [img:spd]. Lasts {stacks} turns.",
+        "zh": "-2 [img:dex]\uff0c-2 [img:str]\uff0c-2 [img:spd]\u3002\r\n\u6301\u7eed {stacks} \u56de\u5408\u3002"
+      }
+    },
+    {
+      "row_code": "Webbed",
+      "effect_code": "Webbed",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_WEBBED_NAME",
+      "tooltip_key": "KEYWORD_WEBBED_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Webbed",
+        "zh": "\u86db\u7f51"
+      },
+      "tooltip_texts": {
+        "en": "Immobile. Use basic attack to break free.",
+        "zh": "\u5b9a\u8eab\u3002\u4f7f\u7528\u57fa\u7840\u653b\u51fb\u53ef\u6323\u8131\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "Wet",
+      "effect_code": "Wet",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_WET_NAME",
+      "tooltip_key": "KEYWORD_WET_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Wet",
+        "zh": "\u6f6e\u6e7f"
+      },
+      "tooltip_texts": {
+        "en": "Wet.",
+        "zh": "\u6f6e\u6e7f\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "Zombie",
+      "effect_code": "Zombie",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_ZOMBIE_NAME",
+      "tooltip_key": "KEYWORD_ZOMBIE_DESC",
+      "tooltip_stacks_key": null,
+      "name_texts": {
+        "en": "Zombie",
+        "zh": "\u50f5\u5c38"
+      },
+      "tooltip_texts": {
+        "en": "-2 [img:str]. -2 [img:int]. Takes damage from Holy Element heals. Does not get injured when downed.",
+        "zh": "-2 [img:str]\u3002-2 [img:int]\u3002\r\n\u53d7\u5230\u795e\u5723\u5143\u7d20\u6cbb\u7597\u65f6\u4f1a\u53d7\u5230\u4f24\u5bb3\u3002\r\n\u5012\u5730\u65f6\u4e0d\u4f1a\u53d7\u5230\u521b\u4f24\u3002"
+      },
+      "tooltip_stacks_texts": {}
+    }
+  ]
+}

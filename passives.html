@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Passives Viewer</title>
+    <title>Passive Abilities Viewer | Mewgenics Encyclopedia</title>
     <style>
         * {
             margin: 0;
@@ -147,6 +147,11 @@
         .header h1 {
             font-size: 2.5em;
             margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
         }
 
         .controls {
@@ -409,6 +414,40 @@
             color: #333;
         }
 
+        .ref-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            align-items: center;
+            margin-top: 8px;
+        }
+
+        .ref-label {
+            font-size: 0.85em;
+            color: #6d6559;
+            font-weight: 600;
+        }
+
+        .ref-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 3px 8px;
+            border-radius: 999px;
+            background: rgba(159, 151, 139, 0.18);
+            border: 1px solid rgba(159, 151, 139, 0.35);
+            color: #5b534a;
+            font-size: 0.85em;
+            text-decoration: none;
+        }
+
+        .ref-link:hover {
+            background: rgba(159, 151, 139, 0.3);
+        }
+
+        .ref-link.ref-link-text {
+            cursor: default;
+        }
+
         code {
             background: #e8e8e8;
             border-radius: 3px;
@@ -581,6 +620,13 @@
             background: #f9f9f9;
             border-left: 3px solid #9f978b;
             border-radius: 2px;
+        }
+
+        .source-comment a,
+        .source-comment a:visited,
+        .source-comment a:hover,
+        .source-comment a:active {
+            color: inherit;
         }
 
         .hash-target {
@@ -940,7 +986,8 @@
         </div>
         <div id="navbarMount"></div>
         <div class="header">
-            <h1 id="headerTitle">Mewgenics Passive Abilities Viewer</h1>
+            <h1 id="headerTitle">Mewgenics Encyclopedia</h1>
+            <p id="headerSubtitle">Passive Abilities Viewer</p>
         </div>
 
         <div class="controls">
@@ -1037,7 +1084,18 @@
         let hashPromoteKey = null;
         let hashPromoteActive = false;
         let editorNotes = {};
+        let refIndex = new Map();
         const ANNOUNCEMENT_SEEN_KEY = 'codexAnnouncementSeen_v1';
+
+        if (typeof window.fetchJsonWithFallback !== 'function') {
+            window.fetchJsonWithFallback = async function (url, label) {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return await response.json();
+            };
+        }
 
         function setLanguage(lang) {
             codexSetLanguage(lang, () => {
@@ -1049,8 +1107,9 @@
 
         const UI_TEXT = mergeUiText(COMMON_UI_TEXT, {
             en: {
-                pageTitle: 'Mewgenics Passives Viewer',
-                headerTitle: 'Mewgenics Passive Abilities Viewer',
+                pageTitle: 'Passive Abilities Viewer | Mewgenics Encyclopedia',
+                headerTitle: 'Mewgenics Encyclopedia',
+                headerSubtitle: 'Passive Abilities Viewer',
                 searchPlaceholder: 'Search by passive name or description...',
                 otherNoClass: 'Other (No Class)',
                 allClasses: 'All Classes',
@@ -1065,6 +1124,8 @@
                 sourceCommentsLabel: 'Source Comments:',
                 editorNotesLabel: 'Editor Notes:',
                 unlockRequirementsLabel: 'Unlock Requirements:',
+                referencesLabel: 'References:',
+                relatedItemsLabel: 'Related items:',
                 iconHeader: 'Icon',
                 nameHeader: 'Passive Name',
                 descHeader: 'Description',
@@ -1080,8 +1141,9 @@
                 footerSource: 'Free fan site with data from game passive definitions and sprite mappings.',
             },
             zh: {
-                pageTitle: 'Mewgenics 被动图鉴',
-                headerTitle: 'Mewgenics 被动能力图鉴',
+                pageTitle: '被动能力图鉴 | Mewgenics 百科',
+                headerTitle: 'Mewgenics 百科',
+                headerSubtitle: '被动能力图鉴',
                 searchPlaceholder: '按被动名称或描述搜索...',
                 otherNoClass: '其他（无职业）',
                 allClasses: '全部职业',
@@ -1096,6 +1158,8 @@
                 sourceCommentsLabel: '源码注释：',
                 editorNotesLabel: '编辑注释：',
                 unlockRequirementsLabel: '解锁条件：',
+                referencesLabel: '引用：',
+                relatedItemsLabel: '相关物品：',
                 iconHeader: '图标',
                 nameHeader: '被动名称',
                 descHeader: '描述',
@@ -1193,10 +1257,13 @@
         function applyUiLanguage() {
             document.title = t('pageTitle');
             document.getElementById('headerTitle').textContent = t('headerTitle');
+            document.getElementById('headerSubtitle').textContent = t('headerSubtitle');
             document.getElementById('searchInput').placeholder = t('searchPlaceholder');
             document.getElementById('navAbilities').textContent = t('navAbilities');
             document.getElementById('navItems').textContent = t('navItems');
             document.getElementById('navPassives').textContent = t('navPassives');
+            document.getElementById('navWeather').textContent = t('navWeather');
+            document.getElementById('navKeywords').textContent = t('navKeywords');
             document.getElementById('navFurniture').textContent = t('navFurniture');
             document.getElementById('navMutations').textContent = t('navMutations');
             const navEvents = document.getElementById('navEvents');
@@ -1271,25 +1338,24 @@
         // Load passives from JSON
         async function loadPassives() {
             try {
-                const [response, notesResponse] = await Promise.all([
-                    fetch('passives_combined.json'),
-                    fetch('editor_notes.json')
+                const [data, notesData, refsData] = await Promise.all([
+                    fetchJsonWithFallback('passives_combined.json', 'passives'),
+                    fetchJsonWithFallback('editor_notes.json', 'editor notes').catch(() => ({})),
+                    fetchJsonWithFallback('refs_index.json', 'refs index').catch(() => null)
                 ]);
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                const data = await response.json();
-                if (notesResponse.ok) {
-                    editorNotes = await notesResponse.json();
+                editorNotes = notesData || {};
+                if (refsData) {
+                    buildRefIndex(refsData);
                 } else {
-                    editorNotes = {};
+                    refIndex = new Map();
                 }
                 allPassives = data.passives;
                 filteredPassives = allPassives;
 
                 document.getElementById('totalCount').textContent = allPassives.length;
                 applyUiLanguage();
-                displayPassives(filteredPassives);
+                updateHashPromotion('passive');
+                filterPassives(true);
             } catch (error) {
                 console.error('Error loading passives:', error);
                 const errorMsg = `
@@ -1502,6 +1568,129 @@
             return `<div class="unlock-requirements">${escapeHtml(t('unlockRequirementsLabel'))} ${linesHtml}</div>`;
         }
 
+        function buildRefIndex(data) {
+            const map = new Map();
+            const refs = Array.isArray(data?.refs) ? data.refs : [];
+            refs.forEach(entry => {
+                if (entry?.reverse) {
+                    return;
+                }
+                const ref = entry?.ref || {};
+                if (!ref.type || !ref.code) {
+                    return;
+                }
+                map.set(`${ref.type}:${ref.code}`, entry);
+            });
+            refIndex = map;
+        }
+
+        function getRefLabel(ref) {
+            if (!ref || !ref.type || !ref.code) {
+                return '';
+            }
+            const entry = refIndex.get(`${ref.type}:${ref.code}`);
+            const text = entry?.text || {};
+            return text[currentLanguage] || text.en || ref.code || '';
+        }
+
+        function getRefLink(ref) {
+            if (!ref || !ref.type || !ref.code) {
+                return '';
+            }
+            if (ref.type === 'achievement' || ref.type === 'item_pool') {
+                return '';
+            }
+            const lang = currentLanguage !== 'en' ? `?lang=${currentLanguage}` : '';
+            const code = encodeURIComponent(ref.code);
+            if (ref.type === 'ability') {
+                return `index.html${lang}#${code}`;
+            }
+            if (ref.type === 'passive') {
+                return `passives.html${lang}#${code}`;
+            }
+            if (ref.type === 'item') {
+                return `items.html${lang}#${code}`;
+            }
+            if (ref.type === 'mutation') {
+                return `mutations.html${lang}#${code}`;
+            }
+            if (ref.type === 'event') {
+                return `events.html${lang}#${code}`;
+            }
+            return '';
+        }
+
+        function buildRefsHtml(refs) {
+            if (!Array.isArray(refs) || refs.length === 0) {
+                return '';
+            }
+            const unique = new Map();
+            refs.forEach(ref => {
+                if (!ref || !ref.type || !ref.code) {
+                    return;
+                }
+                const key = `${ref.type}:${ref.code}`;
+                unique.set(key, ref);
+            });
+            const links = Array.from(unique.values()).map(ref => {
+                const label = getRefLabel(ref) || ref.code;
+                const href = getRefLink(ref);
+                if (href) {
+                    return `<a href="${href}">${escapeHtml(label)}</a>`;
+                }
+                return `<span>${escapeHtml(label)}</span>`;
+            });
+            if (!links.length) {
+                return '';
+            }
+            return `<div class="source-comment">${escapeHtml(t('referencesLabel'))} ${links.join(' ')}</div>`;
+        }
+
+        function getBackrefs(ref, filterType) {
+            if (!ref || !ref.type || !ref.code) {
+                return [];
+            }
+            const entry = refIndex.get(`${ref.type}:${ref.code}`);
+            const backrefs = Array.isArray(entry?.backrefs) ? entry.backrefs : [];
+            if (!filterType) {
+                return backrefs;
+            }
+            return backrefs.filter(backref => backref?.type === filterType);
+        }
+
+        function buildBackrefsHtml(ref, filterType, label) {
+            const backrefs = getBackrefs(ref, filterType);
+            if (!backrefs.length) {
+                return '';
+            }
+            const links = backrefs.map(backref => {
+                const display = getRefLabel(backref) || backref.code;
+                const href = getRefLink(backref);
+                if (href) {
+                    return `<a href="${href}">${escapeHtml(display)}</a>`;
+                }
+                return `<span>${escapeHtml(display)}</span>`;
+            });
+            return `<div class="source-comment">${escapeHtml(label)} ${links.join(' ')}</div>`;
+        }
+
+        function mergeRefs(...refsLists) {
+            const merged = new Map();
+            refsLists.forEach(list => {
+                if (!Array.isArray(list)) {
+                    return;
+                }
+                list.forEach(ref => {
+                    if (!ref || !ref.type || !ref.code) {
+                        return;
+                    }
+                    const key = `${ref.type}:${ref.code}`;
+                    merged.set(key, ref);
+                });
+            });
+            return Array.from(merged.values());
+        }
+
         function hasRenderedText(texts, fallback) {
             if (typeof fallback === 'string' && fallback.trim() !== '') {
                 return true;
@@ -1685,6 +1874,12 @@
                 const unlockRequirementsHtml = buildUnlockRequirementsHtml(
                     passive.unlock_requirements
                 );
+                const refsHtml = buildRefsHtml(mergeRefs(passive.refs, passive.refs_upgraded));
+                const relatedItemsHtml = buildBackrefsHtml(
+                    { type: 'passive', code: passive.passive_code },
+                    'item',
+                    t('relatedItemsLabel')
+                );
 
                 // Get notes if present
                 const notesHtml = passive.desc_notes ? `<div class="source-comment">${escapeHtml(t('sourceCommentsLabel'))} ${escapeHtml(passive.desc_notes)}</div>` : '';
@@ -1720,6 +1915,8 @@
                             ${descriptionHtml}
                             ${upgradeBlockHtml}
                             ${unlockRequirementsHtml}
+                            ${refsHtml}
+                            ${relatedItemsHtml}
                             ${notesHtml}
                             ${editorHtml}
                         </td>
@@ -1838,8 +2035,15 @@
         }
 
         // Filter passives
-        function filterPassives() {
-            clearHashPromotion();
+        function filterPassives(preserveHash = false) {
+            if (!preserveHash) {
+                clearHashPromotion();
+            }
+            const showHiddenToggle = document.getElementById('showHiddenToggle');
+            const hashActive = hashPromoteActive && hashPromoteKey;
+            if (hashActive && showHiddenToggle && !showHiddenToggle.checked) {
+                showHiddenToggle.checked = true;
+            }
             const search = document.getElementById('searchInput').value.toLowerCase();
             const classFilter = document.getElementById('classFilter').value;
             const poolFilter = document.getElementById('poolFilter')?.value || '';
@@ -1968,9 +2172,7 @@
         window.addEventListener('hashchange', () => {
             updateHashPromotion('passive');
             currentPage = 1;
-            if (currentDisplayPassives.length) {
-                displayPassives(currentDisplayPassives);
-            }
+            filterPassives(true);
             scrollToHash('passive');
         });
 

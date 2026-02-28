@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Items Viewer</title>
+    <title>Item Viewer | Mewgenics Encyclopedia</title>
     <style>
         * {
             margin: 0;
@@ -147,6 +147,11 @@
         .header h1 {
             font-size: 2.5em;
             margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
         }
 
         .controls {
@@ -746,6 +751,13 @@
             font-style: normal;
         }
 
+        .source-comment a,
+        .source-comment a:visited,
+        .source-comment a:hover,
+        .source-comment a:active {
+            color: inherit;
+        }
+
         .announcement-button {
             position: fixed;
             top: 14px;
@@ -1032,7 +1044,8 @@
         </div>
         <div id="navbarMount"></div>
         <div class="header">
-            <h1 id="headerTitle">Mewgenics Item Viewer</h1>
+            <h1 id="headerTitle">Mewgenics Encyclopedia</h1>
+            <p id="headerSubtitle">Item Viewer</p>
         </div>
 
         <div class="controls">
@@ -1146,6 +1159,17 @@
         let hashPromoteActive = false;
         const ANNOUNCEMENT_SEEN_KEY = 'codexAnnouncementSeen_v1';
         let editorNotes = {};
+        let refIndex = new Map();
+
+        if (typeof window.fetchJsonWithFallback !== 'function') {
+            window.fetchJsonWithFallback = async function (url, label) {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return await response.json();
+            };
+        }
 
         function setLanguage(lang) {
             codexSetLanguage(lang, () => {
@@ -1157,8 +1181,9 @@
 
         const UI_TEXT = mergeUiText(COMMON_UI_TEXT, {
             en: {
-                pageTitle: 'Mewgenics Item Viewer',
-                headerTitle: 'Mewgenics Item Viewer',
+                pageTitle: 'Item Viewer | Mewgenics Encyclopedia',
+                headerTitle: 'Mewgenics Encyclopedia',
+                headerSubtitle: 'Item Viewer',
                 searchPlaceholder: 'Search by name/description or use #SetName for sets, #(Pool Name) for pools...',
                 otherNoType: 'Other (No Type)',
                 otherNoRarity: 'Other (No Rarity)',
@@ -1178,9 +1203,18 @@
                 poolFilterLabel: 'Pool:',
                 selectSet: 'Select Set',
                 selectPool: 'Select Pool',
+                noPoolOption: 'No Item Pool',
                 sourceCommentsLabel: 'Source Comments:',
                 editorNotesLabel: 'Editor Notes:',
                 unlockRequirementsLabel: 'Unlock Requirements:',
+                referencesLabel: 'References:',
+                relatedAbilitiesLabel: 'Related abilities:',
+                relatedPassivesLabel: 'Related passives:',
+                relatedMutationsLabel: 'Related mutations:',
+                relatedEventsLabel: 'Related events:',
+                relatedCharactersLabel: 'Related characters:',
+                rewardCommon: 'Common',
+                rewardRare: 'Rare',
                 completeChecklistWithClass: 'Complete all checkmarks as {className}',
                 allChaptersEveryClass: 'All chapters with every class',
                 beatHouseBoss: 'Beat house boss {bossName}',
@@ -1208,8 +1242,9 @@
                 monoclassRunHint: 'Requires mono-class (Colorless-only) run',
             },
             zh: {
-                pageTitle: 'Mewgenics 物品图鉴',
-                headerTitle: 'Mewgenics 物品图鉴',
+                pageTitle: '物品图鉴 | Mewgenics 百科',
+                headerTitle: 'Mewgenics 百科',
+                headerSubtitle: '物品图鉴',
                 searchPlaceholder: '按名称/描述搜索，或使用 #套装名 搜索套装、#(池名) 搜索物品池...',
                 otherNoType: '其他（无类型）',
                 otherNoRarity: '其他（无稀有度）',
@@ -1229,9 +1264,18 @@
                 poolFilterLabel: '池：',
                 selectSet: '选择套装',
                 selectPool: '选择池',
+                noPoolOption: '无物品池',
                 sourceCommentsLabel: '源码注释：',
                 editorNotesLabel: '编辑注释：',
                 unlockRequirementsLabel: '解锁条件：',
+                referencesLabel: '引用：',
+                relatedAbilitiesLabel: '相关技能：',
+                relatedPassivesLabel: '相关被动：',
+                relatedMutationsLabel: '相关突变：',
+                relatedEventsLabel: '相关事件：',
+                relatedCharactersLabel: '相关角色：',
+                rewardCommon: '普通',
+                rewardRare: '稀有',
                 completeChecklistWithClass: '以 {className} 通关所有勾选章',
                 allChaptersEveryClass: '所有章节（每个职业）',
                 beatHouseBoss: '击败宅邸 Boss {bossName}',
@@ -1459,7 +1503,13 @@
             const trimmed = raw.slice(2).trim();
             const end = trimmed.indexOf(')');
             if (end > 0) {
-                return trimmed.slice(0, end).trim();
+                const token = trimmed.slice(0, end).trim();
+                const normalized = token.toLowerCase();
+                const localizedNoPool = (t('noPoolOption') || '').toLowerCase();
+                if (normalized === '__no_pool__' || normalized === 'no item pool' || normalized === localizedNoPool || normalized === '无物品池') {
+                    return '__no_pool__';
+                }
+                return token;
             }
             return '';
         }
@@ -1471,6 +1521,14 @@
             }
             const selected = select.value;
             if (!selected) {
+                return;
+            }
+            if (selected === '__no_pool__') {
+                const searchInput = document.getElementById('searchInput');
+                searchInput.value = `#(${t('noPoolOption')}) `;
+                updateClearButtonVisibility();
+                filterItems();
+                select.value = '';
                 return;
             }
             searchByPool(selected);
@@ -1550,10 +1608,13 @@
         function applyUiLanguage() {
             document.title = t('pageTitle');
             document.getElementById('headerTitle').textContent = t('headerTitle');
+            document.getElementById('headerSubtitle').textContent = t('headerSubtitle');
             document.getElementById('searchInput').placeholder = t('searchPlaceholder');
             document.getElementById('navAbilities').textContent = t('navAbilities');
             document.getElementById('navItems').textContent = t('navItems');
             document.getElementById('navPassives').textContent = t('navPassives');
+            document.getElementById('navWeather').textContent = t('navWeather');
+            document.getElementById('navKeywords').textContent = t('navKeywords');
             document.getElementById('navFurniture').textContent = t('navFurniture');
             document.getElementById('navMutations').textContent = t('navMutations');
             const navEvents = document.getElementById('navEvents');
@@ -1639,11 +1700,16 @@
 
         async function loadItems() {
             try {
-                const response = await fetch('items_db.json');
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
+                const [itemsData, refsData] = await Promise.all([
+                    fetchJsonWithFallback('items_db.json', 'items'),
+                    fetchJsonWithFallback('refs_index.json', 'refs index').catch(() => null)
+                ]);
+                allItems = itemsData;
+                if (refsData) {
+                    buildRefIndex(refsData);
+                } else {
+                    refIndex = new Map();
                 }
-                allItems = await response.json();
 
                 // Normalize cursed flag: prefer `cursed` and remove legacy `is_cursed`.
                 // allItems.forEach(it => {
@@ -1655,31 +1721,25 @@
 
                 // Load set bonuses data
                 try {
-                    const setBonusResponse = await fetch('set_bonuses_db.json');
-                    if (setBonusResponse.ok) {
-                        const setBonusDb = await setBonusResponse.json();
-                        setBonusesData = setBonusDb.set_bonuses || [];
-                    }
+                    const setBonusDb = await fetchJsonWithFallback('set_bonuses_db.json', 'set bonuses');
+                    setBonusesData = setBonusDb.set_bonuses || [];
                 } catch (error) {
                     console.error('Error loading set bonuses:', error);
                 }
 
                 // Load editor notes
                 try {
-                    const notesResponse = await fetch('editor_notes.json');
-                    if (notesResponse.ok) {
-                        editorNotes = await notesResponse.json();
-                    } else {
-                        editorNotes = {};
-                    }
+                    editorNotes = await fetchJsonWithFallback('editor_notes.json', 'editor notes');
                 } catch (error) {
                     console.error('Error loading editor notes:', error);
+                    editorNotes = {};
                 }
 
                 filteredItems = allItems;
                 document.getElementById('totalCount').textContent = allItems.length;
                 applyUiLanguage();
-                displayItems(filteredItems);
+                updateHashPromotion('item');
+                filterItems(true);
             } catch (error) {
                 console.error('Error loading items:', error);
                 document.getElementById('tableBody').innerHTML = `
@@ -1892,6 +1952,11 @@
             placeholder.textContent = t('selectPool');
             select.appendChild(placeholder);
 
+            const noPoolOption = document.createElement('option');
+            noPoolOption.value = '__no_pool__';
+            noPoolOption.textContent = t('noPoolOption');
+            select.appendChild(noPoolOption);
+
             const sorted = Array.from(poolMap.entries())
                 .map(([tag, label]) => ({ tag, label }))
                 .sort((a, b) => a.label.localeCompare(b.label, currentLanguage));
@@ -2009,12 +2074,19 @@
             const tbody = document.getElementById('tableBody');
             const showHidden = document.getElementById('showHiddenToggle')?.checked;
             const visibleItems = items.filter(item => {
+                const isHidden = item?.hidden === true;
                 const hasIcon = item.frame !== null && item.frame !== undefined;
                 // Always show if item_name or item_name_texts has anything (including code name)
                 const hasTitle = hasRenderedText(item.item_name_texts, item.item_name) || (typeof item.item_name === 'string' && item.item_name.trim() !== '');
                 const hasDescription = hasRenderedText(item.description_texts, item.description) || // has attributes rendered
                     (item.stats && Object.keys(item.stats).length > 0); // or has stats to show
-                return showHidden || (hasIcon && hasTitle && hasDescription);
+                if (showHidden) {
+                    return true;
+                }
+                if (isHidden) {
+                    return false;
+                }
+                return hasIcon && hasTitle && hasDescription;
             });
             let orderedItems = visibleItems;
             if (hashPromoteActive && hashPromoteKey) {
@@ -2105,6 +2177,33 @@
                 const statsHtml = renderItemStats(item.stats);
                 const partIconHtml = partIconPath ? `<img src="${partIconPath}" class="part-icon" onerror="this.style.display='none'">` : '';
                 const iconClass = item.rarity === 'rare' ? 'item-icon item-icon-rare' : 'item-icon';
+                const refsHtml = buildRefsHtml(mergeRefs(item.refs, item.refs_upgraded));
+                const itemRef = { type: 'item', code: item.item_code };
+                const relatedAbilitiesHtml = buildBackrefsHtml(
+                    itemRef,
+                    'ability',
+                    t('relatedAbilitiesLabel')
+                );
+                const relatedPassivesHtml = buildBackrefsHtml(
+                    itemRef,
+                    'passive',
+                    t('relatedPassivesLabel')
+                );
+                const relatedMutationsHtml = buildBackrefsHtml(
+                    itemRef,
+                    'mutation',
+                    t('relatedMutationsLabel')
+                );
+                const relatedEventsHtml = buildBackrefsHtml(
+                    itemRef,
+                    'event',
+                    t('relatedEventsLabel')
+                );
+                const relatedCharactersHtml = buildBackrefsHtml(
+                    itemRef,
+                    'character',
+                    t('relatedCharactersLabel')
+                );
 
                 let poolsHtml = '';
                 if (Array.isArray(item.item_pools) && item.item_pools.length > 0) {
@@ -2168,6 +2267,12 @@
                             ${statsHtml}
                             <div class="description">${parseRichText(localizedDescription + durabilityText) || ''}</div>
                             ${buildUnlockRequirementsHtml(item.unlock_requirements, item.item_code)}
+                            ${refsHtml}
+                            ${relatedAbilitiesHtml}
+                            ${relatedPassivesHtml}
+                            ${relatedMutationsHtml}
+                            ${relatedEventsHtml}
+                            ${relatedCharactersHtml}
                             ${item.description_notes ? `<div class="source-comment">${escapeHtml(t('sourceCommentsLabel'))} ${escapeHtml(item.description_notes)}</div>` : ''}
                             ${getEditorNote(item.item_code) ? `<div class="source-comment">${escapeHtml(t('editorNotesLabel'))} ${escapeHtml(getEditorNote(item.item_code))}</div>` : ''}
                         </td>
@@ -2250,8 +2355,15 @@
             displayItems(sortedItems);
         }
 
-        function filterItems() {
-            clearHashPromotion();
+        function filterItems(preserveHash = false) {
+            if (!preserveHash) {
+                clearHashPromotion();
+            }
+            const showHiddenToggle = document.getElementById('showHiddenToggle');
+            const hashActive = hashPromoteActive && hashPromoteKey;
+            if (hashActive && showHiddenToggle && !showHiddenToggle.checked) {
+                showHiddenToggle.checked = true;
+            }
             const search = document.getElementById('searchInput').value.toLowerCase();
             const kindFilter = document.getElementById('kindFilter').value;
             const rarityFilter = document.getElementById('rarityFilter').value;
@@ -2270,7 +2382,17 @@
                     .filter(text => typeof text === 'string' && text.trim() !== '')
                     .map(text => text.toLowerCase());
 
-                const localizedDescription = getLocalizedText(item.description_texts, item.description).toLowerCase();
+                let localizedDescription = getLocalizedText(item.description_texts, item.description) || '';
+                if (item.aux) {
+                    localizedDescription = localizedDescription.replace(/{aux}/g, item.aux);
+                }
+                localizedDescription = localizedDescription.replace(/{aux_cat_name}/g, t('auxCatName'));
+                localizedDescription = localizedDescription.replace(/{str_aux_passive_name}/g, t('strAuxPassiveName'));
+                localizedDescription = localizedDescription.replace(/{str_aux_passive_desc}/g, t('strAuxPassiveDesc'));
+                localizedDescription = localizedDescription.replace(/{str_aux_item_desc}/g, t('strAuxItemDesc'));
+                localizedDescription = localizedDescription.replace(/{str_aux_active_name}/g, t('strAuxActiveName'));
+                localizedDescription = localizedDescription.replace(/{str_aux_active_desc}/g, t('strAuxActiveDesc'));
+                localizedDescription = localizedDescription.toLowerCase();
 
                 let matchesSearch = true;
                 if (search.startsWith('#(')) {
@@ -2278,17 +2400,32 @@
                     const poolSearch = parsePoolQuery(search).toLowerCase();
                     if (poolSearch) {
                         const poolTags = Array.isArray(item.item_pools) ? item.item_pools : [];
-                        matchesSearch = poolTags.some(pool => {
-                            if (typeof pool === 'string') {
-                                return pool.toLowerCase().includes(poolSearch);
-                            }
-                            if (pool && typeof pool === 'object') {
-                                const rawTag = (pool.tag || '').toLowerCase();
-                                const localizedTag = getLocalizedText(pool.tag_texts, pool.tag || '').toLowerCase();
-                                return rawTag.includes(poolSearch) || localizedTag.includes(poolSearch);
-                            }
-                            return false;
-                        });
+                        if (poolSearch === '__no_pool__') {
+                            const normalizedTags = poolTags
+                                .map(pool => {
+                                    if (typeof pool === 'string') {
+                                        return pool.trim();
+                                    }
+                                    if (pool && typeof pool === 'object') {
+                                        return (pool.tag || '').trim();
+                                    }
+                                    return '';
+                                })
+                                .filter(Boolean);
+                            matchesSearch = normalizedTags.length === 0;
+                        } else {
+                            matchesSearch = poolTags.some(pool => {
+                                if (typeof pool === 'string') {
+                                    return pool.toLowerCase().includes(poolSearch);
+                                }
+                                if (pool && typeof pool === 'object') {
+                                    const rawTag = (pool.tag || '').toLowerCase();
+                                    const localizedTag = getLocalizedText(pool.tag_texts, pool.tag || '').toLowerCase();
+                                    return rawTag.includes(poolSearch) || localizedTag.includes(poolSearch);
+                                }
+                                return false;
+                            });
+                        }
                     }
                 } else if (search.startsWith('#')) {
                     // Set search: #SetName (supports both English and localized names)
@@ -2330,15 +2467,22 @@
                 let matchesPool = true;
                 if (poolFilter) {
                     const pools = Array.isArray(item.item_pools) ? item.item_pools : [];
-                    matchesPool = pools.some(pool => {
-                        if (typeof pool === 'string') {
-                            return pool === poolFilter;
-                        }
-                        if (pool && typeof pool === 'object') {
-                            return pool.tag === poolFilter;
-                        }
-                        return false;
-                    });
+                    const poolTags = pools
+                        .map(pool => {
+                            if (typeof pool === 'string') {
+                                return pool;
+                            }
+                            if (pool && typeof pool === 'object') {
+                                return pool.tag || '';
+                            }
+                            return '';
+                        })
+                        .filter(Boolean);
+                    if (poolFilter === '__no_pool__') {
+                        matchesPool = poolTags.length === 0;
+                    } else {
+                        matchesPool = poolTags.includes(poolFilter);
+                    }
                 }
 
                 // Handle rarity filter with special "__null__" value for items without a rarity
@@ -2561,6 +2705,142 @@
             return note[currentLanguage] || note.en || '';
         }
 
+        function buildRefIndex(data) {
+            const map = new Map();
+            const refs = Array.isArray(data?.refs) ? data.refs : [];
+            refs.forEach(entry => {
+                if (entry?.reverse) {
+                    return;
+                }
+                const ref = entry?.ref || {};
+                if (!ref.type || !ref.code) {
+                    return;
+                }
+                map.set(`${ref.type}:${ref.code}`, entry);
+            });
+            refIndex = map;
+        }
+
+        function getRefLabel(ref) {
+            if (!ref || !ref.type || !ref.code) {
+                return '';
+            }
+            const entry = refIndex.get(`${ref.type}:${ref.code}`);
+            const text = entry?.text || {};
+            return text[currentLanguage] || text.en || ref.code || '';
+        }
+
+        function getRefLink(ref) {
+            if (!ref || !ref.type || !ref.code) {
+                return '';
+            }
+            if (ref.type === 'achievement' || ref.type === 'item_pool') {
+                return '';
+            }
+            const lang = currentLanguage !== 'en' ? `?lang=${currentLanguage}` : '';
+            const code = encodeURIComponent(ref.code);
+            if (ref.type === 'ability') {
+                return `index.html${lang}#${code}`;
+            }
+            if (ref.type === 'passive') {
+                return `passives.html${lang}#${code}`;
+            }
+            if (ref.type === 'item') {
+                return `items.html${lang}#${code}`;
+            }
+            if (ref.type === 'mutation') {
+                return `mutations.html${lang}#${code}`;
+            }
+            if (ref.type === 'event') {
+                return `events.html${lang}#${code}`;
+            }
+            if (ref.type === 'character') {
+                return `characters.html${lang}#${code}`;
+            }
+            return '';
+        }
+
+        function getRewardNoteLabel(note) {
+            if (!note) {
+                return '';
+            }
+            if (note === 'common') {
+                return t('rewardCommon');
+            }
+            if (note === 'rare') {
+                return t('rewardRare');
+            }
+            return note;
+        }
+
+        function buildRefsHtml(refs) {
+            if (!Array.isArray(refs) || refs.length === 0) {
+                return '';
+            }
+            const unique = new Map();
+            refs.forEach(ref => {
+                if (!ref || !ref.type || !ref.code) {
+                    return;
+                }
+                const key = `${ref.type}:${ref.code}:${ref.note || ''}`;
+                unique.set(key, ref);
+            });
+            const links = Array.from(unique.values()).map(ref => {
+                const label = getRefLabel(ref) || ref.code;
+                const noteLabel = getRewardNoteLabel(ref.note);
+                const display = noteLabel ? `${label} (${noteLabel})` : label;
+                const href = getRefLink(ref);
+                if (href) {
+                    return `<a href="${href}">${escapeHtml(display)}</a>`;
+                }
+                return `<span>${escapeHtml(display)}</span>`;
+            });
+            if (!links.length) {
+                return '';
+            }
+            return `<div class="source-comment">${escapeHtml(t('referencesLabel'))} ${links.join(' ')}</div>`;
+        }
+
+        function getBackrefs(ref, filterType) {
+            if (!ref || !ref.type || !ref.code) {
+                return [];
+            }
+            const entry = refIndex.get(`${ref.type}:${ref.code}`);
+            const backrefs = Array.isArray(entry?.backrefs) ? entry.backrefs : [];
+            if (!filterType) {
+                return backrefs;
+            }
+            return backrefs.filter(backref => backref?.type === filterType);
+        }
+
+        function buildBackrefsHtml(ref, filterType, label) {
+            const backrefs = getBackrefs(ref, filterType);
+            if (!backrefs.length) {
+                return '';
+            }
+            const links = backrefs.map(backref => {
+                const display = getRefLabel(backref) || backref.code;
+                const noteLabel = getRewardNoteLabel(backref.note);
+                const labelWithNote = noteLabel ? `${display} (${noteLabel})` : display;
+                const href = getRefLink(backref);
+                if (href) {
+                    return `<a href="${href}">${escapeHtml(labelWithNote)}</a>`;
+                }
+                return `<span>${escapeHtml(labelWithNote)}</span>`;
+            });
+            return `<div class="source-comment">${escapeHtml(label)} ${links.join(' ')}</div>`;
+        }
+
+        function mergeRefs(...refsLists) {
+            const merged = [];
+            refsLists.forEach(list => {
+                if (Array.isArray(list)) {
+                    merged.push(...list);
+                }
+            });
+            return merged;
+        }
+
         function getLocalizedChapterName(requirement) {
             if (!requirement || typeof requirement !== 'object') {
                 return '';
@@ -2772,9 +3052,7 @@
         window.addEventListener('hashchange', () => {
             updateHashPromotion('item');
             currentPage = 1;
-            if (currentDisplayItems.length) {
-                displayItems(currentDisplayItems);
-            }
+            filterItems(true);
             scrollToHash('item');
         });
 

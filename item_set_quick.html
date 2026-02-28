@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Item Set Quick Check</title>
+    <title>Item Set Quick Check | Mewgenics Encyclopedia</title>
     <style>
         * {
             margin: 0;
@@ -147,6 +147,11 @@
         .header h1 {
             font-size: 2.4em;
             margin-bottom: 8px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
         }
 
         .set-rows {
@@ -338,6 +343,131 @@
             padding: 4px 2px;
         }
 
+        .announcement-button {
+            position: fixed;
+            top: 14px;
+            left: 14px;
+            z-index: 1200;
+            background: #9f978b;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 8px 14px;
+            font-size: 0.9em;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+        }
+
+        .announcement-button:hover {
+            background: #7f776b;
+        }
+
+        .announcement-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1300;
+            align-items: center;
+            justify-content: center;
+            padding: calc(20px + env(safe-area-inset-top)) calc(20px + env(safe-area-inset-right)) calc(20px + env(safe-area-inset-bottom)) calc(20px + env(safe-area-inset-left));
+        }
+
+        .announcement-card {
+            background: #fff;
+            max-width: 560px;
+            width: 100%;
+            max-height: calc(100vh - 40px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+            border-radius: 10px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+            border: 1px solid rgba(159, 151, 139, 0.4);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .announcement-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 20px;
+            background: #f3f1ee;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .announcement-header h2 {
+            font-size: 1.1em;
+            color: #5b534a;
+        }
+
+        .announcement-close {
+            background: none;
+            border: none;
+            font-size: 1.4em;
+            color: #7f776b;
+            cursor: pointer;
+        }
+
+        .announcement-body {
+            padding: 18px 20px 10px;
+            color: #4b453d;
+            line-height: 1.6;
+            overflow-y: auto;
+        }
+
+        .announcement-body pre {
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 10px 12px;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+
+        .announcement-body ul,
+        .announcement-body ol {
+            margin: 10px 0 10px 18px;
+        }
+
+        .announcement-body li {
+            margin-bottom: 6px;
+        }
+
+        .announcement-body ul ul,
+        .announcement-body ul ol,
+        .announcement-body ol ul,
+        .announcement-body ol ol {
+            margin-top: 6px;
+        }
+
+        .announcement-footer {
+            padding: 10px 16px 16px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .announcement-lang {
+            display: flex;
+            gap: 8px;
+        }
+
+        .announcement-lang-btn {
+            border: 1px solid rgba(159, 151, 139, 0.4);
+            background: #f7f4f0;
+            color: #5b534a;
+            border-radius: 6px;
+            padding: 4px 10px;
+            font-size: 0.85em;
+            cursor: pointer;
+        }
+
+        .announcement-lang-btn.active {
+            background: #9f978b;
+            color: #fff;
+            border-color: #9f978b;
+        }
+
         .footer {
             padding: 20px;
             background: #f5f5f5;
@@ -366,6 +496,24 @@
 </head>
 
 <body>
+    <button class="announcement-button" id="announcementButton" type="button">Announcement</button>
+    <div class="announcement-modal" id="announcementModal">
+        <div class="announcement-card" role="dialog" aria-modal="true" aria-labelledby="announcementTitle">
+            <div class="announcement-header">
+                <h2 id="announcementTitle">Announcement</h2>
+                <button class="announcement-close" id="announcementClose" type="button" aria-label="Close">×</button>
+            </div>
+            <div class="announcement-body" id="announcementBody"></div>
+            <div class="announcement-footer">
+                <div class="announcement-lang" role="group" aria-label="Language">
+                    <button type="button" class="announcement-lang-btn" id="announcementLangEn"
+                        data-lang="en">English</button>
+                    <button type="button" class="announcement-lang-btn" id="announcementLangZh"
+                        data-lang="zh">中文</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="language-toggle" role="group" aria-label="Language">
             <button type="button" class="lang-link" id="langButtonEn" data-lang="en">English</button>
@@ -377,7 +525,8 @@
         </div>
         <div id="navbarMount"></div>
         <div class="header">
-            <h1 id="headerTitle">Item Set Quick Check</h1>
+            <h1 id="headerTitle">Mewgenics Encyclopedia</h1>
+            <p id="headerSubtitle">Item Set Quick Check</p>
         </div>
 
         <div class="layout-toggle" role="group" aria-label="Layout">
@@ -395,6 +544,7 @@
         </div>
     </div>
 
+    <script src="announcement.js"></script>
     <script src="js/codex-utils.js"></script>
     <script src="js/codex-i18n.js"></script>
     <script src="js/codex-components.js"></script>
@@ -407,11 +557,13 @@
         let currentLanguage = initLanguage('en');
         window.currentLanguage = currentLanguage;
         let currentLayout = 'cards';
+        const ANNOUNCEMENT_SEEN_KEY = 'codexAnnouncementSeen_v1';
 
         const UI_TEXT = mergeUiText(COMMON_UI_TEXT, {
             en: {
-                pageTitle: 'Item Set Quick Check',
-                headerTitle: 'Item Set Quick Check',
+                pageTitle: 'Item Set Quick Check | Mewgenics Encyclopedia',
+                headerTitle: 'Mewgenics Encyclopedia',
+                headerSubtitle: 'Item Set Quick Check',
                 noItems: 'No items found for this set.',
                 loading: 'Loading data...',
                 auxCatName: '`cat name`',
@@ -425,8 +577,9 @@
                 layoutRows: 'Rows'
             },
             zh: {
-                pageTitle: '套装速查',
-                headerTitle: '套装速查',
+                pageTitle: '套装速查 | Mewgenics 百科',
+                headerTitle: 'Mewgenics 百科',
+                headerSubtitle: '套装速查',
                 noItems: '此套装未找到物品。',
                 loading: '正在加载数据...',
                 auxCatName: '`猫名`',
@@ -534,9 +687,12 @@
         function applyUiLanguage() {
             document.title = t('pageTitle');
             document.getElementById('headerTitle').textContent = t('headerTitle');
+            document.getElementById('headerSubtitle').textContent = t('headerSubtitle');
             document.getElementById('navAbilities').textContent = t('navAbilities');
             document.getElementById('navItems').textContent = t('navItems');
             document.getElementById('navPassives').textContent = t('navPassives');
+            document.getElementById('navWeather').textContent = t('navWeather');
+            document.getElementById('navKeywords').textContent = t('navKeywords');
             document.getElementById('navFurniture').textContent = t('navFurniture');
             document.getElementById('navMutations').textContent = t('navMutations');
             const navEvents = document.getElementById('navEvents');
@@ -561,6 +717,12 @@
             document.getElementById('footerCredit').textContent = t('footerCredit');
             document.getElementById('footerAuthor').textContent = t('footerAuthor');
             document.getElementById('footerTranslator').textContent = t('footerTranslator');
+            document.getElementById('announcementButton').textContent = t('announcementButton');
+            document.getElementById('announcementTitle').textContent = t('announcementTitle');
+            document.getElementById('announcementLangEn').textContent = t('languageEnglish');
+            document.getElementById('announcementLangZh').textContent = t('languageChinese');
+            updateAnnouncementLanguageButtons();
+            loadAnnouncementContent();
             document.getElementById('langButtonEn').classList.toggle('active', currentLanguage === 'en');
             document.getElementById('langButtonZh').classList.toggle('active', currentLanguage === 'zh');
             document.getElementById('layoutCards').textContent = t('layoutCards');
@@ -886,6 +1048,8 @@
             currentLayout = initialLayout;
             applyLayout(currentLayout);
             applyUiLanguage();
+            initAnnouncement();
+            maybeShowAnnouncement();
         });
 
         let layoutResizeTimer;

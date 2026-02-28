@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mewgenics Achievements</title>
+    <title>Achievements | Mewgenics Encyclopedia</title>
     <style>
         * {
             margin: 0;
@@ -149,6 +149,11 @@
             margin-bottom: 10px;
         }
 
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
         .controls {
             padding: 18px 20px;
             background: #f3f1ee;
@@ -177,6 +182,14 @@
             color: #5b534a;
             font-size: 1.35em;
             margin-bottom: 12px;
+        }
+
+        .section-note {
+            display: block;
+            font-size: 0.85em;
+            font-weight: 400;
+            opacity: 0.75;
+            margin-top: 4px;
         }
 
         .achievement-table-wrapper {
@@ -224,6 +237,63 @@
             flex-wrap: wrap;
             gap: 6px;
             align-items: center;
+        }
+
+        .beanies-quest-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding: 6px 0;
+        }
+
+        .beanies-quest-row {
+            display: grid;
+            gap: 8px;
+            align-items: center;
+            justify-items: start;
+        }
+
+        .beanies-quest-row-intro {
+            grid-template-columns: repeat(5, minmax(120px, 1.8fr) minmax(42px, 0.8fr) minmax(42px, 0.8fr));
+        }
+
+        .beanies-quest-row-main {
+            grid-template-columns: repeat(5, minmax(120px, 1.8fr) minmax(42px, 0.8fr) minmax(42px, 0.8fr));
+        }
+
+        .beanies-quest-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .beanies-quest-label {
+            font-size: 0.85em;
+            font-weight: 600;
+            color: #5b534a;
+            white-space: nowrap;
+        }
+
+        .other-main-quest-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+        }
+
+        .other-main-quest-card {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #faf8f5;
+        }
+
+        .other-main-quest-label {
+            font-size: 0.9em;
+            font-weight: 600;
+            color: #5b534a;
         }
 
         .achievement-icon-link {
@@ -476,7 +546,8 @@
         </div>
         <div id="navbarMount"></div>
         <div class="header">
-            <h1 id="headerTitle">Mewgenics Achievements</h1>
+            <h1 id="headerTitle">Mewgenics Encyclopedia</h1>
+            <p id="headerSubtitle">Achievements and Quests</p>
         </div>
 
         <div class="controls">
@@ -500,7 +571,7 @@
         </div>
 
         <div class="achievement-section">
-            <h2 id="boxTableTitle">Box Unlocks</h2>
+            <h2 id="boxTableTitle">Boxes Achievements</h2>
             <div class="achievement-table-wrapper">
                 <table id="boxAchievementsTable">
                     <tbody id="boxTableBody">
@@ -528,6 +599,24 @@
             </div>
         </div>
 
+        <div class="achievement-section">
+            <h2 id="otherMainQuestTitle">Other Main Quests</h2>
+            <div class="achievement-table-wrapper">
+                <div id="otherMainQuestTable" class="other-main-quest-grid">
+                    <div class="no-results" id="otherMainQuestLoadingMessage">Loading achievements...</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="achievement-section">
+            <h2 id="beaniesQuestTitle">Side Quests<br><span class="section-note">Note: The fixed version of items are rewarded by completion but not added into item pools.</span></h2>
+            <div class="achievement-table-wrapper">
+                <div id="beaniesQuestTable" class="beanies-quest-grid">
+                    <div class="no-results" id="beaniesLoadingMessage">Loading achievements...</div>
+                </div>
+            </div>
+        </div>
+
         <div class="footer">
             <p id="footerSource">Free fan site with data from game unlock definitions.</p>
             <p id="footerCredit">Original game by Edmund McMillen and Tyler Glaiel.</p>
@@ -550,10 +639,22 @@
         let allItems = [];
         let allEntries = [];
         let itemEntriesByCode = new Map();
+        let entryByKey = new Map();
         let currentLanguage = initLanguage('en');
         window.currentLanguage = currentLanguage;
         let dataReady = false;
+        let achievementTableConfig = null;
         const ANNOUNCEMENT_SEEN_KEY = 'codexAnnouncementSeen_v1';
+
+        if (typeof window.fetchJsonWithFallback !== 'function') {
+            window.fetchJsonWithFallback = async function (url, label) {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return await response.json();
+            };
+        }
 
         const CLASS_ORDER = [
             'fighter', 'hunter', 'tank', 'mage', 'medic', 'thief',
@@ -573,49 +674,96 @@
             'theend',
             'endoftime',
         ];
-        const BOSS_TABLE_ORDER = [
-            'guillotina_1',
-            'guillotina_2',
-            'guillotina_3',
-            'pyrophina',
-            'zaratana',
-            'pyrophina_vs_zaratana',
-            'terminator_1',
-            'terminator_2',
-            'terminator_3',
-            'meatworld',
-            'dimensionx',
-            'endoftime',
-        ];
-        const QUEST_UNLOCKS_BY_BOSS = {
-            guillotina_1: ['ThrobbingGristle'],
-            guillotina_2: ['PutridLeech'],
-            guillotina_3: ['GuillotinasHead'],
-            pyrophina: ['ScaldingOrb'],
-            zaratana: ['BlackShard'],
-            pyrophina_vs_zaratana: ['PyrophinasCollar', 'ZaratanasCollar'],
-            terminator_1: ['ReceiverAntenna'],
-            terminator_2: ['TransmitterAntenna'],
-            terminator_3: ['SignalAmplifier'],
-        };
-        const BOX_UNLOCK_ITEMS = [
-            { difficulty: 0, item: 'TheBoxCardboard' },
-            { difficulty: 1, item: 'TheBoxChest' },
-            { difficulty: 2, item: 'TheBox' },
-            { difficulty: 3, item: 'TheBlackBox' }
-        ];
+        let bossTableOrder = [];
+        let bossQuestUnlocks = new Map();
+        let boxUnlockRows = [];
+        let otherMainQuestRefs = [];
+        let beaniesIntroRefs = [];
+        let beaniesMainRefs = [];
+        let beaniesRewardOverrides = new Map();
+        let beaniesExtraQuestIcons = new Map();
         const CHAPTER_ORDER_MAP = CHAPTER_ORDER.reduce((acc, key, index) => {
             acc[key] = index + 1;
             return acc;
         }, {});
 
+        function applyAchievementTableConfig(config) {
+            achievementTableConfig = config || {};
+            const tables = achievementTableConfig.tables || {};
+            const bossTable = tables.boss_unlocks || {};
+            bossTableOrder = Array.isArray(bossTable.order)
+                ? bossTable.order.map(key => String(key).toLowerCase())
+                : [];
+            bossQuestUnlocks = new Map();
+            const bossQuestMap = bossTable.quest_unlocks || {};
+            Object.keys(bossQuestMap).forEach(key => {
+                const refs = Array.isArray(bossQuestMap[key]?.refs) ? bossQuestMap[key].refs : [];
+                bossQuestUnlocks.set(String(key).toLowerCase(), refs);
+            });
+
+            const boxTable = tables.box_unlocks || {};
+            boxUnlockRows = Array.isArray(boxTable.rows) ? boxTable.rows : [];
+
+            const otherMain = tables.other_main_quests || {};
+            otherMainQuestRefs = Array.isArray(otherMain.refs) ? otherMain.refs : [];
+
+            const beanies = tables.beanies_quests || {};
+            beaniesIntroRefs = Array.isArray(beanies.intro?.refs) ? beanies.intro.refs : [];
+            beaniesMainRefs = Array.isArray(beanies.main_pool?.refs) ? beanies.main_pool.refs : [];
+
+            beaniesRewardOverrides = new Map();
+            (beanies.reward_overrides || []).forEach(entry => {
+                const questCode = entry?.quest_ref?.code;
+                const rewardRef = entry?.reward_ref;
+                if (questCode && rewardRef && rewardRef.code) {
+                    beaniesRewardOverrides.set(questCode, rewardRef);
+                }
+            });
+
+            beaniesExtraQuestIcons = new Map();
+            (beanies.extra_quest_icons || []).forEach(entry => {
+                const questCode = entry?.quest_ref?.code;
+                const extraRefs = Array.isArray(entry?.extra_refs) ? entry.extra_refs : [];
+                if (questCode) {
+                    beaniesExtraQuestIcons.set(questCode, extraRefs);
+                }
+            });
+        }
+
+        function getEntryFromRef(ref) {
+            if (!ref || typeof ref !== 'object') {
+                return null;
+            }
+            const code = ref.code;
+            if (!code) {
+                return null;
+            }
+            const type = ref.type || 'item';
+            const key = `${type}:${code}`;
+            return entryByKey.get(key) || null;
+        }
+
+        function getBeaniesQuestRewardRef(ref) {
+            if (!ref || typeof ref !== 'object') {
+                return null;
+            }
+            const code = ref.code;
+            if (!code) {
+                return null;
+            }
+            return beaniesRewardOverrides.get(code) || { type: ref.type || 'item', code: `${code}_Fixed` };
+        }
+
         const UI_TEXT = mergeUiText(COMMON_UI_TEXT, {
             en: {
-                pageTitle: 'Mewgenics Achievements',
-                headerTitle: 'Mewgenics Achievements',
+                pageTitle: 'Achievements and Quests | Mewgenics Encyclopedia',
+                headerTitle: 'Mewgenics Encyclopedia',
+                headerSubtitle: 'Achievements and Quests',
                 controlsHint: 'Hover icons to see localized names. Click to jump.',
-                classTableTitle: 'Class Unlocks',
-                bossTableTitle: 'Boss Unlocks by Difficulty',
+                classTableTitle: 'Classes Achievements',
+                bossTableTitle: 'Boss Quests and Achievements',
+                beaniesQuestTitle: 'Side Quests<br><span class="section-note">Note: The fixed version of items are rewarded by completion but not added into item pools.</span>',
+                otherMainQuestTitle: 'Other Main Quest Items',
                 achievementHeader: 'Achievement',
                 classHeader: 'Class',
                 bossHeader: 'Boss',
@@ -623,7 +771,7 @@
                 difficultyHeader: 'Difficulty',
                 unlocksHeader: 'Unlocks (Hard/Crazy/Impossible)',
                 completeChecklistRow: 'All areas',
-                boxTableTitle: 'Box Unlocks',
+                boxTableTitle: 'Boxes Achievements',
                 allChaptersEveryClass: 'All chapters with every class',
                 chapterLabelFallback: 'Chapter',
                 houseBossPrefix: 'House Boss',
@@ -641,11 +789,14 @@
                 monoclassRunHint: 'Requires mono-class (Colorless-only) run',
             },
             zh: {
-                pageTitle: 'Mewgenics 成就总览',
-                headerTitle: 'Mewgenics 成就总览',
+                pageTitle: '成就与任务 | Mewgenics 百科',
+                headerTitle: 'Mewgenics 百科',
+                headerSubtitle: '成就与任务',
                 controlsHint: '鼠标悬停查看中文名称，点击图标跳转。',
-                classTableTitle: '职业解锁',
-                bossTableTitle: 'Boss 难度解锁',
+                classTableTitle: '职业成就',
+                bossTableTitle: 'Boss 任务与成就',
+                beaniesQuestTitle: '支线任务<br><span class="section-note">注：完成后奖励固定版本物品，但不会加入物品池。</span>',
+                otherMainQuestTitle: '其他主线任务物品',
                 achievementHeader: '成就',
                 classHeader: '职业',
                 bossHeader: 'Boss',
@@ -653,7 +804,7 @@
                 difficultyHeader: '难度',
                 unlocksHeader: '解锁（困难/疯狂/不可能）',
                 completeChecklistRow: '所有区域',
-                boxTableTitle: '盒子解锁',
+                boxTableTitle: '盒子成就',
                 allChaptersEveryClass: '所有章节（每个职业）',
                 chapterLabelFallback: '章节',
                 houseBossPrefix: '宅邸 Boss',
@@ -741,10 +892,13 @@
         function applyUiLanguage() {
             document.title = t('pageTitle');
             document.getElementById('headerTitle').textContent = t('headerTitle');
+            document.getElementById('headerSubtitle').textContent = t('headerSubtitle');
             document.getElementById('controlsHint').textContent = t('controlsHint');
             document.getElementById('navAbilities').textContent = t('navAbilities');
             document.getElementById('navPassives').textContent = t('navPassives');
             document.getElementById('navItems').textContent = t('navItems');
+            document.getElementById('navWeather').textContent = t('navWeather');
+            document.getElementById('navKeywords').textContent = t('navKeywords');
             document.getElementById('navFurniture').textContent = t('navFurniture');
             document.getElementById('navMutations').textContent = t('navMutations');
             const navEvents = document.getElementById('navEvents');
@@ -768,6 +922,8 @@
             document.getElementById('classTableTitle').textContent = t('classTableTitle');
             document.getElementById('boxTableTitle').textContent = t('boxTableTitle');
             document.getElementById('bossTableTitle').textContent = t('bossTableTitle');
+            document.getElementById('beaniesQuestTitle').innerHTML = t('beaniesQuestTitle');
+            document.getElementById('otherMainQuestTitle').textContent = t('otherMainQuestTitle');
             document.getElementById('footerSource').textContent = t('footerSource');
             document.getElementById('footerCredit').textContent = t('footerCredit');
             document.getElementById('footerAuthor').textContent = t('footerAuthor');
@@ -791,6 +947,14 @@
             const boxLoading = document.getElementById('boxLoadingMessage');
             if (boxLoading) {
                 boxLoading.textContent = t('loading');
+            }
+            const beaniesLoading = document.getElementById('beaniesLoadingMessage');
+            if (beaniesLoading) {
+                beaniesLoading.textContent = t('loading');
+            }
+            const otherMainLoading = document.getElementById('otherMainQuestLoadingMessage');
+            if (otherMainLoading) {
+                otherMainLoading.textContent = t('loading');
             }
 
             document.getElementById('langButtonEn').classList.toggle('active', currentLanguage === 'en');
@@ -907,7 +1071,6 @@
             return `rarity/${prefix}${item.rarity}.png`;
         }
 
-
         function buildEntryIcon(entry) {
             const label = getEntryName(entry);
             const link = makeEntryLink(entry);
@@ -945,25 +1108,34 @@
         function buildEntries() {
             const entries = [];
             const itemMap = new Map();
+            const keyMap = new Map();
             allAbilities.forEach(ability => {
-                entries.push({
+                const entry = {
                     type: 'ability',
                     code: ability.ability_code,
                     name_texts: ability.ability_name_texts,
                     name: ability.ability_name,
                     frame: ability.frame_number,
                     unlocks: ability.unlock_requirements || []
-                });
+                };
+                entries.push(entry);
+                if (entry.code) {
+                    keyMap.set(`${entry.type}:${entry.code}`, entry);
+                }
             });
             allPassives.forEach(passive => {
-                entries.push({
+                const entry = {
                     type: 'passive',
                     code: passive.passive_code,
                     name_texts: passive.passive_name_texts,
                     name: passive.passive_name,
                     frame: passive.frame_number,
                     unlocks: passive.unlock_requirements || []
-                });
+                };
+                entries.push(entry);
+                if (entry.code) {
+                    keyMap.set(`${entry.type}:${entry.code}`, entry);
+                }
             });
             allItems.forEach(item => {
                 const entry = {
@@ -982,10 +1154,12 @@
                 entries.push(entry);
                 if (entry.code) {
                     itemMap.set(entry.code, entry);
+                    keyMap.set(`${entry.type}:${entry.code}`, entry);
                 }
             });
             allEntries = entries;
             itemEntriesByCode = itemMap;
+            entryByKey = keyMap;
         }
 
         function sortEntries(entries) {
@@ -1119,7 +1293,7 @@
                         return;
                     }
                     const bossKey = (req.boss || '').toLowerCase();
-                    if (!bossKey || !BOSS_TABLE_ORDER.includes(bossKey)) {
+                    if (!bossKey || !bossTableOrder.includes(bossKey)) {
                         return;
                     }
                     const group = ensureGroup(bossKey);
@@ -1135,7 +1309,7 @@
                 });
             });
 
-            return BOSS_TABLE_ORDER.map(key => {
+            return bossTableOrder.map(key => {
                 const group = groups.get(key) || { key, label: '', entries: new Map() };
                 if (!group.label) {
                     group.label = formatBossKey(key);
@@ -1241,14 +1415,14 @@
                 const rightIcons = rightEntries.length
                     ? `<div class="achievement-icons">${rightEntries.map(buildEntryIcon).join('')}</div>`
                     : (right ? '<span class="empty-cell">-</span>' : '');
-                const leftQuestEntries = left?.key && QUEST_UNLOCKS_BY_BOSS[left.key]
-                    ? QUEST_UNLOCKS_BY_BOSS[left.key]
-                        .map(code => itemEntriesByCode.get(code))
+                const leftQuestEntries = left?.key && bossQuestUnlocks.get(left.key)
+                    ? bossQuestUnlocks.get(left.key)
+                        .map(ref => getEntryFromRef(ref))
                         .filter(Boolean)
                     : [];
-                const rightQuestEntries = right?.key && QUEST_UNLOCKS_BY_BOSS[right.key]
-                    ? QUEST_UNLOCKS_BY_BOSS[right.key]
-                        .map(code => itemEntriesByCode.get(code))
+                const rightQuestEntries = right?.key && bossQuestUnlocks.get(right.key)
+                    ? bossQuestUnlocks.get(right.key)
+                        .map(ref => getEntryFromRef(ref))
                         .filter(Boolean)
                     : [];
                 const leftQuestIcons = leftQuestEntries.length
@@ -1278,9 +1452,10 @@
             if (!tbody) {
                 return;
             }
-            const difficultyLabels = BOX_UNLOCK_ITEMS.map(entry => getDifficultyLabel(entry.difficulty) || entry.difficulty);
-            const icons = BOX_UNLOCK_ITEMS.map(entry => {
-                const itemEntry = itemEntriesByCode.get(entry.item);
+            const difficultyLabels = boxUnlockRows.map(entry => getDifficultyLabel(entry.difficulty) || entry.difficulty);
+            const icons = boxUnlockRows.map(entry => {
+                const itemRef = Array.isArray(entry.refs) ? entry.refs[0] : null;
+                const itemEntry = getEntryFromRef(itemRef);
                 if (!itemEntry) {
                     return '<span class="empty-cell">-</span>';
                 }
@@ -1299,6 +1474,86 @@
             `;
         }
 
+        function renderBeaniesQuestTable() {
+            const container = document.getElementById('beaniesQuestTable');
+            if (!container) {
+                return;
+            }
+
+            if (!beaniesIntroRefs.length && !beaniesMainRefs.length) {
+                container.innerHTML = `<div class="no-results">${escapeHtml(t('noResults'))}</div>`;
+                return;
+            }
+
+            const chunked = [];
+            for (let i = 0; i < beaniesMainRefs.length; i += 5) {
+                chunked.push(beaniesMainRefs.slice(i, i + 5));
+            }
+
+            const rows = [];
+            rows.push(buildBeaniesQuestRow(beaniesIntroRefs, 'intro'));
+            chunked.forEach(chunk => {
+                rows.push(buildBeaniesQuestRow(chunk, 'main'));
+            });
+
+            container.innerHTML = rows.join('');
+        }
+
+        function renderOtherMainQuestTable() {
+            const container = document.getElementById('otherMainQuestTable');
+            if (!container) {
+                return;
+            }
+
+            if (!otherMainQuestRefs.length) {
+                container.innerHTML = `<div class="no-results">${escapeHtml(t('noResults'))}</div>`;
+                return;
+            }
+
+            const cards = otherMainQuestRefs.map(ref => {
+                const entry = getEntryFromRef(ref);
+                const label = entry ? escapeHtml(getEntryName(entry)) : '-';
+                const icon = entry ? buildEntryIcon(entry) : '<span class="empty-cell">-</span>';
+                return `
+                    <div class="other-main-quest-card">
+                        <span class="other-main-quest-label">${label}</span>
+                        ${icon}
+                    </div>
+                `;
+            });
+
+            container.innerHTML = cards.join('');
+        }
+
+        function buildBeaniesQuestRow(itemRefs, rowType) {
+            const icons = itemRefs.flatMap(ref => {
+                const questEntry = getEntryFromRef(ref);
+                const rewardRef = getBeaniesQuestRewardRef(ref);
+                const rewardEntry = getEntryFromRef(rewardRef);
+                const code = ref?.code;
+                const extraQuestEntries = (code ? beaniesExtraQuestIcons.get(code) : [])
+                    ?.map(extraRef => getEntryFromRef(extraRef))
+                    .filter(Boolean) || [];
+                const questEntries = questEntry ? [questEntry, ...extraQuestEntries] : extraQuestEntries;
+                const questLabel = questEntry ? escapeHtml(getEntryName(questEntry)) : '-';
+                const questIcon = questEntries.length
+                    ? `<div class="achievement-icons">${questEntries.map(buildEntryIcon).join('')}</div>`
+                    : '<span class="empty-cell">-</span>';
+                const rewardHtml = rewardEntry ? buildEntryIcon(rewardEntry) : '<span class="empty-cell">-</span>';
+                return [
+                    `<span class="beanies-quest-label">${questLabel}</span>`,
+                    questIcon,
+                    rewardHtml
+                ];
+            });
+
+            return `
+                <div class="beanies-quest-row beanies-quest-row-${rowType}">
+                    ${icons.join('')}
+                </div>
+            `;
+        }
+
         function renderAchievements() {
             if (!dataReady) {
                 return;
@@ -1306,29 +1561,25 @@
             renderClassTable();
             renderBoxTable();
             renderBossTable();
+            renderOtherMainQuestTable();
+            renderBeaniesQuestTable();
         }
 
         async function loadAchievements() {
             try {
-                const [abilitiesResponse, passivesResponse, itemsResponse] = await Promise.all([
-                    fetch('abilities_combined.json'),
-                    fetch('passives_combined.json'),
-                    fetch('items_db.json')
+                const [abilitiesData, passivesData, itemsData, tableData] = await Promise.all([
+                    fetchJsonWithFallback('abilities_combined.json', 'abilities'),
+                    fetchJsonWithFallback('passives_combined.json', 'passives'),
+                    fetchJsonWithFallback('items_db.json', 'items'),
+                    fetchJsonWithFallback('achievements_tables.json', 'achievement tables')
                 ]);
-
-                if (!abilitiesResponse.ok || !passivesResponse.ok || !itemsResponse.ok) {
-                    throw new Error('Failed to load achievement data.');
-                }
-
-                const abilitiesData = await abilitiesResponse.json();
-                const passivesData = await passivesResponse.json();
-                const itemsData = await itemsResponse.json();
 
                 allAbilities = abilitiesData.abilities || [];
                 allPassives = passivesData.passives || [];
                 allItems = Array.isArray(itemsData) ? itemsData : [];
 
                 buildEntries();
+                applyAchievementTableConfig(tableData);
                 dataReady = true;
                 applyUiLanguage();
                 renderAchievements();
@@ -1341,6 +1592,14 @@
                     boxBody.innerHTML = message;
                 }
                 document.getElementById('bossTableBody').innerHTML = message;
+                const beaniesTable = document.getElementById('beaniesQuestTable');
+                if (beaniesTable) {
+                    beaniesTable.innerHTML = `<div class="no-results">${escapeHtml(t('noResults'))}</div>`;
+                }
+                const otherMainTable = document.getElementById('otherMainQuestTable');
+                if (otherMainTable) {
+                    otherMainTable.innerHTML = `<div class="no-results">${escapeHtml(t('noResults'))}</div>`;
+                }
             }
         }
 

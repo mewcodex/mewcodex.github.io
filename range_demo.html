@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Ability Range Sandbox</title>
+    <title>Ability Range Sandbox | Mewgenics Encyclopedia</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         :root {
@@ -44,6 +44,138 @@
             margin: 0 0 12px;
             font-size: 2rem;
             letter-spacing: -0.01em;
+        }
+
+        .subtitle {
+            margin: 0 0 12px;
+            font-size: 1.15rem;
+            color: #4a4f63;
+            font-weight: 600;
+        }
+
+        .announcement-button {
+            position: fixed;
+            top: 14px;
+            left: 14px;
+            z-index: 1200;
+            background: #3d5afe;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 8px 14px;
+            font-size: 0.9em;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+        }
+
+        .announcement-button:hover {
+            background: #314ad8;
+        }
+
+        .announcement-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1300;
+            align-items: center;
+            justify-content: center;
+            padding: calc(20px + env(safe-area-inset-top)) calc(20px + env(safe-area-inset-right)) calc(20px + env(safe-area-inset-bottom)) calc(20px + env(safe-area-inset-left));
+        }
+
+        .announcement-card {
+            background: #fff;
+            max-width: 560px;
+            width: 100%;
+            max-height: calc(100vh - 40px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+            border-radius: 10px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+            border: 1px solid rgba(61, 90, 254, 0.3);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .announcement-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 20px;
+            background: #f3f5ff;
+            border-bottom: 1px solid #dbe2ff;
+        }
+
+        .announcement-header h2 {
+            font-size: 1.1em;
+            color: #2f3555;
+        }
+
+        .announcement-close {
+            background: none;
+            border: none;
+            font-size: 1.4em;
+            color: #5b6ac8;
+            cursor: pointer;
+        }
+
+        .announcement-body {
+            padding: 18px 20px 10px;
+            color: #2f3555;
+            line-height: 1.6;
+            overflow-y: auto;
+        }
+
+        .announcement-body pre {
+            background: #f5f7ff;
+            border: 1px solid #dbe2ff;
+            border-radius: 6px;
+            padding: 10px 12px;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+
+        .announcement-body ul,
+        .announcement-body ol {
+            margin: 10px 0 10px 18px;
+        }
+
+        .announcement-body li {
+            margin-bottom: 6px;
+        }
+
+        .announcement-body ul ul,
+        .announcement-body ul ol,
+        .announcement-body ol ul,
+        .announcement-body ol ol {
+            margin-top: 6px;
+        }
+
+        .announcement-footer {
+            padding: 10px 16px 16px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .announcement-lang {
+            display: flex;
+            gap: 8px;
+        }
+
+        .announcement-lang-btn {
+            border: 1px solid rgba(61, 90, 254, 0.3);
+            background: #f3f5ff;
+            color: #2f3555;
+            border-radius: 6px;
+            padding: 4px 10px;
+            font-size: 0.85em;
+            cursor: pointer;
+        }
+
+        .announcement-lang-btn.active {
+            background: #3d5afe;
+            color: #fff;
+            border-color: #3d5afe;
         }
 
         p {
@@ -305,8 +437,27 @@
 </head>
 
 <body>
+    <button class="announcement-button" id="announcementButton" type="button">Announcement</button>
+    <div class="announcement-modal" id="announcementModal">
+        <div class="announcement-card" role="dialog" aria-modal="true" aria-labelledby="announcementTitle">
+            <div class="announcement-header">
+                <h2 id="announcementTitle">Announcement</h2>
+                <button class="announcement-close" id="announcementClose" type="button" aria-label="Close">×</button>
+            </div>
+            <div class="announcement-body" id="announcementBody"></div>
+            <div class="announcement-footer">
+                <div class="announcement-lang" role="group" aria-label="Language">
+                    <button type="button" class="announcement-lang-btn" id="announcementLangEn"
+                        data-lang="en">English</button>
+                    <button type="button" class="announcement-lang-btn" id="announcementLangZh"
+                        data-lang="zh">中文</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <main class="app-shell">
-        <h1>Interactive Range Sandbox</h1>
+        <h1>Mewgenics Encyclopedia</h1>
+        <p class="subtitle">Ability Range Sandbox</p>
         <p>Select a real ability below to load its <code>target { ... }</code> block, then hover the grid to see what
             the parser thinks the valid tiles and splash pattern look like. Click any tile (except the caster) to place
             or remove an obstacle.</p>
@@ -355,6 +506,7 @@
         </div>
     </main>
 
+    <script src="announcement.js"></script>
     <script>
         (function () {
             const size = 19;
@@ -865,6 +1017,11 @@
                 updateRangeHighlights();
             }
         })();
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initAnnouncement();
+            maybeShowAnnouncement();
+        });
     </script>
 </body>
 

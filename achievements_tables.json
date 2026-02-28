@@ -1,0 +1,314 @@
+{
+  "version": 1,
+  "tables": {
+    "class_unlocks": {
+      "purpose": "unlock",
+      "source": "derived_unlocks"
+    },
+    "box_unlocks": {
+      "purpose": "unlock",
+      "rows": [
+        {
+          "difficulty": 0,
+          "refs": [
+            {
+              "type": "item",
+              "code": "TheBoxCardboard"
+            }
+          ]
+        },
+        {
+          "difficulty": 1,
+          "refs": [
+            {
+              "type": "item",
+              "code": "TheBoxChest"
+            }
+          ]
+        },
+        {
+          "difficulty": 2,
+          "refs": [
+            {
+              "type": "item",
+              "code": "TheBox"
+            }
+          ]
+        },
+        {
+          "difficulty": 3,
+          "refs": [
+            {
+              "type": "item",
+              "code": "TheBlackBox"
+            }
+          ]
+        }
+      ]
+    },
+    "boss_unlocks": {
+      "purpose": "mixed",
+      "columns": {
+        "boss": {
+          "purpose": "acquisition"
+        },
+        "quest_unlocks": {
+          "purpose": "acquisition"
+        },
+        "unlocks": {
+          "purpose": "unlock"
+        }
+      },
+      "order": [
+        "guillotina_1",
+        "guillotina_2",
+        "guillotina_3",
+        "pyrophina",
+        "zaratana",
+        "pyrophina_vs_zaratana",
+        "terminator_1",
+        "terminator_2",
+        "terminator_3",
+        "meatworld",
+        "dimensionx",
+        "endoftime"
+      ],
+      "quest_unlocks": {
+        "guillotina_1": {
+          "refs": [
+            {
+              "type": "item",
+              "code": "ThrobbingGristle"
+            }
+          ]
+        },
+        "guillotina_2": {
+          "refs": [
+            {
+              "type": "item",
+              "code": "PutridLeech"
+            }
+          ]
+        },
+        "guillotina_3": {
+          "refs": [
+            {
+              "type": "item",
+              "code": "GuillotinasHead"
+            }
+          ]
+        },
+        "pyrophina": {
+          "refs": [
+            {
+              "type": "item",
+              "code": "ScaldingOrb"
+            }
+          ]
+        },
+        "zaratana": {
+          "refs": [
+            {
+              "type": "item",
+              "code": "BlackShard"
+            },
+            {
+              "type": "item",
+              "code": "BlackShard_Glowing"
+            }
+          ]
+        },
+        "pyrophina_vs_zaratana": {
+          "refs": [
+            {
+              "type": "item",
+              "code": "PyrophinasCollar"
+            },
+            {
+              "type": "item",
+              "code": "ZaratanasCollar"
+            }
+          ]
+        },
+        "terminator_1": {
+          "refs": [
+            {
+              "type": "item",
+              "code": "ReceiverAntenna"
+            }
+          ]
+        },
+        "terminator_2": {
+          "refs": [
+            {
+              "type": "item",
+              "code": "TransmitterAntenna"
+            }
+          ]
+        },
+        "terminator_3": {
+          "refs": [
+            {
+              "type": "item",
+              "code": "SignalAmplifier"
+            }
+          ]
+        }
+      }
+    },
+    "other_main_quests": {
+      "purpose": "acquisition",
+      "refs": [
+        {
+          "type": "item",
+          "code": "CryogenicTimeChamber_Empty"
+        },
+        {
+          "type": "item",
+          "code": "CryogenicTimeChamber_Full"
+        },
+        {
+          "type": "item",
+          "code": "JarOfRadiation"
+        },
+        {
+          "type": "item",
+          "code": "JarOfRadiatedBlood"
+        },
+        {
+          "type": "item",
+          "code": "JarOfChaos"
+        },
+        {
+          "type": "item",
+          "code": "JarOfNothing"
+        },
+        {
+          "type": "item",
+          "code": "Nuke"
+        }
+      ]
+    },
+    "beanies_quests": {
+      "purpose": "acquisition",
+      "intro": {
+        "refs": [
+          {
+            "type": "item",
+            "code": "PersuasionDevice"
+          }
+        ]
+      },
+      "main_pool": {
+        "refs": [
+          {
+            "type": "item",
+            "code": "ChaosDevice"
+          },
+          {
+            "type": "item",
+            "code": "MagicMirror"
+          },
+          {
+            "type": "item",
+            "code": "MeStone"
+          },
+          {
+            "type": "item",
+            "code": "AngryFace"
+          },
+          {
+            "type": "item",
+            "code": "FartFace"
+          },
+          {
+            "type": "item",
+            "code": "SpiderInjector"
+          },
+          {
+            "type": "item",
+            "code": "PartyDetonator"
+          },
+          {
+            "type": "item",
+            "code": "AirHorn"
+          },
+          {
+            "type": "item",
+            "code": "TheLoner"
+          },
+          {
+            "type": "item",
+            "code": "GlassCannon"
+          },
+          {
+            "type": "item",
+            "code": "PrincessHat"
+          },
+          {
+            "type": "item",
+            "code": "HardPill"
+          },
+          {
+            "type": "item",
+            "code": "BubbleBoy"
+          },
+          {
+            "type": "item",
+            "code": "Redacted"
+          },
+          {
+            "type": "item",
+            "code": "Stopwatch"
+          },
+          {
+            "type": "item",
+            "code": "StorageLocker"
+          },
+          {
+            "type": "item",
+            "code": "MysteriousDice"
+          },
+          {
+            "type": "item",
+            "code": "ExperimentalTreatment"
+          },
+          {
+            "type": "item",
+            "code": "UltraVision3000"
+          },
+          {
+            "type": "item",
+            "code": "NuclearKnife"
+          }
+        ]
+      },
+      "reward_overrides": [
+        {
+          "quest_ref": {
+            "type": "item",
+            "code": "PersuasionDevice"
+          },
+          "reward_ref": {
+            "type": "item",
+            "code": "PersuasionDevice_Fixed"
+          }
+        }
+      ],
+      "extra_quest_icons": [
+        {
+          "quest_ref": {
+            "type": "item",
+            "code": "NuclearKnife"
+          },
+          "extra_refs": [
+            {
+              "type": "item",
+              "code": "NuclearKnife_Glowing"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
