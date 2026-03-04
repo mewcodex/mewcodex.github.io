@@ -311,6 +311,31 @@
             z-index: 5;
         }
 
+        th.sortable {
+            cursor: pointer;
+            user-select: none;
+        }
+
+        th.sortable:hover {
+            background: rgba(159, 151, 139, 0.12);
+        }
+
+        th .sort-indicator {
+            margin-left: 5px;
+            font-size: 0.8em;
+            color: #999;
+        }
+
+        th.sort-asc .sort-indicator::after {
+            content: '▲';
+            color: #9f978b;
+        }
+
+        th.sort-desc .sort-indicator::after {
+            content: '▼';
+            color: #9f978b;
+        }
+
         tr:nth-child(even) {
             background: #faf9f7;
         }
@@ -321,6 +346,31 @@
 
         .image-cell {
             width: 70px;
+        }
+
+        .grid-cell {
+            min-width: 140px;
+        }
+
+        .stat-cell {
+            text-align: center;
+            font-weight: 600;
+            color: #333;
+            min-width: 90px;
+            width: 90px;
+        }
+
+        .stat-header {
+            text-align: center;
+            min-width: 100px;
+        }
+
+        .stat-header-icon {
+            margin-right: 4px;
+        }
+
+        .desc-cell {
+            max-width: 200px;
         }
 
         .furniture-icon-wrapper {
@@ -792,7 +842,7 @@
         }
 
         .shape-preview-cell-5 {
-            background: #d0d0d0;
+            background: #b77407;
             border: 1px dashed #2f2a23;
         }
 
@@ -919,6 +969,15 @@
                 </label>
                 <span class="toggle-text" id="imageRareLabel">Rare</span>
             </div>
+            <div class="stat-item">
+                <span class="stat-label" id="sortPerGridLabel">Sort per grid:</span>
+                <span class="toggle-text" id="sortPerGridOffLabel">Total</span>
+                <label class="toggle">
+                    <input type="checkbox" id="sortPerGridToggle">
+                    <span class="toggle-slider"></span>
+                </label>
+                <span class="toggle-text" id="sortPerGridOnLabel">Per grid</span>
+            </div>
         </div>
 
         <div id="pagerTop"></div>
@@ -929,13 +988,39 @@
                     <tr>
                         <th id="imageHeader" style="width: 70px;">Image</th>
                         <th id="titleHeader" style="width: 200px;">Title</th>
-                        <th id="effectHeader">Effect</th>
+                        <th id="gridHeader" style="width: 160px;">Grid</th>
+                        <th id="comfortHeader" class="sortable stat-header" onclick="sortBy('comfort')">
+                            <img src="res/fonticon/comfort.png" alt="Comfort"
+                                class="img-icon img-icon-stat stat-header-icon"
+                                onerror="this.style.display='none'">Comfort<span class="sort-indicator"></span>
+                        </th>
+                        <th id="appealHeader" class="sortable stat-header" onclick="sortBy('appeal')">
+                            <img src="res/fonticon/appeal.png" alt="Appeal"
+                                class="img-icon img-icon-stat stat-header-icon"
+                                onerror="this.style.display='none'">Appeal<span class="sort-indicator"></span>
+                        </th>
+                        <th id="stimulationHeader" class="sortable stat-header" onclick="sortBy('stimulation')">
+                            <img src="res/fonticon/stimulation.png" alt="Stimulation"
+                                class="img-icon img-icon-stat stat-header-icon"
+                                onerror="this.style.display='none'">Stimulation<span class="sort-indicator"></span>
+                        </th>
+                        <th id="healthHeader" class="sortable stat-header" onclick="sortBy('health')">
+                            <img src="res/fonticon/healthfurniture.png" alt="Health"
+                                class="img-icon img-icon-stat stat-header-icon"
+                                onerror="this.style.display='none'">Health<span class="sort-indicator"></span>
+                        </th>
+                        <th id="evolutionHeader" class="sortable stat-header" onclick="sortBy('evolution')">
+                            <img src="res/fonticon/evolution.png" alt="Evolution"
+                                class="img-icon img-icon-stat stat-header-icon"
+                                onerror="this.style.display='none'">Evolution<span class="sort-indicator"></span>
+                        </th>
+                        <th id="descHeader">Description</th>
                         <th id="rareHeader" style="width: 140px;">Can Be Rare</th>
                     </tr>
                 </thead>
                 <tbody id="tableBody">
                     <tr>
-                        <td colspan="4" class="no-results" id="loadingMessage">Loading furniture...</td>
+                        <td colspan="10" class="no-results" id="loadingMessage">Loading furniture...</td>
                     </tr>
                 </tbody>
             </table>
@@ -979,9 +1064,11 @@
         let currentLanguage = initLanguage('en');
         window.currentLanguage = currentLanguage;
         let showRareImages = false;
+        let sortPerGrid = false;
         const shapeMatrixByCode = new Map();
         let currentPage = 1;
         let pageSize = 50;
+        let currentSort = { column: null, direction: 'asc' };
         const ANNOUNCEMENT_SEEN_KEY = 'codexAnnouncementSeen_v1';
 
         const UI_TEXT = mergeUiText(COMMON_UI_TEXT, {
@@ -992,12 +1079,21 @@
                 searchPlaceholder: 'Search by furniture name or description...',
                 totalFurniture: 'Total Furniture:',
                 showing: 'Showing:',
-                imageLabel: 'Image:',
+                imageLabel: 'Rarity:',
                 imageCommon: 'Common',
                 imageRare: 'Rare',
+                sortPerGridLabel: 'Sort by:',
+                sortPerGridOff: 'Total value',
+                sortPerGridOn: 'Per grid',
                 imageHeader: 'Image',
                 titleHeader: 'Title',
-                effectHeader: 'Effect',
+                gridHeader: 'Grid',
+                comfortHeader: 'Comfort',
+                appealHeader: 'Appeal',
+                stimulationHeader: 'Stimulation',
+                healthHeader: 'Health',
+                evolutionHeader: 'Evolution',
+                descriptionHeader: 'Description',
                 rareHeader: 'Can Be Rare',
                 pageLabel: 'Page',
                 pagePrev: 'Prev',
@@ -1021,13 +1117,22 @@
                 searchPlaceholder: '按家具名称或描述搜索...',
                 totalFurniture: '家具总数：',
                 showing: '显示：',
-                imageLabel: '图像：',
+                imageLabel: '稀有度：',
                 imageCommon: '普通',
                 imageRare: '稀有',
+                sortPerGridLabel: '排序标准：',
+                sortPerGridOff: '总值',
+                sortPerGridOn: '每格',
                 imageHeader: '图像',
                 titleHeader: '名称',
-                effectHeader: '效果',
-                rareHeader: '可稀有',
+                gridHeader: '格子',
+                comfortHeader: '舒适度',
+                appealHeader: '吸引力',
+                stimulationHeader: '刺激度',
+                healthHeader: '健康度',
+                evolutionHeader: '突变',
+                descriptionHeader: '描述',
+                rareHeader: '存在稀有版本',
                 pageLabel: '页',
                 pagePrev: '上一页',
                 pageNext: '下一页',
@@ -1060,6 +1165,11 @@
             if (element) {
                 element.textContent = value;
             }
+        }
+
+        function buildStatHeaderHtml(iconName, label) {
+            const safeLabel = escapeHtml(label);
+            return `<img src="res/fonticon/${iconName}.png" alt="${safeLabel}" class="img-icon img-icon-stat stat-header-icon" onerror="this.style.display='none'">${safeLabel}<span class="sort-indicator"></span>`;
         }
 
         function applyUiLanguage() {
@@ -1095,9 +1205,16 @@
             document.getElementById('totalLabel').textContent = t('totalFurniture');
             document.getElementById('showingLabel').textContent = t('showing');
             document.getElementById('imageLabel').textContent = t('imageLabel');
+            document.getElementById('sortPerGridLabel').textContent = t('sortPerGridLabel');
             document.getElementById('imageHeader').textContent = t('imageHeader');
             document.getElementById('titleHeader').textContent = t('titleHeader');
-            document.getElementById('effectHeader').textContent = t('effectHeader');
+            document.getElementById('gridHeader').textContent = t('gridHeader');
+            document.getElementById('comfortHeader').innerHTML = buildStatHeaderHtml('comfort', t('comfortHeader'));
+            document.getElementById('appealHeader').innerHTML = buildStatHeaderHtml('appeal', t('appealHeader'));
+            document.getElementById('stimulationHeader').innerHTML = buildStatHeaderHtml('stimulation', t('stimulationHeader'));
+            document.getElementById('healthHeader').innerHTML = buildStatHeaderHtml('healthfurniture', t('healthHeader'));
+            document.getElementById('evolutionHeader').innerHTML = buildStatHeaderHtml('evolution', t('evolutionHeader'));
+            document.getElementById('descHeader').textContent = t('descriptionHeader');
             document.getElementById('rareHeader').textContent = t('rareHeader');
             document.getElementById('shapeModalTitle').textContent = t('shapeTitle');
             document.getElementById('footerSource').textContent = t('footerSource');
@@ -1116,6 +1233,8 @@
             }
             document.getElementById('imageCommonLabel').textContent = t('imageCommon');
             document.getElementById('imageRareLabel').textContent = t('imageRare');
+            document.getElementById('sortPerGridOffLabel').textContent = t('sortPerGridOff');
+            document.getElementById('sortPerGridOnLabel').textContent = t('sortPerGridOn');
             setText('pageLabel', t('pageLabel'));
             setText('pagePrev', t('pagePrev'));
             setText('pageNext', t('pageNext'));
@@ -1129,6 +1248,7 @@
             document.getElementById('langButtonEn').classList.toggle('active', currentLanguage === 'en');
             document.getElementById('langButtonZh').classList.toggle('active', currentLanguage === 'zh');
             updateNavbarLinks();
+            updateSortIndicators();
         }
 
         const getLocalizedTextSafe = (texts, fallback) => (
@@ -1182,6 +1302,151 @@
                 .join('');
 
             return statsHtml ? `<div class="furniture-stats">${statsHtml}</div>` : '';
+        }
+
+        const STAT_KEYS = ['comfort', 'appeal', 'stimulation', 'health', 'evolution'];
+
+        function getStatValue(stats, key) {
+            if (!stats || stats[key] === undefined || stats[key] === null) {
+                return 0;
+            }
+            const numeric = Number(stats[key]);
+            return Number.isFinite(numeric) ? numeric : 0;
+        }
+
+        function getAdjustedStatValue(entry, key) {
+            const baseValue = getStatValue(entry.stats, key);
+            const multiplier = showRareImages && entry.can_be_rare ? 2 : 1;
+            return baseValue * multiplier;
+        }
+
+        function getGridCellCount(matrix) {
+            if (!Array.isArray(matrix)) {
+                return 0;
+            }
+            let count = 0;
+            matrix.forEach(row => {
+                if (row === null || row === undefined) {
+                    return;
+                }
+                const rowText = Array.isArray(row) ? row.join('') : String(row);
+                for (let i = 0; i < rowText.length; i += 1) {
+                    if (rowText[i] === '1' || rowText[i] === '2') {
+                        count += 1;
+                    }
+                }
+            });
+            return count;
+        }
+
+        function getPerGridValue(entry, key) {
+            const baseValue = getAdjustedStatValue(entry, key);
+            const gridCount = getGridCellCount(entry.shape_matrix);
+            if (!gridCount) {
+                if (baseValue > 0) {
+                    return Infinity;
+                }
+                if (baseValue < 0) {
+                    return -Infinity;
+                }
+                return 0;
+            }
+            return baseValue / gridCount;
+        }
+
+        function getSortValue(entry, column) {
+            const baseValue = getAdjustedStatValue(entry, column);
+            if (!sortPerGrid) {
+                return baseValue;
+            }
+            return getPerGridValue(entry, column);
+        }
+
+        function formatStatValue(value) {
+            if (!value) {
+                return '';
+            }
+            const sign = value > 0 ? '+' : '';
+            return `${sign}${value}`;
+        }
+
+        function formatNumber(value) {
+            const rounded = Math.round(value * 100) / 100;
+            let text = String(rounded);
+            if (text.includes('.')) {
+                text = text.replace(/\.0+$|(?:(\.\d*[1-9])0+)$/, '$1');
+            }
+            return text;
+        }
+
+        function formatCalculatedValue(value) {
+            if (value === Infinity) {
+                return 'inf';
+            }
+            if (value === -Infinity) {
+                return '-inf';
+            }
+            if (!Number.isFinite(value) || value === 0) {
+                return '';
+            }
+            const sign = value > 0 ? '+' : '';
+            return `${sign}${formatNumber(value)}`;
+        }
+
+        function getDisplayStatValue(entry, key) {
+            const baseValue = getAdjustedStatValue(entry, key);
+            if (!sortPerGrid) {
+                return formatStatValue(baseValue);
+            }
+            return formatCalculatedValue(getPerGridValue(entry, key));
+        }
+
+        function applySort(entries) {
+            if (!currentSort.column) {
+                return entries;
+            }
+            const sorted = [...entries];
+            const column = currentSort.column;
+            sorted.sort((a, b) => {
+                const valueA = getSortValue(a, column);
+                const valueB = getSortValue(b, column);
+                if (valueA < valueB) return currentSort.direction === 'asc' ? -1 : 1;
+                if (valueA > valueB) return currentSort.direction === 'asc' ? 1 : -1;
+                return 0;
+            });
+            return sorted;
+        }
+
+        function updateSortIndicators() {
+            document.querySelectorAll('th.sortable').forEach(th => {
+                th.classList.remove('sort-asc', 'sort-desc');
+            });
+            if (!currentSort.column) {
+                return;
+            }
+            const headerMap = {
+                comfort: 'comfortHeader',
+                appeal: 'appealHeader',
+                stimulation: 'stimulationHeader',
+                health: 'healthHeader',
+                evolution: 'evolutionHeader'
+            };
+            const header = document.getElementById(headerMap[currentSort.column]);
+            if (header) {
+                header.classList.add(`sort-${currentSort.direction}`);
+            }
+        }
+
+        function sortBy(column) {
+            if (currentSort.column === column) {
+                currentSort.direction = currentSort.direction === 'asc' ? 'desc' : 'asc';
+            } else {
+                currentSort.column = column;
+                currentSort.direction = 'asc';
+            }
+            currentPage = 1;
+            updateSortIndicators();
+            displayFurniture(applySort(filteredFurniture));
         }
 
         function renderExtraStats() {
@@ -1346,7 +1611,7 @@
                 : entries.slice(startIndex, startIndex + size);
 
             if (totalEntries === 0) {
-                tbody.innerHTML = `<tr><td colspan="4" class="no-results">${escapeHtml(t('noResults'))}</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="10" class="no-results">${escapeHtml(t('noResults'))}</td></tr>`;
                 document.getElementById('showingCount').textContent = '0';
                 document.getElementById('pageInfo').textContent = '0 / 0';
                 document.getElementById('pageInfoBottom').textContent = '0 / 0';
@@ -1363,26 +1628,24 @@
                     localizedName = `\`${entry.furniture_code || ''}\``;
                 }
                 const localizedDesc = getLocalizedTextSafe(entry.desc_texts, entry.description) || '';
-                const statsHtml = renderFurnitureStats(entry.stats || {});
-                const extraStatsHtml = renderExtraStats();
                 const nameHtml = `<div class="furniture-name">${parseRichText(localizedName) || ''}</div>`;
                 const removedHtml = entry.removed
                     ? `<div class="description"><b>${escapeHtml(t('removedLabel'))}</b></div>`
                     : '';
                 const descHtml = localizedDesc ? `<div class="description">${parseRichText(localizedDesc)}</div>` : '';
                 const hasShape = Array.isArray(entry.shape_matrix) && entry.shape_matrix.length > 0;
-                const descContent = `${statsHtml}${extraStatsHtml}${removedHtml}${descHtml}`;
-                const descBlock = descContent
-                    ? `<div class="shape-desc">${descContent}</div>`
-                    : '';
+                const descBlock = `${removedHtml}${descHtml}`;
                 const shapePreview = renderShapePreview(entry.shape_matrix);
                 const shapeButton = `
                     <button class="shape-preview-button" type="button" data-code="${escapeHtml(entry.furniture_code || '')}" ${hasShape ? '' : 'disabled'}>
                         ${shapePreview}
                     </button>
                 `;
-                const shapeRow = `<div class="shape-row">${shapeButton}${descBlock}</div>`;
-                const effectHtml = shapeRow || '-';
+                const comfortHtml = getDisplayStatValue(entry, 'comfort');
+                const appealHtml = getDisplayStatValue(entry, 'appeal');
+                const stimulationHtml = getDisplayStatValue(entry, 'stimulation');
+                const healthHtml = getDisplayStatValue(entry, 'health');
+                const evolutionHtml = getDisplayStatValue(entry, 'evolution');
                 const imagePath = getImagePath(entry);
                 const safeName = (localizedName || '').replace(/'/g, "\\'");
                 const rareBadge = entry.can_be_rare ? 'badge-yes' : 'badge-no';
@@ -1397,8 +1660,16 @@
                         <td>
                             ${nameHtml || '-'}
                         </td>
-                        <td>
-                            ${effectHtml || '-'}
+                        <td class="grid-cell">
+                            ${shapeButton}
+                        </td>
+                        <td class="stat-cell">${comfortHtml}</td>
+                        <td class="stat-cell">${appealHtml}</td>
+                        <td class="stat-cell">${stimulationHtml}</td>
+                        <td class="stat-cell">${healthHtml}</td>
+                        <td class="stat-cell">${evolutionHtml}</td>
+                        <td class="desc-cell">
+                            ${descBlock || ''}
                         </td>
                         <td>
                             <span class="badge ${rareBadge}">${escapeHtml(entry.can_be_rare ? t('yes') : t('no'))}</span>
@@ -1425,7 +1696,7 @@
                 return name.includes(search) || desc.includes(search);
             });
             currentPage = 1;
-            displayFurniture(filteredFurniture);
+            displayFurniture(applySort(filteredFurniture));
         }
 
         function updateClearButtonVisibility() {
@@ -1463,11 +1734,11 @@
                 filteredFurniture = allFurniture;
                 document.getElementById('totalCount').textContent = allFurniture.length;
                 applyUiLanguage();
-                displayFurniture(filteredFurniture);
+                displayFurniture(applySort(filteredFurniture));
             } catch (error) {
                 console.error('Error loading furniture:', error);
                 document.getElementById('tableBody').innerHTML = `
-                    <tr><td colspan="4" class="no-results">
+                    <tr><td colspan="10" class="no-results">
                         <p>Error loading furniture: ${escapeHtml(error.message)}</p>
                     </td></tr>
                 `;
@@ -1483,7 +1754,14 @@
             showRareImages = event.target.checked;
             document.getElementById('imageCommonLabel').textContent = t('imageCommon');
             document.getElementById('imageRareLabel').textContent = t('imageRare');
-            displayFurniture(filteredFurniture);
+            displayFurniture(applySort(filteredFurniture));
+        });
+        document.getElementById('sortPerGridToggle').addEventListener('change', (event) => {
+            sortPerGrid = event.target.checked;
+            document.getElementById('sortPerGridOffLabel').textContent = t('sortPerGridOff');
+            document.getElementById('sortPerGridOnLabel').textContent = t('sortPerGridOn');
+            currentPage = 1;
+            displayFurniture(applySort(filteredFurniture));
         });
         document.getElementById('pagePrev').addEventListener('click', () => {
             if (currentPage > 1) {
