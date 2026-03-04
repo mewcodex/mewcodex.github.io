@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-28T00:42:29Z",
+  "generated_at": "2026-03-04T12:58:53Z",
   "inputs": {
     "abilities": "G:\\gpak-all\\data\\readable_abilities\\abilities_db.json",
     "passives": "G:\\gpak-all\\data\\readable_abilities\\passives_db.json",
@@ -9,12 +9,12 @@
     "characters": "G:\\gpak-all\\data\\readable_abilities\\characters_db.json"
   },
   "summary": {
-    "total": 6361,
+    "total": 6402,
     "by_type": {
       "ability": 2199,
       "character": 719,
       "event": 214,
-      "item": 1098,
+      "item": 1139,
       "item_pool": 54,
       "mutation": 760,
       "passive": 511
@@ -3908,7 +3908,7 @@
       ],
       "text": {
         "en": "Cerberub Flub",
-        "zh": "三头智天使失误"
+        "zh": "刻耳柏洛斯失误"
       }
     },
     {
@@ -32493,7 +32493,7 @@
       ],
       "text": {
         "en": "Cerberubs",
-        "zh": "三头智天使"
+        "zh": "刻耳柏洛斯残躯"
       }
     },
     {
@@ -34507,8 +34507,8 @@
         "characters"
       ],
       "text": {
-        "en": "Explodes when it dies.",
-        "zh": "死亡时爆炸。"
+        "en": "Decoy",
+        "zh": "诱饵"
       }
     },
     {
@@ -35054,7 +35054,7 @@
       ],
       "text": {
         "en": "Gambit",
-        "zh": "甘比特"
+        "zh": "赌徒"
       }
     },
     {
@@ -43562,6 +43562,32 @@
     {
       "ref": {
         "type": "item",
+        "code": "AngelicAura"
+      },
+      "sources": [
+        "items"
+      ],
+      "text": {
+        "en": "AngelicAura",
+        "zh": "AngelicAura"
+      }
+    },
+    {
+      "ref": {
+        "type": "item",
+        "code": "AngelicAura_Terminator"
+      },
+      "sources": [
+        "items"
+      ],
+      "text": {
+        "en": "AngelicAura_Terminator",
+        "zh": "AngelicAura_Terminator"
+      }
+    },
+    {
+      "ref": {
+        "type": "item",
         "code": "AngelicProtection"
       },
       "sources": [
@@ -43751,6 +43777,19 @@
     {
       "ref": {
         "type": "item",
+        "code": "AtomicMark"
+      },
+      "sources": [
+        "items"
+      ],
+      "text": {
+        "en": "AtomicMark",
+        "zh": "AtomicMark"
+      }
+    },
+    {
+      "ref": {
+        "type": "item",
         "code": "AttractiveHairClip"
       },
       "sources": [
@@ -43759,6 +43798,19 @@
       "text": {
         "en": "Attractive Hair Clip",
         "zh": "迷人发夹"
+      }
+    },
+    {
+      "ref": {
+        "type": "item",
+        "code": "BabyHair"
+      },
+      "sources": [
+        "items"
+      ],
+      "text": {
+        "en": "BabyHair",
+        "zh": "BabyHair"
       }
     },
     {
@@ -43977,6 +44029,19 @@
       "text": {
         "en": "Ball-Peen Hammer",
         "zh": "圆头锤"
+      }
+    },
+    {
+      "ref": {
+        "type": "item",
+        "code": "Banana"
+      },
+      "sources": [
+        "items"
+      ],
+      "text": {
+        "en": "Banana",
+        "zh": "Banana"
       }
     },
     {
@@ -45384,6 +45449,19 @@
     {
       "ref": {
         "type": "item",
+        "code": "BulbHead"
+      },
+      "sources": [
+        "items"
+      ],
+      "text": {
+        "en": "BulbHead",
+        "zh": "BulbHead"
+      }
+    },
+    {
+      "ref": {
+        "type": "item",
         "code": "BulletproofVest"
       },
       "sources": [
@@ -45493,6 +45571,32 @@
       "text": {
         "en": "Meat Hook",
         "zh": "肉钩"
+      }
+    },
+    {
+      "ref": {
+        "type": "item",
+        "code": "ButcherMask"
+      },
+      "sources": [
+        "items"
+      ],
+      "text": {
+        "en": "ButcherMask",
+        "zh": "ButcherMask"
+      }
+    },
+    {
+      "ref": {
+        "type": "item",
+        "code": "ButcherMask_Terminator"
+      },
+      "sources": [
+        "items"
+      ],
+      "text": {
+        "en": "ButcherMask_Terminator",
+        "zh": "ButcherMask_Terminator"
       }
     },
     {
@@ -46467,6 +46571,32 @@
       "text": {
         "en": "Coffin Armor",
         "zh": "棺材护甲"
+      }
+    },
+    {
+      "ref": {
+        "type": "item",
+        "code": "CoinBag"
+      },
+      "sources": [
+        "items"
+      ],
+      "text": {
+        "en": "CoinBag",
+        "zh": "CoinBag"
+      }
+    },
+    {
+      "ref": {
+        "type": "item",
+        "code": "CoinBag_Terminator"
+      },
+      "sources": [
+        "items"
+      ],
+      "text": {
+        "en": "CoinBag_Terminator",
+        "zh": "CoinBag_Terminator"
       }
     },
     {
@@ -47452,6 +47582,19 @@
     {
       "ref": {
         "type": "item",
+        "code": "Dreadlocks"
+      },
+      "sources": [
+        "items"
+      ],
+      "text": {
+        "en": "Dreadlocks",
+        "zh": "Dreadlocks"
+      }
+    },
+    {
+      "ref": {
+        "type": "item",
         "code": "DreamCatcher"
       },
       "sources": [
@@ -47460,6 +47603,32 @@
       "text": {
         "en": "Dream Catcher",
         "zh": "捕梦网"
+      }
+    },
+    {
+      "ref": {
+        "type": "item",
+        "code": "DruidNeck"
+      },
+      "sources": [
+        "items"
+      ],
+      "text": {
+        "en": "DruidNeck",
+        "zh": "DruidNeck"
+      }
+    },
+    {
+      "ref": {
+        "type": "item",
+        "code": "DruidNeck_Terminator"
+      },
+      "sources": [
+        "items"
+      ],
+      "text": {
+        "en": "DruidNeck_Terminator",
+        "zh": "DruidNeck_Terminator"
       }
     },
     {
@@ -49182,7 +49351,7 @@
       ],
       "text": {
         "en": "Gambit's Dice",
-        "zh": "甘比特的骰子"
+        "zh": "赌徒的骰子"
       }
     },
     {
@@ -49898,7 +50067,7 @@
       ],
       "text": {
         "en": "Head Cheese",
-        "zh": "头肉冻"
+        "zh": "头部奶酪"
       }
     },
     {
@@ -50472,6 +50641,32 @@
     {
       "ref": {
         "type": "item",
+        "code": "HuntersPatch"
+      },
+      "sources": [
+        "items"
+      ],
+      "text": {
+        "en": "HuntersPatch",
+        "zh": "HuntersPatch"
+      }
+    },
+    {
+      "ref": {
+        "type": "item",
+        "code": "HuntersPatch_Terminator"
+      },
+      "sources": [
+        "items"
+      ],
+      "text": {
+        "en": "HuntersPatch_Terminator",
+        "zh": "HuntersPatch_Terminator"
+      }
+    },
+    {
+      "ref": {
+        "type": "item",
         "code": "HybridHat"
       },
       "sources": [
@@ -50870,6 +51065,32 @@
       "text": {
         "en": "Jester Cap",
         "zh": "小丑帽"
+      }
+    },
+    {
+      "ref": {
+        "type": "item",
+        "code": "JesterHat"
+      },
+      "sources": [
+        "items"
+      ],
+      "text": {
+        "en": "JesterHat",
+        "zh": "JesterHat"
+      }
+    },
+    {
+      "ref": {
+        "type": "item",
+        "code": "JesterHat_Terminator"
+      },
+      "sources": [
+        "items"
+      ],
+      "text": {
+        "en": "JesterHat_Terminator",
+        "zh": "JesterHat_Terminator"
       }
     },
     {
@@ -51496,6 +51717,19 @@
     {
       "ref": {
         "type": "item",
+        "code": "LoansharksFedora"
+      },
+      "sources": [
+        "items"
+      ],
+      "text": {
+        "en": "LoansharksFedora",
+        "zh": "LoansharksFedora"
+      }
+    },
+    {
+      "ref": {
+        "type": "item",
         "code": "Log"
       },
       "sources": [
@@ -51655,6 +51889,32 @@
       "text": {
         "en": "Lunch Box",
         "zh": "午餐盒"
+      }
+    },
+    {
+      "ref": {
+        "type": "item",
+        "code": "MageCollar"
+      },
+      "sources": [
+        "items"
+      ],
+      "text": {
+        "en": "MageCollar",
+        "zh": "MageCollar"
+      }
+    },
+    {
+      "ref": {
+        "type": "item",
+        "code": "MageCollar_Terminator"
+      },
+      "sources": [
+        "items"
+      ],
+      "text": {
+        "en": "MageCollar_Terminator",
+        "zh": "MageCollar_Terminator"
       }
     },
     {
@@ -52176,6 +52436,32 @@
     {
       "ref": {
         "type": "item",
+        "code": "MetalPlate"
+      },
+      "sources": [
+        "items"
+      ],
+      "text": {
+        "en": "MetalPlate",
+        "zh": "MetalPlate"
+      }
+    },
+    {
+      "ref": {
+        "type": "item",
+        "code": "MetalPlate_Terminator"
+      },
+      "sources": [
+        "items"
+      ],
+      "text": {
+        "en": "MetalPlate_Terminator",
+        "zh": "MetalPlate_Terminator"
+      }
+    },
+    {
+      "ref": {
+        "type": "item",
         "code": "MetalRod"
       },
       "sources": [
@@ -52606,6 +52892,32 @@
     {
       "ref": {
         "type": "item",
+        "code": "MonkMask"
+      },
+      "sources": [
+        "items"
+      ],
+      "text": {
+        "en": "MonkMask",
+        "zh": "MonkMask"
+      }
+    },
+    {
+      "ref": {
+        "type": "item",
+        "code": "MonkMask_Terminator"
+      },
+      "sources": [
+        "items"
+      ],
+      "text": {
+        "en": "MonkMask_Terminator",
+        "zh": "MonkMask_Terminator"
+      }
+    },
+    {
+      "ref": {
+        "type": "item",
         "code": "MonkSeal"
       },
       "sources": [
@@ -52760,6 +53072,19 @@
       "text": {
         "en": "Muertos Mask",
         "zh": "亡灵面具"
+      }
+    },
+    {
+      "ref": {
+        "type": "item",
+        "code": "MuggerMask"
+      },
+      "sources": [
+        "items"
+      ],
+      "text": {
+        "en": "MuggerMask",
+        "zh": "MuggerMask"
       }
     },
     {
@@ -53061,6 +53386,32 @@
       "text": {
         "en": "Soul Dagger",
         "zh": "灵魂匕首"
+      }
+    },
+    {
+      "ref": {
+        "type": "item",
+        "code": "NecromancerMask"
+      },
+      "sources": [
+        "items"
+      ],
+      "text": {
+        "en": "NecromancerMask",
+        "zh": "NecromancerMask"
+      }
+    },
+    {
+      "ref": {
+        "type": "item",
+        "code": "NecromancerMask_Terminator"
+      },
+      "sources": [
+        "items"
+      ],
+      "text": {
+        "en": "NecromancerMask_Terminator",
+        "zh": "NecromancerMask_Terminator"
       }
     },
     {
@@ -53717,6 +54068,32 @@
     {
       "ref": {
         "type": "item",
+        "code": "Pebble"
+      },
+      "sources": [
+        "items"
+      ],
+      "text": {
+        "en": "Pebble",
+        "zh": "Pebble"
+      }
+    },
+    {
+      "ref": {
+        "type": "item",
+        "code": "Pebble_Terminator"
+      },
+      "sources": [
+        "items"
+      ],
+      "text": {
+        "en": "Pebble_Terminator",
+        "zh": "Pebble_Terminator"
+      }
+    },
+    {
+      "ref": {
+        "type": "item",
         "code": "PentagramSigil"
       },
       "sources": [
@@ -54040,8 +54417,21 @@
         "items"
       ],
       "text": {
-        "en": "Glowing Pelt",
+        "en": "Polyp",
         "zh": "发光皮毛"
+      }
+    },
+    {
+      "ref": {
+        "type": "item",
+        "code": "Poncho"
+      },
+      "sources": [
+        "items"
+      ],
+      "text": {
+        "en": "Poncho",
+        "zh": "Poncho"
       }
     },
     {
@@ -54236,6 +54626,32 @@
     {
       "ref": {
         "type": "item",
+        "code": "PsychicMask"
+      },
+      "sources": [
+        "items"
+      ],
+      "text": {
+        "en": "PsychicMask",
+        "zh": "PsychicMask"
+      }
+    },
+    {
+      "ref": {
+        "type": "item",
+        "code": "PsychicMask_Terminator"
+      },
+      "sources": [
+        "items"
+      ],
+      "text": {
+        "en": "PsychicMask_Terminator",
+        "zh": "PsychicMask_Terminator"
+      }
+    },
+    {
+      "ref": {
+        "type": "item",
         "code": "PsychicSeal"
       },
       "sources": [
@@ -54416,6 +54832,19 @@
       "text": {
         "en": "Queen's Crown",
         "zh": "王后皇冠"
+      }
+    },
+    {
+      "ref": {
+        "type": "item",
+        "code": "Rabiesface"
+      },
+      "sources": [
+        "items"
+      ],
+      "text": {
+        "en": "Rabiesface",
+        "zh": "Rabiesface"
       }
     },
     {
@@ -55587,6 +56016,32 @@
     {
       "ref": {
         "type": "item",
+        "code": "SamsonsChains"
+      },
+      "sources": [
+        "items"
+      ],
+      "text": {
+        "en": "SamsonsChains",
+        "zh": "SamsonsChains"
+      }
+    },
+    {
+      "ref": {
+        "type": "item",
+        "code": "SamsonsChains_Terminator"
+      },
+      "sources": [
+        "items"
+      ],
+      "text": {
+        "en": "SamsonsChains_Terminator",
+        "zh": "SamsonsChains_Terminator"
+      }
+    },
+    {
+      "ref": {
+        "type": "item",
         "code": "SatanicBible"
       },
       "sources": [
@@ -56065,6 +56520,19 @@
       "text": {
         "en": "Sleep Dart",
         "zh": "睡眠吹箭"
+      }
+    },
+    {
+      "ref": {
+        "type": "item",
+        "code": "Slime"
+      },
+      "sources": [
+        "items"
+      ],
+      "text": {
+        "en": "Slime",
+        "zh": "Slime"
       }
     },
     {
@@ -57368,6 +57836,19 @@
     {
       "ref": {
         "type": "item",
+        "code": "SuperDunceCap"
+      },
+      "sources": [
+        "items"
+      ],
+      "text": {
+        "en": "SuperDunceCap",
+        "zh": "SuperDunceCap"
+      }
+    },
+    {
+      "ref": {
+        "type": "item",
         "code": "SuperheroCape"
       },
       "sources": [
@@ -57663,6 +58144,19 @@
       "text": {
         "en": "Cool Glasses",
         "zh": "酷眼镜"
+      }
+    },
+    {
+      "ref": {
+        "type": "item",
+        "code": "TerminatorCoolGlasses2"
+      },
+      "sources": [
+        "items"
+      ],
+      "text": {
+        "en": "TerminatorCoolGlasses2",
+        "zh": "TerminatorCoolGlasses2"
       }
     },
     {
@@ -58204,6 +58698,32 @@
       "text": {
         "en": "Shard of Glass",
         "zh": "玻璃碎片"
+      }
+    },
+    {
+      "ref": {
+        "type": "item",
+        "code": "TinkererHat"
+      },
+      "sources": [
+        "items"
+      ],
+      "text": {
+        "en": "TinkererHat",
+        "zh": "TinkererHat"
+      }
+    },
+    {
+      "ref": {
+        "type": "item",
+        "code": "TinkererHat_Terminator"
+      },
+      "sources": [
+        "items"
+      ],
+      "text": {
+        "en": "TinkererHat_Terminator",
+        "zh": "TinkererHat_Terminator"
       }
     },
     {
@@ -58941,6 +59461,19 @@
       "text": {
         "en": "Weird Egg",
         "zh": "怪蛋"
+      }
+    },
+    {
+      "ref": {
+        "type": "item",
+        "code": "WesternHat"
+      },
+      "sources": [
+        "items"
+      ],
+      "text": {
+        "en": "WesternHat",
+        "zh": "WesternHat"
       }
     },
     {
@@ -90431,7 +90964,7 @@
       },
       "text": {
         "en": "Gambit's Dice",
-        "zh": "甘比特的骰子"
+        "zh": "赌徒的骰子"
       },
       "sources": [
         "reverse"
@@ -91241,7 +91774,7 @@
       },
       "text": {
         "en": "Gambit",
-        "zh": "甘比特"
+        "zh": "赌徒"
       },
       "sources": [
         "reverse"
@@ -91259,7 +91792,7 @@
       },
       "text": {
         "en": "Gambit",
-        "zh": "甘比特"
+        "zh": "赌徒"
       },
       "sources": [
         "reverse"

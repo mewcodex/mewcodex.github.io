@@ -1572,9 +1572,6 @@
                         <th id="iconHeader" style="width: 160px;">
                             <div class="icon-header">
                                 <span id="iconHeaderText">Icon</span>
-                                <button type="button" id="detailToggleBtn" class="detail-toggle header-toggle">
-                                    Show detailed values
-                                </button>
                             </div>
                         </th>
                         <th id="nameHeader" style="width: 150px;">Ability Name</th>
@@ -1669,8 +1666,7 @@
         let editorNotes = {};
         let refIndex = new Map();
         let targetRenderer;
-        let showDetailedValues = false;
-        let hasAutoShownFormula = false;
+        const showDetailedValues = true;
         const ANNOUNCEMENT_SEEN_KEY = 'codexAnnouncementSeen_v1';
 
         if (typeof window.fetchJsonWithFallback !== 'function') {
@@ -1954,7 +1950,6 @@
             document.getElementById('langButtonEn').textContent = t('languageEnglish');
             document.getElementById('langButtonZh').textContent = t('languageChinese');
             document.getElementById('showHiddenLabel').textContent = t('showHidden');
-            updateDetailToggleLabel();
             document.getElementById('totalLabel').textContent = t('totalAbilities');
             document.getElementById('showingLabel').textContent = t('showing');
             document.getElementById('pagePrev').textContent = t('pagePrev');
@@ -2031,15 +2026,6 @@
             if (targetRenderer && typeof targetRenderer.refreshCopy === 'function') {
                 targetRenderer.refreshCopy();
             }
-        }
-
-        function updateDetailToggleLabel() {
-            const button = document.getElementById('detailToggleBtn');
-            if (!button) {
-                return;
-            }
-            button.textContent = showDetailedValues ? t('hideDetailed') : t('showDetailed');
-            button.classList.toggle('active', showDetailedValues);
         }
 
         // Load abilities from JSON
@@ -2587,6 +2573,9 @@
                         if (!isNaN(rawValue)) {
                             return false;
                         }
+                        if (typeof rawValue === 'string' && /^\d+\s*-\s*\d+$/.test(rawValue.trim())) {
+                            return false;
+                        }
                         if (typeof rawValue === 'string' && rawValue.length <= 3) {
                             return false;
                         }
@@ -2598,7 +2587,7 @@
                     const manaIsFormula = isFormulaValue(manaValue);
                     const manaDisplay = manaValue !== null ? manaValue : null;
 
-                    let statsHtml = `<div class="ability-stats${isUpgraded ? ' upgraded' : ''}${showDetailedValues ? ' detailed' : ''}">`;
+                    let statsHtml = `<div class="ability-stats${isUpgraded ? ' upgraded' : ''} detailed">`;
 
                     const addDetailedLine = (icon, alt, value, isFormula, title) => {
                         statsHtml += `<div class="stat-line"${title ? ` title="${escapeHtml(title)}"` : ''}>`;
@@ -2608,43 +2597,19 @@
                         statsHtml += '</div>';
                     };
 
-                    if (showDetailedValues) {
-                        const hasDamage = damageValue.display || healValue.display;
-                        if (hasDamage) {
-                            const isHeal = !!healValue.display && !damageValue.display;
-                            const typeIcon = isHeal ? 'heal' : (damageType || 'physical');
-                            const rawValue = damageValue.value || healValue.value;
-                            const prettyValue = damageValue.pretty || healValue.pretty || rawValue;
-                            addDetailedLine(typeIcon, typeIcon, prettyValue, damageIsFormula || healIsFormula, prettyValue);
-                        }
-                        if (manaDisplay !== null) {
-                            addDetailedLine('cost', 'mana', manaDisplay, manaIsFormula, t('manaCost'));
-                        }
-                    } else {
-                        // Damage/Heal stats (if present)
-                        if (damageValue.display || healValue.display) {
-                            const isHeal = !!healValue.display && !damageValue.display;
-                            const typeIcon = isHeal ? 'heal' : (damageType || 'physical');
-                            const displayValue = damageValue.display || healValue.display;
-
-                            const prettyValue = damageValue.pretty || healValue.pretty || (damageValue.value || healValue.value);
-                            statsHtml += `<div class="stat-group" ${(damageIsFormula || healIsFormula) ? `title="${escapeHtml(t('formula'))}: ${escapeHtml(prettyValue)}"` : ''}>`;
-                            statsHtml += `<img src="res/${typeIcon}.png" alt="${typeIcon}" class="stat-icon" onerror="this.style.display='none'">`;
-                            statsHtml += `<div class="stat-value ${(damageIsFormula || healIsFormula) ? 'formula' : ''}" title="${escapeHtml(prettyValue)}">${displayValue}</div>`;
-                            statsHtml += '</div>';
-                        }
-
-                        // Mana cost
-                        if (manaDisplay !== null) {
-                            statsHtml += `<div class="stat-group" title="${escapeHtml(t('manaCost'))}">`;
-                            statsHtml += `<img src="res/cost.png" alt="mana" class="stat-icon" onerror="this.style.display='none'">`;
-                            statsHtml += `<div class="stat-value">${manaDisplay}</div>`;
-                            statsHtml += '</div>';
-                        }
+                    const hasDamage = damageValue.display || healValue.display;
+                    if (hasDamage) {
+                        const isHeal = !!healValue.display && !damageValue.display;
+                        const typeIcon = isHeal ? 'heal' : (damageType || 'physical');
+                        const rawValue = damageValue.value || healValue.value;
+                        const prettyValue = damageValue.pretty || healValue.pretty || rawValue;
+                        addDetailedLine(typeIcon, typeIcon, prettyValue, damageIsFormula || healIsFormula, prettyValue);
+                    }
+                    if (manaDisplay !== null) {
+                        addDetailedLine('cost', 'mana', manaDisplay, manaIsFormula, t('manaCost'));
                     }
 
                     statsHtml += '</div>';
-                    const hasDamage = !!(damageValue.display || healValue.display);
                     const hasMana = manaDisplay !== null;
                     return (hasDamage || hasMana) ? statsHtml : '';
                 };
@@ -2970,6 +2935,17 @@
                 return { value: null, display: null, pretty: null };
             }
 
+            if (typeof value === 'string') {
+                const trimmed = value.trim();
+                const lowered = trimmed.toLowerCase();
+                if (['str', 'dex', 'con', 'int', 'spd', 'lck', 'cha'].includes(lowered)) {
+                    return { value: trimmed, display: withAttributeIcons(lowered), pretty: trimmed };
+                }
+                if (/^\d+\s*-\s*\d+$/.test(trimmed)) {
+                    return { value: trimmed, display: trimmed, pretty: trimmed };
+                }
+            }
+
             // Check if it's a number or numeric string
             if (!isNaN(value) && value !== '') {
                 return { value: value, display: value, pretty: value };
@@ -3239,18 +3215,6 @@
             });
         });
         document.getElementById('showHiddenToggle').addEventListener('change', filterAbilities);
-        document.getElementById('detailToggleBtn').addEventListener('click', () => {
-            showDetailedValues = !showDetailedValues;
-            updateDetailToggleLabel();
-            filterAbilities();
-            if (showDetailedValues && !hasAutoShownFormula) {
-                const formulaModal = document.getElementById('formulaModal');
-                if (formulaModal) {
-                    formulaModal.style.display = 'block';
-                }
-                hasAutoShownFormula = true;
-            }
-        });
         document.getElementById('formulaButton').addEventListener('click', () => {
             document.getElementById('formulaModal').style.display = 'block';
         });

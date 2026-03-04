@@ -1,5 +1,5 @@
 {
-  "generated_from": "G:\\gpak-all\\data\\item_setbonuses.gon",
+  "generated_from": "G:\\gpak-all\\data\\data\\item_setbonuses.gon",
   "count": 101,
   "set_bonuses": [
     {
@@ -86,7 +86,7 @@
         "zh": "猫皮套装加成！"
       },
       "desc_texts": {
-        "en": "5% chance to spawn a Flea each turn.\r\nFamiliars have +1 Damage and +1 movement range.",
+        "en": "5% chance to spawn a Flea each turn.\nFamiliars have +1 Damage and +1 movement range.",
         "zh": "每回合有 5% 几率生成一只跳蚤。\r\n使魔拥有 +1 伤害和 +1 移动距离。"
       },
       "name_mod": null,
@@ -409,7 +409,7 @@
         "zh": "麻绳套装加成！"
       },
       "desc_texts": {
-        "en": "+10% Dodge Chance.\r\nBruise units that contact you.",
+        "en": "+10% Dodge Chance.\nBruise units that contact you.",
         "zh": "+10% 闪避率。\r\n对接触你的单位造成淤伤。"
       },
       "name_mod": null,
@@ -534,7 +534,7 @@
         "zh": "仿生套装加成！"
       },
       "desc_texts": {
-        "en": "Your movement action becomes an infinite range Teleport.\r\nBionic Set Pieces are no longer Fragile.",
+        "en": "Your movement action becomes an infinite range Teleport.\nBionic Set Pieces are no longer Fragile.",
         "zh": "你的移动行动变为无限射程的传送。\r\n仿生套装部件不再易碎。"
       },
       "name_mod": null,
@@ -573,7 +573,7 @@
         "zh": "幸运套装加成！"
       },
       "desc_texts": {
-        "en": "Spawn 5-10 extra coins on each map.\r\nLucky Set Pieces are no longer Fragile.",
+        "en": "Spawn 5-10 extra coins on each map.\nLucky Set Pieces are no longer Fragile.",
         "zh": "每张地图额外生成 5-10 枚金币。\r\n幸运套装部件不再易碎。"
       },
       "name_mod": null,
@@ -595,7 +595,7 @@
         "zh": "苍蝇套装加成！"
       },
       "desc_texts": {
-        "en": "Flying. You do not take extra damage from backstabs.\r\n50% Chance to spawn a Fly each turn.",
+        "en": "Flying. You do not take extra damage from backstabs.\n50% Chance to spawn a Fly each turn.",
         "zh": "飞行。你不会受到背刺的额外伤害。\r\n每回合有 50% 几率生成一只苍蝇。"
       },
       "name_mod": null,
@@ -906,7 +906,7 @@
         "zh": "粪便套装加成！"
       },
       "desc_texts": {
-        "en": "Poisonous 1.\r\nYour basic attack inflicts Poison.",
+        "en": "Poisonous 1.\nYour basic attack inflicts Poison.",
         "zh": "带毒 1。\r\n你的基础攻击造成中毒。"
       },
       "name_mod": null,
@@ -926,7 +926,7 @@
         "zh": "肉块套装加成！"
       },
       "desc_texts": {
-        "en": "+1 Damage.\r\nGain +1 Damage when you get a kill.\r\nAfter three kills, gains +2 [img:con], +4 Health Regen and Madness for the rest of the battle.",
+        "en": "+1 Damage.\nGain +1 Damage when you get a kill.\nAfter three kills, gains +2 [img:con], +4 Health Regen and Madness for the rest of the battle.",
         "zh": "+1 伤害。\r\n当你获得击杀时获得 +1 伤害。\r\n获得三次击杀后，获得 +2 [img:con]，\r\n+4 生命恢复和疯狂状态，\r\n持续至战斗结束。"
       },
       "name_mod": null,
@@ -967,7 +967,7 @@
         "zh": "仙人掌套装加成！"
       },
       "desc_texts": {
-        "en": "+2 Thorns.\r\nWhenever any Cactus armor breaks, increase all your stats by 1, permanently.",
+        "en": "+2 Thorns.\nWhenever any Cactus armor breaks, increase all your stats by 1, permanently.",
         "zh": "+2 荆棘。\r\n每当任意仙人掌护甲破碎时，\r\n你的所有属性永久增加 1 点。"
       },
       "name_mod": null,
@@ -987,7 +987,7 @@
         "zh": "木乃伊套装加成！"
       },
       "desc_texts": {
-        "en": "When downed, inflict Rot 1 and Weakness 1 on all enemies.\r\nWhen downed, revive with +30% HP at the end of the round.",
+        "en": "When downed, inflict Rot 1 and Weakness 1 on all enemies.\nWhen downed, revive with +30% HP at the end of the round.",
         "zh": "倒地时，\r\n对所有敌人施加 1 层腐烂和 1 层虚弱。\r\n倒地时，\r\n在回合结束时以 +30% 生命值复活。"
       },
       "name_mod": null,
@@ -1049,7 +1049,7 @@
         "zh": "人肉套装加成！"
       },
       "desc_texts": {
-        "en": "+50% Crit Chance on humanoid enemies.\r\nWhen downed, inflict Fear 2 on all enemies.",
+        "en": "+50% Crit Chance on humanoid enemies.\nWhen downed, inflict Fear 2 on all enemies.",
         "zh": "对人型敌人 +50% 暴击率。\r\n倒地时，对所有敌人施加 2 层恐惧。"
       },
       "name_mod": null,
@@ -1114,7 +1114,7 @@
         "zh": "实验性套装加成！"
       },
       "desc_texts": {
-        "en": "Find a pill at the end of each battle.\r\nWhenever you eat a pill, gain a random stat and lose another random stat, permanently.",
+        "en": "Find a pill at the end of each battle.\nWhenever you eat a pill, gain a random stat and lose another random stat, permanently.",
         "zh": "每次战斗结束时发现一颗药丸。\r\n每当你吃下一颗药丸，\r\n永久获得一项随机属性并失去另一项随机属性。"
       },
       "name_mod": null,
@@ -1135,7 +1135,7 @@
         "zh": "硬岩套装加成！"
       },
       "desc_texts": {
-        "en": "Spawn a pet rock familiar whenever you lose [img:shield].\r\nBroken Rocky equipment pieces have a 75% chance of being recovered at the end of the battle.",
+        "en": "Spawn a pet rock familiar whenever you lose [img:shield].\nBroken Rocky equipment pieces have a 75% chance of being recovered at the end of the battle.",
         "zh": "每当你失去 [img:shield] 时，\r\n生成一个宠物石使魔。\r\n破碎的硬岩装备部件在战斗结束时有 75% 的\r\n几率恢复。"
       },
       "name_mod": null,
@@ -1173,7 +1173,7 @@
         "zh": "行星套装加成！"
       },
       "desc_texts": {
-        "en": "Flying. Inflict Bruise 1 on units you make contact with.\r\nPull every unit within 2 tiles toward you at the end of each round.",
+        "en": "Flying. Inflict Bruise 1 on units you make contact with.\nPull every unit within 2 tiles toward you at the end of each round.",
         "zh": "飞行。对接触的单位施加 1 层淤伤。\r\n每回合结束时，\r\n将 2 格内的所有单位拉向你。"
       },
       "name_mod": null,
@@ -1353,7 +1353,7 @@
         "zh": "女巫套装加成！"
       },
       "desc_texts": {
-        "en": "Your movement action becomes a Jump with infinite range.\r\nYour tile-targeted spells have infinite range.",
+        "en": "Your movement action becomes a Jump with infinite range.\nYour tile-targeted spells have infinite range.",
         "zh": "你的移动行动变为无限射程的跳跃。\r\n你的地块目标法术拥有无限射程。"
       },
       "name_mod": null,
@@ -1626,7 +1626,7 @@
         "zh": "辐射套装加成！"
       },
       "desc_texts": {
-        "en": "Gain a random mutation at the end of each battle.\r\nExplode when downed. This explosion doesn't damage you.",
+        "en": "Gain a random mutation at the end of each battle.\nExplode when downed. This explosion doesn't damage you.",
         "zh": "每场战斗结束时获得一个随机突变。\r\n倒地时爆炸。此爆炸不会伤害你。"
       },
       "name_mod": null,
@@ -1667,7 +1667,7 @@
         "zh": "混合套装加成！"
       },
       "desc_texts": {
-        "en": "Bruise 1. Poison 1. Bleed 1.\r\nThe first spell you cast each turn is cast twice.",
+        "en": "Bruise 1. Poison 1. Bleed 1.\nThe first spell you cast each turn is cast twice.",
         "zh": "淤伤 1。中毒 1。流血 1。\r\n你每回合施放的第一个法术会施放两次。"
       },
       "name_mod": null,
@@ -1916,7 +1916,7 @@
         "zh": "先祖套装加成！"
       },
       "desc_texts": {
-        "en": "Spawn a spectral copy of yourself when you die.\r\nThe copy dies at the end of its turn.",
+        "en": "Spawn a spectral copy of yourself when you die.\nThe copy dies at the end of its turn.",
         "zh": "当你死亡时，生成一个你的幽灵分身。\r\n分身在其回合结束时死亡。"
       },
       "name_mod": null,
