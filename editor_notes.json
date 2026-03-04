@@ -15,6 +15,10 @@
         "en": "Literally.",
         "zh": "字面意思。"
     },
+    "Awaken": {
+        "en": "Removes Sleep, Sleep (Paralysis), and Drowsy.",
+        "zh": "移除 睡眠，睡眠（麻痹）和困倦。"
+    },
     "AncestorsSkull": {
         "en": "Exclusive to the Ancestor's Bones node.",
         "zh": "仅能通过先祖骸骨节点获得。"
@@ -322,6 +326,10 @@
     "Seppuku": {
         "en": "Source Code Comment: \"bonus ability for Last Gasp passive\"",
         "zh": "源代码注释：“bonus ability for Last Gasp passive”"
+    },
+    "ScatterShot2": {
+        "en": "Targeting excludes allies after being upgraded.",
+        "zh": "升级后不会选择盟友为溅射目标。"
     },
     "RaiseTheDead": {
         "en": "Source Code Comment: \"util ability for RelentlessDead passive\"",

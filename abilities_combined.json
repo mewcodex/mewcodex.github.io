@@ -499,9 +499,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -744,9 +744,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -930,9 +930,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -4214,7 +4214,7 @@
       "cost": {
         "move_points": 1,
         "act_points": 0,
-        "mana": null
+        "mana": "X"
       },
       "cost_upgraded": null,
       "damage": {
@@ -6044,9 +6044,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -6282,9 +6282,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -10041,9 +10041,9 @@
         "mana": 3
       },
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -11028,9 +11028,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -12812,9 +12812,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -12983,9 +12983,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -13040,9 +13040,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -14537,9 +14537,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -16015,9 +16015,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -18408,9 +18408,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -19070,9 +19070,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -19231,9 +19231,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -19291,9 +19291,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -19351,9 +19351,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -19411,9 +19411,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -19471,9 +19471,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -20741,9 +20741,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -21339,9 +21339,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -22487,9 +22487,9 @@
         "mana": 7
       },
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -22545,9 +22545,9 @@
         "mana": 0
       },
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -22711,9 +22711,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -25204,7 +25204,7 @@
       "cost": {
         "move_points": 0,
         "act_points": 1,
-        "mana": null
+        "mana": "X"
       },
       "cost_upgraded": null,
       "damage": {
@@ -25736,7 +25736,7 @@
       "cost": {
         "move_points": 0,
         "act_points": 1,
-        "mana": 2
+        "mana": "2+X*2"
       },
       "cost_upgraded": null,
       "damage": {
@@ -25919,9 +25919,13 @@
       "cost": {
         "move_points": 0,
         "act_points": 1,
-        "mana": null
+        "mana": "max(8-2*X,0)"
       },
-      "cost_upgraded": null,
+      "cost_upgraded": {
+        "move_points": null,
+        "act_points": null,
+        "mana": "max(7-2*X,0)"
+      },
       "damage": {
         "value": "8-X",
         "heal_value": null,
@@ -26433,12 +26437,12 @@
       "cost": {
         "move_points": 0,
         "act_points": 1,
-        "mana": 15
+        "mana": "15-X"
       },
       "cost_upgraded": {
         "move_points": null,
         "act_points": null,
-        "mana": 15
+        "mana": "15-X*2"
       },
       "damage": {
         "value": "str",
@@ -26893,12 +26897,12 @@
       "cost": {
         "move_points": 0,
         "act_points": 1,
-        "mana": 3
+        "mana": "3+X*2"
       },
       "cost_upgraded": {
         "move_points": null,
         "act_points": null,
-        "mana": 3
+        "mana": "3+X*1"
       },
       "damage": {
         "value": "10+bonus_melee_ability_damage",
@@ -27123,9 +27127,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -28399,9 +28403,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -28928,9 +28932,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -29743,9 +29747,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -29792,9 +29796,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -29838,9 +29842,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -30077,9 +30081,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -30123,9 +30127,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -30301,9 +30305,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -30361,9 +30365,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -30835,9 +30839,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -32536,9 +32540,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -37889,9 +37893,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -38305,9 +38309,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -38543,9 +38547,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -38733,9 +38737,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -38827,9 +38831,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -39015,9 +39019,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -39392,9 +39396,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -39484,9 +39488,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -39958,9 +39962,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -40146,9 +40150,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -40240,9 +40244,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -42440,9 +42444,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -42488,9 +42492,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -43520,9 +43524,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -44016,9 +44020,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -44248,9 +44252,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -44340,9 +44344,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -45465,9 +45469,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -45605,9 +45609,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -45894,9 +45898,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -46220,9 +46224,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -46266,9 +46270,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -46740,9 +46744,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -47763,9 +47767,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -47811,9 +47815,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -48309,7 +48313,7 @@
       "cost": {
         "move_points": 0,
         "act_points": 1,
-        "mana": null
+        "mana": "X"
       },
       "cost_upgraded": null,
       "damage": {
@@ -50806,7 +50810,7 @@
       "cost": {
         "move_points": 0,
         "act_points": 1,
-        "mana": null
+        "mana": "X"
       },
       "cost_upgraded": null,
       "damage": {
@@ -50981,7 +50985,7 @@
       "cost": {
         "move_points": 0,
         "act_points": 1,
-        "mana": null
+        "mana": "X"
       },
       "cost_upgraded": null,
       "damage": {
@@ -52572,7 +52576,7 @@
       "cost": {
         "move_points": 0,
         "act_points": 1,
-        "mana": 6
+        "mana": "6-X"
       },
       "cost_upgraded": null,
       "damage": {
@@ -54835,9 +54839,9 @@
         "mana": 4
       },
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -55205,7 +55209,7 @@
       "cost": {
         "move_points": 0,
         "act_points": 1,
-        "mana": 10
+        "mana": "10-X*6"
       },
       "cost_upgraded": null,
       "damage": {
@@ -55338,7 +55342,7 @@
       "cost_upgraded": {
         "move_points": null,
         "act_points": null,
-        "mana": 4
+        "mana": "4-X"
       },
       "damage": {
         "value": null,
@@ -55399,7 +55403,7 @@
       "cost": {
         "move_points": 0,
         "act_points": 1,
-        "mana": 10
+        "mana": "10-X"
       },
       "cost_upgraded": null,
       "damage": {
@@ -57778,7 +57782,7 @@
       "cost": {
         "move_points": 0,
         "act_points": 1,
-        "mana": 22
+        "mana": "22-X*3"
       },
       "cost_upgraded": null,
       "damage": {
@@ -59374,7 +59378,7 @@
       "cost": {
         "move_points": 0,
         "act_points": 1,
-        "mana": 8
+        "mana": "8-X*2"
       },
       "cost_upgraded": null,
       "damage": {
@@ -59434,7 +59438,11 @@
         "act_points": 1,
         "mana": 5
       },
-      "cost_upgraded": null,
+      "cost_upgraded": {
+        "move_points": null,
+        "act_points": null,
+        "mana": "max(4-X, 0)"
+      },
       "damage": {
         "value": "5+bonus_melee_ability_damage",
         "heal_value": null,
@@ -60018,9 +60026,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -60132,7 +60140,7 @@
       "cost": {
         "move_points": 0,
         "act_points": 1,
-        "mana": null
+        "mana": "4-clamp(floor(X/7), 0, 1)"
       },
       "cost_upgraded": null,
       "damage": {
@@ -60368,9 +60376,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -61419,9 +61427,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -61765,9 +61773,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -61887,9 +61895,9 @@
         "mana": 4
       },
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -62009,9 +62017,9 @@
         "mana": 0
       },
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -62187,7 +62195,7 @@
       "cost": {
         "move_points": 0,
         "act_points": 1,
-        "mana": null
+        "mana": "X"
       },
       "cost_upgraded": null,
       "damage": {
@@ -63066,9 +63074,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -63123,9 +63131,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -63754,9 +63762,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -64967,7 +64975,7 @@
       "cost": {
         "move_points": 0,
         "act_points": 1,
-        "mana": null
+        "mana": "X"
       },
       "cost_upgraded": null,
       "damage": {
@@ -66138,9 +66146,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -66376,7 +66384,7 @@
       "cost_upgraded": {
         "move_points": null,
         "act_points": null,
-        "mana": 16
+        "mana": "16-X*16"
       },
       "damage": {
         "value": null,
@@ -68025,9 +68033,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -68225,9 +68233,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -68274,9 +68282,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -69306,9 +69314,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -69355,9 +69363,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -69788,9 +69796,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -70080,9 +70088,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -70721,9 +70729,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -71078,9 +71086,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -72347,9 +72355,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -72785,9 +72793,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -73076,9 +73084,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -73467,9 +73475,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -74470,9 +74478,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -76636,9 +76644,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -76930,9 +76938,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -77614,9 +77622,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -78416,9 +78424,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -81479,9 +81487,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -84560,9 +84568,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -85594,9 +85602,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -85790,9 +85798,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -86543,9 +86551,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -86974,9 +86982,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -87268,9 +87276,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -87368,9 +87376,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -87558,9 +87566,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -87742,9 +87750,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -89178,9 +89186,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -89546,9 +89554,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -90193,9 +90201,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -92918,9 +92926,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -94340,9 +94348,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -94719,9 +94727,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -94949,9 +94957,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -95853,9 +95861,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -95899,9 +95907,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -95945,9 +95953,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -96182,9 +96190,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -96692,9 +96700,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -97069,9 +97077,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -97256,9 +97264,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -97351,9 +97359,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -97728,9 +97736,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -98704,9 +98712,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -99003,9 +99011,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -99559,9 +99567,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -99605,9 +99613,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -99986,9 +99994,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -100032,9 +100040,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -100216,9 +100224,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -100358,9 +100366,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -101625,9 +101633,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -102234,9 +102242,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -102694,9 +102702,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -103277,9 +103285,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -104367,9 +104375,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -107144,7 +107152,7 @@
       "cost": {
         "move_points": 0,
         "act_points": 0,
-        "mana": null
+        "mana": "spd"
       },
       "cost_upgraded": null,
       "damage": {
@@ -108552,9 +108560,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -108598,9 +108606,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -109015,9 +109023,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -109061,9 +109069,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -109107,9 +109115,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -109153,9 +109161,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -109199,9 +109207,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -109245,9 +109253,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -109291,9 +109299,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -109337,9 +109345,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -109383,9 +109391,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -109429,9 +109437,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -109475,9 +109483,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -109521,9 +109529,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -109567,9 +109575,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -109613,9 +109621,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -109659,9 +109667,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -109705,9 +109713,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -111755,7 +111763,7 @@
       "cost": {
         "move_points": 0,
         "act_points": 1,
-        "mana": null
+        "mana": "X"
       },
       "cost_upgraded": null,
       "damage": {
@@ -112346,9 +112354,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -113180,9 +113188,9 @@
         "mana": 4
       },
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -114517,7 +114525,7 @@
       "cost": {
         "move_points": 0,
         "act_points": 1,
-        "mana": null
+        "mana": "X"
       },
       "cost_upgraded": null,
       "damage": {
@@ -114824,9 +114832,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -115008,9 +115016,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -115166,7 +115174,7 @@
       "cost": {
         "move_points": 0,
         "act_points": 1,
-        "mana": null
+        "mana": "X"
       },
       "cost_upgraded": null,
       "damage": {
@@ -115348,9 +115356,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -115831,7 +115839,11 @@
         "act_points": 1,
         "mana": 5
       },
-      "cost_upgraded": null,
+      "cost_upgraded": {
+        "move_points": null,
+        "act_points": null,
+        "mana": "X"
+      },
       "damage": {
         "value": null,
         "heal_value": null,
@@ -115891,9 +115903,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -116255,9 +116267,9 @@
         "mana": 3
       },
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -116614,9 +116626,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -116678,9 +116690,9 @@
         "mana": 6
       },
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -117171,9 +117183,9 @@
         "mana": 6
       },
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -117555,9 +117567,9 @@
         "mana": 0
       },
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -118014,9 +118026,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -118072,7 +118084,11 @@
         "act_points": 1,
         "mana": 1
       },
-      "cost_upgraded": null,
+      "cost_upgraded": {
+        "move_points": null,
+        "act_points": null,
+        "mana": "X"
+      },
       "damage": {
         "value": null,
         "heal_value": null,
@@ -118258,9 +118274,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [],
@@ -118491,9 +118507,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -118650,9 +118666,9 @@
         "mana": 6
       },
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [
@@ -118760,9 +118776,9 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": null,
         "heal_value": null,
-        "type": "physical"
+        "type": null
       },
       "damage_upgraded": null,
       "tags": [

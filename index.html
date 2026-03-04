@@ -567,56 +567,67 @@
         }
 
         .class-fighter {
-            background: #e74c3c;
+            background: #de9494;
         }
 
         .class-thief {
-            background: #27ae60;
+            background: #fffbb5;
         }
 
         .class-tank {
-            background: #3498db;
+            background: #857348;
         }
 
         .class-mage {
-            background: #9b59b6;
+            background: #a6a6c9;
         }
 
         .class-medic {
-            background: #e91e63;
+            background: #e2e2e2;
+            color: #000;
         }
 
         .class-hunter {
-            background: #f39c12;
+            background: #425d3d;
         }
 
         .class-necromancer {
-            background: #34495e;
+            background: #131313;
         }
 
         .class-butcher {
-            background: #c0392b;
+            background: #ac4457;
         }
 
         .class-monk {
-            background: #16a085;
+            background: #787878;
         }
 
         .class-druid {
-            background: #27ae60;
+            background: #5b4237;
         }
 
         .class-psychic {
-            background: #8e44ad;
+            background: #645379;
         }
 
         .class-tinkerer {
-            background: #e67e22;
+            background: #6bdfbe;
+            color: #000;
         }
 
         .class-jester {
-            background: #f1c40f;
+            background: linear-gradient(135deg, #a66d6d 0%, #93bec6 50%, #a2c476 100%);
             color: #333;
+        }
+
+        .class-colorless {
+            background: #c1c1c1;
+            color: #000;
+        }
+
+        .class-other {
+            background: #ffffff;
         }
 
         .description {
@@ -2609,6 +2620,13 @@
                             .includes(rawValue.trim().toLowerCase());
                     };
 
+                    const isRangeValue = (rawValue) => {
+                        if (typeof rawValue !== 'string') {
+                            return false;
+                        }
+                        return /^\d+\s*-\s*\d+$/.test(rawValue.trim());
+                    };
+
                     const isZeroValue = (rawValue) => {
                         if (rawValue === null || rawValue === undefined) {
                             return false;
@@ -2644,6 +2662,21 @@
                             return false;
                         }
                         return true;
+                    };
+
+                    const shouldWrapFormula = (rawValue, isFormula) => {
+                        if (rawValue === null || rawValue === undefined) {
+                            return false;
+                        }
+                        const text = String(rawValue).trim();
+                        if (text === '') {
+                            return false;
+                        }
+                        if (isPureNumber(rawValue) || isSingleAttribute(rawValue) || isRangeValue(text)) {
+                            return false;
+                        }
+                        const hasOperator = /[+\-*/]/.test(text) && !isRangeValue(text);
+                        return isFormula || hasOperator;
                     };
 
                     const damageIsFormula = isFormulaValue(damageValue.value);
@@ -2684,11 +2717,34 @@
                                 combinedValue
                             );
                         } else {
-                            addDetailedLine(typeIcon, typeIcon, prettyValue, damageIsFormula || healIsFormula, prettyValue);
+                            const valueNeedsParens = shouldWrapFormula(
+                                rawValue,
+                                damageIsFormula || healIsFormula
+                            );
+                            const valueDisplay = valueNeedsParens
+                                ? `(${prettyValue})`
+                                : prettyValue;
+                            addDetailedLine(
+                                typeIcon,
+                                typeIcon,
+                                valueDisplay,
+                                damageIsFormula || healIsFormula || valueNeedsParens,
+                                valueDisplay
+                            );
                         }
                     }
                     if (manaDisplay !== null) {
-                        addDetailedLine('cost', 'mana', manaDisplay, manaIsFormula, t('manaCost'));
+                        const manaNeedsParens = shouldWrapFormula(manaDisplay, manaIsFormula);
+                        const manaValueDisplay = manaNeedsParens
+                            ? `(${manaDisplay})`
+                            : manaDisplay;
+                        addDetailedLine(
+                            'cost',
+                            'mana',
+                            manaValueDisplay,
+                            manaIsFormula || manaNeedsParens,
+                            t('manaCost')
+                        );
                     }
 
                     statsHtml += '</div>';
