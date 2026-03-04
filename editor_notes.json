@@ -327,8 +327,8 @@
         "en": "Source Code Comment: \"bonus ability for Last Gasp passive\"",
         "zh": "源代码注释：“bonus ability for Last Gasp passive”"
     },
-    "ScatterShot2": {
-        "en": "Targeting excludes allies after being upgraded.",
+    "ScatterShot": {
+        "en": "After being upgraded, targeting will exclude allies .",
         "zh": "升级后不会选择盟友为溅射目标。"
     },
     "RaiseTheDead": {
