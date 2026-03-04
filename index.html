@@ -164,6 +164,12 @@
             align-items: center;
         }
 
+        .search-wrapper {
+            position: relative;
+            flex: 1;
+            min-width: 200px;
+        }
+
         .controls input,
         .controls select {
             padding: 8px 12px;
@@ -173,8 +179,37 @@
         }
 
         .controls input {
-            flex: 1;
-            min-width: 200px;
+            width: 100%;
+            padding-right: 35px;
+        }
+
+        .clear-button {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #999;
+            font-size: 1.3em;
+            cursor: pointer;
+            padding: 0;
+            width: 24px;
+            height: 24px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.2s;
+        }
+
+        .clear-button:hover {
+            background: #e0e0e0;
+            color: #666;
+        }
+
+        .clear-button.visible {
+            display: flex;
         }
 
         .visibility-controls {
@@ -572,6 +607,7 @@
 
         .class-thief {
             background: #fffbb5;
+            color: #000;
         }
 
         .class-tank {
@@ -1541,7 +1577,10 @@
         </div>
 
         <div class="controls">
-            <input type="text" id="searchInput" placeholder="Search by ability name or description...">
+            <div class="search-wrapper">
+                <input type="text" id="searchInput" placeholder="Search by ability name or description...">
+                <button class="clear-button" id="clearButton" title="Clear search">×</button>
+            </div>
             <select id="classFilter">
                 <option value="">All Classes</option>
             </select>
@@ -1569,6 +1608,10 @@
                 <select id="poolFilter" class="stats-select">
                     <option value="">Select Pool</option>
                 </select>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label" id="showFilePoolsLabel">Show file pools:</span>
+                <input type="checkbox" id="showFilePoolsToggle">
             </div>
             <div class="stats-note" id="statsRangeNote">Range feature is WIP; the damage value shown at the left could
                 be imprecise, further finetuning is needed.</div>
@@ -1677,6 +1720,7 @@
         let editorNotes = {};
         let refIndex = new Map();
         let targetRenderer;
+        let showFilePools = false;
         const showDetailedValues = true;
         const ANNOUNCEMENT_SEEN_KEY = 'codexAnnouncementSeen_v1';
 
@@ -1710,6 +1754,7 @@
                 allClasses: 'All Classes',
                 totalAbilities: 'Total Abilities:',
                 showing: 'Showing:',
+                showFilePoolsLabel: 'Show file names:',
                 pagePrev: 'Prev',
                 pageNext: 'Next',
                 pageSize: 'Per page',
@@ -1785,6 +1830,7 @@
                 allClasses: '全部职业',
                 totalAbilities: '能力总数：',
                 showing: '显示：',
+                showFilePoolsLabel: '显示文件名称：',
                 pagePrev: '上一页',
                 pageNext: '下一页',
                 pageSize: '每页',
@@ -1961,6 +2007,7 @@
             document.getElementById('langButtonEn').textContent = t('languageEnglish');
             document.getElementById('langButtonZh').textContent = t('languageChinese');
             document.getElementById('showHiddenLabel').textContent = t('showHidden');
+            document.getElementById('showFilePoolsLabel').textContent = t('showFilePoolsLabel');
             document.getElementById('totalLabel').textContent = t('totalAbilities');
             document.getElementById('showingLabel').textContent = t('showing');
             document.getElementById('pagePrev').textContent = t('pagePrev');
@@ -2153,6 +2200,10 @@
             return tag;
         }
 
+        function isFilePoolTag(tag) {
+            return String(tag || '').startsWith('file:');
+        }
+
         function populatePoolFilter(selectedValue = '') {
             const poolTags = new Map();
             allAbilities.forEach(ability => {
@@ -2160,6 +2211,9 @@
                     ? ability.ability_pools
                     : [];
                 tags.forEach(tag => {
+                    if (!showFilePools && isFilePoolTag(tag)) {
+                        return;
+                    }
                     if (!poolTags.has(tag)) {
                         poolTags.set(tag, localizePoolTag(tag));
                     }
@@ -2224,6 +2278,7 @@
             const localizedTag = localizePoolTag(tag);
             searchInput.value = `#(${localizedTag}) `;
             searchInput.focus();
+            updateClearButtonVisibility();
             filterAbilities();
         }
 
@@ -2486,6 +2541,11 @@
             const tbody = document.getElementById('tableBody');
             const showHidden = document.getElementById('showHiddenToggle')?.checked;
             const visibleAbilities = abilities.filter(ability => {
+                const sourceFile = ability.source_file || '';
+                const isArmorAbility = sourceFile.endsWith('armor_abilities.gon');
+                if (!showHidden && isArmorAbility) {
+                    return false;
+                }
                 const hasIcon = ability.frame_number !== null && ability.frame_number !== undefined;
                 const hasTitle = hasRenderedText(ability.ability_name_texts, ability.ability_name);
                 const hasDescription = hasRenderedText(ability.description_texts, ability.description) ||
@@ -2981,6 +3041,9 @@
                 );
                 const filteredPoolTags = poolTags.filter(tag => {
                     const parts = String(tag).split('.');
+                    if (!showFilePools && isFilePoolTag(tag)) {
+                        return false;
+                    }
                     if (parts.length < 2) {
                         return true;
                     }
@@ -3231,11 +3294,31 @@
 
         targetRenderer = createTargetRenderer();
 
+        function updateClearButtonVisibility() {
+            const clearButton = document.getElementById('clearButton');
+            const searchInput = document.getElementById('searchInput');
+            if (!clearButton || !searchInput) {
+                return;
+            }
+            clearButton.classList.toggle('visible', !!searchInput.value);
+        }
+
+        function clearSearch() {
+            const searchInput = document.getElementById('searchInput');
+            if (!searchInput) {
+                return;
+            }
+            searchInput.value = '';
+            updateClearButtonVisibility();
+            filterAbilities();
+        }
+
         // Filter abilities
         function filterAbilities(preserveHash = false) {
             if (!preserveHash) {
                 clearHashPromotion();
             }
+            updateClearButtonVisibility();
             const showHiddenToggle = document.getElementById('showHiddenToggle');
             const hashActive = hashPromoteActive && hashPromoteKey;
             if (hashActive && showHiddenToggle && !showHiddenToggle.checked) {
@@ -3421,9 +3504,25 @@
         }
 
         // Event listeners
-        document.getElementById('searchInput').addEventListener('input', filterAbilities);
+        document.getElementById('searchInput').addEventListener('input', () => {
+            updateClearButtonVisibility();
+            filterAbilities();
+        });
+        document.getElementById('clearButton').addEventListener('click', clearSearch);
         document.getElementById('classFilter').addEventListener('change', filterAbilities);
         document.getElementById('poolFilter').addEventListener('change', handlePoolSelection);
+        document.getElementById('showFilePoolsToggle').addEventListener('change', (event) => {
+            showFilePools = event.target.checked;
+            const poolFilter = document.getElementById('poolFilter');
+            const selected = poolFilter ? poolFilter.value : '';
+            const resetSelection = !showFilePools && isFilePoolTag(selected);
+            const nextSelection = resetSelection ? '' : selected;
+            populatePoolFilter(nextSelection);
+            if (poolFilter && resetSelection) {
+                poolFilter.value = '';
+            }
+            filterAbilities();
+        });
         document.querySelectorAll('.lang-link').forEach(button => {
             button.addEventListener('click', () => {
                 const selectedLang = button.getAttribute('data-lang');
