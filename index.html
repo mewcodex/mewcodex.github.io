@@ -2556,6 +2556,8 @@
                     hasRenderedText(ability.description2_texts, ability.description_2) ||
                     ability.cost_upgraded ||
                     ability.damage_upgraded ||
+                    ability.cast_again_upgraded ||
+                    ability.icon_damage_display_upgraded ||
                     ability.tags_rendered_upgraded ||
                     ability.elements_upgraded ||
                     ability.target_text_upgraded ||
@@ -2570,7 +2572,7 @@
                 const localizedDescription2 = getLocalizedText(ability.description2_texts, ability.description_2);
                 const classLabel = ability.ability_class ? getClassLabel(ability.ability_class) : '';
                 const editorNoteText = getEditorNote(ability.ability_code);
-                const buildStatsHtml = (cost, damage, targetText, isUpgraded) => {
+                const buildStatsHtml = (cost, damage, targetText, castAgainValue, iconDamageDisplay, isUpgraded) => {
                     const rawDamageValue = damage?.value;
                     const rawHealValue = damage?.heal_value;
                     const manaValue = cost?.mana !== null && cost?.mana !== undefined ? cost.mana : null;
@@ -2593,7 +2595,7 @@
                             if (minValue === maxValue) {
                                 return { value: minValue, isRange: false };
                             }
-                            return { value: `${minValue}-${maxValue}`, isRange: true };
+                            return { value: `${minValue}~${maxValue}`, isRange: true };
                         }
                         if (minValue) {
                             return { value: minValue, isRange: false };
@@ -2638,6 +2640,56 @@
                         return Number(text) === 0;
                     };
 
+                    const formatIconDisplayValue = (value) => {
+                        if (value === null || value === undefined) {
+                            return value;
+                        }
+                        return String(value).replace(/-/g, '~');
+                    };
+
+                    const addOneToCastAgain = (rawValue) => {
+                        if (rawValue === null || rawValue === undefined) {
+                            return null;
+                        }
+                        const text = String(rawValue).trim();
+                        if (text === '') {
+                            return null;
+                        }
+                        if (isPureNumber(text)) {
+                            return String(Number(text) + 1);
+                        }
+                        const rangeMatch = text.match(/^(\d+)\s*-\s*(\d+)$/);
+                        if (rangeMatch) {
+                            const minValue = Number(rangeMatch[1]) + 1;
+                            const maxValue = Number(rangeMatch[2]) + 1;
+                            return `${minValue}-${maxValue}`;
+                        }
+                        const leadMatch = text.match(/^(\d+)\s*([+-])\s*(.+)$/);
+                        if (leadMatch) {
+                            const baseValue = Number(leadMatch[1]) + 1;
+                            return `${baseValue}${leadMatch[2]}${leadMatch[3].trim()}`;
+                        }
+                        const tailMatch = text.match(/^(.+?)\s*\+\s*(\d+)$/);
+                        if (tailMatch) {
+                            const baseValue = Number(tailMatch[2]) + 1;
+                            return `${tailMatch[1].trim()}+${baseValue}`;
+                        }
+                        return `1+${text}`;
+                    };
+
+                    const parseCastAgainTimes = (rawValue) => {
+                        if (!rawValue && rawValue !== 0) {
+                            return null;
+                        }
+                        const totalValue = addOneToCastAgain(rawValue);
+                        if (!totalValue) {
+                            return null;
+                        }
+                        const isRange = isRangeValue(totalValue);
+                        const isFormula = !isPureNumber(totalValue) && !isRange;
+                        return { value: totalValue, isRange, isFormula };
+                    };
+
                     const shouldHideDamage = isZeroValue(rawDamageValue);
                     const shouldHideHeal = isZeroValue(rawHealValue);
                     const damageValue = shouldHideDamage
@@ -2664,25 +2716,13 @@
                         return true;
                     };
 
-                    const shouldWrapFormula = (rawValue, isFormula) => {
-                        if (rawValue === null || rawValue === undefined) {
-                            return false;
-                        }
-                        const text = String(rawValue).trim();
-                        if (text === '') {
-                            return false;
-                        }
-                        if (isPureNumber(rawValue) || isSingleAttribute(rawValue) || isRangeValue(text)) {
-                            return false;
-                        }
-                        const hasOperator = /[+\-*/]/.test(text) && !isRangeValue(text);
-                        return isFormula || hasOperator;
-                    };
-
                     const damageIsFormula = isFormulaValue(damageValue.value);
                     const healIsFormula = isFormulaValue(healValue.value);
                     const manaIsFormula = isFormulaValue(manaValue);
                     const manaDisplay = manaValue !== null ? manaValue : null;
+                    const iconDamageDisplayText = iconDamageDisplay !== null && iconDamageDisplay !== undefined
+                        ? String(iconDamageDisplay).trim()
+                        : '';
 
                     let statsHtml = `<div class="ability-stats${isUpgraded ? ' upgraded' : ''} detailed">`;
 
@@ -2700,49 +2740,54 @@
                         const typeIcon = isHeal ? 'heal' : (damageType || 'physical');
                         const rawValue = damageValue.value || healValue.value;
                         const prettyValue = damageValue.pretty || healValue.pretty || rawValue;
+                        const isIconDamageDisplay = iconDamageDisplayText
+                            && rawValue !== null
+                            && rawValue !== undefined
+                            && String(rawValue).trim() === iconDamageDisplayText;
+                        const rawDisplayValue = isIconDamageDisplay
+                            ? formatIconDisplayValue(rawValue)
+                            : rawValue;
+                        const prettyDisplayValue = isIconDamageDisplay
+                            ? formatIconDisplayValue(prettyValue)
+                            : prettyValue;
                         const multihitTimes = parseMultihitTimes(targetText);
-                        if (multihitTimes && rawValue !== null && rawValue !== undefined) {
-                            const valueText = String(rawValue);
+                        const castAgainTimes = multihitTimes
+                            ? null
+                            : parseCastAgainTimes(castAgainValue);
+                        const timesInfo = multihitTimes || castAgainTimes;
+                        if (timesInfo && rawValue !== null && rawValue !== undefined) {
+                            const valueText = String(rawDisplayValue);
                             const valueNeedsBrackets = !(isPureNumber(valueText) || isSingleAttribute(valueText));
                             const valueDisplay = valueNeedsBrackets ? `[${valueText}]` : valueText;
-                            const timesDisplay = multihitTimes.isRange
-                                ? `[${multihitTimes.value}]`
-                                : String(multihitTimes.value);
+                            const timesDisplay = timesInfo.isRange || timesInfo.isFormula
+                                ? `[${timesInfo.value}]`
+                                : String(timesInfo.value);
                             const combinedValue = `${valueDisplay}x${timesDisplay}`;
                             addDetailedLine(
                                 typeIcon,
                                 typeIcon,
                                 combinedValue,
-                                damageIsFormula || healIsFormula || valueNeedsBrackets || multihitTimes.isRange,
+                                damageIsFormula || healIsFormula || valueNeedsBrackets || timesInfo.isRange || timesInfo.isFormula,
                                 combinedValue
                             );
                         } else {
-                            const valueNeedsParens = shouldWrapFormula(
-                                rawValue,
-                                damageIsFormula || healIsFormula
-                            );
-                            const valueDisplay = valueNeedsParens
-                                ? `(${prettyValue})`
-                                : prettyValue;
+                            const valueDisplay = prettyDisplayValue;
                             addDetailedLine(
                                 typeIcon,
                                 typeIcon,
                                 valueDisplay,
-                                damageIsFormula || healIsFormula || valueNeedsParens,
+                                damageIsFormula || healIsFormula,
                                 valueDisplay
                             );
                         }
                     }
                     if (manaDisplay !== null) {
-                        const manaNeedsParens = shouldWrapFormula(manaDisplay, manaIsFormula);
-                        const manaValueDisplay = manaNeedsParens
-                            ? `(${manaDisplay})`
-                            : manaDisplay;
+                        const manaValueDisplay = manaDisplay;
                         addDetailedLine(
                             'cost',
                             'mana',
                             manaValueDisplay,
-                            manaIsFormula || manaNeedsParens,
+                            manaIsFormula,
                             t('manaCost')
                         );
                     }
@@ -2762,27 +2807,53 @@
                     return hasValue ? upgradedCost : baseCost;
                 };
 
+                const normalizeCastAgain = (upgradedCastAgain, baseCastAgain) => {
+                    if (upgradedCastAgain === null || upgradedCastAgain === undefined || upgradedCastAgain === '') {
+                        return baseCastAgain;
+                    }
+                    return upgradedCastAgain;
+                };
+
+                const normalizeIconDamageDisplay = (upgradedDisplay, baseDisplay) => {
+                    if (upgradedDisplay === null || upgradedDisplay === undefined || upgradedDisplay === '') {
+                        return baseDisplay;
+                    }
+                    return upgradedDisplay;
+                };
+
                 // Build base stats only
                 let baseStatsHtml = buildStatsHtml(
                     ability.cost,
                     ability.damage,
                     ability.target_text,
+                    ability.cast_again,
+                    ability.icon_damage_display,
                     false
                 );
 
                 // Build upgraded stats only (if they exist)
                 let upgradedStatsHtml = '';
-                if (ability.cost_upgraded || ability.damage_upgraded) {
+                if (ability.cost_upgraded || ability.damage_upgraded || ability.cast_again_upgraded || ability.icon_damage_display_upgraded) {
                     const upgradedCost = normalizeCost(ability.cost_upgraded, ability.cost);
                     const upgradedDamage = ability.damage_upgraded || ability.damage;
                     const upgradedHasDamage = upgradedDamage && (upgradedDamage.value || upgradedDamage.heal_value);
                     const damageForDisplay = upgradedHasDamage ? upgradedDamage : ability.damage;
+                    const upgradedCastAgain = normalizeCastAgain(
+                        ability.cast_again_upgraded,
+                        ability.cast_again
+                    );
+                    const upgradedIconDamageDisplay = normalizeIconDamageDisplay(
+                        ability.icon_damage_display_upgraded,
+                        ability.icon_damage_display
+                    );
 
                     const upgradedTargetText = ability.target_text_upgraded || ability.target_text;
                     upgradedStatsHtml = buildStatsHtml(
                         upgradedCost,
                         damageForDisplay,
                         upgradedTargetText,
+                        upgradedCastAgain,
+                        upgradedIconDamageDisplay,
                         true
                     );
                 }
