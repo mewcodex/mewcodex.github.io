@@ -2560,8 +2560,8 @@
                 const classLabel = ability.ability_class ? getClassLabel(ability.ability_class) : '';
                 const editorNoteText = getEditorNote(ability.ability_code);
                 const buildStatsHtml = (cost, damage, targetText, isUpgraded) => {
-                    const damageValue = formatStatValue(damage?.value);
-                    const healValue = formatStatValue(damage?.heal_value);
+                    const rawDamageValue = damage?.value;
+                    const rawHealValue = damage?.heal_value;
                     const manaValue = cost?.mana !== null && cost?.mana !== undefined ? cost.mana : null;
                     const damageType = damage?.type || 'physical';
 
@@ -2608,6 +2608,26 @@
                         return ['str', 'dex', 'con', 'int', 'spd', 'lck', 'cha']
                             .includes(rawValue.trim().toLowerCase());
                     };
+
+                    const isZeroValue = (rawValue) => {
+                        if (rawValue === null || rawValue === undefined) {
+                            return false;
+                        }
+                        const text = String(rawValue).trim();
+                        if (text === '' || isNaN(text)) {
+                            return false;
+                        }
+                        return Number(text) === 0;
+                    };
+
+                    const shouldHideDamage = isZeroValue(rawDamageValue);
+                    const shouldHideHeal = isZeroValue(rawHealValue);
+                    const damageValue = shouldHideDamage
+                        ? { value: null, display: null, pretty: null }
+                        : formatStatValue(rawDamageValue);
+                    const healValue = shouldHideHeal
+                        ? { value: null, display: null, pretty: null }
+                        : formatStatValue(rawHealValue);
 
                     // Determine if value should be treated as a formula.
                     const isFormulaValue = (rawValue) => {

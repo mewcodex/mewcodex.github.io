@@ -24736,7 +24736,7 @@
         "mana": 1
       },
       "damage": {
-        "value": null,
+        "value": "10+bonus_melee_ability_damage",
         "heal_value": null,
         "type": null
       },
@@ -27027,7 +27027,7 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": null,
+        "value": "3+bonus_melee_ability_damage",
         "heal_value": null,
         "type": null
       },
@@ -39254,7 +39254,7 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "5",
+        "value": "?",
         "heal_value": null,
         "type": "physical"
       },
@@ -40808,7 +40808,7 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": null,
+        "value": "item_aux",
         "heal_value": null,
         "type": null
       },
@@ -45327,7 +45327,7 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": "1+X",
+        "value": "1-6",
         "heal_value": null,
         "type": "physical"
       },
@@ -48171,7 +48171,7 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": null,
+        "value": "?",
         "heal_value": null,
         "type": null
       },
@@ -53408,11 +53408,15 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": null,
+        "value": "0-25",
         "heal_value": null,
         "type": null
       },
-      "damage_upgraded": null,
+      "damage_upgraded": {
+        "value": "0-50",
+        "heal_value": null,
+        "type": null
+      },
       "tags": [],
       "tags_upgraded": null,
       "elements": [],
@@ -54199,7 +54203,7 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": null,
+        "value": "?",
         "heal_value": null,
         "type": null
       },
@@ -56280,7 +56284,7 @@
       },
       "damage_upgraded": {
         "value": null,
-        "heal_value": "X+1",
+        "heal_value": "1-5",
         "type": "heal"
       },
       "tags": [],
@@ -58752,7 +58756,7 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": null,
+        "value": "1+bonus_spell_damage_display",
         "heal_value": null,
         "type": null
       },
@@ -59126,7 +59130,7 @@
         "mana": 9
       },
       "damage": {
-        "value": null,
+        "value": "1+bonus_spell_damage_display",
         "heal_value": null,
         "type": null
       },
@@ -66920,7 +66924,7 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": null,
+        "value": "X*10",
         "heal_value": null,
         "type": null
       },
@@ -105243,7 +105247,7 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": null,
+        "value": "3+bonus_melee_ability_damage",
         "heal_value": null,
         "type": null
       },
@@ -116436,7 +116440,7 @@
       },
       "cost_upgraded": null,
       "damage": {
-        "value": null,
+        "value": "?",
         "heal_value": null,
         "type": null
       },
