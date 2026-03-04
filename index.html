@@ -2559,11 +2559,55 @@
                 const localizedDescription2 = getLocalizedText(ability.description2_texts, ability.description_2);
                 const classLabel = ability.ability_class ? getClassLabel(ability.ability_class) : '';
                 const editorNoteText = getEditorNote(ability.ability_code);
-                const buildStatsHtml = (cost, damage, isUpgraded) => {
+                const buildStatsHtml = (cost, damage, targetText, isUpgraded) => {
                     const damageValue = formatStatValue(damage?.value);
                     const healValue = formatStatValue(damage?.heal_value);
                     const manaValue = cost?.mana !== null && cost?.mana !== undefined ? cost.mana : null;
                     const damageType = damage?.type || 'physical';
+
+                    const parseMultihitTimes = (text) => {
+                        if (!text) {
+                            return null;
+                        }
+                        const rawText = String(text);
+                        const multihitMatch = rawText.match(/\bmultihit\s+([^\s]+)/);
+                        if (multihitMatch) {
+                            return { value: multihitMatch[1], isRange: false };
+                        }
+                        const minMatch = rawText.match(/\bmultihit_min\s+([^\s]+)/);
+                        const maxMatch = rawText.match(/\bmultihit_max\s+([^\s]+)/);
+                        const minValue = minMatch ? minMatch[1] : null;
+                        const maxValue = maxMatch ? maxMatch[1] : null;
+                        if (minValue && maxValue) {
+                            if (minValue === maxValue) {
+                                return { value: minValue, isRange: false };
+                            }
+                            return { value: `${minValue}-${maxValue}`, isRange: true };
+                        }
+                        if (minValue) {
+                            return { value: minValue, isRange: false };
+                        }
+                        if (maxValue) {
+                            return { value: maxValue, isRange: false };
+                        }
+                        return null;
+                    };
+
+                    const isPureNumber = (rawValue) => {
+                        if (rawValue === null || rawValue === undefined) {
+                            return false;
+                        }
+                        const text = String(rawValue).trim();
+                        return text !== '' && !isNaN(text);
+                    };
+
+                    const isSingleAttribute = (rawValue) => {
+                        if (typeof rawValue !== 'string') {
+                            return false;
+                        }
+                        return ['str', 'dex', 'con', 'int', 'spd', 'lck', 'cha']
+                            .includes(rawValue.trim().toLowerCase());
+                    };
 
                     // Determine if value should be treated as a formula.
                     const isFormulaValue = (rawValue) => {
@@ -2603,7 +2647,25 @@
                         const typeIcon = isHeal ? 'heal' : (damageType || 'physical');
                         const rawValue = damageValue.value || healValue.value;
                         const prettyValue = damageValue.pretty || healValue.pretty || rawValue;
-                        addDetailedLine(typeIcon, typeIcon, prettyValue, damageIsFormula || healIsFormula, prettyValue);
+                        const multihitTimes = parseMultihitTimes(targetText);
+                        if (multihitTimes && rawValue !== null && rawValue !== undefined) {
+                            const valueText = String(rawValue);
+                            const valueNeedsBrackets = !(isPureNumber(valueText) || isSingleAttribute(valueText));
+                            const valueDisplay = valueNeedsBrackets ? `[${valueText}]` : valueText;
+                            const timesDisplay = multihitTimes.isRange
+                                ? `[${multihitTimes.value}]`
+                                : String(multihitTimes.value);
+                            const combinedValue = `${valueDisplay}x${timesDisplay}`;
+                            addDetailedLine(
+                                typeIcon,
+                                typeIcon,
+                                combinedValue,
+                                damageIsFormula || healIsFormula || valueNeedsBrackets || multihitTimes.isRange,
+                                combinedValue
+                            );
+                        } else {
+                            addDetailedLine(typeIcon, typeIcon, prettyValue, damageIsFormula || healIsFormula, prettyValue);
+                        }
                     }
                     if (manaDisplay !== null) {
                         addDetailedLine('cost', 'mana', manaDisplay, manaIsFormula, t('manaCost'));
@@ -2625,7 +2687,12 @@
                 };
 
                 // Build base stats only
-                let baseStatsHtml = buildStatsHtml(ability.cost, ability.damage, false);
+                let baseStatsHtml = buildStatsHtml(
+                    ability.cost,
+                    ability.damage,
+                    ability.target_text,
+                    false
+                );
 
                 // Build upgraded stats only (if they exist)
                 let upgradedStatsHtml = '';
@@ -2635,9 +2702,11 @@
                     const upgradedHasDamage = upgradedDamage && (upgradedDamage.value || upgradedDamage.heal_value);
                     const damageForDisplay = upgradedHasDamage ? upgradedDamage : ability.damage;
 
+                    const upgradedTargetText = ability.target_text_upgraded || ability.target_text;
                     upgradedStatsHtml = buildStatsHtml(
                         upgradedCost,
                         damageForDisplay,
+                        upgradedTargetText,
                         true
                     );
                 }
