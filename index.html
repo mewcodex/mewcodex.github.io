@@ -426,10 +426,48 @@
         }
 
         .icon-part {
+            position: relative;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: flex-start;
+            --ability-icon-size: 72px;
+            --ability-icon-padding: 4px;
+            --type-icon-size: 55px;
+            --type-icon-gap: 2px;
+            --type-icon-overlap: -15px;
+            transform: translateY(-15px);
+        }
+
+        .ability-icon-stack {
+            position: relative;
             display: flex;
             flex-direction: column;
-            gap: 2px;
-            align-items: flex-start;
+            align-items: center;
+            gap: var(--type-icon-gap);
+        }
+
+        .ability-icon-stack::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: calc(var(--type-icon-size) / 2);
+            width: calc(var(--ability-icon-size) + (var(--ability-icon-padding) * 2));
+            height: calc(var(--ability-icon-size) + var(--ability-icon-padding) + (var(--type-icon-size) / 2) + var(--type-icon-gap) + var(--type-icon-overlap));
+            transform: translateX(-50%);
+            background: var(--icon-bg, #f3efe7);
+            border: 4px solid #000;
+            border-radius: 5px;
+            z-index: 0;
+        }
+
+        .ability-type-icon {
+            width: auto;
+            height: var(--type-icon-size);
+            aspect-ratio: 95 / 110;
+            margin-bottom: var(--type-icon-overlap);
+            image-rendering: pixelated;
+            position: relative;
+            z-index: 1;
         }
 
         .ability-icon {
@@ -439,22 +477,31 @@
         .tags-line {
             font-size: 0.75em;
             display: flex;
-            gap: 4px;
+            gap: 0px;
             align-items: center;
+            position: absolute;
+            left: -2px;
+            top: calc(var(--type-icon-size) + var(--type-icon-gap) - 20px);
+            width: auto;
+            flex: initial;
+            flex-wrap: wrap;
+            align-content: flex-start;
             min-height: 0px;
             line-height: 1;
+            z-index: 2;
         }
 
         .tags-line.upgraded {
-            border-top: 1px solid #ddd;
-            padding-top: 2px;
-            margin-top: 2px;
+            border-top: none;
+            padding-top: 0;
+            margin-top: 0;
         }
 
         .tag-icon-small {
             width: 12px;
             height: 12px;
             display: inline-block;
+            image-rendering: pixelated;
         }
 
         .stats-stack {
@@ -464,22 +511,22 @@
         }
 
         .ability-icon {
-            width: 48px;
-            height: 48px;
+            width: var(--ability-icon-size);
+            height: var(--ability-icon-size);
             object-fit: contain;
             border-radius: 4px;
-            border: 1px solid #ddd;
             cursor: zoom-in;
+            position: relative;
+            z-index: 1;
         }
 
         .ability-icon:hover {
-            box-shadow: 0 0 8px rgba(159, 151, 139, 0.4);
             transform: scale(1.1);
         }
 
         .ability-icon-placeholder {
-            width: 48px;
-            height: 48px;
+            width: var(--ability-icon-size);
+            height: var(--ability-icon-size);
             border-radius: 4px;
             border: 2px dashed #ccc;
             background: #f5f5f5;
@@ -490,6 +537,8 @@
             font-size: 0.7em;
             text-align: center;
             padding: 4px;
+            position: relative;
+            z-index: 1;
         }
 
         .ability-stats {
@@ -1485,11 +1534,6 @@
                 font-size: 0.9em;
             }
 
-            .ability-icon {
-                width: 40px;
-                height: 40px;
-            }
-
             .description {
                 max-width: 150px;
                 font-size: 0.85em;
@@ -1497,6 +1541,10 @@
 
             .controls {
                 flex-direction: column;
+            }
+
+            .icon-part {
+                transform: translateY(-15px) scale(0.7);
             }
 
             .controls input {
@@ -2632,7 +2680,7 @@
                 const localizedDescription2 = getLocalizedText(ability.description2_texts, ability.description_2);
                 const classLabel = ability.ability_class ? getClassLabel(ability.ability_class) : '';
                 const editorNoteText = getEditorNote(ability.ability_code);
-                const buildStatsHtml = (cost, damage, targetText, castAgainValue, iconDamageDisplay, isUpgraded) => {
+                const buildStatsHtml = (cost, damage, targetText, castAgainValue, iconDamageDisplay, iconDamageDisplaySuffix, isUpgraded) => {
                     const rawDamageValue = damage?.value;
                     const rawHealValue = damage?.heal_value;
                     const manaValue = cost?.mana !== null && cost?.mana !== undefined ? cost.mana : null;
@@ -2750,6 +2798,17 @@
                         return { value: totalValue, isRange, isFormula };
                     };
 
+                    const parseIconDamageSuffixTimes = (rawValue) => {
+                        if (!rawValue) {
+                            return null;
+                        }
+                        const match = String(rawValue).trim().match(/^x(\d+)$/i);
+                        if (!match) {
+                            return null;
+                        }
+                        return { value: match[1], isRange: false, isFormula: false };
+                    };
+
                     const shouldHideDamage = isZeroValue(rawDamageValue);
                     const shouldHideHeal = isZeroValue(rawHealValue);
                     const damageValue = shouldHideDamage
@@ -2814,7 +2873,10 @@
                         const castAgainTimes = multihitTimes
                             ? null
                             : parseCastAgainTimes(castAgainValue);
-                        const timesInfo = multihitTimes || castAgainTimes;
+                        const suffixTimes = (multihitTimes || castAgainTimes)
+                            ? null
+                            : parseIconDamageSuffixTimes(iconDamageDisplaySuffix);
+                        const timesInfo = multihitTimes || castAgainTimes || suffixTimes;
                         if (timesInfo && rawValue !== null && rawValue !== undefined) {
                             const valueText = String(rawDisplayValue);
                             const valueNeedsBrackets = !(isPureNumber(valueText) || isSingleAttribute(valueText));
@@ -2881,6 +2943,29 @@
                     return upgradedDisplay;
                 };
 
+                const normalizeIconDamageDisplaySuffix = (upgradedSuffix, baseSuffix) => {
+                    if (upgradedSuffix === null || upgradedSuffix === undefined || upgradedSuffix === '') {
+                        return baseSuffix;
+                    }
+                    return upgradedSuffix;
+                };
+
+                const normalizeNullable = (value) => (value === undefined ? null : value);
+
+                const areValuesEqual = (left, right) => normalizeNullable(left) === normalizeNullable(right);
+
+                const areDamageValuesEqual = (left, right) => {
+                    if (!left && !right) {
+                        return true;
+                    }
+                    if (!left || !right) {
+                        return false;
+                    }
+                    return areValuesEqual(left.value, right.value)
+                        && areValuesEqual(left.heal_value, right.heal_value)
+                        && areValuesEqual(left.type, right.type);
+                };
+
                 // Build base stats only
                 let baseStatsHtml = buildStatsHtml(
                     ability.cost,
@@ -2888,12 +2973,13 @@
                     ability.target_text,
                     ability.cast_again,
                     ability.icon_damage_display,
+                    ability.icon_damage_display_suffix,
                     false
                 );
 
                 // Build upgraded stats only (if they exist)
                 let upgradedStatsHtml = '';
-                if (ability.cost_upgraded || ability.damage_upgraded || ability.cast_again_upgraded || ability.icon_damage_display_upgraded) {
+                if (ability.cost_upgraded || ability.damage_upgraded || ability.cast_again_upgraded || ability.icon_damage_display_upgraded || ability.icon_damage_display_suffix_upgraded) {
                     const upgradedCost = normalizeCost(ability.cost_upgraded, ability.cost);
                     const upgradedDamage = ability.damage_upgraded || ability.damage;
                     const upgradedHasDamage = upgradedDamage && (upgradedDamage.value || upgradedDamage.heal_value);
@@ -2906,16 +2992,32 @@
                         ability.icon_damage_display_upgraded,
                         ability.icon_damage_display
                     );
-
-                    const upgradedTargetText = ability.target_text_upgraded || ability.target_text;
-                    upgradedStatsHtml = buildStatsHtml(
-                        upgradedCost,
-                        damageForDisplay,
-                        upgradedTargetText,
-                        upgradedCastAgain,
-                        upgradedIconDamageDisplay,
-                        true
+                    const upgradedIconDamageDisplaySuffix = normalizeIconDamageDisplaySuffix(
+                        ability.icon_damage_display_suffix_upgraded,
+                        ability.icon_damage_display_suffix
                     );
+                    const manaChanged = !areValuesEqual(ability.cost?.mana, upgradedCost?.mana);
+                    const damageChanged = !areDamageValuesEqual(upgradedDamage, ability.damage);
+                    const castAgainChanged = !areValuesEqual(upgradedCastAgain, ability.cast_again);
+                    const iconDisplayChanged = !areValuesEqual(upgradedIconDamageDisplay, ability.icon_damage_display);
+                    const iconSuffixChanged = !areValuesEqual(
+                        upgradedIconDamageDisplaySuffix,
+                        ability.icon_damage_display_suffix
+                    );
+                    const shouldShowUpgradedStats = manaChanged || damageChanged || castAgainChanged || iconDisplayChanged || iconSuffixChanged;
+
+                    if (shouldShowUpgradedStats) {
+                        const upgradedTargetText = ability.target_text_upgraded || ability.target_text;
+                        upgradedStatsHtml = buildStatsHtml(
+                            upgradedCost,
+                            damageForDisplay,
+                            upgradedTargetText,
+                            upgradedCastAgain,
+                            upgradedIconDamageDisplay,
+                            upgradedIconDamageDisplaySuffix,
+                            true
+                        );
+                    }
                 }
 
                 // Build rendered tags display (small icons above icon)
@@ -2956,21 +3058,69 @@
                     showUpgradedIcon = true;
                 }
 
+                const normalizeTypeIcon = (value) => {
+                    const normalized = String(value || 'melee').toLowerCase();
+                    if (normalized === 'attack') {
+                        return 'melee';
+                    }
+                    return normalized;
+                };
+
+                const baseTypeIcon = normalizeTypeIcon(ability.type_icon);
+                const upgradedTypeIcon = normalizeTypeIcon(
+                    ability.type_icon_upgraded || baseTypeIcon
+                );
+
+                const buildTypeIconHtml = (typeIcon) => `
+                    <img src="abilitytype/${typeIcon}.png" alt="${escapeHtml(typeIcon)}" class="ability-type-icon" onerror="this.onerror=null;this.src='abilitytype/unknown.png';">
+                `;
+
+                const classBackgrounds = {
+                    fighter: '#de9494',
+                    thief: '#fffbb5',
+                    tank: '#857348',
+                    mage: '#a6a6c9',
+                    medic: '#e2e2e2',
+                    hunter: '#425d3d',
+                    necromancer: '#131313',
+                    butcher: '#ac4457',
+                    monk: '#787878',
+                    druid: '#5b4237',
+                    psychic: '#645379',
+                    tinkerer: '#6bdfbe',
+                    jester: 'linear-gradient(135deg, #a66d6d 0%, #93bec6 50%, #a2c476 100%)',
+                    colorless: '#c1c1c1',
+                    other: '#ffffff'
+                };
+
+                const abilityClassKey = ability.ability_class
+                    ? String(ability.ability_class).toLowerCase()
+                    : null;
+                const iconBackground = abilityClassKey
+                    ? classBackgrounds[abilityClassKey]
+                    : null;
+                const iconPartStyle = iconBackground
+                    ? ` style="--icon-bg: ${iconBackground};"`
+                    : '';
+
                 // Build icon sections: base icon with base stats, optionally upgraded icon with upgraded stats
                 let baseIconHtml = `
                     <div class="icon-column">
                         <div class="icon-row">
-                            <div class="icon-part">
+                            <div class="icon-part"${iconPartStyle}>
                                 <div class="tags-line">${tagsRenderedHtml}</div>
-                                ${ability.frame_number !== null && ability.frame_number !== undefined ?
+                                <div class="ability-icon-stack">
+                                    ${buildTypeIconHtml(baseTypeIcon)}
+                                    ${ability.frame_number !== null && ability.frame_number !== undefined ?
                         `<img src="AbilityIcon/${ability.frame_number}.png" 
-                                        alt="${escapeHtml(displayName)}"
-                                        title="${escapeHtml(nameTitle)}"
-                                        class="ability-icon"
-                                        onerror="this.style.display='none'"
-                                        onclick="openModal(this.src, '${escapeHtml(displayName)}')">`
+                                            alt="${escapeHtml(displayName)}"
+                                            title="${escapeHtml(nameTitle)}"
+                                            class="ability-icon"
+                                            onerror="this.style.display='none'"
+                                            onclick="openModal(this.src, '${escapeHtml(displayName)}')">`
                         : '<div class="ability-icon-placeholder" title="No frame mapping available"></div>'
                     }
+                                </div>
                             </div>
                             <div class="stats-stack">
                                 ${baseStatsHtml}
@@ -2985,17 +3135,20 @@
                     upgradedIconHtml = `
                     <div class="icon-column upgraded">
                         <div class="icon-row">
-                            <div class="icon-part">
+                            <div class="icon-part"${iconPartStyle}>
                                 <div class="tags-line upgraded">${tagsRenderedUpgradedHtml}</div>
-                                ${ability.frame_number !== null && ability.frame_number !== undefined ?
+                                <div class="ability-icon-stack">
+                                    ${buildTypeIconHtml(upgradedTypeIcon)}
+                                    ${ability.frame_number !== null && ability.frame_number !== undefined ?
                             `<img src="AbilityIcon/${ability.frame_number}.png" 
-                                        alt="${escapeHtml(displayName)}"
-                                        title="${escapeHtml(nameTitle)}"
-                                        class="ability-icon"
-                                        onerror="this.style.display='none'"
-                                        onclick="openModal(this.src, '${escapeHtml(displayName)}')">`
+                                            alt="${escapeHtml(displayName)}"
+                                            title="${escapeHtml(nameTitle)}"
+                                            class="ability-icon"
+                                            onerror="this.style.display='none'"
+                                            onclick="openModal(this.src, '${escapeHtml(displayName)}')">`
                             : '<div class="ability-icon-placeholder" title="No frame mapping available"></div>'
                         }
+                                </div>
                             </div>
                             <div class="stats-stack">
                                 ${upgradedStatsHtml}
@@ -3008,17 +3161,20 @@
                     baseIconHtml = `
                     <div class="icon-column">
                         <div class="icon-row">
-                            <div class="icon-part">
+                            <div class="icon-part"${iconPartStyle}>
                                 <div class="tags-line">${tagsRenderedHtml}</div>
-                                ${ability.frame_number !== null && ability.frame_number !== undefined ?
+                                <div class="ability-icon-stack">
+                                    ${buildTypeIconHtml(baseTypeIcon)}
+                                    ${ability.frame_number !== null && ability.frame_number !== undefined ?
                             `<img src="AbilityIcon/${ability.frame_number}.png" 
-                                        alt="${escapeHtml(displayName)}"
-                                        title="${escapeHtml(nameTitle)}"
-                                        class="ability-icon"
-                                        onerror="this.style.display='none'"
-                                        onclick="openModal(this.src, '${escapeHtml(displayName)}')">`
+                                            alt="${escapeHtml(displayName)}"
+                                            title="${escapeHtml(nameTitle)}"
+                                            class="ability-icon"
+                                            onerror="this.style.display='none'"
+                                            onclick="openModal(this.src, '${escapeHtml(displayName)}')">`
                             : '<div class="ability-icon-placeholder" title="No frame mapping available"></div>'
                         }
+                                </div>
                             </div>
                             <div class="stats-stack">
                                 ${baseStatsHtml}${upgradedStatsHtml}
