@@ -380,14 +380,41 @@
             text-align: center;
         }
 
+        .passive-icon-stack {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            --passive-icon-width: 180px;
+            --passive-icon-height: 82.5px;
+            --passive-icon-padding: 2px;
+            transform: translateX(-45px);
+        }
+
+        .passive-icon-stack::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: calc(var(--passive-icon-width) * 0.75 + (var(--passive-icon-padding) * 2));
+            height: calc(var(--passive-icon-height) + (var(--passive-icon-padding) * 2));
+            transform: translate(-31%, -50%);
+            background: var(--icon-bg, #f3efe7);
+            border: 4px solid #000;
+            border-radius: 5px;
+            z-index: 0;
+        }
+
         .passive-icon {
-            width: 120px;
-            height: 55px;
+            width: var(--passive-icon-width);
+            height: var(--passive-icon-height);
             cursor: pointer;
             transition: transform 0.2s;
             image-rendering: pixelated;
             image-rendering: -moz-crisp-edges;
             image-rendering: crisp-edges;
+            position: relative;
+            z-index: 1;
         }
 
         .passive-icon:hover {
@@ -395,8 +422,8 @@
         }
 
         .passive-icon-placeholder {
-            width: 120px;
-            height: 55px;
+            width: var(--passive-icon-width);
+            height: var(--passive-icon-height);
             border: 2px dashed #ccc;
             background: #f5f5f5;
             display: flex;
@@ -407,6 +434,8 @@
             text-align: center;
             padding: 4px;
             border-radius: 4px;
+            position: relative;
+            z-index: 1;
         }
 
         .passive-name {
@@ -919,9 +948,14 @@
                 font-size: 0.9em;
             }
 
-            .passive-icon {
-                width: 100px;
-                height: 46px;
+            .passive-icon-stack {
+                --passive-icon-width: 100px;
+                --passive-icon-height: 46px;
+                transform: translateX(-20px) translateY(10px);
+            }
+
+            .passive-icon-stack::before {
+                border-width: 2px;
             }
 
             .image-cell {
@@ -1846,6 +1880,34 @@
                 const hasUpgraded = !!passive.has_upgrade;
                 const classLabel = passive.passive_class ? getClassLabel(passive.passive_class) : '';
 
+                const classBackgrounds = {
+                    fighter: '#de9494',
+                    thief: '#fffbb5',
+                    tank: '#857348',
+                    mage: '#a6a6c9',
+                    medic: '#e2e2e2',
+                    hunter: '#425d3d',
+                    necromancer: '#131313',
+                    butcher: '#ac4457',
+                    monk: '#787878',
+                    druid: '#5b4237',
+                    psychic: '#645379',
+                    tinkerer: '#6bdfbe',
+                    jester: 'linear-gradient(135deg, #a66d6d 0%, #93bec6 50%, #a2c476 100%)',
+                    colorless: '#c1c1c1',
+                    disorder: '#636e72',
+                    util: '#b2bec3'
+                };
+                const passiveClassKey = passive.passive_class
+                    ? String(passive.passive_class).toLowerCase()
+                    : null;
+                const iconBackground = passiveClassKey
+                    ? classBackgrounds[passiveClassKey]
+                    : null;
+                const iconStackStyle = iconBackground
+                    ? ` style="--icon-bg: ${iconBackground};"`
+                    : '';
+
                 // Get stats to display, merging base + level stats when present
                 const baseStats = { ...(passive.stats_base || {}), ...(passive.stats_level1 || {}) };
                 const upgradedStats = { ...(passive.stats_base || {}), ...(passive.stats_level2 || {}) };
@@ -1889,7 +1951,8 @@
                 return `
                     <tr id="${makeRowId('passive', passive.passive_code || '')}" data-code="${escapeHtml(passive.passive_code || '')}">
                         <td class="image-cell">
-                            ${passive.frame_number !== null && passive.frame_number !== undefined ?
+                            <div class="passive-icon-stack"${iconStackStyle}>
+                                ${passive.frame_number !== null && passive.frame_number !== undefined ?
                         `<img src="PassiveIcon/${passive.frame_number}.png" 
                                      alt="${escapeHtml(localizedName)}"
                                      class="passive-icon"
@@ -1897,6 +1960,7 @@
                                      onclick="openModal(this.src, '${escapeHtml(localizedName)}')">`
                         : '<div class="passive-icon-placeholder" title="No frame mapping available"></div>'
                     }
+                            </div>
                         </td>
                         <td>
                             <div class="passive-name">${escapeHtml(localizedName)}</div>
