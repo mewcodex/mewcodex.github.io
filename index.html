@@ -2592,8 +2592,26 @@
             const showHidden = document.getElementById('showHiddenToggle')?.checked;
             const visibleAbilities = abilities.filter(ability => {
                 const sourceFile = ability.source_file || '';
-                const isArmorAbility = sourceFile.endsWith('armor_abilities.gon');
-                if (!showHidden && isArmorAbility) {
+                const defaultHiddenFiles = [
+                    'armor_abilities.gon',
+                    'consumable_item_abilities.gon',
+                    'contextual_abilities.gon',
+                    'disorder_abilities.gon',
+                    'event_abilities.gon',
+                    'finalboss_abilities.gon',
+                    'guillotina_abilities.gon',
+                    'item_abilities.gon',
+                    'kaiju_abilities.gon',
+                    'misc_abilities.gon',
+                    'rifthead_abilities.gon',
+                    'special_enemy_abilities.gon',
+                    'terminator_abilities.gon',
+                    'test_abilities.gon',
+                    'throbbing_king_abilities.gon',
+                    'util_abilities.gon'
+                ];
+                const isDefaultHidden = defaultHiddenFiles.some(hiddenFile => sourceFile.endsWith(hiddenFile));
+                if (!showHidden && isDefaultHidden) {
                     return false;
                 }
                 const hasIcon = ability.frame_number !== null && ability.frame_number !== undefined;
@@ -2695,7 +2713,8 @@
                         const rawText = String(text);
                         const multihitMatch = rawText.match(/\bmultihit\s+([^\s]+)/);
                         if (multihitMatch) {
-                            return { value: multihitMatch[1], isRange: false };
+                            const value = multihitMatch[1];
+                            return { value, isRange: false, isFormula: !isPureNumber(value) };
                         }
                         const minMatch = rawText.match(/\bmultihit_min\s+([^\s]+)/);
                         const maxMatch = rawText.match(/\bmultihit_max\s+([^\s]+)/);
@@ -2703,15 +2722,15 @@
                         const maxValue = maxMatch ? maxMatch[1] : null;
                         if (minValue && maxValue) {
                             if (minValue === maxValue) {
-                                return { value: minValue, isRange: false };
+                                return { value: minValue, isRange: false, isFormula: !isPureNumber(minValue) };
                             }
-                            return { value: `${minValue}~${maxValue}`, isRange: true };
+                            return { value: `${minValue}~${maxValue}`, isRange: true, isFormula: false };
                         }
                         if (minValue) {
-                            return { value: minValue, isRange: false };
+                            return { value: minValue, isRange: false, isFormula: !isPureNumber(minValue) };
                         }
                         if (maxValue) {
-                            return { value: maxValue, isRange: false };
+                            return { value: maxValue, isRange: false, isFormula: !isPureNumber(maxValue) };
                         }
                         return null;
                     };
@@ -3602,11 +3621,12 @@
             const functionIconMap = {
                 bonus_melee_ability_damage: 'formula-melee',
                 bonus_basic_spell_damage: 'formula-unknown',
+                bonus_spell_damage_display: 'formula-unknown',
                 bonus_ranged_damage: 'formula-ranged',
                 bonus_melee_damage: 'formula-melee-ability'
             };
             const withFunctionIcons = escaped.replace(
-                /\b(bonus_melee_ability_damage|bonus_basic_spell_damage|bonus_ranged_damage|bonus_melee_damage)\b/g,
+                /\b(bonus_melee_ability_damage|bonus_basic_spell_damage|bonus_spell_damage_display|bonus_ranged_damage|bonus_melee_damage)\b/g,
                 (match) => {
                     const icon = functionIconMap[match];
                     return `<img src="res/formula-icons/${icon}.svg" alt="${match}" class="formula-icon">`;
@@ -3635,11 +3655,12 @@
             const functionIconMap = {
                 bonus_melee_ability_damage: 'formula-melee',
                 bonus_basic_spell_damage: 'formula-unknown',
+                bonus_spell_damage_display: 'formula-unknown',
                 bonus_ranged_damage: 'formula-ranged',
                 bonus_melee_damage: 'formula-melee-ability'
             };
             const withFunctionIcons = text.replace(
-                /\b(bonus_melee_ability_damage|bonus_basic_spell_damage|bonus_ranged_damage|bonus_melee_damage)\b/g,
+                /\b(bonus_melee_ability_damage|bonus_basic_spell_damage|bonus_spell_damage_display|bonus_ranged_damage|bonus_melee_damage)\b/g,
                 (match) => {
                     const icon = functionIconMap[match];
                     return `<img src="res/formula-icons/${icon}.svg" alt="${match}" class="formula-icon">`;
