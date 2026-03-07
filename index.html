@@ -1786,7 +1786,9 @@
             codexSetLanguage(lang, () => {
                 currentLanguage = window.currentLanguage;
                 applyUiLanguage();
-                filterAbilities();
+                updateHashPromotion('ability');
+                filterAbilities(true);
+                scrollToHash('ability');
             });
         }
 
