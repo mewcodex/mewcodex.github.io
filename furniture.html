@@ -352,6 +352,14 @@
             min-width: 140px;
         }
 
+        .space-cell {
+            text-align: center;
+            font-weight: 600;
+            color: #333;
+            min-width: 70px;
+            width: 70px;
+        }
+
         .stat-cell {
             text-align: center;
             font-weight: 600;
@@ -363,6 +371,10 @@
         .stat-header {
             text-align: center;
             min-width: 100px;
+        }
+
+        .space-header {
+            text-align: center;
         }
 
         .stat-header-icon {
@@ -987,8 +999,9 @@
                 <thead>
                     <tr>
                         <th id="imageHeader" style="width: 70px;">Image</th>
-                        <th id="titleHeader" style="width: 200px;">Title</th>
+                        <th id="titleHeader" style="width: 170px;">Title</th>
                         <th id="gridHeader" style="width: 160px;">Grid</th>
+                        <th id="spaceHeader" class="sortable space-header" style="width: 90px;" onclick="sortBy('space')">Space<span class="sort-indicator"></span></th>
                         <th id="comfortHeader" class="sortable stat-header" onclick="sortBy('comfort')">
                             <img src="res/fonticon/comfort.png" alt="Comfort"
                                 class="img-icon img-icon-stat stat-header-icon"
@@ -1020,7 +1033,7 @@
                 </thead>
                 <tbody id="tableBody">
                     <tr>
-                        <td colspan="10" class="no-results" id="loadingMessage">Loading furniture...</td>
+                        <td colspan="11" class="no-results" id="loadingMessage">Loading furniture...</td>
                     </tr>
                 </tbody>
             </table>
@@ -1088,6 +1101,7 @@
                 imageHeader: 'Image',
                 titleHeader: 'Title',
                 gridHeader: 'Grid',
+                spaceHeader: 'Space',
                 comfortHeader: 'Comfort',
                 appealHeader: 'Appeal',
                 stimulationHeader: 'Stimulation',
@@ -1126,6 +1140,7 @@
                 imageHeader: '图像',
                 titleHeader: '名称',
                 gridHeader: '格子',
+                spaceHeader: '占用格数',
                 comfortHeader: '舒适度',
                 appealHeader: '吸引力',
                 stimulationHeader: '刺激度',
@@ -1169,7 +1184,8 @@
 
         function buildStatHeaderHtml(iconName, label) {
             const safeLabel = escapeHtml(label);
-            return `<img src="res/fonticon/${iconName}.png" alt="${safeLabel}" class="img-icon img-icon-stat stat-header-icon" onerror="this.style.display='none'">${safeLabel}<span class="sort-indicator"></span>`;
+            const lineBreak = currentLanguage === 'en' ? '<br>' : '';
+            return `<img src="res/fonticon/${iconName}.png" alt="${safeLabel}" class="img-icon img-icon-stat stat-header-icon" onerror="this.style.display='none'">${lineBreak}${safeLabel}<span class="sort-indicator"></span>`;
         }
 
         function applyUiLanguage() {
@@ -1209,6 +1225,7 @@
             document.getElementById('imageHeader').textContent = t('imageHeader');
             document.getElementById('titleHeader').textContent = t('titleHeader');
             document.getElementById('gridHeader').textContent = t('gridHeader');
+            document.getElementById('spaceHeader').innerHTML = `${escapeHtml(t('spaceHeader'))}<span class="sort-indicator"></span>`;
             document.getElementById('comfortHeader').innerHTML = buildStatHeaderHtml('comfort', t('comfortHeader'));
             document.getElementById('appealHeader').innerHTML = buildStatHeaderHtml('appeal', t('appealHeader'));
             document.getElementById('stimulationHeader').innerHTML = buildStatHeaderHtml('stimulation', t('stimulationHeader'));
@@ -1355,6 +1372,9 @@
         }
 
         function getSortValue(entry, column) {
+            if (column === 'space') {
+                return getGridCellCount(entry.shape_matrix);
+            }
             const baseValue = getAdjustedStatValue(entry, column);
             if (!sortPerGrid) {
                 return baseValue;
@@ -1425,6 +1445,7 @@
                 return;
             }
             const headerMap = {
+                space: 'spaceHeader',
                 comfort: 'comfortHeader',
                 appeal: 'appealHeader',
                 stimulation: 'stimulationHeader',
@@ -1611,7 +1632,7 @@
                 : entries.slice(startIndex, startIndex + size);
 
             if (totalEntries === 0) {
-                tbody.innerHTML = `<tr><td colspan="10" class="no-results">${escapeHtml(t('noResults'))}</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="11" class="no-results">${escapeHtml(t('noResults'))}</td></tr>`;
                 document.getElementById('showingCount').textContent = '0';
                 document.getElementById('pageInfo').textContent = '0 / 0';
                 document.getElementById('pageInfoBottom').textContent = '0 / 0';
@@ -1646,6 +1667,8 @@
                 const stimulationHtml = getDisplayStatValue(entry, 'stimulation');
                 const healthHtml = getDisplayStatValue(entry, 'health');
                 const evolutionHtml = getDisplayStatValue(entry, 'evolution');
+                const gridCount = getGridCellCount(entry.shape_matrix);
+                const spaceHtml = gridCount ? String(gridCount) : '-';
                 const imagePath = getImagePath(entry);
                 const safeName = (localizedName || '').replace(/'/g, "\\'");
                 const rareBadge = entry.can_be_rare ? 'badge-yes' : 'badge-no';
@@ -1663,6 +1686,7 @@
                         <td class="grid-cell">
                             ${shapeButton}
                         </td>
+                        <td class="space-cell">${spaceHtml}</td>
                         <td class="stat-cell">${comfortHtml}</td>
                         <td class="stat-cell">${appealHtml}</td>
                         <td class="stat-cell">${stimulationHtml}</td>
@@ -1738,7 +1762,7 @@
             } catch (error) {
                 console.error('Error loading furniture:', error);
                 document.getElementById('tableBody').innerHTML = `
-                    <tr><td colspan="10" class="no-results">
+                    <tr><td colspan="11" class="no-results">
                         <p>Error loading furniture: ${escapeHtml(error.message)}</p>
                     </td></tr>
                 `;
@@ -1766,12 +1790,12 @@
         document.getElementById('pagePrev').addEventListener('click', () => {
             if (currentPage > 1) {
                 currentPage -= 1;
-                displayFurniture(filteredFurniture);
+                displayFurniture(applySort(filteredFurniture));
             }
         });
         document.getElementById('pageNext').addEventListener('click', () => {
             currentPage += 1;
-            displayFurniture(filteredFurniture);
+            displayFurniture(applySort(filteredFurniture));
         });
         document.getElementById('pageSizeSelect').addEventListener('change', (event) => {
             pageSize = Number.parseInt(event.target.value, 10);
@@ -1779,17 +1803,17 @@
                 pageSize = 50;
             }
             currentPage = 1;
-            displayFurniture(filteredFurniture);
+            displayFurniture(applySort(filteredFurniture));
         });
         document.getElementById('pagePrevBottom').addEventListener('click', () => {
             if (currentPage > 1) {
                 currentPage -= 1;
-                displayFurniture(filteredFurniture);
+                displayFurniture(applySort(filteredFurniture));
             }
         });
         document.getElementById('pageNextBottom').addEventListener('click', () => {
             currentPage += 1;
-            displayFurniture(filteredFurniture);
+            displayFurniture(applySort(filteredFurniture));
         });
         document.getElementById('pageSizeSelectBottom').addEventListener('change', (event) => {
             pageSize = Number.parseInt(event.target.value, 10);
@@ -1797,7 +1821,7 @@
                 pageSize = 50;
             }
             currentPage = 1;
-            displayFurniture(filteredFurniture);
+            displayFurniture(applySort(filteredFurniture));
         });
         document.getElementById('tableBody').addEventListener('click', (event) => {
             const button = event.target.closest('.shape-preview-button');
