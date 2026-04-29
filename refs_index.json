@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-04-29T22:01:29Z",
+  "generated_at": "2026-04-29T22:17:20Z",
   "inputs": {
-    "abilities": "G:\\gpak-all\\data\\readable_abilities\\abilities_db.json",
-    "passives": "G:\\gpak-all\\data\\readable_abilities\\passives_db.json",
-    "events": "G:\\gpak-all\\data\\readable_abilities\\events_db.json",
-    "mutations": "G:\\gpak-all\\data\\readable_abilities\\mutations_db.json",
-    "items": "G:\\gpak-all\\data\\readable_abilities\\items_db.json",
-    "characters": "G:\\gpak-all\\data\\readable_abilities\\characters_db.json"
+    "abilities": "data/readable_abilities/abilities_db.json",
+    "passives": "data/readable_abilities/passives_db.json",
+    "events": "data/readable_abilities/events_db.json",
+    "mutations": "data/readable_abilities/mutations_db.json",
+    "items": "data/readable_abilities/items_db.json",
+    "characters": "data/readable_abilities/characters_db.json"
   },
   "summary": {
     "total": 6402,
@@ -54783,7 +54783,7 @@
         "items"
       ],
       "text": {
-        "en": "Pryophina's Toenail",
+        "en": "Pyrophina's Toenail",
         "zh": "派罗菲娜的脚趾甲"
       }
     },
