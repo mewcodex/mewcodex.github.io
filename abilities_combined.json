@@ -40584,11 +40584,11 @@
       "description_2": "Shoot a high damage shot with a 50% chance to miss and a 50% chance to crit.\n[s:.7](This spell has increased range.)[/s]",
       "description_texts": {
         "en": "Shoot a high damage shot with a 50% chance to miss.",
-        "zh": "进行一次高伤害射击，\r\n有 70% 几率未命中。"
+        "zh": "进行一次高伤害射击，\r\n有 50% 几率未命中。"
       },
       "description2_texts": {
         "en": "Shoot a high damage shot with a 50% chance to miss and a 50% chance to crit.\n[s:.7](This spell has increased range.)[/s]",
-        "zh": "进行一次高伤害射击，\r\n有 70% 几率未命中，\r\n50% 几率暴击。\r\n[s:.7](此法术射程增加。)[/s]"
+        "zh": "进行一次高伤害射击，\r\n有 50% 几率未命中，\r\n50% 几率暴击。\r\n[s:.7](此法术射程增加。)[/s]"
       },
       "ability_class": "Hunter",
       "ability_pools": [
@@ -65689,11 +65689,11 @@
       "description_2": "Deal more ice damage in a wide line with Knockback 10 that inflicts Freeze.",
       "description_texts": {
         "en": "Deal ice damage in a wide line with Knockback 1 that inflicts Freeze.",
-        "zh": "在宽直线范围内\r\n造成冰霜伤害，\r\n造成击退 1，施加减速，\r\n并有 15% 几率冻结。"
+        "zh": "在宽直线范围内\r\n造成冰霜伤害，\r\n造成击退 1，并施加冻结。"
       },
       "description2_texts": {
         "en": "Deal more ice damage in a wide line with Knockback 10 that inflicts Freeze.",
-        "zh": "在宽直线范围内\r\n造成更高冰霜伤害，\r\n造成击退 10，施加减速，\r\n并有 25% 几率冻结。"
+        "zh": "在宽直线范围内\r\n造成更高冰霜伤害，\r\n造成击退 10，并施加冻结。"
       },
       "ability_class": "Mage",
       "ability_pools": [
@@ -65773,11 +65773,11 @@
       "description_2": "Deal more fire damage and inflict Burn 10 to all units in a large circle around you.",
       "description_texts": {
         "en": "Deal fire damage and inflict Burn 8 to all units in a large circle around you.",
-        "zh": "对你周围大圆范围内的\r\n所有单位造成火焰伤害\r\n并施加 3 层燃烧。"
+        "zh": "对你周围大圆范围内的\r\n所有单位造成火焰伤害\r\n并施加 8 层燃烧。"
       },
       "description2_texts": {
         "en": "Deal more fire damage and inflict Burn 10 to all units in a large circle around you.",
-        "zh": "对你周围大圆范围内的\r\n所有单位造成更高火焰伤害\r\n并施加 5 层燃烧。"
+        "zh": "对你周围大圆范围内的\r\n所有单位造成更高火焰伤害\r\n并施加 10 层燃烧。"
       },
       "ability_class": "Mage",
       "ability_pools": [
@@ -65855,11 +65855,11 @@
       "description_2": "Shoot stronger lightning bolts in eight directions with a 100% chance to Stun.",
       "description_texts": {
         "en": "Shoot lightning bolts in eight directions with a 50% chance to Stun.",
-        "zh": "向八个方向发射闪电，\r\n有 15% 几率造成晕眩。"
+        "zh": "向八个方向发射闪电，\r\n有 50% 几率造成晕眩。"
       },
       "description2_texts": {
         "en": "Shoot stronger lightning bolts in eight directions with a 100% chance to Stun.",
-        "zh": "向八个方向发射更强的闪电，\r\n有 25% 几率造成晕眩。"
+        "zh": "向八个方向发射更强的闪电，\r\n有 100% 几率造成晕眩。"
       },
       "ability_class": "Mage",
       "ability_pools": [
@@ -66011,11 +66011,11 @@
       "description_2": "Heavily damage and inflict Burn 10 on all enemies and light the map on fire. There will be permanent consequences for casting this spell…\n[s:.7](Castable once per battle.)[/s]",
       "description_texts": {
         "en": "Damage and inflict Burn 7 on all enemies and light the map on fire. There will be permanent consequences for casting this spell…\n[s:.7](Castable once per battle.)[/s]",
-        "zh": "伤害所有敌人并点燃整张地图。\r\n施放此法术将会有永久性后果…\r\n[s:.7]（每场战斗限施放一次。）[/s]"
+        "zh": "伤害并对所有敌人施加 7 层燃烧，同时点燃整张地图。\r\n施放此法术将会有永久性后果…\r\n[s:.7]（每场战斗限施放一次。）[/s]"
       },
       "description2_texts": {
         "en": "Heavily damage and inflict Burn 10 on all enemies and light the map on fire. There will be permanent consequences for casting this spell…\n[s:.7](Castable once per battle.)[/s]",
-        "zh": "重创所有敌人并点燃整张地图。\r\n施放此法术将会有永久性后果…\r\n[s:.7]（每场战斗限施放一次。）[/s]"
+        "zh": "重创并对所有敌人施加 10 层燃烧，同时点燃整张地图。\r\n施放此法术将会有永久性后果…\r\n[s:.7]（每场战斗限施放一次。）[/s]"
       },
       "ability_class": "Mage",
       "ability_pools": [
@@ -67364,11 +67364,11 @@
       "description_2": "Apply Freeze 2 to each unit except for yourself and 1 other chosen unit.\nDeal 15 Damage to enemies and fully heal each ally.\nThere will be permanent consequences for casting this spell…\n[s:.7](Castable once per battle.)[/s]",
       "description_texts": {
         "en": "Apply Freeze 2 to each unit except for yourself and 1 other chosen unit.\nDeal 10 Damage to enemies and heal each ally 10 HP.\nThere will be permanent consequences for casting this spell…\n[s:.7](Castable once per battle.)[/s]",
-        "zh": "对除你自己和另一个选定单位\r\n以外的每个单位施加冻结 2。\r\n对敌人造成 5 点伤害，\r\n并治疗每个盟友 5 点生命值。\r\n施放此法术将会有永久性后果…\r\n[s:.7]（每场战斗限施放一次。）[/s]"
+        "zh": "对除你自己和另一个选定单位\r\n以外的每个单位施加冻结 2。\r\n对敌人造成 10 点伤害，\r\n并治疗每个盟友 10 点生命值。\r\n施放此法术将会有永久性后果…\r\n[s:.7]（每场战斗限施放一次。）[/s]"
       },
       "description2_texts": {
         "en": "Apply Freeze 2 to each unit except for yourself and 1 other chosen unit.\nDeal 15 Damage to enemies and fully heal each ally.\nThere will be permanent consequences for casting this spell…\n[s:.7](Castable once per battle.)[/s]",
-        "zh": "对除你自己和另一个选定单位\r\n以外的每个单位施加冻结 2。\r\n对敌人造成 10 点伤害，\r\n并完全治疗每个盟友。\r\n施放此法术将会有永久性后果…\r\n[s:.7]（每场战斗限施放一次。）[/s]"
+        "zh": "对除你自己和另一个选定单位\r\n以外的每个单位施加冻结 2。\r\n对敌人造成 15 点伤害，\r\n并完全治疗每个盟友。\r\n施放此法术将会有永久性后果…\r\n[s:.7]（每场战斗限施放一次。）[/s]"
       },
       "ability_class": "Mage",
       "ability_pools": [
@@ -68262,11 +68262,11 @@
       "description_2": "A spell that deals even more damage the less health the target unit has.\n[s:.7](based on their health percent)[/s]",
       "description_texts": {
         "en": "A spell that deals more damage the less health the target unit has.\n[s:.7](based on their health percent)[/s]",
-        "zh": "目标单位生命值越低，\r\n造成的伤害越高的一次攻击。\r\n[s:.7](基于其生命值百分比)[/s]"
+        "zh": "目标单位生命值越低，\r\n造成的伤害越高的一次法术。\r\n[s:.7](基于其生命值百分比)[/s]"
       },
       "description2_texts": {
         "en": "A spell that deals even more damage the less health the target unit has.\n[s:.7](based on their health percent)[/s]",
-        "zh": "目标单位生命值越低，\r\n造成的伤害更高的一次攻击。\r\n[s:.7](基于其生命值百分比)[/s]"
+        "zh": "目标单位生命值越低，\r\n造成的伤害更高的一次法术。\r\n[s:.7](基于其生命值百分比)[/s]"
       },
       "ability_class": "Medic",
       "ability_pools": [
@@ -68492,11 +68492,11 @@
       "description_2": "Remove all debuffs from units in an area.",
       "description_texts": {
         "en": "Remove all debuffs from a unit.",
-        "zh": "移除区域内单位的\r\n所有减益效果。"
+        "zh": "移除一个单位的\r\n所有减益效果。"
       },
       "description2_texts": {
         "en": "Remove all debuffs from units in an area.",
-        "zh": "移除区域内单位的\r\n所有减益效果。\r\n每移除一个减益效果，\r\n这些单位获得 +1 [img:divineshield]。"
+        "zh": "移除区域内单位的\r\n所有减益效果。"
       },
       "ability_class": "Medic",
       "ability_pools": [
@@ -76701,7 +76701,7 @@
       },
       "description2_texts": {
         "en": "Teleport next to a random enemy, then switch to melee stance and automatically attack it. This has a chance to repeat multiple times on different targets.",
-        "zh": "传送至随机敌人身旁，\r\n切换至近战架势并自动攻击它。\r\n这有几率重复多次。"
+        "zh": "传送至随机敌人身旁，\r\n切换至近战架势并自动攻击它。\r\n这有几率对不同目标重复多次。"
       },
       "ability_class": "Monk",
       "ability_pools": [
@@ -81356,11 +81356,11 @@
       "description_2": "You and all allies lose 7 HP. Summon a flesh golem with one random spell and random passives from each of those units.\n[s:.7](Castable once per battle.)[/s]",
       "description_texts": {
         "en": "You and all allies lose 7 HP. Summon a flesh golem with one random spell from each of those units.\n[s:.7](Castable once per battle.)[/s]",
-        "zh": "你和所有盟友失去 10 点生命值。\r\n召唤一个血肉魔像，\r\n它拥有来自这些单位各一个随机法术。\r\n[s:.7]（每场战斗限施放一次。）[/s]"
+        "zh": "你和所有盟友失去 7 点生命值。\r\n召唤一个血肉魔像，\r\n它拥有来自这些单位各一个随机法术。\r\n[s:.7]（每场战斗限施放一次。）[/s]"
       },
       "description2_texts": {
         "en": "You and all allies lose 7 HP. Summon a flesh golem with one random spell and random passives from each of those units.\n[s:.7](Castable once per battle.)[/s]",
-        "zh": "你和所有盟友失去 10 点生命值。\r\n召唤一个血肉魔像，\r\n它拥有来自这些单位\r\n各一个随机法术和随机被动。\r\n[s:.7]（每场战斗限施放一次。）[/s]"
+        "zh": "你和所有盟友失去 7 点生命值。\r\n召唤一个血肉魔像，\r\n它拥有来自这些单位\r\n各一个随机法术和随机被动。\r\n[s:.7]（每场战斗限施放一次。）[/s]"
       },
       "ability_class": "Necromancer",
       "ability_pools": [
@@ -134956,7 +134956,7 @@
       "description_2": "Knock back units in a larger area near you 10 tiles.",
       "description_texts": {
         "en": "Knock back units in an area near you 4 tiles.",
-        "zh": "将你附近某个区域内\r\n的单位击退 2 格。"
+        "zh": "将你附近某个区域内\r\n的单位击退 4 格。"
       },
       "description2_texts": {
         "en": "Knock back units in a larger area near you 10 tiles.",
@@ -143106,11 +143106,11 @@
       "description_2": "Inflict Poison 4 on all units adjacent to you (even diagonally).",
       "description_texts": {
         "en": "Inflict Poison 2 on all units adjacent to you.",
-        "zh": "对所有相邻单位施加 1 层中毒。"
+        "zh": "对所有相邻单位施加 2 层中毒。"
       },
       "description2_texts": {
         "en": "Inflict Poison 4 on all units adjacent to you (even diagonally).",
-        "zh": "对所有相邻单位（包括对角线）\r\n施加 2 层中毒。"
+        "zh": "对所有相邻单位（包括对角线）\r\n施加 4 层中毒。"
       },
       "ability_class": "Thief",
       "ability_pools": [
@@ -145361,11 +145361,11 @@
       "description_2": "Move up to 10 tiles, spreading glass shards on the tiles you walk through.",
       "description_texts": {
         "en": "Move up to 4 tiles, spreading glass shards on the tiles you walk through.",
-        "zh": "移动最多 3 格，\r\n在经过的地块上撒布玻璃碎片。"
+        "zh": "移动最多 4 格，\r\n在经过的地块上撒布玻璃碎片。"
       },
       "description2_texts": {
         "en": "Move up to 10 tiles, spreading glass shards on the tiles you walk through.",
-        "zh": "移动最多 5 格，\r\n在经过的地块上撒布玻璃碎片。"
+        "zh": "移动最多 10 格，\r\n在经过的地块上撒布玻璃碎片。"
       },
       "ability_class": "Thief",
       "ability_pools": [
@@ -149448,11 +149448,11 @@
       "description_2": "Deal 1 damage to a unit for each unique divisor in its current HP value. If its HP was a prime number, stun it and gain +1 Tech.",
       "description_texts": {
         "en": "Deal 1 damage to a unit for each unique divisor in its current HP value. If its HP was a prime number, stun it.",
-        "zh": "单位的当前生命值\r\n每有一个唯一因数，\r\n就对其造成 1 点伤害。"
+        "zh": "单位的当前生命值\r\n每有一个唯一因数，\r\n就对其造成 1 点伤害。\r\n如果其生命值是质数，就晕眩它。"
       },
       "description2_texts": {
         "en": "Deal 1 damage to a unit for each unique divisor in its current HP value. If its HP was a prime number, stun it and gain +1 Tech.",
-        "zh": "单位的当前生命值\r\n每有一个唯一因数，\r\n就对其造成 1 点伤害。\r\n如果其生命值是质数，\r\n获得 5 点法力值。"
+        "zh": "单位的当前生命值\r\n每有一个唯一因数，\r\n就对其造成 1 点伤害。\r\n如果其生命值是质数，\r\n就晕眩它并获得 +1 科技。"
       },
       "ability_class": "Tinkerer",
       "ability_pools": [

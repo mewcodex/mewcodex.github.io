@@ -27024,7 +27024,7 @@
       "tooltip_key": "ENEMY_HALFRAT_DESC",
       "tooltip_texts": {
         "en": "Does a chaining dash attack with a chance to spread diseases.",
-        "zh": "\u8fdb\u884c\u8fde\u9501\u51b2\u523a\u653b\u51fb\u3002"
+        "zh": "\u8fdb\u884c\u6709\u51e0\u7387\u6269\u6563\u75be\u75c5\u7684\u8fde\u9501\u51b2\u523a\u653b\u51fb\u3002"
       },
       "movieclip": "RatCat",
       "animation_suffix": null,
@@ -27384,7 +27384,8 @@
       },
       "tooltip_key": "FAMILIAR_RIFTKITTEN_DESC",
       "tooltip_texts": {
-        "en": "Thank you for releasing me!"
+        "en": "Thank you for releasing me!",
+        "zh": "\u8c22\u8c22\u4f60\u628a\u6211\u653e\u51fa\u6765\uff01"
       },
       "movieclip": "_CAT",
       "animation_suffix": null,

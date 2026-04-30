@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-29T22:17:20Z",
+  "generated_at": "2026-04-30T18:37:29Z",
   "inputs": {
     "abilities": "data/readable_abilities/abilities_db.json",
     "passives": "data/readable_abilities/passives_db.json",
@@ -54418,7 +54418,7 @@
       ],
       "text": {
         "en": "Polyp",
-        "zh": "发光皮毛"
+        "zh": "息肉"
       }
     },
     {
