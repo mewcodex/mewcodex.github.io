@@ -11,7 +11,7 @@
     },
     "desc_texts": {
       "en": "At the end of each round, damages everything by 2 with a chance to lower a random stat as well.",
-      "zh": "\u5728\u6bcf\u56de\u5408\u7ed3\u675f\u65f6\uff0c\u5bf9\u6240\u6709\u5355\u4f4d\u9020\u6210 2 \u70b9\u4f24\u5bb3\uff0c\u5e76\u6709\u51e0\u7387\u964d\u4f4e\u4e00\u9879\u968f\u673a\u5c5e\u6027\u3002"
+      "zh": "\u6bcf\u200b\u8f6e\u200b\u7ed3\u675f\u200b\u65f6\uff0c\u200b\u5168\u573a\u200b\u90fd\u200b\u4f1a\u200b\u53d7\u5230\u200b2\u70b9\u200b\u4f24\u5bb3\uff0c\u200b\u800c\u4e14\u200b\u6709\u200b\u51e0\u7387\u200b\u968f\u673a\u4ee4\u200b1\u200b\u9879\u5c5e\u6027\u200b\u964d\u4f4e\u3002"
     }
   },
   {
@@ -22,11 +22,11 @@
     "description": "2-4 aliens spawn in each battle. Aliens are invading!",
     "name_texts": {
       "en": "Alien Invasion",
-      "zh": "\u5916\u661f\u4eba\u5165\u4fb5"
+      "zh": "\u5916\u661f\u200b\u4eba\u5165\u200b\u4fb5"
     },
     "desc_texts": {
       "en": "2-4 aliens spawn in each battle. Aliens are invading!",
-      "zh": "\u6bcf\u573a\u6218\u6597\u751f\u6210 2-4 \u4e2a\u5916\u661f\u4eba\u3002\u5916\u661f\u4eba\u6b63\u5728\u5165\u4fb5\uff01"
+      "zh": "\u6bcf\u573a\u200b\u6218\u6597\u200b\u90fd\u200b\u4f1a\u200b\u51fa\u73b0\u200b2\u5230\u200b4\u200b\u4e2a\u200b\u5916\u661f\u200b\u4eba\u3002\u200b\u5916\u661f\u200b\u4eba\u200b\u6765\u200b\u4fb5\u7565\u5566\uff01"
     }
   },
   {
@@ -37,11 +37,11 @@
     "description": "A few bramble patches spawn in each battle, but something is strange about them...",
     "name_texts": {
       "en": "Alien Overgrowth",
-      "zh": "\u5916\u661f\u8513\u5ef6"
+      "zh": "\u5916\u661f\u200b\u6742\u8349"
     },
     "desc_texts": {
       "en": "A few bramble patches spawn in each battle, but something is strange about them...",
-      "zh": "\u6bcf\u573a\u6218\u6597\u4f1a\u751f\u6210\u51e0\u7247\u8346\u68d8\u4e1b\uff0c\u4f46\u5b83\u4eec\u6709\u4e9b\u53e4\u602a\u2026\u2026"
+      "zh": "\u6bcf\u573a\u200b\u6218\u6597\u4f1a\u200b\u51fa\u73b0\u200b\u51e0\u200b\u7247\u200b\u704c\u6728\uff0c\u200b\u53ea\u662f\u200b\u770b\u200b\u8d77\u6765\u200b\u4e0d\u200b\u592a\u200b\u5bf9\u200b\u52b2\u200b\u2026\u2026"
     }
   },
   {
@@ -52,11 +52,11 @@
     "description": "1-2 extra birds spawn in each battle.",
     "name_texts": {
       "en": "Bird Migration",
-      "zh": "\u9e1f\u7c7b\u8fc1\u5f99"
+      "zh": "\u5019\u9e1f\u8fc1\u5f99"
     },
     "desc_texts": {
       "en": "1-2 extra birds spawn in each battle.",
-      "zh": "\u6bcf\u573a\u6218\u6597\u4e2d\u989d\u5916\u751f\u6210 1-2 \u53ea\u9e1f\u3002"
+      "zh": "\u6bcf\u573a\u200b\u6218\u6597\u200b\u4f1a\u989d\u200b\u5916\u200b\u51fa\u73b0\u200b1\u200b\u5230\u200b2\u200b\u53ea\u9e1f\u3002"
     }
   },
   {
@@ -67,11 +67,11 @@
     "description": "2-4 birds spawn in each battle. All birds are stronger, and angry!",
     "name_texts": {
       "en": "Birdemic",
-      "zh": "\u9e1f\u60a3"
+      "zh": "\u7fa4\u200b\u9e1f"
     },
     "desc_texts": {
       "en": "2-4 birds spawn in each battle. All birds are stronger, and angry!",
-      "zh": "\u6bcf\u573a\u6218\u6597\u751f\u6210 2-4 \u53ea\u9e1f\u3002\u6240\u6709\u7684\u9e1f\u90fd\u66f4\u5f3a\u58ee\uff0c\u800c\u4e14\u5f88\u6124\u6012\uff01"
+      "zh": "\u6bcf\u573a\u200b\u6218\u6597\u4f1a\u200b\u51fa\u73b0\u200b2\u5230\u200b4\u200b\u4e2a\u200b\u9e1f\u3002\u200b\u9e1f\u7c7b\u200b\u5168\u90e8\u200b\u53d8\u5f3a\uff0c\u200b\u4e5f\u200b\u66f4\u52a0\u200b\u66b4\u8e81\uff01"
     }
   },
   {
@@ -82,11 +82,11 @@
     "description": "All units have +3 Health Regen. Persistent Holy Element.",
     "name_texts": {
       "en": "Blessed Day!",
-      "zh": "\u53d7\u795d\u798f\u4e4b\u65e5\uff01"
+      "zh": "\u8499\u798f\u200b\u4e4b\u200b\u65e5\uff01"
     },
     "desc_texts": {
       "en": "All units have +3 Health Regen. Persistent Holy Element.",
-      "zh": "\u6240\u6709\u5355\u4f4d\u62e5\u6709 +3 \u751f\u547d\u6062\u590d\u3002\u6301\u7eed\u795e\u5723\u5143\u7d20\u3002"
+      "zh": "\u6240\u6709\u200b\u5355\u4f4d\u200b\u7684\u200b\u751f\u547d\u200b\u81ea\u7136\u200b\u6062\u590d\u200b+\u200b3\u3002\u200b\u573a\u200b\u4e0a\u200b\u6301\u7eed\u200b\u51fa\u73b0\u200b\u795e\u5723\u200b\u5143\u7d20\u3002"
     }
   },
   {
@@ -97,11 +97,11 @@
     "description": "Persistent Ice Element. At the end of each round, wind blows everything 1 space in a random direction. After each turn, there's a chance for a random lightning strike.",
     "name_texts": {
       "en": "Blizzard!",
-      "zh": "\u66b4\u98ce\u96ea\uff01"
+      "zh": "\u66b4\u200b\u98ce\u96ea\uff01"
     },
     "desc_texts": {
       "en": "Persistent Ice Element. At the end of each round, wind blows everything 1 space in a random direction. After each turn, there's a chance for a random lightning strike.",
-      "zh": "\u6301\u7eed\u51b0\u5143\u7d20\u3002\u5728\u6bcf\u56de\u5408\u7ed3\u675f\u65f6\uff0c\u98ce\u4f1a\u5c06\u6240\u6709\u5355\u4f4d\u5411\u968f\u673a\u65b9\u5411\u5439\u52a8 1 \u683c\u3002\u6bcf\u56de\u5408\u7ed3\u675f\u540e\uff0c\u6709\u51e0\u7387\u53d1\u751f\u968f\u673a\u96f7\u51fb\u3002"
+      "zh": "\u573a\u200b\u4e0a\u200b\u6301\u7eed\u200b\u51fa\u73b0\u200b\u51b0\u200b\u5143\u7d20\u3002\u200b\u6bcf\u200b\u8f6e\u200b\u7ed3\u675f\u200b\u65f6\uff0c\u200b\u98ce\u4f1a\u200b\u628a\u200b\u6240\u6709\u200b\u4e1c\u897f\u200b\u968f\u673a\u200b\u5439\u52a8\u200b1\u683c\u3002\u200b\u6bcf\u200b\u4e2a\u200b\u56de\u5408\u200b\u7ed3\u675f\u200b\u540e\uff0c\u200b\u6709\u200b\u51e0\u7387\u200b\u843d\u200b\u4e0b\u200b\u95ea\u7535\uff0c\u200b\u968f\u673a\u5288\u200b\u4e2d\u200b1\u200b\u4e2a\u200b\u65b9\u683c\u3002"
     }
   },
   {
@@ -116,7 +116,7 @@
     },
     "desc_texts": {
       "en": "A random unit in each battle has a bounty. A Bounty Hunter is here to collect.",
-      "zh": "\u6bcf\u573a\u6218\u6597\u4e2d\u968f\u673a\u4e00\u540d\u5355\u4f4d\u62e5\u6709\u8d4f\u91d1\u3002\u4e00\u540d\u8d4f\u91d1\u730e\u4eba\u6b63\u8d76\u6765\u9886\u53d6\u3002"
+      "zh": "\u6bcf\u573a\u200b\u6218\u6597\u200b\u90fd\u200b\u4f1a\u200b\u968f\u673a\u200b\u6709\u200b1\u200b\u4e2a\u200b\u5355\u4f4d\u200b\u88ab\u200b\u60ac\u8d4f\u3002\u200b\u8d4f\u91d1\u200b\u730e\u200b\u624b\u6765\u200b\u9886\u8d4f\u200b\u91d1\u200b\u4e86\u3002"
     }
   },
   {
@@ -127,11 +127,11 @@
     "description": "All allies have +2 luck.",
     "name_texts": {
       "en": "Butterfly Swarm",
-      "zh": "\u8774\u8776\u7fa4"
+      "zh": "\u8774\u8776\u6210\u7fa4"
     },
     "desc_texts": {
       "en": "All allies have +2 luck.",
-      "zh": "\u6240\u6709\u53cb\u65b9\u5355\u4f4d +2 \u5e78\u8fd0\u3002"
+      "zh": "\u53cb\u65b9\u200b\u5168\u200b\u4f53\u200b\u8fd0\u6c14\u200b+\u200b2\u3002"
     }
   },
   {
@@ -142,11 +142,11 @@
     "description": "All units have a 25% chance to start each battle with Fear or Poison.",
     "name_texts": {
       "en": "Cockroach Infestation",
-      "zh": "\u87d1\u8782\u6cdb\u6ee5"
+      "zh": "\u87d1\u8782\u6210\u707e"
     },
     "desc_texts": {
       "en": "All units have a 25% chance to start each battle with Fear or Poison.",
-      "zh": "\u6240\u6709\u5355\u4f4d\u5728\u6bcf\u573a\u6218\u6597\u5f00\u59cb\u65f6\u6709 25% \u51e0\u7387\u5e26\u6709\u6050\u60e7\u6216\u4e2d\u6bd2\u72b6\u6001\u3002"
+      "zh": "\u6bcf\u573a\u200b\u6218\u6597\u200b\u5f00\u59cb\u200b\u65f6\uff0c\u200b\u6240\u6709\u200b\u5355\u4f4d\u200b\u90fd\u200b\u6709\u200b25%\u200b\u7684\u200b\u51e0\u7387\u200b\u3010\u5bb3\u6015\u3011\u200b\u6216\u200b\u3010\u4e2d\u200b\u6bd2\u3011\u3002"
     }
   },
   {
@@ -157,11 +157,11 @@
     "description": "The weather around here is crazy! It's different every battle!",
     "name_texts": {
       "en": "Crazy Weather",
-      "zh": "\u75af\u72c2\u5929\u6c14"
+      "zh": "\u79bb\u200b\u8c31\u5929\u6c14"
     },
     "desc_texts": {
       "en": "The weather around here is crazy! It's different every battle!",
-      "zh": "\u8fd9\u513f\u7684\u5929\u6c14\u592a\u75af\u72c2\u4e86\uff01\u6bcf\u573a\u6218\u6597\u90fd\u4e0d\u4e00\u6837\uff01"
+      "zh": "\u8fd9\u200b\u8fb9\u200b\u5929\u6c14\u200b\u592a\u200b\u79bb\u8c31\u200b\u4e86\uff01\u200b\u6bcf\u573a\u200b\u6218\u6597\u200b\u90fd\u200b\u4e0d\u200b\u4e00\u6837\uff01"
     }
   },
   {
@@ -172,11 +172,11 @@
     "description": "There is extra catnip in every battle. Find a random pill after every battle.",
     "name_texts": {
       "en": "Drug Awareness Day",
-      "zh": "\u7981\u6bd2\u5ba3\u4f20\u65e5"
+      "zh": "\u7981\u6bd2\u200b\u5ba3\u4f20\u200b\u65e5"
     },
     "desc_texts": {
       "en": "There is extra catnip in every battle. Find a random pill after every battle.",
-      "zh": "\u6bcf\u573a\u6218\u6597\u4e2d\u4f1a\u6709\u989d\u5916\u7684\u732b\u8584\u8377\u3002\u6bcf\u573a\u6218\u6597\u540e\u4f1a\u627e\u5230\u4e00\u9897\u968f\u673a\u836f\u4e38\u3002"
+      "zh": "\u6bcf\u573a\u200b\u6218\u6597\u200b\u90fd\u200b\u4f1a\u989d\u200b\u5916\u200b\u51fa\u73b0\u200b\u4e00\u4e9b\u200b\u732b\u8584\u8377\u3002\u200b\u6bcf\u573a\u200b\u6218\u6597\u200b\u7ed3\u675f\u200b\u540e\uff0c\u200b\u90fd\u200b\u4f1a\u200b\u968f\u673a\u200b\u53d1\u73b0\u200b1\u7c92\u200b\u80f6\u56ca\u3002"
     }
   },
   {
@@ -191,7 +191,7 @@
     },
     "desc_texts": {
       "en": "There was an earthquake! Objects in each battle have been destroyed and there are rocks everywhere!",
-      "zh": "\u53d1\u751f\u5730\u9707\u4e86\uff01\u6bcf\u573a\u6218\u6597\u4e2d\u7684\u7269\u4f53\u5df2\u88ab\u6467\u6bc1\uff0c\u5230\u5904\u90fd\u662f\u5ca9\u77f3\uff01"
+      "zh": "\u5730\u9707\u200b\u4e86\uff01\u200b\u6bcf\u573a\u200b\u6218\u6597\u200b\u7684\u200b\u7269\u4f53\u200b\u90fd\u200b\u5df2\u7ecf\u200b\u6bc1\u574f\uff0c\u200b\u5730\u200b\u4e0a\u200b\u5230\u200b\u5904\u200b\u662f\u200b\u77f3\u5934\uff01"
     }
   },
   {
@@ -202,11 +202,11 @@
     "description": "A mini volcano spawns in each battle.",
     "name_texts": {
       "en": "Eruption",
-      "zh": "\u55b7\u53d1"
+      "zh": "\u55b7\u200b\u53d1"
     },
     "desc_texts": {
       "en": "A mini volcano spawns in each battle.",
-      "zh": "\u6bcf\u573a\u6218\u6597\u4e2d\u4f1a\u751f\u6210\u4e00\u5ea7\u8ff7\u4f60\u706b\u5c71\u3002"
+      "zh": "\u6bcf\u573a\u200b\u6218\u6597\u200b\u90fd\u200b\u4f1a\u200b\u51fa\u73b0\u200b1\u200b\u5ea7\u8ff7\u200b\u4f60\u200b\u706b\u5c71\u3002"
     }
   },
   {
@@ -217,11 +217,11 @@
     "description": "All allies have +2 luck.",
     "name_texts": {
       "en": "Firefly Swarm",
-      "zh": "\u8424\u706b\u866b\u7fa4"
+      "zh": "\u8424\u706b\u200b\u866b\u200b\u6210\u7fa4"
     },
     "desc_texts": {
       "en": "All allies have +2 luck.",
-      "zh": "\u6240\u6709\u53cb\u65b9\u5355\u4f4d +2 \u5e78\u8fd0\u3002"
+      "zh": "\u53cb\u65b9\u200b\u5168\u200b\u4f53\u200b\u8fd0\u6c14\u200b+\u200b2\u3002"
     }
   },
   {
@@ -236,7 +236,7 @@
     },
     "desc_texts": {
       "en": "Persistent Fire Element. Fires no longer burn out. Parts of the map are on fire.",
-      "zh": "\u6301\u7eed\u706b\u5143\u7d20\u3002\u706b\u7130\u4e0d\u518d\u7184\u706d\u3002\u5730\u56fe\u90e8\u5206\u533a\u57df\u7740\u706b\u3002"
+      "zh": "\u573a\u200b\u4e0a\u200b\u6301\u7eed\u200b\u51fa\u73b0\u200b\u706b\u200b\u5143\u7d20\uff0c\u200b\u706b\u52bf\u200b\u4e0d\u200b\u4f1a\u200b\u81ea\u884c\u200b\u7184\u706d\u3002\u200b\u5730\u56fe\u200b\u4e0a\u200b\u6709\u200b\u4e9b\u200b\u5730\u65b9\u200b\u7740\u200b\u706b\u200b\u4e86\u3002"
     }
   },
   {
@@ -247,11 +247,11 @@
     "description": "Persistent Water Element. There are a ton of extra water tiles in every battle.",
     "name_texts": {
       "en": "Flash Flood",
-      "zh": "\u5c71\u6d2a"
+      "zh": "\u7a81\u200b\u53d1\u6d2a\u200b\u6c34"
     },
     "desc_texts": {
       "en": "Persistent Water Element. There are a ton of extra water tiles in every battle.",
-      "zh": "\u6301\u7eed\u6c34\u5143\u7d20\u3002\u6bcf\u573a\u6218\u6597\u4e2d\u4f1a\u6709\u5927\u91cf\u989d\u5916\u7684\u6c34\u5730\u5757\u3002"
+      "zh": "\u573a\u200b\u4e0a\u200b\u6301\u7eed\u200b\u51fa\u73b0\u200b\u6c34\u200b\u5143\u7d20\u3002\u200b\u6bcf\u573a\u200b\u6218\u6597\u200b\u90fd\u200b\u4f1a\u200b\u51fa\u73b0\u200b\u5927\u91cf\u989d\u200b\u5916\u200b\u7684\u200b\u6c34\u65b9\u683c\u3002"
     }
   },
   {
@@ -262,11 +262,11 @@
     "description": "At the end of each turn, there's a chance to get bitten for 1 damage and 1 Bleed.",
     "name_texts": {
       "en": "Fly Swarm",
-      "zh": "\u8747\u7fa4"
+      "zh": "\u82cd\u8747\u6210\u7fa4"
     },
     "desc_texts": {
       "en": "At the end of each turn, there's a chance to get bitten for 1 damage and 1 Bleed.",
-      "zh": "\u5728\u6bcf\u56de\u5408\u7ed3\u675f\u65f6\uff0c\u6709\u51e0\u7387\u88ab\u54ac\u4f24\uff0c\u9020\u6210 1 \u70b9\u4f24\u5bb3\u548c 1 \u5c42\u6d41\u8840\u3002"
+      "zh": "\u6bcf\u200b\u4e2a\u200b\u56de\u5408\u200b\u7ed3\u675f\u200b\u65f6\uff0c\u200b\u90fd\u200b\u6709\u200b\u51e0\u7387\u200b\u88ab\u200b\u53ee\uff0c\u200b\u53d7\u5230\u200b1\u70b9\u200b\u4f24\u5bb3\uff0c\u200b\u83b7\u5f97\u200b1\u5c42\u200b\u3010\u51fa\u200b\u8840\u3011\u3002"
     }
   },
   {
@@ -277,11 +277,11 @@
     "description": "All attacks and abilities have a +10% chance to miss.",
     "name_texts": {
       "en": "Fog",
-      "zh": "\u96fe"
+      "zh": "\u5927\u96fe"
     },
     "desc_texts": {
       "en": "All attacks and abilities have a +10% chance to miss.",
-      "zh": "\u6240\u6709\u653b\u51fb\u548c\u6280\u80fd\u6709 +10% \u51e0\u7387\u672a\u547d\u4e2d\u3002"
+      "zh": "\u6240\u6709\u200b\u653b\u51fb\u200b\u548c\u200b\u80fd\u529b\u200b\u843d\u7a7a\u200b\u7684\u200b\u51e0\u7387\u200b+10%\u200b\u3002"
     }
   },
   {
@@ -292,11 +292,11 @@
     "description": "All rocks levitate at the end of the round. Extra rocks spawn in each battle.",
     "name_texts": {
       "en": "Geomagnetic Storm",
-      "zh": "\u5730\u78c1\u98ce\u66b4"
+      "zh": "\u5730\u200b\u78c1\u98ce\u66b4"
     },
     "desc_texts": {
       "en": "All rocks levitate at the end of the round. Extra rocks spawn in each battle.",
-      "zh": "\u56de\u5408\u7ed3\u675f\u65f6\u6240\u6709\u5ca9\u77f3\u90fd\u4f1a\u6f02\u6d6e\u3002\u6bcf\u573a\u6218\u6597\u4e2d\u751f\u6210\u989d\u5916\u7684\u5ca9\u77f3\u3002"
+      "zh": "\u6bcf\u200b\u8f6e\u200b\u7ed3\u675f\u200b\u65f6\uff0c\u200b\u77f3\u5934\u200b\u90fd\u200b\u4f1a\u200b\u6f02\u200b\u8d77\u6765\u3002\u200b\u6bcf\u573a\u200b\u6218\u6597\u200b\u8fd8\u200b\u4f1a\u200b\u51fa\u73b0\u989d\u200b\u5916\u200b\u7684\u200b\u77f3\u5934\u3002"
     }
   },
   {
@@ -307,11 +307,11 @@
     "description": "2-4 ghosts spawn in each battle. All ghosts have gone rogue!",
     "name_texts": {
       "en": "Haunted Night",
-      "zh": "\u95f9\u9b3c\u4e4b\u591c"
+      "zh": "\u591c\u95f4\u200b\u95f9\u9b3c"
     },
     "desc_texts": {
       "en": "2-4 ghosts spawn in each battle. All ghosts have gone rogue!",
-      "zh": "\u6bcf\u573a\u6218\u6597\u4e2d\u751f\u6210 2-4 \u4e2a\u5e7d\u7075\u3002\u6240\u6709\u5e7d\u7075\u90fd\u5931\u63a7\u4e86\uff01"
+      "zh": "\u6bcf\u573a\u200b\u6218\u6597\u4f1a\u200b\u51fa\u73b0\u200b2\u5230\u200b4\u200b\u4e2a\u200b\u9b3c\u9b42\u3002\u200b\u6240\u6709\u200b\u9b3c\u9b42\u200b\u90fd\u200b\u5931\u63a7\u200b\u5566\uff01"
     }
   },
   {
@@ -326,7 +326,7 @@
     },
     "desc_texts": {
       "en": "Cats do not heal after battle. All heals are reduced by 1. Can be mitigated with water.",
-      "zh": "\u732b\u54aa\u6218\u540e\u4e0d\u4f1a\u6062\u590d\u751f\u547d\u503c\u3002\u6240\u6709\u6cbb\u7597\u91cf\u51cf\u5c11 1 \u70b9\u3002\u53ef\u7528\u6c34\u6765\u7f13\u89e3\u3002"
+      "zh": "\u6218\u6597\u200b\u7ed3\u675f\u200b\u540e\uff0c\u200b\u732b\u200b\u4e0d\u200b\u4f1a\u200b\u6062\u590d\u200b\u751f\u547d\u3002\u200b\u6240\u6709\u200b\u6cbb\u7597\u200b/\u200b\u6062\u590d\u200b\u6548\u679c\u200b\u51cf1\u3002\u200b\u53ef\u4ee5\u200b\u7528\u200b\u6c34\u7f13\u89e3\u3002"
     }
   },
   {
@@ -341,7 +341,7 @@
     },
     "desc_texts": {
       "en": "Persistent Water Element. There are extra water tiles in every battle.",
-      "zh": "\u6301\u7eed\u6c34\u5143\u7d20\u3002\u6bcf\u573a\u6218\u6597\u4e2d\u4f1a\u6709\u989d\u5916\u7684\u6c34\u5730\u5757\u3002"
+      "zh": "\u6301\u7eed\u200b\u51fa\u73b0\u200b\u6c34\u200b\u5143\u7d20\u3002\u200b\u6bcf\u573a\u200b\u6218\u6597\u200b\u90fd\u200b\u4f1a\u200b\u51fa\u73b0\u989d\u200b\u5916\u200b\u7684\u200b\u6c34\u65b9\u683c\u3002"
     }
   },
   {
@@ -352,11 +352,11 @@
     "description": "There are extra bear traps in every battle.",
     "name_texts": {
       "en": "Hunting Season",
-      "zh": "\u72e9\u730e\u5b63\u8282"
+      "zh": "\u6253\u730e\u200b\u65f6\u200b\u8282"
     },
     "desc_texts": {
       "en": "There are extra bear traps in every battle.",
-      "zh": "\u6bcf\u573a\u6218\u6597\u4e2d\u4f1a\u6709\u989d\u5916\u7684\u6355\u517d\u5939\u3002"
+      "zh": "\u6bcf\u573a\u200b\u6218\u6597\u200b\u90fd\u200b\u4f1a\u200b\u51fa\u73b0\u989d\u200b\u5916\u200b\u7684\u200b\u6355\u517d\u5939\u3002"
     }
   },
   {
@@ -371,7 +371,7 @@
     },
     "desc_texts": {
       "en": "At the end of each round, wind blows everything 10 spaces in a random direction.",
-      "zh": "\u5728\u6bcf\u56de\u5408\u7ed3\u675f\u65f6\uff0c\u98ce\u4f1a\u5c06\u6240\u6709\u5355\u4f4d\u5411\u968f\u673a\u65b9\u5411\u5439\u52a8 10 \u683c\u3002"
+      "zh": "\u6bcf\u200b\u8f6e\u200b\u7ed3\u675f\u200b\u65f6\uff0c\u200b\u98ce\u4f1a\u200b\u628a\u200b\u6240\u6709\u200b\u4e1c\u897f\u200b\u968f\u673a\u200b\u5439\u52a810\u683c\u3002"
     }
   },
   {
@@ -379,14 +379,14 @@
     "name_key": "WEATHER_INFESTATION_NAME",
     "desc_key": "WEATHER_INFESTATION_DESC",
     "weather_name": "Infestation",
-    "description": "All non-tiny units explode into maggots or flies when they die.",
+    "description": "All non-tiny units explode into a charmed maggot when they die.",
     "name_texts": {
       "en": "Infestation",
-      "zh": "\u866b\u60a3"
+      "zh": "\u866b\u200b\u707e"
     },
     "desc_texts": {
-      "en": "All non-tiny units explode into maggots or flies when they die.",
-      "zh": "\u6240\u6709\u975e\u5fae\u578b\u5355\u4f4d\u6b7b\u4ea1\u65f6\u4f1a\u7206\u70b8\u751f\u6210\u86c6\u866b\u6216\u82cd\u8747\u3002"
+      "en": "All non-tiny units explode into a charmed maggot when they die.",
+      "zh": "\u53ea\u8981\u200b\u4e0d\u200b\u662f\u200b\u5fae\u578b\u200b\u5355\u4f4d\uff0c\u200b\u6b7b\u4ea1\u65f6\u200b\u90fd\u200b\u4f1a\u200b\u7206\u70b8\uff0c\u200b\u4ea7\u751f\u200b1\u200b\u4e2a\u200b\u3010\u6d17\u200b\u8111\u3011\u200b\u7684\u200b\u86c6\u3002"
     }
   },
   {
@@ -397,11 +397,11 @@
     "description": "Some tiles will get Raptured at the end of each round during the battle. More tiles are affected every round.",
     "name_texts": {
       "en": "Judgement Day",
-      "zh": "\u5ba1\u5224\u65e5"
+      "zh": "\u5ba1\u5224\u200b\u65e5"
     },
     "desc_texts": {
       "en": "Some tiles will get Raptured at the end of each round during the battle. More tiles are affected every round.",
-      "zh": "\u6218\u6597\u4e2d\uff0c\u6bcf\u56de\u5408\u7ed3\u675f\u65f6\u90e8\u5206\u5730\u5757\u4f1a\u88ab\u63d0\u3002\u6bcf\u56de\u5408\u53d7\u5f71\u54cd\u7684\u5730\u5757\u4f1a\u589e\u52a0\u3002"
+      "zh": "\u6218\u200b\u6597\u200b\u671f\u95f4\uff0c\u200b\u6bcf\u200b\u8f6e\u200b\u7ed3\u675f\u200b\u65f6\u200b\u90fd\u200b\u4f1a\u200b\u6709\u200b\u4e00\u4e9b\u200b\u65b9\u683c\u200b\u88ab\u200b\u63d0\u4e0a\u200b\u5929\u3002\u200b\u6bcf\u200b\u8f6e\u200b\u88ab\u200b\u63d0\u8d70\u200b\u7684\u200b\u65b9\u683c\u200b\u90fd\u200b\u4f1a\u200b\u589e\u591a\u3002"
     }
   },
   {
@@ -416,7 +416,7 @@
     },
     "desc_texts": {
       "en": "Persistent Fire Element. Fireballs occasionally rain down from the sky. Fires no longer burn out.",
-      "zh": "\u6301\u7eed\u706b\u5143\u7d20\u3002\u5076\u5c14\u4f1a\u6709\u706b\u7403\u4ece\u5929\u800c\u964d\u3002\u706b\u7130\u4e0d\u518d\u7184\u706d\u3002"
+      "zh": "\u573a\u200b\u4e0a\u200b\u6301\u7eed\u200b\u51fa\u73b0\u200b\u706b\u200b\u5143\u7d20\u3002\u200b\u5929\u4e0a\u200b\u5076\u5c14\u843d\u4e0b\u200b\u706b\u7403\u3002\u200b\u706b\u52bf\u200b\u4e0d\u200b\u4f1a\u200b\u81ea\u884c\u200b\u7184\u706d\u3002"
     }
   },
   {
@@ -427,11 +427,11 @@
     "description": "At the end of each round, damages everything by 1 with a 33% chance to Bruise.",
     "name_texts": {
       "en": "Meteornado",
-      "zh": "\u9668\u77f3\u9f99\u5377"
+      "zh": "\u9668\u77f3\u9f99\u200b\u5377"
     },
     "desc_texts": {
       "en": "At the end of each round, damages everything by 1 with a 33% chance to Bruise.",
-      "zh": "\u5728\u6bcf\u56de\u5408\u7ed3\u675f\u65f6\uff0c\u5bf9\u6240\u6709\u5355\u4f4d\u9020\u6210 1 \u70b9\u4f24\u5bb3\uff0c\u5e76\u6709 33% \u51e0\u7387\u9020\u6210\u6de4\u4f24\u3002"
+      "zh": "\u6bcf\u200b\u8f6e\u200b\u7ed3\u675f\u200b\u65f6\uff0c\u200b\u5168\u573a\u200b\u90fd\u200b\u4f1a\u200b\u53d7\u5230\u200b1\u70b9\u200b\u4f24\u5bb3\uff0c\u200b\u540c\u65f6\u200b\u6709\u200b33%\u200b\u7684\u200b\u51e0\u7387\u200b\u9020\u6210\u200b\u3010\u7600\u200b\u4f24\u3011\u3002"
     }
   },
   {
@@ -442,11 +442,11 @@
     "description": "At the end of each round, damages everything by 1 with a 33% chance to Bruise.",
     "name_texts": {
       "en": "Meteornado",
-      "zh": "\u9668\u77f3\u9f99\u5377"
+      "zh": "\u9668\u77f3\u9f99\u200b\u5377"
     },
     "desc_texts": {
       "en": "At the end of each round, damages everything by 1 with a 33% chance to Bruise.",
-      "zh": "\u5728\u6bcf\u56de\u5408\u7ed3\u675f\u65f6\uff0c\u5bf9\u6240\u6709\u5355\u4f4d\u9020\u6210 1 \u70b9\u4f24\u5bb3\uff0c\u5e76\u6709 33% \u51e0\u7387\u9020\u6210\u6de4\u4f24\u3002"
+      "zh": "\u6bcf\u200b\u8f6e\u200b\u7ed3\u675f\u200b\u65f6\uff0c\u200b\u5168\u573a\u200b\u90fd\u200b\u4f1a\u200b\u53d7\u5230\u200b1\u70b9\u200b\u4f24\u5bb3\uff0c\u200b\u540c\u65f6\u200b\u6709\u200b33%\u200b\u7684\u200b\u51e0\u7387\u200b\u9020\u6210\u200b\u3010\u7600\u200b\u4f24\u3011\u3002"
     }
   },
   {
@@ -457,11 +457,11 @@
     "description": "Jumps, throws, and projectile abilities have +2 range. All physical abilities have +1 Knockback. Other abilities that cause Knockback have +1 Knockback as well.",
     "name_texts": {
       "en": "Low Gravity",
-      "zh": "\u4f4e\u91cd\u529b"
+      "zh": "\u4f4e\u200b\u91cd\u529b"
     },
     "desc_texts": {
       "en": "Jumps, throws, and projectile abilities have +2 range. All physical abilities have +1 Knockback. Other abilities that cause Knockback have +1 Knockback as well.",
-      "zh": "\u8df3\u8dc3\u3001\u6295\u63b7\u548c\u6295\u5c04\u7269\u6280\u80fd\u589e\u52a0 +2 \u5c04\u7a0b\u3002\u6240\u6709\u7269\u7406\u6280\u80fd\u589e\u52a0 +1 \u51fb\u9000\u3002\u5176\u4ed6\u9020\u6210\u51fb\u9000\u7684\u6280\u80fd\u4e5f\u589e\u52a0 +1 \u51fb\u9000\u3002"
+      "zh": "\u8df3\u8dc3\u3001\u200b\u629b\u6295\u200b\u548c\u200b\u6295\u5c04\u200b\u7c7b\u200b\u80fd\u529b\u200b\u7684\u200b\u8303\u56f4\u200b+\u200b2\u3002\u200b\u6240\u6709\u200b\u7269\u7406\u200b\u80fd\u529b\u200b\u7684\u200b\u51fb\u9000\u200b\u8ddd\u79bb\u200b+\u200b1\u3002\u200b\u5176\u4ed6\u200b\u4f1a\u51fb\u9000\u200b\u7684\u200b\u80fd\u529b\u51fb\u200b\u9000\u200b\u8ddd\u79bb\u200b\u4e5f\u200b+\u200b1\u3002"
     }
   },
   {
@@ -472,11 +472,11 @@
     "description": "After each turn there's a chance for a flaming meteor to fall onto a random tile.",
     "name_texts": {
       "en": "Meteor Shower",
-      "zh": "\u9668\u77f3\u96e8"
+      "zh": "\u6d41\u661f\u96e8"
     },
     "desc_texts": {
       "en": "After each turn there's a chance for a flaming meteor to fall onto a random tile.",
-      "zh": "\u6bcf\u56de\u5408\u7ed3\u675f\u540e\uff0c\u6709\u51e0\u7387\u843d\u4e0b\u4e00\u9897\u71c3\u70e7\u7684\u9668\u77f3\u5230\u968f\u673a\u5730\u5757\u4e0a\u3002"
+      "zh": "\u6bcf\u200b\u4e2a\u200b\u56de\u5408\u200b\u7ed3\u675f\u200b\u540e\uff0c\u200b\u90fd\u200b\u6709\u200b\u51e0\u7387\u200b\u843d\u4e0b\u200b\u71c3\u70e7\u200b\u7684\u200b\u6d41\u661f\uff0c\u200b\u968f\u673a\u7838\u200b\u4e2d\u200b1\u200b\u4e2a\u200b\u65b9\u683c\u3002"
     }
   },
   {
@@ -487,11 +487,11 @@
     "description": "At the end of each round, damages everything by 1 with a 33% chance to Bruise.",
     "name_texts": {
       "en": "Meteornado",
-      "zh": "\u9668\u77f3\u9f99\u5377"
+      "zh": "\u9668\u77f3\u9f99\u200b\u5377"
     },
     "desc_texts": {
       "en": "At the end of each round, damages everything by 1 with a 33% chance to Bruise.",
-      "zh": "\u5728\u6bcf\u56de\u5408\u7ed3\u675f\u65f6\uff0c\u5bf9\u6240\u6709\u5355\u4f4d\u9020\u6210 1 \u70b9\u4f24\u5bb3\uff0c\u5e76\u6709 33% \u51e0\u7387\u9020\u6210\u6de4\u4f24\u3002"
+      "zh": "\u6bcf\u200b\u8f6e\u200b\u7ed3\u675f\u200b\u65f6\uff0c\u200b\u5168\u573a\u200b\u90fd\u200b\u4f1a\u200b\u53d7\u5230\u200b1\u70b9\u200b\u4f24\u5bb3\uff0c\u200b\u540c\u65f6\u200b\u6709\u200b33%\u200b\u7684\u200b\u51e0\u7387\u200b\u9020\u6210\u200b\u3010\u7600\u200b\u4f24\u3011\u3002"
     }
   },
   {
@@ -506,7 +506,7 @@
     },
     "desc_texts": {
       "en": "There are extra land mines in every battle.",
-      "zh": "\u6bcf\u573a\u6218\u6597\u4e2d\u90fd\u4f1a\u6709\u989d\u5916\u7684\u5730\u96f7\u3002"
+      "zh": "\u6bcf\u573a\u200b\u6218\u6597\u200b\u90fd\u200b\u4f1a\u200b\u51fa\u73b0\u989d\u200b\u5916\u200b\u7684\u200b\u5730\u96f7\u3002"
     }
   },
   {
@@ -517,11 +517,11 @@
     "description": "There are no weather effects.",
     "name_texts": {
       "en": "Clear Skies",
-      "zh": "\u6674\u6717\u5929\u7a7a"
+      "zh": "\u6674\u200b\u5929"
     },
     "desc_texts": {
       "en": "There are no weather effects.",
-      "zh": "\u6ca1\u6709\u5929\u6c14\u6548\u679c\u3002"
+      "zh": "\u6ca1\u6709\u200b\u5929\u6c14\u200b\u6548\u679c\u3002"
     }
   },
   {
@@ -532,11 +532,11 @@
     "description": "A puddle of tar appears in each battle.",
     "name_texts": {
       "en": "Oil Spill",
-      "zh": "\u77f3\u6cb9\u6cc4\u6f0f"
+      "zh": "\u77f3\u6cb9\u200b\u6cc4\u6f0f"
     },
     "desc_texts": {
       "en": "A puddle of tar appears in each battle.",
-      "zh": "\u6bcf\u573a\u6218\u6597\u4e2d\u4f1a\u51fa\u73b0\u4e00\u6ee9\u7126\u6cb9\u3002"
+      "zh": "\u6bcf\u573a\u200b\u6218\u6597\u200b\u90fd\u200b\u4f1a\u200b\u51fa\u73b0\u200b\u4e00\u200b\u6ee9\u200b\u7126\u6cb9\u3002"
     }
   },
   {
@@ -547,11 +547,11 @@
     "description": "There are extra tall grass and bramble tiles in every battle.",
     "name_texts": {
       "en": "Overgrowth",
-      "zh": "\u8fc7\u5ea6\u751f\u957f"
+      "zh": "\u6742\u8349\u75af\u957f"
     },
     "desc_texts": {
       "en": "There are extra tall grass and bramble tiles in every battle.",
-      "zh": "\u6bcf\u573a\u6218\u6597\u4e2d\u4f1a\u6709\u989d\u5916\u7684\u9ad8\u8349\u548c\u8346\u68d8\u5730\u5757\u3002"
+      "zh": "\u6bcf\u573a\u200b\u6218\u6597\u200b\u90fd\u200b\u4f1a\u200b\u51fa\u73b0\u989d\u200b\u5916\u200b\u7684\u200b\u8349\u4e1b\u200b\u65b9\u683c\u200b\u548c\u200b\u704c\u6728\u200b\u65b9\u683c\u3002"
     }
   },
   {
@@ -566,7 +566,7 @@
     },
     "desc_texts": {
       "en": "All units have a 25% chance to have Madness each round.",
-      "zh": "\u6240\u6709\u5355\u4f4d\u6bcf\u56de\u5408\u6709 25% \u51e0\u7387\u83b7\u5f97\u75af\u72c2\u72b6\u6001\u3002"
+      "zh": "\u6240\u6709\u200b\u5355\u4f4d\u200b\u6bcf\u8f6e\u200b\u90fd\u200b\u6709\u200b25%\u200b\u7684\u200b\u51e0\u7387\u200b\u3010\u766b\u200b\u72c2\u3011\u3002"
     }
   },
   {
@@ -577,11 +577,11 @@
     "description": "There are extra coins in every battle.",
     "name_texts": {
       "en": "Pay Day",
-      "zh": "\u53d1\u85aa\u65e5"
+      "zh": "\u53d1\u5de5\u200b\u8d44"
     },
     "desc_texts": {
       "en": "There are extra coins in every battle.",
-      "zh": "\u6bcf\u573a\u6218\u6597\u4e2d\u4f1a\u6709\u989d\u5916\u7684\u91d1\u5e01\u3002"
+      "zh": "\u6bcf\u573a\u200b\u6218\u6597\u200b\u90fd\u200b\u4f1a\u200b\u51fa\u73b0\u989d\u200b\u5916\u200b\u7684\u200b\u786c\u5e01\u3002"
     }
   },
   {
@@ -592,11 +592,11 @@
     "description": "There is extra poop and sewage in every battle.",
     "name_texts": {
       "en": "Pipe Blockage",
-      "zh": "\u7ba1\u9053\u5835\u585e"
+      "zh": "\u7ba1\u9053\u200b\u5835\u585e"
     },
     "desc_texts": {
       "en": "There is extra poop and sewage in every battle.",
-      "zh": "\u6bcf\u573a\u6218\u6597\u4e2d\u4f1a\u6709\u989d\u5916\u7684\u4fbf\u4fbf\u548c\u6c61\u6c34\u3002"
+      "zh": "\u6bcf\u573a\u200b\u6218\u6597\u200b\u90fd\u200b\u4f1a\u200b\u51fa\u73b0\u989d\u200b\u5916\u200b\u7684\u200b\u5927\u4fbf\u200b\u548c\u200b\u6c61\u6c34\u3002"
     }
   },
   {
@@ -607,11 +607,11 @@
     "description": "Persistent Water Element.",
     "name_texts": {
       "en": "Rain",
-      "zh": "\u96e8"
+      "zh": "\u4e0b\u96e8"
     },
     "desc_texts": {
       "en": "Persistent Water Element.",
-      "zh": "\u6301\u7eed\u6c34\u5143\u7d20\u3002"
+      "zh": "\u6301\u7eed\u200b\u51fa\u73b0\u200b\u6c34\u200b\u5143\u7d20\u3002"
     }
   },
   {
@@ -622,11 +622,11 @@
     "description": "There are extra neutral frogs in every battle.",
     "name_texts": {
       "en": "Raining Frogs",
-      "zh": "\u86d9\u96e8"
+      "zh": "\u9752\u86d9\u96e8"
     },
     "desc_texts": {
       "en": "There are extra neutral frogs in every battle.",
-      "zh": "\u6bcf\u573a\u6218\u6597\u4e2d\u4f1a\u6709\u989d\u5916\u7684\u4e2d\u7acb\u9752\u86d9\u3002"
+      "zh": "\u6bcf\u573a\u200b\u6218\u6597\u200b\u90fd\u200b\u4f1a\u200b\u51fa\u73b0\u989d\u200b\u5916\u200b\u7684\u200b\u4e2d\u7acb\u200b\u9752\u86d9\u3002"
     }
   },
   {
@@ -637,11 +637,11 @@
     "description": "Zombies spawn at the end of each round.",
     "name_texts": {
       "en": "Restless Dead",
-      "zh": "\u4ea1\u7075\u8e81\u52a8"
+      "zh": "\u901d\u8005\u200b\u4e0d\u5b81"
     },
     "desc_texts": {
       "en": "Zombies spawn at the end of each round.",
-      "zh": "\u50f5\u5c38\u4f1a\u5728\u6bcf\u56de\u5408\u7ed3\u675f\u65f6\u751f\u6210\u3002"
+      "zh": "\u6bcf\u200b\u8f6e\u200b\u7ed3\u675f\u200b\u65f6\u4f1a\u200b\u51fa\u73b0\u200b\u50f5\u5c38\u3002"
     }
   },
   {
@@ -652,11 +652,11 @@
     "description": "2-4 robots spawn in each battle. All robots have gone rogue!",
     "name_texts": {
       "en": "Robot Uprising",
-      "zh": "\u673a\u5668\u4eba\u8d77\u4e49"
+      "zh": "\u673a\u5668\u200b\u4eba\u200b\u8d77\u4e49"
     },
     "desc_texts": {
       "en": "2-4 robots spawn in each battle. All robots have gone rogue!",
-      "zh": "\u6bcf\u573a\u6218\u6597\u4e2d\u751f\u6210 2-4 \u4e2a\u673a\u5668\u4eba\u3002\u6240\u6709\u673a\u5668\u4eba\u90fd\u5931\u63a7\u4e86\uff01"
+      "zh": "\u6bcf\u573a\u200b\u6218\u6597\u4f1a\u200b\u51fa\u73b0\u200b2\u5230\u200b4\u200b\u4e2a\u200b\u673a\u5668\u200b\u4eba\u3002\u200b\u673a\u5668\u200b\u4eba\u200b\u5168\u200b\u90fd\u200b\u5931\u63a7\u200b\u5566\uff01"
     }
   },
   {
@@ -671,7 +671,7 @@
     },
     "desc_texts": {
       "en": "At the end of each round, damages everything by 1.",
-      "zh": "\u5728\u6bcf\u56de\u5408\u7ed3\u675f\u65f6\uff0c\u5bf9\u6240\u6709\u5355\u4f4d\u9020\u6210 1 \u70b9\u4f24\u5bb3\u3002"
+      "zh": "\u6bcf\u200b\u8f6e\u200b\u7ed3\u675f\u200b\u65f6\uff0c\u200b\u5168\u573a\u200b\u90fd\u200b\u4f1a\u200b\u53d7\u5230\u200b1\u70b9\u200b\u4f24\u5bb3\u3002"
     }
   },
   {
@@ -682,11 +682,11 @@
     "description": "Persistent Ice Element.",
     "name_texts": {
       "en": "Snow",
-      "zh": "\u96ea"
+      "zh": "\u4e0b\u96ea"
     },
     "desc_texts": {
       "en": "Persistent Ice Element.",
-      "zh": "\u6301\u7eed\u51b0\u5143\u7d20\u3002"
+      "zh": "\u6301\u7eed\u200b\u51fa\u73b0\u200b\u51b0\u200b\u5143\u7d20\u3002"
     }
   },
   {
@@ -697,11 +697,11 @@
     "description": "A solar flare strikes a large area at the end of each round, Burning and inflicting Blind.",
     "name_texts": {
       "en": "Solar Flare",
-      "zh": "\u592a\u9633\u8000\u6591"
+      "zh": "\u592a\u9633\u8000\u200b\u6591"
     },
     "desc_texts": {
       "en": "A solar flare strikes a large area at the end of each round, Burning and inflicting Blind.",
-      "zh": "\u6bcf\u56de\u5408\u7ed3\u675f\u65f6\uff0c\u592a\u9633\u8000\u6591\u4f1a\u88ad\u51fb\u5927\u7247\u533a\u57df\uff0c\u9020\u6210\u71c3\u70e7\u5e76\u65bd\u52a0\u81f4\u76f2\u3002"
+      "zh": "\u6bcf\u200b\u8f6e\u200b\u7ed3\u675f\u200b\u65f6\uff0c\u200b\u592a\u9633\u8000\u200b\u6591\u4f1a\u200b\u6253\u51fb\u200b\u4e00\u200b\u5927\u200b\u7247\u200b\u533a\u57df\uff0c\u200b\u9020\u6210\u200b\u3010\u707c\u200b\u70e7\u3011\u200b\u548c\u200b\u3010\u778e\u200b\u773c\u3011\u3002"
     }
   },
   {
@@ -712,11 +712,11 @@
     "description": "All units gain Stealth at the start of the battle.",
     "name_texts": {
       "en": "Stealth Mission",
-      "zh": "\u6f5c\u884c\u4efb\u52a1"
+      "zh": "\u6f5c\u884c\u200b\u4efb\u52a1"
     },
     "desc_texts": {
       "en": "All units gain Stealth at the start of the battle.",
-      "zh": "\u6240\u6709\u5355\u4f4d\u5728\u6218\u6597\u5f00\u59cb\u65f6\u83b7\u5f97\u6f5c\u884c\u3002"
+      "zh": "\u6218\u6597\u200b\u5f00\u59cb\u200b\u65f6\uff0c\u200b\u6240\u6709\u200b\u5355\u4f4d\u200b\u83b7\u5f97\u200b\u3010\u9690\u200b\u533f\u3011\u3002"
     }
   },
   {
@@ -727,11 +727,11 @@
     "description": "3-6 strange eggs spawn in each battle. Kill them before they hatch!",
     "name_texts": {
       "en": "Strange Eggs",
-      "zh": "\u5947\u602a\u7684\u86cb"
+      "zh": "\u602a\u86cb"
     },
     "desc_texts": {
       "en": "3-6 strange eggs spawn in each battle. Kill them before they hatch!",
-      "zh": "\u6bcf\u573a\u6218\u6597\u751f\u6210 3-6 \u4e2a\u5947\u602a\u7684\u86cb\u3002\u5728\u5b83\u4eec\u5b75\u5316\u524d\u6740\u6389\u5b83\u4eec\uff01"
+      "zh": "\u6bcf\u573a\u200b\u6218\u6597\u4f1a\u200b\u51fa\u73b0\u200b3\u200b\u5230\u200b6\u9897\u200b\u5947\u602a\u200b\u7684\u200b\u86cb\u3002\u200b\u8d81\u7740\u200b\u8fd8\u200b\u6ca1\u200b\u5b75\u200b\u51fa\u6765\uff0c\u200b\u5feb\u628a\u200b\u5b83\u4eec\u200b\u6253\u70c2\uff01"
     }
   },
   {
@@ -742,11 +742,11 @@
     "description": "At the end of the round, all units gain +1 Thorns.",
     "name_texts": {
       "en": "Strange Spikes!",
-      "zh": "\u5947\u5f02\u5c16\u523a\uff01"
+      "zh": "\u8be1\u5f02\u5c16\u523a\uff01"
     },
     "desc_texts": {
       "en": "At the end of the round, all units gain +1 Thorns.",
-      "zh": "\u5728\u56de\u5408\u7ed3\u675f\u65f6\uff0c\u6240\u6709\u5355\u4f4d\u83b7\u5f97 +1 \u8346\u68d8\u3002"
+      "zh": "\u6bcf\u200b\u8f6e\u200b\u7ed3\u675f\u200b\u65f6\uff0c\u200b\u6240\u6709\u200b\u5355\u4f4d\u200b\u3010\u5c16\u200b\u523a\u3011\u200b+\u200b1\u3002"
     }
   },
   {
@@ -761,7 +761,7 @@
     },
     "desc_texts": {
       "en": "At the end of the round, each corpse has a 25% chance to revive at half health with Madness 5.",
-      "zh": "\u5728\u56de\u5408\u7ed3\u675f\u65f6\uff0c\u6bcf\u5177\u5c38\u4f53\u6709 25% \u51e0\u7387\u4ee5\u534a\u8840\u590d\u6d3b\u5e76\u5e26\u6709 5 \u5c42\u75af\u72c2\u3002"
+      "zh": "\u6bcf\u200b\u8f6e\u200b\u7ed3\u675f\u200b\u65f6\uff0c\u200b\u6bcf\u200b\u5177\u200b\u5c38\u4f53\u200b\u90fd\u200b\u6709\u200b25%\u200b\u7684\u200b\u51e0\u7387\u200b\u4ee5\u200b\u4e00\u534a\u200b\u7684\u200b\u751f\u547d\u200b\u590d\u6d3b\uff0c\u200b\u540c\u65f6\u200b\u83b7\u5f97\u200b5\u5c42\u3010\u766b\u200b\u72c2\u3011\u3002"
     }
   },
   {
@@ -776,7 +776,7 @@
     },
     "desc_texts": {
       "en": "All units gain a random status effect at the start of each round. Cats gain a random mutation at the end of each battle.",
-      "zh": "\u6bcf\u56de\u5408\u5f00\u59cb\u65f6\uff0c\u6240\u6709\u5355\u4f4d\u83b7\u5f97\u4e00\u4e2a\u968f\u673a\u72b6\u6001\u6548\u679c\u3002\u6bcf\u573a\u6218\u6597\u7ed3\u675f\u65f6\uff0c\u732b\u54aa\u83b7\u5f97\u4e00\u4e2a\u968f\u673a\u7a81\u53d8\u3002"
+      "zh": "\u6bcf\u200b\u8f6e\u200b\u5f00\u59cb\u200b\u65f6\uff0c\u200b\u6240\u6709\u200b\u5355\u4f4d\u200b\u968f\u673a\u200b\u83b7\u5f97\u200b1\u200b\u4e2a\u200b\u72b6\u6001\u200b\u6548\u679c\u3002\u200b\u6bcf\u573a\u200b\u6218\u6597\u200b\u7ed3\u675f\u200b\u65f6\uff0c\u200b\u732b\u4f1a\u200b\u968f\u673a\u200b\u83b7\u5f97\u200b1\u200b\u9879\u200b\u7a81\u53d8\u3002"
     }
   },
   {
@@ -791,7 +791,7 @@
     },
     "desc_texts": {
       "en": "Persistent Water Element. At the end of each round, wind blows everything 1 space in a random direction. After each turn, there's a chance for a random lightning strike.",
-      "zh": "\u6301\u7eed\u6c34\u5143\u7d20\u3002\u5728\u6bcf\u56de\u5408\u7ed3\u675f\u65f6\uff0c\u98ce\u4f1a\u5c06\u6240\u6709\u5355\u4f4d\u5411\u968f\u673a\u65b9\u5411\u5439\u52a8 1 \u683c\u3002\u6bcf\u56de\u5408\u7ed3\u675f\u540e\uff0c\u6709\u51e0\u7387\u53d1\u751f\u968f\u673a\u96f7\u51fb\u3002"
+      "zh": "\u573a\u200b\u4e0a\u200b\u6301\u7eed\u200b\u51fa\u73b0\u200b\u6c34\u200b\u5143\u7d20\u3002\u200b\u6bcf\u200b\u8f6e\u200b\u7ed3\u675f\u200b\u65f6\uff0c\u200b\u98ce\u4f1a\u200b\u628a\u200b\u6240\u6709\u200b\u4e1c\u897f\u200b\u968f\u673a\u200b\u5439\u52a8\u200b1\u683c\u3002\u200b\u6bcf\u200b\u4e2a\u200b\u56de\u5408\u200b\u7ed3\u675f\u200b\u540e\uff0c\u200b\u90fd\u200b\u6709\u200b\u51e0\u7387\u200b\u843d\u200b\u4e0b\u200b\u95ea\u7535\uff0c\u200b\u968f\u673a\u5288\u200b\u4e2d\u200b1\u200b\u4e2a\u200b\u65b9\u683c\u3002"
     }
   },
   {
@@ -802,11 +802,11 @@
     "description": "Twisters spawn each round.",
     "name_texts": {
       "en": "Tornadoes",
-      "zh": "\u9f99\u5377\u98ce"
+      "zh": "\u9f99\u200b\u5377\u98ce"
     },
     "desc_texts": {
       "en": "Twisters spawn each round.",
-      "zh": "\u6bcf\u56de\u5408\u90fd\u4f1a\u751f\u6210\u9f99\u5377\u98ce\u3002"
+      "zh": "\u6bcf\u200b\u8f6e\u200b\u90fd\u200b\u4f1a\u200b\u51fa\u73b0\u200b\u9f99\u200b\u5377\u98ce\u3002"
     }
   },
   {
@@ -817,11 +817,11 @@
     "description": "A punching bag with Kinetic Spikes 5 spawns in each battle.",
     "name_texts": {
       "en": "Training Day",
-      "zh": "\u8bad\u7ec3\u65e5"
+      "zh": "\u8be5\u200b\u8bad\u7ec3\u200b\u4e86"
     },
     "desc_texts": {
       "en": "A punching bag with Kinetic Spikes 5 spawns in each battle.",
-      "zh": "\u6bcf\u573a\u6218\u6597\u4e2d\u4f1a\u751f\u6210\u4e00\u4e2a\u5e26\u6709 5 \u5c42\u52a8\u80fd\u5c16\u523a\u7684\u6c99\u888b\u3002"
+      "zh": "\u6bcf\u573a\u200b\u6218\u6597\u200b\u90fd\u200b\u4f1a\u200b\u51fa\u73b0\u200b1\u200b\u4e2a\u200b\u5e265\u200b\u5c42\u200b\u3010\u52a8\u200b\u80fd\u200b\u5c16\u200b\u523a\u3011\u200b\u7684\u200b\u53d7\u6c14\u200b\u5305\u3002"
     }
   },
   {
@@ -836,7 +836,7 @@
     },
     "desc_texts": {
       "en": "There is extra junk in every battle.",
-      "zh": "\u6bcf\u573a\u6218\u6597\u4e2d\u4f1a\u6709\u989d\u5916\u7684\u5783\u573e\u3002"
+      "zh": "\u6bcf\u573a\u200b\u6218\u6597\u200b\u90fd\u200b\u4f1a\u200b\u51fa\u73b0\u989d\u200b\u5916\u200b\u7684\u200b\u5783\u573e\u3002"
     }
   },
   {
@@ -847,11 +847,11 @@
     "description": "There's lots of flies!",
     "name_texts": {
       "en": "Fly Swarm",
-      "zh": "\u8747\u7fa4"
+      "zh": "\u82cd\u8747\u6210\u7fa4"
     },
     "desc_texts": {
       "en": "There's lots of flies!",
-      "zh": "\u8fd9\u513f\u6709\u5f88\u591a\u82cd\u8747\uff01"
+      "zh": "\u5230\u200b\u5904\u200b\u90fd\u200b\u662f\u200b\u82cd\u8747\uff01"
     }
   },
   {
@@ -866,7 +866,7 @@
     },
     "desc_texts": {
       "en": "There is fire everywhere!",
-      "zh": "\u5230\u5904\u90fd\u662f\u706b\uff01"
+      "zh": "\u5927\u706b\u70e7\u200b\u5f97\u5230\u200b\u5904\u200b\u90fd\u200b\u662f\u200b\uff01"
     }
   },
   {
@@ -877,11 +877,11 @@
     "description": "At the end of each round, wind blows everything 1 space in a random direction.",
     "name_texts": {
       "en": "Windy",
-      "zh": "\u591a\u98ce"
+      "zh": "\u522e\u98ce"
     },
     "desc_texts": {
       "en": "At the end of each round, wind blows everything 1 space in a random direction.",
-      "zh": "\u5728\u6bcf\u56de\u5408\u7ed3\u675f\u65f6\uff0c\u98ce\u4f1a\u5c06\u6240\u6709\u5355\u4f4d\u5411\u968f\u673a\u65b9\u5411\u5439\u52a8 1 \u683c\u3002"
+      "zh": "\u6bcf\u200b\u8f6e\u200b\u7ed3\u675f\u200b\u65f6\uff0c\u200b\u98ce\u4f1a\u200b\u628a\u200b\u6240\u6709\u200b\u4e1c\u897f\u200b\u968f\u673a\u200b\u5439\u52a8\u200b1\u683c\u3002"
     }
   }
 ]

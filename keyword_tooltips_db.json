@@ -1,9 +1,9 @@
 {
   "generated_from": {
-    "keyword_tooltips": "G:/gpak-all/data/keyword_tooltips.gon",
-    "text_dir": "G:/gpak-all/data/text"
+    "keyword_tooltips": "G:/gpak-all/data2/keyword_tooltips.gon",
+    "text_dir": "G:/gpak-all/data2/text"
   },
-  "count": 249,
+  "count": 252,
   "rows": [
     {
       "row_code": "Adrenaline",
@@ -15,11 +15,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Adrenaline",
-        "zh": "\u80be\u4e0a\u817a\u7d20"
+        "zh": "\u80be\u200b\u4e0a\u200b\u817a\u7d20"
       },
       "tooltip_texts": {
         "en": "Keeps Exhaustion at 0.\n+25% Crit Chance.\n+25% Block Chance.",
-        "zh": "\u5c06\u75b2\u52b3\u4fdd\u6301\u5728 0\u3002\r\n+25% \u66b4\u51fb\u7387\u3002\r\n+25% \u683c\u6321\u7387\u3002"
+        "zh": "\u4ee4\u200b\u3010\u7d2f\u762b\u3011\u59cb\u7ec8\u200b\u662f\u200b0\u3002\n\u66b4\u51fb\u200b\u51e0\u7387\u200b+25%\u200b\u3002\n\u683c\u200b\u6321\u200b\u51e0\u7387\u200b+25%\u200b\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -33,12 +33,12 @@
       "tooltip_stacks_key": "KEYWORD_ALLSTATSUP_DESC",
       "name_texts": {
         "en": "All Stats Up",
-        "zh": "\u5168\u5c5e\u6027\u63d0\u5347"
+        "zh": "\u6240\u6709\u200b\u5c5e\u6027\u200b\u63d0\u5347"
       },
       "tooltip_texts": {},
       "tooltip_stacks_texts": {
         "en": "All Stats increased by {stacks}",
-        "zh": "\u5168\u5c5e\u6027\u589e\u52a0 {stacks} \u70b9\u3002"
+        "zh": "\u6240\u6709\u200b\u5c5e\u6027\u200b\u63d0\u5347\u200b{stacks}"
       }
     },
     {
@@ -51,12 +51,12 @@
       "tooltip_stacks_key": "KEYWORD_ALLSTATSDOWN_DESC",
       "name_texts": {
         "en": "All Stats Down",
-        "zh": "\u5168\u5c5e\u6027\u4e0b\u964d"
+        "zh": "\u6240\u6709\u200b\u5c5e\u6027\u200b\u4e0b\u964d"
       },
       "tooltip_texts": {},
       "tooltip_stacks_texts": {
         "en": "All Stats decreased by {absstacks}",
-        "zh": "\u5168\u5c5e\u6027\u51cf\u5c11 {absstacks} \u70b9\u3002"
+        "zh": "\u6240\u6709\u200b\u5c5e\u6027\u200b\u4e0b\u964d\u200b{absstacks}"
       }
     },
     {
@@ -69,11 +69,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "The Alpha",
-        "zh": "\u9996\u9886"
+        "zh": "\u5934\u200b\u732b"
       },
       "tooltip_texts": {
         "en": "No effects on its own. Only one unit can be The Alpha. Certain spells and abilities provide bonuses for The Alpha.",
-        "zh": "\u81ea\u8eab\u65e0\u6548\u679c\u3002\u53ea\u80fd\u6709\u4e00\u4e2a\u5355\u4f4d\u6210\u4e3a\u9996\u9886\u3002\r\n\u67d0\u4e9b\u6cd5\u672f\u548c\u6280\u80fd\u4f1a\u4e3a\u9996\u9886\u63d0\u4f9b\u52a0\u6210\u3002"
+        "zh": "\u672c\u8eab\u200b\u6ca1\u6709\u200b\u6548\u679c\u3002\u200b\u6bcf\u200b\u4e2a\u200b\u961f\u4f0d\u200b\u53ea\u200b\u80fd\u200b\u6709\u200b1\u200b\u4e2a\u200b\u5934\u732b\u3002\u200b\u5934\u732b\u200b\u6709\u200b\u4e9b\u200b\u6cd5\u672f\u200b\u548c\u200b\u80fd\u529b\u200b\u4f1a\u200b\u83b7\u5f97\u200b\u52a0\u6210\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -87,12 +87,12 @@
       "tooltip_stacks_key": "KEYWORD_AMMO_DESC",
       "name_texts": {
         "en": "Ammo",
-        "zh": "\u5f39\u836f"
+        "zh": "\u5b50\u200b\u5f39"
       },
       "tooltip_texts": {},
       "tooltip_stacks_texts": {
         "en": "{stacks} shots left.",
-        "zh": "\u5269\u4f59 {stacks} \u53d1\u3002"
+        "zh": "\u8fd8\u200b\u5269\u200b{stacks}\u200b\u53d1\u3002"
       }
     },
     {
@@ -105,11 +105,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "[img:appeal] Appeal",
-        "zh": "[img:appeal] \u5438\u5f15\u529b"
+        "zh": "[img:appeal]\u200b\u5438\u5f15\u529b"
       },
       "tooltip_texts": {
         "en": "Affects the quality of the stray cats that show up each day",
-        "zh": "\u5f71\u54cd\u6bcf\u5929\u51fa\u73b0\u7684\u6d41\u6d6a\u732b\u7684\u54c1\u8d28\u3002"
+        "zh": "\u5f71\u54cd\u200b\u6bcf\u200b\u5929\u200b\u51fa\u73b0\u200b\u4ec0\u4e48\u200b\u54c1\u8d28\u200b\u7684\u200b\u6d41\u6d6a\u732b\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -127,11 +127,11 @@
       },
       "tooltip_texts": {
         "en": "Moves towards you at the start of its turn.",
-        "zh": "\u5728\u56de\u5408\u5f00\u59cb\u65f6\u5411\u4f60\u79fb\u52a8\u3002"
+        "zh": "\u5b83\u200b\u5728\u200b\u56de\u5408\u200b\u5f00\u59cb\u200b\u65f6\uff0c\u200b\u5411\u200b\u4f60\u200b\u79fb\u52a8\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "The thing attracting you is gone. Does nothing.",
-        "zh": "\u5438\u5f15\u4f60\u7684\u76ee\u6807\u5df2\u6d88\u5931\u3002\u65e0\u6548\u679c\u3002"
+        "zh": "\u5438\u5f15\u200b\u4f60\u200b\u7684\u200b\u4e1c\u897f\u200b\u6ca1\u200b\u4e86\u3002\u200b\u6ca1\u6709\u200b\u6548\u679c\u3002"
       }
     },
     {
@@ -148,7 +148,7 @@
       },
       "tooltip_texts": {
         "en": "Moves towards {applier} at the start of its turn.",
-        "zh": "\u5728\u56de\u5408\u5f00\u59cb\u65f6\u5411 {applier} \u79fb\u52a8\u3002"
+        "zh": "{applier}\u200b\u7684\u200b\u56de\u5408\u200b\u5f00\u59cb\u200b\u65f6\uff0c\u200b\u5411\u200b\u5176\u200b\u79fb\u52a8\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -162,13 +162,34 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Backflip",
-        "zh": "\u540e\u7a7a\u7ffb"
+        "zh": "\u540e\u200b\u7a7a\u7ffb"
       },
       "tooltip_texts": {
         "en": "Backflips out of the way the next time it's targeted.",
-        "zh": "\u4e0b\u4e00\u6b21\u88ab\u4f5c\u4e3a\u76ee\u6807\u65f6\uff0c\r\n\u901a\u8fc7\u540e\u7a7a\u7ffb\u95ea\u907f\u3002"
+        "zh": "\u4e0b\u200b\u6b21\u200b\u88ab\u200b\u9009\u4f5c\u200b\u76ee\u6807\u200b\u65f6\uff0c\u200b\u4f1a\u200b\u540e\u200b\u7a7a\u7ffb\u200b\u8eb2\u907f\u3002"
       },
       "tooltip_stacks_texts": {}
+    },
+    {
+      "row_code": "BlastResistance",
+      "effect_code": "BlastResistance",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_BLASTRESISTANCE_NAME",
+      "tooltip_key": "KEYWORD_BLASTRESISTANCE_DESC_STACKLESS",
+      "tooltip_stacks_key": "KEYWORD_BLASTRESISTANCE_DESC",
+      "name_texts": {
+        "en": "Blast Resistance",
+        "zh": "\u51b2\u51fb\u200b\u6297\u6027"
+      },
+      "tooltip_texts": {
+        "en": "Reduces damage taken from explosions.",
+        "zh": "\u53d7\u5230\u200b\u7684\u200b\u7206\u70b8\u200b\u4f24\u5bb3\u200b\u51cf\u5c11\u3002"
+      },
+      "tooltip_stacks_texts": {
+        "en": "Takes {stacks} less damage from explosions.",
+        "zh": "\u7206\u70b8\u200b\u5bf9\u200b\u4f60\u200b\u9020\u6210\u200b\u7684\u200b\u4f24\u5bb3\u200b\u51cf\u5c11\u200b{stacks}\u200b\u3002"
+      }
     },
     {
       "row_code": "Bleed",
@@ -180,15 +201,15 @@
       "tooltip_stacks_key": "KEYWORD_BLEED_DESC",
       "name_texts": {
         "en": "Bleed",
-        "zh": "\u6d41\u8840"
+        "zh": "\u51fa\u8840"
       },
       "tooltip_texts": {
         "en": "Takes damage at the end of the round, then increase Bleed by 1.",
-        "zh": "\u5728\u56de\u5408\u7ed3\u675f\u65f6\u53d7\u5230\u4f24\u5bb3\uff0c\r\n\u7136\u540e\u6d41\u8840\u5c42\u6570\u589e\u52a0 1\u3002"
+        "zh": "\u4e00\u200b\u8f6e\u200b\u7ed3\u675f\u200b\u65f6\uff0c\u200b\u53d7\u5230\u200b\u4f24\u5bb3\uff0c\u200b\u7136\u540e\u200b\u3010\u51fa\u8840\u3011\u5c42\u6570\u200b+\u200b1\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "Takes {stacks} damage at the end of the round, then increase Bleed by 1.",
-        "zh": "\u5728\u56de\u5408\u7ed3\u675f\u65f6\u53d7\u5230 {stacks} \u70b9\u4f24\u5bb3\uff0c\r\n\u7136\u540e\u6d41\u8840\u5c42\u6570\u589e\u52a0 1\u3002"
+        "zh": "\u4e00\u200b\u8f6e\u200b\u7ed3\u675f\u200b\u65f6\uff0c\u200b\u53d7\u5230\u200b{stacks}\u200b\u70b9\u200b\u4f24\u5bb3\uff0c\u200b\u7136\u540e\u200b\u3010\u51fa\u8840\u3011\u5c42\u6570\u200b+\u200b1\u3002"
       }
     },
     {
@@ -201,15 +222,15 @@
       "tooltip_stacks_key": "KEYWORD_BLEEDTHORNS_DESC",
       "name_texts": {
         "en": "Bleed Thorns",
-        "zh": "\u6d41\u8840\u8346\u68d8"
+        "zh": "\u51fa\u8840\u5c16\u523a"
       },
       "tooltip_texts": {
         "en": "Deals damage and inflicts Bleed to units that contact you.",
-        "zh": "\u5bf9\u63a5\u89e6\u4f60\u7684\u5355\u4f4d\u9020\u6210\u4f24\u5bb3\u5e76\u65bd\u52a0\u6d41\u8840\u3002"
+        "zh": "\u63a5\u89e6\u200b\u5230\u200b\u4f60\u200b\u7684\u200b\u5355\u4f4d\u200b\u53d7\u5230\u200b\u4f24\u5bb3\uff0c\u200b\u540c\u65f6\u200b\u83b7\u5f97\u200b\u3010\u51fa\u200b\u8840\u3011\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "Deals {stacks} damage and inflicts Bleed {stacks} to units that contact you.",
-        "zh": "\u5bf9\u63a5\u89e6\u4f60\u7684\r\n\u5355\u4f4d\u9020\u6210 {stacks} \u70b9\u4f24\u5bb3\u5e76\u65bd\u52a0 {stacks} \u5c42\u6d41\u8840\u3002"
+        "zh": "\u63a5\u89e6\u200b\u5230\u200b\u4f60\u200b\u7684\u200b\u5355\u4f4d\u200b\u53d7\u5230\u200b{stacks}\u200b\u70b9\u200b\u4f24\u5bb3\uff0c\u200b\u540c\u65f6\u200b\u83b7\u5f97\u200b{stacks}\u200b\u5c42\u200b\u3010\u51fa\u200b\u8840\u3011\u3002"
       }
     },
     {
@@ -222,11 +243,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Blessing of Peace",
-        "zh": "\u548c\u5e73\u795d\u798f"
+        "zh": "\u5e73\u5b89\u795d\u798f"
       },
       "tooltip_texts": {
         "en": "Gain [img:divineshield] at the end of your turn. Lose this when you deal damage.",
-        "zh": "\u56de\u5408\u7ed3\u675f\u65f6\u83b7\u5f97 [img:divineshield]\u3002\r\n\u9020\u6210\u4f24\u5bb3\u65f6\u5931\u53bb\u6b64\u6548\u679c\u3002"
+        "zh": "\u5728\u200b\u4f60\u200b\u7684\u200b\u56de\u5408\u200b\u7ed3\u675f\u200b\u65f6\u200b\u83b7\u5f97\u200b[img:divineshield]\u200b\u3002\u200b\u5982\u679c\u200b\u4f60\u200b\u9020\u6210\u200b\u4f24\u5bb3\uff0c\u200b\u90a3\u4e48\u200b\u5931\u53bb\u200b\u8fd9\u4e2a\u200b\u6548\u679c\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -240,12 +261,12 @@
       "tooltip_stacks_key": "KEYWORD_BLIND_DESC",
       "name_texts": {
         "en": "Blind",
-        "zh": "\u81f4\u76f2"
+        "zh": "\u778e\u200b\u773c"
       },
       "tooltip_texts": {},
       "tooltip_stacks_texts": {
         "en": "30% miss chance for the next {stacks} turns.",
-        "zh": "\u63a5\u4e0b\u6765\u7684 {stacks} \u56de\u5408\u5185\u6709 30% \u7684\u672a\u547d\u4e2d\u7387\u3002"
+        "zh": "\u63a5\u200b\u4e0b\u6765\u200b{stacks}\u200b\u4e2a\u200b\u56de\u5408\u200b\u6709\u200b30%\u200b\u7684\u200b\u51e0\u7387\u200b\u843d\u7a7a\u3002"
       }
     },
     {
@@ -258,10 +279,13 @@
       "tooltip_stacks_key": "KEYWORD_PERMABLIND_DESC",
       "name_texts": {
         "en": "Blind",
-        "zh": "\u81f4\u76f2"
+        "zh": "\u778e\u200b\u773c"
       },
       "tooltip_texts": {},
-      "tooltip_stacks_texts": {}
+      "tooltip_stacks_texts": {
+        "en": "30% miss chance.",
+        "zh": "30%\u200b\u7684\u200b\u843d\u7a7a\u200b\u51e0\u7387\u3002"
+      }
     },
     {
       "row_code": "Bloodzerked",
@@ -273,12 +297,12 @@
       "tooltip_stacks_key": "KEYWORD_BLOODZERK_DESC",
       "name_texts": {
         "en": "Bloodzerked",
-        "zh": "\u8840\u6012"
+        "zh": "\u55dc\u8840\u72c2\u66b4"
       },
       "tooltip_texts": {},
       "tooltip_stacks_texts": {
         "en": "When you deal health damage to a bleeding unit, heal that much health.",
-        "zh": "\u5f53\u4f60\u5bf9\u6d41\u8840\u5355\u4f4d\u9020\u6210\u751f\u547d\u503c\u4f24\u5bb3\u65f6\uff0c\r\n\u6062\u590d\u7b49\u91cf\u7684\u751f\u547d\u503c\u3002"
+        "zh": "\u4f60\u200b\u5bf9\u200b\u3010\u51fa\u8840\u3011\u200b\u5355\u4f4d\u200b\u7684\u200b\u751f\u547d\u200b\u9020\u6210\u200b\u591a\u200b\u5c11\u200b\u4f24\u5bb3\uff0c\u200b\u5c31\u200b\u6062\u590d\u200b\u591a\u200b\u5c11\u200b\u751f\u547d\u3002"
       }
     },
     {
@@ -291,11 +315,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Body Guard",
-        "zh": "\u62a4\u536b"
+        "zh": "\u8d34\u8eab\u200b\u4fdd\u9556"
       },
       "tooltip_texts": {
         "en": "The next time an ally is targeted, swap places with them first.",
-        "zh": "\u4e0b\u4e00\u6b21\u76df\u53cb\u88ab\u4f5c\u4e3a\u76ee\u6807\u65f6\uff0c\r\n\u5148\u4e0e\u5176\u4ea4\u6362\u4f4d\u7f6e\u3002"
+        "zh": "\u4e0b\u200b\u6b21\u200b\u6709\u200b\u53cb\u65b9\u200b\u88ab\u200b\u9009\u4f5c\u200b\u76ee\u6807\u65f6\uff0c\u200b\u5148\u200b\u8ddf\u200b\u5b83\u200b\u8c03\u6362\u200b\u4f4d\u7f6e\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -313,11 +337,11 @@
       },
       "tooltip_texts": {
         "en": "Takes 25% extra damage. If killed, gain coins.",
-        "zh": "\u53d7\u5230\u7684\u4f24\u5bb3\u589e\u52a0 25%\u3002\r\n\u5982\u679c\u88ab\u51fb\u6740\uff0c\u83b7\u5f97\u91d1\u5e01\u3002"
+        "zh": "\u6240\u200b\u53d7\u200b\u4f24\u5bb3\u200b\u589e\u52a0\u200b25%\u200b\u3002\u200b\u5982\u679c\u200b\u88ab\u200b\u51fb\u6740\uff0c\u200b\u83b7\u5f97\u200b\u94b1\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "Takes 25% extra damage. If killed, gain {stacks} coins.",
-        "zh": "\u53d7\u5230\u7684\u4f24\u5bb3\u589e\u52a0 25%\u3002\r\n\u5982\u679c\u88ab\u51fb\u6740\uff0c\u83b7\u5f97 {stacks} \u679a\u91d1\u5e01\u3002"
+        "zh": "\u6240\u200b\u53d7\u200b\u4f24\u5bb3\u200b\u589e\u52a0\u200b25%\u200b\u3002\u200b\u5982\u679c\u200b\u88ab\u200b\u51fb\u6740\uff0c\u200b\u83b7\u5f97\u200b{stacks}\u200b\u5757\u94b1\u3002"
       }
     },
     {
@@ -330,15 +354,15 @@
       "tooltip_stacks_key": "KEYWORD_BRACE_DESC",
       "name_texts": {
         "en": "Brace",
-        "zh": "\u62a4\u7532"
+        "zh": "\u62db\u67b6"
       },
       "tooltip_texts": {
         "en": "Reduces all incoming damage.",
-        "zh": "\u51cf\u5c11\u6240\u6709\u53d7\u5230\u7684\u4f24\u5bb3\u3002"
+        "zh": "\u53d7\u5230\u200b\u7684\u200b\u5404\u200b\u7c7b\u200b\u4f24\u5bb3\u200b\u51cf\u5c11\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "Takes {stacks} less damage from all sources.",
-        "zh": "\u53d7\u5230\u7684\u6240\u6709\u4f24\u5bb3\u51cf\u5c11 {stacks} \u70b9\u3002"
+        "zh": "\u4e0d\u8bba\u200b\u6240\u200b\u53d7\u200b\u4f24\u5bb3\u200b\u6765\u81ea\u200b\u54ea\u200b\u91cc\uff0c\u200b\u5168\u90e8\u200b\u51cf\u5c11\u200b{stacks}\u200b\u3002"
       }
     },
     {
@@ -351,11 +375,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Brittle",
-        "zh": "\u8106\u88c2"
+        "zh": "\u6613\u788e"
       },
       "tooltip_texts": {
         "en": "This item has a 25% chance to break when you take damage.",
-        "zh": "\u5f53\u4f60\u53d7\u5230\u4f24\u5bb3\u65f6\uff0c\r\n\u6b64\u7269\u54c1\u6709 25% \u7684\u51e0\u7387\u7834\u788e\u3002"
+        "zh": "\u4f60\u200b\u53d7\u5230\u200b\u4f24\u5bb3\u200b\u65f6\uff0c\u200b\u8fd9\u200b\u4ef6\u200b\u7269\u54c1\u200b\u6709\u200b25%\u200b\u7684\u200b\u51e0\u7387\u200b\u635f\u574f\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -369,15 +393,15 @@
       "tooltip_stacks_key": "KEYWORD_BRUISE_DESC",
       "name_texts": {
         "en": "Bruise",
-        "zh": "\u6de4\u4f24"
+        "zh": "\u7600\u4f24"
       },
       "tooltip_texts": {
         "en": "Increases all incoming physical damage.",
-        "zh": "\u589e\u52a0\u6240\u6709\u53d7\u5230\u7684\u7269\u7406\u4f24\u5bb3\u3002"
+        "zh": "\u53d7\u5230\u200b\u7684\u200b\u5404\u200b\u7c7b\u200b\u7269\u7406\u4f24\u5bb3\u200b\u589e\u52a0\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "Takes {stacks} more damage from physical sources.",
-        "zh": "\u53d7\u5230\u7684\u7269\u7406\u4f24\u5bb3\u589e\u52a0 {stacks} \u70b9\u3002"
+        "zh": "\u6240\u200b\u53d7\u7269\u7406\u4f24\u5bb3\u200b\u589e\u52a0\u200b{stacks}\u200b\u3002"
       }
     },
     {
@@ -390,15 +414,15 @@
       "tooltip_stacks_key": "KEYWORD_BURN_DESC",
       "name_texts": {
         "en": "Burn",
-        "zh": "\u71c3\u70e7"
+        "zh": "\u707c\u70e7"
       },
       "tooltip_texts": {
         "en": "Takes damage at start of its turn, then decrease Burn by 1.",
-        "zh": "\u56de\u5408\u5f00\u59cb\u65f6\u53d7\u5230\u4f24\u5bb3\uff0c\r\n\u7136\u540e\u71c3\u70e7\u5c42\u6570\u51cf\u5c11 1\u3002"
+        "zh": "\u56de\u5408\u200b\u5f00\u59cb\u200b\u65f6\u200b\u53d7\u5230\u200b\u4f24\u5bb3\uff0c\u200b\u7136\u540e\u200b\u3010\u707c\u200b\u70e7\u3011\u5c42\u6570\u200b-\u200b1\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "Takes {stacks} damage at start of its turn, then decrease Burn by 1.",
-        "zh": "\u56de\u5408\u5f00\u59cb\u65f6\u53d7\u5230 {stacks} \u70b9\u4f24\u5bb3\uff0c\r\n\u7136\u540e\u71c3\u70e7\u5c42\u6570\u51cf\u5c11 1\u3002"
+        "zh": "\u56de\u5408\u200b\u5f00\u59cb\u200b\u65f6\uff0c\u200b\u53d7\u5230\u200b{stacks}\u200b\u70b9\u200b\u4f24\u5bb3\uff0c\u200b\u7136\u540e\u200b\u3010\u707c\u200b\u70e7\u3011\u5c42\u6570\u200b-\u200b1\u3002"
       }
     },
     {
@@ -411,11 +435,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Captured Familiar",
-        "zh": "\u6355\u83b7\u7684\u4f7f\u9b54"
+        "zh": "\u9644\u5f55\u200b\u8ddf\u200b\u73ed"
       },
       "tooltip_texts": {
         "en": "Was once an enemy, is now on your team. Will follow you to future battles if it doesn't die.",
-        "zh": "\u66fe\u7ecf\u662f\u654c\u4eba\uff0c\u73b0\u5728\u52a0\u5165\u4e86\u4f60\u7684\u961f\u4f0d\u3002\r\n\u5982\u679c\u4e0d\u6b7b\uff0c\u5c06\u4f1a\u8ddf\u968f\u4f60\u8fdb\u5165\u540e\u7eed\u7684\u6218\u6597\u3002"
+        "zh": "\u4e4b\u524d\u200b\u662f\u200b\u654c\u65b9\uff0c\u200b\u73b0\u5728\u200b\u662f\u200b\u53cb\u65b9\u3002\u200b\u53ea\u8981\u200b\u6ca1\u6b7b\uff0c\u200b\u5c31\u200b\u4f1a\u200b\u8ddf\u200b\u7740\u200b\u4f60\u200b\u53c2\u52a0\u200b\u4ee5\u540e\u200b\u7684\u200b\u6218\u6597\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -433,7 +457,7 @@
       },
       "tooltip_texts": {
         "en": "The next familiar you spawn is upgraded into a [img:champion] Champion.",
-        "zh": "\u4f60\u751f\u6210\u7684\u4e0b\u4e00\u4e2a\u4f7f\u9b54\u5c06\u5347\u7ea7\u4e3a [img:champion] \u51a0\u519b\u3002"
+        "zh": "\u4f60\u200b\u53ec\u5524\u200b\u7684\u200b\u4e0b\u200b\u4e00\u200b\u4e2a\u200b\u8ddf\u73ed\u4f1a\u200b\u662f\u200b[img:champion]\u200b\u52c7\u58eb\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -447,15 +471,15 @@
       "tooltip_stacks_key": "KEYWORD_CHARGE_DESC",
       "name_texts": {
         "en": "Charge",
-        "zh": "\u5145\u80fd"
+        "zh": "\u84c4\u200b\u80fd"
       },
       "tooltip_texts": {
         "en": "Gains mana at the start of its next turn.",
-        "zh": "\u4e0b\u56de\u5408\u5f00\u59cb\u65f6\u83b7\u5f97\u6cd5\u529b\u503c\u3002"
+        "zh": "\u4e0b\u200b\u4e2a\u200b\u56de\u5408\u200b\u5f00\u59cb\u200b\u65f6\uff0c\u200b\u9b54\u80fd\u200b\u589e\u52a0\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "Gains {stacks} mana at the start of its next turn.",
-        "zh": "\u4e0b\u56de\u5408\u5f00\u59cb\u65f6\u83b7\u5f97 {stacks} \u70b9\u6cd5\u529b\u503c\u3002"
+        "zh": "\u4e0b\u200b\u4e2a\u200b\u56de\u5408\u200b\u5f00\u59cb\u200b\u65f6\uff0c\u200b\u9b54\u200b\u80fd\u200b+{stacks}\u200b\u3002"
       }
     },
     {
@@ -468,15 +492,15 @@
       "tooltip_stacks_key": "KEYWORD_CHARGEFISTS_DESC",
       "name_texts": {
         "en": "Charge Fists",
-        "zh": "\u5145\u80fd\u62f3"
+        "zh": "\u84c4\u200b\u80fd\u200b\u62f3"
       },
       "tooltip_texts": {
         "en": "Your basic attack emits Sparkles until the end of the turn.",
-        "zh": "\u76f4\u5230\u56de\u5408\u7ed3\u675f\uff0c\u4f60\u7684\u57fa\u7840\u653b\u51fb\u4f1a\u53d1\u5c04\u706b\u82b1\u3002"
+        "zh": "\u56de\u5408\u200b\u7ed3\u675f\u200b\u4e4b\u524d\uff0c\u200b\u4f60\u200b\u7684\u200b\u666e\u901a\u200b\u653b\u51fb\u200b\u4f1a\u200b\u653e\u51fa\u3010\u200b\u95ea\u200b\u5149\u3011\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "Your basic attack emits {stacks} Sparkles until the end of the turn.",
-        "zh": "\u76f4\u5230\u56de\u5408\u7ed3\u675f\uff0c\r\n\u4f60\u7684\u57fa\u7840\u653b\u51fb\u4f1a\u53d1\u5c04 {stacks} \u4e2a\u706b\u82b1\u3002"
+        "zh": "\u56de\u5408\u200b\u7ed3\u675f\u200b\u4e4b\u524d\uff0c\u200b\u4f60\u200b\u7684\u200b\u666e\u901a\u200b\u653b\u51fb\u200b\u4f1a\u200b\u653e\u51fa\u200b{stacks}\u200b\u9053\u200b\u3010\u95ea\u200b\u5149\u3011\u3002"
       }
     },
     {
@@ -489,12 +513,12 @@
       "tooltip_stacks_key": "KEYWORD_CHAUP_DESC",
       "name_texts": {
         "en": "Charisma Up",
-        "zh": "\u9b45\u529b\u63d0\u5347"
+        "zh": "\u9b45\u529b\u200b\u63d0\u5347"
       },
       "tooltip_texts": {},
       "tooltip_stacks_texts": {
         "en": "Charisma increased by {stacks}.\nCharisma affects max mana and initial mana.",
-        "zh": "\u9b45\u529b\u589e\u52a0 {stacks} \u70b9\u3002\r\n\u9b45\u529b\u5f71\u54cd\u6700\u5927\u6cd5\u529b\u503c\u548c\u521d\u59cb\u6cd5\u529b\u503c\u3002"
+        "zh": "\u9b45\u529b\u200b\u63d0\u5347\u200b{stacks}\u200b\u3002\n\u9b45\u529b\u200b\u5f71\u54cd\u200b\u9b54\u200b\u80fd\u200b\u4e0a\u9650\u200b\u548c\u200b\u521d\u59cb\u200b\u9b54\u80fd\u3002"
       }
     },
     {
@@ -507,12 +531,12 @@
       "tooltip_stacks_key": "KEYWORD_CHADOWN_DESC",
       "name_texts": {
         "en": "Charisma Down",
-        "zh": "\u9b45\u529b\u4e0b\u964d"
+        "zh": "\u9b45\u529b\u200b\u4e0b\u964d"
       },
       "tooltip_texts": {},
       "tooltip_stacks_texts": {
         "en": "Charisma decreased by {absstacks}.\nCharisma affects max mana and initial mana.",
-        "zh": "\u9b45\u529b\u51cf\u5c11 {absstacks} \u70b9\u3002\r\n\u9b45\u529b\u5f71\u54cd\u6700\u5927\u6cd5\u529b\u503c\u548c\u521d\u59cb\u6cd5\u529b\u503c\u3002"
+        "zh": "\u9b45\u529b\u200b\u4e0b\u964d\u200b{absstacks}\u200b\u3002\n\u9b45\u529b\u200b\u5f71\u54cd\u200b\u9b54\u200b\u80fd\u200b\u4e0a\u9650\u200b\u548c\u200b\u521d\u59cb\u200b\u9b54\u80fd\u3002"
       }
     },
     {
@@ -525,11 +549,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Charmed",
-        "zh": "\u9b45\u60d1"
+        "zh": "\u6d17\u8111"
       },
       "tooltip_texts": {
         "en": "Behaves as if it's on your team.",
-        "zh": "\u8868\u73b0\u5f97\u50cf\u662f\u4f60\u961f\u4f0d\u7684\u4e00\u5458\u3002"
+        "zh": "\u50cf\u200b\u662f\u200b\u4f60\u200b\u7684\u200b\u961f\u5458\u200b\u4e00\u6837\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -543,11 +567,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Cleave",
-        "zh": "\u5207\u5272"
+        "zh": "\u72e0\u5241"
       },
       "tooltip_texts": {
         "en": "Cuts a chunk of meat off what it hits.",
-        "zh": "\u780d\u4e0b\u547d\u4e2d\u76ee\u6807\u7684\u4e00\u5757\u8089\u3002"
+        "zh": "\u780d\u200b\u5230\u200b\u4ec0\u4e48\uff0c\u200b\u5c31\u200b\u4ece\u200b\u4ec0\u4e48\u200b\u8eab\u200b\u4e0a\u200b\u5241\u200b\u4e0b\u200b\u4e00\u200b\u5757\u8089\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -561,11 +585,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "[img:comfort] Comfort",
-        "zh": "[img:comfort] \u8212\u9002\u5ea6"
+        "zh": "[img:comfort] \u8212\u9002"
       },
       "tooltip_texts": {
         "en": "Affects how often cats will breed or fight.",
-        "zh": "\u5f71\u54cd\u732b\u54aa\u7e41\u6b96\u6216\u6253\u67b6\u7684\u9891\u7387\u3002"
+        "zh": "\u5f71\u54cd\u200b\u732b\u54aa\u4ea4\u914d\u200b\u6216\u200b\u6253\u67b6\u200b\u7684\u200b\u9891\u7387\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -582,12 +606,12 @@
         "zh": "\u6df7\u4e71"
       },
       "tooltip_texts": {
-        "en": "When performing an action, 25% chance to instead hit itself equal to its strength.",
-        "zh": "\u6267\u884c\u884c\u52a8\u65f6\uff0c\r\n\u6709 25% \u7684\u51e0\u7387\u6539\u4e3a\u653b\u51fb\u81ea\u5df1\uff0c\r\n\u4f24\u5bb3\u7b49\u540c\u4e8e\u5176\u529b\u91cf\u3002"
+        "en": "When performing an action, 33% chance to instead hit itself equal to its strength.",
+        "zh": "\u884c\u52a8\u200b\u65f6\uff0c\u200b\u6709\u200b33%\u200b\u7684\u200b\u51e0\u7387\u200b\u6539\u4e3a\u200b\u653b\u51fb\u200b\u81ea\u5df1\uff0c\u200b\u9020\u6210\u200b\u7684\u200b\u4f24\u5bb3\u200b\u7b49\u4e8e\u200b\u81ea\u8eab\u200b\u529b\u91cf\u200b\u7684\u200b\u6570\u503c\u3002"
       },
       "tooltip_stacks_texts": {
-        "en": "When performing an action, 25% chance to instead hit itself equal to its strength. Lasts {stacks} turns.",
-        "zh": "\u6267\u884c\u884c\u52a8\u65f6\uff0c\r\n\u6709 25% \u7684\u51e0\u7387\u6539\u4e3a\u653b\u51fb\u81ea\u5df1\uff0c\r\n\u4f24\u5bb3\u7b49\u540c\u4e8e\u5176\u529b\u91cf\u3002\u6301\u7eed {stacks} \u56de\u5408\u3002"
+        "en": "When performing an action, 33% chance to instead hit itself equal to its strength. Lasts {stacks} turns.",
+        "zh": "\u884c\u52a8\u200b\u65f6\uff0c\u200b\u6709\u200b33%\u200b\u7684\u200b\u51e0\u7387\u200b\u6539\u4e3a\u200b\u653b\u51fb\u200b\u81ea\u5df1\uff0c\u200b\u9020\u6210\u200b\u7684\u200b\u4f24\u5bb3\u200b\u7b49\u4e8e\u200b\u81ea\u8eab\u200b\u529b\u91cf\u200b\u7684\u200b\u6570\u503c\u3002\u200b\u6548\u679c\u200b\u6301\u7eed\u200b{stacks}\u200b\u4e2a\u200b\u56de\u5408\u3002"
       }
     },
     {
@@ -600,12 +624,12 @@
       "tooltip_stacks_key": "KEYWORD_CONUP_DESC",
       "name_texts": {
         "en": "Constitution Up",
-        "zh": "\u4f53\u8d28\u63d0\u5347"
+        "zh": "\u4f53\u8d28\u200b\u63d0\u5347"
       },
       "tooltip_texts": {},
       "tooltip_stacks_texts": {
         "en": "Constitution increased by {stacks}.\nConstitution affects max health and post-battle health regen.",
-        "zh": "\u4f53\u8d28\u589e\u52a0 {stacks} \u70b9\u3002\r\n\u4f53\u8d28\u5f71\u54cd\u6700\u5927\u751f\u547d\u503c\u548c\u6218\u540e\u751f\u547d\u6062\u590d\u3002"
+        "zh": "\u4f53\u8d28\u200b\u63d0\u5347\u200b{stacks}\u200b\u3002\n\u4f53\u200b\u8d28\u200b\u5f71\u54cd\u200b\u751f\u547d\u200b\u4e0a\u9650\u200b\u548c\u200b\u751f\u547d\u200b\u5728\u200b\u6218\u573a\u200b\u4e4b\u5916\u200b\u7684\u200b\u81ea\u7136\u200b\u6062\u590d\u3002"
       }
     },
     {
@@ -618,12 +642,12 @@
       "tooltip_stacks_key": "KEYWORD_CONDOWN_DESC",
       "name_texts": {
         "en": "Constitution Down",
-        "zh": "\u4f53\u8d28\u4e0b\u964d"
+        "zh": "\u4f53\u200b\u8d28\u200b\u4e0b\u200b\u964d"
       },
       "tooltip_texts": {},
       "tooltip_stacks_texts": {
         "en": "Constitution decreased by {absstacks}.\nConstitution affects max health and post-battle health regen.",
-        "zh": "\u4f53\u8d28\u51cf\u5c11 {absstacks} \u70b9\u3002\r\n\u4f53\u8d28\u5f71\u54cd\u6700\u5927\u751f\u547d\u503c\u548c\u6218\u540e\u751f\u547d\u6062\u590d\u3002"
+        "zh": "\u4f53\u200b\u8d28\u200b\u4e0b\u200b\u964d\u200b{absstacks}\u200b\u3002\n\u4f53\u200b\u8d28\u200b\u5f71\u54cd\u200b\u751f\u547d\u200b\u4e0a\u9650\u200b\u548c\u200b\u751f\u547d\u200b\u5728\u200b\u6218\u573a\u200b\u4e4b\u5916\u200b\u7684\u200b\u81ea\u7136\u200b\u6062\u590d\u3002"
       }
     },
     {
@@ -641,7 +665,7 @@
       "tooltip_texts": {},
       "tooltip_stacks_texts": {
         "en": "Attack the next {stacks} things that damage you automatically.",
-        "zh": "\u81ea\u52a8\u653b\u51fb\u63a5\u4e0b\u6765\u7684 {stacks} \u4e2a\u5bf9\u4f60\u9020\u6210\u4f24\u5bb3\u7684\u76ee\u6807\u3002"
+        "zh": "\u63a5\u200b\u4e0b\u6765\u200b{stacks}\u200b\u6b21\u200b\u53d7\u5230\u200b\u4f24\u5bb3\u200b\u65f6\uff0c\u200b\u81ea\u52a8\u200b\u653b\u51fb\u200b\u5bf9\u200b\u4f60\u200b\u9020\u6210\u200b\u4f24\u5bb3\u200b\u7684\u200b\u4e1c\u897f\u3002"
       }
     },
     {
@@ -654,12 +678,12 @@
       "tooltip_stacks_key": "KEYWORD_CRITCHANCE_DESC",
       "name_texts": {
         "en": "Crit Chance Up",
-        "zh": "\u66b4\u51fb\u7387\u63d0\u5347"
+        "zh": "\u66b4\u51fb\u200b\u51e0\u7387\u200b\u589e\u52a0"
       },
       "tooltip_texts": {},
       "tooltip_stacks_texts": {
         "en": "Crit Chance increased by {stacks}%",
-        "zh": "\u66b4\u51fb\u7387\u63d0\u5347 {stacks}%"
+        "zh": "\u66b4\u51fb\u200b\u51e0\u7387\u200b\u589e\u52a0\u200b{stacks}%"
       }
     },
     {
@@ -672,15 +696,15 @@
       "tooltip_stacks_key": "KEYWORD_WPOISONLACE_DESC",
       "name_texts": {
         "en": "Poison Lace (Weapon)",
-        "zh": "\u6d82\u6bd2 (\u6b66\u5668)"
+        "zh": "\u6dec\u6bd2\u200b\uff08\u6b66\u5668\uff09"
       },
       "tooltip_texts": {
         "en": "Your weapon inflicts Poison.",
-        "zh": "\u4f60\u7684\u6b66\u5668\u65bd\u52a0\u4e2d\u6bd2\u3002"
+        "zh": "\u4f60\u200b\u7684\u200b\u6b66\u5668\u200b\u4f1a\u200b\u65bd\u52a0\u200b\u4e2d\u6bd2\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "Your weapon inflicts +{stacks} Poison.",
-        "zh": "\u4f60\u7684\u6b66\u5668\u65bd\u52a0 +{stacks} \u5c42\u4e2d\u6bd2\u3002"
+        "zh": "\u4f60\u200b\u7684\u200b\u6b66\u5668\u200b\u4f1a\u200b\u591a\u65bd\u200b\u52a0\u200b{stacks}\u200b\u5c42\u3010\u200b\u4e2d\u200b\u6bd2\u3011\u3002"
       }
     },
     {
@@ -693,11 +717,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Cursed",
-        "zh": "\u8bc5\u5492"
+        "zh": "\u88ab\u200b\u8bc5\u5492\u200b\u4e86"
       },
       "tooltip_texts": {
         "en": "This item cannot be unequipped once equipped.",
-        "zh": "\u6b64\u7269\u54c1\u88c5\u5907\u540e\u65e0\u6cd5\u5378\u4e0b\u3002"
+        "zh": "\u8fd9\u200b\u4ef6\u200b\u7269\u54c1\u200b\u53ea\u8981\u200b\u88c5\u5907\u200b\u5c31\u200b\u5378\u200b\u4e0d\u200b\u4e0b\u6765\u200b\u4e86\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -711,15 +735,15 @@
       "tooltip_stacks_key": "KEYWORD_DAMAGEUP_DESC",
       "name_texts": {
         "en": "Damage Up",
-        "zh": "\u4f24\u5bb3\u63d0\u5347"
+        "zh": "\u4f24\u5bb3\u200b\u63d0\u5347"
       },
       "tooltip_texts": {
         "en": "Increases the damage (or heal) of its basic attack.",
-        "zh": "\u589e\u52a0\u5176\u57fa\u7840\u653b\u51fb\u7684\u4f24\u5bb3\uff08\u6216\u6cbb\u7597\u91cf\uff09\u3002"
+        "zh": "\u666e\u901a\u200b\u653b\u51fb\u200b\u7684\u200b\u4f24\u5bb3\u200b\uff08\u6216\u200b\u6cbb\u7597\u200b\u6548\u679c\uff09\u200b\u63d0\u5347\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "Basic attack damage increased by {stacks}.",
-        "zh": "\u57fa\u7840\u653b\u51fb\u4f24\u5bb3\u589e\u52a0 {stacks} \u70b9\u3002"
+        "zh": "\u666e\u901a\u200b\u653b\u51fb\u200b\u4f24\u5bb3\u200b\u63d0\u5347\u200b{stacks}\u200b\u3002"
       }
     },
     {
@@ -732,15 +756,15 @@
       "tooltip_stacks_key": "KEYWORD_DAMAGEDOWN_DESC",
       "name_texts": {
         "en": "Damage Down",
-        "zh": "\u4f24\u5bb3\u4e0b\u964d"
+        "zh": "\u4f24\u5bb3\u200b\u4e0b\u964d"
       },
       "tooltip_texts": {
         "en": "Decreases the damage (or heal) of its basic attack.",
-        "zh": "\u51cf\u5c11\u5176\u57fa\u7840\u653b\u51fb\u7684\u4f24\u5bb3\uff08\u6216\u6cbb\u7597\u91cf\uff09\u3002"
+        "zh": "\u666e\u901a\u200b\u653b\u51fb\u200b\u7684\u200b\u4f24\u5bb3\u200b\uff08\u6216\u200b\u6cbb\u7597\u200b\u6548\u679c\uff09\u200b\u4e0b\u964d\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "Basic attack damage decreased by {absstacks}.",
-        "zh": "\u57fa\u7840\u653b\u51fb\u4f24\u5bb3\u51cf\u5c11 {absstacks} \u70b9\u3002"
+        "zh": "\u666e\u901a\u200b\u653b\u51fb\u200b\u4f24\u5bb3\u200b\u4e0b\u964d\u200b{absstacks}\u200b\u3002"
       }
     },
     {
@@ -753,15 +777,15 @@
       "tooltip_stacks_key": "KEYWORD_DELAYEDPAIN_DESC",
       "name_texts": {
         "en": "Delayed Pain",
-        "zh": "\u5ef6\u8fdf\u75db\u695a"
+        "zh": "\u75bc\u75db\u5ef6\u8fdf"
       },
       "tooltip_texts": {
         "en": "Delayed damage is taken all at once at the end of your turn.",
-        "zh": "\u5ef6\u8fdf\u4f24\u5bb3\u5c06\u5728\u4f60\u56de\u5408\u7ed3\u675f\u65f6\u4e00\u6b21\u6027\u7ed3\u7b97\u3002"
+        "zh": "\u6240\u200b\u53d7\u200b\u4f24\u5bb3\u200b\u5ef6\u8fdf\uff0c\u200b\u5728\u200b\u4f60\u200b\u56de\u5408\u200b\u7ed3\u675f\u200b\u65f6\u200b\u4e00\u200b\u6b21\u200b\u6027\u200b\u7ed3\u7b97\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "Takes {stacks} damage at the end of its turn.",
-        "zh": "\u5728\u56de\u5408\u7ed3\u675f\u65f6\u53d7\u5230 {stacks} \u70b9\u4f24\u5bb3\u3002"
+        "zh": "\u56de\u5408\u200b\u7ed3\u675f\u200b\u65f6\u200b\u53d7\u5230\u200b{stacks}\u200b\u70b9\u200b\u4f24\u5bb3\u3002"
       }
     },
     {
@@ -774,11 +798,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Lucifer Rune",
-        "zh": "\u8def\u897f\u6cd5\u7b26\u6587"
+        "zh": "\u8def\u200b\u897f\u6cd5\u200b\u7b26\u6587"
       },
       "tooltip_texts": {
         "en": "Imbues its owner with an extra turn and the power to Bite",
-        "zh": "\u8d4b\u4e88\u62e5\u6709\u8005\u989d\u5916\u56de\u5408\u4ee5\u53ca\u6495\u54ac\u7684\u80fd\u529b\u3002"
+        "zh": "\u4ee4\u200b\u4e3b\u4eba\u200b\u83b7\u5f97\u200b\u80fd\u529b\u200b\u201c\u200b\u6211\u200b\u54ac\u200b\u201d\u200b\u548c\u200b1\u200b\u4e2a\u989d\u200b\u5916\u200b\u56de\u5408\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -796,7 +820,7 @@
       },
       "tooltip_texts": {
         "en": "Imbues its owner with the ability to repel attackers.",
-        "zh": "\u8d4b\u4e88\u62e5\u6709\u8005\u51fb\u9000\u653b\u51fb\u8005\u7684\u80fd\u529b\u3002"
+        "zh": "\u4ee4\u200b\u4e3b\u4eba\u200b\u80fd\u591f\u200b\u6321\u5f00\u200b\u653b\u51fb\u8005\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -814,7 +838,7 @@
       },
       "tooltip_texts": {
         "en": "Imbues its owner's basic attack with +2 Damage and +2 Burn.",
-        "zh": "\u8d4b\u4e88\u62e5\u6709\u8005\u7684\r\n\u57fa\u7840\u653b\u51fb +2 \u4f24\u5bb3\u548c +2 \u71c3\u70e7\u3002"
+        "zh": "\u4ee4\u200b\u4e3b\u4eba\u200b\u7684\u200b\u666e\u901a\u200b\u653b\u51fb\u200b\u83b7\u5f97\u200b\u4f24\u5bb3\u200b+2\u200b\u548c\u200b\u3010\u707c\u200b\u70e7\u3011\u200b+\u200b2\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -828,11 +852,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Hexagram Rune",
-        "zh": "\u516d\u8292\u661f\u7b26\u6587"
+        "zh": "\u516d\u200b\u8292\u661f\u200b\u7b26\u6587"
       },
       "tooltip_texts": {
         "en": "Imbues its owner with +1 Movement Range and +3 Trample Damage",
-        "zh": "\u8d4b\u4e88\u62e5\u6709\u8005 +1 \u79fb\u52a8\u8ddd\u79bb\u548c\r\n +3 \u8df5\u8e0f\u4f24\u5bb3"
+        "zh": "\u4ee4\u200b\u4e3b\u4eba\u200b\u79fb\u52a8\u200b\u8303\u56f4\u200b+\u200b1\u3001\u200b\u6a2a\u51b2\u200b\u76f4\u200b\u649e\u200b\u4f24\u5bb3\u200b+\u200b3\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -846,11 +870,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Pentagram Rune",
-        "zh": "\u4e94\u8292\u661f\u7b26\u6587"
+        "zh": "\u4e94\u200b\u8292\u661f\u7b26\u6587"
       },
       "tooltip_texts": {
         "en": "Imbues its owner with an extra turn and the power to Summon",
-        "zh": "\u8d4b\u4e88\u62e5\u6709\u8005\u989d\u5916\u56de\u5408\u4ee5\u53ca\u53ec\u5524\u7684\u80fd\u529b\u3002"
+        "zh": "\u4ee4\u200b\u4e3b\u4eba\u200b\u83b7\u5f97\u200b\u80fd\u529b\u200b\u201c\u200b\u53ec\u5524\u200b\u201d\u200b\u548c\u200b1\u200b\u4e2a\u989d\u200b\u5916\u200b\u56de\u5408\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -864,12 +888,12 @@
       "tooltip_stacks_key": "KEYWORD_DEXUP_DESC",
       "name_texts": {
         "en": "Dexterity Up",
-        "zh": "\u7075\u5de7\u63d0\u5347"
+        "zh": "\u534f\u8c03\u6027\u200b\u63d0\u5347"
       },
       "tooltip_texts": {},
       "tooltip_stacks_texts": {
         "en": "Dexterity increased by {stacks}.\nDexterity affects ranged attack and ranged ability damage.",
-        "zh": "\u7075\u5de7\u589e\u52a0 {stacks} \u70b9\u3002\r\n\u7075\u5de7\u5f71\u54cd\u8fdc\u7a0b\u653b\u51fb\u548c\u8fdc\u7a0b\u6280\u80fd\u4f24\u5bb3\u3002"
+        "zh": "\u534f\u8c03\u6027\u200b\u63d0\u5347\u200b{stacks}\u200b\u3002\n\u534f\u8c03\u6027\u200b\u5f71\u54cd\u200b\u8fdc\u7a0b\u200b\u653b\u51fb\u200b\u548c\u200b\u8fdc\u7a0b\u200b\u80fd\u529b\u200b\u7684\u200b\u4f24\u5bb3\u3002"
       }
     },
     {
@@ -882,12 +906,12 @@
       "tooltip_stacks_key": "KEYWORD_DEXDOWN_DESC",
       "name_texts": {
         "en": "Dexterity Down",
-        "zh": "\u7075\u5de7\u4e0b\u964d"
+        "zh": "\u534f\u8c03\u6027\u200b\u4e0b\u964d"
       },
       "tooltip_texts": {},
       "tooltip_stacks_texts": {
         "en": "Dexterity decreased by {absstacks}.\nDexterity affects ranged attack and ranged ability damage.",
-        "zh": "\u7075\u5de7\u51cf\u5c11 {absstacks} \u70b9\u3002\r\n\u7075\u5de7\u5f71\u54cd\u8fdc\u7a0b\u653b\u51fb\u548c\u8fdc\u7a0b\u6280\u80fd\u4f24\u5bb3\u3002"
+        "zh": "\u534f\u8c03\u6027\u200b\u4e0b\u964d\u200b{absstacks}\u200b\u3002\n\u534f\u8c03\u6027\u200b\u5f71\u54cd\u200b\u8fdc\u7a0b\u200b\u653b\u51fb\u200b\u548c\u200b\u8fdc\u7a0b\u200b\u80fd\u529b\u200b\u7684\u200b\u4f24\u5bb3\u3002"
       }
     },
     {
@@ -900,15 +924,15 @@
       "tooltip_stacks_key": "KEYWORD_DIMINISHREGEN_DESC",
       "name_texts": {
         "en": "Health Regen (Diminishing)",
-        "zh": "\u751f\u547d\u6062\u590d (\u9012\u51cf)"
+        "zh": "\u751f\u547d\u200b\u81ea\u7136\u200b\u6062\u590d\u200b\uff08\u9012\u51cf\uff09"
       },
       "tooltip_texts": {
         "en": "Regen health at the end of its turn, then decreases Health Regen by 1.",
-        "zh": "\u5728\u56de\u5408\u7ed3\u675f\u65f6\u6062\u590d\u751f\u547d\u503c\uff0c\r\n\u7136\u540e\u751f\u547d\u6062\u590d\u51cf\u5c11 1\u3002"
+        "zh": "\u56de\u5408\u200b\u7ed3\u675f\u200b\u65f6\uff0c\u200b\u6062\u590d\u200b\u751f\u547d\uff0c\u200b\u7136\u540e\u200b\u751f\u547d\u200b\u81ea\u7136\u200b\u6062\u590d\u200b\u5e45\u5ea6\u200b-\u200b1\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "Regen {stacks} health at the end of its turn, then decreases Health Regen by 1.",
-        "zh": "\u56de\u5408\u7ed3\u675f\u65f6\u6062\u590d {stacks} \u70b9\u751f\u547d\u503c\uff0c\r\n\u7136\u540e\u751f\u547d\u6062\u590d\u51cf\u5c11 1\u3002"
+        "zh": "\u56de\u5408\u200b\u7ed3\u675f\u200b\u65f6\uff0c\u200b\u81ea\u7136\u200b\u6062\u590d\u200b{stacks}\u200b\u70b9\u200b\u751f\u547d\uff0c\u200b\u7136\u540e\u200b\u751f\u547d\u200b\u81ea\u7136\u200b\u6062\u590d\u200b\u5e45\u5ea6\u200b-\u200b1\u3002"
       }
     },
     {
@@ -925,7 +949,7 @@
       },
       "tooltip_texts": {
         "en": "Blocks an entire instance of incoming damage.",
-        "zh": "\u62b5\u6321\u4e00\u6b21\u5b8c\u6574\u7684\u53d7\u51fb\u4f24\u5bb3\u3002"
+        "zh": "\u5b8c\u5168\u200b\u6321\u200b\u4f4f\u200b1\u200b\u6bb5\u200b\u4f24\u5bb3\uff0c\u200b\u4f24\u5bb3\u200b\u6765\u6e90\u200b\u4e0d\u9650\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -943,11 +967,11 @@
       },
       "tooltip_texts": {
         "en": "Dodges the next attack.",
-        "zh": "\u95ea\u907f\u4e0b\u4e00\u6b21\u653b\u51fb\u3002"
+        "zh": "\u8eb2\u200b\u5f00\u4e0b\u200b\u4e00\u200b\u6b21\u200b\u653b\u51fb\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "Dodges the next {stacks} attacks.",
-        "zh": "\u95ea\u907f\u63a5\u4e0b\u6765\u7684 {stacks} \u6b21\u653b\u51fb\u3002"
+        "zh": "\u8eb2\u200b\u5f00\u63a5\u200b\u4e0b\u6765\u200b\u7684\u200b{stacks}\u200b\u6b21\u200b\u653b\u51fb\u3002"
       }
     },
     {
@@ -960,12 +984,12 @@
       "tooltip_stacks_key": "KEYWORD_DODGECHANCE_DESC",
       "name_texts": {
         "en": "Dodge Chance",
-        "zh": "\u95ea\u907f\u7387"
+        "zh": "\u95ea\u200b\u907f\u200b\u51e0\u7387"
       },
       "tooltip_texts": {},
       "tooltip_stacks_texts": {
         "en": "Dodge Chance increased by {stacks}%.",
-        "zh": "\u95ea\u907f\u7387\u63d0\u5347 {stacks}%\u3002"
+        "zh": "\u95ea\u200b\u907f\u200b\u51e0\u7387\u200b\u589e\u52a0\u200b{stacks}%\u200b\u3002"
       }
     },
     {
@@ -978,11 +1002,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Doomed",
-        "zh": "\u6b7b\u5492"
+        "zh": "\u5fc5\u6b7b\u200b\u65e0\u7591"
       },
       "tooltip_texts": {
         "en": "Ticks down at the end of your turn. When it hits 0, Die.",
-        "zh": "\u5728\u4f60\u7684\u56de\u5408\u7ed3\u675f\u65f6\u5012\u6570\u3002\r\n\u5f53\u964d\u81f3 0 \u65f6\uff0c\u6b7b\u4ea1\u3002"
+        "zh": "\u5728\u200b\u4f60\u200b\u56de\u5408\u200b\u7ed3\u675f\u200b\u65f6\u200b\u5012\u6570\u200b\u4e00\u200b\u6b21\uff0c\u200b\u6570\u200b\u5230\u200b0\u65f6\uff0c\u200b\u6b7b\u4ea1\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -996,11 +1020,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Double Action",
-        "zh": "\u53cc\u91cd\u884c\u52a8"
+        "zh": "\u4e8c\u200b\u6b21\u200b\u884c\u52a8"
       },
       "tooltip_texts": {
         "en": "The next ability you use is used an additional time for free.",
-        "zh": "\u4f60\u4f7f\u7528\u7684\u4e0b\u4e00\u4e2a\u6280\u80fd\u4f1a\u514d\u8d39\u989d\u5916\u65bd\u653e\u4e00\u6b21\u3002"
+        "zh": "\u4f60\u200b\u4e0b\u200b\u4e00\u200b\u6b21\u200b\u7528\u200b\u7684\u200b\u80fd\u529b\u200b\u4f1a\u200b\u514d\u200b\u8d39\u989d\u200b\u5916\u200b\u4f7f\u7528\u200b\u4e00\u6b21\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1014,11 +1038,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Double Cast",
-        "zh": "\u53cc\u91cd\u65bd\u6cd5"
+        "zh": "\u4e8c\u200b\u6b21\u200b\u65bd\u6cd5"
       },
       "tooltip_texts": {
         "en": "The next spell you cast is cast an additional time for free.",
-        "zh": "\u4f60\u65bd\u653e\u7684\u4e0b\u4e00\u4e2a\u6cd5\u672f\u4f1a\u514d\u8d39\u989d\u5916\u65bd\u653e\u4e00\u6b21\u3002"
+        "zh": "\u4f60\u200b\u4e0b\u4e00\u200b\u6b21\u200b\u65bd\u653e\u200b\u6cd5\u672f\u200b\u4f1a\u200b\u514d\u200b\u8d39\u989d\u200b\u5916\u65bd\u200b\u653e\u200b\u4e00\u200b\u6b21\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1032,11 +1056,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Double Cast (This Turn)",
-        "zh": "\u53cc\u91cd\u65bd\u6cd5 (\u672c\u56de\u5408)"
+        "zh": "\u4e8c\u200b\u6b21\u200b\u65bd\u6cd5\u200b\uff08\u56de\u5408\u9650\u5b9a\uff09"
       },
       "tooltip_texts": {
         "en": "The next spell you cast this turn is cast an additional time for free.",
-        "zh": "\u4f60\u672c\u56de\u5408\u65bd\u653e\u7684\u4e0b\u4e00\u4e2a\u6cd5\u672f\u4f1a\u514d\u8d39\u989d\u5916\u65bd\u653e\u4e00\u6b21\u3002"
+        "zh": "\u4f60\u200b\u8fd9\u4e2a\u200b\u56de\u5408\u200b\u4e0b\u200b\u4e00\u200b\u6b21\u200b\u65bd\u653e\u200b\u7684\u200b\u6cd5\u672f\u200b\u4f1a\u200b\u514d\u200b\u8d39\u989d\u200b\u5916\u65bd\u200b\u653e\u200b\u4e00\u200b\u6b21\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1050,11 +1074,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Drowsy",
-        "zh": "\u56f0\u5026"
+        "zh": "\u660f\u660f\u6b32\u200b\u7761"
       },
       "tooltip_texts": {
         "en": "Falls asleep at the end of its turn.",
-        "zh": "\u5728\u56de\u5408\u7ed3\u675f\u65f6\u9677\u5165\u7761\u7720\u3002"
+        "zh": "\u81ea\u5df1\u200b\u56de\u5408\u200b\u7ed3\u675f\u200b\u65f6\u4f1a\u200b\u7761\u7740\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1068,11 +1092,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Possessed by Dybbuk",
-        "zh": "\u88ab\u6234\u5e03\u514b\u9644\u8eab"
+        "zh": "\u9644\u9b3c\u200b\u4e0a\u200b\u8eab"
       },
       "tooltip_texts": {
         "en": "This cat is possessed by Dybbuk. Down this cat to exorcise him.",
-        "zh": "\u8fd9\u53ea\u732b\u88ab\u6234\u5e03\u514b\u9644\u8eab\u4e86\u3002\r\n\u51fb\u5012\u8fd9\u53ea\u732b\u4ee5\u9a71\u9010\u4ed6\u3002"
+        "zh": "\u9644\u9b3c\u200b\u4e0a\u200b\u4e86\u200b\u8fd9\u200b\u53ea\u200b\u732b\u200b\u7684\u200b\u8eab\uff0c\u200b\u628a\u732b\u200b\u6253\u5012\uff0c\u200b\u5c31\u200b\u80fd\u200b\u628a\u200b\u4ed6\u200b\u8d76\u200b\u51fa\u6765\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1086,11 +1110,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Elite Buff: Absorbent",
-        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u5438\u6536"
+        "zh": "\u7cbe\u82f1\u200b\u589e\u76ca\uff1a\u200b\u5438\u6536"
       },
       "tooltip_texts": {
         "en": "Drains all unused mana from units when they end their turn, and deals damage to them equal to the amount of mana drained.",
-        "zh": "\u5f53\u5355\u4f4d\u7ed3\u675f\u56de\u5408\u65f6\uff0c\r\n\u5438\u53d6\u5176\u6240\u6709\u672a\u4f7f\u7528\u7684\u6cd5\u529b\u503c\uff0c\r\n\u5e76\u9020\u6210\u7b49\u540c\u4e8e\u5438\u53d6\u6cd5\u529b\u503c\u7684\u4f24\u5bb3\u3002"
+        "zh": "\u5176\u4ed6\u200b\u5355\u4f4d\u200b\u7ed3\u675f\u200b\u56de\u5408\u200b\u65f6\uff0c\u200b\u53ea\u8981\u200b\u5b83\u4eec\u200b\u8fd8\u200b\u6709\u200b\u9b54\u80fd\uff0c\u200b\u5c31\u200b\u5168\u90e8\u200b\u5438\u8d70\u3002\u200b\u5438\u53d6\u200b\u4e86\u200b\u591a\u5c11\u200b\u9b54\u80fd\uff0c\u200b\u5c31\u200b\u5206\u522b\u200b\u5bf9\u200b\u5b83\u4eec\u200b\u9020\u6210\u200b\u591a\u200b\u5c11\u200b\u4f24\u5bb3\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1104,11 +1128,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Elite Buff: Flaming",
-        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u71c3\u70e7"
+        "zh": "\u7cbe\u82f1\u200b\u589e\u76ca\uff1a\u200b\u71c3\u70e7"
       },
       "tooltip_texts": {
         "en": "Fire Immune. Leaves a trail of fire. Applies Burn 1 to attackers.",
-        "zh": "\u706b\u7130\u514d\u75ab\u3002\u7559\u4e0b\u4e00\u6761\u706b\u7130\u8def\u5f84\u3002\r\n\u5bf9\u653b\u51fb\u8005\u65bd\u52a0 1 \u5c42\u71c3\u70e7\u3002"
+        "zh": "\u514d\u200b\u75ab\u706b\u7130\u3002\u200b\u79fb\u52a8\u200b\u65f6\u8eab\u540e\u200b\u7559\u4e0b\u200b\u706b\u7130\u3002\u200b\u53d7\u5230\u200b\u653b\u51fb\u200b\u65f6\u4ee4\u200b\u5bf9\u200b\u65b9\u200b\u83b7\u5f97\u200b1\u5c42\u3010\u707c\u200b\u70e7\u3011\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1122,11 +1146,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Elite Buff: Mad",
-        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u75af\u72c2"
+        "zh": "\u7cbe\u82f1\u200b\u589e\u76ca\uff1a\u200b\u766b\u72c2"
       },
       "tooltip_texts": {
         "en": "Madness. Gains +1 all stats and heals 4 when it gets a kill.",
-        "zh": "\u75af\u72c2\u3002\r\n\u51fb\u6740\u65f6\u83b7\u5f97\u5168\u5c5e\u6027 +1 \u5e76\u6062\r\n\u590d 4 \u70b9\u751f\u547d\u503c\u3002"
+        "zh": "\u3010\u766b\u200b\u72c2\u3011\u3002\u200b\u6bcf\u200b\u5f53\u51fb\u200b\u6740\u200b\u5355\u4f4d\uff0c\u200b\u6240\u6709\u200b\u5c5e\u6027\u200b+\u200b1\uff0c\u200b\u800c\u4e14\u200b\u6062\u590d\u200b4\u70b9\u200b\u751f\u547d\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1140,11 +1164,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Elite Buff: Shielded",
-        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u62a4\u76fe"
+        "zh": "\u7cbe\u82f1\u200b\u589e\u76ca\uff1a\u200b\u9632\u62a4"
       },
       "tooltip_texts": {
         "en": "At the start of each round, if it has less than 4 [img:shield], set [img:shield] to 4. -20% max health.",
-        "zh": "\u5728\u6bcf\u56de\u5408\u5f00\u59cb\u65f6\uff0c\r\n\u5982\u679c\u62e5\u6709\u7684 [img:shield] \u5c11\u4e8e 4\uff0c\r\n\u5219\u5c06 [img:shield] \u8bbe\u4e3a 4\u3002\r\n-20% \u6700\u5927\u751f\u547d\u503c\u3002"
+        "zh": "\u6bcf\u200b\u8f6e\u200b\u5f00\u59cb\u200b\u65f6\uff0c\u200b\u5982\u679c\u200b[img:shield]\u200b\u5c42\u6570\u200b\u5c11\u4e8e\u200b4\uff0c\u200b\u90a3\u4e48\u200b[img:shield]\u200b\u6570\u91cf\u200b\u53d8\u200b\u62104\u3002\u200b\u751f\u547d\u200b\u4e0a\u9650\u200b-20%\u200b\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1158,11 +1182,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Elite Buff: Shielded",
-        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u62a4\u76fe"
+        "zh": "\u7cbe\u82f1\u200b\u589e\u76ca\uff1a\u200b\u9632\u62a4"
       },
       "tooltip_texts": {
         "en": "At the start of each round, if it has less than 8 [img:shield], set [img:shield] to 8. -20% max health.",
-        "zh": "\u5728\u6bcf\u56de\u5408\u5f00\u59cb\u65f6\uff0c\r\n\u5982\u679c\u62e5\u6709\u7684 [img:shield] \u5c11\u4e8e 8\uff0c\r\n\u5219\u5c06 [img:shield] \u8bbe\u4e3a 8\u3002\r\n-20% \u6700\u5927\u751f\u547d\u503c\u3002"
+        "zh": "\u6bcf\u200b\u8f6e\u200b\u5f00\u59cb\u200b\u65f6\uff0c\u200b\u5982\u679c\u200b[img:shield]\u200b\u5c42\u6570\u200b\u5c11\u4e8e\u200b8\uff0c\u200b\u90a3\u4e48\u200b[img:shield]\u200b\u6570\u91cf\u200b\u53d8\u200b\u62108\u3002\u200b\u751f\u547d\u200b\u4e0a\u9650\u200b-20%\u200b\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1176,11 +1200,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Elite Buff: Shielded",
-        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u62a4\u76fe"
+        "zh": "\u7cbe\u82f1\u200b\u589e\u76ca\uff1a\u200b\u9632\u62a4"
       },
       "tooltip_texts": {
         "en": "At the start of each round, if it has less than 12 [img:shield], set [img:shield] to 12. -20% max health.",
-        "zh": "\u5728\u6bcf\u56de\u5408\u5f00\u59cb\u65f6\uff0c\r\n\u5982\u679c\u62e5\u6709\u7684 [img:shield] \u5c11\u4e8e 12\uff0c\r\n\u5219\u5c06 [img:shield] \u8bbe\u4e3a 12\u3002\r\n-20% \u6700\u5927\u751f\u547d\u503c\u3002"
+        "zh": "\u6bcf\u200b\u8f6e\u200b\u5f00\u59cb\u200b\u65f6\uff0c\u200b\u5982\u679c\u200b[img:shield]\u200b\u5c42\u6570\u200b\u5c11\u4e8e\u200b12\uff0c\u200b\u90a3\u4e48\u200b[img:shield]\u200b\u6570\u91cf\u200b\u53d8\u6210\u200b12\u3002\u200b\u751f\u547d\u200b\u4e0a\u9650\u200b-20%\u200b\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1194,11 +1218,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Elite Buff: Shielded",
-        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u62a4\u76fe"
+        "zh": "\u7cbe\u82f1\u200b\u589e\u76ca\uff1a\u200b\u9632\u62a4"
       },
       "tooltip_texts": {
         "en": "At the start of each round, if it has less than 16 [img:shield], set [img:shield] to 16. -20% max health.",
-        "zh": "\u5728\u6bcf\u56de\u5408\u5f00\u59cb\u65f6\uff0c\r\n\u5982\u679c\u62e5\u6709\u7684 [img:shield] \u5c11\u4e8e 16\uff0c\r\n\u5219\u5c06 [img:shield] \u8bbe\u4e3a 16\u3002\r\n-20% \u6700\u5927\u751f\u547d\u503c\u3002"
+        "zh": "\u6bcf\u200b\u8f6e\u200b\u5f00\u59cb\u200b\u65f6\uff0c\u200b\u5982\u679c\u200b[img:shield]\u200b\u5c42\u6570\u200b\u5c11\u4e8e\u200b16\uff0c\u200b\u90a3\u4e48\u200b[img:shield]\u200b\u6570\u91cf\u200b\u53d8\u6210\u200b16\u3002\u200b\u751f\u547d\u200b\u4e0a\u9650\u200b-20%\u200b\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1212,11 +1236,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Elite Buff: Spiky",
-        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u5c16\u523a"
+        "zh": "\u7cbe\u82f1\u200b\u589e\u76ca\uff1a\u200b\u5c16\u523a"
       },
       "tooltip_texts": {
         "en": "+1 Thorns",
-        "zh": "+1 \u8346\u68d8"
+        "zh": "\u3010\u5c16\u523a\u3011\u200b+1"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1230,11 +1254,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Elite Buff: Tough",
-        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u5f3a\u97e7"
+        "zh": "\u7cbe\u82f1\u200b\u589e\u76ca\uff1a\u200b\u575a\u200b\u5f3a"
       },
       "tooltip_texts": {
         "en": "+1 Brace",
-        "zh": "+1 \u62a4\u7532"
+        "zh": "\u3010\u62db\u67b6\u3011\u200b+1"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1248,11 +1272,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Elite Buff: Bouncy",
-        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u5f39\u529b"
+        "zh": "\u7cbe\u82f1\u200b\u589e\u76ca\uff1a\u200b\u5f39\u6027"
       },
       "tooltip_texts": {
         "en": "When hit, bounces itself and its attacker apart.",
-        "zh": "\u88ab\u51fb\u4e2d\u65f6\uff0c\u5c06\u81ea\u8eab\u4e0e\u653b\u51fb\u8005\u4e92\u76f8\u5f39\u5f00\u3002"
+        "zh": "\u88ab\u200b\u51fb\u200b\u4e2d\u200b\u65f6\uff0c\u200b\u4f1a\u200b\u628a\u200b\u81ea\u5df1\u200b\u548c\u200b\u5bf9\u65b9\u200b\u5f39\u5f00\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1266,11 +1290,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Elite Buff: Creepy",
-        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u60ca\u609a"
+        "zh": "\u7cbe\u82f1\u200b\u589e\u76ca\uff1a\u200b\u7c98\u6db2"
       },
       "tooltip_texts": {
         "en": "Basic attack inflicts Poison. Leaves a trail of creep.",
-        "zh": "\u57fa\u7840\u653b\u51fb\u65bd\u52a0\u4e2d\u6bd2\u3002\u7559\u4e0b\u4e00\u6761\u7c98\u6db2\u8def\u5f84\u3002"
+        "zh": "\u666e\u901a\u200b\u653b\u51fb\u200b\u4f1a\u200b\u65bd\u200b\u52a0\u3010\u200b\u4e2d\u200b\u6bd2\u3011\u3002\u200b\u79fb\u52a8\u200b\u65f6\u8eab\u540e\u200b\u7559\u4e0b\u200b\u7c98\u6db2\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1284,11 +1308,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Elite Buff: Damaging",
-        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u4f24\u5bb3"
+        "zh": "\u7cbe\u82f1\u200b\u589e\u76ca\uff1a\u200b\u589e\u4f24"
       },
       "tooltip_texts": {
         "en": "+2 Damage",
-        "zh": "+2 \u4f24\u5bb3"
+        "zh": "\u4f24\u5bb3\u200b+2"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1302,11 +1326,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Elite Buff: Depressing",
-        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u6d88\u6c89"
+        "zh": "\u7cbe\u82f1\u200b\u589e\u76ca\uff1a\u200b\u538b\u6291"
       },
       "tooltip_texts": {
         "en": "While alive, its enemies have -1 to all stats.",
-        "zh": "\u5b58\u6d3b\u671f\u95f4\uff0c\u5176\u654c\u4eba\u5168\u5c5e\u6027 -1\u3002"
+        "zh": "\u8fd9\u4e2a\u200b\u5355\u4f4d\u200b\u5b58\u6d3b\u200b\u65f6\uff0c\u200b\u654c\u4eba\u200b\u6240\u6709\u200b\u5c5e\u6027\u200b-\u200b1\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1320,11 +1344,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Elite Buff: Evolving",
-        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u8fdb\u5316"
+        "zh": "\u7cbe\u82f1\u200b\u589e\u76ca\uff1a\u200b\u6f14\u5316"
       },
       "tooltip_texts": {
         "en": "At the end of each round, gain a random Elite Buff.",
-        "zh": "\u6bcf\u56de\u5408\u7ed3\u675f\u65f6\uff0c\u83b7\u5f97\u4e00\u4e2a\u968f\u673a\u7684\u7cbe\u82f1\u589e\u76ca\u3002"
+        "zh": "\u6bcf\u200b\u8f6e\u200b\u6b21\u200b\u7ed3\u675f\u200b\u65f6\uff0c\u200b\u968f\u673a\u200b\u83b7\u5f97\u200b1\u200b\u9879\u200b\u7cbe\u82f1\u200b\u589e\u76ca\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1338,11 +1362,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Elite Buff: Flaming",
-        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u71c3\u70e7"
+        "zh": "\u7cbe\u82f1\u200b\u589e\u76ca\uff1a\u200b\u71c3\u70e7"
       },
       "tooltip_texts": {
         "en": "Fire Immune. Leaves a trail of fire.",
-        "zh": "\u706b\u7130\u514d\u75ab\u3002\u7559\u4e0b\u4e00\u6761\u706b\u7130\u8def\u5f84\u3002"
+        "zh": "\u514d\u200b\u75ab\u706b\u7130\u3002\u200b\u79fb\u52a8\u200b\u65f6\u8eab\u540e\u200b\u7559\u4e0b\u200b\u706b\u7130\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1356,11 +1380,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Elite Buff: Hardy",
-        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u575a\u6bc5"
+        "zh": "\u7cbe\u82f1\u200b\u589e\u76ca\uff1a\u200b\u76ae\u5b9e"
       },
       "tooltip_texts": {
         "en": "Immune to stuns.",
-        "zh": "\u514d\u75ab\u6655\u7729\u3002"
+        "zh": "\u514d\u200b\u75ab\u3010\u7729\u200b\u6655\u3011\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1374,11 +1398,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Elite Buff: Healthy",
-        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u5065\u58ee"
+        "zh": "\u7cbe\u82f1\u200b\u589e\u76ca\uff1a\u200b\u5065\u5eb7"
       },
       "tooltip_texts": {
         "en": "+3 Health Regen. +20 unfilled max health.",
-        "zh": "+3 \u751f\u547d\u6062\u590d\u3002\r\n+20 \u672a\u586b\u5145\u7684\u6700\u5927\u751f\u547d\u503c\u3002"
+        "zh": "\u751f\u547d\u200b\u81ea\u7136\u200b\u6062\u590d\u200b+\u200b3\u3002\u200b\u751f\u547d\u200b\u4e0a\u9650\u200b+20\u200b\uff08\u751f\u547d\u200b\u4e0d\u200b\u8865\u6ee1\uff09\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1392,11 +1416,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Elite Buff: Infested",
-        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u5bc4\u751f"
+        "zh": "\u7cbe\u82f1\u200b\u589e\u76ca\uff1a\u200b\u6ecb\u751f"
       },
       "tooltip_texts": {
         "en": "Spawns a fly swarm when it dies.",
-        "zh": "\u6b7b\u4ea1\u65f6\u751f\u6210\u8747\u7fa4\u3002"
+        "zh": "\u6b7b\u4ea1\u200b\u65f6\u200b\u4ea7\u751f\u200b\u4e00\u200b\u7fa4\u200b\u82cd\u8747\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1410,11 +1434,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Elite Buff: Lucky",
-        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u5e78\u8fd0"
+        "zh": "\u7cbe\u82f1\u200b\u589e\u76ca\uff1a\u200b\u597d\u8fd0"
       },
       "tooltip_texts": {
         "en": "+3 [img:lck]. +10% Crit Chance. +10% Dodge Chance.",
-        "zh": "+3 [img:lck]\u3002+10% \u66b4\u51fb\u7387\u3002\r\n+10% \u95ea\u907f\u7387\u3002"
+        "zh": "[img:lck]+\u200b3\u3002\u200b\u66b4\u51fb\u200b\u51e0\u7387\u200b+10%\u200b\u3002\u200b\u95ea\u907f\u200b\u51e0\u7387\u200b+10%\u200b\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1428,11 +1452,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Elite Buff: Mad",
-        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u75af\u72c2"
+        "zh": "\u7cbe\u82f1\u200b\u589e\u76ca\uff1a\u200b\u766b\u72c2"
       },
       "tooltip_texts": {
         "en": "Madness. Takes an extra turn per round. Gains +1 all stats and heals 4 when it gets a kill.",
-        "zh": "\u75af\u72c2\u3002\u6bcf\u56de\u5408\u989d\u5916\u884c\u52a8\u4e00\u6b21\u3002\r\n\u51fb\u6740\u65f6\u83b7\u5f97\u5168\u5c5e\u6027 +1 \u5e76\u6062\r\n\u590d 4 \u70b9\u751f\u547d\u503c\u3002"
+        "zh": "\u3010\u766b\u200b\u72c2\u3011\u3002\u200b\u6bcf\u200b\u8f6e\u200b\u83b7\u5f97\u200b1\u200b\u4e2a\u989d\u200b\u5916\u200b\u56de\u5408\u3002\u200b\u6bcf\u200b\u5f53\u51fb\u200b\u6740\u200b\u5355\u4f4d\uff0c\u200b\u6240\u6709\u200b\u5c5e\u6027\u200b+\u200b1\uff0c\u200b\u800c\u4e14\u200b\u6062\u590d\u200b4\u70b9\u200b\u751f\u547d\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1446,11 +1470,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Elite Buff: Mega",
-        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u5de8\u578b"
+        "zh": "\u7cbe\u82f1\u200b\u589e\u76ca\uff1a\u200b\u5de8\u5927"
       },
       "tooltip_texts": {
         "en": "Takes one less turn per round. +50% health and damage",
-        "zh": "\u6bcf\u56de\u5408\u51cf\u5c11\u4e00\u6b21\u884c\u52a8\u3002\r\n+50% \u751f\u547d\u503c\u548c\u4f24\u5bb3"
+        "zh": "\u6bcf\u200b\u8f6e\u200b\u5c11\u200b1\u200b\u4e2a\u200b\u56de\u5408\u3002\u200b\u751f\u547d\u200b\u548c\u200b\u4f24\u5bb3\u200b+50%\u200b\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1464,11 +1488,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Elite Buff: Mirror",
-        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u955c\u50cf"
+        "zh": "\u7cbe\u82f1\u200b\u589e\u76ca\uff1a\u200b\u955c\u5b50"
       },
       "tooltip_texts": {
         "en": "Reflects all projectiles. Takes 2 damage when it reflects a projectile.",
-        "zh": "\u53cd\u5c04\u6240\u6709\u6295\u5c04\u7269\u3002\r\n\u53cd\u5c04\u6295\u5c04\u7269\u65f6\u53d7\u5230 2 \u70b9\u4f24\u5bb3\u3002"
+        "zh": "\u3010\u200b\u53cd\u5f39\u3011\u200b\u6240\u6709\u200b\u6295\u5c04\u7269\u3002\u200b\u3010\u200b\u53cd\u5f39\u3011\u200b\u6295\u5c04\u7269\u200b\u65f6\u200b\u53d7\u5230\u200b2\u70b9\u200b\u4f24\u5bb3\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1482,11 +1506,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Elite Buff: Plow",
-        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u7281\u5730"
+        "zh": "\u7cbe\u82f1\u200b\u589e\u76ca\uff1a\u200b\u7834\u571f"
       },
       "tooltip_texts": {
         "en": "Trample. Moves one space towards attackers when damaged.",
-        "zh": "\u8df5\u8e0f\u3002\u53d7\u5230\u4f24\u5bb3\u65f6\u5411\u653b\u51fb\u8005\u79fb\u52a8\u4e00\u683c\u3002"
+        "zh": "\u3010\u6a2a\u200b\u51b2\u76f4\u200b\u649e\u3011\u3002\u200b\u53d7\u5230\u200b\u4f24\u5bb3\u200b\u65f6\uff0c\u200b\u5411\u200b\u653b\u51fb\u8005\u200b\u79fb\u52a8\u200b1\u683c\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1500,11 +1524,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Elite Buff: Protected",
-        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u53d7\u4fdd\u62a4"
+        "zh": "\u7cbe\u82f1\u200b\u589e\u76ca\uff1a\u200b\u4fdd\u62a4"
       },
       "tooltip_texts": {
         "en": "At the end of each turn, set [img:divineshield] to 1 if it had no [img:divineshield]. -20% max health.",
-        "zh": "\u5728\u6bcf\u56de\u5408\u7ed3\u675f\u65f6\uff0c\u5982\u679c\u672a\u62e5\u6709 [img:divineshield]\uff0c\r\n\u5219\u5c06 [img:divineshield] \u8bbe\u4e3a 1\u3002\r\n-20% \u6700\u5927\u751f\u547d\u503c\u3002"
+        "zh": "\u6bcf\u200b\u4e2a\u200b\u56de\u5408\u200b\u7ed3\u675f\u200b\u65f6\uff0c\u200b\u5982\u679c\u200b\u6ca1\u6709\u200b[img:divineshield]\u200b\uff0c\u200b\u90a3\u4e48\u200b[img:divineshield]\u200b\u6570\u91cf\u200b\u53d8\u200b\u62101\u3002\u200b\u751f\u547d\u200b\u4e0a\u9650\u200b-20%\u200b\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1518,11 +1542,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Elite Buff: Reactive",
-        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u53cd\u5e94"
+        "zh": "\u7cbe\u82f1\u200b\u589e\u76ca\uff1a\u200b\u53cd\u5e94"
       },
       "tooltip_texts": {
         "en": "+1 Kinetic Spikes",
-        "zh": "+1 \u52a8\u80fd\u5c16\u523a"
+        "zh": "\u3010\u52a8\u200b\u80fd\u200b\u5c16\u523a\u200b\u3011\u200b+1"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1536,11 +1560,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Elite Buff: Resonant",
-        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u5171\u9e23"
+        "zh": "\u7cbe\u82f1\u200b\u589e\u76ca\uff1a\u200b\u5171\u9e23"
       },
       "tooltip_texts": {
         "en": "Whenever an enemy casts a spell, gain All Stats Up 1 and heal 1.",
-        "zh": "\u6bcf\u5f53\u654c\u4eba\u65bd\u653e\u6cd5\u672f\u65f6\uff0c\r\n\u83b7\u5f97 1 \u5c42\u5168\u5c5e\u6027\u63d0\u5347\u5e76\u6062\u590d 1 \u70b9\u751f\u547d\u503c\u3002"
+        "zh": "\u53ea\u8981\u200b\u654c\u200b\u4eba\u200b\u65bd\u653e\u200b\u6cd5\u672f\uff0c\u200b\u5c31\u200b\u6240\u6709\u200b\u5c5e\u6027\u200b\u63d0\u5347\u200b1\uff0c\u200b\u540c\u65f6\u200b\u6062\u590d\u200b1\u70b9\u200b\u751f\u547d\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1554,11 +1578,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Elite Buff: Sandy",
-        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u6c99\u5c18"
+        "zh": "\u7cbe\u82f1\u200b\u589e\u76ca\uff1a\u200b\u626c\u6c99"
       },
       "tooltip_texts": {
         "en": "+10% Dodge Chance. Starts a sandstorm when it dies.",
-        "zh": "+10% \u95ea\u907f\u7387\u3002\u6b7b\u4ea1\u65f6\u5f15\u53d1\u6c99\u5c18\u66b4\u3002"
+        "zh": "\u95ea\u200b\u907f\u200b\u51e0\u7387\u200b+10%\u200b\u3002\u200b\u6b7b\u4ea1\u200b\u65f6\u200b\u5f15\u200b\u53d1\u6c99\u200b\u5c18\u66b4\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1572,11 +1596,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Elite Buff: Shielded",
-        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u62a4\u76fe"
+        "zh": "\u7cbe\u82f1\u200b\u589e\u76ca\uff1a\u200b\u9632\u62a4"
       },
       "tooltip_texts": {
         "en": "At the start of each round, if it has less than 3 [img:shield], set [img:shield] to 3. -20% max health.",
-        "zh": "\u5728\u6bcf\u56de\u5408\u5f00\u59cb\u65f6\uff0c\r\n\u5982\u679c\u62e5\u6709\u7684 [img:shield] \u5c11\u4e8e 3\uff0c\r\n\u5219\u5c06 [img:shield] \u8bbe\u4e3a 3\u3002\r\n-20% \u6700\u5927\u751f\u547d\u503c\u3002"
+        "zh": "\u6bcf\u200b\u8f6e\u200b\u5f00\u59cb\u200b\u65f6\uff0c\u200b\u5982\u679c\u200b[img:shield]\u200b\u5c42\u6570\u200b\u5c11\u4e8e\u200b3\uff0c\u200b\u90a3\u4e48\u200b[img:shield]\u200b\u6570\u91cf\u200b\u53d8\u200b\u62103\u3002\u200b\u751f\u547d\u200b\u4e0a\u9650\u200b-20%\u200b\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1590,11 +1614,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Elite Buff: Shielded",
-        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u62a4\u76fe"
+        "zh": "\u7cbe\u82f1\u200b\u589e\u76ca\uff1a\u200b\u9632\u62a4"
       },
       "tooltip_texts": {
         "en": "At the start of each round, if it has less than 5 [img:shield], set [img:shield] to 5. -20% max health.",
-        "zh": "\u5728\u6bcf\u56de\u5408\u5f00\u59cb\u65f6\uff0c\r\n\u5982\u679c\u62e5\u6709\u7684 [img:shield] \u5c11\u4e8e 5\uff0c\r\n\u5219\u5c06 [img:shield] \u8bbe\u4e3a 5\u3002\r\n-20% \u6700\u5927\u751f\u547d\u503c\u3002"
+        "zh": "\u6bcf\u200b\u8f6e\u200b\u5f00\u59cb\u200b\u65f6\uff0c\u200b\u5982\u679c\u200b[img:shield]\u200b\u5c42\u6570\u200b\u5c11\u4e8e\u200b5\uff0c\u200b\u90a3\u4e48\u200b[img:shield]\u200b\u6570\u91cf\u200b\u53d8\u200b\u62105\u3002\u200b\u751f\u547d\u200b\u4e0a\u9650\u200b-20%\u200b\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1608,11 +1632,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Elite Buff: Shielded",
-        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u62a4\u76fe"
+        "zh": "\u7cbe\u82f1\u200b\u589e\u76ca\uff1a\u200b\u9632\u62a4"
       },
       "tooltip_texts": {
         "en": "At the start of each round, if it has less than 7 [img:shield], set [img:shield] to 7. -20% max health.",
-        "zh": "\u5728\u6bcf\u56de\u5408\u5f00\u59cb\u65f6\uff0c\r\n\u5982\u679c\u62e5\u6709\u7684 [img:shield] \u5c11\u4e8e 7\uff0c\r\n\u5219\u5c06 [img:shield] \u8bbe\u4e3a 7\u3002\r\n-20% \u6700\u5927\u751f\u547d\u503c\u3002"
+        "zh": "\u6bcf\u200b\u8f6e\u200b\u5f00\u59cb\u200b\u65f6\uff0c\u200b\u5982\u679c\u200b[img:shield]\u200b\u5c42\u6570\u200b\u5c11\u4e8e\u200b7\uff0c\u200b\u90a3\u4e48\u200b[img:shield]\u200b\u6570\u91cf\u200b\u53d8\u200b\u62107\u3002\u200b\u751f\u547d\u200b\u4e0a\u9650\u200b-20%\u200b\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1626,11 +1650,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Elite Buff: Shielded",
-        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u62a4\u76fe"
+        "zh": "\u7cbe\u82f1\u200b\u589e\u76ca\uff1a\u200b\u9632\u62a4"
       },
       "tooltip_texts": {
         "en": "At the start of each round, if it has less than 9 [img:shield], set [img:shield] to 9. -20% max health.",
-        "zh": "\u5728\u6bcf\u56de\u5408\u5f00\u59cb\u65f6\uff0c\r\n\u5982\u679c\u62e5\u6709\u7684 [img:shield] \u5c11\u4e8e 9\uff0c\r\n\u5219\u5c06 [img:shield] \u8bbe\u4e3a 9\u3002\r\n-20% \u6700\u5927\u751f\u547d\u503c\u3002"
+        "zh": "\u6bcf\u200b\u8f6e\u200b\u5f00\u59cb\u200b\u65f6\uff0c\u200b\u5982\u679c\u200b[img:shield]\u200b\u5c42\u6570\u200b\u5c11\u4e8e\u200b9\uff0c\u200b\u90a3\u4e48\u200b[img:shield]\u200b\u6570\u91cf\u200b\u53d8\u200b\u62109\u3002\u200b\u751f\u547d\u200b\u4e0a\u9650\u200b-20%\u200b\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1644,11 +1668,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Elite Buff: Slightly Depressing",
-        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u8f7b\u5fae\u6d88\u6c89"
+        "zh": "\u7cbe\u82f1\u200b\u589e\u76ca\uff1a\u200b\u6709\u70b9\u538b\u200b\u6291"
       },
       "tooltip_texts": {
         "en": "While alive, adjacent enemies have -1 to all stats.",
-        "zh": "\u5b58\u6d3b\u671f\u95f4\uff0c\u76f8\u90bb\u654c\u4eba\u7684\u5168\u5c5e\u6027 -1\u3002"
+        "zh": "\u8fd9\u4e2a\u200b\u5355\u4f4d\u200b\u5b58\u6d3b\u200b\u65f6\uff0c\u200b\u524d\u200b\u540e\u200b\u5de6\u53f3\u200b\u76f8\u90bb\u200b\u7684\u200b\u654c\u4eba\u200b\u6240\u6709\u200b\u5c5e\u6027\u200b-\u200b1\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1662,11 +1686,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Elite Buff: Speedy",
-        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u8fc5\u6377"
+        "zh": "\u7cbe\u82f1\u200b\u589e\u76ca\uff1a\u200b\u52a0\u901f"
       },
       "tooltip_texts": {
         "en": "+4 [img:spd]",
-        "zh": "+4 [img:spd]"
+        "zh": "[img:spd]+4"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1680,11 +1704,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Elite Buff: Spiky",
-        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u5c16\u523a"
+        "zh": "\u7cbe\u82f1\u200b\u589e\u76ca\uff1a\u200b\u5c16\u523a"
       },
       "tooltip_texts": {
         "en": "+2 Thorns",
-        "zh": "+2 \u8346\u68d8"
+        "zh": "\u3010\u5c16\u523a\u3011\u200b+2"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1698,11 +1722,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Elite Buff: Static",
-        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u9759\u7535"
+        "zh": "\u7cbe\u82f1\u200b\u589e\u76ca\uff1a\u200b\u9759\u7535"
       },
       "tooltip_texts": {
         "en": "Arcs 1 electric damage to neighbors whenever it moves.",
-        "zh": "\u6bcf\u6b21\u79fb\u52a8\u65f6\u5bf9\u76f8\u90bb\u5355\u4f4d\u9020\u6210 1 \u70b9\u7535\u51fb\u4f24\u5bb3\u3002"
+        "zh": "\u53ea\u8981\u200b\u79fb\u52a8\uff0c\u200b\u5c31\u200b\u5bf9\u200b\u90bb\u8fd1\u200b\u7684\u200b\u5355\u4f4d\u200b\u9020\u6210\u200b1\u70b9\u200b\u7535\u7cfb\u200b\u4f24\u5bb3\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1716,11 +1740,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Elite Buff: Sticky",
-        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u7c98\u6027"
+        "zh": "\u7cbe\u82f1\u200b\u589e\u76ca\uff1a\u200b\u7c98\u4e4e\u4e4e"
       },
       "tooltip_texts": {
         "en": "Anything that contacts or attacks this gets Tarred 1.",
-        "zh": "\u4efb\u4f55\u63a5\u89e6\u6216\u653b\u51fb\u6b64\u5355\u4f4d\u7684\r\n\u76ee\u6807\u5c06\u53d7\u5230 1 \u5c42\u7126\u6cb9\u3002"
+        "zh": "\u53ea\u8981\u200b\u653b\u51fb\u200b\u6216\u200b\u63a5\u89e6\u5230\u200b\u8fd9\u4e2a\u200b\u5355\u4f4d\uff0c\u200b\u5c31\u200b\u4f1a\u200b\u83b7\u5f97\u200b1\u5c42\u3010\u6d51\u8eab\u200b\u662f\u200b\u6cb9\u3011\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1734,11 +1758,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Elite Buff: Undying",
-        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u4e0d\u673d"
+        "zh": "\u7cbe\u82f1\u200b\u589e\u76ca\uff1a\u200b\u4e0d\u200b\u6b7b"
       },
       "tooltip_texts": {
         "en": "Revives to 50% health at the end of the round.",
-        "zh": "\u56de\u5408\u7ed3\u675f\u65f6\u4ee5 50% \u751f\u547d\u503c\u91cd\u751f\u3002"
+        "zh": "\u4e00\u200b\u8f6e\u200b\u7ed3\u675f\u200b\u65f6\uff0c\u200b\u590d\u6d3b\uff0c\u200b\u83b7\u5f97\u200b50%\u200b\u7684\u200b\u751f\u547d\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1752,11 +1776,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Elite Buff: Tough",
-        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u5f3a\u97e7"
+        "zh": "\u7cbe\u82f1\u200b\u589e\u76ca\uff1a\u200b\u575a\u200b\u5f3a"
       },
       "tooltip_texts": {
         "en": "+2 Brace",
-        "zh": "+2 \u62a4\u7532"
+        "zh": "\u3010\u62db\u67b6\u3011\u200b+2"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1770,11 +1794,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Elite Buff: Twin",
-        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u53cc\u751f"
+        "zh": "\u7cbe\u82f1\u200b\u589e\u76ca\uff1a\u200b\u53cc\u5b50"
       },
       "tooltip_texts": {
         "en": "Half health. Comes with a twin.",
-        "zh": "\u751f\u547d\u503c\u51cf\u534a\u3002\u4f34\u968f\u53cc\u751f\u4f53\u51fa\u73b0\u3002"
+        "zh": "\u751f\u547d\u200b\u51cf\u534a\u3002\u200b\u6210\u53cc\u200b\u51fa\u73b0\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1788,11 +1812,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Elite Buff: Undying",
-        "zh": "\u7cbe\u82f1\u589e\u76ca\uff1a\u4e0d\u673d"
+        "zh": "\u7cbe\u82f1\u200b\u589e\u76ca\uff1a\u200b\u4e0d\u200b\u6b7b"
       },
       "tooltip_texts": {
         "en": "Revives to 50% health at the end of the round. +2 Corpse Health.",
-        "zh": "\u56de\u5408\u7ed3\u675f\u65f6\u4ee5 50% \u751f\u547d\u503c\u91cd\u751f\u3002\r\n+2 \u5c38\u4f53\u751f\u547d\u503c\u3002"
+        "zh": "\u4e00\u200b\u8f6e\u200b\u7ed3\u675f\u200b\u65f6\uff0c\u200b\u590d\u6d3b\uff0c\u200b\u83b7\u5f97\u200b50%\u200b\u7684\u200b\u751f\u547d\u3002\u200b\u5c38\u4f53\u200b\u8010\u4e45\u200b+\u200b2\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1806,11 +1830,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Promote+",
-        "zh": "\u664b\u5347+"
+        "zh": "\u664b\u5347\u200b+"
       },
       "tooltip_texts": {
         "en": "The next familiar you spawn is upgraded into an [img:elite] Elite.",
-        "zh": "\u4f60\u751f\u6210\u7684\u4e0b\u4e00\u4e2a\u4f7f\u9b54\u5c06\u5347\u7ea7\u4e3a [img:elite] \u7cbe\u82f1\u3002"
+        "zh": "\u4f60\u200b\u53ec\u5524\u200b\u7684\u200b\u4e0b\u200b\u4e00\u200b\u4e2a\u200b\u8ddf\u73ed\u4f1a\u200b\u662f\u200b[img:elite]\u200b\u7cbe\u82f1\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1824,11 +1848,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Empty Mind",
-        "zh": "\u65e0\u5ff5"
+        "zh": "\u65e0\u5fc3"
       },
       "tooltip_texts": {
         "en": "Spells are disabled. Whenever it gets a kill, it takes an extra turn.",
-        "zh": "\u65e0\u6cd5\u4f7f\u7528\u6cd5\u672f\u3002\u6bcf\u5f53\u5b8c\u6210\u51fb\u6740\u65f6\uff0c\r\n\u83b7\u5f97\u4e00\u4e2a\u989d\u5916\u56de\u5408\u3002"
+        "zh": "\u4e0d\u200b\u80fd\u200b\u65bd\u653e\u200b\u6cd5\u672f\u3002\u200b\u6bcf\u200b\u5f53\u51fb\u200b\u6740\u200b\u5355\u4f4d\uff0c\u200b\u5c31\u200b\u83b7\u5f97\u200b1\u200b\u4e2a\u989d\u200b\u5916\u200b\u56de\u5408\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1859,7 +1883,7 @@
       "tooltip_texts": {},
       "tooltip_stacks_texts": {
         "en": "Hunted by the bounty hunter.",
-        "zh": "\u88ab\u8d4f\u91d1\u730e\u4eba\u8ffd\u6355\u3002"
+        "zh": "\u6b63\u200b\u88ab\u200b\u8d4f\u91d1\u200b\u730e\u624b\u200b\u8ffd\u6355\u3002"
       }
     },
     {
@@ -1872,11 +1896,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "[img:evolution] Mutation",
-        "zh": "[img:evolution] \u7a81\u53d8"
+        "zh": "[img:evolution]\u200b\u7a81\u200b\u53d8"
       },
       "tooltip_texts": {
         "en": "Adds a chance for cats to receive random mutations each night.",
-        "zh": "\u589e\u52a0\u732b\u54aa\u6bcf\u665a\u83b7\u5f97\u968f\u673a\u7a81\u53d8\u7684\u51e0\u7387\u3002"
+        "zh": "\u4ee4\u200b\u732b\u54aa\u200b\u6bcf\u200b\u5929\u200b\u665a\u4e0a\u200b\u66f4\u200b\u6709\u200b\u53ef\u80fd\u200b\u968f\u673a\u200b\u83b7\u5f97\u200b\u7a81\u53d8\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1890,15 +1914,15 @@
       "tooltip_stacks_key": "KEYWORD_EXHAUSTION_DESC",
       "name_texts": {
         "en": "Exhaustion",
-        "zh": "\u75b2\u52b3"
+        "zh": "\u7d2f\u762b"
       },
       "tooltip_texts": {
         "en": "Takes unblockable damage at the start of its turn, then increase Exhaustion by 1. Decreases mana and health gain. Combat regen disabled.",
-        "zh": "\u5728\u56de\u5408\u5f00\u59cb\u65f6\u53d7\u5230\u4e0d\u53ef\u683c\u6321\u4f24\u5bb3\uff0c\r\n\u7136\u540e\u75b2\u52b3\u589e\u52a0 1\u3002\r\n\u51cf\u5c11\u6cd5\u529b\u548c\u751f\u547d\u503c\u83b7\u53d6\u3002\r\n\u6218\u6597\u6062\u590d\u5931\u6548\u3002"
+        "zh": "\u81ea\u5df1\u200b\u56de\u5408\u200b\u5f00\u59cb\u200b\u65f6\u200b\u53d7\u5230\u200b\u6321\u200b\u4e0d\u200b\u4f4f\u200b\u7684\u200b\u4f24\u5bb3\uff0c\u200b\u7136\u540e\u200b\u7d2f\u762b\u200b\u5c42\u6570\u200b+\u200b1\u3002\u200b\u9b54\u80fd\u200b\u548c\u200b\u751f\u547d\u200b\u589e\u52a0\u200b\u5e45\u5ea6\u200b\u7f29\u5c0f\uff0c\u200b\u6218\u6597\u200b\u671f\u95f4\u200b\u4e0d\u200b\u80fd\u200b\u81ea\u7136\u200b\u6062\u590d\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "Takes {stacks} unblockable damage at the start of its turn, then increase Exhaustion by 1. Whenever it would gain mana or health, gain {stacks} less mana or health. Combat regen disabled. Cannot be removed. It's time to finish the fight.",
-        "zh": "\u5728\u56de\u5408\u5f00\u59cb\u65f6\u53d7\u5230 {stacks} \u70b9\u4e0d\u53ef\u683c\u6321\u4f24\u5bb3\uff0c\r\n\u7136\u540e\u75b2\u52b3\u589e\u52a0 1\u3002\r\n\u6bcf\u5f53\u83b7\u5f97\u6cd5\u529b\u6216\u751f\u547d\u503c\u65f6\uff0c\r\n\u83b7\u5f97\u7684\u6570\u503c\u51cf\u5c11 {stacks}\u3002\u6218\u6597\u6062\u590d\u5931\u6548\u3002\r\n\u4e0d\u53ef\u79fb\u9664\u3002\u662f\u65f6\u5019\u7ed3\u675f\u6218\u6597\u4e86\u3002"
+        "zh": "\u81ea\u5df1\u200b\u56de\u5408\u200b\u5f00\u59cb\u200b\u65f6\u200b\u53d7\u5230\u200b\u6321\u200b\u4e0d\u4f4f\u200b\u7684\u200b{stacks}\u200b\u70b9\u200b\u4f24\u5bb3\uff0c\u200b\u7136\u540e\u200b\u7d2f\u762b\u200b\u5c42\u6570\u200b+\u200b1\u3002\u200b\u6bcf\u200b\u6b21\u200b\u9b54\u80fd\u200b\u6216\u200b\u751f\u547d\u200b\u589e\u52a0\u200b\u65f6\uff0c\u200b\u589e\u52a0\u200b\u5e45\u5ea6\u200b\u7f29\u5c0f\u200b{stacks}\u200b\uff0c\u200b\u6218\u6597\u200b\u671f\u95f4\u200b\u4e0d\u200b\u80fd\u200b\u81ea\u7136\u200b\u6062\u590d\u3002\u200b\u8fd9\u4e2a\u200b\u6548\u679c\u200b\u4e0d\u200b\u80fd\u200b\u79fb\u9664\u3002\u200b\u8be5\u200b\u7ed3\u675f\u200b\u6218\u6597\u200b\u4e86\u3002"
       }
     },
     {
@@ -1911,12 +1935,12 @@
       "tooltip_stacks_key": "KEYWORD_EXTRAATTACK_DESC",
       "name_texts": {
         "en": "Extra Attacks",
-        "zh": "\u989d\u5916\u653b\u51fb"
+        "zh": "\u989d\u200b\u5916\u200b\u653b\u51fb"
       },
       "tooltip_texts": {},
       "tooltip_stacks_texts": {
         "en": "Can attack {stacks} extra times each turn.",
-        "zh": "\u6bcf\u56de\u5408\u53ef\u4ee5\u989d\u5916\u653b\u51fb {stacks} \u6b21\u3002"
+        "zh": "\u6bcf\u200b\u4e2a\u200b\u56de\u5408\u200b\u53ef\u4ee5\u200b\u989d\u200b\u5916\u200b\u653b\u51fb\u200b{stacks}\u200b\u6b21\u3002"
       }
     },
     {
@@ -1929,12 +1953,12 @@
       "tooltip_stacks_key": "KEYWORD_EXTRAMOVE_DESC",
       "name_texts": {
         "en": "Extra Moves",
-        "zh": "\u989d\u5916\u79fb\u52a8"
+        "zh": "\u989d\u200b\u5916\u200b\u79fb\u52a8"
       },
       "tooltip_texts": {},
       "tooltip_stacks_texts": {
         "en": "Can move {stacks} extra times each turn.",
-        "zh": "\u6bcf\u56de\u5408\u53ef\u4ee5\u989d\u5916\u79fb\u52a8 {stacks} \u6b21\u3002"
+        "zh": "\u6bcf\u200b\u4e2a\u200b\u56de\u5408\u200b\u53ef\u4ee5\u200b\u989d\u200b\u5916\u200b\u79fb\u52a8\u200b{stacks}\u200b\u6b21\u3002"
       }
     },
     {
@@ -1947,11 +1971,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Fear",
-        "zh": "\u6050\u60e7"
+        "zh": "\u5bb3\u6015"
       },
       "tooltip_texts": {
         "en": "Moves as far away from enemies as it can at the start of its turn.",
-        "zh": "\u5728\u56de\u5408\u5f00\u59cb\u65f6\u5c3d\u53ef\u80fd\u8fdc\u79bb\u654c\u4eba\u3002"
+        "zh": "\u81ea\u5df1\u200b\u56de\u5408\u200b\u5f00\u59cb\u200b\u65f6\uff0c\u200b\u4f1a\u200b\u52aa\u529b\u200b\u8fdc\u79bb\u200b\u654c\u4eba\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1965,11 +1989,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "The Child's Flame",
-        "zh": "\u5723\u5b50\u4e4b\u706b"
+        "zh": "\u5723\u7ae5\u706b\u7130"
       },
       "tooltip_texts": {
         "en": "Counts down every time it gets hit. At 0, releases a pulse.",
-        "zh": "\u6bcf\u6b21\u53d7\u5230\u653b\u51fb\u65f6\u5012\u8ba1\u65f6\u3002\u5f53\u5f52\u96f6\u65f6\uff0c\r\n\u91ca\u653e\u8109\u51b2\u3002"
+        "zh": "\u6bcf\u200b\u6b21\u200b\u53d7\u5230\u200b\u653b\u51fb\uff0c\u200b\u5012\u6570\u200b\u4e00\u200b\u6b21\u3002\u200b\u5012\u6570\u200b\u5f52\u96f6\u65f6\uff0c\u200b\u653e\u51fa\u200b\u8109\u51b2\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -1983,11 +2007,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "The Child's Flame",
-        "zh": "\u5723\u5b50\u4e4b\u706b"
+        "zh": "\u5723\u7ae5\u706b\u7130"
       },
       "tooltip_texts": {
         "en": "Counts down every time it gets hit. At 0, unleash a wrath of holy light.",
-        "zh": "\u6bcf\u6b21\u53d7\u5230\u653b\u51fb\u65f6\u5012\u8ba1\u65f6\u3002\u5f53\u5f52\u96f6\u65f6\uff0c\r\n\u91ca\u653e\u795e\u5723\u4e4b\u5149\u7684\u6124\u6012\u3002"
+        "zh": "\u6bcf\u200b\u6b21\u200b\u53d7\u5230\u200b\u653b\u51fb\uff0c\u200b\u5012\u6570\u200b\u4e00\u200b\u6b21\u3002\u200b\u5012\u6570\u200b\u5f52\u96f6\u65f6\uff0c\u200b\u653e\u51fa\u200b\u5723\u5149\u200b\u4e4b\u6012\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -2001,11 +2025,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "The Child's Flame",
-        "zh": "\u5723\u5b50\u4e4b\u706b"
+        "zh": "\u5723\u7ae5\u706b\u7130"
       },
       "tooltip_texts": {
         "en": "Counts down every time it gets hit. At 0, unleash the holy beams.",
-        "zh": "\u6bcf\u6b21\u53d7\u5230\u653b\u51fb\u65f6\u5012\u8ba1\u65f6\u3002\u5f53\u5f52\u96f6\u65f6\uff0c\r\n\u91ca\u653e\u795e\u5723\u5149\u675f\u3002"
+        "zh": "\u6bcf\u200b\u6b21\u200b\u53d7\u5230\u200b\u653b\u51fb\uff0c\u200b\u5012\u6570\u200b\u4e00\u200b\u6b21\u3002\u200b\u5012\u6570\u200b\u5f52\u96f6\u65f6\uff0c\u200b\u653e\u51fa\u200b\u5723\u5149\u675f\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -2047,7 +2071,7 @@
       },
       "tooltip_texts": {
         "en": "This item burns up when hit with fire.",
-        "zh": "\u5f53\u88ab\u706b\u7130\u51fb\u4e2d\u65f6\uff0c\u6b64\u7269\u54c1\u4f1a\u70e7\u6bc1\u3002"
+        "zh": "\u4f60\u200b\u88ab\u200b\u706b\u51fb\u200b\u4e2d\u200b\u65f6\uff0c\u200b\u8fd9\u200b\u4ef6\u200b\u7269\u54c1\u4f1a\u200b\u70e7\u6bc1\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -2065,7 +2089,7 @@
       },
       "tooltip_texts": {
         "en": "Ignores tiles and can pass over units and objects.",
-        "zh": "\u65e0\u89c6\u5730\u5757\uff0c\u5e76\u53ef\u8d8a\u8fc7\u5355\u4f4d\u548c\u7269\u4f53\u3002"
+        "zh": "\u5ffd\u7565\u200b\u65b9\u683c\uff0c\u200b\u53ef\u4ee5\u200b\u98de\u8d8a\u200b\u5355\u4f4d\u200b\u548c\u200b\u7269\u4f53\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -2079,11 +2103,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Fragile",
-        "zh": "\u6613\u788e"
+        "zh": "\u6613\u635f"
       },
       "tooltip_texts": {
         "en": "This item breaks when you're downed.",
-        "zh": "\u5f53\u4f60\u5012\u5730\u65f6\uff0c\u6b64\u7269\u54c1\u4f1a\u7834\u788e\u3002"
+        "zh": "\u4f60\u200b\u5012\u5730\u200b\u65f6\uff0c\u200b\u8fd9\u200b\u4ef6\u200b\u7269\u54c1\u4f1a\u200b\u635f\u574f\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -2097,11 +2121,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Free Spell",
-        "zh": "\u514d\u8d39\u6cd5\u672f"
+        "zh": "\u514d\u8d39\u200b\u6cd5\u672f"
       },
       "tooltip_texts": {
         "en": "The next spell you cast costs 0 mana.",
-        "zh": "\u4f60\u65bd\u653e\u7684\u4e0b\u4e00\u4e2a\u6cd5\u672f\u6d88\u8017 0 \u6cd5\u529b\u3002"
+        "zh": "\u4f60\u200b\u4e0b\u4e00\u200b\u6b21\u200b\u65bd\u653e\u200b\u6cd5\u672f\u200b\u8017\u8d390\u70b9\u200b\u9b54\u80fd\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -2115,11 +2139,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Freeze",
-        "zh": "\u51bb\u7ed3"
+        "zh": "\u51bb\u200b\u4f4f"
       },
       "tooltip_texts": {
         "en": "Cannot take damage. Unfreezes at the start of its turn.",
-        "zh": "\u4e0d\u4f1a\u53d7\u5230\u4f24\u5bb3\u3002\u5728\u56de\u5408\u5f00\u59cb\u65f6\u89e3\u9664\u51bb\u7ed3\u3002"
+        "zh": "\u4e0d\u200b\u4f1a\u200b\u53d7\u5230\u200b\u4f24\u5bb3\u3002\u200b\u81ea\u5df1\u200b\u56de\u5408\u200b\u5f00\u59cb\u200b\u65f6\u200b\u89e3\u51bb\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -2133,11 +2157,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Grappled",
-        "zh": "\u88ab\u64d2\u62b1"
+        "zh": "\u88ab\u200b\u64d2"
       },
       "tooltip_texts": {
         "en": "Immobile as long as it's next to the thing that grappled it.",
-        "zh": "\u53ea\u8981\u5728\u64d2\u62b1\u8005\u8eab\u65c1\uff0c\u5c31\u4e00\u76f4\u5b9a\u8eab\u3002"
+        "zh": "\u53ea\u8981\u200b\u64d2\u62b1\u200b\u5b83\u200b\u7684\u200b\u5355\u4f4d\u200b\u5c31\u200b\u5728\u200b\u65c1\u8fb9\uff0c\u200b\u5b83\u200b\u5c31\u200b\u3010\u200b\u79fb\u52a8\u200b\u53d7\u9650\u3011\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -2151,11 +2175,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Cure Random Injury",
-        "zh": "\u6cbb\u6108\u968f\u673a\u521b\u4f24"
+        "zh": "\u4f24\u200b\u6b8b\u968f\u200b\u673a\u200b\u6cbb\u200b\u597d"
       },
       "tooltip_texts": {
         "en": "Cure a random injury that was permanently lowering one of your stats, if you have any.",
-        "zh": "\u6cbb\u6108\u4e00\u4e2a\u6c38\u4e45\u964d\u4f4e\u4f60\u5c5e\u6027\u7684\u968f\u673a\u521b\u4f24\uff08\u5982\u679c\u6709\uff09\u3002"
+        "zh": "\u5982\u679c\u200b\u8eab\u200b\u4e0a\u200b\u6709\u200b\u4f24\u6b8b\u200b\u6c38\u4e45\u200b\u964d\u200b\u4f4e\u200b\u5c5e\u6027\uff0c\u200b\u90a3\u200b\u5c31\u200b\u968f\u673a\u200b\u6cbb\u200b\u597d\u200b\u5176\u4e2d\u200b1\u5904\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -2169,11 +2193,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "[img:health] Health",
-        "zh": "[img:health] \u5065\u5eb7\u5ea6"
+        "zh": "[img:health] \u536b\u751f"
       },
       "tooltip_texts": {
         "en": "Affects lifespan and chance to develop or cure disorders each night",
-        "zh": "\u5f71\u54cd\u5bff\u547d\u4ee5\u53ca\u6bcf\u665a\u60a3\u4e0a\u6216\u6cbb\u6108\u75c5\u75c7\u7684\u51e0\u7387\u3002"
+        "zh": "\u5f71\u54cd\u200b\u5bff\u547d\uff0c\u200b\u4e5f\u200b\u4f1a\u200b\u5f71\u54cd\u200b\u732b\u54aa\u200b\u6bcf\u200b\u5929\u200b\u665a\u4e0a\u200b\u6bdb\u75c5\u200b\u51fa\u73b0\u200b\u6216\u200b\u5eb7\u590d\u200b\u7684\u200b\u51e0\u7387\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -2187,15 +2211,15 @@
       "tooltip_stacks_key": "KEYWORD_HEALTHREGEN_DESC",
       "name_texts": {
         "en": "Health Regen",
-        "zh": "\u751f\u547d\u6062\u590d"
+        "zh": "\u751f\u547d\u200b\u81ea\u7136\u200b\u6062\u590d"
       },
       "tooltip_texts": {
         "en": "Regenerates health at the end of its turn.",
-        "zh": "\u5728\u56de\u5408\u7ed3\u675f\u65f6\u6062\u590d\u751f\u547d\u503c\u3002"
+        "zh": "\u81ea\u5df1\u200b\u56de\u5408\u200b\u7ed3\u675f\u200b\u65f6\uff0c\u200b\u6062\u590d\u200b\u751f\u547d\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "Regenerate {stacks} health at the end of its turn.",
-        "zh": "\u5728\u56de\u5408\u7ed3\u675f\u65f6\u6062\u590d {stacks} \u70b9\u751f\u547d\u503c\u3002"
+        "zh": "\u81ea\u5df1\u200b\u56de\u5408\u200b\u7ed3\u675f\u200b\u65f6\uff0c\u200b\u6062\u590d\u200b{stacks}\u200b\u70b9\u200b\u751f\u547d\u3002"
       }
     },
     {
@@ -2206,8 +2230,14 @@
       "name_key": "KEYWORD_DEHYDRATED_NAME",
       "tooltip_key": "KEYWORD_DEHYDRATED_DESC",
       "tooltip_stacks_key": null,
-      "name_texts": {},
-      "tooltip_texts": {},
+      "name_texts": {
+        "en": "Heat Wave",
+        "zh": "\u70ed\u6d6a"
+      },
+      "tooltip_texts": {
+        "en": "Heals are reduced by 1. Does not heal after battle. Can be mitigated with water.",
+        "zh": "\u6cbb\u7597\u200b/\u200b\u6062\u590d\u200b\u6548\u679c\u200b\u51cf1\u3002\u200b\u6218\u6597\u200b\u7ed3\u675f\u200b\u540e\uff0c\u200b\u732b\u200b\u4e0d\u200b\u4f1a\u200b\u6062\u590d\u200b\u751f\u547d\u3002\u200b\u53ef\u4ee5\u200b\u7528\u200b\u6c34\u7f13\u89e3\u3002"
+      },
       "tooltip_stacks_texts": {}
     },
     {
@@ -2220,12 +2250,12 @@
       "tooltip_stacks_key": "KEYWORD_HEAVIERHITS_DESC_STACKS",
       "name_texts": {
         "en": "Heavier Hits",
-        "zh": "\u66f4\u6c89\u91cd\u6253\u51fb"
+        "zh": "\u51fa\u722a\u200b\u66f4\u200b\u91cd"
       },
       "tooltip_texts": {},
       "tooltip_stacks_texts": {
         "en": "Physical damage inflicts Bruise {stacks} this turn.",
-        "zh": "\u672c\u56de\u5408\u7269\u7406\u4f24\u5bb3\u65bd\u52a0 {stacks} \u5c42\u6de4\u4f24\u3002"
+        "zh": "\u8fd9\u4e2a\u200b\u56de\u5408\u200b\u7269\u200b\u7406\u200b\u4f24\u5bb3\u200b\u4f1a\u200b\u65bd\u200b\u52a0\u200b{stacks}\u200b\u5c42\u200b\u3010\u7600\u200b\u4f24\u3011\u3002"
       }
     },
     {
@@ -2238,12 +2268,12 @@
       "tooltip_stacks_key": "KEYWORD_HEAVYHITS_DESC_STACKS",
       "name_texts": {
         "en": "Heavy Hits",
-        "zh": "\u6c89\u91cd\u6253\u51fb"
+        "zh": "\u91cd\u722a"
       },
       "tooltip_texts": {},
       "tooltip_stacks_texts": {
         "en": "Basic attack inflicts Bruise {stacks} this turn.",
-        "zh": "\u672c\u56de\u5408\u57fa\u7840\u653b\u51fb\u65bd\u52a0 {stacks} \u5c42\u6de4\u4f24\u3002"
+        "zh": "\u8fd9\u4e2a\u200b\u56de\u5408\u200b\u666e\u901a\u200b\u653b\u51fb\u200b\u4f1a\u200b\u65bd\u200b\u52a0\u200b{stacks}\u200b\u5c42\u200b\u3010\u7600\u200b\u4f24\u3011\u3002"
       }
     },
     {
@@ -2256,15 +2286,15 @@
       "tooltip_stacks_key": "KEYWORD_HEX_DESC",
       "name_texts": {
         "en": "Hex",
-        "zh": "\u5996\u672f"
+        "zh": "\u5492\u672f"
       },
       "tooltip_texts": {
         "en": "Spells cost more mana to cast.",
-        "zh": "\u65bd\u653e\u6cd5\u672f\u6d88\u8017\u66f4\u591a\u6cd5\u529b\u3002"
+        "zh": "\u65bd\u653e\u200b\u6cd5\u672f\u200b\u9700\u8981\u200b\u989d\u200b\u5916\u8017\u8d39\u200b\u9b54\u80fd\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "Spells cost {stacks} more mana to cast.",
-        "zh": "\u65bd\u653e\u6cd5\u672f\u6d88\u8017\u7684\u6cd5\u529b\u589e\u52a0 {stacks} \u70b9\u3002"
+        "zh": "\u65bd\u653e\u200b\u6cd5\u672f\u200b\u9700\u8981\u200b\u989d\u200b\u5916\u8017\u8d39\u200b{stacks}\u200b\u70b9\u200b\u9b54\u80fd\u3002"
       }
     },
     {
@@ -2361,11 +2391,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Immobile",
-        "zh": "\u5b9a\u8eab"
+        "zh": "\u79fb\u52a8\u200b\u53d7\u9650"
       },
       "tooltip_texts": {
         "en": "Cannot move.",
-        "zh": "\u65e0\u6cd5\u79fb\u52a8\u3002"
+        "zh": "\u4e0d\u200b\u80fd\u200b\u79fb\u52a8\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -2379,11 +2409,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Infested",
-        "zh": "\u5bc4\u751f"
+        "zh": "\u6ecb\u751f"
       },
       "tooltip_texts": {
         "en": "The things infesting this pop out when it dies, destroying its corpse.",
-        "zh": "\u6b7b\u4ea1\u65f6\u5bc4\u751f\u7269\u4f1a\u94bb\u51fa\uff0c\u6467\u6bc1\u5176\u5c38\u4f53\u3002"
+        "zh": "\u81ea\u8eab\u200b\u6b7b\u4ea1\u200b\u65f6\uff0c\u200b\u4f53\u5185\u200b\u5bc4\u751f\u200b\u7684\u200b\u4e1c\u897f\u200b\u4f1a\u200b\u7206\u200b\u51fa\u6765\uff0c\u200b\u540c\u65f6\u200b\u6467\u6bc1\u200b\u5c38\u4f53\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -2397,12 +2427,12 @@
       "tooltip_stacks_key": "KEYWORD_INTUP_DESC",
       "name_texts": {
         "en": "Intelligence Up",
-        "zh": "\u667a\u529b\u63d0\u5347"
+        "zh": "\u667a\u529b\u200b\u63d0\u5347"
       },
       "tooltip_texts": {},
       "tooltip_stacks_texts": {
         "en": "Intelligence increased by {stacks}.\nIntelligence affects mana regen.",
-        "zh": "\u667a\u529b\u589e\u52a0 {stacks} \u70b9\u3002\r\n\u667a\u529b\u5f71\u54cd\u6cd5\u529b\u6062\u590d\u3002"
+        "zh": "\u667a\u529b\u200b\u63d0\u5347\u200b{stacks}\u200b\u3002\n\u667a\u529b\u200b\u5f71\u54cd\u200b\u9b54\u80fd\u200b\u81ea\u7136\u200b\u6062\u590d\u3002"
       }
     },
     {
@@ -2415,12 +2445,12 @@
       "tooltip_stacks_key": "KEYWORD_INTDOWN_DESC",
       "name_texts": {
         "en": "Intelligence Down",
-        "zh": "\u667a\u529b\u4e0b\u964d"
+        "zh": "\u667a\u529b\u200b\u4e0b\u964d"
       },
       "tooltip_texts": {},
       "tooltip_stacks_texts": {
         "en": "Intelligence decreased by {absstacks}.\nIntelligence affects mana regen.",
-        "zh": "\u667a\u529b\u51cf\u5c11 {absstacks} \u70b9\u3002\r\n\u667a\u529b\u5f71\u54cd\u6cd5\u529b\u6062\u590d\u3002"
+        "zh": "\u667a\u529b\u200b\u4e0b\u964d\u200b{absstacks}\u200b\u3002\n\u667a\u529b\u200b\u5f71\u54cd\u200b\u9b54\u80fd\u200b\u81ea\u7136\u200b\u6062\u590d\u3002"
       }
     },
     {
@@ -2437,7 +2467,7 @@
       },
       "tooltip_texts": {
         "en": "Does not take damage.",
-        "zh": "\u4e0d\u4f1a\u53d7\u5230\u4f24\u5bb3\u3002"
+        "zh": "\u4e0d\u200b\u4f1a\u200b\u53d7\u5230\u200b\u4f24\u5bb3\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -2451,15 +2481,15 @@
       "tooltip_stacks_key": "KEYWORD_KINETICSPPIKES_DESC",
       "name_texts": {
         "en": "Kinetic Spikes",
-        "zh": "\u52a8\u80fd\u5c16\u523a"
+        "zh": "\u52a8\u200b\u80fd\u200b\u5c16\u523a"
       },
       "tooltip_texts": {
         "en": "When this takes damage, emit Sparkles.",
-        "zh": "\u53d7\u5230\u4f24\u5bb3\u65f6\uff0c\u53d1\u5c04\u706b\u82b1\u3002"
+        "zh": "\u53d7\u5230\u200b\u4f24\u5bb3\u200b\u65f6\uff0c\u200b\u4f1a\u200b\u653e\u51fa\u3010\u200b\u95ea\u200b\u5149\u3011\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "When this takes damage, emit {stacks} Sparkles.",
-        "zh": "\u53d7\u5230\u4f24\u5bb3\u65f6\uff0c\u53d1\u5c04 {stacks} \u4e2a\u706b\u82b1\u3002"
+        "zh": "\u53d7\u5230\u200b\u4f24\u5bb3\u200b\u65f6\uff0c\u200b\u4f1a\u200b\u653e\u51fa\u200b{stacks}\u200b\u9053\u200b\u3010\u95ea\u200b\u5149\u3011\u3002"
       }
     },
     {
@@ -2484,12 +2514,12 @@
       "tooltip_stacks_key": "KEYWORD_LATEBLOOMER_DESC",
       "name_texts": {
         "en": "Late Bloomer",
-        "zh": "\u5927\u5668\u665a\u6210"
+        "zh": "\u5927\u5668\u200b\u665a\u6210"
       },
       "tooltip_texts": {},
       "tooltip_stacks_texts": {
         "en": "Gain All Stats Up 3 in {stacks} turns.",
-        "zh": "\u5728 {stacks} \u56de\u5408\u540e\u83b7\u5f97\u5168\u5c5e\u6027\u63d0\u5347 3\u3002"
+        "zh": "{stacks}\u200b\u4e2a\u200b\u56de\u5408\u200b\u4e4b\u540e\u200b\u6240\u6709\u200b\u5c5e\u6027\u200b\u63d0\u5347\u200b3\u3002"
       }
     },
     {
@@ -2502,11 +2532,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Lifesteal",
-        "zh": "\u751f\u547d\u5077\u53d6"
+        "zh": "\u5438\u8840"
       },
       "tooltip_texts": {
         "en": "Heals you equal to the amount of health damage dealt.",
-        "zh": "\u6839\u636e\u9020\u6210\u7684\u4f24\u5bb3\u91cf\u4e3a\u4f60\u6062\u590d\u751f\u547d\u503c\u3002"
+        "zh": "\u4f60\u200b\u5bf9\u200b\u76ee\u6807\u200b\u7684\u200b\u751f\u547d\u200b\u9020\u6210\u200b\u591a\u200b\u5c11\u200b\u4f24\u5bb3\uff0c\u200b\u5c31\u200b\u6062\u590d\u200b\u591a\u200b\u5c11\u200b\u751f\u547d\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -2524,11 +2554,11 @@
       },
       "tooltip_texts": {
         "en": "Drains health from the leeched unit at the end of your turn.",
-        "zh": "\u5728\u4f60\u7684\u56de\u5408\u7ed3\u675f\u65f6\u4ece\u88ab\u5bc4\u751f\u5355\u4f4d\u5438\u53d6\u751f\u547d\u503c\u3002"
+        "zh": "\u4f60\u200b\u7684\u200b\u56de\u5408\u200b\u7ed3\u675f\u200b\u65f6\uff0c\u200b\u4ece\u200b\u6709\u200b\u6c34\u86ed\u200b\u7684\u200b\u5355\u4f4d\u200b\u8eab\u4e0a\u200b\u5438\u53d6\u200b\u751f\u547d\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "Drains {stacks} health at the end of the round.",
-        "zh": "\u5728\u56de\u5408\u7ed3\u675f\u65f6\u5438\u53d6 {stacks} \u70b9\u751f\u547d\u503c\u3002"
+        "zh": "\u4e00\u200b\u8f6e\u200b\u7ed3\u675f\u200b\u65f6\uff0c\u200b\u5438\u53d6\u200b{stacks}\u200b\u70b9\u200b\u751f\u547d\u3002"
       }
     },
     {
@@ -2541,11 +2571,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "{applier's} Leeches.",
-        "zh": "{applier} \u7684\u6c34\u86ed\u3002"
+        "zh": "{applier's}\u200b\u7684\u200b\u6c34\u86ed\u3002"
       },
       "tooltip_texts": {
         "en": "Drains {stacks} health at the end of {applier's} turn and gives it to {applier}.",
-        "zh": "\u5728 {applier} \u7684\u56de\u5408\u7ed3\u675f\u65f6\u5438\u53d6 {stacks} \u70b9\u751f\u547d\u503c\u5e76\u7ed9\u4e88 {applier}\u3002"
+        "zh": "\u5728\u200b{applier's}\u200b\u7684\u200b\u56de\u5408\u200b\u7ed3\u675f\u200b\u65f6\uff0c\u200b\u5438\u53d6\u200b{stacks}\u200b\u70b9\u200b\u751f\u547d\uff0c\u200b\u8f6c\u7ed9\u200b{applier}\u200b\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -2559,15 +2589,15 @@
       "tooltip_stacks_key": "KEYWORD_LIFESTEAL_DESC",
       "name_texts": {
         "en": "Lifesteal",
-        "zh": "\u751f\u547d\u5077\u53d6"
+        "zh": "\u5438\u8840"
       },
       "tooltip_texts": {
         "en": "Your next basic attack heals you for the amount of health damage it inflicts.",
-        "zh": "\u4f60\u7684\u4e0b\u4e00\u6b21\u57fa\u7840\u653b\u51fb\u4f1a\u6839\u636e\u9020\u6210\u7684\r\n\u4f24\u5bb3\u91cf\u4e3a\u4f60\u6062\u590d\u751f\u547d\u503c\u3002"
+        "zh": "\u4f60\u200b\u4e0b\u200b\u4e00\u200b\u6b21\u200b\u666e\u901a\u200b\u653b\u51fb\u200b\u5bf9\u200b\u76ee\u6807\u200b\u7684\u200b\u751f\u547d\u200b\u9020\u6210\u200b\u591a\u200b\u5c11\u200b\u4f24\u5bb3\uff0c\u200b\u4f60\u200b\u5c31\u200b\u6062\u590d\u200b\u591a\u200b\u5c11\u200b\u751f\u547d\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "The next {stacks} basic attacks you do heal you for the amount of health damage they inflict.",
-        "zh": "\u4f60\u63a5\u4e0b\u6765\u7684 {stacks} \u6b21\u57fa\u7840\u653b\u51fb\u4f1a\u6839\u636e\u9020\u6210\u7684\r\n\u4f24\u5bb3\u91cf\u4e3a\u4f60\u6062\u590d\u751f\u547d\u503c\u3002"
+        "zh": "\u4f60\u200b\u63a5\u4e0b\u6765\u200b{stacks}\u200b\u6b21\u200b\u666e\u901a\u200b\u653b\u51fb\u200b\u5bf9\u200b\u76ee\u6807\u200b\u7684\u200b\u751f\u547d\u200b\u9020\u6210\u200b\u591a\u200b\u5c11\u200b\u4f24\u5bb3\uff0c\u200b\u4f60\u200b\u5c31\u200b\u6062\u590d\u200b\u591a\u200b\u5c11\u200b\u751f\u547d\u3002"
       }
     },
     {
@@ -2592,12 +2622,12 @@
       "tooltip_stacks_key": "KEYWORD_LCKUP_DESC",
       "name_texts": {
         "en": "Luck Up",
-        "zh": "\u5e78\u8fd0\u63d0\u5347"
+        "zh": "\u8fd0\u6c14\u200b\u63d0\u5347"
       },
       "tooltip_texts": {},
       "tooltip_stacks_texts": {
         "en": "Luck increased by {stacks}.\nLuck affects base crit chance and all randomness.",
-        "zh": "\u5e78\u8fd0\u589e\u52a0 {stacks} \u70b9\u3002\r\n\u5e78\u8fd0\u5f71\u54cd\u57fa\u7840\u66b4\u51fb\u7387\u548c\u6240\u6709\u968f\u673a\u6027\u3002"
+        "zh": "\u8fd0\u6c14\u200b\u63d0\u5347\u200b{stacks}\u200b\u3002\n\u8fd0\u6c14\u200b\u5f71\u54cd\u200b\u57fa\u7840\u200b\u66b4\u51fb\u200b\u51e0\u7387\u200b\u548c\u200b\u6240\u6709\u200b\u968f\u673a\u200b\u51e0\u7387\u3002"
       }
     },
     {
@@ -2610,12 +2640,12 @@
       "tooltip_stacks_key": "KEYWORD_LCKDOWN_DESC",
       "name_texts": {
         "en": "Luck Down",
-        "zh": "\u5e78\u8fd0\u4e0b\u964d"
+        "zh": "\u8fd0\u6c14\u200b\u4e0b\u964d"
       },
       "tooltip_texts": {},
       "tooltip_stacks_texts": {
         "en": "Luck decreased by {absstacks}.\nLuck affects base crit chance and all randomness.",
-        "zh": "\u5e78\u8fd0\u51cf\u5c11 {absstacks} \u70b9\u3002\r\n\u5e78\u8fd0\u5f71\u54cd\u57fa\u7840\u66b4\u51fb\u7387\u548c\u6240\u6709\u968f\u673a\u6027\u3002"
+        "zh": "\u8fd0\u6c14\u200b\u4e0b\u964d\u200b{absstacks}\u200b\u3002\n\u8fd0\u6c14\u200b\u5f71\u54cd\u200b\u57fa\u7840\u200b\u66b4\u51fb\u200b\u51e0\u7387\u200b\u548c\u200b\u6240\u6709\u200b\u968f\u673a\u200b\u51e0\u7387\u3002"
       }
     },
     {
@@ -2628,11 +2658,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Madness",
-        "zh": "\u75af\u72c2"
+        "zh": "\u766b\u72c2"
       },
       "tooltip_texts": {
         "en": "Thinks everything is an enemy. Uncontrollable.",
-        "zh": "\u89c6\u4e00\u5207\u4e3a\u654c\u3002\u4e0d\u53d7\u63a7\u5236\u3002"
+        "zh": "\u89c9\u5f97\u200b\u6240\u6709\u200b\u4e1c\u897f\u200b\u90fd\u200b\u662f\u200b\u654c\u4eba\u3002\u200b\u4e0d\u200b\u53d7\u200b\u63a7\u5236\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -2646,11 +2676,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Magic Weakness",
-        "zh": "\u9b54\u6cd5\u5f31\u70b9"
+        "zh": "\u9b54\u6cd5\u514b\u5236"
       },
       "tooltip_texts": {
         "en": "Incoming magic damage has 100% Crit Chance and can't miss.",
-        "zh": "\u53d7\u5230\u7684\r\n\u9b54\u6cd5\u4f24\u5bb3\u5177\u6709 100% \u66b4\u51fb\u7387\u4e14\u5fc5\u5b9a\u547d\u4e2d\u3002"
+        "zh": "\u53d7\u5230\u200b\u9b54\u6cd5\u200b\u4f24\u5bb3\u200b\u65f6\uff0c\u200b\u8fd9\u200b\u7c7b\u200b\u4f24\u5bb3\u200b\u7684\u200b\u66b4\u51fb\u200b\u51e0\u7387\u200b\u4e3a\u200b100%\u200b\u800c\u4e14\u200b\u4e0d\u200b\u4f1a\u200b\u843d\u7a7a\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -2664,15 +2694,15 @@
       "tooltip_stacks_key": "KEYWORD_MANALEECHES_DESC",
       "name_texts": {
         "en": "Mana Leeches",
-        "zh": "\u6cd5\u529b\u6c34\u86ed"
+        "zh": "\u9b54\u200b\u80fd\u200b\u6c34\u86ed"
       },
       "tooltip_texts": {
         "en": "Drains mana from the leeched unit at the end of your turn.",
-        "zh": "\u5728\u4f60\u7684\u56de\u5408\u7ed3\u675f\u65f6\u4ece\u88ab\u5bc4\u751f\u5355\u4f4d\u5438\u53d6\u6cd5\u529b\u3002"
+        "zh": "\u4f60\u200b\u7684\u200b\u56de\u5408\u200b\u7ed3\u675f\u200b\u65f6\uff0c\u200b\u4ece\u200b\u6709\u200b\u6c34\u86ed\u200b\u7684\u200b\u5355\u4f4d\u200b\u8eab\u4e0a\u200b\u5438\u53d6\u200b\u9b54\u80fd\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "Drains {stacks} mana at the end of the round.",
-        "zh": "\u5728\u56de\u5408\u7ed3\u675f\u65f6\u5438\u53d6 {stacks} \u70b9\u6cd5\u529b\u3002"
+        "zh": "\u4e00\u200b\u8f6e\u200b\u7ed3\u675f\u200b\u65f6\uff0c\u200b\u5438\u53d6\u200b{stacks}\u200b\u70b9\u200b\u9b54\u80fd\u3002"
       }
     },
     {
@@ -2685,11 +2715,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "{applier's} Mana Leeches",
-        "zh": "{applier} \u7684\u6cd5\u529b\u6c34\u86ed"
+        "zh": "{applier's}\u200b\u7684\u200b\u9b54\u80fd\u200b\u6c34\u86ed"
       },
       "tooltip_texts": {
         "en": "Drains {stacks} mana at the end of {applier's} turn and gives it to {applier}.",
-        "zh": "\u5728 {applier} \u7684\u56de\u5408\u7ed3\u675f\u65f6\u5438\u53d6 {stacks} \u70b9\u6cd5\u529b\u5e76\u7ed9\u4e88 {applier}\u3002"
+        "zh": "\u5728\u200b{applier's}\u200b\u7684\u200b\u56de\u5408\u200b\u7ed3\u675f\u200b\u65f6\uff0c\u200b\u5438\u53d6\u200b{stacks}\u200b\u70b9\u200b\u9b54\u80fd\uff0c\u200b\u8f6c\u7ed9\u200b{applier}\u200b\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -2707,7 +2737,7 @@
       },
       "tooltip_texts": {
         "en": "Incoming physical damage has 100% Crit Chance, ignores shield, and can't miss.",
-        "zh": "\u53d7\u5230\u7684\u7269\u7406\u4f24\u5bb3\u5177\u6709 100% \u66b4\u51fb\u7387\uff0c\r\n\u65e0\u89c6\u62a4\u76fe\uff0c\u4e14\u5fc5\u5b9a\u547d\u4e2d\u3002"
+        "zh": "\u53d7\u200b\u5230\u200b\u7269\u7406\u200b\u4f24\u5bb3\u200b\u65f6\uff0c\u200b\u8fd9\u200b\u7c7b\u200b\u4f24\u5bb3\u200b\u7684\u200b\u66b4\u51fb\u200b\u51e0\u7387\u200b\u4e3a\u200b100%\u200b\uff0c\u200b\u65e0\u89c6\u200b\u62a4\u76fe\uff0c\u200b\u800c\u4e14\u200b\u4e0d\u200b\u4f1a\u200b\u843d\u7a7a\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -2721,11 +2751,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Meaty",
-        "zh": "\u591a\u8089"
+        "zh": "\u8089\u561f\u561f"
       },
       "tooltip_texts": {
         "en": "Turns into meat when it dies.",
-        "zh": "\u6b7b\u4ea1\u65f6\u53d8\u6210\u8089\u5757\u3002"
+        "zh": "\u6b7b\u4ea1\u65f6\u200b\u4f1a\u200b\u53d8\u6210\u200b\u8089\u5757\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -2743,7 +2773,7 @@
       },
       "tooltip_texts": {
         "en": "This item is electrically conductive.",
-        "zh": "\u6b64\u7269\u54c1\u5bfc\u7535\u3002"
+        "zh": "\u8fd9\u200b\u4ef6\u200b\u7269\u200b\u54c1\u5bfc\u7535\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -2757,12 +2787,12 @@
       "tooltip_stacks_key": "KEYWORD_MISSCHANCE_DESC",
       "name_texts": {
         "en": "Miss Chance",
-        "zh": "\u672a\u547d\u4e2d\u7387"
+        "zh": "\u843d\u200b\u7a7a\u51e0\u7387"
       },
       "tooltip_texts": {},
       "tooltip_stacks_texts": {
         "en": "Miss chance increased by {stacks}%.",
-        "zh": "\u672a\u547d\u4e2d\u7387\u589e\u52a0 {stacks}%\u3002"
+        "zh": "\u843d\u200b\u7a7a\u51e0\u7387\u200b\u589e\u52a0\u200b{stacks}%\u200b\u3002"
       }
     },
     {
@@ -2775,12 +2805,12 @@
       "tooltip_stacks_key": "KEYWORD_BONUSMOVE_DESC_STACKS",
       "name_texts": {
         "en": "Bonus Move",
-        "zh": "\u5956\u52b1\u79fb\u52a8"
+        "zh": "\u5956\u52b1\u200b\u79fb\u52a8"
       },
       "tooltip_texts": {},
       "tooltip_stacks_texts": {
         "en": "{stacks} extra basic moves that are saved across turns if unused.",
-        "zh": "{stacks} \u6b21\u989d\u5916\u7684\u57fa\u7840\u79fb\u52a8\uff0c\u5982\u679c\u672a\u4f7f\u7528\uff0c\r\n\u53ef\u4ee5\u4fdd\u7559\u5230\u540e\u7eed\u56de\u5408\u3002"
+        "zh": "\u57fa\u7840\u200b\u79fb\u52a8\u200b\u53ef\u4ee5\u200b\u989d\u200b\u5916\u200b\u4f7f\u7528\u200b{stacks}\u200b\u6b21\uff0c\u200b\u8fd9\u4e2a\u200b\u6b21\u200b\u6570\u200b\u53ef\u4ee5\u200b\u4fdd\u7559\u200b\u5230\u200b\u540e\u9762\u200b\u7684\u200b\u56de\u5408\u3002"
       }
     },
     {
@@ -2793,15 +2823,15 @@
       "tooltip_stacks_key": "KEYWORD_MOVEMENTUP_DESC",
       "name_texts": {
         "en": "Movement Up",
-        "zh": "\u79fb\u52a8\u529b\u63d0\u5347"
+        "zh": "\u79fb\u52a8\u200b\u63d0\u5347"
       },
       "tooltip_texts": {
         "en": "Increases your basic movement's range.",
-        "zh": "\u589e\u52a0\u4f60\u7684\u57fa\u7840\u79fb\u52a8\u8ddd\u79bb\u3002"
+        "zh": "\u4f60\u200b\u7684\u200b\u57fa\u7840\u200b\u79fb\u52a8\u200b\u8303\u56f4\u200b\u6269\u5927\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "Basic movement range increased by {stacks}.",
-        "zh": "\u57fa\u7840\u79fb\u52a8\u8ddd\u79bb\u589e\u52a0 {stacks}\u3002"
+        "zh": "\u57fa\u7840\u200b\u79fb\u52a8\u200b\u8303\u56f4\u200b\u6269\u5927\u200b{stacks}\u200b\u683c\u3002"
       }
     },
     {
@@ -2814,15 +2844,15 @@
       "tooltip_stacks_key": "KEYWORD_MOVEMENTDOWN_DESC",
       "name_texts": {
         "en": "Movement Down",
-        "zh": "\u79fb\u52a8\u529b\u4e0b\u964d"
+        "zh": "\u79fb\u52a8\u200b\u4e0b\u964d"
       },
       "tooltip_texts": {
         "en": "Decreases your basic movement's range.",
-        "zh": "\u51cf\u5c11\u4f60\u7684\u57fa\u7840\u79fb\u52a8\u8ddd\u79bb\u3002"
+        "zh": "\u4f60\u200b\u7684\u200b\u57fa\u7840\u200b\u79fb\u52a8\u200b\u8303\u56f4\u200b\u7f29\u5c0f\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "Basic movement range decreased by {stacks}.",
-        "zh": "\u57fa\u7840\u79fb\u52a8\u8ddd\u79bb\u51cf\u5c11 {stacks}\u3002"
+        "zh": "\u57fa\u7840\u200b\u79fb\u52a8\u200b\u8303\u56f4\u200b\u7f29\u200b\u5c0f\u200b{stacks}\u200b\u683c\u3002"
       }
     },
     {
@@ -2839,11 +2869,11 @@
       },
       "tooltip_texts": {
         "en": "Disables a random spell until the applier is killed.",
-        "zh": "\u7981\u7528\u4e00\u4e2a\u968f\u673a\u6cd5\u672f\uff0c\u76f4\u5230\u65bd\u52a0\u8005\u6b7b\u4ea1\u3002"
+        "zh": "\u53ea\u200b\u8981\u200b\u65bd\u52a0\u200b\u8fd9\u4e2a\u200b\u6548\u679c\u200b\u7684\u200b\u5355\u4f4d\u200b\u6ca1\u6b7b\uff0c\u200b\u4f60\u200b\u5c31\u200b\u4f1a\u200b\u968f\u673a\u200b\u6709\u200b\u6cd5\u672f\u200b\u4e0d\u200b\u80fd\u200b\u65bd\u653e\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "{stacks} of your spells are disabled until {applier} dies.",
-        "zh": "{stacks} \u4e2a\u6cd5\u672f\u88ab\u7981\u7528\uff0c\u76f4\u5230 {applier} \u6b7b\u4ea1\u3002"
+        "zh": "\u53ea\u8981\u200b{applier}\u200b\u6ca1\u200b\u6b7b\uff0c\u200b\u4f60\u200b\u5c31\u200b\u6709\u200b{stacks}\u200b\u4e2a\u200b\u6cd5\u672f\u200b\u4e0d\u200b\u80fd\u200b\u65bd\u653e\u3002"
       }
     },
     {
@@ -2880,15 +2910,15 @@
       "tooltip_stacks_key": "KEYWORD_BONUSRANGE_DESC",
       "name_texts": {
         "en": "Bonus Range",
-        "zh": "\u989d\u5916\u5c04\u7a0b"
+        "zh": "\u8ddd\u79bb\u200b\u52a0\u6210"
       },
       "tooltip_texts": {
         "en": "Increases the range of your next basic attack.",
-        "zh": "\u589e\u52a0\u4f60\u4e0b\u4e00\u6b21\u57fa\u7840\u653b\u51fb\u7684\u5c04\u7a0b\u3002"
+        "zh": "\u4f60\u200b\u4e0b\u200b\u4e00\u200b\u6b21\u200b\u666e\u901a\u200b\u653b\u51fb\u200b\u7684\u200b\u8303\u56f4\u200b\u6269\u5927\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "Your next basic attack has +{stacks} range.",
-        "zh": "\u4f60\u7684\u4e0b\u4e00\u6b21\u57fa\u7840\u653b\u51fb\u62e5\u6709 +{stacks} \u5c04\u7a0b\u3002"
+        "zh": "\u4f60\u200b\u4e0b\u200b\u4e00\u200b\u6b21\u200b\u666e\u901a\u200b\u653b\u51fb\u200b\u7684\u200b\u8303\u56f4\u200b+{stacks}\u200b\u3002"
       }
     },
     {
@@ -2961,11 +2991,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Double Ranged Damage",
-        "zh": "\u8fdc\u7a0b\u4f24\u5bb3\u7ffb\u500d"
+        "zh": "\u8fdc\u7a0b\u200b\u4f24\u5bb3\u7ffb\u200b\u500d"
       },
       "tooltip_texts": {
         "en": "All ranged physical attacks and abilities deal double damage.",
-        "zh": "\u6240\u6709\u8fdc\u7a0b\u7269\u7406\u653b\u51fb\u548c\u6280\u80fd\u9020\u6210\u7684\u4f24\u5bb3\u7ffb\u500d\u3002"
+        "zh": "\u8fdc\u7a0b\u200b\u7684\u200b\u7269\u7406\u200b\u653b\u51fb\u200b\u548c\u200b\u80fd\u529b\u200b\u4f24\u5bb3\u200b\u5168\u90e8\u200b\u7ffb\u200b\u500d\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -2979,11 +3009,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "No Health Regen",
-        "zh": "\u65e0\u751f\u547d\u6062\u590d"
+        "zh": "\u7981\u6b62\u200b\u751f\u547d\u200b\u81ea\u7136\u200b\u6062\u590d"
       },
       "tooltip_texts": {
         "en": "Health won't regen automatically and does not regen at the end of battle.",
-        "zh": "\u751f\u547d\u503c\u4e0d\u4f1a\u81ea\u52a8\u6062\u590d\uff0c\r\n\u6218\u6597\u7ed3\u675f\u65f6\u4e5f\u4e0d\u4f1a\u6062\u590d\u3002"
+        "zh": "\u751f\u547d\u200b\u4e0d\u200b\u4f1a\u200b\u81ea\u7136\u200b\u6062\u590d\uff0c\u200b\u6218\u6597\u200b\u7ed3\u675f\u200b\u65f6\u200b\u4e5f\u200b\u4e0d\u200b\u4f1a\u200b\u6062\u590d\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -2997,11 +3027,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "No Mana Regen",
-        "zh": "\u65e0\u6cd5\u529b\u6062\u590d"
+        "zh": "\u7981\u6b62\u200b\u9b54\u80fd\u200b\u81ea\u7136\u200b\u6062\u590d"
       },
       "tooltip_texts": {
         "en": "Mana won't regen automatically.",
-        "zh": "\u6cd5\u529b\u503c\u4e0d\u4f1a\u81ea\u52a8\u6062\u590d\u3002"
+        "zh": "\u9b54\u200b\u80fd\u200b\u4e0d\u200b\u4f1a\u200b\u81ea\u7136\u200b\u6062\u590d\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -3027,11 +3057,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Ostracized",
-        "zh": "\u88ab\u6392\u6324"
+        "zh": "\u5b64\u7acb"
       },
       "tooltip_texts": {
         "en": "Every unit sees this as an enemy and will attack it with priority.",
-        "zh": "\u6240\u6709\u5355\u4f4d\u90fd\u4f1a\u5c06\u5176\u89c6\u4e3a\u654c\u4eba\u5e76\u4f18\u5148\u653b\u51fb\u3002"
+        "zh": "\u6240\u6709\u200b\u5355\u4f4d\u200b\u90fd\u200b\u628a\u200b\u5b83\u200b\u5f53\u6210\u200b\u654c\u4eba\uff0c\u200b\u90fd\u200b\u4f1a\u200b\u4f18\u5148\u200b\u653b\u51fb\u200b\u5b83\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -3048,12 +3078,12 @@
         "zh": "\u6df7\u4e71"
       },
       "tooltip_texts": {
-        "en": "When performing an action, 25% chance to instead hit itself equal to its strength.",
-        "zh": "\u6267\u884c\u884c\u52a8\u65f6\uff0c\r\n\u6709 25% \u7684\u51e0\u7387\u6539\u4e3a\u653b\u51fb\u81ea\u5df1\uff0c\r\n\u4f24\u5bb3\u7b49\u540c\u4e8e\u5176\u529b\u91cf\u3002"
+        "en": "When performing an action, 33% chance to instead hit itself equal to its strength.",
+        "zh": "\u884c\u52a8\u200b\u65f6\uff0c\u200b\u6709\u200b33%\u200b\u7684\u200b\u51e0\u7387\u200b\u6539\u4e3a\u200b\u653b\u51fb\u200b\u81ea\u5df1\uff0c\u200b\u9020\u6210\u200b\u7684\u200b\u4f24\u5bb3\u200b\u7b49\u4e8e\u200b\u81ea\u8eab\u200b\u529b\u91cf\u200b\u7684\u200b\u6570\u503c\u3002"
       },
       "tooltip_stacks_texts": {
-        "en": "When performing an action, 25% chance to instead hit itself equal to its strength.",
-        "zh": "\u6267\u884c\u884c\u52a8\u65f6\uff0c\r\n\u6709 25% \u7684\u51e0\u7387\u6539\u4e3a\u653b\u51fb\u81ea\u5df1\uff0c\r\n\u4f24\u5bb3\u7b49\u540c\u4e8e\u5176\u529b\u91cf\u3002"
+        "en": "When performing an action, 33% chance to instead hit itself equal to its strength.",
+        "zh": "\u884c\u52a8\u200b\u65f6\uff0c\u200b\u6709\u200b33%\u200b\u7684\u200b\u51e0\u7387\u200b\u6539\u4e3a\u200b\u653b\u51fb\u200b\u81ea\u5df1\uff0c\u200b\u9020\u6210\u200b\u7684\u200b\u4f24\u5bb3\u200b\u7b49\u4e8e\u200b\u81ea\u8eab\u200b\u529b\u91cf\u200b\u7684\u200b\u6570\u503c\u3002"
       }
     },
     {
@@ -3070,11 +3100,11 @@
       },
       "tooltip_texts": {
         "en": "Becomes a rock temporarily.",
-        "zh": "\u6682\u65f6\u53d8\u6210\u5ca9\u77f3\u3002"
+        "zh": "\u6682\u65f6\u200b\u53d8\u6210\u200b\u77f3\u5934\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "It's a rock for {stacks} turns.",
-        "zh": "\u53d8\u6210\u5ca9\u77f3\uff0c\u6301\u7eed {stacks} \u56de\u5408\u3002"
+        "zh": "\u5f53\u200b{stacks}\u200b\u4e2a\u200b\u56de\u5408\u200b\u7684\u200b\u77f3\u5934\u3002"
       }
     },
     {
@@ -3087,15 +3117,15 @@
       "tooltip_stacks_key": "KEYWORD_POISON_DESC",
       "name_texts": {
         "en": "Poison",
-        "zh": "\u4e2d\u6bd2"
+        "zh": "\u4e2d\u200b\u6bd2"
       },
       "tooltip_texts": {
         "en": "Takes damage at the start of every turn. Incoming healing is less effective but cures 1 Poison.",
-        "zh": "\u5728\u6bcf\u4e2a\u56de\u5408\u5f00\u59cb\u65f6\u53d7\u5230\u4f24\u5bb3\u3002\r\n\u53d7\u5230\u7684\u6cbb\u7597\u6548\u679c\u964d\u4f4e\uff0c\r\n\u4f46\u4f1a\u6cbb\u6108 1 \u5c42\u4e2d\u6bd2\u3002"
+        "zh": "\u81ea\u5df1\u200b\u7684\u200b\u6bcf\u4e2a\u200b\u56de\u5408\u200b\u5f00\u59cb\u200b\u65f6\uff0c\u200b\u53d7\u5230\u200b\u4f24\u5bb3\u3002\u200b\u53d7\u5230\u200b\u6cbb\u7597\u200b\u65f6\uff0c\u200b\u6548\u679c\u200b\u964d\u4f4e\uff0c\u200b\u4f46\u200b\u4f1a\u200b\u79fb\u9664\u200b1\u5c42\u3010\u200b\u4e2d\u200b\u6bd2\u3011\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "Takes {stacks} damage at the start of each of its turns. Incoming healing is less effective but cures 1 Poison.",
-        "zh": "\u5728\u6bcf\u4e2a\u56de\u5408\u5f00\u59cb\u65f6\u53d7\u5230 {stacks} \u70b9\u4f24\u5bb3\u3002\r\n\u53d7\u5230\u7684\u6cbb\u7597\u6548\u679c\u964d\u4f4e\uff0c\r\n\u4f46\u4f1a\u6cbb\u6108 1 \u5c42\u4e2d\u6bd2\u3002"
+        "zh": "\u81ea\u5df1\u200b\u7684\u200b\u6bcf\u4e2a\u200b\u56de\u5408\u200b\u5f00\u59cb\u200b\u65f6\uff0c\u200b\u53d7\u5230\u200b{stacks}\u200b\u70b9\u200b\u4f24\u5bb3\u3002\u200b\u53d7\u5230\u200b\u6cbb\u7597\u200b\u65f6\uff0c\u200b\u6548\u679c\u200b\u964d\u4f4e\uff0c\u200b\u4f46\u200b\u4f1a\u200b\u79fb\u9664\u200b1\u5c42\u3010\u200b\u4e2d\u200b\u6bd2\u3011\u3002"
       }
     },
     {
@@ -3108,15 +3138,15 @@
       "tooltip_stacks_key": "KEYWORD_POISONLACE_DESC",
       "name_texts": {
         "en": "Poison Lace",
-        "zh": "\u6d82\u6bd2"
+        "zh": "\u6dec\u6bd2"
       },
       "tooltip_texts": {
         "en": "Basic attack inflicts Poison.",
-        "zh": "\u57fa\u7840\u653b\u51fb\u65bd\u52a0\u4e2d\u6bd2\u3002"
+        "zh": "\u666e\u901a\u200b\u653b\u51fb\u200b\u4f1a\u200b\u65bd\u200b\u52a0\u3010\u200b\u4e2d\u200b\u6bd2\u3011\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "Basic attack inflicts +{stacks} Poison.",
-        "zh": "\u57fa\u7840\u653b\u51fb\u65bd\u52a0 +{stacks} \u5c42\u4e2d\u6bd2\u3002"
+        "zh": "\u666e\u901a\u200b\u653b\u51fb\u4f1a\u200b\u591a\u65bd\u200b\u52a0\u200b{stacks}\u200b\u5c42\u3010\u200b\u4e2d\u200b\u6bd2\u3011\u3002"
       }
     },
     {
@@ -3129,15 +3159,15 @@
       "tooltip_stacks_key": "KEYWORD_POISONOUS_DESC",
       "name_texts": {
         "en": "Poisonous",
-        "zh": "\u5e26\u6bd2"
+        "zh": "\u6709\u200b\u6bd2"
       },
       "tooltip_texts": {
         "en": "Inflicts Poison to units that contact you.",
-        "zh": "\u5bf9\u63a5\u89e6\u4f60\u7684\u5355\u4f4d\u65bd\u52a0\u4e2d\u6bd2\u3002"
+        "zh": "\u63a5\u89e6\u200b\u5230\u200b\u4f60\u200b\u7684\u200b\u5355\u4f4d\u200b\u4f1a\u200b\u83b7\u5f97\u200b\u3010\u200b\u4e2d\u200b\u6bd2\u3011\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "Inflicts Poison {stacks} to units that contact you.",
-        "zh": "\u5bf9\u63a5\u89e6\u4f60\u7684\u5355\u4f4d\u65bd\u52a0 {stacks} \u5c42\u4e2d\u6bd2\u3002"
+        "zh": "\u63a5\u89e6\u200b\u5230\u200b\u4f60\u200b\u7684\u200b\u5355\u4f4d\u200b\u4f1a\u200b\u83b7\u5f97\u200b{stacks}\u200b\u5c42\u3010\u200b\u4e2d\u200b\u6bd2\u3011\u3002"
       }
     },
     {
@@ -3150,15 +3180,15 @@
       "tooltip_stacks_key": "KEYWORD_POSSESSED_DESC",
       "name_texts": {
         "en": "Possessed",
-        "zh": "\u88ab\u9644\u8eab"
+        "zh": "\u4e0a\u200b\u8eab"
       },
       "tooltip_texts": {
         "en": "Takes an extra Charmed turn.",
-        "zh": "\u83b7\u5f97\u4e00\u4e2a\u989d\u5916\u7684\u9b45\u60d1\u56de\u5408\u3002"
+        "zh": "\u989d\u200b\u5916\u200b\u884c\u52a8\u200b1\u200b\u4e2a\u200b\u56de\u5408\uff0c\u200b\u5904\u4e8e\u200b\u3010\u6d17\u200b\u8111\u3011\u200b\u72b6\u6001\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "Takes {stacks} extra turns and is uncontrollable and charmed on those turns.",
-        "zh": "\u83b7\u5f97 {stacks} \u4e2a\u989d\u5916\u56de\u5408\uff0c\r\n\u5728\u8fd9\u4e9b\u56de\u5408\u4e2d\u65e0\u6cd5\u63a7\u5236\u4e14\u5904\u4e8e\u9b45\u60d1\u72b6\u6001\u3002"
+        "zh": "\u989d\u200b\u5916\u200b\u884c\u52a8\u200b{stacks}\u200b\u4e2a\u200b\u56de\u5408\uff0c\u200b\u800c\u4e14\u200b\u8fd9\u4e9b\u200b\u56de\u5408\u200b\u671f\u95f4\u200b\u4e0d\u200b\u53d7\u200b\u63a7\u5236\uff0c\u200b\u5904\u4e8e\u200b\u3010\u6d17\u200b\u8111\u3011\u200b\u72b6\u6001\u3002"
       }
     },
     {
@@ -3171,15 +3201,15 @@
       "tooltip_stacks_key": "KEYWORD_PREEMTIVECOUNTER_DESC",
       "name_texts": {
         "en": "Preemptive Counter",
-        "zh": "\u5148\u5236\u53cd\u51fb"
+        "zh": "\u5148\u200b\u53d1\u5236\u200b\u654c"
       },
       "tooltip_texts": {
         "en": "Attack the next thing that targets you before it attacks you, automatically.",
-        "zh": "\u81ea\u52a8\u5728\u4e0b\u4e00\u4e2a\u76ee\u6807\u653b\u51fb\u4f60\u4e4b\u524d\u5bf9\u5176\u8fdb\u884c\u653b\u51fb\u3002"
+        "zh": "\u4f60\u200b\u4e0b\u200b\u4e00\u200b\u6b21\u200b\u6210\u4e3a\u200b\u653b\u51fb\u200b\u76ee\u6807\u65f6\uff0c\u200b\u5728\u200b\u5bf9\u65b9\u200b\u653b\u51fb\u200b\u4e4b\u524d\u200b\u81ea\u52a8\u200b\u5148\u884c\u200b\u53cd\u51fb\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "Attack the next {stacks} things that target you before they attack you, automatically.",
-        "zh": "\u81ea\u52a8\u5728\u63a5\u4e0b\u6765\u7684\r\n {stacks} \u4e2a\u76ee\u6807\u653b\u51fb\u4f60\u4e4b\u524d\u5bf9\u5176\u8fdb\u884c\u653b\u51fb\u3002"
+        "zh": "\u4f60\u200b\u63a5\u4e0b\u6765\u200b{stacks}\u200b\u6b21\u200b\u6210\u4e3a\u200b\u76ee\u6807\u200b\u65f6\uff0c\u200b\u4f1a\u200b\u5728\u200b\u5bf9\u65b9\u200b\u653b\u51fb\u200b\u4e4b\u524d\u200b\u81ea\u52a8\u200b\u53cd\u51fb\u3002"
       }
     },
     {
@@ -3192,11 +3222,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Probed",
-        "zh": "\u690d\u5165\u63a2\u9488"
+        "zh": "\u63a2\u9488\u200b\u690d\u5165"
       },
       "tooltip_texts": {
         "en": "Behaves as if it's on your team. Attacks from allies will break the probe.",
-        "zh": "\u8868\u73b0\u5f97\u50cf\u662f\u4f60\u961f\u4f0d\u7684\u4e00\u5458\u3002\r\n\u6765\u81ea\u76df\u53cb\u7684\u653b\u51fb\u4f1a\u7834\u574f\u63a2\u9488\u3002"
+        "zh": "\u50cf\u200b\u662f\u200b\u4f60\u200b\u7684\u200b\u961f\u5458\u200b\u4e00\u6837\u3002\u200b\u53cb\u65b9\u200b\u653b\u51fb\u200b\u5b83\u200b\u4f1a\u200b\u7834\u574f\u200b\u63a2\u9488\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -3210,12 +3240,12 @@
       "tooltip_stacks_key": "KEYWORD_QUIVERED_DESC",
       "name_texts": {
         "en": "Bonus Attack",
-        "zh": "\u5956\u52b1\u653b\u51fb"
+        "zh": "\u5956\u52b1\u200b\u653b\u51fb"
       },
       "tooltip_texts": {},
       "tooltip_stacks_texts": {
         "en": "{stacks} extra basic attacks that are saved across turns if unused.",
-        "zh": "{stacks} \u6b21\u989d\u5916\u57fa\u7840\u653b\u51fb\uff0c\u5982\u679c\u672a\u4f7f\u7528\uff0c\r\n\u53ef\u4fdd\u7559\u81f3\u4e0b\u4e00\u56de\u5408\u3002"
+        "zh": "\u666e\u901a\u200b\u653b\u51fb\u200b\u53ef\u4ee5\u200b\u989d\u200b\u5916\u200b\u4f7f\u7528\u200b{stacks}\u200b\u6b21\uff0c\u200b\u6b21\u200b\u6570\u200b\u53ef\u4ee5\u200b\u4fdd\u7559\u200b\u5230\u200b\u540e\u9762\u200b\u7684\u200b\u56de\u5408\u3002"
       }
     },
     {
@@ -3228,11 +3258,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Random Injury",
-        "zh": "\u968f\u673a\u521b\u4f24"
+        "zh": "\u968f\u673a\u4f24\u200b\u6b8b"
       },
       "tooltip_texts": {
         "en": "Gain a random injury that lowers one of your stats by 1, permanently.",
-        "zh": "\u83b7\u5f97\u4e00\u4e2a\u968f\u673a\u521b\u4f24\uff0c\r\n\u6c38\u4e45\u4f7f\u4f60\u7684\u4e00\u9879\u5c5e\u6027\u964d\u4f4e 1 \u70b9\u3002"
+        "zh": "\u968f\u673a\u200b\u83b7\u5f97\u200b1\u5904\u200b\u4f24\u6b8b\uff0c\u200b1\u200b\u9879\u200b\u5c5e\u6027\u200b\u6c38\u4e45\u200b\u964d\u4f4e\u200b1\u70b9\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -3246,11 +3276,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Sparkle",
-        "zh": "\u706b\u82b1"
+        "zh": "\u95ea\u5149"
       },
       "tooltip_texts": {
         "en": "A projectile that deals 1 magic damage to a random enemy.",
-        "zh": "\u4e00\u4e2a\u5bf9\u968f\u673a\u654c\u4eba\u9020\u6210 1 \u70b9\u9b54\u6cd5\u4f24\u5bb3\u7684\u6295\u5c04\u7269\u3002"
+        "zh": "\u8fd9\u200b\u79cd\u200b\u6295\u5c04\u7269\u200b\u4f1a\u200b\u968f\u673a\u200b\u5bf9\u200b1\u200b\u4e2a\u200b\u654c\u4eba\u200b\u9020\u6210\u200b1\u70b9\u200b\u9b54\u6cd5\u200b\u4f24\u5bb3\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -3264,15 +3294,15 @@
       "tooltip_stacks_key": "KEYWORD_RANGEUP_DESC",
       "name_texts": {
         "en": "Range Up",
-        "zh": "\u5c04\u7a0b\u63d0\u5347"
+        "zh": "\u8303\u56f4\u200b\u6269\u5927"
       },
       "tooltip_texts": {
         "en": "Increases the range of your basic attack and projectile abilities.",
-        "zh": "\u589e\u52a0\u4f60\u7684\u57fa\u7840\u653b\u51fb\u548c\u6295\u5c04\u7269\u6280\u80fd\u7684\u5c04\u7a0b\u3002"
+        "zh": "\u666e\u901a\u200b\u653b\u51fb\u200b\u548c\u200b\u6295\u5c04\u200b\u80fd\u529b\u200b\u7684\u200b\u8303\u56f4\u200b\u6269\u5927\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "Range increased by {stacks}.",
-        "zh": "\u5c04\u7a0b\u589e\u52a0 {stacks}\u3002"
+        "zh": "\u8303\u56f4\u200b\u9614\u200b\u5927\u200b{stacks}\u200b\u3002"
       }
     },
     {
@@ -3301,11 +3331,11 @@
       },
       "tooltip_texts": {
         "en": "Spells cost less mana to cast.",
-        "zh": "\u65bd\u653e\u6cd5\u672f\u6d88\u8017\u7684\u6cd5\u529b\u503c\u51cf\u5c11\u3002"
+        "zh": "\u6cd5\u672f\u200b\u7684\u200b\u9b54\u80fd\u200b\u8017\u8d39\u200b\u51cf\u5c11\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "Spells cost {stacks} less mana to cast.",
-        "zh": "\u65bd\u653e\u6cd5\u672f\u6d88\u8017\u7684\u6cd5\u529b\u503c\u51cf\u5c11 {stacks} \u70b9\u3002"
+        "zh": "\u6cd5\u672f\u200b\u7684\u200b\u9b54\u80fd\u200b\u8017\u8d39\u200b\u51cf\u5c11\u200b{stacks}\u200b\u3002"
       }
     },
     {
@@ -3322,11 +3352,11 @@
       },
       "tooltip_texts": {
         "en": "Spells cost less mana to cast, excluding Brainstorm. (cannot reduce cost to 0).",
-        "zh": "\u65bd\u653e\u6cd5\u672f\u6d88\u8017\u7684\u6cd5\u529b\u503c\u51cf\u5c11\uff0c\r\n\u5934\u8111\u98ce\u66b4\u9664\u5916\uff08\u6d88\u8017\u65e0\u6cd5\u964d\u81f3 0\uff09\u3002"
+        "zh": "\u9664\u200b\u8111\u529b\u200b\u6fc0\u8361\u200b\u4ee5\u200b\u5916\u200b\u7684\u200b\u6cd5\u672f\u200b\u9b54\u200b\u80fd\u200b\u8017\u8d39\u200b\u51cf\u5c11\u3002\u200b\uff08\u4e0d\u200b\u80fd\u200b\u51cf\u52300\uff09"
       },
       "tooltip_stacks_texts": {
         "en": "Spells cost {stacks} less mana to cast, excluding Brainstorm.",
-        "zh": "\u65bd\u653e\u6cd5\u672f\u6d88\u8017\u7684\u6cd5\u529b\u503c\u51cf\u5c11 {stacks} \u70b9\uff0c\r\n\u5934\u8111\u98ce\u66b4\u9664\u5916\u3002"
+        "zh": "\u9664\u200b\u8111\u529b\u200b\u6fc0\u8361\u200b\u4ee5\u200b\u5916\u200b\u7684\u200b\u6cd5\u672f\u200b\u9b54\u200b\u80fd\u200b\u8017\u8d39\u200b\u51cf\u5c11\u200b{stacks}\u200b\u3002"
       }
     },
     {
@@ -3339,12 +3369,12 @@
       "tooltip_stacks_key": "KEYWORD_REFLECT_DESC",
       "name_texts": {
         "en": "Reflect",
-        "zh": "\u53cd\u5c04"
+        "zh": "\u53cd\u5f39"
       },
       "tooltip_texts": {},
       "tooltip_stacks_texts": {
         "en": "Reflects the next {stacks} projectiles you are hit with back at the attacker.",
-        "zh": "\u5c06\u63a5\u4e0b\u6765\u51fb\u4e2d\u4f60\u7684 {stacks} \u4e2a\u6295\u5c04\u7269\u53cd\u5c04\u7ed9\u653b\u51fb\u8005\u3002"
+        "zh": "\u63a5\u4e0b\u200b\u6765\u51fb\u200b\u4e2d\u200b\u4f60\u200b\u7684\u200b{stacks}\u200b\u4e2a\u200b\u6295\u5c04\u7269\u200b\u4f1a\u200b\u88ab\u200b\u53cd\u5f39\u200b\u56de\u53bb\u3002"
       }
     },
     {
@@ -3357,11 +3387,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Reload",
-        "zh": "\u88c5\u586b"
+        "zh": "\u5c31\u200b\u7eea"
       },
       "tooltip_texts": {
         "en": "This action starts disabled and does not refresh on its own after use. Meet the condition to refresh it.",
-        "zh": "\u6b64\u884c\u52a8\u521d\u59cb\u4e3a\u7981\u7528\u72b6\u6001\uff0c\r\n\u4f7f\u7528\u540e\u4e0d\u4f1a\u81ea\u52a8\u5237\u65b0\u3002\r\n\u6ee1\u8db3\u6761\u4ef6\u4ee5\u5237\u65b0\u5b83\u3002"
+        "zh": "\u8fd9\u4e2a\u200b\u884c\u52a8\u200b\u521d\u59cb\u200b\u662f\u200b\u7981\u7528\u200b\u72b6\u6001\uff0c\u200b\u4f7f\u7528\u200b\u4e4b\u540e\u200b\u4e0d\u200b\u4f1a\u200b\u81ea\u52a8\u200b\u5237\u65b0\u3002\u200b\u6ee1\u8db3\u200b\u6761\u4ef6\u200b\u624d\u200b\u80fd\u200b\u5237\u65b0\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -3375,11 +3405,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Reload",
-        "zh": "\u88c5\u586b"
+        "zh": "\u5c31\u200b\u7eea"
       },
       "tooltip_texts": {
         "en": "This action does not refresh on its own after use. Meet the condition to refresh it.",
-        "zh": "\u6b64\u884c\u52a8\u4f7f\u7528\u540e\u4e0d\u4f1a\u81ea\u52a8\u5237\u65b0\u3002\r\n\u6ee1\u8db3\u6761\u4ef6\u4ee5\u5237\u65b0\u5b83\u3002"
+        "zh": "\u8fd9\u4e2a\u200b\u884c\u52a8\u200b\u4f7f\u7528\u200b\u4e4b\u540e\u200b\u4e0d\u200b\u4f1a\u200b\u81ea\u52a8\u200b\u5237\u65b0\u3002\u200b\u6ee1\u8db3\u200b\u6761\u4ef6\u200b\u624d\u200b\u80fd\u200b\u5237\u65b0\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -3393,15 +3423,15 @@
       "tooltip_stacks_key": "KEYWORD_AUTOREVIVE_DESC",
       "name_texts": {
         "en": "Auto Revive",
-        "zh": "\u81ea\u52a8\u590d\u6d3b"
+        "zh": "\u81ea\u52a8\u200b\u590d\u6d3b"
       },
       "tooltip_texts": {
         "en": "Revives at the end of the next round.",
-        "zh": "\u5728\u4e0b\u4e00\u56de\u5408\u7ed3\u675f\u65f6\u590d\u6d3b\u3002"
+        "zh": "\u4e0b\u200b\u4e00\u200b\u8f6e\u200b\u7ed3\u675f\u200b\u65f6\u590d\u6d3b\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "Revives at the end of the next round.",
-        "zh": "\u5728\u4e0b\u4e00\u56de\u5408\u7ed3\u675f\u65f6\u590d\u6d3b\u3002"
+        "zh": "\u4e0b\u200b\u4e00\u200b\u8f6e\u200b\u7ed3\u675f\u200b\u65f6\u590d\u6d3b\u3002"
       }
     },
     {
@@ -3414,11 +3444,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Energized",
-        "zh": "\u7cbe\u529b\u5145\u6c9b"
+        "zh": "\u6d3b\u529b\u200b\u8ff8\u200b\u53d1"
       },
       "tooltip_texts": {
         "en": "Takes an extra turn. Cannot be Energized again until after that turn ends.",
-        "zh": "\u83b7\u5f97\u4e00\u4e2a\u989d\u5916\u56de\u5408\u3002\r\n\u5728\u8be5\u56de\u5408\u7ed3\u675f\u524d\u65e0\u6cd5\u518d\u6b21\u83b7\u5f97\u7cbe\u529b\u5145\u6c9b\u3002"
+        "zh": "\u83b7\u5f97\u200b1\u200b\u4e2a\u989d\u200b\u5916\u200b\u56de\u5408\uff0c\u200b\u90a3\u4e2a\u200b\u56de\u5408\u200b\u7ed3\u675f\u200b\u4e4b\u524d\u200b\u4e0d\u200b\u80fd\u200b\u518d\u6b21\u200b\u6d3b\u529b\u200b\u8ff8\u53d1\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -3436,7 +3466,7 @@
       },
       "tooltip_texts": {
         "en": "Hatches a Fly at the end of its turn. Damage from worms and bugs always crits against this.",
-        "zh": "\u5728\u5176\u56de\u5408\u7ed3\u675f\u65f6\u5b75\u5316\u4e00\u53ea\u82cd\u8747\u3002\r\n\u8815\u866b\u548c\u866b\u7c7b\u5bf9\u5176\u9020\u6210\u7684\u4f24\u5bb3\u5fc5\u5b9a\u66b4\u51fb\u3002"
+        "zh": "\u81ea\u5df1\u200b\u56de\u5408\u200b\u7ed3\u675f\u200b\u65f6\u200b\u5b75\u200b\u51fa\u200b1\u200b\u4e2a\u200b\u82cd\u8747\u3002\u200b\u8089\u866b\u200b\u548c\u200b\u6606\u200b\u866b\u200b\u5bf9\u200b\u5b58\u5728\u200b\u8fd9\u4e2a\u200b\u51cf\u76ca\u200b\u7684\u200b\u76ee\u6807\u200b\u9020\u6210\u200b\u4f24\u5bb3\u200b\u65f6\uff0c\u200b\u4e00\u5b9a\u200b\u66b4\u51fb\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -3450,11 +3480,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Doomed",
-        "zh": "\u6b7b\u5492"
+        "zh": "\u5fc5\u6b7b\u200b\u65e0\u7591"
       },
       "tooltip_texts": {
         "en": "Ticks down at the end of your turn. When it hits 0, Die (without being injured).",
-        "zh": "\u5728\u4f60\u7684\u56de\u5408\u7ed3\u675f\u65f6\u5012\u6570\u3002\r\n\u5f53\u5012\u6570\u5f52\u96f6\u65f6\u6b7b\u4ea1\uff08\u4e0d\u4f1a\u9020\u6210\u521b\u4f24\uff09\u3002"
+        "zh": "\u5728\u200b\u4f60\u200b\u56de\u5408\u200b\u7ed3\u675f\u200b\u65f6\u200b\u5012\u6570\u200b\u4e00\u200b\u6b21\uff0c\u200b\u6570\u200b\u5230\u200b0\u65f6\uff0c\u200b\u6b7b\u4ea1\u3002\u200b\uff08\u4e0d\u200b\u4f1a\u200b\u843d\u4e0b\u200b\u4f24\u6b8b\uff09"
       },
       "tooltip_stacks_texts": {}
     },
@@ -3468,11 +3498,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Scrambled",
-        "zh": "\u9519\u4e71"
+        "zh": "\u4e71\u4e03\u516b\u200b\u7cdf"
       },
       "tooltip_texts": {
         "en": "Abilities are scrambled, temporarily.",
-        "zh": "\u6280\u80fd\u6682\u65f6\u88ab\u6253\u4e71\u3002"
+        "zh": "\u80fd\u529b\u200b\u6682\u65f6\u200b\u6253\u4e71\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -3490,11 +3520,11 @@
       },
       "tooltip_texts": {
         "en": "Basic attack inflicts Bleed.",
-        "zh": "\u57fa\u7840\u653b\u51fb\u65bd\u52a0\u6d41\u8840\u3002"
+        "zh": "\u666e\u901a\u200b\u653b\u51fb\u65bd\u52a0\u3010\u200b\u51fa\u200b\u8840\u3011\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "Basic attack inflicts +{stacks} Bleed.",
-        "zh": "\u57fa\u7840\u653b\u51fb\u65bd\u52a0 +{stacks} \u5c42\u6d41\u8840\u3002"
+        "zh": "\u666e\u901a\u200b\u653b\u51fb\u4f1a\u200b\u591a\u65bd\u200b\u52a0\u200b{stacks}\u200b\u5c42\u200b\u3010\u51fa\u200b\u8840\u3011\u3002"
       }
     },
     {
@@ -3507,11 +3537,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Shield",
-        "zh": "\u62a4\u76fe"
+        "zh": "\u62a4\u200b\u76fe"
       },
       "tooltip_texts": {
         "en": "Blocks incoming damage.",
-        "zh": "\u683c\u6321\u5373\u5c06\u53d7\u5230\u7684\u4f24\u5bb3\u3002"
+        "zh": "\u6321\u4f4f\u200b\u6240\u200b\u53d7\u200b\u4f24\u5bb3\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -3529,7 +3559,7 @@
       },
       "tooltip_texts": {
         "en": "All actions are disabled. Cast Break Circuit to break.",
-        "zh": "\u6240\u6709\u884c\u52a8\u88ab\u7981\u7528\u3002\r\n\u65bd\u653e\u201c\u7834\u574f\u56de\u8def\u201d\u4ee5\u89e3\u9664\u3002"
+        "zh": "\u6240\u6709\u200b\u884c\u52a8\u200b\u90fd\u200b\u4e0d\u200b\u80fd\u200b\u4f7f\u7528\u3002\u200b\u65bd\u653e\u200b\u201c\u200b\u65ad\u200b\u8def\u200b\u201d\u200b\u624d\u200b\u80fd\u200b\u4e2d\u65ad\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -3555,15 +3585,15 @@
       "tooltip_stacks_key": "KEYWORD_SLEEP_DESC",
       "name_texts": {
         "en": "Sleep",
-        "zh": "\u7761\u7720"
+        "zh": "\u7761\u200b\u7740"
       },
       "tooltip_texts": {
         "en": "Skip the next turn. Being attacked has a chance to wake you up.",
-        "zh": "\u8df3\u8fc7\u4e0b\u4e00\u56de\u5408\u3002\u53d7\u5230\u653b\u51fb\u6709\u51e0\u7387\u4f1a\u9192\u6765\u3002"
+        "zh": "\u8df3\u200b\u8fc7\u200b\u4e0b\u200b\u4e2a\u200b\u56de\u5408\u3002\u200b\u53d7\u5230\u200b\u653b\u51fb\u200b\u6709\u200b\u4e00\u5b9a\u200b\u51e0\u7387\u200b\u9192\u6765\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "Skip the next {stacks} turns. Being attacked has a chance to wake you up.",
-        "zh": "\u8df3\u8fc7\u63a5\u4e0b\u6765\u7684 {stacks} \u4e2a\u56de\u5408\u3002\r\n\u53d7\u5230\u653b\u51fb\u6709\u51e0\u7387\u4f1a\u9192\u6765\u3002"
+        "zh": "\u8df3\u200b\u8fc7\u200b\u63a5\u200b\u4e0b\u6765\u200b{stacks}\u200b\u4e2a\u200b\u56de\u5408\u3002\u200b\u53d7\u5230\u200b\u653b\u51fb\u200b\u6709\u200b\u4e00\u5b9a\u200b\u51e0\u7387\u200b\u9192\u6765\u3002"
       }
     },
     {
@@ -3576,12 +3606,12 @@
       "tooltip_stacks_key": "KEYWORD_SLEEPPAR_DESC",
       "name_texts": {
         "en": "Sleep (Paralysis)",
-        "zh": "\u7761\u7720 (\u9ebb\u75f9)"
+        "zh": "\u9b3c\u538b\u5e8a"
       },
       "tooltip_texts": {},
       "tooltip_stacks_texts": {
         "en": "You are asleep until your sleep paralysis demon is killed.",
-        "zh": "\u4f60\u4f1a\u4e00\u76f4\u6c89\u7761\uff0c\r\n\u76f4\u5230\u4f60\u7684\u7761\u7720\u762b\u75ea\u6076\u9b54\u88ab\u6740\u6b7b\u3002"
+        "zh": "\u4f60\u200b\u7684\u200b\u68a6\u9b47\u200b\u88ab\u200b\u51fb\u6740\u200b\u4e4b\u524d\uff0c\u200b\u4f60\u200b\u4f1a\u200b\u59cb\u7ec8\u5904\u4e8e\u200b\u3010\u7761\u200b\u7740\u200b\u3011\u200b\u72b6\u6001\u3002"
       }
     },
     {
@@ -3594,15 +3624,15 @@
       "tooltip_stacks_key": "KEYWORD_SLOW_DESC",
       "name_texts": {
         "en": "Slow",
-        "zh": "\u51cf\u901f"
+        "zh": "\u8fdf\u7f13"
       },
       "tooltip_texts": {
         "en": "Movement range is reduced to 2. Takes its turn later.",
-        "zh": "\u79fb\u52a8\u8ddd\u79bb\u964d\u4f4e\u81f3 2\u3002\r\n\u56de\u5408\u884c\u52a8\u987a\u4f4d\u5ef6\u540e\u3002"
+        "zh": "\u79fb\u52a8\u200b\u8303\u56f4\u200b\u7f29\u77ed\u200b\u5230\u200b2\u3002\u200b\u56de\u5408\u5ef6\u540e\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "Movement range is reduced to 2 for the next {stacks} turns. Takes its turn later.",
-        "zh": "\u5728\u63a5\u4e0b\u6765\u7684 {stacks} \u4e2a\u56de\u5408\u4e2d\uff0c\r\n\u79fb\u52a8\u8ddd\u79bb\u964d\u4f4e\u81f3 2\u3002\r\n\u56de\u5408\u884c\u52a8\u987a\u4f4d\u5ef6\u540e\u3002"
+        "zh": "\u63a5\u200b\u4e0b\u6765\u200b{stacks}\u200b\u4e2a\u200b\u56de\u5408\uff0c\u200b\u79fb\u52a8\u200b\u8303\u56f4\u200b\u7f29\u77ed\u200b\u5230\u200b2\u3002\u200b\u884c\u52a8\u200b\u6b21\u200b\u5e8f\u5ef6\u540e\u3002"
       }
     },
     {
@@ -3615,15 +3645,15 @@
       "tooltip_stacks_key": "KEYWORD_SLOW_DESC_STACKLESS",
       "name_texts": {
         "en": "Slow",
-        "zh": "\u51cf\u901f"
+        "zh": "\u8fdf\u7f13"
       },
       "tooltip_texts": {
         "en": "Movement range is reduced to 2. Takes its turn later.",
-        "zh": "\u79fb\u52a8\u8ddd\u79bb\u964d\u4f4e\u81f3 2\u3002\r\n\u56de\u5408\u884c\u52a8\u987a\u4f4d\u5ef6\u540e\u3002"
+        "zh": "\u79fb\u52a8\u200b\u8303\u56f4\u200b\u7f29\u77ed\u200b\u5230\u200b2\u3002\u200b\u56de\u5408\u5ef6\u540e\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "Movement range is reduced to 2. Takes its turn later.",
-        "zh": "\u79fb\u52a8\u8ddd\u79bb\u964d\u4f4e\u81f3 2\u3002\r\n\u56de\u5408\u884c\u52a8\u987a\u4f4d\u5ef6\u540e\u3002"
+        "zh": "\u79fb\u52a8\u200b\u8303\u56f4\u200b\u7f29\u77ed\u200b\u5230\u200b2\u3002\u200b\u56de\u5408\u5ef6\u540e\u3002"
       }
     },
     {
@@ -3640,7 +3670,7 @@
       },
       "tooltip_texts": {
         "en": "Whenever a soul linked character loses health, all soul linked characters lose that health as well.",
-        "zh": "\u5f53\u4e00\u540d\u7075\u9b42\u94fe\u63a5\u7684\u89d2\u8272\u5931\u53bb\u751f\u547d\u503c\u65f6\uff0c\r\n\u6240\u6709\u7075\u9b42\u94fe\u63a5\u7684\u89d2\u8272\u90fd\u4f1a\u5931\u53bb\u540c\u7b49\u751f\u547d\u503c\u3002"
+        "zh": "\u53ea\u8981\u200b\u5b58\u5728\u200b\u3010\u7075\u200b\u9b42\u94fe\u200b\u63a5\u3011\u200b\u7684\u200b\u89d2\u8272\u200b\u5931\u53bb\u200b\u751f\u547d\uff0c\u200b\u6240\u6709\u200b\u5b58\u5728\u200b\u3010\u7075\u200b\u9b42\u94fe\u200b\u63a5\u3011\u200b\u7684\u200b\u89d2\u8272\u200b\u90fd\u200b\u4f1a\u200b\u5931\u53bb\u200b\u7b49\u91cf\u200b\u751f\u547d\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -3654,12 +3684,12 @@
       "tooltip_stacks_key": "KEYWORD_SPDUP_DESC",
       "name_texts": {
         "en": "Speed Up",
-        "zh": "\u901f\u5ea6\u63d0\u5347"
+        "zh": "\u901f\u5ea6\u200b\u63d0\u5347"
       },
       "tooltip_texts": {},
       "tooltip_stacks_texts": {
         "en": "Speed increased by {stacks}.\nSpeed affects movement range and turn order.",
-        "zh": "\u901f\u5ea6\u589e\u52a0 {stacks} \u70b9\u3002\r\n\u901f\u5ea6\u5f71\u54cd\u79fb\u52a8\u8ddd\u79bb\u548c\u884c\u52a8\u987a\u5e8f\u3002"
+        "zh": "\u901f\u5ea6\u200b\u63d0\u5347\u200b{stacks}\u200b\u3002\n\u901f\u5ea6\u200b\u5f71\u54cd\u200b\u79fb\u52a8\u200b\u8303\u56f4\u200b\u548c\u200b\u56de\u5408\u200b\u6b21\u200b\u5e8f\u3002"
       }
     },
     {
@@ -3672,12 +3702,12 @@
       "tooltip_stacks_key": "KEYWORD_SPWDDOWN_DESC",
       "name_texts": {
         "en": "Speed Down",
-        "zh": "\u901f\u5ea6\u4e0b\u964d"
+        "zh": "\u901f\u5ea6\u200b\u4e0b\u964d"
       },
       "tooltip_texts": {},
       "tooltip_stacks_texts": {
         "en": "Speed decreased by {absstacks}.\nSpeed affects movement range and turn order.",
-        "zh": "\u901f\u5ea6\u51cf\u5c11 {absstacks} \u70b9\u3002\r\n\u901f\u5ea6\u5f71\u54cd\u79fb\u52a8\u8ddd\u79bb\u548c\u884c\u52a8\u987a\u5e8f\u3002"
+        "zh": "\u901f\u5ea6\u200b\u4e0b\u964d\u200b{absstacks}\u200b\u3002\n\u901f\u5ea6\u200b\u5f71\u54cd\u200b\u79fb\u52a8\u200b\u8303\u56f4\u200b\u548c\u200b\u56de\u5408\u200b\u6b21\u200b\u5e8f\u3002"
       }
     },
     {
@@ -3690,15 +3720,15 @@
       "tooltip_stacks_key": "KEYWORD_MAGICDMGUP_DESC",
       "name_texts": {
         "en": "Magic Damage Up",
-        "zh": "\u9b54\u6cd5\u4f24\u5bb3\u63d0\u5347"
+        "zh": "\u9b54\u6cd5\u200b\u4f24\u5bb3\u200b\u63d0\u5347"
       },
       "tooltip_texts": {
         "en": "Increases any magical damage you deal.",
-        "zh": "\u589e\u52a0\u4f60\u9020\u6210\u7684\u6240\u6709\u9b54\u6cd5\u4f24\u5bb3\u3002"
+        "zh": "\u4f60\u200b\u9020\u6210\u200b\u7684\u200b\u5404\u200b\u7c7b\u200b\u9b54\u6cd5\u200b\u4f24\u5bb3\u200b\u589e\u52a0\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "Magic damage you inflict does {stacks} extra damage.",
-        "zh": "\u4f60\u9020\u6210\u7684\u9b54\u6cd5\u4f24\u5bb3\u589e\u52a0 {stacks} \u70b9\u3002"
+        "zh": "\u4f60\u200b\u9020\u6210\u200b\u7684\u200b\u9b54\u6cd5\u200b\u4f24\u5bb3\u200b\u589e\u52a0\u200b{stacks}\u200b\u3002"
       }
     },
     {
@@ -3723,11 +3753,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Infested",
-        "zh": "\u5bc4\u751f"
+        "zh": "\u6ecb\u751f"
       },
       "tooltip_texts": {
         "en": "The spiders infesting this pop out when it dies, destroying its corpse.",
-        "zh": "\u5bc4\u751f\u5728\u6b64\u7684\u8718\u86db\u4f1a\u5728\u5176\u6b7b\u4ea1\u65f6\u94bb\u51fa\uff0c\r\n\u5e76\u6467\u6bc1\u5c38\u4f53\u3002"
+        "zh": "\u81ea\u8eab\u200b\u6b7b\u4ea1\u200b\u65f6\uff0c\u200b\u4f53\u5185\u200b\u5bc4\u751f\u200b\u7684\u200b\u8718\u86db\u200b\u4f1a\u200b\u7206\u200b\u51fa\u6765\uff0c\u200b\u540c\u65f6\u200b\u6467\u6bc1\u200b\u5c38\u4f53\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -3741,15 +3771,15 @@
       "tooltip_stacks_key": "KEYWORD_STATBOUNTY_DESC",
       "name_texts": {
         "en": "Stat Bounty",
-        "zh": "\u5c5e\u6027\u8d4f\u91d1"
+        "zh": "\u5c5e\u6027\u200b\u8d4f\u91d1"
       },
       "tooltip_texts": {
         "en": "Whoever kills this gets All Stats Up.",
-        "zh": "\u65e0\u8bba\u8c01\u51fb\u6740\u76ee\u6807\uff0c\u90fd\u5c06\u83b7\u5f97\u5168\u5c5e\u6027\u63d0\u5347\u3002"
+        "zh": "\u8c01\u200b\u51fb\u6740\u200b\u8fd9\u4e2a\u200b\u5355\u4f4d\uff0c\u200b\u8c01\u200b\u7684\u200b\u6240\u6709\u200b\u5c5e\u6027\u200b\u5c31\u200b\u63d0\u5347\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "Whoever kills this gets All Stats Up {stacks}.",
-        "zh": "\u65e0\u8bba\u8c01\u51fb\u6740\u76ee\u6807\uff0c\r\n\u90fd\u5c06\u83b7\u5f97 {stacks} \u5c42\u5168\u5c5e\u6027\u63d0\u5347\u3002"
+        "zh": "\u8c01\u200b\u51fb\u6740\u200b\u8fd9\u4e2a\u200b\u5355\u4f4d\uff0c\u200b\u8c01\u200b\u7684\u200b\u6240\u6709\u200b\u5c5e\u6027\u200b\u5c31\u200b\u63d0\u5347\u200b{stacks}\u200b\u3002"
       }
     },
     {
@@ -3762,11 +3792,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Stealth",
-        "zh": "\u6f5c\u884c"
+        "zh": "\u9690\u533f"
       },
       "tooltip_texts": {
         "en": "50% Dodge Chance. Lose Stealth when you get hit.",
-        "zh": "50% \u95ea\u907f\u7387\u3002\r\n\u53d7\u5230\u653b\u51fb\u65f6\u5931\u53bb\u6f5c\u884c\u72b6\u6001\u3002"
+        "zh": "\u95ea\u200b\u907f\u200b\u51e0\u7387\u200b+50%\u200b\u3002\u200b\u88ab\u51fb\u200b\u4e2d\u4f1a\u200b\u5931\u53bb\u200b\u3010\u9690\u200b\u533f\u3011\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -3780,11 +3810,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Stealth",
-        "zh": "\u6f5c\u884c"
+        "zh": "\u9690\u533f"
       },
       "tooltip_texts": {
         "en": "50% Dodge Chance. Lose Stealth when you get hit or use your basic attack.",
-        "zh": "50% \u95ea\u907f\u7387\u3002\r\n\u53d7\u5230\u653b\u51fb\u6216\u4f7f\u7528\u57fa\u7840\u653b\u51fb\u65f6\u5931\u53bb\u6f5c\u884c\u72b6\u6001\u3002"
+        "zh": "\u95ea\u200b\u907f\u200b\u51e0\u7387\u200b+50%\u200b\u3002\u200b\u88ab\u51fb\u4e2d\u200b\u6216\u200b\u4f7f\u7528\u200b\u666e\u901a\u200b\u653b\u51fb\u200b\u4f1a\u200b\u5931\u53bb\u200b\u3010\u9690\u200b\u533f\u3011\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -3798,11 +3828,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "[img:stimulation] Stimulation",
-        "zh": "[img:stimulation] \u523a\u6fc0\u5ea6"
+        "zh": "[img:stimulation] \u523a\u6fc0"
       },
       "tooltip_texts": {
         "en": "Affects the quality of newborn kittens.",
-        "zh": "\u5f71\u54cd\u65b0\u751f\u5c0f\u732b\u7684\u54c1\u8d28\u3002"
+        "zh": "\u5f71\u54cd\u200b\u732b\u5d3d\u200b\u7684\u200b\u54c1\u8d28\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -3816,12 +3846,12 @@
       "tooltip_stacks_key": "KEYWORD_STRUP_DESC",
       "name_texts": {
         "en": "Strength Up",
-        "zh": "\u529b\u91cf\u63d0\u5347"
+        "zh": "\u529b\u91cf\u200b\u63d0\u5347"
       },
       "tooltip_texts": {},
       "tooltip_stacks_texts": {
         "en": "Strength increased by {stacks}.\nStrength affects melee attack and melee ability damage.",
-        "zh": "\u529b\u91cf\u589e\u52a0 {stacks} \u70b9\u3002\r\n\u529b\u91cf\u5f71\u54cd\u8fd1\u6218\u653b\u51fb\u548c\u8fd1\u6218\u6280\u80fd\u4f24\u5bb3\u3002"
+        "zh": "\u529b\u91cf\u200b\u63d0\u5347\u200b{stacks}\u200b\u3002\n\u529b\u91cf\u200b\u5f71\u54cd\u200b\u8fd1\u200b\u8eab\u200b\u653b\u51fb\u200b\u548c\u200b\u8fd1\u8eab\u200b\u80fd\u529b\u200b\u7684\u200b\u4f24\u5bb3\u3002"
       }
     },
     {
@@ -3834,12 +3864,12 @@
       "tooltip_stacks_key": "KEYWORD_STRDOWN_DESC",
       "name_texts": {
         "en": "Strength Down",
-        "zh": "\u529b\u91cf\u4e0b\u964d"
+        "zh": "\u529b\u91cf\u200b\u4e0b\u200b\u964d"
       },
       "tooltip_texts": {},
       "tooltip_stacks_texts": {
         "en": "Strength decreased by {absstacks}.\nStrength affects melee attack and melee ability damage.",
-        "zh": "\u529b\u91cf\u51cf\u5c11 {absstacks} \u70b9\u3002\r\n\u529b\u91cf\u5f71\u54cd\u8fd1\u6218\u653b\u51fb\u548c\u8fd1\u6218\u6280\u80fd\u4f24\u5bb3\u3002"
+        "zh": "\u529b\u91cf\u200b\u4e0b\u200b\u964d\u200b{absstacks}\u200b\u3002\n\u529b\u91cf\u200b\u5f71\u54cd\u200b\u8fd1\u200b\u8eab\u200b\u653b\u51fb\u200b\u548c\u200b\u8fd1\u8eab\u200b\u80fd\u529b\u200b\u7684\u200b\u4f24\u5bb3\u3002"
       }
     },
     {
@@ -3852,15 +3882,15 @@
       "tooltip_stacks_key": "KEYWORD_STUN_DESC",
       "name_texts": {
         "en": "Stun",
-        "zh": "\u6655\u7729"
+        "zh": "\u7729\u6655"
       },
       "tooltip_texts": {
         "en": "Skip the next turn.",
-        "zh": "\u8df3\u8fc7\u4e0b\u4e00\u56de\u5408\u3002"
+        "zh": "\u8df3\u200b\u8fc7\u200b\u4e0b\u200b\u4e2a\u200b\u56de\u5408\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "Skip the next {stacks} turns.",
-        "zh": "\u8df3\u8fc7\u63a5\u4e0b\u6765\u7684 {stacks} \u4e2a\u56de\u5408\u3002"
+        "zh": "\u8df3\u200b\u8fc7\u200b\u63a5\u200b\u4e0b\u6765\u200b{stacks}\u200b\u4e2a\u200b\u56de\u5408\u3002"
       }
     },
     {
@@ -3883,8 +3913,14 @@
       "name_key": "ENEMY_TVBOT_DIE_NAME",
       "tooltip_key": "ENEMY_TVBOT_DIE_DESC",
       "tooltip_stacks_key": null,
-      "name_texts": {},
-      "tooltip_texts": {},
+      "name_texts": {
+        "en": "DIE",
+        "zh": "DIE\u200b\uff08\u6b7b\uff09"
+      },
+      "tooltip_texts": {
+        "en": "It is too late. Win now or die.",
+        "zh": "\u592a\u200b\u665a\u200b\u4e86\uff0c\u200b\u8981\u4e48\u200b\u9a6c\u200b\u4e0a\u8d62\uff0c\u200b\u4e0d\u7136\u200b\u5c31\u200b\u53bb\u6b7b\u3002"
+      },
       "tooltip_stacks_texts": {}
     },
     {
@@ -3895,8 +3931,14 @@
       "name_key": "ENEMY_TVBOT_DUMB_NAME",
       "tooltip_key": "ENEMY_TVBOT_DUMB_DESC",
       "tooltip_stacks_key": null,
-      "name_texts": {},
-      "tooltip_texts": {},
+      "name_texts": {
+        "en": "DUMB",
+        "zh": "DUMB\u200b\uff08\u6c89\u9ed8\uff09"
+      },
+      "tooltip_texts": {
+        "en": "Spells of its enemies are disabled.",
+        "zh": "\u654c\u4eba\u200b\u4e0d\u200b\u80fd\u200b\u65bd\u653e\u200b\u6cd5\u672f\u3002"
+      },
       "tooltip_stacks_texts": {}
     },
     {
@@ -3907,8 +3949,14 @@
       "name_key": "ENEMY_TVBOT_OBEY_NAME",
       "tooltip_key": "ENEMY_TVBOT_OBEY_DESC",
       "tooltip_stacks_key": null,
-      "name_texts": {},
-      "tooltip_texts": {},
+      "name_texts": {
+        "en": "OBEY",
+        "zh": "OBEY\u200b\uff08\u670d\u4ece\uff09"
+      },
+      "tooltip_texts": {
+        "en": "Basic attacks of its enemies are disabled.",
+        "zh": "\u654c\u4eba\u200b\u4e0d\u200b\u80fd\u200b\u8fdb\u884c\u200b\u666e\u901a\u200b\u653b\u51fb\u3002"
+      },
       "tooltip_stacks_texts": {}
     },
     {
@@ -3919,8 +3967,14 @@
       "name_key": "ENEMY_TVBOT_STOP_NAME",
       "tooltip_key": "ENEMY_TVBOT_STOP_DESC",
       "tooltip_stacks_key": null,
-      "name_texts": {},
-      "tooltip_texts": {},
+      "name_texts": {
+        "en": "STOP",
+        "zh": "STOP\u200b\uff08\u505c\u6b62\uff09"
+      },
+      "tooltip_texts": {
+        "en": "Basic movement of its enemies is disabled.",
+        "zh": "\u654c\u4eba\u200b\u4e0d\u200b\u80fd\u200b\u8fdb\u884c\u200b\u57fa\u7840\u200b\u79fb\u52a8\u3002"
+      },
       "tooltip_stacks_texts": {}
     },
     {
@@ -3933,11 +3987,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Entangled",
-        "zh": "\u7f20\u7ed5"
+        "zh": "\u7f20\u200b\u4f4f"
       },
       "tooltip_texts": {
         "en": "Immobile. Use basic attack to break free.",
-        "zh": "\u5b9a\u8eab\u3002\u4f7f\u7528\u57fa\u7840\u653b\u51fb\u53ef\u6323\u8131\u3002"
+        "zh": "\u3010\u200b\u79fb\u52a8\u200b\u53d7\u9650\u3011\u3002\u200b\u4f7f\u7528\u200b\u666e\u901a\u200b\u653b\u51fb\u200b\u53ef\u4ee5\u200b\u6323\u8131\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -3951,15 +4005,15 @@
       "tooltip_stacks_key": "KEYWORD_TARRED_DESC",
       "name_texts": {
         "en": "Tarred",
-        "zh": "\u7126\u6cb9"
+        "zh": "\u6d51\u8eab\u200b\u662f\u200b\u6cb9"
       },
       "tooltip_texts": {
         "en": "Decreases speed. Flammable.",
-        "zh": "\u964d\u4f4e\u901f\u5ea6\u3002\u6613\u71c3\u3002"
+        "zh": "\u901f\u5ea6\u200b\u51cf\u7f13\u3002\u200b\u6613\u71c3\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "Speed decreased by {stacks}. Flammable.\nSpeed affects movement range and turn order.",
-        "zh": "\u901f\u5ea6\u964d\u4f4e {stacks} \u70b9\u3002\u6613\u71c3\u3002\r\n\u901f\u5ea6\u5f71\u54cd\u79fb\u52a8\u8ddd\u79bb\u548c\u884c\u52a8\u987a\u5e8f\u3002"
+        "zh": "\u901f\u5ea6\u200b\u4e0b\u964d\u200b{stacks}\u200b\u3002\u200b\u6613\u71c3\u3002\n\u901f\u5ea6\u200b\u5f71\u54cd\u200b\u79fb\u52a8\u200b\u8303\u56f4\u200b\u548c\u200b\u56de\u5408\u200b\u6b21\u200b\u5e8f\u3002"
       }
     },
     {
@@ -4000,7 +4054,7 @@
       },
       "tooltip_texts": {
         "en": "Increases the quality of the next item you craft or the next familiar you spawn.\nUp to 3 Tech can be used at a time.",
-        "zh": "\u63d0\u9ad8\u4f60\u5236\u4f5c\u7684\u4e0b\u4e00\u4e2a\u7269\u54c1\u6216\u751f\u6210\u7684\r\n\u4e0b\u4e00\u4e2a\u4f7f\u9b54\u7684\u54c1\u8d28\u3002\r\n\u4e00\u6b21\u6700\u591a\u6d88\u8017 3 \u5c42\u79d1\u6280\u3002"
+        "zh": "\u4f60\u200b\u4e0b\u200b\u4e00\u200b\u6b21\u200b\u5236\u4f5c\u200b\u7684\u200b\u9053\u5177\u200b\u6216\u200b\u53ec\u5524\u200b\u7684\u200b\u8ddf\u73ed\u54c1\u8d28\u200b\u63d0\u5347\u3002\n\u4e00\u200b\u6b21\u200b\u6700\u591a\u200b\u53ef\u4ee5\u200b\u4f7f\u7528\u200b3\u70b9\u200b\u3010\u200b\u79d1\u6280\u3011\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -4014,15 +4068,51 @@
       "tooltip_stacks_key": "KEYWORD_TEMPBACKSTAB_DESC",
       "name_texts": {
         "en": "Backstab Bonus",
-        "zh": "\u80cc\u523a\u52a0\u6210"
+        "zh": "\u80cc\u523a\u200b\u52a0\u6210"
       },
       "tooltip_texts": {
         "en": "Increases the damage your Backstabs deal.",
-        "zh": "\u589e\u52a0\u4f60\u7684\u80cc\u523a\u9020\u6210\u7684\u4f24\u5bb3\u3002"
+        "zh": "\u4f60\u200b\u80cc\u523a\u200b\u6240\u200b\u9020\u6210\u200b\u7684\u200b\u4f24\u5bb3\u200b\u63d0\u5347\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "+{stacks}% Backstab Damage this turn. (Plus the default 25% backstab bonus.)",
-        "zh": "\u672c\u56de\u5408 +{stacks}% \u80cc\u523a\u4f24\u5bb3\u3002\r\n\uff08\u53e0\u52a0\u9ed8\u8ba4\u7684 25% \u80cc\u523a\u52a0\u6210\u3002\r\n\uff09"
+        "zh": "\u8fd9\u4e2a\u200b\u56de\u5408\u200b\u80cc\u200b\u523a\u200b\u4f24\u5bb3\u200b+{stacks}%\u200b\u3002\u200b\uff08\u5916\u52a0\u9ed8\u8ba4\u200b\u7684\u200b25%\u200b\u80cc\u523a\u200b\u52a0\u6210\uff09"
+      }
+    },
+    {
+      "row_code": "TempBonusKnockback",
+      "effect_code": "TempBonusKnockback",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_BONUSKNOCKBACK_NAME",
+      "tooltip_key": null,
+      "tooltip_stacks_key": "KEYWORD_BONUSKNOCKBACK_DESC",
+      "name_texts": {
+        "en": "Bonus Knockback",
+        "zh": "\u5956\u200b\u52b1\u51fb\u200b\u9000"
+      },
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {
+        "en": "Knockback you inflict is increased by {stacks}.",
+        "zh": "\u4f60\u200b\u9020\u6210\u200b\u7684\u200b\u51fb\u9000\u200b\u8ddd\u79bb\u200b\u589e\u52a0\u200b{stacks}\u200b\u3002"
+      }
+    },
+    {
+      "row_code": "TempBonusKnockbackDamage",
+      "effect_code": "TempBonusKnockbackDamage",
+      "variant": "default",
+      "alias_of": null,
+      "name_key": "KEYWORD_BONUSKNOCKBACKDAMAGE_NAME",
+      "tooltip_key": null,
+      "tooltip_stacks_key": "KEYWORD_BONUSKNOCKBACKDAMAGE_DESC",
+      "name_texts": {
+        "en": "Bonus Knockback Damage",
+        "zh": "\u5956\u200b\u52b1\u51fb\u200b\u9000\u4f24\u5bb3"
+      },
+      "tooltip_texts": {},
+      "tooltip_stacks_texts": {
+        "en": "Knockback damage you deal is increased by {stacks}.",
+        "zh": "\u4f60\u200b\u9020\u6210\u200b\u7684\u200b\u51fb\u9000\u200b\u4f24\u5bb3\u200b\u63d0\u5347\u200b{stacks}\u200b\u3002"
       }
     },
     {
@@ -4039,7 +4129,7 @@
       },
       "tooltip_texts": {
         "en": "Attack things that damage you automatically.",
-        "zh": "\u81ea\u52a8\u653b\u51fb\u4f24\u5bb3\u4f60\u7684\u76ee\u6807\u3002"
+        "zh": "\u53d7\u5230\u200b\u4f24\u5bb3\u200b\u65f6\uff0c\u200b\u81ea\u52a8\u200b\u653b\u51fb\u200b\u5bf9\u65b9\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -4053,11 +4143,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Initiative Up",
-        "zh": "\u5148\u653b\u63d0\u5347"
+        "zh": "\u5148\u200b\u653b\u200b\u63d0\u5347"
       },
       "tooltip_texts": {
         "en": "You take your turn earlier in the round.",
-        "zh": "\u4f60\u5728\u56de\u5408\u4e2d\u66f4\u65e9\u884c\u52a8\u3002"
+        "zh": "\u4f60\u200b\u5728\u200b\u8fd9\u200b\u4e00\u200b\u8f6e\u200b\u7684\u200b\u56de\u5408\u200b\u63d0\u524d\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -4067,19 +4157,19 @@
       "variant": "neg",
       "alias_of": null,
       "name_key": "KEYWORD_TEMPINITDOWN_NAME",
-      "tooltip_key": "KEYWORD_TEMPINIT_DESC",
+      "tooltip_key": "KEYWORD_TEMPINITDOWN_DESC",
       "tooltip_stacks_key": "KEYWORD_TEMPINITDOWN_DESC",
       "name_texts": {
         "en": "Initiative Down",
-        "zh": "\u5148\u653b\u4e0b\u964d"
+        "zh": "\u5148\u200b\u653b\u200b\u4e0b\u964d"
       },
       "tooltip_texts": {
-        "en": "You take your turn earlier in the round.",
-        "zh": "\u4f60\u5728\u56de\u5408\u4e2d\u66f4\u65e9\u884c\u52a8\u3002"
+        "en": "You take your turn later in the round.",
+        "zh": "\u4f60\u200b\u8fd9\u200b\u4e00\u200b\u8f6e\u200b\u7684\u200b\u56de\u5408\u200b\u5ef6\u540e\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "You take your turn later in the round.",
-        "zh": "\u4f60\u5728\u56de\u5408\u4e2d\u66f4\u665a\u884c\u52a8\u3002"
+        "zh": "\u4f60\u200b\u8fd9\u200b\u4e00\u200b\u8f6e\u200b\u7684\u200b\u56de\u5408\u200b\u5ef6\u540e\u3002"
       }
     },
     {
@@ -4092,12 +4182,12 @@
       "tooltip_stacks_key": "KEYWORD_TEMPIMMUNE_DESC",
       "name_texts": {
         "en": "Injury Immunity",
-        "zh": "\u521b\u4f24\u514d\u75ab"
+        "zh": "\u4f24\u6b8b\u514d\u200b\u75ab"
       },
       "tooltip_texts": {},
       "tooltip_stacks_texts": {
         "en": "Cannot receive Injuries for any reason. Lasts {stacks} turns.",
-        "zh": "\u65e0\u8bba\u56e0\u4f55\u539f\u56e0\u90fd\u4e0d\u4f1a\u53d7\u5230\u521b\u4f24\u3002\r\n\u6301\u7eed {stacks} \u56de\u5408\u3002"
+        "zh": "\u5b8c\u5168\u200b\u4e0d\u200b\u4f1a\u200b\u843d\u4e0b\u200b\u4f24\u6b8b\u3002\u200b\u6548\u679c\u200b\u6301\u7eed\u200b{stacks}\u200b\u4e2a\u200b\u56de\u5408\u3002"
       }
     },
     {
@@ -4114,11 +4204,11 @@
       },
       "tooltip_texts": {
         "en": "Spells cost less mana to cast until the end of the turn.",
-        "zh": "\u76f4\u5230\u56de\u5408\u7ed3\u675f\uff0c\u65bd\u653e\u6cd5\u672f\u6d88\u8017\u7684\u6cd5\u529b\u503c\u51cf\u5c11\u3002"
+        "zh": "\u56de\u5408\u200b\u7ed3\u675f\u200b\u4e4b\u524d\uff0c\u200b\u6cd5\u672f\u200b\u7684\u200b\u9b54\u80fd\u200b\u8017\u8d39\u200b\u51cf\u5c11\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "Spells cost {stacks} less mana to cast until the end of the turn.",
-        "zh": "\u76f4\u5230\u56de\u5408\u7ed3\u675f\uff0c\r\n\u65bd\u653e\u6cd5\u672f\u6d88\u8017\u7684\u6cd5\u529b\u503c\u51cf\u5c11 {stacks} \u70b9\u3002"
+        "zh": "\u56de\u5408\u200b\u7ed3\u675f\u200b\u4e4b\u524d\uff0c\u200b\u6cd5\u672f\u200b\u7684\u200b\u9b54\u80fd\u200b\u8017\u8d39\u200b\u51cf\u5c11\u200b{stacks}\u200b\u3002"
       }
     },
     {
@@ -4131,11 +4221,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Preemptive Counter",
-        "zh": "\u5148\u5236\u53cd\u51fb"
+        "zh": "\u5148\u200b\u53d1\u5236\u200b\u654c"
       },
       "tooltip_texts": {
         "en": "Attack things that target you before they attack you, automatically.",
-        "zh": "\u5728\u7784\u51c6\u4f60\u7684\u76ee\u6807\u653b\u51fb\u4f60\u4e4b\u524d\u81ea\u52a8\u5bf9\u5176\u8fdb\u884c\u653b\u51fb\u3002"
+        "zh": "\u4f60\u200b\u6210\u4e3a\u200b\u653b\u51fb\u200b\u76ee\u6807\u200b\u65f6\uff0c\u200b\u4f1a\u200b\u5728\u200b\u5bf9\u65b9\u200b\u653b\u51fb\u200b\u4e4b\u524d\u200b\u81ea\u52a8\u200b\u5148\u884c\u200b\u53cd\u51fb\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -4149,15 +4239,15 @@
       "tooltip_stacks_key": "KEYWORD_TEMPRANGE_DESC",
       "name_texts": {
         "en": "Range Up (Temporary)",
-        "zh": "\u5c04\u7a0b\u63d0\u5347 (\u4e34\u65f6)"
+        "zh": "\u8303\u56f4\u200b\u6269\u5927\u200b\uff08\u4e34\u65f6\uff09"
       },
       "tooltip_texts": {
         "en": "Increases the range of your basic attack and projectile abilities until the end of the turn.",
-        "zh": "\u589e\u52a0\u4f60\u7684\u57fa\u7840\u653b\u51fb\u548c\u6295\u5c04\u7269\u6280\u80fd\u7684\u5c04\u7a0b\uff0c\r\n\u76f4\u5230\u56de\u5408\u7ed3\u675f\u3002"
+        "zh": "\u672c\u200b\u56de\u5408\u200b\u7ed3\u675f\u200b\u4e4b\u524d\uff0c\u200b\u666e\u901a\u200b\u653b\u51fb\u200b\u548c\u200b\u6295\u5c04\u200b\u80fd\u529b\u200b\u7684\u200b\u8303\u56f4\u200b\u6269\u5927\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "Range increased by {stacks} until the end of the turn.",
-        "zh": "\u5c04\u7a0b\u589e\u52a0 {stacks}\uff0c\u76f4\u5230\u56de\u5408\u7ed3\u675f\u3002"
+        "zh": "\u672c\u200b\u56de\u5408\u200b\u7ed3\u675f\u200b\u4e4b\u524d\uff0c\u200b\u8303\u56f4\u200b\u6269\u5927\u200b{stacks}\u200b\u683c\u3002"
       }
     },
     {
@@ -4170,11 +4260,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Temporary Item",
-        "zh": "\u4e34\u65f6\u7269\u54c1"
+        "zh": "\u4e34\u65f6\u200b\u7269\u54c1"
       },
       "tooltip_texts": {
         "en": "Is lost at the end of the battle.",
-        "zh": "\u5728\u6218\u6597\u7ed3\u675f\u65f6\u4e22\u5931\u3002"
+        "zh": "\u6218\u6597\u200b\u7ed3\u675f\u200b\u65f6\u4f1a\u200b\u5931\u53bb\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -4188,15 +4278,15 @@
       "tooltip_stacks_key": "KEYWORD_THORNS_DESC",
       "name_texts": {
         "en": "Thorns",
-        "zh": "\u8346\u68d8"
+        "zh": "\u5c16\u523a"
       },
       "tooltip_texts": {
         "en": "Deals damage to units that contact you.",
-        "zh": "\u5bf9\u63a5\u89e6\u4f60\u7684\u5355\u4f4d\u9020\u6210\u4f24\u5bb3\u3002"
+        "zh": "\u63a5\u89e6\u200b\u5230\u200b\u4f60\u200b\u7684\u200b\u5355\u4f4d\u200b\u53d7\u5230\u200b\u4f24\u5bb3\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "Deals {stacks} damage to units that contact you.",
-        "zh": "\u53ef\u4ee5\u5bf9\u63a5\u89e6\u4f60\u7684\u5355\u4f4d\u9020\u6210 {stacks} \u70b9\u4f24\u5bb3\u3002"
+        "zh": "\u63a5\u89e6\u200b\u5230\u200b\u4f60\u200b\u7684\u200b\u5355\u4f4d\u200b\u53d7\u5230\u200b{stacks}\u200b\u70b9\u200b\u4f24\u5bb3\u3002"
       }
     },
     {
@@ -4269,11 +4359,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Sentry Mode",
-        "zh": "\u54e8\u5175\u6a21\u5f0f"
+        "zh": "\u54e8\u5175\u200b\u6a21\u5f0f"
       },
       "tooltip_texts": {
         "en": "The next time an enemy ends its movement in your basic attack range, attack it.",
-        "zh": "\u5f53\u654c\u4eba\u4e0b\u4e00\u6b21\u5728\u4f60\u7684\u57fa\u7840\u653b\u51fb\u8303\u56f4\u5185\u7ed3\u675f\u79fb\u52a8\u65f6\uff0c\r\n\u5bf9\u5176\u8fdb\u884c\u653b\u51fb\u3002"
+        "zh": "\u4e0b\u200b\u4e00\u200b\u6b21\u200b\u6709\u200b\u654c\u4eba\u200b\u505c\u200b\u5728\u200b\u4f60\u200b\u666e\u901a\u200b\u653b\u51fb\u200b\u7684\u200b\u8303\u56f4\u200b\u5185\u200b\u65f6\uff0c\u200b\u653b\u51fb\u200b\u8fd9\u4e2a\u200b\u654c\u4eba\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -4287,15 +4377,15 @@
       "tooltip_stacks_key": "KEYWORD_SENTRYPLUS_DESC",
       "name_texts": {
         "en": "Sentry Mode+",
-        "zh": "\u54e8\u5175\u6a21\u5f0f+"
+        "zh": "\u54e8\u5175\u200b\u6a21\u5f0f\u200b+"
       },
       "tooltip_texts": {
         "en": "When an enemy ends its movement in your basic attack range, attack it.",
-        "zh": "\u5f53\u654c\u4eba\u5728\u4f60\u7684\u57fa\u7840\u653b\u51fb\u8303\u56f4\u5185\u7ed3\u675f\u79fb\u52a8\u65f6\uff0c\r\n\u5bf9\u5176\u8fdb\u884c\u653b\u51fb\u3002"
+        "zh": "\u6709\u200b\u654c\u4eba\u200b\u505c\u200b\u5728\u200b\u4f60\u200b\u666e\u901a\u200b\u653b\u51fb\u200b\u7684\u200b\u8303\u56f4\u200b\u5185\u200b\u65f6\uff0c\u200b\u653b\u51fb\u200b\u8fd9\u4e2a\u200b\u654c\u4eba\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "When an enemy ends its movement in your basic attack range, attack it. Lasts {stacks} turns.",
-        "zh": "\u5f53\u654c\u4eba\u57fa\u7840\u653b\u51fb\u8303\u56f4\u5185\u7ed3\u675f\u79fb\u52a8\u65f6\uff0c\r\n\u5bf9\u5176\u8fdb\u884c\u653b\u51fb\u3002\u6301\u7eed {stacks} \u56de\u5408\u3002"
+        "zh": "{stacks}\u200b\u4e2a\u200b\u56de\u5408\u200b\u4e4b\u200b\u5185\uff0c\u200b\u6709\u200b\u654c\u4eba\u200b\u505c\u200b\u5728\u200b\u4f60\u200b\u666e\u901a\u200b\u653b\u51fb\u200b\u7684\u200b\u8303\u56f4\u200b\u5185\u200b\u65f6\uff0c\u200b\u653b\u51fb\u200b\u8fd9\u4e2a\u200b\u654c\u4eba\u3002"
       }
     },
     {
@@ -4318,8 +4408,14 @@
       "name_key": "KEYWORD_TRAMPLE_NAME",
       "tooltip_key": "KEYWORD_TRAMPLE_DESC_STACKLESS",
       "tooltip_stacks_key": null,
-      "name_texts": {},
-      "tooltip_texts": {},
+      "name_texts": {
+        "en": "Trample",
+        "zh": "\u6a2a\u200b\u51b2\u76f4\u200b\u649e"
+      },
+      "tooltip_texts": {
+        "en": "You can move through other units, damaging and displacing them.",
+        "zh": "\u4f60\u200b\u53ef\u4ee5\u200b\u7a7f\u8fc7\u200b\u5176\u4ed6\u200b\u5355\u4f4d\uff0c\u200b\u9020\u6210\u200b\u4f24\u5bb3\uff0c\u200b\u540c\u65f6\u200b\u628a\u200b\u5b83\u4eec\u200b\u649e\u5f00\u3002"
+      },
       "tooltip_stacks_texts": {}
     },
     {
@@ -4332,11 +4428,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Transformation",
-        "zh": "\u53d8\u8eab"
+        "zh": "\u53d8\u5f62"
       },
       "tooltip_texts": {
         "en": "Transforms when the timer hits 0.",
-        "zh": "\u5012\u8ba1\u65f6\u5f52\u96f6\u65f6\u53d8\u8eab\u3002"
+        "zh": "\u8ba1\u65f6\u200b\u5f52\u96f6\u65f6\u200b\u53d8\u5f62\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -4354,11 +4450,11 @@
       },
       "tooltip_texts": {
         "en": "-2 [img:dex], -2 [img:str], -2 [img:spd], temporarily.",
-        "zh": "-2 [img:dex]\uff0c-2 [img:str]\uff0c-2 [img:spd]\uff0c\u4e34\u65f6\u3002"
+        "zh": "\u6682\u65f6\u200b[img:dex]-\u200b2\u3001\u200b[img:str]-\u200b2\u3001\u200b[img:spd]-\u200b2\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "-2 [img:dex], -2 [img:str], -2 [img:spd]. Lasts {stacks} turns.",
-        "zh": "-2 [img:dex]\uff0c-2 [img:str]\uff0c-2 [img:spd]\u3002\r\n\u6301\u7eed {stacks} \u56de\u5408\u3002"
+        "zh": "{stacks}\u200b\u4e2a\u200b\u56de\u5408\u200b\u4e4b\u200b\u5185\uff0c\u200b[img:dex]-\u200b2\u3001\u200b[img:str]-\u200b2\u3001\u200b[img:spd]-\u200b2\u3002"
       }
     },
     {
@@ -4371,11 +4467,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Webbed",
-        "zh": "\u86db\u7f51"
+        "zh": "\u7f51\u4f4f"
       },
       "tooltip_texts": {
         "en": "Immobile. Use basic attack to break free.",
-        "zh": "\u5b9a\u8eab\u3002\u4f7f\u7528\u57fa\u7840\u653b\u51fb\u53ef\u6323\u8131\u3002"
+        "zh": "\u3010\u200b\u79fb\u52a8\u200b\u53d7\u9650\u3011\u3002\u200b\u4f7f\u7528\u200b\u666e\u901a\u200b\u653b\u51fb\u200b\u53ef\u4ee5\u200b\u6323\u8131\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -4411,7 +4507,7 @@
       },
       "tooltip_texts": {
         "en": "-2 [img:str]. -2 [img:int]. Takes damage from Holy Element heals. Does not get injured when downed.",
-        "zh": "-2 [img:str]\u3002-2 [img:int]\u3002\r\n\u53d7\u5230\u795e\u5723\u5143\u7d20\u6cbb\u7597\u65f6\u4f1a\u53d7\u5230\u4f24\u5bb3\u3002\r\n\u5012\u5730\u65f6\u4e0d\u4f1a\u53d7\u5230\u521b\u4f24\u3002"
+        "zh": "[img:str]-\u200b2\u3002\u200b[img:int]-\u200b2\u3002\u200b\u53d7\u5230\u200b\u795e\u5723\u7cfb\u200b\u6cbb\u7597\u200b\u65f6\u200b\u53cd\u800c\u200b\u4f1a\u200b\u53d7\u200b\u4f24\u5bb3\u3002\u200b\u5012\u5730\u200b\u65f6\u200b\u4e0d\u200b\u4f1a\u200b\u83b7\u5f97\u200b\u4f24\u6b8b\u3002"
       },
       "tooltip_stacks_texts": {}
     }

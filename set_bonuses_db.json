@@ -9,11 +9,11 @@
       "desc_key": "SETBONUS_SCRAP_DESC",
       "name_texts": {
         "en": "Scrap Set Bonus!",
-        "zh": "废料套装加成！"
+        "zh": "边​角料​套装​加成！"
       },
       "desc_texts": {
         "en": "+1 Thorns.",
-        "zh": "+1 荆棘。"
+        "zh": "【尖刺】​+​1。"
       },
       "name_mod": null,
       "stats": {
@@ -29,7 +29,7 @@
       "desc_key": "SETBONUS_LEATHER_DESC",
       "name_texts": {
         "en": "Leather Set Bonus!",
-        "zh": "皮革套装加成！"
+        "zh": "皮革​套装​加成！"
       },
       "desc_texts": {},
       "name_mod": null,
@@ -46,7 +46,7 @@
       "desc_key": "SETBONUS_RAG_DESC",
       "name_texts": {
         "en": "Rags Set Bonus!",
-        "zh": "破布套装加成！"
+        "zh": "破​布套装加成！"
       },
       "desc_texts": {},
       "name_mod": null,
@@ -63,11 +63,11 @@
       "desc_key": "SETBONUS_RUBBER_DESC",
       "name_texts": {
         "en": "Rubber Set Bonus!",
-        "zh": "橡胶套装加成！"
+        "zh": "橡胶​套装​加成！"
       },
       "desc_texts": {
         "en": "+3 Knockback damage.",
-        "zh": "+3 击退伤害。"
+        "zh": "击​退伤害​+​3。"
       },
       "name_mod": null,
       "stats": {},
@@ -83,11 +83,11 @@
       "desc_key": "SETBONUS_CATHIDE_DESC",
       "name_texts": {
         "en": "Cathide Set Bonus!",
-        "zh": "猫皮套装加成！"
+        "zh": "猫皮​套装​加成！"
       },
       "desc_texts": {
         "en": "5% chance to spawn a Flea each turn.\nFamiliars have +1 Damage and +1 movement range.",
-        "zh": "每回合有 5% 几率生成一只跳蚤。\r\n使魔拥有 +1 伤害和 +1 移动距离。"
+        "zh": "每​个​回合​有​5%​的​几率​生​成​1​个​跳蚤。\n跟班​的​伤害​+​1、​移动​范围​+​1。"
       },
       "name_mod": null,
       "stats": {},
@@ -103,11 +103,11 @@
       "desc_key": "SETBONUS_GUTS_DESC",
       "name_texts": {
         "en": "Guts Set Bonus!",
-        "zh": "内脏套装加成！"
+        "zh": "内脏​套装​加成！"
       },
       "desc_texts": {
         "en": "+1 Health Regen.",
-        "zh": "+1 生命恢复。"
+        "zh": "生命​自然​恢复​+​1。"
       },
       "name_mod": null,
       "stats": {
@@ -123,11 +123,11 @@
       "desc_key": "SETBONUS_BONE_DESC",
       "name_texts": {
         "en": "Bone Set Bonus!",
-        "zh": "骨头套装加成！"
+        "zh": "骨头​套装​加成！"
       },
       "desc_texts": {
         "en": "Find a random common bone item at the end of each battle.",
-        "zh": "每场战斗结束时，\r\n发现一个随机的普通骨头物品。"
+        "zh": "每场​战斗​结束​时，​随机​获得​1件​普通骨头​物品。"
       },
       "name_mod": null,
       "stats": {
@@ -145,11 +145,11 @@
       "desc_key": "SETBONUS_DIRTCLOD_DESC",
       "name_texts": {
         "en": "Dirt Clod Set Bonus!",
-        "zh": "土块套装加成！"
+        "zh": "土块​套装​加成！"
       },
       "desc_texts": {
         "en": "Grow flowers under yourself at the end of each turn.",
-        "zh": "每回合结束时，在身下生长出花朵。"
+        "zh": "每​个​回合​结束​时，​你​脚下​会​长​出花。"
       },
       "name_mod": null,
       "stats": {},
@@ -163,11 +163,11 @@
       "desc_key": "SETBONUS_BARBED_DESC",
       "name_texts": {
         "en": "Barbed Set Bonus!",
-        "zh": "倒钩套装加成！"
+        "zh": "倒刺​套装​加成！"
       },
       "desc_texts": {
         "en": "+3 Thorns.",
-        "zh": "+3 荆棘。"
+        "zh": "【尖刺】​+​3。"
       },
       "name_mod": null,
       "stats": {
@@ -183,11 +183,11 @@
       "desc_key": "SETBONUS_SLUDGE_DESC",
       "name_texts": {
         "en": "Sludge Set Bonus!",
-        "zh": "污泥套装加成！"
+        "zh": "淤泥​套装​加成！"
       },
       "desc_texts": {
         "en": "Gain +2 [img:shield] at the end of each turn.",
-        "zh": "每回合结束时获得 +2 [img:shield]。"
+        "zh": "每​个​回合​结束​时，​[img:shield]+​2。"
       },
       "name_mod": null,
       "stats": {},
@@ -203,11 +203,11 @@
       "desc_key": "SETBONUS_COOL_DESC",
       "name_texts": {
         "en": "Cool Set Bonus!",
-        "zh": "酷套装加成！"
+        "zh": "酷炫​套装​加成！"
       },
       "desc_texts": {
         "en": "Cool Set Pieces are no longer Fragile.",
-        "zh": "酷套装部件不再易碎。"
+        "zh": "酷炫​套​装物品​不​再​易损。"
       },
       "name_mod": "CAT_NAME_MOD_COOL",
       "stats": {
@@ -223,11 +223,11 @@
       "desc_key": "SETBONUS_PAPER_DESC",
       "name_texts": {
         "en": "Paper Set Bonus!",
-        "zh": "纸制套装加成！"
+        "zh": "纸​套装​加成！"
       },
       "desc_texts": {
         "en": "+1 Bleed Thorns. Paper Set Pieces are no longer Fragile nor Brittle.",
-        "zh": "+1 流血荆棘。\r\n纸制套装部件不再易碎或脆裂。"
+        "zh": "【出血尖刺】​+​1。​纸套​装物品​不​再​易损、​易碎。"
       },
       "name_mod": null,
       "stats": {},
@@ -241,11 +241,11 @@
       "desc_key": "SETBONUS_CARDBOARD_DESC",
       "name_texts": {
         "en": "Cardboard Set Bonus!",
-        "zh": "硬纸板套装加成！"
+        "zh": "纸​板​套装​加成！"
       },
       "desc_texts": {
         "en": "Cardboard Set Pieces are no longer Fragile.",
-        "zh": "硬纸板套装部件不再易碎。"
+        "zh": "纸​板​套​装物品​不​再​易损。"
       },
       "name_mod": null,
       "stats": {
@@ -261,7 +261,7 @@
       "desc_key": "SETBONUS_USED_DESC",
       "name_texts": {
         "en": "Used Set Bonus!",
-        "zh": "二手套装加成！"
+        "zh": "二​手​套装​加成！"
       },
       "desc_texts": {},
       "name_mod": null,
@@ -278,11 +278,11 @@
       "desc_key": "SETBONUS_WOOD_DESC",
       "name_texts": {
         "en": "Wood Set Bonus!",
-        "zh": "木制套装加成！"
+        "zh": "木头​套装​加成！"
       },
       "desc_texts": {
         "en": "+1 Brace. Wood Set Pieces are no longer Fragile.",
-        "zh": "+1 护甲。木制套装部件不再易碎。"
+        "zh": "【招架】​+​1。​木头​套装​物品​不​再​易损。"
       },
       "name_mod": null,
       "stats": {},
@@ -296,11 +296,11 @@
       "desc_key": "SETBONUS_RECYCLED_DESC",
       "name_texts": {
         "en": "Recycled Set Bonus!",
-        "zh": "回收套装加成！"
+        "zh": "回收​套​装​加成！"
       },
       "desc_texts": {
         "en": "Also find a rare item when a recycled set piece breaks.",
-        "zh": "当一个回收套装部件破碎时，\r\n额外发现一个稀有物品。"
+        "zh": "回收​套​装物品​坏掉​时，​还​会​获得​1件​稀​罕​物品。"
       },
       "name_mod": null,
       "stats": {},
@@ -316,11 +316,11 @@
       "desc_key": "SETBONUS_ROTTEN_DESC",
       "name_texts": {
         "en": "Rotten Set Bonus!",
-        "zh": "腐肉套装加成！"
+        "zh": "烂肉​套装​加成！"
       },
       "desc_texts": {
         "en": "All Bugs and Maggots you spawn are upgraded to champions.",
-        "zh": "你生成的所有虫子和蛆虫都会升级为冠军。"
+        "zh": "你​生成​的​所有​昆​虫​和​蛆​都​是​勇士​级​别。"
       },
       "name_mod": null,
       "stats": {},
@@ -334,11 +334,11 @@
       "desc_key": "SETBONUS_JANKALLOY_DESC",
       "name_texts": {
         "en": "Jank Alloy Set Bonus!",
-        "zh": "劣质合金套装加成！"
+        "zh": "劣质合金​套装加成！"
       },
       "desc_texts": {
         "en": "Jank Alloy Set Pieces are no longer Brittle.",
-        "zh": "劣质合金套装部件不再脆裂。"
+        "zh": "劣质合金​套​装物品​不​再​易碎。"
       },
       "name_mod": null,
       "stats": {},
@@ -352,11 +352,11 @@
       "desc_key": "SETBONUS_ALLOY_DESC",
       "name_texts": {
         "en": "Alloy Set Bonus!",
-        "zh": "合金套装加成！"
+        "zh": "合金​套装加成！"
       },
       "desc_texts": {
         "en": "Alloy Set Pieces are no longer Brittle.",
-        "zh": "合金套装部件不再脆裂。"
+        "zh": "合金​套​装物品​不​再​易碎。"
       },
       "name_mod": null,
       "stats": {},
@@ -370,11 +370,11 @@
       "desc_key": "SETBONUS_ADVALLOY_DESC",
       "name_texts": {
         "en": "Advanced Alloy Set Bonus!",
-        "zh": "高级合金套装加成！"
+        "zh": "高级​合金​套装加成！"
       },
       "desc_texts": {
         "en": "Advanced Alloy Set Pieces are no longer Brittle.",
-        "zh": "高级合金套装部件不再脆裂。"
+        "zh": "高级​合金​套​装物品​不​再​易碎。"
       },
       "name_mod": null,
       "stats": {},
@@ -392,7 +392,7 @@
       },
       "desc_texts": {
         "en": "Elite Alloy Set Pieces are no longer Brittle.",
-        "zh": "精英合金套装部件不再脆裂。"
+        "zh": "精英合金套​装物品​不​再​易碎。"
       },
       "name_mod": null,
       "stats": {},
@@ -406,11 +406,11 @@
       "desc_key": "SETBONUS_TWINE_DESC",
       "name_texts": {
         "en": "Twine Set Bonus!",
-        "zh": "麻绳套装加成！"
+        "zh": "合​股线​套装​加成！"
       },
       "desc_texts": {
         "en": "+10% Dodge Chance.\nBruise units that contact you.",
-        "zh": "+10% 闪避率。\r\n对接触你的单位造成淤伤。"
+        "zh": "闪​避​几率​+10%​。\n单位​接触​你​时会​获得​【瘀​伤】。"
       },
       "name_mod": null,
       "stats": {},
@@ -427,11 +427,11 @@
       "desc_key": "SETBONUS_ROCK_DESC",
       "name_texts": {
         "en": "Rock Set Bonus!",
-        "zh": "岩石套装加成！"
+        "zh": "石头​套装​加成！"
       },
       "desc_texts": {
         "en": "+1 Brace. Spawn a pet rock familiar whenever you lose [img:shield].",
-        "zh": "+1 护甲。每当你失去 [img:shield] 时，\r\n生成一个宠物石使魔。"
+        "zh": "【招架】​+​1。​你​每​次​失去​[img:shield]​时，​生成​1​个​宠物​石头​跟班。"
       },
       "name_mod": null,
       "stats": {},
@@ -447,11 +447,11 @@
       "desc_key": "SETBONUS_MINER_DESC",
       "name_texts": {
         "en": "Miner Set Bonus!",
-        "zh": "矿工套装加成！"
+        "zh": "矿​工​套装​加成！"
       },
       "desc_texts": {
         "en": "2 more pickups spawn in each battle.",
-        "zh": "每场战斗中会生成额外 2 个掉落物。"
+        "zh": "每场​战斗​多​生成​2​个​可以​捡起​的​物品。"
       },
       "name_mod": null,
       "stats": {
@@ -469,11 +469,11 @@
       "desc_key": "SETBONUS_GEMSTONE_DESC",
       "name_texts": {
         "en": "Gemstone Set Bonus!",
-        "zh": "宝石套装加成！"
+        "zh": "宝石​套装加成！"
       },
       "desc_texts": {
         "en": "Gain +3 [img:shield] at the end of each turn.",
-        "zh": "每回合结束时获得 +3 [img:shield]。"
+        "zh": "每​个​回合​结束​时，​[img:shield]+​3。"
       },
       "name_mod": null,
       "stats": {
@@ -491,11 +491,11 @@
       "desc_key": "SETBONUS_VEINY_DESC",
       "name_texts": {
         "en": "Veiny Set Bonus!",
-        "zh": "青筋套装加成！"
+        "zh": "青筋​套装​加成！"
       },
       "desc_texts": {
         "en": "Your basic attack inflicts Bleed. Whenever you inflict Bleed, trigger Bleed damage immediately.",
-        "zh": "你的基础攻击施加流血。\r\n每当你施加流血时，立即触发流血伤害。"
+        "zh": "你​的​普通​攻击​会​施加【​出​血】。​每​次​施加【​出血】​时，​立刻​触​发​一​次​【出​血】​伤害。"
       },
       "name_mod": null,
       "stats": {},
@@ -511,11 +511,11 @@
       "desc_key": "SETBONUS_GIMP_DESC",
       "name_texts": {
         "en": "Gimp Set Bonus!",
-        "zh": "束缚套装加成！"
+        "zh": "束缚​套装​加成！"
       },
       "desc_texts": {
         "en": "Gain +1 Random Stat Up whenever you take damage.",
-        "zh": "每当受到伤害时获得 +1 随机属性提升。"
+        "zh": "你​每​次​受到​伤害​时，​就​随机​1​项​属性​+​1。"
       },
       "name_mod": null,
       "stats": {},
@@ -531,11 +531,11 @@
       "desc_key": "SETBONUS_BIONIC_DESC",
       "name_texts": {
         "en": "Bionic Set Bonus!",
-        "zh": "仿生套装加成！"
+        "zh": "仿生​套装​加成！"
       },
       "desc_texts": {
         "en": "Your movement action becomes an infinite range Teleport.\nBionic Set Pieces are no longer Fragile.",
-        "zh": "你的移动行动变为无限射程的传送。\r\n仿生套装部件不再易碎。"
+        "zh": "你​的​移动​行动​变成​无限​距离​传送。\n仿生​套​装物品​不​再​易损。"
       },
       "name_mod": null,
       "stats": {},
@@ -549,19 +549,20 @@
       "desc_key": "SETBONUS_CYBORG_DESC",
       "name_texts": {
         "en": "Cyborg Set Bonus!",
-        "zh": "改造人套装加成！"
+        "zh": "赛​博格​套装​加成！"
       },
       "desc_texts": {
         "en": "Take an AI controlled bonus turn at the end of the first round.",
-        "zh": "在第一回合结束时，\r\n进行一个由 AI 控制的奖励回合。"
+        "zh": "第一​轮​结束​时，​获得​1​个​奖励​回合，​这​一​回合由​AI​控制。"
       },
       "name_mod": null,
       "stats": {},
       "passives": [
         "CyborgTurns",
-        "TakeBonusTurnWithAIControl"
+        "TakeBonusTurnWithAIControl",
+        "Robot"
       ],
-      "code": "Cyborg {\n    name \"SETBONUS_CYBORG_NAME\"\n    desc \"SETBONUS_CYBORG_DESC\"\n    pieces_required 3\n\n    passives {\n        CyborgTurns {\n            stacks 1\n            TakeBonusTurnWithAIControl {\n                end_of_round true\n                include_spells true\n            }\n        }\n        Robot 1\n    }\n}"
+      "code": "Cyborg {\n    name \"SETBONUS_CYBORG_NAME\"\n    desc \"SETBONUS_CYBORG_DESC\"\n    pieces_required 3\n\n    passives {\n        CyborgTurns {\n            stacks 1\n            TakeBonusTurnWithAIControl {\n                end_of_round true\n                include_spells true\n            }\n        }\n        Robot {\n            allow_energize_self true\n        }\n    }\n}"
     },
     {
       "set_code": "Lucky",
@@ -570,11 +571,11 @@
       "desc_key": "SETBONUS_LUCKY_DESC",
       "name_texts": {
         "en": "Lucky Set Bonus!",
-        "zh": "幸运套装加成！"
+        "zh": "幸​运套​装加成！"
       },
       "desc_texts": {
         "en": "Spawn 5-10 extra coins on each map.\nLucky Set Pieces are no longer Fragile.",
-        "zh": "每张地图额外生成 5-10 枚金币。\r\n幸运套装部件不再易碎。"
+        "zh": "每​张​地图​会额​外生​成5​-10​块钱。\n幸​运​套装​的​物品​不​再​易损。"
       },
       "name_mod": null,
       "stats": {
@@ -592,11 +593,11 @@
       "desc_key": "SETBONUS_FLY_DESC",
       "name_texts": {
         "en": "Fly Set Bonus!",
-        "zh": "苍蝇套装加成！"
+        "zh": "苍蝇​套装​加成！"
       },
       "desc_texts": {
         "en": "Flying. You do not take extra damage from backstabs.\n50% Chance to spawn a Fly each turn.",
-        "zh": "飞行。你不会受到背刺的额外伤害。\r\n每回合有 50% 几率生成一只苍蝇。"
+        "zh": "飞行。​你​遭到​背刺​时​不​会​受​到​额​外​的​伤害。\n每​个​回合​有​50%​的​几率​生​成​1​个​苍蝇。"
       },
       "name_mod": null,
       "stats": {},
@@ -612,11 +613,11 @@
       "desc_key": "SETBONUS_AMOEBA_DESC",
       "name_texts": {
         "en": "Amoeba Set Bonus!",
-        "zh": "阿米巴套装加成！"
+        "zh": "变形​虫​套装​加成！"
       },
       "desc_texts": {
         "en": "Permanent Madness.",
-        "zh": "永久疯狂。"
+        "zh": "永久​【癫​狂】。"
       },
       "name_mod": "CAT_NAME_MOD_AMOEBA",
       "stats": {},
@@ -630,11 +631,11 @@
       "desc_key": "SETBONUS_MAGE_DESC",
       "name_texts": {
         "en": "Mage Set Bonus!",
-        "zh": "法师套装加成！"
+        "zh": "法师​套装​加成！"
       },
       "desc_texts": {
         "en": "+5 starting mana.",
-        "zh": "+5 初始法力值。"
+        "zh": "开场​魔能​+​5。"
       },
       "name_mod": null,
       "stats": {},
@@ -648,11 +649,11 @@
       "desc_key": "SETBONUS_THIEF_DESC",
       "name_texts": {
         "en": "Thief Set Bonus!",
-        "zh": "盗贼套装加成！"
+        "zh": "盗贼​套装​加成！"
       },
       "desc_texts": {
         "en": "+5% Dodge Chance and +5% Crit Chance.",
-        "zh": "+5% 闪避率和 +5% 暴击率。"
+        "zh": "闪​避​几率​+5%​，​暴击​几率​+5%​。"
       },
       "name_mod": null,
       "stats": {},
@@ -666,11 +667,11 @@
       "desc_key": "SETBONUS_FIGHTER_DESC",
       "name_texts": {
         "en": "Fighter Set Bonus!",
-        "zh": "战士套装加成！"
+        "zh": "战士​套装加成！"
       },
       "desc_texts": {
         "en": "+15% chance to refresh your basic attack, movement, weapon and trinket actions when you get a kill.",
-        "zh": "击杀时有 +15% 几率刷新你的基础攻击、\r\n移动、武器和饰品行动。"
+        "zh": "你​击杀​单位​时，​你​的​普通​攻击、​移动​行动、​武器​行动​和​小玩意儿​行动​有​15%​的​几率​刷新。"
       },
       "name_mod": null,
       "stats": {
@@ -689,11 +690,11 @@
       "desc_key": "SETBONUS_CLERIC_DESC",
       "name_texts": {
         "en": "Cleric Set Bonus!",
-        "zh": "牧师套装加成！"
+        "zh": "牧师​套装​加成！"
       },
       "desc_texts": {
         "en": "If an attack would down you, instead lower your HP to 1. While at 1 HP, this has no effect.",
-        "zh": "如果一次攻击将使你倒地，\r\n则改为将你的生命值降至 1。\r\n当你处于 1 生命值时，\r\n此效果无效。"
+        "zh": "如果​一​次​攻击​会​击​倒​你，​那么​改为​把​你​的​生命​降​到​1。​你​的​生命​是​1​时，​这个​效果​不​生效。"
       },
       "name_mod": null,
       "stats": {},
@@ -709,11 +710,11 @@
       "desc_key": "SETBONUS_TANK_DESC",
       "name_texts": {
         "en": "Tank Set Bonus!",
-        "zh": "坦克套装加成！"
+        "zh": "坦克​套装​加成！"
       },
       "desc_texts": {
         "en": "+1 Knockback damage.",
-        "zh": "+1 击退伤害。"
+        "zh": "击​退伤害​+​1。"
       },
       "name_mod": null,
       "stats": {},
@@ -727,11 +728,11 @@
       "desc_key": "SETBONUS_HUNTER_DESC",
       "name_texts": {
         "en": "Hunter Set Bonus!",
-        "zh": "猎人套装加成！"
+        "zh": "猎手​套装​加成！"
       },
       "desc_texts": {
         "en": "+50% Crit Chance while standing in tall grass.",
-        "zh": "站在高草中时 +50% 暴击率。"
+        "zh": "你​站​在​草丛​里​时，​暴击​几率​+50%​。"
       },
       "name_mod": null,
       "stats": {},
@@ -747,11 +748,11 @@
       "desc_key": "SETBONUS_PSYCHIC_DESC",
       "name_texts": {
         "en": "Psychic Set Bonus!",
-        "zh": "灵能者套装加成！"
+        "zh": "灵​能士​套装加成！"
       },
       "desc_texts": {
         "en": "When you gain excess mana, reduce the cost of all your spells by that amount until you cast them.",
-        "zh": "当你获得溢出的法力值时，\r\n使你所有法术的消耗减少等量数值，\r\n直到你施放它们为止。"
+        "zh": "你​获得​的​魔能​超出​上限​时，​超出​了​多少，​你​所有​法术​在​施放​之前​的​魔能​耗费​就​会​减少​多少。"
       },
       "name_mod": null,
       "stats": {},
@@ -765,11 +766,11 @@
       "desc_key": "SETBONUS_NECROMANCER_DESC",
       "name_texts": {
         "en": "Necromancer Set Bonus!",
-        "zh": "死灵法师套装加成！"
+        "zh": "死​灵法师​套装​加成！"
       },
       "desc_texts": {
         "en": "When downed, spawn a shadow copy of yourself that fades away after one turn.",
-        "zh": "倒地时，生成一个你的暗影分身，\r\n该分身在一回合后消散。"
+        "zh": "你​倒地​时，​给​自己​生​成​1​个​影子​复​制体，​会​在​1回合​后​消失。"
       },
       "name_mod": null,
       "stats": {},
@@ -785,11 +786,11 @@
       "desc_key": "SETBONUS_MONK_DESC",
       "name_texts": {
         "en": "Monk Set Bonus!",
-        "zh": "武僧套装加成！"
+        "zh": "武僧​套装​加成！"
       },
       "desc_texts": {
         "en": "Gain +2 [img:shield] at the end of each turn.",
-        "zh": "每回合结束时获得 +2 [img:shield]。"
+        "zh": "每​个​回合​结束​时，​[img:shield]+​2。"
       },
       "name_mod": null,
       "stats": {},
@@ -805,11 +806,11 @@
       "desc_key": "SETBONUS_TINKERER_DESC",
       "name_texts": {
         "en": "Tinkerer Set Bonus!",
-        "zh": "工匠套装加成！"
+        "zh": "工匠​套装​加成！"
       },
       "desc_texts": {
         "en": "Spawn 4 Scrap pickups at the start of each battle.",
-        "zh": "每场战斗开始时生成 4 个废料掉落物。"
+        "zh": "每场​战斗​开始​时，​生成​4​个​可以​捡起​的​边角料。"
       },
       "name_mod": null,
       "stats": {},
@@ -825,11 +826,11 @@
       "desc_key": "SETBONUS_BUTCHER_DESC",
       "name_texts": {
         "en": "Butcher Set Bonus!",
-        "zh": "屠夫套装加成！"
+        "zh": "屠户​套装​加成！"
       },
       "desc_texts": {
         "en": "Food and scrap pickups you spawn are bigger.",
-        "zh": "你生成的食物和废料掉落物更大。"
+        "zh": "你​产生​的​可以​捡起​的​食物​和​边角料​份量​变大。"
       },
       "name_mod": null,
       "stats": {},
@@ -843,11 +844,11 @@
       "desc_key": "SETBONUS_DRUID_DESC",
       "name_texts": {
         "en": "Druid Set Bonus!",
-        "zh": "德鲁伊套装加成！"
+        "zh": "德鲁​伊套装​加成！"
       },
       "desc_texts": {
         "en": "Your Familiars gain +4 HP and +1 Damage.",
-        "zh": "你的使魔获得 +4 生命值和 +1 伤害。"
+        "zh": "你​跟班​的​生命​+​4、​伤害​+​1。"
       },
       "name_mod": null,
       "stats": {},
@@ -863,11 +864,11 @@
       "desc_key": "SETBONUS_COLLARLESS_DESC",
       "name_texts": {
         "en": "Collarless Set Bonus!",
-        "zh": "无项圈套装加成！"
+        "zh": "无色​套装加成！"
       },
       "desc_texts": {
         "en": "Collarless spells cost -1 mana to cast.",
-        "zh": "施放无项圈法术消耗的法力值 -1。"
+        "zh": "无色​法术​的​魔能​耗费​-​1。"
       },
       "name_mod": null,
       "stats": {},
@@ -883,11 +884,11 @@
       "desc_key": "SETBONUS_GRUB_DESC",
       "name_texts": {
         "en": "Grub Set Bonus!",
-        "zh": "幼虫套装加成！"
+        "zh": "幼​虫​套装​加成！"
       },
       "desc_texts": {
         "en": "Grubs spawned by items gain +5 HP.",
-        "zh": "物品生成的幼虫获得 +5 生命值。"
+        "zh": "物品生成​的​幼​虫​生命​+​5。"
       },
       "name_mod": null,
       "stats": {},
@@ -903,11 +904,11 @@
       "desc_key": "SETBONUS_FECAL_DESC",
       "name_texts": {
         "en": "Fecal Set Bonus!",
-        "zh": "粪便套装加成！"
+        "zh": "粪便​套装​加成！"
       },
       "desc_texts": {
         "en": "Poisonous 1.\nYour basic attack inflicts Poison.",
-        "zh": "带毒 1。\r\n你的基础攻击造成中毒。"
+        "zh": "1层【带毒】。\n你​的​普通​攻击​会​施​加【​中​毒】。"
       },
       "name_mod": null,
       "stats": {},
@@ -923,11 +924,11 @@
       "desc_key": "SETBONUS_MEAT_DESC",
       "name_texts": {
         "en": "Meat Set Bonus!",
-        "zh": "肉块套装加成！"
+        "zh": "肉​套装​加成！"
       },
       "desc_texts": {
         "en": "+1 Damage.\nGain +1 Damage when you get a kill.\nAfter three kills, gains +2 [img:con], +4 Health Regen and Madness for the rest of the battle.",
-        "zh": "+1 伤害。\r\n当你获得击杀时获得 +1 伤害。\r\n获得三次击杀后，获得 +2 [img:con]，\r\n+4 生命恢复和疯狂状态，\r\n持续至战斗结束。"
+        "zh": "伤害​+​1。\n你​击杀​单位​时，​伤害​加成​+​1。\n击​杀​3​个​单位​之后，​本场​战​斗​期间​[img:con]+​2、​生命​自然​恢复​+​4，​同时​获得​【癫​狂】。"
       },
       "name_mod": null,
       "stats": {},
@@ -944,11 +945,11 @@
       "desc_key": "SETBONUS_LEAFY_DESC",
       "name_texts": {
         "en": "Leafy Set Bonus!",
-        "zh": "多叶套装加成！"
+        "zh": "叶子​套装​加成！"
       },
       "desc_texts": {
         "en": "If you end your turn with unused movement actions, heal 3 HP and gain +3 Charge.",
-        "zh": "如果你在回合结束时还有未使用的移动行动，\r\n治疗 3 点生命值并获得 +3 充能。"
+        "zh": "你​的​回合​结束​时，​如果​还​有​移动​行动​没有​用，​那么​恢复​3点​生命，​同时​【蓄​能​】​+​3。"
       },
       "name_mod": null,
       "stats": {},
@@ -964,11 +965,11 @@
       "desc_key": "SETBONUS_CACTUS_DESC",
       "name_texts": {
         "en": "Cactus Set Bonus!",
-        "zh": "仙人掌套装加成！"
+        "zh": "仙人​掌​套装​加成！"
       },
       "desc_texts": {
         "en": "+2 Thorns.\nWhenever any Cactus armor breaks, increase all your stats by 1, permanently.",
-        "zh": "+2 荆棘。\r\n每当任意仙人掌护甲破碎时，\r\n你的所有属性永久增加 1 点。"
+        "zh": "【尖刺】​+​2。\n每​当​仙​人​掌防​具​损坏​时，​你​所有​属性​就​永久​+​1。"
       },
       "name_mod": null,
       "stats": {},
@@ -984,11 +985,11 @@
       "desc_key": "SETBONUS_MUMMY_DESC",
       "name_texts": {
         "en": "Mummy Set Bonus!",
-        "zh": "木乃伊套装加成！"
+        "zh": "木乃​伊套装​加成！"
       },
       "desc_texts": {
         "en": "When downed, inflict Rot 1 and Weakness 1 on all enemies.\nWhen downed, revive with +30% HP at the end of the round.",
-        "zh": "倒地时，\r\n对所有敌人施加 1 层腐烂和 1 层虚弱。\r\n倒地时，\r\n在回合结束时以 +30% 生命值复活。"
+        "zh": "你​倒地​时，​对​所有​敌人​施​加1层【腐​烂】​和​1层​【虚​弱】。\n你​倒地​之后，​在​一​轮​结束​时​以​30%​的​生命​复活。"
       },
       "name_mod": null,
       "stats": {},
@@ -1005,11 +1006,11 @@
       "desc_key": "SETBONUS_MAN_DESC",
       "name_texts": {
         "en": "Man Set Bonus!",
-        "zh": "男人套装加成！"
+        "zh": "男式​套装​加成！"
       },
       "desc_texts": {
         "en": "Gain 1-9 coins at the end of each battle.",
-        "zh": "每场战斗结束时获得 1-9 枚金币。"
+        "zh": "每场​战斗​结束​时，​获得​1-9​块钱。"
       },
       "name_mod": "CAT_NAME_MOD_MAN",
       "stats": {},
@@ -1026,11 +1027,11 @@
       "desc_key": "SETBONUS_FLOWER_DESC",
       "name_texts": {
         "en": "Flower Set Bonus!",
-        "zh": "花朵套装加成！"
+        "zh": "花​套装​加成！"
       },
       "desc_texts": {
         "en": "Enemies have a 10% chance to become Entangled when walking through flower tiles.",
-        "zh": "敌人在经过花朵地块时有 10% 几率被缠绕。"
+        "zh": "敌人​走​过长花​的​方格​时，​有​10%​的​几率​被​【缠​住】。"
       },
       "name_mod": null,
       "stats": {},
@@ -1046,11 +1047,11 @@
       "desc_key": "SETBONUS_HUMANFLESH_DESC",
       "name_texts": {
         "en": "Human Flesh Set Bonus!",
-        "zh": "人肉套装加成！"
+        "zh": "人​身套装加成！"
       },
       "desc_texts": {
         "en": "+50% Crit Chance on humanoid enemies.\nWhen downed, inflict Fear 2 on all enemies.",
-        "zh": "对人型敌人 +50% 暴击率。\r\n倒地时，对所有敌人施加 2 层恐惧。"
+        "zh": "对​人​形敌人​的​暴击​几率​+50%​。\n你​倒地​时，​对​所有​敌人​施​加2层【害​怕】。"
       },
       "name_mod": null,
       "stats": {},
@@ -1068,11 +1069,11 @@
       "desc_key": "SETBONUS_TENTACLE_DESC",
       "name_texts": {
         "en": "Tentacle Set Bonus!",
-        "zh": "触手套装加成！"
+        "zh": "触手​套装​加成！"
       },
       "desc_texts": {
         "en": "Cleanse all your debuffs at the end of each turn.",
-        "zh": "每回合结束时驱散你所有的减益效果。"
+        "zh": "每​个​回合​结束​时，​清除​自己​的​所有​减益。"
       },
       "name_mod": null,
       "stats": {},
@@ -1089,11 +1090,11 @@
       "desc_key": "SETBONUS_OBELISK_DESC",
       "name_texts": {
         "en": "Obelisk Set Bonus!",
-        "zh": "方尖碑套装加成！"
+        "zh": "方​碑​套装​加成！"
       },
       "desc_texts": {
         "en": "If you end your turn with unused movement actions, gain +1 [img:divineshield].",
-        "zh": "如果你在结束回合时有未使用的移动行动，\r\n获得 +1 [img:divineshield]。"
+        "zh": "你​的​回合​结束​时，​如果​移动​行动​还​有​次​数，​那么​[img:divineshield]+​1。"
       },
       "name_mod": null,
       "stats": {
@@ -1111,11 +1112,11 @@
       "desc_key": "SETBONUS_EXPERIMENTAL_DESC",
       "name_texts": {
         "en": "Experimental Set Bonus!",
-        "zh": "实验性套装加成！"
+        "zh": "实验​套装​加成！"
       },
       "desc_texts": {
         "en": "Find a pill at the end of each battle.\nWhenever you eat a pill, gain a random stat and lose another random stat, permanently.",
-        "zh": "每次战斗结束时发现一颗药丸。\r\n每当你吃下一颗药丸，\r\n永久获得一项随机属性并失去另一项随机属性。"
+        "zh": "每场​战斗​结束​时，​获得​一​粒药。\n你​每​次​吃药​时，​随机​1​项​属性​永久​提升，​同时​随机​1​项​属性​永久​降低。"
       },
       "name_mod": null,
       "stats": {},
@@ -1132,11 +1133,11 @@
       "desc_key": "SETBONUS_ROCKY_DESC",
       "name_texts": {
         "en": "Rocky Set Bonus!",
-        "zh": "硬岩套装加成！"
+        "zh": "岩石​套装加成！"
       },
       "desc_texts": {
         "en": "Spawn a pet rock familiar whenever you lose [img:shield].\nBroken Rocky equipment pieces have a 75% chance of being recovered at the end of the battle.",
-        "zh": "每当你失去 [img:shield] 时，\r\n生成一个宠物石使魔。\r\n破碎的硬岩装备部件在战斗结束时有 75% 的\r\n几率恢复。"
+        "zh": "你​每​次​失去​[img:shield]​时，​就​生​成​1​个​宠物​石头​跟班。\n战斗​结束​时，​损坏​的​岩石​套​装物品​有​75%​的​几率​找回。"
       },
       "name_mod": null,
       "stats": {},
@@ -1152,11 +1153,11 @@
       "desc_key": "SETBONUS_SPACE_DESC",
       "name_texts": {
         "en": "Space Set Bonus!",
-        "zh": "太空套装加成！"
+        "zh": "太​空套装​加成！"
       },
       "desc_texts": {
         "en": "Your movement action is Jump. Units you land on take damage.",
-        "zh": "你的移动行动变为跳跃。\r\n你落点处的单位会受到伤害。"
+        "zh": "你​的​移动​行动​变成​跳跃。​你​落到​单位​身上​时，​会​对​其​造成​伤害。"
       },
       "name_mod": null,
       "stats": {},
@@ -1170,11 +1171,11 @@
       "desc_key": "SETBONUS_PLANET_DESC",
       "name_texts": {
         "en": "Planet Set Bonus!",
-        "zh": "行星套装加成！"
+        "zh": "行​星​套装​加成！"
       },
       "desc_texts": {
         "en": "Flying. Inflict Bruise 1 on units you make contact with.\nPull every unit within 2 tiles toward you at the end of each round.",
-        "zh": "飞行。对接触的单位施加 1 层淤伤。\r\n每回合结束时，\r\n将 2 格内的所有单位拉向你。"
+        "zh": "飞行。​你​接触​单位​时​会​施​加1层​【瘀​伤】。\n每​轮​结束​时，​把​2格​之内​的​所有​单位​都​拉到​你​身边。"
       },
       "name_mod": null,
       "stats": {},
@@ -1192,11 +1193,11 @@
       "desc_key": "SETBONUS_DEBRIS_DESC",
       "name_texts": {
         "en": "Debris Set Bonus!",
-        "zh": "残骸套装加成！"
+        "zh": "残骸​套装​加成！"
       },
       "desc_texts": {
         "en": "Your basic attack deals electric damage and has a +10% chance to Stun.",
-        "zh": "你的基础攻击造成电击伤害，\r\n并有 +10% 几率造成晕眩。"
+        "zh": "你​的​普通​攻击​会​造成​电系​伤害，​同时​造成​【眩​晕】​的​几率​+10%​。"
       },
       "name_mod": null,
       "stats": {},
@@ -1212,11 +1213,11 @@
       "desc_key": "SETBONUS_DRYBONE_DESC",
       "name_texts": {
         "en": "Dry Bone Set Bonus!",
-        "zh": "枯骨套装加成！"
+        "zh": "干​骨头​套装​加成！"
       },
       "desc_texts": {
         "en": "Find a bone club at the end of each battle.",
-        "zh": "每次战斗结束时发现一根骨棒。"
+        "zh": "每场​战斗​结束​时，​获得​一​根​骨棒。"
       },
       "name_mod": null,
       "stats": {},
@@ -1232,11 +1233,11 @@
       "desc_key": "SETBONUS_MOLTEN_DESC",
       "name_texts": {
         "en": "Molten Set Bonus!",
-        "zh": "熔岩套装加成！"
+        "zh": "熔融​套装​加成！"
       },
       "desc_texts": {
         "en": "Fire immunity.",
-        "zh": "火焰免疫。"
+        "zh": "免​疫火烧。"
       },
       "name_mod": null,
       "stats": {},
@@ -1250,11 +1251,11 @@
       "desc_key": "SETBONUS_MOTHER_DESC",
       "name_texts": {
         "en": "Mother Set Bonus!",
-        "zh": "母亲套装加成！"
+        "zh": "母亲​套装​加成！"
       },
       "desc_texts": {
         "en": "Familiars you spawn gain +2 Damage and +2 HP.",
-        "zh": "你生成的\r\n使魔获得 +2 伤害和 +2 生命值。"
+        "zh": "你​生成​的​跟班​伤害​+​2、​生命​+​2。"
       },
       "name_mod": null,
       "stats": {},
@@ -1270,7 +1271,7 @@
       "desc_key": "SETBONUS_FEATHERED_DESC",
       "name_texts": {
         "en": "Feathered Set Bonus!",
-        "zh": "羽毛套装加成！"
+        "zh": "羽毛​套装​加成！"
       },
       "desc_texts": {
         "en": "Flying.",
@@ -1290,11 +1291,11 @@
       "desc_key": "SETBONUS_COPYCAT_DESC",
       "name_texts": {
         "en": "Copycat Set Bonus!",
-        "zh": "模仿套装加成！"
+        "zh": "学​人​猫​套装​加成！"
       },
       "desc_texts": {
         "en": "Copies your trinket's passive effects.",
-        "zh": "复制你饰品的被动效果。"
+        "zh": "复制​你​小​玩意儿​的​被动​效果。"
       },
       "name_mod": null,
       "stats": {},
@@ -1308,11 +1309,11 @@
       "desc_key": "SETBONUS_TRANSMITTER_DESC",
       "name_texts": {
         "en": "Transmitter Set Bonus!",
-        "zh": "传输器套装加成！"
+        "zh": "发射器​套装​加成！"
       },
       "desc_texts": {
         "en": "All allies gain +1 [img:int] and +1 [img:lck].",
-        "zh": "所有友军获得 +1 [img:int] 和 +1 [img:lck]。"
+        "zh": "所有​友方​[img:int]+​1、​[img:lck]+​1。"
       },
       "name_mod": null,
       "stats": {
@@ -1330,11 +1331,11 @@
       "desc_key": "SETBONUS_THRUMMING_DESC",
       "name_texts": {
         "en": "Thrumming Set Bonus!",
-        "zh": "鸣响套装加成！"
+        "zh": "嗡​嗡响​套装​加成！"
       },
       "desc_texts": {
         "en": "If you end your turn without using your basic attack, movement action, or casting a spell, gain All Stats Up.",
-        "zh": "如果你在结束回合时没有使用基础攻击、\r\n移动行动或施放法术，\r\n获得全属性提升。"
+        "zh": "如果​你​一​个​回合​没有​用​过​普通​攻击、​移动​行动、​也​没​施放​法术，​那么​所有​属性​提升。"
       },
       "name_mod": null,
       "stats": {},
@@ -1350,11 +1351,11 @@
       "desc_key": "SETBONUS_WITCH_DESC",
       "name_texts": {
         "en": "Witch Set Bonus!",
-        "zh": "女巫套装加成！"
+        "zh": "女​巫​套装​加成！"
       },
       "desc_texts": {
         "en": "Your movement action becomes a Jump with infinite range.\nYour tile-targeted spells have infinite range.",
-        "zh": "你的移动行动变为无限射程的跳跃。\r\n你的地块目标法术拥有无限射程。"
+        "zh": "你​的​移动​行动​变成​范围​无限​的​“​跳跃​”​。\n如果​你​的​法术​以​方格​为​目标，​那么​法术​的​范围​无限。"
       },
       "name_mod": null,
       "stats": {},
@@ -1368,11 +1369,11 @@
       "desc_key": "SETBONUS_STUNNING_DESC",
       "name_texts": {
         "en": "Stunning Set Bonus!",
-        "zh": "惊艳套装加成！"
+        "zh": "惊艳​套装​加成！"
       },
       "desc_texts": {
         "en": "Your weapon and trinket's passive and active effects are tripled.",
-        "zh": "你的武器和饰品的被动及主动效果翻至三倍。"
+        "zh": "你​武器​和​小玩意儿​的​被动​效果​和​主动​效果​变成​3​倍。"
       },
       "name_mod": null,
       "stats": {},
@@ -1386,11 +1387,11 @@
       "desc_key": "SETBONUS_SUPERHERO_DESC",
       "name_texts": {
         "en": "Superhero Set Bonus!",
-        "zh": "超级英雄套装加成！"
+        "zh": "超级​英雄​套装​加成！"
       },
       "desc_texts": {
         "en": "The first spell you cast each turn inflicts Webbed.",
-        "zh": "你每回合施放的第一个法术施加蛛网效果。"
+        "zh": "你​每​个​回合​第一​次​施放​法术​会​施​加【​网住】。"
       },
       "name_mod": "CAT_NAME_MOD_SUPER",
       "stats": {},
@@ -1408,11 +1409,11 @@
       "desc_key": "SETBONUS_LEAD_DESC",
       "name_texts": {
         "en": "Lead Set Bonus!",
-        "zh": "铅制套装加成！"
+        "zh": "铅​套装​加成！"
       },
       "desc_texts": {
         "en": "Trample 9.",
-        "zh": "践踏 9。"
+        "zh": "9层横​冲​直撞。"
       },
       "name_mod": null,
       "stats": {
@@ -1429,11 +1430,11 @@
       "desc_key": "SETBONUS_BABY_DESC",
       "name_texts": {
         "en": "Baby Set Bonus!",
-        "zh": "宝宝套装加成！"
+        "zh": "宝宝​套装​加成！"
       },
       "desc_texts": {
         "en": "Start battle with a baby version of yourself.",
-        "zh": "战斗开始时拥有一个宝宝版本的自己。"
+        "zh": "每场​战斗​开始​时，​自带​1​个​宝宝​版本​的​自己。"
       },
       "name_mod": null,
       "stats": {},
@@ -1449,11 +1450,11 @@
       "desc_key": "SETBONUS_NINJA_DESC",
       "name_texts": {
         "en": "Ninja Set Bonus!",
-        "zh": "忍者套装加成！"
+        "zh": "忍者​套装加成！"
       },
       "desc_texts": {
         "en": "Start battle with a bonus attack.",
-        "zh": "战斗开始时获得一次奖励攻击。"
+        "zh": "战斗​开始​时，​自带1​次​奖励​攻击。"
       },
       "name_mod": null,
       "stats": {},
@@ -1467,11 +1468,11 @@
       "desc_key": "SETBONUS_PROWLER_DESC",
       "name_texts": {
         "en": "Prowler Set Bonus!",
-        "zh": "潜行者套装加成！"
+        "zh": "潜行​套装​加成！"
       },
       "desc_texts": {
         "en": "Backstabs are always critical.",
-        "zh": "背刺必定暴击。"
+        "zh": "背刺​一定​暴击。"
       },
       "name_mod": null,
       "stats": {},
@@ -1485,11 +1486,11 @@
       "desc_key": "SETBONUS_GODHEAD_DESC",
       "name_texts": {
         "en": "Godhead Set Bonus!",
-        "zh": "神性套装加成！"
+        "zh": "神性​套装​加成！"
       },
       "desc_texts": {
         "en": "Eternal Life",
-        "zh": "永恒生命"
+        "zh": "永生"
       },
       "name_mod": null,
       "stats": {},
@@ -1505,11 +1506,11 @@
       "desc_key": "SETBONUS_HIPPIE_DESC",
       "name_texts": {
         "en": "Hippie Set Bonus!",
-        "zh": "嬉皮士套装加成！"
+        "zh": "嬉​皮士​套装加成！"
       },
       "desc_texts": {
         "en": "Spawn 5 Catnip pickups at the start of each battle.",
-        "zh": "每次战斗开始时生成 5 个猫薄荷掉落物。"
+        "zh": "每场​战斗​开始​时，​生成​5​个​可以​捡起​的​猫薄荷。"
       },
       "name_mod": "CAT_NAME_MOD_HIPPIE",
       "stats": {},
@@ -1525,11 +1526,11 @@
       "desc_key": "SETBONUS_PARASITE_DESC",
       "name_texts": {
         "en": "Parasite Set Bonus!",
-        "zh": "寄生虫套装加成！"
+        "zh": "寄生​套装​加成！"
       },
       "desc_texts": {
         "en": "At the end of each battle, lose a random stat permanently and gain a random mutation.",
-        "zh": "每场战斗结束时，\r\n永久失去一项随机属性并获得一个随机突变。"
+        "zh": "每场​战斗​结束​时，​随机​1​项​属性​永久​损失，​同时​随机​获得​1​项​突变。"
       },
       "name_mod": null,
       "stats": {},
@@ -1545,11 +1546,11 @@
       "desc_key": "SETBONUS_BRICK_DESC",
       "name_texts": {
         "en": "Brick Set Bonus!",
-        "zh": "砖块套装加成！"
+        "zh": "砖头​套装​加成！"
       },
       "desc_texts": {
         "en": "Knockback immunity.",
-        "zh": "击退免疫。"
+        "zh": "你​免​疫击退。"
       },
       "name_mod": null,
       "stats": {
@@ -1565,11 +1566,11 @@
       "desc_key": "SETBONUS_SLIMY_DESC",
       "name_texts": {
         "en": "Slimy Set Bonus!",
-        "zh": "粘液套装加成！"
+        "zh": "黏糊糊​套装​加成！"
       },
       "desc_texts": {
         "en": "Poisonous 2.",
-        "zh": "带毒 2。"
+        "zh": "2层【带毒】。"
       },
       "name_mod": null,
       "stats": {},
@@ -1583,11 +1584,11 @@
       "desc_key": "SETBONUS_RAT_DESC",
       "name_texts": {
         "en": "Rat Set Bonus!",
-        "zh": "老鼠套装加成！"
+        "zh": "老鼠​套装​加成！"
       },
       "desc_texts": {
         "en": "Start battle with 2 Charmed Rats.",
-        "zh": "战斗开始时带有 2 只魅惑老鼠。"
+        "zh": "每场​战斗​开始​时，​带2​个​【洗​脑】​的​老鼠。"
       },
       "name_mod": null,
       "stats": {},
@@ -1603,11 +1604,11 @@
       "desc_key": "SETBONUS_CARAPACE_DESC",
       "name_texts": {
         "en": "Carapace Set Bonus!",
-        "zh": "甲壳套装加成！"
+        "zh": "甲壳​套装​加成！"
       },
       "desc_texts": {
         "en": "Gain 3 random stat ups at the end of your turn.",
-        "zh": "在你的回合结束时，\r\n获得 3 次随机属性提升。"
+        "zh": "你​的​回合​结束​时，​属性​随机​提升​3次。"
       },
       "name_mod": null,
       "stats": {},
@@ -1623,11 +1624,11 @@
       "desc_key": "SETBONUS_RADIOACTIVE_DESC",
       "name_texts": {
         "en": "Radioactive Set Bonus!",
-        "zh": "辐射套装加成！"
+        "zh": "放射性​套装​加成！"
       },
       "desc_texts": {
         "en": "Gain a random mutation at the end of each battle.\nExplode when downed. This explosion doesn't damage you.",
-        "zh": "每场战斗结束时获得一个随机突变。\r\n倒地时爆炸。此爆炸不会伤害你。"
+        "zh": "每场​战斗​结束​时，​随机​获得​1​项​突变。\n你​倒地​时​会​爆炸，​这​次​爆炸​不​会​伤害​你。"
       },
       "name_mod": null,
       "stats": {},
@@ -1644,11 +1645,11 @@
       "desc_key": "SETBONUS_NURSE_DESC",
       "name_texts": {
         "en": "Nurse Set Bonus!",
-        "zh": "护士套装加成！"
+        "zh": "护士​套装加成！"
       },
       "desc_texts": {
         "en": "Your basic attack becomes holy and can heal allies.",
-        "zh": "你的基础攻击变为神圣属性，\r\n并可以治疗盟友。"
+        "zh": "你​的​普通​攻击​变成​神​圣系，​可以​治疗​友方。"
       },
       "name_mod": null,
       "stats": {},
@@ -1664,11 +1665,11 @@
       "desc_key": "SETBONUS_HYBRID_DESC",
       "name_texts": {
         "en": "Hybrid Set Bonus!",
-        "zh": "混合套装加成！"
+        "zh": "混​种​套装​加成！"
       },
       "desc_texts": {
         "en": "Bruise 1. Poison 1. Bleed 1.\nThe first spell you cast each turn is cast twice.",
-        "zh": "淤伤 1。中毒 1。流血 1。\r\n你每回合施放的第一个法术会施放两次。"
+        "zh": "1层​【瘀​伤】、​1层​【​中​毒】、​1层​【出​血】。\n你​每​个​回合​第一​次​施放​的​法术​会​施放​两​次。"
       },
       "name_mod": null,
       "stats": {},
@@ -1682,7 +1683,7 @@
       "desc_key": "SETBONUS_FATTY_DESC",
       "name_texts": {
         "en": "Fatty Set Bonus!",
-        "zh": "肥胖套装加成！"
+        "zh": "肥肥​套装​加成！"
       },
       "desc_texts": {},
       "name_mod": null,
@@ -1699,11 +1700,11 @@
       "desc_key": "SETBONUS_MEDICAL_DESC",
       "name_texts": {
         "en": "Medical Set Bonus!",
-        "zh": "医疗套装加成！"
+        "zh": "医疗​套装​加成！"
       },
       "desc_texts": {
         "en": "You have +1 Health Regen for each disorder you have.",
-        "zh": "你每拥有一种病症，\r\n便获得 +1 生命恢复。"
+        "zh": "你​有​几​个​毛病，​生命​自然​恢复​就​加几。"
       },
       "name_mod": null,
       "stats": {},
@@ -1717,11 +1718,11 @@
       "desc_key": "SETBONUS_CHIP_DESC",
       "name_texts": {
         "en": "Chip Set Bonus!",
-        "zh": "芯片套装加成！"
+        "zh": "芯片​套装​加成！"
       },
       "desc_texts": {
         "en": "When you end your turn, if you cast exactly 5 spells, double cast your next spell.",
-        "zh": "当你结束回合时，\r\n如果你施放了刚好 5 个法术，\r\n你的下一个法术将双重施法。"
+        "zh": "你​的​回合​结束​时，​如果​这个​回合施放​了​刚好​5​个​法术，​那么​下​1​个​法术​会​施放​两​次。"
       },
       "name_mod": null,
       "stats": {},
@@ -1737,11 +1738,11 @@
       "desc_key": "SETBONUS_DEMONIC_DESC",
       "name_texts": {
         "en": "Demonic Set Bonus!",
-        "zh": "恶魔套装加成！"
+        "zh": "恶魔​套装​加成！"
       },
       "desc_texts": {
         "en": "When you get a kill, gain +6 Shield.",
-        "zh": "当你造成击杀时，获得 +6 护盾。"
+        "zh": "你​击杀​单位​时，​护盾​+​6。"
       },
       "name_mod": "CAT_NAME_MOD_DEMONIC",
       "stats": {},
@@ -1757,11 +1758,11 @@
       "desc_key": "SETBONUS_FROZEN_DESC",
       "name_texts": {
         "en": "Frozen Set Bonus!",
-        "zh": "冻结套装加成！"
+        "zh": "冰冻​套装​加成！"
       },
       "desc_texts": {
         "en": "You can damage Frozen units.",
-        "zh": "你可以对冻结单位造成伤害。"
+        "zh": "你​可以​对​【冻​住】​的​单位​造成​伤害。"
       },
       "name_mod": null,
       "stats": {
@@ -1777,11 +1778,11 @@
       "desc_key": "SETBONUS_WOOLLY_DESC",
       "name_texts": {
         "en": "Wooly Set Bonus!",
-        "zh": "长毛套装加成！"
+        "zh": "长​毛套装​加成！"
       },
       "desc_texts": {
         "en": "Start with a Charmed Mammoth Baby.",
-        "zh": "开局携带一只魅惑猛犸宝宝。"
+        "zh": "每场​战斗​开始​时，​自带​1​个​【洗​脑】​的​小猛犸。"
       },
       "name_mod": null,
       "stats": {},
@@ -1797,7 +1798,7 @@
       "desc_key": "SETBONUS_RUNE_DESC",
       "name_texts": {
         "en": "Rune Set Bonus!",
-        "zh": "符文套装加成！"
+        "zh": "符文​套​装​加成！"
       },
       "desc_texts": {},
       "name_mod": null,
@@ -1814,11 +1815,11 @@
       "desc_key": "SETBONUS_CAVEMAN_DESC",
       "name_texts": {
         "en": "Caveman Set Bonus!",
-        "zh": "穴居人套装加成！"
+        "zh": "穴居人​套装​加成！"
       },
       "desc_texts": {
         "en": "If your [img:int] is 1 or less, gain Brace 5.",
-        "zh": "如果你的 [img:int] 为 1 或更低，\r\n获得 5 层护甲。"
+        "zh": "如果​你​的​[img:int]​不​大于​1，​那么​【招​架】​+​5。"
       },
       "name_mod": null,
       "stats": {
@@ -1837,11 +1838,11 @@
       "desc_key": "SETBONUS_DINO_DESC",
       "name_texts": {
         "en": "Dino Set Bonus!",
-        "zh": "恐龙套装加成！"
+        "zh": "恐龙​套装​加成！"
       },
       "desc_texts": {
         "en": "Allies gain +5 [img:shield] at the start of each battle.",
-        "zh": "盟友在每次战斗开始时获得 +5 [img:shield]。"
+        "zh": "每场​战斗​开始​时，​友方​[img:shield]+​5。"
       },
       "name_mod": null,
       "stats": {},
@@ -1857,11 +1858,11 @@
       "desc_key": "SETBONUS_BIGROCK_DESC",
       "name_texts": {
         "en": "Big Rock Set Bonus!",
-        "zh": "巨石套装加成！"
+        "zh": "大​石头​套装​加成！"
       },
       "desc_texts": {
         "en": "Spawn 2 Charmed Geolads at the start of each battle.",
-        "zh": "每场战斗开始时生成 2 个魅惑岩石小子。"
+        "zh": "每场​战斗​开始​时，​生成​2​个​【洗​脑】​的​大力​石。"
       },
       "name_mod": null,
       "stats": {},
@@ -1877,11 +1878,11 @@
       "desc_key": "SETBONUS_PHOENIX_DESC",
       "name_texts": {
         "en": "Phoenix Set Bonus!",
-        "zh": "凤凰套装加成！"
+        "zh": "不​死​鸟​套装​加成！"
       },
       "desc_texts": {
         "en": "Flying. You can move an extra time each turn.",
-        "zh": "飞行。你每回合可以额外移动一次。"
+        "zh": "飞行。​你​每​个​回合​获得​1​次​奖励​移动。"
       },
       "name_mod": null,
       "stats": {},
@@ -1895,11 +1896,11 @@
       "desc_key": "SETBONUS_JESTER_DESC",
       "name_texts": {
         "en": "Jester Set Bonus!",
-        "zh": "小丑套装加成！"
+        "zh": "小​丑​套装​加成！"
       },
       "desc_texts": {
         "en": "+3 Rerolls when leveling up.",
-        "zh": "升级时 +3 次重掷。"
+        "zh": "你​升级​时，​重掷​次​数​+​3。"
       },
       "name_mod": null,
       "stats": {},
@@ -1913,11 +1914,11 @@
       "desc_key": "SETBONUS_ANCESTOR_DESC",
       "name_texts": {
         "en": "Ancestor Set Bonus!",
-        "zh": "先祖套装加成！"
+        "zh": "祖先​套装​加成！"
       },
       "desc_texts": {
         "en": "Spawn a spectral copy of yourself when you die.\nThe copy dies at the end of its turn.",
-        "zh": "当你死亡时，生成一个你的幽灵分身。\r\n分身在其回合结束时死亡。"
+        "zh": "你​死亡时​会​给​自己​生​成​1​个​幽魂复​制体。\n这个​复制体会​在​它​的​回合​结束​时​死亡。"
       },
       "name_mod": null,
       "stats": {},
@@ -1933,11 +1934,11 @@
       "desc_key": "SETBONUS_SURVIVALIST_DESC",
       "name_texts": {
         "en": "Survivalist Set Bonus!",
-        "zh": "生存专家套装加成！"
+        "zh": "求生套​装​加成！"
       },
       "desc_texts": {
         "en": "Find a consumable item at the end of each battle.\r\nWhen you use up a consumable or trinket, equip a new consumable from your inventory if you have any.",
-        "zh": "每场战斗结束时发现一个消耗品。\r\n当你用尽一个消耗品或饰品时，\r\n如果库存中有消耗品，\r\n则装备一个新的。"
+        "zh": "每场​战斗​结束​时，​获得​1​个​消​耗品。\n你​用光​一​个​消耗品​或​小玩意儿​时，​如果​背​包里​还​有​消​耗品，​就​自动​再​装备​一​个。"
       },
       "name_mod": null,
       "stats": {},
@@ -1954,11 +1955,11 @@
       "desc_key": "SETBONUS_LEECH_DESC",
       "name_texts": {
         "en": "Leech Set Bonus!",
-        "zh": "水蛭套装加成！"
+        "zh": "水蛭​套装​加成！"
       },
       "desc_texts": {
         "en": "Start battle with 4 beefy Leech familiars.",
-        "zh": "战斗开始时拥有 4 只健壮水蛭使魔。"
+        "zh": "每场​战斗​开始​时，​自带​4​个​健壮​的​水蛭​跟班。"
       },
       "name_mod": null,
       "stats": {},
@@ -1972,11 +1973,11 @@
       "desc_key": "SETBONUS_STEVEN_DESC",
       "name_texts": {
         "en": "Steven Set Bonus!",
-        "zh": "史蒂文套装加成！"
+        "zh": "史蒂文​套​装​加成！"
       },
       "desc_texts": {
         "en": "Your name is now Steven! Hello Steven!",
-        "zh": "你的名字现在是史蒂文了！\r\n你好史蒂文！"
+        "zh": "你​现在​叫史​蒂文！​你​好，​史蒂文！"
       },
       "name_mod": "CAT_NAME_MOD_STEVEN",
       "stats": {},
