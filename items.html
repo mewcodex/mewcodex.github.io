@@ -2573,7 +2573,7 @@
                 return tagName;
             }
             if (currentLanguage === 'zh' && setBonus.name_texts.zh) {
-                return setBonus.name_texts.zh.replace(/套装加成！?$/, '').trim() || setBonus.set_code;
+                return setBonus.name_texts.zh.replace(/[\s\u200B\u200C\u200D\u2060\uFEFF]*套[\s\u200B\u200C\u200D\u2060\uFEFF]*装[\s\u200B\u200C\u200D\u2060\uFEFF]*加[\s\u200B\u200C\u200D\u2060\uFEFF]*成[\s\u200B\u200C\u200D\u2060\uFEFF]*！?[\s\u200B\u200C\u200D\u2060\uFEFF]*$/u, '').trim() || setBonus.set_code;
             }
             if (setBonus.name_texts.en) {
                 return setBonus.name_texts.en.replace(/\s+Set Bonus!?$/i, '').trim() || setBonus.set_code;

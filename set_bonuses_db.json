@@ -13,7 +13,7 @@
       },
       "tag_name_texts": {
         "en": "Scrap",
-        "zh": "边​角料​套装​加成！"
+        "zh": "边​角料"
       },
       "desc_texts": {
         "en": "+1 Thorns.",
@@ -37,7 +37,7 @@
       },
       "tag_name_texts": {
         "en": "Leather",
-        "zh": "皮革​套装​加成！"
+        "zh": "皮革"
       },
       "desc_texts": {},
       "name_mod": null,
@@ -79,7 +79,7 @@
       },
       "tag_name_texts": {
         "en": "Rubber",
-        "zh": "橡胶​套装​加成！"
+        "zh": "橡胶"
       },
       "desc_texts": {
         "en": "+3 Knockback damage.",
@@ -103,7 +103,7 @@
       },
       "tag_name_texts": {
         "en": "Cathide",
-        "zh": "猫皮​套装​加成！"
+        "zh": "猫皮"
       },
       "desc_texts": {
         "en": "5% chance to spawn a Flea each turn.\nFamiliars have +1 Damage and +1 movement range.",
@@ -127,7 +127,7 @@
       },
       "tag_name_texts": {
         "en": "Guts",
-        "zh": "内脏​套装​加成！"
+        "zh": "内脏"
       },
       "desc_texts": {
         "en": "+1 Health Regen.",
@@ -151,7 +151,7 @@
       },
       "tag_name_texts": {
         "en": "Bone",
-        "zh": "骨头​套装​加成！"
+        "zh": "骨头"
       },
       "desc_texts": {
         "en": "Find a random common bone item at the end of each battle.",
@@ -177,7 +177,7 @@
       },
       "tag_name_texts": {
         "en": "Dirt Clod",
-        "zh": "土块​套装​加成！"
+        "zh": "土块"
       },
       "desc_texts": {
         "en": "Grow flowers under yourself at the end of each turn.",
@@ -199,7 +199,7 @@
       },
       "tag_name_texts": {
         "en": "Barbed",
-        "zh": "倒刺​套装​加成！"
+        "zh": "倒刺"
       },
       "desc_texts": {
         "en": "+3 Thorns.",
@@ -223,7 +223,7 @@
       },
       "tag_name_texts": {
         "en": "Sludge",
-        "zh": "淤泥​套装​加成！"
+        "zh": "淤泥"
       },
       "desc_texts": {
         "en": "Gain +2 [img:shield] at the end of each turn.",
@@ -247,7 +247,7 @@
       },
       "tag_name_texts": {
         "en": "Cool",
-        "zh": "酷炫​套装​加成！"
+        "zh": "酷炫"
       },
       "desc_texts": {
         "en": "Cool Set Pieces are no longer Fragile.",
@@ -271,7 +271,7 @@
       },
       "tag_name_texts": {
         "en": "Paper",
-        "zh": "纸​套装​加成！"
+        "zh": "纸"
       },
       "desc_texts": {
         "en": "+1 Bleed Thorns. Paper Set Pieces are no longer Fragile nor Brittle.",
@@ -293,7 +293,7 @@
       },
       "tag_name_texts": {
         "en": "Cardboard",
-        "zh": "纸​板​套装​加成！"
+        "zh": "纸​板"
       },
       "desc_texts": {
         "en": "Cardboard Set Pieces are no longer Fragile.",
@@ -317,7 +317,7 @@
       },
       "tag_name_texts": {
         "en": "Used",
-        "zh": "二​手​套装​加成！"
+        "zh": "二​手"
       },
       "desc_texts": {},
       "name_mod": null,
@@ -338,7 +338,7 @@
       },
       "tag_name_texts": {
         "en": "Wood",
-        "zh": "木头​套装​加成！"
+        "zh": "木头"
       },
       "desc_texts": {
         "en": "+1 Brace. Wood Set Pieces are no longer Fragile.",
@@ -360,7 +360,7 @@
       },
       "tag_name_texts": {
         "en": "Recycled",
-        "zh": "回收​套​装​加成！"
+        "zh": "回收"
       },
       "desc_texts": {
         "en": "Also find a rare item when a recycled set piece breaks.",
@@ -384,7 +384,7 @@
       },
       "tag_name_texts": {
         "en": "Rotten",
-        "zh": "烂肉​套装​加成！"
+        "zh": "烂肉"
       },
       "desc_texts": {
         "en": "All Bugs and Maggots you spawn are upgraded to champions.",
@@ -406,7 +406,7 @@
       },
       "tag_name_texts": {
         "en": "Jank Alloy",
-        "zh": "劣质合金​"
+        "zh": "劣质合金"
       },
       "desc_texts": {
         "en": "Jank Alloy Set Pieces are no longer Brittle.",
@@ -428,7 +428,7 @@
       },
       "tag_name_texts": {
         "en": "Alloy",
-        "zh": "合金​"
+        "zh": "合金"
       },
       "desc_texts": {
         "en": "Alloy Set Pieces are no longer Brittle.",
@@ -450,7 +450,7 @@
       },
       "tag_name_texts": {
         "en": "Advanced Alloy",
-        "zh": "高级​合金​"
+        "zh": "高级​合金"
       },
       "desc_texts": {
         "en": "Advanced Alloy Set Pieces are no longer Brittle.",
@@ -494,7 +494,7 @@
       },
       "tag_name_texts": {
         "en": "Twine",
-        "zh": "合​股线​套装​加成！"
+        "zh": "合​股线"
       },
       "desc_texts": {
         "en": "+10% Dodge Chance.\nBruise units that contact you.",
@@ -519,7 +519,7 @@
       },
       "tag_name_texts": {
         "en": "Rock",
-        "zh": "石头​套装​加成！"
+        "zh": "石头"
       },
       "desc_texts": {
         "en": "+1 Brace. Spawn a pet rock familiar whenever you lose [img:shield].",
@@ -543,7 +543,7 @@
       },
       "tag_name_texts": {
         "en": "Miner",
-        "zh": "矿​工​套装​加成！"
+        "zh": "矿​工"
       },
       "desc_texts": {
         "en": "2 more pickups spawn in each battle.",
@@ -569,7 +569,7 @@
       },
       "tag_name_texts": {
         "en": "Gemstone",
-        "zh": "宝石​"
+        "zh": "宝石"
       },
       "desc_texts": {
         "en": "Gain +3 [img:shield] at the end of each turn.",
@@ -595,7 +595,7 @@
       },
       "tag_name_texts": {
         "en": "Veiny",
-        "zh": "青筋​套装​加成！"
+        "zh": "青筋"
       },
       "desc_texts": {
         "en": "Your basic attack inflicts Bleed. Whenever you inflict Bleed, trigger Bleed damage immediately.",
@@ -619,7 +619,7 @@
       },
       "tag_name_texts": {
         "en": "Gimp",
-        "zh": "束缚​套装​加成！"
+        "zh": "束缚"
       },
       "desc_texts": {
         "en": "Gain +1 Random Stat Up whenever you take damage.",
@@ -643,7 +643,7 @@
       },
       "tag_name_texts": {
         "en": "Bionic",
-        "zh": "仿生​套装​加成！"
+        "zh": "仿生"
       },
       "desc_texts": {
         "en": "Your movement action becomes an infinite range Teleport.\nBionic Set Pieces are no longer Fragile.",
@@ -665,7 +665,7 @@
       },
       "tag_name_texts": {
         "en": "Cyborg",
-        "zh": "赛​博格​套装​加成！"
+        "zh": "赛​博格"
       },
       "desc_texts": {
         "en": "Take an AI controlled bonus turn at the end of the first round.",
@@ -691,7 +691,7 @@
       },
       "tag_name_texts": {
         "en": "Lucky",
-        "zh": "幸​运套​装加成！"
+        "zh": "幸​运"
       },
       "desc_texts": {
         "en": "Spawn 5-10 extra coins on each map.\nLucky Set Pieces are no longer Fragile.",
@@ -717,7 +717,7 @@
       },
       "tag_name_texts": {
         "en": "Fly",
-        "zh": "苍蝇​套装​加成！"
+        "zh": "苍蝇"
       },
       "desc_texts": {
         "en": "Flying. You do not take extra damage from backstabs.\n50% Chance to spawn a Fly each turn.",
@@ -741,7 +741,7 @@
       },
       "tag_name_texts": {
         "en": "Amoeba",
-        "zh": "变形​虫​套装​加成！"
+        "zh": "变形​虫"
       },
       "desc_texts": {
         "en": "Permanent Madness.",
@@ -763,7 +763,7 @@
       },
       "tag_name_texts": {
         "en": "Mage",
-        "zh": "法师​套装​加成！"
+        "zh": "法师"
       },
       "desc_texts": {
         "en": "+5 starting mana.",
@@ -785,7 +785,7 @@
       },
       "tag_name_texts": {
         "en": "Thief",
-        "zh": "盗贼​套装​加成！"
+        "zh": "盗贼"
       },
       "desc_texts": {
         "en": "+5% Dodge Chance and +5% Crit Chance.",
@@ -807,7 +807,7 @@
       },
       "tag_name_texts": {
         "en": "Fighter",
-        "zh": "战士​"
+        "zh": "战士"
       },
       "desc_texts": {
         "en": "+15% chance to refresh your basic attack, movement, weapon and trinket actions when you get a kill.",
@@ -834,7 +834,7 @@
       },
       "tag_name_texts": {
         "en": "Cleric",
-        "zh": "牧师​套装​加成！"
+        "zh": "牧师"
       },
       "desc_texts": {
         "en": "If an attack would down you, instead lower your HP to 1. While at 1 HP, this has no effect.",
@@ -858,7 +858,7 @@
       },
       "tag_name_texts": {
         "en": "Tank",
-        "zh": "坦克​套装​加成！"
+        "zh": "坦克"
       },
       "desc_texts": {
         "en": "+1 Knockback damage.",
@@ -880,7 +880,7 @@
       },
       "tag_name_texts": {
         "en": "Hunter",
-        "zh": "猎手​套装​加成！"
+        "zh": "猎手"
       },
       "desc_texts": {
         "en": "+50% Crit Chance while standing in tall grass.",
@@ -904,7 +904,7 @@
       },
       "tag_name_texts": {
         "en": "Psychic",
-        "zh": "灵​能士​"
+        "zh": "灵​能士"
       },
       "desc_texts": {
         "en": "When you gain excess mana, reduce the cost of all your spells by that amount until you cast them.",
@@ -926,7 +926,7 @@
       },
       "tag_name_texts": {
         "en": "Necromancer",
-        "zh": "死​灵法师​套装​加成！"
+        "zh": "死​灵法师"
       },
       "desc_texts": {
         "en": "When downed, spawn a shadow copy of yourself that fades away after one turn.",
@@ -950,7 +950,7 @@
       },
       "tag_name_texts": {
         "en": "Monk",
-        "zh": "武僧​套装​加成！"
+        "zh": "武僧"
       },
       "desc_texts": {
         "en": "Gain +2 [img:shield] at the end of each turn.",
@@ -974,7 +974,7 @@
       },
       "tag_name_texts": {
         "en": "Tinkerer",
-        "zh": "工匠​套装​加成！"
+        "zh": "工匠"
       },
       "desc_texts": {
         "en": "Spawn 4 Scrap pickups at the start of each battle.",
@@ -998,7 +998,7 @@
       },
       "tag_name_texts": {
         "en": "Butcher",
-        "zh": "屠户​套装​加成！"
+        "zh": "屠户"
       },
       "desc_texts": {
         "en": "Food and scrap pickups you spawn are bigger.",
@@ -1020,7 +1020,7 @@
       },
       "tag_name_texts": {
         "en": "Druid",
-        "zh": "德鲁​伊套装​加成！"
+        "zh": "德鲁​伊"
       },
       "desc_texts": {
         "en": "Your Familiars gain +4 HP and +1 Damage.",
@@ -1044,7 +1044,7 @@
       },
       "tag_name_texts": {
         "en": "Collarless",
-        "zh": "无色​"
+        "zh": "无色"
       },
       "desc_texts": {
         "en": "Collarless spells cost -1 mana to cast.",
@@ -1068,7 +1068,7 @@
       },
       "tag_name_texts": {
         "en": "Grub",
-        "zh": "幼​虫​套装​加成！"
+        "zh": "幼​虫"
       },
       "desc_texts": {
         "en": "Grubs spawned by items gain +5 HP.",
@@ -1092,7 +1092,7 @@
       },
       "tag_name_texts": {
         "en": "Fecal",
-        "zh": "粪便​套装​加成！"
+        "zh": "粪便"
       },
       "desc_texts": {
         "en": "Poisonous 1.\nYour basic attack inflicts Poison.",
@@ -1116,7 +1116,7 @@
       },
       "tag_name_texts": {
         "en": "Meat",
-        "zh": "肉​套装​加成！"
+        "zh": "肉"
       },
       "desc_texts": {
         "en": "+1 Damage.\nGain +1 Damage when you get a kill.\nAfter three kills, gains +2 [img:con], +4 Health Regen and Madness for the rest of the battle.",
@@ -1141,7 +1141,7 @@
       },
       "tag_name_texts": {
         "en": "Leafy",
-        "zh": "叶子​套装​加成！"
+        "zh": "叶子"
       },
       "desc_texts": {
         "en": "If you end your turn with unused movement actions, heal 3 HP and gain +3 Charge.",
@@ -1165,7 +1165,7 @@
       },
       "tag_name_texts": {
         "en": "Cactus",
-        "zh": "仙人​掌​套装​加成！"
+        "zh": "仙人​掌"
       },
       "desc_texts": {
         "en": "+2 Thorns.\nWhenever any Cactus armor breaks, increase all your stats by 1, permanently.",
@@ -1189,7 +1189,7 @@
       },
       "tag_name_texts": {
         "en": "Mummy",
-        "zh": "木乃​伊套装​加成！"
+        "zh": "木乃​伊"
       },
       "desc_texts": {
         "en": "When downed, inflict Rot 1 and Weakness 1 on all enemies.\nWhen downed, revive with +30% HP at the end of the round.",
@@ -1214,7 +1214,7 @@
       },
       "tag_name_texts": {
         "en": "Man",
-        "zh": "男式​套装​加成！"
+        "zh": "男式"
       },
       "desc_texts": {
         "en": "Gain 1-9 coins at the end of each battle.",
@@ -1239,7 +1239,7 @@
       },
       "tag_name_texts": {
         "en": "Flower",
-        "zh": "花​套装​加成！"
+        "zh": "花"
       },
       "desc_texts": {
         "en": "Enemies have a 10% chance to become Entangled when walking through flower tiles.",
@@ -1289,7 +1289,7 @@
       },
       "tag_name_texts": {
         "en": "Tentacle",
-        "zh": "触手​套装​加成！"
+        "zh": "触手"
       },
       "desc_texts": {
         "en": "Cleanse all your debuffs at the end of each turn.",
@@ -1314,7 +1314,7 @@
       },
       "tag_name_texts": {
         "en": "Obelisk",
-        "zh": "方​碑​套装​加成！"
+        "zh": "方​碑"
       },
       "desc_texts": {
         "en": "If you end your turn with unused movement actions, gain +1 [img:divineshield].",
@@ -1340,7 +1340,7 @@
       },
       "tag_name_texts": {
         "en": "Experimental",
-        "zh": "实验​套装​加成！"
+        "zh": "实验"
       },
       "desc_texts": {
         "en": "Find a pill at the end of each battle.\nWhenever you eat a pill, gain a random stat and lose another random stat, permanently.",
@@ -1365,7 +1365,7 @@
       },
       "tag_name_texts": {
         "en": "Rocky",
-        "zh": "岩石​"
+        "zh": "岩石"
       },
       "desc_texts": {
         "en": "Spawn a pet rock familiar whenever you lose [img:shield].\nBroken Rocky equipment pieces have a 75% chance of being recovered at the end of the battle.",
@@ -1389,7 +1389,7 @@
       },
       "tag_name_texts": {
         "en": "Space",
-        "zh": "太​空套装​加成！"
+        "zh": "太​空"
       },
       "desc_texts": {
         "en": "Your movement action is Jump. Units you land on take damage.",
@@ -1411,7 +1411,7 @@
       },
       "tag_name_texts": {
         "en": "Planet",
-        "zh": "行​星​套装​加成！"
+        "zh": "行​星"
       },
       "desc_texts": {
         "en": "Flying. Inflict Bruise 1 on units you make contact with.\nPull every unit within 2 tiles toward you at the end of each round.",
@@ -1437,7 +1437,7 @@
       },
       "tag_name_texts": {
         "en": "Debris",
-        "zh": "残骸​套装​加成！"
+        "zh": "残骸"
       },
       "desc_texts": {
         "en": "Your basic attack deals electric damage and has a +10% chance to Stun.",
@@ -1461,7 +1461,7 @@
       },
       "tag_name_texts": {
         "en": "Dry Bone",
-        "zh": "干​骨头​套装​加成！"
+        "zh": "干​骨头"
       },
       "desc_texts": {
         "en": "Find a bone club at the end of each battle.",
@@ -1485,7 +1485,7 @@
       },
       "tag_name_texts": {
         "en": "Molten",
-        "zh": "熔融​套装​加成！"
+        "zh": "熔融"
       },
       "desc_texts": {
         "en": "Fire immunity.",
@@ -1507,7 +1507,7 @@
       },
       "tag_name_texts": {
         "en": "Mother",
-        "zh": "母亲​套装​加成！"
+        "zh": "母亲"
       },
       "desc_texts": {
         "en": "Familiars you spawn gain +2 Damage and +2 HP.",
@@ -1531,7 +1531,7 @@
       },
       "tag_name_texts": {
         "en": "Feathered",
-        "zh": "羽毛​套装​加成！"
+        "zh": "羽毛"
       },
       "desc_texts": {
         "en": "Flying.",
@@ -1555,7 +1555,7 @@
       },
       "tag_name_texts": {
         "en": "Copycat",
-        "zh": "学​人​猫​套装​加成！"
+        "zh": "学​人​猫"
       },
       "desc_texts": {
         "en": "Copies your trinket's passive effects.",
@@ -1577,7 +1577,7 @@
       },
       "tag_name_texts": {
         "en": "Transmitter",
-        "zh": "发射器​套装​加成！"
+        "zh": "发射器"
       },
       "desc_texts": {
         "en": "All allies gain +1 [img:int] and +1 [img:lck].",
@@ -1603,7 +1603,7 @@
       },
       "tag_name_texts": {
         "en": "Thrumming",
-        "zh": "嗡​嗡响​套装​加成！"
+        "zh": "嗡​嗡响"
       },
       "desc_texts": {
         "en": "If you end your turn without using your basic attack, movement action, or casting a spell, gain All Stats Up.",
@@ -1627,7 +1627,7 @@
       },
       "tag_name_texts": {
         "en": "Witch",
-        "zh": "女​巫​套装​加成！"
+        "zh": "女​巫"
       },
       "desc_texts": {
         "en": "Your movement action becomes a Jump with infinite range.\nYour tile-targeted spells have infinite range.",
@@ -1649,7 +1649,7 @@
       },
       "tag_name_texts": {
         "en": "Stunning",
-        "zh": "惊艳​套装​加成！"
+        "zh": "惊艳"
       },
       "desc_texts": {
         "en": "Your weapon and trinket's passive and active effects are tripled.",
@@ -1671,7 +1671,7 @@
       },
       "tag_name_texts": {
         "en": "Superhero",
-        "zh": "超级​英雄​套装​加成！"
+        "zh": "超级​英雄"
       },
       "desc_texts": {
         "en": "The first spell you cast each turn inflicts Webbed.",
@@ -1697,7 +1697,7 @@
       },
       "tag_name_texts": {
         "en": "Lead",
-        "zh": "铅​套装​加成！"
+        "zh": "铅"
       },
       "desc_texts": {
         "en": "Trample 9.",
@@ -1722,7 +1722,7 @@
       },
       "tag_name_texts": {
         "en": "Baby",
-        "zh": "宝宝​套装​加成！"
+        "zh": "宝宝"
       },
       "desc_texts": {
         "en": "Start battle with a baby version of yourself.",
@@ -1746,7 +1746,7 @@
       },
       "tag_name_texts": {
         "en": "Ninja",
-        "zh": "忍者​"
+        "zh": "忍者"
       },
       "desc_texts": {
         "en": "Start battle with a bonus attack.",
@@ -1768,7 +1768,7 @@
       },
       "tag_name_texts": {
         "en": "Prowler",
-        "zh": "潜行​套装​加成！"
+        "zh": "潜行"
       },
       "desc_texts": {
         "en": "Backstabs are always critical.",
@@ -1790,7 +1790,7 @@
       },
       "tag_name_texts": {
         "en": "Godhead",
-        "zh": "神性​套装​加成！"
+        "zh": "神性"
       },
       "desc_texts": {
         "en": "Eternal Life",
@@ -1814,7 +1814,7 @@
       },
       "tag_name_texts": {
         "en": "Hippie",
-        "zh": "嬉​皮士​"
+        "zh": "嬉​皮士"
       },
       "desc_texts": {
         "en": "Spawn 5 Catnip pickups at the start of each battle.",
@@ -1838,7 +1838,7 @@
       },
       "tag_name_texts": {
         "en": "Parasite",
-        "zh": "寄生​套装​加成！"
+        "zh": "寄生"
       },
       "desc_texts": {
         "en": "At the end of each battle, lose a random stat permanently and gain a random mutation.",
@@ -1862,7 +1862,7 @@
       },
       "tag_name_texts": {
         "en": "Brick",
-        "zh": "砖头​套装​加成！"
+        "zh": "砖头"
       },
       "desc_texts": {
         "en": "Knockback immunity.",
@@ -1886,7 +1886,7 @@
       },
       "tag_name_texts": {
         "en": "Slimy",
-        "zh": "黏糊糊​套装​加成！"
+        "zh": "黏糊糊"
       },
       "desc_texts": {
         "en": "Poisonous 2.",
@@ -1908,7 +1908,7 @@
       },
       "tag_name_texts": {
         "en": "Rat",
-        "zh": "老鼠​套装​加成！"
+        "zh": "老鼠"
       },
       "desc_texts": {
         "en": "Start battle with 2 Charmed Rats.",
@@ -1932,7 +1932,7 @@
       },
       "tag_name_texts": {
         "en": "Carapace",
-        "zh": "甲壳​套装​加成！"
+        "zh": "甲壳"
       },
       "desc_texts": {
         "en": "Gain 3 random stat ups at the end of your turn.",
@@ -1956,7 +1956,7 @@
       },
       "tag_name_texts": {
         "en": "Radioactive",
-        "zh": "放射性​套装​加成！"
+        "zh": "放射性"
       },
       "desc_texts": {
         "en": "Gain a random mutation at the end of each battle.\nExplode when downed. This explosion doesn't damage you.",
@@ -1981,7 +1981,7 @@
       },
       "tag_name_texts": {
         "en": "Nurse",
-        "zh": "护士​"
+        "zh": "护士"
       },
       "desc_texts": {
         "en": "Your basic attack becomes holy and can heal allies.",
@@ -2005,7 +2005,7 @@
       },
       "tag_name_texts": {
         "en": "Hybrid",
-        "zh": "混​种​套装​加成！"
+        "zh": "混​种"
       },
       "desc_texts": {
         "en": "Bruise 1. Poison 1. Bleed 1.\nThe first spell you cast each turn is cast twice.",
@@ -2027,7 +2027,7 @@
       },
       "tag_name_texts": {
         "en": "Fatty",
-        "zh": "肥肥​套装​加成！"
+        "zh": "肥肥"
       },
       "desc_texts": {},
       "name_mod": null,
@@ -2048,7 +2048,7 @@
       },
       "tag_name_texts": {
         "en": "Medical",
-        "zh": "医疗​套装​加成！"
+        "zh": "医疗"
       },
       "desc_texts": {
         "en": "You have +1 Health Regen for each disorder you have.",
@@ -2070,7 +2070,7 @@
       },
       "tag_name_texts": {
         "en": "Chip",
-        "zh": "芯片​套装​加成！"
+        "zh": "芯片"
       },
       "desc_texts": {
         "en": "When you end your turn, if you cast exactly 5 spells, double cast your next spell.",
@@ -2094,7 +2094,7 @@
       },
       "tag_name_texts": {
         "en": "Demonic",
-        "zh": "恶魔​套装​加成！"
+        "zh": "恶魔"
       },
       "desc_texts": {
         "en": "When you get a kill, gain +6 Shield.",
@@ -2118,7 +2118,7 @@
       },
       "tag_name_texts": {
         "en": "Frozen",
-        "zh": "冰冻​套装​加成！"
+        "zh": "冰冻"
       },
       "desc_texts": {
         "en": "You can damage Frozen units.",
@@ -2142,7 +2142,7 @@
       },
       "tag_name_texts": {
         "en": "Wooly",
-        "zh": "长​毛套装​加成！"
+        "zh": "长​毛"
       },
       "desc_texts": {
         "en": "Start with a Charmed Mammoth Baby.",
@@ -2166,7 +2166,7 @@
       },
       "tag_name_texts": {
         "en": "Rune",
-        "zh": "符文​套​装​加成！"
+        "zh": "符文"
       },
       "desc_texts": {},
       "name_mod": null,
@@ -2187,7 +2187,7 @@
       },
       "tag_name_texts": {
         "en": "Caveman",
-        "zh": "穴居人​套装​加成！"
+        "zh": "穴居人"
       },
       "desc_texts": {
         "en": "If your [img:int] is 1 or less, gain Brace 5.",
@@ -2214,7 +2214,7 @@
       },
       "tag_name_texts": {
         "en": "Dino",
-        "zh": "恐龙​套装​加成！"
+        "zh": "恐龙"
       },
       "desc_texts": {
         "en": "Allies gain +5 [img:shield] at the start of each battle.",
@@ -2238,7 +2238,7 @@
       },
       "tag_name_texts": {
         "en": "Big Rock",
-        "zh": "大​石头​套装​加成！"
+        "zh": "大​石头"
       },
       "desc_texts": {
         "en": "Spawn 2 Charmed Geolads at the start of each battle.",
@@ -2262,7 +2262,7 @@
       },
       "tag_name_texts": {
         "en": "Phoenix",
-        "zh": "不​死​鸟​套装​加成！"
+        "zh": "不​死​鸟"
       },
       "desc_texts": {
         "en": "Flying. You can move an extra time each turn.",
@@ -2284,7 +2284,7 @@
       },
       "tag_name_texts": {
         "en": "Jester",
-        "zh": "小​丑​套装​加成！"
+        "zh": "小​丑"
       },
       "desc_texts": {
         "en": "+3 Rerolls when leveling up.",
@@ -2306,7 +2306,7 @@
       },
       "tag_name_texts": {
         "en": "Ancestor",
-        "zh": "祖先​套装​加成！"
+        "zh": "祖先"
       },
       "desc_texts": {
         "en": "Spawn a spectral copy of yourself when you die.\nThe copy dies at the end of its turn.",
@@ -2330,7 +2330,7 @@
       },
       "tag_name_texts": {
         "en": "Survivalist",
-        "zh": "求生套​装​加成！"
+        "zh": "求生"
       },
       "desc_texts": {
         "en": "Find a consumable item at the end of each battle.\r\nWhen you use up a consumable or trinket, equip a new consumable from your inventory if you have any.",
@@ -2355,7 +2355,7 @@
       },
       "tag_name_texts": {
         "en": "Leech",
-        "zh": "水蛭​套装​加成！"
+        "zh": "水蛭"
       },
       "desc_texts": {
         "en": "Start battle with 4 beefy Leech familiars.",
@@ -2377,7 +2377,7 @@
       },
       "tag_name_texts": {
         "en": "Steven",
-        "zh": "史蒂文​套​装​加成！"
+        "zh": "史蒂文"
       },
       "desc_texts": {
         "en": "Your name is now Steven! Hello Steven!",
