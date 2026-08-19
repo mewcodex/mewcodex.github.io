@@ -736,6 +736,10 @@
         }
 
         function getSetBonusName(setBonus) {
+            const tagName = setBonus.tag_name_texts?.[currentLanguage];
+            if (tagName) {
+                return tagName;
+            }
             if (currentLanguage === 'zh' && setBonus.name_texts && setBonus.name_texts.zh) {
                 return setBonus.name_texts.zh.replace(/套装加成！?$/, '').trim() || setBonus.set_code;
             }
