@@ -435,7 +435,7 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "Captured Familiar",
-        "zh": "\u9644\u5f55\u8ddf\u73ed"
+        "zh": "\u4fd8\u864f\u8ddf\u73ed"
       },
       "tooltip_texts": {
         "en": "Was once an enemy, is now on your team. Will follow you to future battles if it doesn't die.",
@@ -2514,7 +2514,7 @@
       "tooltip_stacks_key": "KEYWORD_LATEBLOOMER_DESC",
       "name_texts": {
         "en": "Late Bloomer",
-        "zh": "\u5927\u5668\u665a\u6210"
+        "zh": "\u5927\u82b1\u665a\u5f00"
       },
       "tooltip_texts": {},
       "tooltip_stacks_texts": {
@@ -2571,11 +2571,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "{applier's} Leeches.",
-        "zh": "{applier's}\u7684\u6c34\u86ed\u3002"
+        "zh": "{applier}\u7684\u6c34\u86ed\u3002"
       },
       "tooltip_texts": {
         "en": "Drains {stacks} health at the end of {applier's} turn and gives it to {applier}.",
-        "zh": "\u5728{applier's}\u7684\u56de\u5408\u7ed3\u675f\u65f6\uff0c\u5438\u53d6{stacks}\u70b9\u751f\u547d\uff0c\u8f6c\u7ed9{applier}\u3002"
+        "zh": "\u5728{applier}\u7684\u56de\u5408\u7ed3\u675f\u65f6\uff0c\u5438\u53d6{stacks}\u70b9\u751f\u547d\uff0c\u8f6c\u7ed9{applier}\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -2715,11 +2715,11 @@
       "tooltip_stacks_key": null,
       "name_texts": {
         "en": "{applier's} Mana Leeches",
-        "zh": "{applier's}\u7684\u9b54\u80fd\u6c34\u86ed"
+        "zh": "{applier}\u7684\u9b54\u80fd\u6c34\u86ed"
       },
       "tooltip_texts": {
         "en": "Drains {stacks} mana at the end of {applier's} turn and gives it to {applier}.",
-        "zh": "\u5728{applier's}\u7684\u56de\u5408\u7ed3\u675f\u65f6\uff0c\u5438\u53d6{stacks}\u70b9\u9b54\u80fd\uff0c\u8f6c\u7ed9{applier}\u3002"
+        "zh": "\u5728{applier}\u7684\u56de\u5408\u7ed3\u675f\u65f6\uff0c\u5438\u53d6{stacks}\u70b9\u9b54\u80fd\uff0c\u8f6c\u7ed9{applier}\u3002"
       },
       "tooltip_stacks_texts": {}
     },
@@ -3302,7 +3302,7 @@
       },
       "tooltip_stacks_texts": {
         "en": "Range increased by {stacks}.",
-        "zh": "\u8303\u56f4\u9614\u5927{stacks}\u3002"
+        "zh": "\u8303\u56f4\u6269\u5927{stacks}\u3002"
       }
     },
     {
@@ -4165,11 +4165,11 @@
       },
       "tooltip_texts": {
         "en": "You take your turn later in the round.",
-        "zh": "\u4f60\u8fd9\u4e00\u8f6e\u7684\u56de\u5408\u5ef6\u540e\u3002"
+        "zh": "\u4f60\u5728\u8fd9\u4e00\u8f6e\u7684\u56de\u5408\u5ef6\u540e\u3002"
       },
       "tooltip_stacks_texts": {
         "en": "You take your turn later in the round.",
-        "zh": "\u4f60\u8fd9\u4e00\u8f6e\u7684\u56de\u5408\u5ef6\u540e\u3002"
+        "zh": "\u4f60\u5728\u8fd9\u4e00\u8f6e\u7684\u56de\u5408\u5ef6\u540e\u3002"
       }
     },
     {

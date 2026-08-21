@@ -6453,7 +6453,7 @@
       "passive_code": "Cannibal",
       "passive_name_texts": {
         "en": "Necrophage",
-        "zh": "\u98df\u5c38"
+        "zh": "\u98df\u5c38\u7656"
       },
       "description": "At the start of your turn, if there's a dead body near you, move towards it and eat it to gain All Stats Up and heal 4 HP.",
       "description_2": null,
@@ -7265,7 +7265,7 @@
       "passive_code": "SpontaneousCombustion",
       "passive_name_texts": {
         "en": "Spontaneous Combustion",
-        "zh": "\u81ea\u71c3"
+        "zh": "\u751f\u4f53\u81ea\u71c3"
       },
       "description": "When you take damage from an ability, you have a 15% chance to inflict Burn 5 on yourself and adjacent units.",
       "description_2": null,
@@ -9819,7 +9819,7 @@
       "passive_code": "RatStyle",
       "passive_name_texts": {
         "en": "Rat Style",
-        "zh": "\u9f20\u6d41"
+        "zh": "\u8001\u9f20\u529f"
       },
       "description": "+10% dodge chance.",
       "description_2": "+30% dodge chance.",
@@ -11090,7 +11090,7 @@
       "passive_code": "SuperLuck",
       "passive_name_texts": {
         "en": "Super Luck",
-        "zh": "\u8d85\u7ea7\u5e78\u8fd0"
+        "zh": "\u8d85\u5e78\u8fd0"
       },
       "description": null,
       "description_2": null,
@@ -11860,7 +11860,7 @@
       "passive_code": "LightUpTheStage",
       "passive_name_texts": {
         "en": "Light Up the Stage",
-        "zh": "\u70b9\u4eae\u821e\u53f0"
+        "zh": "\u7167\u4eae\u821e\u53f0"
       },
       "description": "At the end of your turn, emit 2 Sparkles for each turn you've taken.",
       "description_2": "At the end of your turn, emit 4 Sparkles for each turn you've taken and gain +1 Kinetic Spikes . ",
@@ -15671,11 +15671,11 @@
       "description_2": "You and your allies can't miss enemies within your line of sight. Allied physical attacks gain +50% critical hit chance against those enemies.",
       "description_texts": {
         "en": "You and your allies can't miss enemies within your line of sight.",
-        "zh": "\u4f60\u548c\u53cb\u65b9\u653b\u51fb\u89c6\u7ebf\u5185\u7684\u654c\u4eba\u4e0d\u4f1a\u843d\u7a7a\u3002"
+        "zh": "\u4f60\u548c\u53cb\u65b9\u653b\u51fb\u4f60\u89c6\u7ebf\u5185\u7684\u654c\u4eba\u4e0d\u4f1a\u843d\u7a7a\u3002"
       },
       "description2_texts": {
         "en": "You and your allies can't miss enemies within your line of sight. Allied physical attacks gain +50% critical hit chance against those enemies.",
-        "zh": "\u4f60\u548c\u53cb\u65b9\u653b\u51fb\u89c6\u7ebf\u5185\u7684\u654c\u4eba\u4e0d\u4f1a\u843d\u7a7a\u3002\u53cb\u65b9\u7684\u7269\u7406\u653b\u51fb\u5bf9\u8fd9\u4e9b\u654c\u4eba\u66b4\u51fb\u51e0\u7387+50%"
+        "zh": "\u4f60\u548c\u53cb\u65b9\u653b\u51fb\u4f60\u89c6\u7ebf\u5185\u7684\u654c\u4eba\u4e0d\u4f1a\u843d\u7a7a\u3002\u53cb\u65b9\u7684\u7269\u7406\u653b\u51fb\u5bf9\u8fd9\u4e9b\u654c\u4eba\u66b4\u51fb\u51e0\u7387+50%"
       },
       "has_upgrade": true,
       "passive_class": "Psychic",

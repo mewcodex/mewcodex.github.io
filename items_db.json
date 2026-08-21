@@ -21577,7 +21577,7 @@
     "item_name": "Confusing Hat",
     "item_name_texts": {
       "en": "Confusing Hat",
-      "zh": "凌乱的帽子"
+      "zh": "混乱帽子"
     },
     "description": "Apply Confusion 2 to yourself and all enemies at the start of each battle.",
     "description_texts": {
@@ -24512,7 +24512,7 @@
     "item_name": "Fanny Pack",
     "item_name_texts": {
       "en": "Fanny Pack",
-      "zh": "腰包"
+      "zh": "挎包"
     },
     "description": "Spawn 1-2 extra pickups at the start of each battle.\nAfter you collect your 3rd pickup, you can move an extra time each turn.",
     "description_texts": {
@@ -24811,7 +24811,7 @@
     "description": "Whenever you backstab, gain +1 Serrated Claws.",
     "description_texts": {
       "en": "Whenever you backstab, gain +1 Serrated Claws.",
-      "zh": "每当你背刺时，【锯齿之爪】+1。"
+      "zh": "每当你背刺时，【锯齿利爪】+1。"
     },
     "kind": "neck",
     "rarity": "uncommon",
@@ -30598,7 +30598,7 @@
     "item_name": "Ball of Bandages",
     "item_name_texts": {
       "en": "Ball of Bandages",
-      "zh": "一团绷带"
+      "zh": "绷带球"
     },
     "description": "Cleanse one stack of a random debuff at the end of each turn.\n+1 Health Regen.",
     "description_texts": {
@@ -40095,7 +40095,7 @@
     "item_name": "Bent Spoon",
     "item_name_texts": {
       "en": "Bent Spoon",
-      "zh": "弯勺子"
+      "zh": "弯曲的汤勺"
     },
     "description": "Use: Pull any unit 1 tile toward you and deal 1 damage to it.",
     "description_texts": {

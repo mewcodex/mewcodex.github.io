@@ -344,7 +344,7 @@
       "tooltip_key": "ENEMY_ANGELICKITTEN_DESC",
       "tooltip_texts": {
         "en": "Attracts units. Dooms what kills it.\nImmune to Holy. Gains All Stats Up when struck with Holy Element.",
-        "zh": "\u4f1a\u5438\u5f15\u5355\u4f4d\u3002\u51fb\u6740\u5b83\u7684\u5355\u4f4d\u4f1a\u83b7\u5f97\u3010\u6bc1\u706d\u3011\u3002\n\u514d\u75ab\u795e\u5723\u5143\u7d20\u3002\u88ab\u795e\u5723\u5143\u7d20\u547d\u4e2d\u65f6\uff0c\u6240\u6709\u5c5e\u6027\u63d0\u5347\u3002"
+        "zh": "\u4f1a\u5438\u5f15\u5355\u4f4d\u3002\u51fb\u6740\u5b83\u7684\u5355\u4f4d\u4f1a\u83b7\u5f97\u3010\u5fc5\u6b7b\u65e0\u7591\u3011\u3002\n\u514d\u75ab\u795e\u5723\u5143\u7d20\u3002\u88ab\u795e\u5723\u5143\u7d20\u547d\u4e2d\u65f6\uff0c\u6240\u6709\u5c5e\u6027\u63d0\u5347\u3002"
       },
       "movieclip": "AngelicCatFetus",
       "animation_suffix": null,
@@ -12801,7 +12801,7 @@
       "name_key": "ENEMY_DOVE_NAME",
       "name_texts": {
         "en": "Dove",
-        "zh": "\u9e3d\u5b50"
+        "zh": "\u548c\u5e73\u9e3d"
       },
       "tooltip_key": "ENEMY_BIRD_DESC",
       "tooltip_texts": {
@@ -14835,7 +14835,7 @@
       "name_key": "ENEMY_FETUSJAR_NAME",
       "name_texts": {
         "en": "F\u00f6tusjar",
-        "zh": "\u5f17\u56fe\u53f8\u683c\u62c9\u65af"
+        "zh": "\u5f17\u56fe\u65af\u96c5"
       },
       "tooltip_key": "ENEMY_FETUSJAR_DESC",
       "tooltip_texts": {
@@ -14889,7 +14889,7 @@
       "name_key": "ENEMY_FETUSNOJAR_NAME",
       "name_texts": {
         "en": "Der F\u00f6tus",
-        "zh": "\u5fb7\u00b7\u5f17\u56fe\u53f8"
+        "zh": "\u5fb7\u00b7\u5f17\u56fe\u65af"
       },
       "tooltip_key": "ENEMY_FETUSNOJAR_DESC",
       "tooltip_texts": {
@@ -23569,7 +23569,7 @@
       "name_key": "ENEMY_ORNSTEIN_NAME",
       "name_texts": {
         "en": "Ornstein",
-        "zh": "\u5965\u6069\u65af\u5766"
+        "zh": "\u7fc1\u65af\u5766"
       },
       "tooltip_key": null,
       "tooltip_texts": {},
@@ -23998,7 +23998,7 @@
       "name_key": "ENEMY_PIGEON_NAME",
       "name_texts": {
         "en": "Pigeon",
-        "zh": "\u7c89\u9e1f"
+        "zh": "\u9e3d\u5b50"
       },
       "tooltip_key": "ENEMY_BIRD_DESC",
       "tooltip_texts": {
@@ -28101,7 +28101,7 @@
       "tooltip_key": "ENEMY_SCARY_DESC",
       "tooltip_texts": {
         "en": "Its melee attacks can inflict Fear or Doom!\nUndead.",
-        "zh": "\u8fd1\u8eab\u653b\u51fb\u6709\u53ef\u80fd\u65bd\u52a0\u3010\u5bb3\u6015\u3011\u6216\u3010\u6bc1\u706d\u3011\uff01\n\u4ea1\u7075\u3002"
+        "zh": "\u8fd1\u8eab\u653b\u51fb\u6709\u53ef\u80fd\u65bd\u52a0\u3010\u5bb3\u6015\u3011\u6216\u3010\u5fc5\u6b7b\u65e0\u7591\u3011\uff01\n\u4ea1\u7075\u3002"
       },
       "movieclip": "Scary",
       "animation_suffix": null,
@@ -30451,7 +30451,7 @@
       "name_key": "ENEMY_SPEWER_NAME",
       "name_texts": {
         "en": "Spewer",
-        "zh": "\u55b7\u55b7"
+        "zh": "\u5455\u5410\u5b9d\u5b9d"
       },
       "tooltip_key": "ENEMY_SPEWER_DESC",
       "tooltip_texts": {
@@ -30518,7 +30518,7 @@
       "tooltip_key": "OBJECT_SPEWERTUBE_DESC",
       "tooltip_texts": {
         "en": "Spawns pills for Spewer.",
-        "zh": "\u4f1a\u4e3a\u55b7\u55b7\u5410\u51fa\u80f6\u56ca\u3002"
+        "zh": "\u4f1a\u4e3a\u5455\u5410\u5b9d\u5b9d\u5410\u51fa\u80f6\u56ca\u3002"
       },
       "movieclip": "SpewerTube",
       "animation_suffix": null,
@@ -30566,7 +30566,7 @@
       "tooltip_key": "OBJECT_SPEWERTUBE_DESC",
       "tooltip_texts": {
         "en": "Spawns pills for Spewer.",
-        "zh": "\u4f1a\u4e3a\u55b7\u55b7\u5410\u51fa\u80f6\u56ca\u3002"
+        "zh": "\u4f1a\u4e3a\u5455\u5410\u5b9d\u5b9d\u5410\u51fa\u80f6\u56ca\u3002"
       },
       "movieclip": "SpewerTube",
       "animation_suffix": null,
@@ -30614,7 +30614,7 @@
       "tooltip_key": "OBJECT_SPEWERPILL_DESC",
       "tooltip_texts": {
         "en": "Heals and changes the form of Spewer when eaten.",
-        "zh": "\u55b7\u55b7\u5403\u4e0b\u4e4b\u540e\uff0c\u4f1a\u6062\u590d\u751f\u547d\uff0c\u8fd8\u4f1a\u6539\u53d8\u5f62\u6001\u3002"
+        "zh": "\u5455\u5410\u5b9d\u5b9d\u5403\u4e0b\u4e4b\u540e\uff0c\u4f1a\u6062\u590d\u751f\u547d\uff0c\u8fd8\u4f1a\u6539\u53d8\u5f62\u6001\u3002"
       },
       "movieclip": "SpewerPill",
       "animation_suffix": null,
@@ -30663,7 +30663,7 @@
       "tooltip_key": "OBJECT_SPEWERPILL_DESC",
       "tooltip_texts": {
         "en": "Heals and changes the form of Spewer when eaten.",
-        "zh": "\u55b7\u55b7\u5403\u4e0b\u4e4b\u540e\uff0c\u4f1a\u6062\u590d\u751f\u547d\uff0c\u8fd8\u4f1a\u6539\u53d8\u5f62\u6001\u3002"
+        "zh": "\u5455\u5410\u5b9d\u5b9d\u5403\u4e0b\u4e4b\u540e\uff0c\u4f1a\u6062\u590d\u751f\u547d\uff0c\u8fd8\u4f1a\u6539\u53d8\u5f62\u6001\u3002"
       },
       "movieclip": "SpewerPill",
       "animation_suffix": null,
@@ -30712,7 +30712,7 @@
       "tooltip_key": "OBJECT_SPEWERPILL_DESC",
       "tooltip_texts": {
         "en": "Heals and changes the form of Spewer when eaten.",
-        "zh": "\u55b7\u55b7\u5403\u4e0b\u4e4b\u540e\uff0c\u4f1a\u6062\u590d\u751f\u547d\uff0c\u8fd8\u4f1a\u6539\u53d8\u5f62\u6001\u3002"
+        "zh": "\u5455\u5410\u5b9d\u5b9d\u5403\u4e0b\u4e4b\u540e\uff0c\u4f1a\u6062\u590d\u751f\u547d\uff0c\u8fd8\u4f1a\u6539\u53d8\u5f62\u6001\u3002"
       },
       "movieclip": "SpewerPill",
       "animation_suffix": null,
@@ -33916,7 +33916,7 @@
       "tooltip_key": "ENEMY_SCARY_DESC",
       "tooltip_texts": {
         "en": "Its melee attacks can inflict Fear or Doom!\nUndead.",
-        "zh": "\u8fd1\u8eab\u653b\u51fb\u6709\u53ef\u80fd\u65bd\u52a0\u3010\u5bb3\u6015\u3011\u6216\u3010\u6bc1\u706d\u3011\uff01\n\u4ea1\u7075\u3002"
+        "zh": "\u8fd1\u8eab\u653b\u51fb\u6709\u53ef\u80fd\u65bd\u52a0\u3010\u5bb3\u6015\u3011\u6216\u3010\u5fc5\u6b7b\u65e0\u7591\u3011\uff01\n\u4ea1\u7075\u3002"
       },
       "movieclip": "Scary",
       "animation_suffix": null,
@@ -34323,7 +34323,7 @@
       "name_key": "ENEMY_THUMP_NAME",
       "name_texts": {
         "en": "Thump",
-        "zh": "\u5657\u901a"
+        "zh": "\u54d0\u5f53"
       },
       "tooltip_key": "ENEMY_THUMP_DESC",
       "tooltip_texts": {

@@ -3404,7 +3404,7 @@
           "prompt_texts": {
             "EVENT_BOXWITHAHOLE_REW10": {
               "en": "{catname} slides {his} tail into the opening in the cardboard box. A tingly feeling washes over {him} as {his} tail changes shape!",
-              "zh": "{catname}\u628a\u5c3e\u5df4\u63a2\u8fdb\u4e86\u7eb8\u7bb1\u7684\u6d1e\u53e3\u3002\u4e00\u9635\u9165\u9165\u9ebb\u9ebb\u7684\u611f\u89c9\u6d8c\u904d\u4e86{he}\u5168\u8eab\uff0c{his}\u5c3e\u5df4\u53d8\u4e86\u4e2a\u6837\u5b50\uff01"
+              "zh": "{catname}\u628a\u5c3e\u5df4\u4f38\u8fdb\u4e86\u7eb8\u7bb1\u7684\u6d1e\u53e3\u3002\u4e00\u9635\u9165\u9165\u9ebb\u9ebb\u7684\u611f\u89c9\u6d8c\u904d\u4e86{he}\u5168\u8eab\uff0c{his}\u5c3e\u5df4\u53d8\u4e86\u4e2a\u6837\u5b50\uff01"
             },
             "EVENT_BOXWITHAHOLE_REW11": {
               "en": "Thinking he has outsmarted whatever prankster is inside, {catname} pokes {his} tail through the hole in the cardboard box... ",

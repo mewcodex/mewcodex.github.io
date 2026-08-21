@@ -3914,7 +3914,7 @@
       "type_icon_upgraded": null,
       "ability_name_texts": {
         "en": "Teleport",
-        "zh": "传送"
+        "zh": "传送术"
       },
       "ability_name_texts_upgraded": {},
       "description": "{he} teleport",
@@ -4376,7 +4376,7 @@
       "type_icon_upgraded": null,
       "ability_name_texts": {
         "en": "Teleport",
-        "zh": "传送"
+        "zh": "传送术"
       },
       "ability_name_texts_upgraded": {},
       "description": "{he} teleport",
@@ -17180,11 +17180,11 @@
       "type_icon_upgraded": null,
       "ability_name_texts": {
         "en": "Forbidden Fart",
-        "zh": "禁术·放屁"
+        "zh": "禁忌臭屁"
       },
       "ability_name_texts_upgraded": {
         "en": "Forbidden Fart",
-        "zh": "禁术·放屁"
+        "zh": "禁忌臭屁"
       },
       "description": "Damage, Inflict Poison 4 and Knock Up nearby units.\nThere will be permanent consequences for casting this spell…\n[s:.7](Castable once per turn.)[/s]",
       "description_2": "Damage, Inflict Poison 6 and Knock Up nearby units in a larger area.\nThere will be permanent consequences for casting this spell…\n[s:.7](Castable once per turn.)[/s]",
@@ -27873,11 +27873,11 @@
       "type_icon_upgraded": null,
       "ability_name_texts": {
         "en": "Control Air",
-        "zh": "控风"
+        "zh": "操控风相"
       },
       "ability_name_texts_upgraded": {
         "en": "Control Air",
-        "zh": "控风"
+        "zh": "操控风相"
       },
       "description": "Blow a unit ten tiles away from you. This doesn't deal Knockback damage.",
       "description_2": "Blow a unit ten tiles away from you. This doesn't deal Knockback damage.\n[s:.7](This spell costs less and has infinite range.)[/s]",
@@ -40726,11 +40726,11 @@
       "type_icon_upgraded": null,
       "ability_name_texts": {
         "en": "Ball of Spiders",
-        "zh": "一团蜘蛛"
+        "zh": "天降蛛群"
       },
       "ability_name_texts_upgraded": {
         "en": "Ball of Spiders",
-        "zh": "一团蜘蛛"
+        "zh": "天降蛛群"
       },
       "description": "Throw a spider egg that spawns 3 spiderlings on impact.",
       "description_2": "Throw a stronger spider egg that spawns 3 spiderlings on impact.",
@@ -64608,11 +64608,11 @@
       "type_icon_upgraded": null,
       "ability_name_texts": {
         "en": "Enlarge",
-        "zh": "变大"
+        "zh": "变巨术"
       },
       "ability_name_texts_upgraded": {
         "en": "Enlarge",
-        "zh": "变大"
+        "zh": "变巨术"
       },
       "description": "Get big.",
       "description_2": "Get big.",
@@ -64843,11 +64843,11 @@
       "type_icon_upgraded": null,
       "ability_name_texts": {
         "en": "Teleport",
-        "zh": "传送"
+        "zh": "传送术"
       },
       "ability_name_texts_upgraded": {
         "en": "Teleport",
-        "zh": "传送"
+        "zh": "传送术"
       },
       "description": "Teleport to any tile.",
       "description_2": "Teleport to any tile.\r\n[s:.7](This spell costs less.)[/s]",
@@ -66011,11 +66011,11 @@
       "description_2": "Heavily damage and inflict Burn 10 on all enemies and light the map on fire. There will be permanent consequences for casting this spell…\n[s:.7](Castable once per battle.)[/s]",
       "description_texts": {
         "en": "Damage and inflict Burn 7 on all enemies and light the map on fire. There will be permanent consequences for casting this spell…\n[s:.7](Castable once per battle.)[/s]",
-        "zh": "对所有敌人造成伤害、施加7层【灼烧】，同时点燃整张地图。施放这个法术会有长久的后果……\n[s:.7]（每场战斗可以施放1次）[/s]"
+        "zh": "对所有敌人造成伤害、施加7层【灼烧】，同时点燃整张地图。施放这个法术会有永久的后果……\n[s:.7]（每场战斗可以施放1次）[/s]"
       },
       "description2_texts": {
         "en": "Heavily damage and inflict Burn 10 on all enemies and light the map on fire. There will be permanent consequences for casting this spell…\n[s:.7](Castable once per battle.)[/s]",
-        "zh": "对所有敌人造成大量伤害、施加10层【灼烧】，同时点燃整张地图。施放这个法术会有长久的后果……\n[s:.7]（每场战斗可以施放1次）[/s]"
+        "zh": "对所有敌人造成大量伤害、施加10层【灼烧】，同时点燃整张地图。施放这个法术会有永久的后果……\n[s:.7]（每场战斗可以施放1次）[/s]"
       },
       "ability_class": "Mage",
       "ability_pools": [
@@ -66094,11 +66094,11 @@
       "description_2": "Knock back and damage all enemies, heal all allies, then flood the entire map. There will be permanent consequences for casting this spell…\n[s:.7](Castable once per battle.)[/s]",
       "description_texts": {
         "en": "Knock back and damage all enemies, then flood the entire map. There will be permanent consequences for casting this spell…\n[s:.7](Castable once per battle.)[/s]",
-        "zh": "击退并伤害所有敌人，然后淹没整张地图。施放这个法术会有长久的后果……\n[s:.7]（每场战斗可以施放1次）[/s]"
+        "zh": "击退并伤害所有敌人，然后淹没整张地图。施放这个法术会有永久的后果……\n[s:.7]（每场战斗可以施放1次）[/s]"
       },
       "description2_texts": {
         "en": "Knock back and damage all enemies, heal all allies, then flood the entire map. There will be permanent consequences for casting this spell…\n[s:.7](Castable once per battle.)[/s]",
-        "zh": "击退并伤害所有敌人，治疗所有友方，然后淹没整张地图。施放这个法术会有长久的后果……\n[s:.7]（每场战斗可以施放1次）[/s]"
+        "zh": "击退并伤害所有敌人，治疗所有友方，然后淹没整张地图。施放这个法术会有永久的后果……\n[s:.7]（每场战斗可以施放1次）[/s]"
       },
       "ability_class": "Mage",
       "ability_pools": [
@@ -66406,11 +66406,11 @@
       "description_2": "Strike all enemies with lightning, inflicting Stun 2. There will be permanent consequences for casting this spell…\r\n[s:.7](Castable once per battle.)[/s]",
       "description_texts": {
         "en": "Strike all enemies with lightning, inflicting Stun. There will be permanent consequences for casting this spell…\r\n[s:.7](Castable once per battle.)[/s]",
-        "zh": "降下闪电，击中所有敌人，施加【眩晕】。施放这个法术会有长久的后果……\n[s:.7]（每场战斗可以施放1次）[/s]"
+        "zh": "降下闪电，击中所有敌人，施加【眩晕】。施放这个法术会有永久的后果……\n[s:.7]（每场战斗可以施放1次）[/s]"
       },
       "description2_texts": {
         "en": "Strike all enemies with lightning, inflicting Stun 2. There will be permanent consequences for casting this spell…\r\n[s:.7](Castable once per battle.)[/s]",
-        "zh": "降下闪电，击中所有敌人，施加2层【眩晕】。施放这个法术会有长久的后果……\n[s:.7]（每场战斗可以施放1次）[/s]"
+        "zh": "降下闪电，击中所有敌人，施加2层【眩晕】。施放这个法术会有永久的后果……\n[s:.7]（每场战斗可以施放1次）[/s]"
       },
       "ability_class": "Mage",
       "ability_pools": [
@@ -67364,11 +67364,11 @@
       "description_2": "Apply Freeze 2 to each unit except for yourself and 1 other chosen unit.\nDeal 15 Damage to enemies and fully heal each ally.\nThere will be permanent consequences for casting this spell…\n[s:.7](Castable once per battle.)[/s]",
       "description_texts": {
         "en": "Apply Freeze 2 to each unit except for yourself and 1 other chosen unit.\nDeal 10 Damage to enemies and heal each ally 10 HP.\nThere will be permanent consequences for casting this spell…\n[s:.7](Castable once per battle.)[/s]",
-        "zh": "除自身和你选定的另外1个单位之外，对所有单位施加2层【冻住】。\n对敌人造成10点伤害，同时令每个友方恢复10点生命。\n施放这个法术会有长久的后果……\n[s:.7]（每场战斗可以施放1次）[/s]"
+        "zh": "除自身和你选定的另外1个单位之外，对所有单位施加2层【冻住】。\n对敌人造成10点伤害，同时令每个友方恢复10点生命。\n施放这个法术会有永久的后果……\n[s:.7]（每场战斗可以施放1次）[/s]"
       },
       "description2_texts": {
         "en": "Apply Freeze 2 to each unit except for yourself and 1 other chosen unit.\nDeal 15 Damage to enemies and fully heal each ally.\nThere will be permanent consequences for casting this spell…\n[s:.7](Castable once per battle.)[/s]",
-        "zh": "除自身和你选定的另外1个单位之外，对所有单位施加2层【冻住】。\n对敌人造成15点伤害，同时令每个友方完全恢复生命。\n施放这个法术会有长久的后果……\n[s:.7]（每场战斗可以施放1次）[/s]"
+        "zh": "除自身和你选定的另外1个单位之外，对所有单位施加2层【冻住】。\n对敌人造成15点伤害，同时令每个友方完全恢复生命。\n施放这个法术会有永久的后果……\n[s:.7]（每场战斗可以施放1次）[/s]"
       },
       "ability_class": "Mage",
       "ability_pools": [
@@ -81282,11 +81282,11 @@
       "description_2": "Inflict Leech 2, Weakness 5, Poison 2, and Madness 2 on all enemies.\r\nThere are permanent consequences for casting this spell… but maybe not for you. \r\n[s:.7](Castable once per battle.)[/s]",
       "description_texts": {
         "en": "Inflict Weakness 5, Poison 2, and Madness 2 on all enemies.\r\nThere are permanent consequences for casting this spell… but maybe not for you. \r\n[s:.7](Castable once per battle.)[/s]",
-        "zh": "对所有敌人施加5层【虚弱】、2层【中毒】和2层【癫狂】。\n施放这个法术会造成长久的后果……但或许不会影响你。\n[s:.7]（每场战斗可以施放1次。）[/s]"
+        "zh": "对所有敌人施加5层【虚弱】、2层【中毒】和2层【癫狂】。\n施放这个法术会造成永久的后果……但或许不会影响你。\n[s:.7]（每场战斗可以施放1次。）[/s]"
       },
       "description2_texts": {
         "en": "Inflict Leech 2, Weakness 5, Poison 2, and Madness 2 on all enemies.\r\nThere are permanent consequences for casting this spell… but maybe not for you. \r\n[s:.7](Castable once per battle.)[/s]",
-        "zh": "对所有敌人施加2层【水蛭】、5层【虚弱】、2层【中毒】和2层【癫狂】。\n施放这个法术会造成长久的后果……但或许不会影响你。\n[s:.7]（每场战斗可以施放1次。）[/s]"
+        "zh": "对所有敌人施加2层【水蛭】、5层【虚弱】、2层【中毒】和2层【癫狂】。\n施放这个法术会造成永久的后果……但或许不会影响你。\n[s:.7]（每场战斗可以施放1次。）[/s]"
       },
       "ability_class": "Necromancer",
       "ability_pools": [
@@ -82104,11 +82104,11 @@
       "type_icon_upgraded": null,
       "ability_name_texts": {
         "en": "Mind Control",
-        "zh": "心灵控制"
+        "zh": "心灵操控"
       },
       "ability_name_texts_upgraded": {
         "en": "Mind Control",
-        "zh": "心灵控制"
+        "zh": "心灵操控"
       },
       "description": "Charm an enemy within your line of sight for the rest of the battle.",
       "description_2": "Charm an enemy within your line of sight for the rest of the battle. That unit immediately takes an extra turn.",
@@ -85054,11 +85054,11 @@
       "type_icon_upgraded": null,
       "ability_name_texts": {
         "en": "Pass",
-        "zh": "给"
+        "zh": "过"
       },
       "ability_name_texts_upgraded": {
         "en": "Pass",
-        "zh": "给"
+        "zh": "过"
       },
       "description": "Give a unit within your line of sight an extra turn immediately, then end your turn. \nCastable only if you haven't taken any actions this turn.\n[s:.7](This can't be cast on extra turns.)[/s]",
       "description_2": "Give a unit within your line of sight an extra turn immediately, then end your turn.\nCastable only if you haven't taken any actions this turn other than your movement action.\n[s:.7](This can't be cast on extra turns.)[/s]",
@@ -103689,7 +103689,7 @@
       "type_icon_upgraded": null,
       "ability_name_texts": {
         "en": "Mind Control",
-        "zh": "心灵控制"
+        "zh": "心灵操控"
       },
       "ability_name_texts_upgraded": {},
       "description": null,
@@ -132361,7 +132361,7 @@
       "type_icon_upgraded": null,
       "ability_name_texts": {
         "en": "Teleport",
-        "zh": "传送"
+        "zh": "传送术"
       },
       "ability_name_texts_upgraded": {},
       "description": "{he} teleport",
@@ -135098,11 +135098,11 @@
       "type_icon_upgraded": null,
       "ability_name_texts": {
         "en": "Batter Up",
-        "zh": "打出去！"
+        "zh": "击球手准备"
       },
       "ability_name_texts_upgraded": {
         "en": "Batter Up",
-        "zh": "打出去！"
+        "zh": "击球手准备"
       },
       "description": "Knock a unit back 10 tiles.",
       "description_2": "Knock a unit back 10 tiles with Chain Knockback.",
@@ -149355,11 +149355,11 @@
       "type_icon_upgraded": null,
       "ability_name_texts": {
         "en": "Shockwave",
-        "zh": "冲击波"
+        "zh": "电击波"
       },
       "ability_name_texts_upgraded": {
         "en": "Shockwave",
-        "zh": "冲击波"
+        "zh": "电击波"
       },
       "description": "Deal damage to all units. The closer a unit is to you the more damage it takes.",
       "description_2": "Deal damage to all units. The closer a unit is to you the more damage it takes.\n[s:.7](Deals more damage to closer units and less damage to further units.)[/s]",

@@ -14972,7 +14972,7 @@
     "description": "",
     "name_texts": {
       "en": "Silence of the Mice Poster",
-      "zh": "\u300a\u6c89\u9ed8\u7684\u8001\u9f20\u300b\u6d77\u62a5"
+      "zh": "\u300a\u6c89\u9ed8\u7684\u5e7c\u9f20\u300b\u6d77\u62a5"
     },
     "desc_texts": {},
     "special": false,
@@ -15343,7 +15343,7 @@
     "description": "",
     "name_texts": {
       "en": "Bunny Mask",
-      "zh": "\u5154\u5b50\u9762\u5177"
+      "zh": "\u5154\u5b50\u5934\u5957"
     },
     "desc_texts": {},
     "special": false,
@@ -17111,7 +17111,7 @@
     "description": "",
     "name_texts": {
       "en": "Question Block",
-      "zh": "\u95ee\u53f7\u65b9\u5757"
+      "zh": "\u95ee\u53f7\u7816\u5757"
     },
     "desc_texts": {},
     "special": false,
@@ -17147,7 +17147,7 @@
     "description": "",
     "name_texts": {
       "en": "Brick Block",
-      "zh": "\u7816\u5934\u65b9\u5757"
+      "zh": "\u7816\u5757"
     },
     "desc_texts": {},
     "special": false,
