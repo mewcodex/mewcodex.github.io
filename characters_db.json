@@ -8043,7 +8043,7 @@
       "name_key": "ENEMY_PILE_NAME",
       "name_texts": {
         "en": "Pile",
-        "zh": "\u4e00\u5768"
+        "zh": "\u5768\u5768"
       },
       "tooltip_key": "ENEMY_PILE_DESC",
       "tooltip_texts": {
@@ -17565,7 +17565,7 @@
       "name_key": "OBJECT_HARPOONTRAP_NAME",
       "name_texts": {
         "en": "Harpoon Trap",
-        "zh": "\u9c7c\u53c9\u9677\u9631"
+        "zh": "\u9c7c\u53c9\u673a\u5173"
       },
       "tooltip_key": "OBJECT_HARPOONTRAP_DESC",
       "tooltip_texts": {
@@ -18981,7 +18981,7 @@
       "name_key": "ENEMY_PARAISARIA_NAME",
       "name_texts": {
         "en": "Paraisaria",
-        "zh": "\u8fd1\u68d2\u675f\u5b62"
+        "zh": "\u7c7b\u732b\u68d2\u675f\u5b62"
       },
       "tooltip_key": "ENEMY_PARAISARIA_DESC",
       "tooltip_texts": {
@@ -21073,7 +21073,7 @@
       "name_key": "ENEMY_MEATSLIME_NAME",
       "name_texts": {
         "en": "Meat Slime",
-        "zh": "\u9ecf\u9ecf\u8089"
+        "zh": "\u8089\u53f2\u83b1\u59c6"
       },
       "tooltip_key": "ENEMY_MEATSLIME_DESC",
       "tooltip_texts": {
@@ -23235,7 +23235,7 @@
       "name_key": "ENEMY_HEADLESS_NAME",
       "name_texts": {
         "en": "Headless",
-        "zh": "\u65e0\u5934"
+        "zh": "\u6ca1\u5934"
       },
       "tooltip_key": "ENEMY_HEADLESS_DESC",
       "tooltip_texts": {
@@ -24048,7 +24048,7 @@
       "name_key": "ENEMY_PILE_NAME",
       "name_texts": {
         "en": "Pile",
-        "zh": "\u4e00\u5768"
+        "zh": "\u5768\u5768"
       },
       "tooltip_key": "ENEMY_PILE_DESC",
       "tooltip_texts": {

@@ -2877,7 +2877,7 @@
     "item_name": "Twine Hat",
     "item_name_texts": {
       "en": "Twine Hat",
-      "zh": "合股线帽子"
+      "zh": "细绳帽子"
     },
     "description": "+50% chance to Grapple units that contact you.\nFlammable.",
     "description_texts": {
@@ -2922,7 +2922,7 @@
     "item_name": "Twine Mask",
     "item_name_texts": {
       "en": "Twine Mask",
-      "zh": "合股线面具"
+      "zh": "细绳面具"
     },
     "description": "+50% chance to Grapple units that contact you.\nFlammable.",
     "description_texts": {
@@ -2967,7 +2967,7 @@
     "item_name": "Twine Armor",
     "item_name_texts": {
       "en": "Twine Armor",
-      "zh": "合股线防具"
+      "zh": "细绳防具"
     },
     "description": "+50% chance to Grapple units that contact you.\nFlammable.",
     "description_texts": {
@@ -3759,7 +3759,7 @@
         "tag": "chapter/future",
         "tag_texts": {
           "en": "chapter/future",
-          "zh": "章节/Das Füture"
+          "zh": "章节/达斯·弗彻"
         }
       },
       {
@@ -3805,7 +3805,7 @@
         "tag": "chapter/future",
         "tag_texts": {
           "en": "chapter/future",
-          "zh": "章节/Das Füture"
+          "zh": "章节/达斯·弗彻"
         }
       },
       {
@@ -3851,7 +3851,7 @@
         "tag": "chapter/future",
         "tag_texts": {
           "en": "chapter/future",
-          "zh": "章节/Das Füture"
+          "zh": "章节/达斯·弗彻"
         }
       },
       {
@@ -5467,7 +5467,7 @@
     "item_name": "Back Tentacles",
     "item_name_texts": {
       "en": "Back Tentacles",
-      "zh": "臀部触手"
+      "zh": "背部触手"
     },
     "description": "Counterattack ranged attackers with a tentacle slap.",
     "description_texts": {
@@ -6710,7 +6710,7 @@
     "description": "Your face and neck item effects are doubled.",
     "description_texts": {
       "en": "Your face and neck item effects are doubled.",
-      "zh": "你脸部和颈部物品的效果翻倍。"
+      "zh": "你脸部和颈部物品的效果增强1倍。"
     },
     "kind": "head",
     "rarity": "very_rare",
@@ -6746,7 +6746,7 @@
     "description": "Your head and face item effects are doubled.",
     "description_texts": {
       "en": "Your head and face item effects are doubled.",
-      "zh": "你头部和脸部物品的效果翻倍。"
+      "zh": "你头部和脸部物品的效果增强1倍。"
     },
     "kind": "neck",
     "rarity": "very_rare",
@@ -6782,7 +6782,7 @@
     "description": "Your head and neck item effects are doubled.",
     "description_texts": {
       "en": "Your head and neck item effects are doubled.",
-      "zh": "你头部和颈部物品的效果翻倍。"
+      "zh": "你头部和颈部物品的效果增强1倍。"
     },
     "kind": "face",
     "rarity": "very_rare",
@@ -7150,7 +7150,7 @@
     "item_name": "Obi",
     "item_name_texts": {
       "en": "Obi",
-      "zh": "带"
+      "zh": "束带"
     },
     "description": "Start battle with +2 bonus moves.",
     "description_texts": {
@@ -9312,7 +9312,7 @@
     "description": "Triple the effects of your Head armor.",
     "description_texts": {
       "en": "Triple the effects of your Head armor.",
-      "zh": "你头部防护的效果变成3倍。"
+      "zh": "你头部防护的效果增强2倍。"
     },
     "kind": "face",
     "rarity": "very_rare",
@@ -9362,7 +9362,7 @@
     "description": "Triple the effects of your Trinket.",
     "description_texts": {
       "en": "Triple the effects of your Trinket.",
-      "zh": "你小玩意儿的效果变成3倍。"
+      "zh": "你小玩意儿的效果增强2倍。"
     },
     "kind": "head",
     "rarity": "very_rare",
@@ -9412,7 +9412,7 @@
     "description": "Triple the effects of your Face armor.",
     "description_texts": {
       "en": "Triple the effects of your Face armor.",
-      "zh": "你脸部防护的效果变成3倍。"
+      "zh": "你脸部防护的效果增强2倍。"
     },
     "kind": "neck",
     "rarity": "very_rare",
@@ -10735,7 +10735,7 @@
         "tag": "chapter/future",
         "tag_texts": {
           "en": "chapter/future",
-          "zh": "章节/Das Füture"
+          "zh": "章节/达斯·弗彻"
         }
       }
     ]
@@ -10771,7 +10771,7 @@
         "tag": "chapter/future",
         "tag_texts": {
           "en": "chapter/future",
-          "zh": "章节/Das Füture"
+          "zh": "章节/达斯·弗彻"
         }
       }
     ]
@@ -10807,7 +10807,7 @@
         "tag": "chapter/future",
         "tag_texts": {
           "en": "chapter/future",
-          "zh": "章节/Das Füture"
+          "zh": "章节/达斯·弗彻"
         }
       }
     ]
@@ -10843,7 +10843,7 @@
         "tag": "chapter/future",
         "tag_texts": {
           "en": "chapter/future",
-          "zh": "章节/Das Füture"
+          "zh": "章节/达斯·弗彻"
         }
       }
     ]
@@ -10879,7 +10879,7 @@
         "tag": "chapter/future",
         "tag_texts": {
           "en": "chapter/future",
-          "zh": "章节/Das Füture"
+          "zh": "章节/达斯·弗彻"
         }
       }
     ]
@@ -10915,7 +10915,7 @@
         "tag": "chapter/future",
         "tag_texts": {
           "en": "chapter/future",
-          "zh": "章节/Das Füture"
+          "zh": "章节/达斯·弗彻"
         }
       }
     ]
@@ -10954,7 +10954,7 @@
         "tag": "chapter/future",
         "tag_texts": {
           "en": "chapter/future",
-          "zh": "章节/Das Füture"
+          "zh": "章节/达斯·弗彻"
         }
       },
       {
@@ -11000,7 +11000,7 @@
         "tag": "chapter/future",
         "tag_texts": {
           "en": "chapter/future",
-          "zh": "章节/Das Füture"
+          "zh": "章节/达斯·弗彻"
         }
       },
       {
@@ -11046,7 +11046,7 @@
         "tag": "chapter/future",
         "tag_texts": {
           "en": "chapter/future",
-          "zh": "章节/Das Füture"
+          "zh": "章节/达斯·弗彻"
         }
       },
       {
@@ -11426,7 +11426,7 @@
     "description": "Your trinket effects are doubled.",
     "description_texts": {
       "en": "Your trinket effects are doubled.",
-      "zh": "你小玩意儿的效果翻倍。"
+      "zh": "你小玩意儿的效果增强1倍。"
     },
     "kind": "head",
     "rarity": "rare",
@@ -11575,7 +11575,7 @@
     "description": "Your weapons deal double damage.",
     "description_texts": {
       "en": "Your weapons deal double damage.",
-      "zh": "你武器的伤害翻倍。"
+      "zh": "你武器的伤害增大1倍。"
     },
     "kind": "face",
     "rarity": "uncommon",
@@ -12720,7 +12720,7 @@
     "description": "Use: Apply Madness to a unit within 5 tiles in your line of sight.\n[s:.7](Usable once per battle.)[/s]",
     "description_texts": {
       "en": "Use: Apply Madness to a unit within 5 tiles in your line of sight.\n[s:.7](Usable once per battle.)[/s]",
-      "zh": "使用：对视线内5格之内的1个单位施加【癫狂】。\n[s:.7]（每场战斗可以用1次）[/s]"
+      "zh": "使用：对你视线内5格之内的1个单位施加【癫狂】。\n[s:.7]（每场战斗可以用1次）[/s]"
     },
     "kind": "weapon",
     "rarity": "rare",
@@ -12784,7 +12784,7 @@
     "description": "Use: Deals 5 damage to anything in your line of sight.\nRELOAD: Any ally dies.",
     "description_texts": {
       "en": "Use: Deals 5 damage to anything in your line of sight.\nRELOAD: Any ally dies.",
-      "zh": "使用：对视线内任一目标造成5点伤害。\n冷却结束：任一友方死亡。"
+      "zh": "使用：对你视线内任一目标造成5点伤害。\n冷却结束：任一友方死亡。"
     },
     "kind": "weapon",
     "rarity": "rare",
@@ -13150,7 +13150,7 @@
     "description": "Side Quest Item. Your team's active ability level ups offer rare items instead.",
     "description_texts": {
       "en": "Side Quest Item. Your team's active ability level ups offer rare items instead.",
-      "zh": "支线任务物品。你队伍主动能力的升级选项会改为稀罕物品。"
+      "zh": "支线任务物品。你队伍主动能力的升级选项会改为稀有物品。"
     },
     "kind": "neck",
     "rarity": "sidequest",
@@ -16594,7 +16594,7 @@
     "item_name": "Clam",
     "item_name_texts": {
       "en": "Clam",
-      "zh": "蛤蜊"
+      "zh": "鲍鱼"
     },
     "description": "5% chance to break when you take damage.\nWhen this breaks, find a Pearl.",
     "description_texts": {
@@ -18939,7 +18939,7 @@
     "description": "Heals heal you for twice as much.",
     "description_texts": {
       "en": "Heals heal you for twice as much.",
-      "zh": "你获得的治疗效果翻倍。"
+      "zh": "你获得的治疗效果增强1倍。"
     },
     "kind": "face",
     "rarity": "rare",
@@ -20624,7 +20624,7 @@
     "item_name": "Head Cheese",
     "item_name_texts": {
       "en": "Head Cheese",
-      "zh": "脑袋奶酪"
+      "zh": "头顶奶酪"
     },
     "description": "+2 Health Regen.",
     "description_texts": {
@@ -24777,7 +24777,7 @@
     "description": "Double all status effects that get applied to you.",
     "description_texts": {
       "en": "Double all status effects that get applied to you.",
-      "zh": "给你施加的所有状态效果翻倍。"
+      "zh": "给你施加的所有状态效果增强1倍。"
     },
     "kind": "neck",
     "rarity": "rare",
@@ -25367,7 +25367,7 @@
     "description": "Consumables you use have double the effect.",
     "description_texts": {
       "en": "Consumables you use have double the effect.",
-      "zh": "你使用的消耗品效果翻倍。"
+      "zh": "你使用的消耗品效果增强1倍。"
     },
     "kind": "neck",
     "rarity": "uncommon",
@@ -25750,7 +25750,7 @@
     "item_name": "Zodiacs Poncho",
     "item_name_texts": {
       "en": "Zodiacs Poncho",
-      "zh": "黄道十二宫杀手的斗篷"
+      "zh": "黄道十二宫的斗篷"
     },
     "description": "+1 Range. During your turn, one random enemy has a Bounty.",
     "description_texts": {
@@ -26055,7 +26055,7 @@
         "tag": "chapter/future",
         "tag_texts": {
           "en": "chapter/future",
-          "zh": "章节/Das Füture"
+          "zh": "章节/达斯·弗彻"
         }
       },
       {
@@ -29086,7 +29086,7 @@
     "item_name": "Neverstone",
     "item_name_texts": {
       "en": "Neverstone",
-      "zh": "不变之石"
+      "zh": "不变石头"
     },
     "description": "Never level up.",
     "description_texts": {
@@ -30010,7 +30010,7 @@
     "description": "Use: Flip a coin.\nHeads: Double your mana.\nTails: Lose 50% of your mana.",
     "description_texts": {
       "en": "Use: Flip a coin.\nHeads: Double your mana.\nTails: Lose 50% of your mana.",
-      "zh": "使用：抛硬币。\n正面：你的魔能翻倍。\n反面：失去50%的魔能。"
+      "zh": "使用：抛硬币。\n正面：你的魔能增加1倍。\n反面：失去50%的魔能。"
     },
     "kind": "trinket",
     "rarity": "uncommon",
@@ -33374,7 +33374,7 @@
     "item_name": "Broken Mirror",
     "item_name_texts": {
       "en": "Broken Mirror",
-      "zh": "破镜子"
+      "zh": "碎镜子"
     },
     "description": "",
     "description_texts": {
@@ -33878,7 +33878,7 @@
     "description": "Coins that spawn at the start of each battle are doubled.",
     "description_texts": {
       "en": "Coins that spawn at the start of each battle are doubled.",
-      "zh": "每场战斗开始时生成的钱数量翻倍。"
+      "zh": "每场战斗开始时生成的钱数量增加1倍。"
     },
     "kind": "trinket",
     "rarity": "uncommon",
@@ -34736,7 +34736,7 @@
         "tag": "chapter/future",
         "tag_texts": {
           "en": "chapter/future",
-          "zh": "章节/Das Füture"
+          "zh": "章节/达斯·弗彻"
         }
       }
     ]
@@ -35227,12 +35227,12 @@
     "item_name": "Rare Furniture Box",
     "item_name_texts": {
       "en": "Rare Furniture Box",
-      "zh": "稀罕的家具箱子"
+      "zh": "稀有的家具箱子"
     },
     "description": "Breaks when [img:shield] is depleted.\nBecomes a random piece of rare furniture when you return home.",
     "description_texts": {
       "en": "Breaks when [img:shield] is depleted.\nBecomes a random piece of rare furniture when you return home.",
-      "zh": "[img:shield]耗尽时，这个会损坏。\n回到家里时，会随机变成1件稀罕的家具。"
+      "zh": "[img:shield]耗尽时，这个会损坏。\n回到家里时，会随机变成1件稀有的家具。"
     },
     "kind": "trinket",
     "rarity": "very_rare",
@@ -42979,7 +42979,7 @@
     "description": "Use: A melee attack with Knockback 2 that deals damage equal to your [img:str].\nCleaves and deals double damage to units with [img:shield].",
     "description_texts": {
       "en": "Use: A melee attack with Knockback 2 that deals damage equal to your [img:str].\nCleaves and deals double damage to units with [img:shield].",
-      "zh": "使用：近身攻击，击退2格，伤害数值等于自身的[img:str]。\n狠剁，对有[img:shield]的单位伤害翻倍。"
+      "zh": "使用：近身攻击，击退2格，伤害数值等于自身的[img:str]。\n狠剁，对有[img:shield]的单位伤害增大1倍。"
     },
     "kind": "weapon",
     "rarity": "very_rare",

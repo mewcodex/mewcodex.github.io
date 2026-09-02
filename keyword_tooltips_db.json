@@ -888,12 +888,12 @@
       "tooltip_stacks_key": "KEYWORD_DEXUP_DESC",
       "name_texts": {
         "en": "Dexterity Up",
-        "zh": "\u534f\u8c03\u6027\u63d0\u5347"
+        "zh": "\u7075\u5de7\u63d0\u5347"
       },
       "tooltip_texts": {},
       "tooltip_stacks_texts": {
         "en": "Dexterity increased by {stacks}.\nDexterity affects ranged attack and ranged ability damage.",
-        "zh": "\u534f\u8c03\u6027\u63d0\u5347{stacks}\u3002\n\u534f\u8c03\u6027\u5f71\u54cd\u8fdc\u7a0b\u653b\u51fb\u548c\u8fdc\u7a0b\u80fd\u529b\u7684\u4f24\u5bb3\u3002"
+        "zh": "\u7075\u5de7\u63d0\u5347{stacks}\u3002\n\u7075\u5de7\u5f71\u54cd\u8fdc\u7a0b\u653b\u51fb\u548c\u8fdc\u7a0b\u80fd\u529b\u7684\u4f24\u5bb3\u3002"
       }
     },
     {
@@ -906,12 +906,12 @@
       "tooltip_stacks_key": "KEYWORD_DEXDOWN_DESC",
       "name_texts": {
         "en": "Dexterity Down",
-        "zh": "\u534f\u8c03\u6027\u4e0b\u964d"
+        "zh": "\u7075\u5de7\u4e0b\u964d"
       },
       "tooltip_texts": {},
       "tooltip_stacks_texts": {
         "en": "Dexterity decreased by {absstacks}.\nDexterity affects ranged attack and ranged ability damage.",
-        "zh": "\u534f\u8c03\u6027\u4e0b\u964d{absstacks}\u3002\n\u534f\u8c03\u6027\u5f71\u54cd\u8fdc\u7a0b\u653b\u51fb\u548c\u8fdc\u7a0b\u80fd\u529b\u7684\u4f24\u5bb3\u3002"
+        "zh": "\u7075\u5de7\u4e0b\u964d{absstacks}\u3002\n\u7075\u5de7\u5f71\u54cd\u8fdc\u7a0b\u653b\u51fb\u548c\u8fdc\u7a0b\u80fd\u529b\u7684\u4f24\u5bb3\u3002"
       }
     },
     {
@@ -2995,7 +2995,7 @@
       },
       "tooltip_texts": {
         "en": "All ranged physical attacks and abilities deal double damage.",
-        "zh": "\u8fdc\u7a0b\u7684\u7269\u7406\u653b\u51fb\u548c\u80fd\u529b\u4f24\u5bb3\u5168\u90e8\u7ffb\u500d\u3002"
+        "zh": "\u8fdc\u7a0b\u7684\u7269\u7406\u653b\u51fb\u548c\u80fd\u529b\u4f24\u5bb3\u5168\u90e8\u589e\u59271\u500d\u3002"
       },
       "tooltip_stacks_texts": {}
     },

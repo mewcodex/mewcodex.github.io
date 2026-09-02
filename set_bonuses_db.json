@@ -364,7 +364,7 @@
       },
       "desc_texts": {
         "en": "Also find a rare item when a recycled set piece breaks.",
-        "zh": "回收套装物品坏掉时，还会获得1件稀罕物品。"
+        "zh": "回收套装物品坏掉时，还会获得1件稀有物品。"
       },
       "name_mod": null,
       "stats": {},
@@ -490,11 +490,11 @@
       "desc_key": "SETBONUS_TWINE_DESC",
       "name_texts": {
         "en": "Twine Set Bonus!",
-        "zh": "合股线套装加成！"
+        "zh": "细绳套装加成！"
       },
       "tag_name_texts": {
         "en": "Twine",
-        "zh": "合股线"
+        "zh": "细绳"
       },
       "desc_texts": {
         "en": "+10% Dodge Chance.\nBruise units that contact you.",
@@ -1653,7 +1653,7 @@
       },
       "desc_texts": {
         "en": "Your weapon and trinket's passive and active effects are tripled.",
-        "zh": "你武器和小玩意儿的被动效果和主动效果变成3倍。"
+        "zh": "你武器和小玩意儿的被动效果和主动效果增强2倍。"
       },
       "name_mod": null,
       "stats": {},

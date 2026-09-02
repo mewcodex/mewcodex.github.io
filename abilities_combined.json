@@ -458,7 +458,7 @@
       "description_2": null,
       "description_texts": {
         "en": "Make an asteroid fall onto a tile within your line of sight. The asteroid deals damage and leaves a rock.",
-        "zh": "令1颗陨石落在视线内的1个方格。陨石会造成伤害，同时留下1块石头。"
+        "zh": "令1颗陨石落在你视线内的1个方格。陨石会造成伤害，同时留下1块石头。"
       },
       "description2_texts": {},
       "ability_class": "Psychic",
@@ -1678,7 +1678,7 @@
       "description_2": null,
       "description_texts": {
         "en": "Shoot a unit in your line of sight.",
-        "zh": "向视线内的1个单位射箭。"
+        "zh": "向你视线内的1个单位射箭。"
       },
       "description2_texts": {},
       "ability_class": null,
@@ -5133,11 +5133,11 @@
       "description_2": "A wide melee attack with Life Steal. If used on an ally, gain +1[img:str]. If used on a pickup, gain double that pickup's effects.",
       "description_texts": {
         "en": "A melee attack with Life Steal. If used on an ally, gain +1[img:str]. If used on a pickup, gain double that pickup's effects.",
-        "zh": "近身攻击，带【吸血】。如果目标是友方，那么你[img:str]+1，如果目标是可以捡起的物品，那么这件物品的效果翻倍。"
+        "zh": "近身攻击，带【吸血】。如果目标是友方，那么你[img:str]+1，如果目标是可以捡起的物品，那么这件物品的效果增强1倍。"
       },
       "description2_texts": {
         "en": "A wide melee attack with Life Steal. If used on an ally, gain +1[img:str]. If used on a pickup, gain double that pickup's effects.",
-        "zh": "范围更宽的近身攻击，带【吸血】。如果目标是友方，那么你[img:str]+1；如果目标是可以捡起的物品，那么这件物品的效果翻倍。"
+        "zh": "范围更宽的近身攻击，带【吸血】。如果目标是友方，那么你[img:str]+1；如果目标是可以捡起的物品，那么这件物品的效果增强1倍。"
       },
       "ability_class": "Butcher",
       "ability_pools": [
@@ -5289,7 +5289,7 @@
       },
       "description2_texts": {
         "en": "Collect all pickups, then become drowsy. Gain double the effects of these pickups.",
-        "zh": "捡起所有可以捡起的物品，然后【昏昏欲睡】。这些物品的效果翻倍。"
+        "zh": "捡起所有可以捡起的物品，然后【昏昏欲睡】。这些物品的效果增强1倍。"
       },
       "ability_class": "Butcher",
       "ability_pools": [
@@ -13188,21 +13188,21 @@
       "type_icon_upgraded": null,
       "ability_name_texts": {
         "en": "Proliferate",
-        "zh": "增殖"
+        "zh": "倍增"
       },
       "ability_name_texts_upgraded": {
         "en": "Proliferate",
-        "zh": "增殖"
+        "zh": "倍增"
       },
       "description": "Double a unit's Poison, Bleed, and Burn.\r\n[s:.7](Castable once per battle.)[/s]",
       "description_2": "Double a unit's Poison, Bleed, and Burn.\r\n[s:.7](This spell costs 0 mana. Castable once per battle.)[/s]",
       "description_texts": {
         "en": "Double a unit's Poison, Bleed, and Burn.\r\n[s:.7](Castable once per battle.)[/s]",
-        "zh": "令1个单位【中毒】、【出血】、【灼烧】的层数翻倍。\n[s:.7]（每场战斗可以施放1次）[/s]"
+        "zh": "令1个单位【中毒】、【出血】、【灼烧】的层数增加1倍。\n[s:.7]（每场战斗可以施放1次）[/s]"
       },
       "description2_texts": {
         "en": "Double a unit's Poison, Bleed, and Burn.\r\n[s:.7](This spell costs 0 mana. Castable once per battle.)[/s]",
-        "zh": "令1个单位【中毒】、【出血】、【灼烧】的层数翻倍。\n[s:.7]（这个法术耗费0魔能。每场战斗可以施放1次）[/s]"
+        "zh": "令1个单位【中毒】、【出血】、【灼烧】的层数增加1倍。\n[s:.7]（这个法术耗费0魔能。每场战斗可以施放1次）[/s]"
       },
       "ability_class": "Colorless",
       "ability_pools": [
@@ -13557,11 +13557,11 @@
       "type_icon_upgraded": null,
       "ability_name_texts": {
         "en": "Russian Shorthair Roulette",
-        "zh": "俄短轮盘"
+        "zh": "俄罗斯短尾轮盘"
       },
       "ability_name_texts_upgraded": {
         "en": "Russian Shorthair Roulette",
-        "zh": "俄短轮盘"
+        "zh": "俄罗斯短尾轮盘"
       },
       "description": "There is a 1 in 6 chance this will kill you. If it doesn't, gain +1 to a random stat and 1-2 coins.",
       "description_2": "There is a 1 in 6 chance this will kill you. If it doesn't, gain +2 to a random stat and 2-4 coins.",
@@ -13940,7 +13940,7 @@
       },
       "description2_texts": {
         "en": "Swap positions with any unit.\r\n[s:.7](Castable once per turn.)[/s]",
-        "zh": "跟场上任一单位交换位置。\n[s:.7]（每个回合可以施放1次）[/s]"
+        "zh": "跟任一单位交换位置。\n[s:.7]（每个回合可以施放1次）[/s]"
       },
       "ability_class": "Colorless",
       "ability_pools": [
@@ -27093,7 +27093,7 @@
       },
       "description2_texts": {
         "en": "Run to any pickup and collect it. The effects of that pickup are doubled.",
-        "zh": "跑向场上任一可以捡起的物品，把它捡起来。这件物品的效果翻倍。"
+        "zh": "跑向场上任一可以捡起的物品，把它捡起来。这件物品的效果增强1倍。"
       },
       "ability_class": "Druid",
       "ability_pools": [
@@ -31367,11 +31367,11 @@
       "description_2": "Your movement range is doubled and you get +4 [img:str] until the end of the turn.",
       "description_texts": {
         "en": "Your movement range is doubled until the end of the turn.",
-        "zh": "这个回合结束之前，你的移动范围翻倍。"
+        "zh": "这个回合结束之前，你的移动范围扩大1倍。"
       },
       "description2_texts": {
         "en": "Your movement range is doubled and you get +4 [img:str] until the end of the turn.",
-        "zh": "这个回合结束之前，你的移动范围翻倍，同时[img:str]+4。"
+        "zh": "这个回合结束之前，你的移动范围扩大1倍，同时[img:str]+4。"
       },
       "ability_class": "Fighter",
       "ability_pools": [
@@ -39598,7 +39598,7 @@
       },
       "description2_texts": {
         "en": "Double your movement.  You're unaffected by tile effects until the end of the turn.",
-        "zh": "你的移动范围翻倍。本回合结束之前，你不受方格效果影响。"
+        "zh": "你的移动范围扩大1倍。本回合结束之前，你不受方格效果影响。"
       },
       "ability_class": "Hunter",
       "ability_pools": [
@@ -40658,11 +40658,11 @@
       "description_2": "End your turn. On your next turn, your ranged abilities deal double damage.\n[s:.7](Costs 0 mana. Castable only if you haven't taken any other actions this turn other than your movement action.)[/s]",
       "description_texts": {
         "en": "End your turn. On your next turn, your ranged abilities deal double damage.\n[s:.7](Castable only if you haven't taken any other actions this turn.)[/s]",
-        "zh": "结束你的回合。你下个回合的远程能力伤害翻倍。\n[s:.7]（如果这个回合用过其他行动，那么就不能施放。）[/s]"
+        "zh": "结束你的回合。你下个回合的远程能力伤害增大1倍。\n[s:.7]（如果这个回合用过其他行动，那么就不能施放。）[/s]"
       },
       "description2_texts": {
         "en": "End your turn. On your next turn, your ranged abilities deal double damage.\n[s:.7](Costs 0 mana. Castable only if you haven't taken any other actions this turn other than your movement action.)[/s]",
-        "zh": "结束你的回合。你下个回合远程能力的伤害翻倍。\n[s:.7]（这个法术耗费0魔能。如果这个回合用过移动之外的其他行动，那么就不能施放。）[/s]"
+        "zh": "结束你的回合。你下个回合远程能力的伤害增大1倍。\n[s:.7]（这个法术耗费0魔能。如果这个回合用过移动之外的其他行动，那么就不能施放。）[/s]"
       },
       "ability_class": "Hunter",
       "ability_pools": [
@@ -69724,11 +69724,11 @@
       "type_icon_upgraded": null,
       "ability_name_texts": {
         "en": "Ethereal",
-        "zh": "灵体"
+        "zh": "虚灵"
       },
       "ability_name_texts_upgraded": {
         "en": "Ethereal",
-        "zh": "灵体"
+        "zh": "虚灵"
       },
       "description": "Gain 4 [img:divineshield], 3 [img:shield], heal 2 HP, and Brace 1.",
       "description_2": "Gain Thorns 6, Reflect 5, 4 [img:divineshield],\n3 [img:shield], heal 2 HP and Brace 1.",
@@ -73499,7 +73499,7 @@
       },
       "description2_texts": {
         "en": "Throw a random adjacent unit two tiles away, dealing damage to it. This deals double damage if it's thrown onto another unit.",
-        "zh": "随机把前后左右相邻的1个单位扔出2格远，对它造成伤害。如果它砸到其他单位，那么伤害翻倍。"
+        "zh": "随机把前后左右相邻的1个单位扔出2格远，对它造成伤害。如果它砸到其他单位，那么伤害增加1倍。"
       },
       "ability_class": "Monk",
       "ability_pools": [
@@ -74541,11 +74541,11 @@
       "type_icon_upgraded": null,
       "ability_name_texts": {
         "en": "Way of the Owl",
-        "zh": "鸮流"
+        "zh": "猫头鹰流"
       },
       "ability_name_texts_upgraded": {
         "en": "Way of the Owl",
-        "zh": "鸮流"
+        "zh": "猫头鹰流"
       },
       "description": "For the rest of the battle, the first spell you cast each turn is cast twice.",
       "description_2": "For the rest of the battle, the first spell you cast each turn is cast twice.\n[s:.7](This spell costs less.)[/s]",
@@ -76391,7 +76391,7 @@
       },
       "description2_texts": {
         "en": "Fire a magic blast at a unit anywhere within your line of sight.\n[s:.7](Castable once per battle. If all your armor slots are empty, castable once per turn.)[/s]",
-        "zh": "对视线内任意位置的1个单位发射魔法冲击。\n[s:.7]（每场战斗可以施放1次。如果防具栏位全空，那么每个回合可以施放1次）[/s]"
+        "zh": "对你视线内任意位置的1个单位发射魔法冲击。\n[s:.7]（每场战斗可以施放1次。如果防具栏位全空，那么每个回合可以施放1次）[/s]"
       },
       "ability_class": "Monk",
       "ability_pools": [
@@ -76761,11 +76761,11 @@
       "type_icon_upgraded": null,
       "ability_name_texts": {
         "en": "Nirvana",
-        "zh": "涅槃"
+        "zh": "寂灭"
       },
       "ability_name_texts_upgraded": {
         "en": "Nirvana",
-        "zh": "涅槃"
+        "zh": "寂灭"
       },
       "description": "Gain +1 [img:int] and +1 [img:shield].\nIf you have 7 or more [img:shield], this spell costs 1 mana less.",
       "description_2": "Gain +1 [img:int] and +2 [img:shield].\nIf you have 7 or more [img:shield], this spell costs 1 mana less.",
@@ -81962,11 +81962,11 @@
       "description_2": "Push a unit within your line of sight away from you 10 tiles with Chain Knockback.",
       "description_texts": {
         "en": "Push a unit within your line of sight away from you 10 tiles.",
-        "zh": "把视线内的1个单位推开10格。"
+        "zh": "把你视线内的1个单位推开10格。"
       },
       "description2_texts": {
         "en": "Push a unit within your line of sight away from you 10 tiles with Chain Knockback.",
-        "zh": "把视线内的1个单位推开10格，带连锁击退。"
+        "zh": "把你视线内的1个单位推开10格，带连锁击退。"
       },
       "ability_class": "Psychic",
       "ability_pools": [
@@ -82040,11 +82040,11 @@
       "description_2": "Cause enemies in a target area within your line of sight to each attack another enemy if they can.",
       "description_texts": {
         "en": "Cause an enemy within your line of sight to attack another enemy if it can.",
-        "zh": "如果视线内有敌人可以攻击另一个敌人，那么就令这样的1个敌人进行攻击。"
+        "zh": "如果你视线内有敌人可以攻击另一个敌人，那么就令这样的1个敌人进行攻击。"
       },
       "description2_texts": {
         "en": "Cause enemies in a target area within your line of sight to each attack another enemy if they can.",
-        "zh": "如果视线内目标区域的敌人可以攻击另一个敌人，那么就令他们全部进行攻击。"
+        "zh": "如果你视线内目标区域的敌人可以攻击另一个敌人，那么就令他们全部进行攻击。"
       },
       "ability_class": "Psychic",
       "ability_pools": [
@@ -82114,11 +82114,11 @@
       "description_2": "Charm an enemy within your line of sight for the rest of the battle. That unit immediately takes an extra turn.",
       "description_texts": {
         "en": "Charm an enemy within your line of sight for the rest of the battle.",
-        "zh": "本场战斗期间，令视线内的1个敌人【洗脑】。"
+        "zh": "本场战斗期间，令你视线内的1个敌人【洗脑】。"
       },
       "description2_texts": {
         "en": "Charm an enemy within your line of sight for the rest of the battle. That unit immediately takes an extra turn.",
-        "zh": "本场战斗期间，令视线内的1个敌人【洗脑】。这个单位立刻获得1个额外回合。"
+        "zh": "本场战斗期间，令你视线内的1个敌人【洗脑】。这个单位立刻获得1个额外回合。"
       },
       "ability_class": "Psychic",
       "ability_pools": [
@@ -82566,11 +82566,11 @@
       "description_2": "Deal damage to and inflict Bruise on a unit within your line of sight. This damage counts as physical damage and scales with [img:str].",
       "description_texts": {
         "en": "Deal damage to and inflict Bruise on a unit within your line of sight.",
-        "zh": "对视线内的1个单位造成伤害和【瘀伤】。"
+        "zh": "对你视线内的1个单位造成伤害和【瘀伤】。"
       },
       "description2_texts": {
         "en": "Deal damage to and inflict Bruise on a unit within your line of sight. This damage counts as physical damage and scales with [img:str].",
-        "zh": "对视线内的1个单位造成伤害和【瘀伤】。这次伤害视为物理伤害，而且数值随[img:str]增加。"
+        "zh": "对你视线内的1个单位造成伤害和【瘀伤】。这次伤害视为物理伤害，而且数值随[img:str]增加。"
       },
       "ability_class": "Psychic",
       "ability_pools": [
@@ -82652,11 +82652,11 @@
       "description_2": "Create floating glass shards in an area within your line of sight.",
       "description_texts": {
         "en": "Create floating glass shards on a tile within your line of sight.",
-        "zh": "在视线内的1个方格生成飘在空中的玻璃碎片。"
+        "zh": "在你视线内的1个方格生成飘在空中的玻璃碎片。"
       },
       "description2_texts": {
         "en": "Create floating glass shards in an area within your line of sight.",
-        "zh": "在视线内的1片区域生成飘在空中的玻璃碎片。"
+        "zh": "在你视线内的1片区域生成飘在空中的玻璃碎片。"
       },
       "ability_class": "Psychic",
       "ability_pools": [
@@ -82730,11 +82730,11 @@
       "description_2": "Deal damage to and inflict Blind on every unit within your line of sight, excluding your allies.",
       "description_texts": {
         "en": "Deal damage to and inflict Blind on every unit within your line of sight.",
-        "zh": "对视线内的每个单位造成伤害和【瞎眼】。"
+        "zh": "对你视线内的每个单位造成伤害和【瞎眼】。"
       },
       "description2_texts": {
         "en": "Deal damage to and inflict Blind on every unit within your line of sight, excluding your allies.",
-        "zh": "对视线内的每个单位造成伤害和【瞎眼】，不包括你的友方。"
+        "zh": "对你视线内的每个单位造成伤害和【瞎眼】，不包括你的友方。"
       },
       "ability_class": "Psychic",
       "ability_pools": [
@@ -82890,11 +82890,11 @@
       "description_2": "Spend all your mana. Give a unit within your line of sight a random stat up for every 2 mana spent (rounded up). Give enemies random stat downs instead.",
       "description_texts": {
         "en": "Spend all your mana. Give a unit within your line of sight a random stat up for every 3 mana spent (rounded up). Give enemies random stat downs instead.",
-        "zh": "耗尽你所有魔能。每耗费3点魔能，就令视线内1个单位随机1项属性提升1次（次数向上取整）。如果是敌人，那么改为随机1项属性降低1次。"
+        "zh": "耗尽你所有魔能。每耗费3点魔能，就令你视线内1个单位随机1项属性提升1次（次数向上取整）。如果是敌人，那么改为随机1项属性降低1次。"
       },
       "description2_texts": {
         "en": "Spend all your mana. Give a unit within your line of sight a random stat up for every 2 mana spent (rounded up). Give enemies random stat downs instead.",
-        "zh": "耗尽你所有魔能。每耗费2点魔能，就令视线内1个单位随机1项属性提升1次（次数向上取整）。如果是敌人，那么改为随机1项属性降低1次。"
+        "zh": "耗尽你所有魔能。每耗费2点魔能，就令你视线内1个单位随机1项属性提升1次（次数向上取整）。如果是敌人，那么改为随机1项属性降低1次。"
       },
       "ability_class": "Psychic",
       "ability_pools": [
@@ -83256,11 +83256,11 @@
       "description_2": "Deal 1 damage to any unit within your line of sight.\nRELOAD: Spend mana\nBonus Passive: +2 [img:int].",
       "description_texts": {
         "en": "Deal 1 damage to any unit within your line of sight.\r\nRELOAD: Spend mana",
-        "zh": "对视线内任一单位造成1点伤害。\n冷却结束：耗费魔能"
+        "zh": "对你视线内任一单位造成1点伤害。\n冷却结束：耗费魔能"
       },
       "description2_texts": {
         "en": "Deal 1 damage to any unit within your line of sight.\nRELOAD: Spend mana\nBonus Passive: +2 [img:int].",
-        "zh": "对视线内任一单位造成1点伤害。\n冷却结束：耗费魔能\n奖励被动：[img:int]+2。"
+        "zh": "对你视线内任一单位造成1点伤害。\n冷却结束：耗费魔能\n奖励被动：[img:int]+2。"
       },
       "ability_class": "Psychic",
       "ability_pools": [
@@ -83474,11 +83474,11 @@
       "description_2": "Give a unit within your line of sight All Stats Up and force it to move and attack one of its enemies.",
       "description_texts": {
         "en": "Force a unit within your line of sight to move and attack one of its enemies.",
-        "zh": "强迫视线内的1个单位移动、攻击它的1个敌人。"
+        "zh": "强迫你视线内的1个单位移动、攻击它的1个敌人。"
       },
       "description2_texts": {
         "en": "Give a unit within your line of sight All Stats Up and force it to move and attack one of its enemies.",
-        "zh": "令视线内的1个单位所有属性提升，同时强迫它移动、攻击它的1个敌人。"
+        "zh": "令你视线内的1个单位所有属性提升，同时强迫它移动、攻击它的1个敌人。"
       },
       "ability_class": "Psychic",
       "ability_pools": [
@@ -83548,11 +83548,11 @@
       "description_2": "Give a unit within your line of sight +3 temporary Bleed Thorns until the end of its turn. If its was an ally, the bleed thorns last for the rest of the battle.",
       "description_texts": {
         "en": "Give a unit within your line of sight +3 temporary Bleed Thorns until the end of its turn.",
-        "zh": "令视线内的1个单位临时【出血尖刺】+3，持续到它的回合结束。"
+        "zh": "令你视线内的1个单位临时【出血尖刺】+3，持续到它的回合结束。"
       },
       "description2_texts": {
         "en": "Give a unit within your line of sight +3 temporary Bleed Thorns until the end of its turn. If its was an ally, the bleed thorns last for the rest of the battle.",
-        "zh": "令视线内的1个单位临时【出血尖刺】+3，持续到它的回合结束。如果目标是友方，那么它的【出血尖刺】持续到战斗结束。"
+        "zh": "令你视线内的1个单位临时【出血尖刺】+3，持续到它的回合结束。如果目标是友方，那么它的【出血尖刺】持续到战斗结束。"
       },
       "ability_class": "Psychic",
       "ability_pools": [
@@ -83844,11 +83844,11 @@
       "description_2": "Collect any pickup within your line of sight.\r\nGain +1 [img:lck].",
       "description_texts": {
         "en": "Collect any pickup within your line of sight.",
-        "zh": "捡起视线内任一件可以捡起的物品。"
+        "zh": "捡起你视线内任一件可以捡起的物品。"
       },
       "description2_texts": {
         "en": "Collect any pickup within your line of sight.\r\nGain +1 [img:lck].",
-        "zh": "捡起视线内任一件可以捡起的物品。\n[img:lck]+1。"
+        "zh": "捡起你视线内任一件可以捡起的物品。\n[img:lck]+1。"
       },
       "ability_class": "Psychic",
       "ability_pools": [
@@ -83918,11 +83918,11 @@
       "description_2": "A unit within your line of sight backflips out of the way the next time they're targeted by an enemy.\n [s:.7](This spell costs less.)[/s]",
       "description_texts": {
         "en": "A unit within your line of sight backflips out of the way the next time they're targeted by an enemy.",
-        "zh": "令视线内的1个单位下一次被敌人选为目标时后空翻躲开。"
+        "zh": "令你视线内的1个单位下一次被敌人选为目标时后空翻躲开。"
       },
       "description2_texts": {
         "en": "A unit within your line of sight backflips out of the way the next time they're targeted by an enemy.\n [s:.7](This spell costs less.)[/s]",
-        "zh": "令视线内的1个单位下一次被敌人选为目标时后空翻躲开。\n[s:.7]（这个法术耗费减少）[/s]"
+        "zh": "令你视线内的1个单位下一次被敌人选为目标时后空翻躲开。\n[s:.7]（这个法术耗费减少）[/s]"
       },
       "ability_class": "Psychic",
       "ability_pools": [
@@ -84222,7 +84222,7 @@
       },
       "description2_texts": {
         "en": "Target yourself or a unit within your line of sight and upgrade one of their spells at random for the rest of the battle.",
-        "zh": "以自己或视线内的1个单位为目标，本场战斗期间，随机强化这个单位的1个法术。"
+        "zh": "以自己或你视线内的1个单位为目标，本场战斗期间，随机强化这个单位的1个法术。"
       },
       "ability_class": "Psychic",
       "ability_pools": [
@@ -84292,11 +84292,11 @@
       "description_2": "Deal damage to a unit in your line of sight, then increase this spell's damage by 1 for the rest of the battle.\n[s:.7](This spell costs less.)[/s]",
       "description_texts": {
         "en": "Deal damage to a unit in your line of sight, then increase this spell's damage by 1 for the rest of the battle.",
-        "zh": "对视线内1个单位造成伤害，然后本场战斗期间这个法术伤害+1。"
+        "zh": "对你视线内1个单位造成伤害，然后本场战斗期间这个法术伤害+1。"
       },
       "description2_texts": {
         "en": "Deal damage to a unit in your line of sight, then increase this spell's damage by 1 for the rest of the battle.\n[s:.7](This spell costs less.)[/s]",
-        "zh": "对视线内1个单位造成伤害，然后本场战斗期间这个法术伤害+1。\n[s:.7]（这个法术耗费减少）[/s]"
+        "zh": "对你视线内1个单位造成伤害，然后本场战斗期间这个法术伤害+1。\n[s:.7]（这个法术耗费减少）[/s]"
       },
       "ability_class": "Psychic",
       "ability_pools": [
@@ -84446,11 +84446,11 @@
       "description_2": "Every enemy in your line of sight takes an extra turn. They are charmed on that turn.\n[s:.7](This spell costs less.)[/s]",
       "description_texts": {
         "en": "Every enemy in your line of sight takes an extra turn. They are charmed on that turn.",
-        "zh": "视线内的每个敌人获得1个额外回合，它们在那个回合会处于【洗脑】状态。"
+        "zh": "你视线内的每个敌人获得1个额外回合，它们在那个回合会处于【洗脑】状态。"
       },
       "description2_texts": {
         "en": "Every enemy in your line of sight takes an extra turn. They are charmed on that turn.\n[s:.7](This spell costs less.)[/s]",
-        "zh": "视线内的每个敌人获得1个额外回合，它们在那个回合会处于【洗脑】状态。\n[s:.7]（这个法术耗费减少）[/s]"
+        "zh": "你视线内的每个敌人获得1个额外回合，它们在那个回合会处于【洗脑】状态。\n[s:.7]（这个法术耗费减少）[/s]"
       },
       "ability_class": "Psychic",
       "ability_pools": [
@@ -84523,11 +84523,11 @@
       "description_2": "Take an extra turn. You have a 75% chance to be stunned and don't regenerate mana on that turn.\r\n[s:.7](This spell can't be cast on extra turns.)[/s]",
       "description_texts": {
         "en": "Take an extra turn. You're stunned and don't regenerate mana on that turn.\r\n[s:.7](This spell can't be cast on extra turns.)[/s]",
-        "zh": "获得1个额外回合。那个回合，你处于【眩晕】状态，而且不会恢复魔能。\n[s:.7]（这个法术不能在额外回合施放）[/s]"
+        "zh": "获得1个额外回合。你在那个回合处于【眩晕】状态，而且不会恢复魔能。\n[s:.7]（这个法术不能在额外回合施放）[/s]"
       },
       "description2_texts": {
         "en": "Take an extra turn. You have a 75% chance to be stunned and don't regenerate mana on that turn.\r\n[s:.7](This spell can't be cast on extra turns.)[/s]",
-        "zh": "获得1个额外回合。那个回合，你有75%的几率进入【眩晕】状态，而且不会恢复魔能。\n[s:.7]（这个法术不能在额外回合施放）[/s]"
+        "zh": "获得1个额外回合。你在那个回合有75%的几率进入【眩晕】状态，而且不会恢复魔能。\n[s:.7]（这个法术不能在额外回合施放）[/s]"
       },
       "ability_class": "Psychic",
       "ability_pools": [
@@ -84597,11 +84597,11 @@
       "description_2": "Inflict Magic Weakness 2 and Confusion 1 on all non-allied units in your line of sight.",
       "description_texts": {
         "en": "Inflict Magic Weakness 2 on all units in your line of sight.",
-        "zh": "对视线内的所有单位施加2层【魔法克制】。"
+        "zh": "对你视线内的所有单位施加2层【魔法克制】。"
       },
       "description2_texts": {
         "en": "Inflict Magic Weakness 2 and Confusion 1 on all non-allied units in your line of sight.",
-        "zh": "对视线内所有非友方的单位施加2层【魔法克制】和1层【混乱】。"
+        "zh": "对你视线内所有非友方的单位施加2层【魔法克制】和1层【混乱】。"
       },
       "ability_class": "Psychic",
       "ability_pools": [
@@ -84749,11 +84749,11 @@
       "description_2": "Target an allied cat within your line of sight. Cast one of their spells at random for free (or use their basic attack if theres no good spells).\n[s:.7](This spell costs less.)[/s]",
       "description_texts": {
         "en": "Target an allied cat within your line of sight. Cast one of their spells at random for free (or use their basic attack if theres no good spells).",
-        "zh": "以视线内的1个友方猫为目标，随机免费施放它的1个法术（如果没有合适法术，那么改为使用它的普通攻击）。"
+        "zh": "以你视线内的1个友方猫为目标，随机免费施放它的1个法术（如果没有合适法术，那么改为使用它的普通攻击）。"
       },
       "description2_texts": {
         "en": "Target an allied cat within your line of sight. Cast one of their spells at random for free (or use their basic attack if theres no good spells).\n[s:.7](This spell costs less.)[/s]",
-        "zh": "以视线内的1个友方猫为目标，随机免费施放它的1个法术（如果没有合适法术，那么改为使用它的普通攻击）。\n[s:.7]（这个法术耗费减少）[/s]"
+        "zh": "以你视线内的1个友方猫为目标，随机免费施放它的1个法术（如果没有合适法术，那么改为使用它的普通攻击）。\n[s:.7]（这个法术耗费减少）[/s]"
       },
       "ability_class": "Psychic",
       "ability_pools": [
@@ -84901,11 +84901,11 @@
       "description_2": "Make an asteroid fall onto a tile within your line of sight. The asteroid deals damage, bruises and leaves a boulder.",
       "description_texts": {
         "en": "Make an asteroid fall onto a tile within your line of sight. The asteroid deals damage and leaves a rock.",
-        "zh": "令1颗陨石落在视线内的1个方格。陨石会造成伤害，同时留下1块石头。"
+        "zh": "令1颗陨石落在你视线内的1个方格。陨石会造成伤害，同时留下1块石头。"
       },
       "description2_texts": {
         "en": "Make an asteroid fall onto a tile within your line of sight. The asteroid deals damage, bruises and leaves a boulder.",
-        "zh": "令1颗陨石落在视线内的1个方格。陨石会造成伤害、施加【瘀伤】，同时留下1块巨石。"
+        "zh": "令1颗陨石落在你视线内的1个方格。陨石会造成伤害、施加【瘀伤】，同时留下1块巨石。"
       },
       "ability_class": "Psychic",
       "ability_pools": [
@@ -84986,11 +84986,11 @@
       "description_2": "Inflict Freeze 1, Blind 2, and Confusion 2 on a unit within your line of sight.",
       "description_texts": {
         "en": "Inflict Freeze on a unit within your line of sight.",
-        "zh": "对视线内1个单位施加【冻住】。"
+        "zh": "对你视线内1个单位施加【冻住】。"
       },
       "description2_texts": {
         "en": "Inflict Freeze 1, Blind 2, and Confusion 2 on a unit within your line of sight.",
-        "zh": "对视线内1个单位施加1层【冻住】、2层【瞎眼】和2层【混乱】。"
+        "zh": "对你视线内1个单位施加1层【冻住】、2层【瞎眼】和2层【混乱】。"
       },
       "ability_class": "Psychic",
       "ability_pools": [
@@ -85064,11 +85064,11 @@
       "description_2": "Give a unit within your line of sight an extra turn immediately, then end your turn.\nCastable only if you haven't taken any actions this turn other than your movement action.\n[s:.7](This can't be cast on extra turns.)[/s]",
       "description_texts": {
         "en": "Give a unit within your line of sight an extra turn immediately, then end your turn. \nCastable only if you haven't taken any actions this turn.\n[s:.7](This can't be cast on extra turns.)[/s]",
-        "zh": "立刻令视线内的1个单位获得1个额外回合，然后结束你的回合。\n如果这个回合行动过，那么就不能施放这个法术。\n[s:.7]（这个法术不能在额外回合施放）[/s]"
+        "zh": "立刻令你视线内的1个单位获得1个额外回合，然后结束你的回合。\n如果这个回合行动过，那么就不能施放这个法术。\n[s:.7]（这个法术不能在额外回合施放）[/s]"
       },
       "description2_texts": {
         "en": "Give a unit within your line of sight an extra turn immediately, then end your turn.\nCastable only if you haven't taken any actions this turn other than your movement action.\n[s:.7](This can't be cast on extra turns.)[/s]",
-        "zh": "立刻令视线内的1个单位获得1个额外回合，然后结束你的回合。\n如果这个回合用过移动之外的其他行动，那么就不能施放这个法术。\n[s:.7]（这个法术不能在额外回合施放）[/s]"
+        "zh": "立刻令你视线内的1个单位获得1个额外回合，然后结束你的回合。\n如果这个回合用过移动之外的其他行动，那么就不能施放这个法术。\n[s:.7]（这个法术不能在额外回合施放）[/s]"
       },
       "ability_class": "Psychic",
       "ability_pools": [
@@ -85216,11 +85216,11 @@
       "description_2": "Force a unit within your line of sight to attack in the direction it's facing.",
       "description_texts": {
         "en": "Force an enemy within your line of sight to attack in the direction it's facing.",
-        "zh": "强迫视线内的1个敌人向它面朝的方向攻击。"
+        "zh": "强迫你视线内的1个敌人向它面朝的方向攻击。"
       },
       "description2_texts": {
         "en": "Force a unit within your line of sight to attack in the direction it's facing.",
-        "zh": "强迫视线内的1个单位向它面朝的方向攻击。"
+        "zh": "强迫你视线内的1个单位向它面朝的方向攻击。"
       },
       "ability_class": "Psychic",
       "ability_pools": [
@@ -85290,11 +85290,11 @@
       "description_2": "Every unit within your line of sight turns away from you and is inflicted with Blind 1.",
       "description_texts": {
         "en": "Every unit within your line of sight turns away from you.",
-        "zh": "视线内的每个单位都会转身背对你。"
+        "zh": "你视线内的每个单位都会转身背对你。"
       },
       "description2_texts": {
         "en": "Every unit within your line of sight turns away from you and is inflicted with Blind 1.",
-        "zh": "视线内的每个单位都会转身背对你，同时获得1层【瞎眼】。"
+        "zh": "你视线内的每个单位都会转身背对你，同时获得1层【瞎眼】。"
       },
       "ability_class": "Psychic",
       "ability_pools": [
@@ -85444,11 +85444,11 @@
       "description_2": "Inflict Slow 1 on each unit in an area around a tile within your line of sight. If you cast this from full mana, instead inflict Immobilize 1 and deal 6 damage.",
       "description_texts": {
         "en": "Inflict Slow 1 on a unit within your line of sight. If you cast this from full mana, instead inflict Immobilize 1 and deal 6 damage.",
-        "zh": "对视线内的1个单位施加1层【迟缓】。如果你这时是满魔能，那么改为施加1层【移动受限】，同时造成6点伤害。"
+        "zh": "对你视线内的1个单位施加1层【迟缓】。如果你这时是满魔能，那么改为施加1层【移动受限】，同时造成6点伤害。"
       },
       "description2_texts": {
         "en": "Inflict Slow 1 on each unit in an area around a tile within your line of sight. If you cast this from full mana, instead inflict Immobilize 1 and deal 6 damage.",
-        "zh": "对视线内1个方格周围1片区域的每个单位施加1层【迟缓】。如果你这时是满魔能，那么改为施加1层【移动受限】，同时造成6点伤害。"
+        "zh": "对你视线内1个方格周围1片区域的每个单位施加1层【迟缓】。如果你这时是满魔能，那么改为施加1层【移动受限】，同时造成6点伤害。"
       },
       "ability_class": "Psychic",
       "ability_pools": [
@@ -85522,11 +85522,11 @@
       "description_2": "Teleport into a unit within your line of sight. Deal damage and displace it.",
       "description_texts": {
         "en": "Teleport in a straight line into a unit within your line of sight. Deal damage and displace it.",
-        "zh": "沿直线传送到视线内1个单位所在的方格。对它造成伤害，同时把它挤开。"
+        "zh": "沿直线传送到你视线内1个单位所在的方格。对它造成伤害，同时把它挤开。"
       },
       "description2_texts": {
         "en": "Teleport into a unit within your line of sight. Deal damage and displace it.",
-        "zh": "传送到视线内1个单位所在的方格。对它造成伤害，同时把它挤开。"
+        "zh": "传送到你视线内1个单位所在的方格。对它造成伤害，同时把它挤开。"
       },
       "ability_class": "Psychic",
       "ability_pools": [
@@ -85596,11 +85596,11 @@
       "description_2": "Turn a unit within your line of sight 180 degrees. Inflict Confusion 2 and Magic Weakness 1 on that unit.",
       "description_texts": {
         "en": "Turn a unit within your line of sight 180 degrees. Inflict Confusion 1 on that unit.",
-        "zh": "令视线内1个单位转身。对它施加1层【混乱】。"
+        "zh": "令你视线内1个单位转身。对它施加1层【混乱】。"
       },
       "description2_texts": {
         "en": "Turn a unit within your line of sight 180 degrees. Inflict Confusion 2 and Magic Weakness 1 on that unit.",
-        "zh": "令视线内1个单位转身。对它施加2层【混乱】和1层【魔法克制】。"
+        "zh": "令你视线内1个单位转身。对它施加2层【混乱】和1层【魔法克制】。"
       },
       "ability_class": "Psychic",
       "ability_pools": [
@@ -85670,11 +85670,11 @@
       "description_2": "Pull any unit within your line of sight to a tile adjacent to you.\n[s:.7](This spell costs less.)[/s]",
       "description_texts": {
         "en": "Pull any unit within your line of sight to a tile adjacent to you.",
-        "zh": "把视线内任一单位拉到你前后左右相邻的方格。"
+        "zh": "把你视线内任一单位拉到你前后左右相邻的方格。"
       },
       "description2_texts": {
         "en": "Pull any unit within your line of sight to a tile adjacent to you.\n[s:.7](This spell costs less.)[/s]",
-        "zh": "把视线内任一单位拉到你前后左右相邻的方格。\n[s:.7]（这个法术耗费减少）[/s]"
+        "zh": "把你视线内任一单位拉到你前后左右相邻的方格。\n[s:.7]（这个法术耗费减少）[/s]"
       },
       "ability_class": "Psychic",
       "ability_pools": [
@@ -85826,11 +85826,11 @@
       "description_2": "Swap positions with a unit in your line of sight.\r\n[s:.7](This spell costs less.)[/s]",
       "description_texts": {
         "en": "Swap positions with a unit in your line of sight.",
-        "zh": "跟视线内的1个单位交换位置。"
+        "zh": "跟你视线内的1个单位交换位置。"
       },
       "description2_texts": {
         "en": "Swap positions with a unit in your line of sight.\r\n[s:.7](This spell costs less.)[/s]",
-        "zh": "跟视线内的1个单位交换位置。\n[s:.7]（这个法术耗费减少）[/s]"
+        "zh": "跟你视线内的1个单位交换位置。\n[s:.7]（这个法术耗费减少）[/s]"
       },
       "ability_class": "Psychic",
       "ability_pools": [
@@ -126716,7 +126716,7 @@
       "description_2": null,
       "description_texts": {
         "en": "Deal damage to and inflict Bruise on a unit within your line of sight.",
-        "zh": "对视线内的1个单位造成伤害和【瘀伤】。"
+        "zh": "对你视线内的1个单位造成伤害和【瘀伤】。"
       },
       "description2_texts": {},
       "ability_class": "Psychic",
@@ -137821,11 +137821,11 @@
       "description_2": "Inflict Petrify on all units in your line of sight.\r\n[s:.7](This spell costs less.)[/s]",
       "description_texts": {
         "en": "Inflict Petrify on all units in your line of sight.",
-        "zh": "对视线内的所有单位施加【石化】。"
+        "zh": "对你视线内的所有单位施加【石化】。"
       },
       "description2_texts": {
         "en": "Inflict Petrify on all units in your line of sight.\r\n[s:.7](This spell costs less.)[/s]",
-        "zh": "对视线内的所有单位施加【石化】。\n[s:.7]（这个法术耗费减少）[/s]"
+        "zh": "对你视线内的所有单位施加【石化】。\n[s:.7]（这个法术耗费减少）[/s]"
       },
       "ability_class": "Tank",
       "ability_pools": [
@@ -148395,7 +148395,7 @@
       "type_icon_upgraded": null,
       "ability_name_texts": {
         "en": "Flamethrower",
-        "zh": "火焰喷射器"
+        "zh": "喷射火焰"
       },
       "ability_name_texts_upgraded": {},
       "description": "Shoot a flame that inflicts Burn.",
@@ -148605,7 +148605,7 @@
       },
       "description2_texts": {
         "en": "You or another unit takes an extra turn after this one. That unit is AI controlled on that turn.\r\n[s:.7](This spell costs less.)[/s]",
-        "zh": "你或另外1个单位在这个回合之后获得1个额外回合。这个单位在那个回合由AI控制。\n[s:.7]（这个法术耗费减少）[/s]"
+        "zh": "你或另外1个单位在这个回合之后获得1个额外回合。这个单位在额外回合由AI控制。\n[s:.7]（这个法术耗费减少）[/s]"
       },
       "ability_class": "Tinkerer",
       "ability_pools": [
@@ -151661,11 +151661,11 @@
       "description_2": "Smash your weapon onto an adjacent unit, destroying it and dealing double its damage.\n[s:.7](This spell costs less.)[/s]",
       "description_texts": {
         "en": "Smash your weapon onto an adjacent unit, destroying it and dealing double its damage.",
-        "zh": "用武器猛砸前后左右相邻的1个单位，摧毁武器，本次武器伤害翻倍。"
+        "zh": "用武器猛砸前后左右相邻的1个单位，摧毁武器，本次武器伤害增大1倍。"
       },
       "description2_texts": {
         "en": "Smash your weapon onto an adjacent unit, destroying it and dealing double its damage.\n[s:.7](This spell costs less.)[/s]",
-        "zh": "用武器猛砸前后左右相邻的1个单位，摧毁武器，本次武器伤害翻倍。\n[s:.7]（这个法术耗费减少）[/s]"
+        "zh": "用武器猛砸前后左右相邻的1个单位，摧毁武器，本次武器伤害增大1倍。\n[s:.7]（这个法术耗费减少）[/s]"
       },
       "ability_class": "Tinkerer",
       "ability_pools": [

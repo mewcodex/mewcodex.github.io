@@ -9184,7 +9184,7 @@
       },
       "description_texts": {
         "en": "Gain double the effects of pickups you collect.",
-        "zh": "\u6361\u8d77\u7684\u7269\u54c1\u6548\u679c\u7ffb\u500d\u3002"
+        "zh": "\u6361\u8d77\u7684\u7269\u54c1\u6548\u679c\u589e\u5f3a1\u500d\u3002"
       },
       "desc_key": "MUTATION_TEXTURE_310_DESC",
       "stats": {},

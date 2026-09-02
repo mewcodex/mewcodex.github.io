@@ -314,7 +314,7 @@
     },
     "desc_texts": {
       "en": "Fights are deadlier but the winning cat gets double the stat rewards.",
-      "zh": "\u732b\u54aa\u6253\u67b6\u66f4\u5bb9\u6613\u6b7b\u732b\uff0c\u4f46\u8d62\u7684\u90a3\u53ea\u5c5e\u6027\u52a0\u6210\u7ffb\u500d\u3002"
+      "zh": "\u732b\u54aa\u6253\u67b6\u66f4\u5bb9\u6613\u6b7b\u732b\uff0c\u4f46\u8d62\u7684\u90a3\u53ea\u5c5e\u6027\u52a0\u6210\u589e\u59271\u500d\u3002"
     },
     "special": true,
     "can_be_rare": false,
