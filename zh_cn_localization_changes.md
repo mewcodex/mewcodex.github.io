@@ -1,7 +1,7 @@
 # Simplified Chinese Localization Changes
 
-- Baseline: `3b9a331e5982fd7bf55e8c6cd747ededf354e873`
-- Updated: `cd6ef02df65e54092163d8335fc208d82ffa01b0`
+- Baseline: `1b8e56a720eea59996ea2a491491da98b4e991e6`
+- Updated: `3366b3a2ab3ad8b7bdf4fc59d641673d50c85892`
 - Source: `text/events.csv` (`KEY`, `en`, `zh-cn`)
 - JSON-style Unicode escapes were decoded before comparison.
 - Zero-width characters were removed before comparison.
@@ -9,7 +9,7 @@
 ## Summary
 
 - Added: 0
-- Changed: 508
+- Changed: 314
 - Removed: 0
 
 ## Added
@@ -20,514 +20,320 @@ None.
 
 | Key | English | 原简体中文 | 新简体中文 |
 | --- | --- | --- | --- |
-| `ABILITY_BALLOFSPIDERS_NAME` | Ball of Spiders | 一团蜘蛛 | 天降蛛群 |
-| `ABILITY_BATTERUP_NAME` | Batter Up | 打出去！ | 击球手准备 |
-| `ABILITY_CONTROLAIR_NAME` | Control Air | 控风 | 操控风相 |
-| `ABILITY_ENLARGE_NAME` | Enlarge | 变大 | 变巨术 |
-| `ABILITY_FORBIDDENFAMINE2_DESC` | Inflict Leech 2, Weakness 5, Poison 2, and Madness 2 on all enemies.<br>There are permanent consequences for casting this spell… but maybe not for you. <br>[s:.7](Castable once per battle.)[/s] | 对所有敌人施加2层【水蛭】、5层【虚弱】、2层【中毒】和2层【癫狂】。<br>施放这个法术会造成长久的后果……但或许不会影响你。<br>[s:.7]（每场战斗可以施放1次。）[/s] | 对所有敌人施加2层【水蛭】、5层【虚弱】、2层【中毒】和2层【癫狂】。<br>施放这个法术会造成永久的后果……但或许不会影响你。<br>[s:.7]（每场战斗可以施放1次。）[/s] |
-| `ABILITY_FORBIDDENFAMINE_DESC` | Inflict Weakness 5, Poison 2, and Madness 2 on all enemies.<br>There are permanent consequences for casting this spell… but maybe not for you. <br>[s:.7](Castable once per battle.)[/s] | 对所有敌人施加5层【虚弱】、2层【中毒】和2层【癫狂】。<br>施放这个法术会造成长久的后果……但或许不会影响你。<br>[s:.7]（每场战斗可以施放1次。）[/s] | 对所有敌人施加5层【虚弱】、2层【中毒】和2层【癫狂】。<br>施放这个法术会造成永久的后果……但或许不会影响你。<br>[s:.7]（每场战斗可以施放1次。）[/s] |
-| `ABILITY_FORBIDDENFLAME2_DESC` | Heavily damage and inflict Burn 10 on all enemies and light the map on fire. There will be permanent consequences for casting this spell…<br>[s:.7](Castable once per battle.)[/s] | 对所有敌人造成大量伤害、施加10层【灼烧】，同时点燃整张地图。施放这个法术会有长久的后果……<br>[s:.7]（每场战斗可以施放1次）[/s] | 对所有敌人造成大量伤害、施加10层【灼烧】，同时点燃整张地图。施放这个法术会有永久的后果……<br>[s:.7]（每场战斗可以施放1次）[/s] |
-| `ABILITY_FORBIDDENFLAME_DESC` | Damage and inflict Burn 7 on all enemies and light the map on fire. There will be permanent consequences for casting this spell…<br>[s:.7](Castable once per battle.)[/s] | 对所有敌人造成伤害、施加7层【灼烧】，同时点燃整张地图。施放这个法术会有长久的后果……<br>[s:.7]（每场战斗可以施放1次）[/s] | 对所有敌人造成伤害、施加7层【灼烧】，同时点燃整张地图。施放这个法术会有永久的后果……<br>[s:.7]（每场战斗可以施放1次）[/s] |
-| `ABILITY_FORBIDDENFLOOD2_DESC` | Knock back and damage all enemies, heal all allies, then flood the entire map. There will be permanent consequences for casting this spell…<br>[s:.7](Castable once per battle.)[/s] | 击退并伤害所有敌人，治疗所有友方，然后淹没整张地图。施放这个法术会有长久的后果……<br>[s:.7]（每场战斗可以施放1次）[/s] | 击退并伤害所有敌人，治疗所有友方，然后淹没整张地图。施放这个法术会有永久的后果……<br>[s:.7]（每场战斗可以施放1次）[/s] |
-| `ABILITY_FORBIDDENFLOOD_DESC` | Knock back and damage all enemies, then flood the entire map. There will be permanent consequences for casting this spell…<br>[s:.7](Castable once per battle.)[/s] | 击退并伤害所有敌人，然后淹没整张地图。施放这个法术会有长久的后果……<br>[s:.7]（每场战斗可以施放1次）[/s] | 击退并伤害所有敌人，然后淹没整张地图。施放这个法术会有永久的后果……<br>[s:.7]（每场战斗可以施放1次）[/s] |
-| `ABILITY_FORBIDDENFROST2_DESC` | Apply Freeze 2 to each unit except for yourself and 1 other chosen unit.<br>Deal 15 Damage to enemies and fully heal each ally.<br>There will be permanent consequences for casting this spell…<br>[s:.7](Castable once per battle.)[/s] | 除自身和你选定的另外1个单位之外，对所有单位施加2层【冻住】。<br>对敌人造成15点伤害，同时令每个友方完全恢复生命。<br>施放这个法术会有长久的后果……<br>[s:.7]（每场战斗可以施放1次）[/s] | 除自身和你选定的另外1个单位之外，对所有单位施加2层【冻住】。<br>对敌人造成15点伤害，同时令每个友方完全恢复生命。<br>施放这个法术会有永久的后果……<br>[s:.7]（每场战斗可以施放1次）[/s] |
-| `ABILITY_FORBIDDENFROST_DESC` | Apply Freeze 2 to each unit except for yourself and 1 other chosen unit.<br>Deal 10 Damage to enemies and heal each ally 10 HP.<br>There will be permanent consequences for casting this spell…<br>[s:.7](Castable once per battle.)[/s] | 除自身和你选定的另外1个单位之外，对所有单位施加2层【冻住】。<br>对敌人造成10点伤害，同时令每个友方恢复10点生命。<br>施放这个法术会有长久的后果……<br>[s:.7]（每场战斗可以施放1次）[/s] | 除自身和你选定的另外1个单位之外，对所有单位施加2层【冻住】。<br>对敌人造成10点伤害，同时令每个友方恢复10点生命。<br>施放这个法术会有永久的后果……<br>[s:.7]（每场战斗可以施放1次）[/s] |
-| `ABILITY_FORBIDDENFULMINATION2_DESC` | Strike all enemies with lightning, inflicting Stun 2. There will be permanent consequences for casting this spell…<br>[s:.7](Castable once per battle.)[/s] | 降下闪电，击中所有敌人，施加2层【眩晕】。施放这个法术会有长久的后果……<br>[s:.7]（每场战斗可以施放1次）[/s] | 降下闪电，击中所有敌人，施加2层【眩晕】。施放这个法术会有永久的后果……<br>[s:.7]（每场战斗可以施放1次）[/s] |
-| `ABILITY_FORBIDDENFULMINATION_DESC` | Strike all enemies with lightning, inflicting Stun. There will be permanent consequences for casting this spell…<br>[s:.7](Castable once per battle.)[/s] | 降下闪电，击中所有敌人，施加【眩晕】。施放这个法术会有长久的后果……<br>[s:.7]（每场战斗可以施放1次）[/s] | 降下闪电，击中所有敌人，施加【眩晕】。施放这个法术会有永久的后果……<br>[s:.7]（每场战斗可以施放1次）[/s] |
-| `ABILITY_FORRBIDDENFART_NAME` | Forbidden Fart | 禁术·放屁 | 禁忌臭屁 |
-| `ABILITY_MAXTELEPORT_NAME` | Teleport | 传送 | 传送术 |
-| `ABILITY_MINDCONTROL_NAME` | Mind Control | 心灵控制 | 心灵操控 |
-| `ABILITY_PASS_NAME` | Pass | 给 | 过 |
-| `ABILITY_SHOCKWAVE_NAME` | Shockwave | 冲击波 | 电击波 |
-| `ABILITY_TELEPORTMAGE_NAME` | Teleport | 传送 | 传送术 |
-| `ABILITY_TELEPORT_NAME` | Teleport | 传送 | 传送术 |
-| `ABILITY_UNLOCK_HUNTER` | Hunters can now learn "Ball of Spiders"! | 猎手可以学“一团蜘蛛”了！ | 猎手可以学“天降蛛群”了！ |
-| `ARMOR_CONFUSINGHAT_NAME` | Confusing Hat | 凌乱的帽子 | 混乱帽子 |
-| `ARMOR_FANNYPACK_NAME` | Fanny Pack | 腰包 | 挎包 |
-| `ARMOR_PACKOFBLADES_DESC` | Whenever you backstab, gain +1 Serrated Claws. | 每当你背刺时，【锯齿之爪】+1。 | 每当你背刺时，【锯齿利爪】+1。 |
-| `BOSS_SPEWER_NAME` | Spewer | 喷喷 | 呕吐宝宝 |
-| `BOSS_ZODIAC_NAME` | Zodiac | 黄道十二宫杀手 | 黄道十二宫 |
-| `BOSS_ZODIAC_QUOTE_3` | I want you to print this cipher on your tombstone! | 我要你把这串密码刻在你的墓碑上！ | 我要你把这段密语刻在你的墓碑上！ |
-| `DISORDER_NECROPHAGE_NAME` | Necrophage | 食尸 | 食尸癖 |
-| `DISORDER_SPONTANEOUSCOMBUSTION_NAME` | Spontaneous Combustion | 自燃 | 生体自燃 |
-| `EABILITY_MINDCONTROL_NAME` | Mind Control | 心灵控制 | 心灵操控 |
-| `ENEMY_ANGELICKITTEN_DESC` | Attracts units. Dooms what kills it.<br>Immune to Holy. Gains All Stats Up when struck with Holy Element. | 会吸引单位。击杀它的单位会获得【毁灭】。<br>免疫神圣元素。被神圣元素命中时，所有属性提升。 | 会吸引单位。击杀它的单位会获得【必死无疑】。<br>免疫神圣元素。被神圣元素命中时，所有属性提升。 |
-| `ENEMY_DOVE_NAME` | Dove | 鸽子 | 和平鸽 |
-| `ENEMY_FETUSJAR_NAME` | Fötusjar | 弗图司格拉斯 | 弗图斯雅 |
-| `ENEMY_FETUSNOJAR_NAME` | Der Fötus | 德·弗图司 | 德·弗图斯 |
-| `ENEMY_ORNSTEIN_NAME` | Ornstein | 奥恩斯坦 | 翁斯坦 |
-| `ENEMY_PIGEON_NAME` | Pigeon | 粉鸟 | 鸽子 |
-| `ENEMY_SCARY_DESC` | Its melee attacks can inflict Fear or Doom!<br>Undead. | 近身攻击有可能施加【害怕】或【毁灭】！<br>亡灵。 | 近身攻击有可能施加【害怕】或【必死无疑】！<br>亡灵。 |
-| `ENEMY_SPEWER_NAME` | Spewer | 喷喷 | 呕吐宝宝 |
-| `ENEMY_THUMP_NAME` | Thump | 噗通 | 哐当 |
-| `EVENT_BOXWITHAHOLE_REW10` | {catname} slides {his} tail into the opening in the cardboard box. A tingly feeling washes over {him} as {his} tail changes shape! | {catname}把尾巴探进了纸箱的洞口。一阵酥酥麻麻的感觉涌遍了{he}全身，{his}尾巴变了个样子！ | {catname}把尾巴伸进了纸箱的洞口。一阵酥酥麻麻的感觉涌遍了{he}全身，{his}尾巴变了个样子！ |
-| `FURNITURE_NAME_WALLMOUNTED_BLOCK2` | Question Block | 问号方块 | 问号砖块 |
-| `FURNITURE_NAME_WALLMOUNTED_BLOCK3` | Brick Block | 砖头方块 | 砖块 |
-| `FURNITURE_NAME_WALLMOUNTED_MASK_BUNNY` | Bunny Mask | 兔子面具 | 兔子头套 |
-| `FURNITURE_NAME_WALLMOUNTED_PICTURE_LAMBS` | Silence of the Mice Poster | 《沉默的老鼠》海报 | 《沉默的幼鼠》海报 |
-| `ITEM_BALLOFBANDAGES_NAME` | Ball of Bandages | 一团绷带 | 绷带球 |
-| `ITEM_BENTSPOON_NAME` | Bent Spoon | 弯勺子 | 弯曲的汤勺 |
-| `KEYWORD_CAPTUREDFAMILIAR_NAME` | Captured Familiar | 附录跟班 | 俘虏跟班 |
-| `KEYWORD_LATEBLOOMER_NAME` | Late Bloomer | 大器晚成 | 大花晚开 |
-| `KEYWORD_LEECHES_DESC_APPLIER` | Drains {stacks} health at the end of {applier's} turn and gives it to {applier}. | 在{applier's}的回合结束时，吸取{stacks}点生命，转给{applier}。 | 在{applier}的回合结束时，吸取{stacks}点生命，转给{applier}。 |
-| `KEYWORD_LEECHES_NAME_APPLIER` | {applier's} Leeches. | {applier's}的水蛭。 | {applier}的水蛭。 |
-| `KEYWORD_MANALEECHES_DESC_APPLIER` | Drains {stacks} mana at the end of {applier's} turn and gives it to {applier}. | 在{applier's}的回合结束时，吸取{stacks}点魔能，转给{applier}。 | 在{applier}的回合结束时，吸取{stacks}点魔能，转给{applier}。 |
-| `KEYWORD_MANALEECHES_NAME_APPLIER` | {applier's} Mana Leeches | {applier's}的魔能水蛭 | {applier}的魔能水蛭 |
-| `KEYWORD_RANGEUP_DESC` | Range increased by {stacks}. | 范围阔大{stacks}。 | 范围扩大{stacks}。 |
-| `KEYWORD_TEMPINITDOWN_DESC` | You take your turn later in the round. | 你这一轮的回合延后。 | 你在这一轮的回合延后。 |
-| `NPCOFFICE_NAME_ORGANGRINDER` | {organname}'s Box | {organname}的箱子 | [f:EdmundM]{organname}[/f]的箱子 |
-| `NPC_BUTCH_CLASS_UNLOCK_THIEF_4` | [m:questioning]Need some extra cash?<br><br>[m:happy]Well you know the Thief's got sticky fingers! | [m:questioning]缺钱花了？<br><br>[m:happy]你也知道盗贼顺东西有多麻利！ | [m:questioning]缺钱花了？<br><br>[m:happy]你也知道盗贼手上经常不干净！ |
-| `NPC_FRANK_ALSO_1` | Also... | 还有…… | [s:.8]还有……[/s] |
-| `NPC_FRANK_FRANK_CAVES_INTRO_1` | [m:scared]Frank is scared... | [m:scared]弗兰克害怕…… | [s:.8][m:scared]弗兰克害怕……[/s] |
-| `NPC_FRANK_FRANK_CAVES_INTRO_10` | [m:spacedout]............ | [m:spacedout]………… | [s:.8][m:spacedout]…………[/s] |
-| `NPC_FRANK_FRANK_CAVES_INTRO_11` | [m:sad][s:.6]*huff huff*[/s] | [m:sad][s:.6]*呼哧呼哧*[/s] | [m:sad][s:.5]*呼哧呼哧*[/s] |
-| `NPC_FRANK_FRANK_CAVES_INTRO_12` | [m:sad][s:.6]*cough cough*[/s] | [m:sad][s:.6]*咳嗽*[/s] | [m:sad][s:.5]*咳嗽*[/s] |
-| `NPC_FRANK_FRANK_CAVES_INTRO_13` | [m:default]Frank needs a nap... | [m:default]弗兰克需要打个盹…… | [s:.8][m:default]弗兰克需要打个盹……[/s] |
-| `NPC_FRANK_FRANK_CAVES_INTRO_2` | [m:shocked]The Cave are a dark spooky thing...<br>Frank was a dead guy in that place once! | [m:shocked]山洞黑漆漆瘆人……<br>弗兰克以前是那儿的死人！ | [s:.8][m:shocked]山洞黑漆漆瘆人……<br>弗兰克以前是那儿的死人！[/s] |
-| `NPC_FRANK_FRANK_CAVES_INTRO_3` | [m:happy]But don't worry, we got so smart and builded a new Frank out of the old one! | [m:happy]不过别怕，我们变得很聪明，用原来的弗兰克造了个新的弗兰克！ | [s:.8][m:happy]不过别怕，我们变得很聪明，用原来的弗兰克造了个新的弗兰克！[/s] |
-| `NPC_FRANK_FRANK_CAVES_INTRO_4` | Good as new, right?<br>Look at how we can make this one dance! | 是不是跟新的一样？<br>我们可以用这个身体跳舞！很灵活！ | [s:.8]是不是跟新的一样？<br>我们可以用这个身体跳舞！很灵活！[/s] |
-| `NPC_FRANK_FRANK_CAVES_INTRO_5` | [m:spacedout]............ | [m:spacedout]………… | [s:.8][m:spacedout]…………[/s] |
-| `NPC_FRANK_FRANK_CAVES_INTRO_6` | [m:spacedout]............ | [m:spacedout]………… | [s:.8][m:spacedout]…………[/s] |
-| `NPC_FRANK_FRANK_CAVES_INTRO_7` | [m:sad][s:.6]*cough cough*[/s] | [m:sad][s:.6]*咳嗽*[/s] | [m:sad][s:.5]*咳嗽*[/s] |
-| `NPC_FRANK_FRANK_CAVES_INTRO_8` | [m:happy]Frank can't dance like old Frank can... but look again! | [m:happy]新的弗兰克没有原来的弗兰克跳得好……但你再看！ | [s:.8][m:happy]新的弗兰克没有原来的弗兰克跳得好……但你再看！[/s] |
-| `NPC_FRANK_FRANK_CAVES_INTRO_9` | [m:spacedout]............ | [m:spacedout]………… | [s:.8][m:spacedout]…………[/s] |
-| `NPC_FRANK_FRANK_ENDING_1` | [m:happy]Hey mommy! Look!<br>Look what we did! | [m:happy]诶，妈咪！快看！<br>看看我们厉不厉害！ | [m:happy]诶，妈咪！快看！<br>看看我们厉不厉害！[/s] |
-| `NPC_FRANK_FRANK_ENDING_10` | [m:shocked]!!! | [m:shocked]！！！ | [s:.8][m:shocked]！！！[/s] |
-| `NPC_FRANK_FRANK_ENDING_11` | [m:veryhappy]Holy Molar!! | [m:veryhappy]磨的牙啊！！ | [s:.8][m:veryhappy]磨的牙啊！！[/s] |
-| `NPC_FRANK_FRANK_ENDING_12` | [m:happy]Frank gotted our wish!<br>A mommy AND not being dead! | [m:happy]弗兰克愿望成真啦！<br>有妈咪了。而且！他也没死！ | [s:.8][m:happy]弗兰克愿望成真啦！<br>有妈咪了。而且！他也没死！[/s] |
-| `NPC_FRANK_FRANK_ENDING_13` | [m:veryhappy]This is the best Frankin' day of all times! | [m:veryhappy]今天是弗兰克最“弗翁”的一天！ | [s:.8][m:veryhappy]今天是弗兰克最“弗翁”的一天！[/s] |
-| `NPC_FRANK_FRANK_ENDING_14` | [m:happy]Make sure you keep visiting Frank, mommy. | [m:happy]妈咪，记得经常看弗兰克喔。 | [s:.8][m:happy]妈咪，记得经常看弗兰克喔。[/s] |
-| `NPC_FRANK_FRANK_ENDING_15` | I gots tons of tips for you! | 还有好多提示、贴士告诉你！ | [s:.8]还有好多提示、贴士告诉你！[/s] |
-| `NPC_FRANK_FRANK_ENDING_16` | [m:sad][s:.6]*cough cough*[/s] | [m:sad][s:.6]*咳嗽*[/s] | [m:sad][s:.5]*咳嗽*[/s] |
-| `NPC_FRANK_FRANK_ENDING_2` | [m:veryhappy]Frank founded a new body! | [m:veryhappy]弗兰克找到新的身体啦！ | [s:.8][m:veryhappy]弗兰克找到新的身体啦！[/s] |
-| `NPC_FRANK_FRANK_ENDING_3` | [m:happy]This one is more better than the old one too! | [m:happy]这个比原来的更要还好！ | [s:.8][m:happy]这个比原来的更要还好！[/s] |
-| `NPC_FRANK_FRANK_ENDING_4` | [m:mocking]So many more holes! | [m:mocking]多了好多洞！ | [s:.8][m:mocking]多了好多洞！[/s] |
-| `NPC_FRANK_FRANK_ENDING_5` | [m:sad][s:.6]*huff huff*[/s] | [m:sad][s:.6]*呼哧呼哧*[/s] | [m:sad][s:.5]*呼哧呼哧*[/s] |
-| `NPC_FRANK_FRANK_ENDING_6` | [m:shocked]Hey did you hear that?<br>Frank called you mommy! | [m:shocked]嘿，听到了吗？<br>弗兰克叫你妈咪！ | [s:.8][m:shocked]嘿，听到了吗？<br>弗兰克叫你妈咪！[/s] |
-| `NPC_FRANK_FRANK_ENDING_7` | [m:scared]... | [m:scared]…… | [s:.8][m:scared]……[/s] |
-| `NPC_FRANK_FRANK_ENDING_8` | Uhh... umm... | 呃……嗯…… | [s:.8]呃……嗯……[/s] |
-| `NPC_FRANK_FRANK_ENDING_9` | [m:questioning]Is that OK?<br>Can Frank call you our mommy? | [m:questioning]可以这样吗？<br>弗兰克能叫你妈咪吗？ | [s:.8][m:questioning]可以这样吗？<br>弗兰克能叫你妈咪吗？[/s] |
-| `NPC_FRANK_FRANK_MAX1_1` | [m:happy]Oh yay you are talking to Frank again! | [m:happy]哦耶，又来跟弗兰克说话啦！ | [s:.8][m:happy]哦耶，又来跟弗兰克说话啦！[/s] |
-| `NPC_FRANK_FRANK_MAX1_2` | And guess what that is meaning? | 那这是什么意思呢？ | [s:.8]那这是什么意思呢？[/s] |
-| `NPC_FRANK_FRANK_MAX1_3` | [m:veryhappy]It's the time for itchies! | [m:veryhappy]痒痒时间到！ | [s:.8][m:veryhappy]痒痒时间到！[/s] |
-| `NPC_FRANK_FRANK_MAX1_4` | [m:sad][s:.6]*cough cough*[/s] | [m:sad][s:.6]*咳嗽*[/s] | [m:sad][s:.5]*咳嗽*[/s] |
-| `NPC_FRANK_FRANK_MAX1_5` | [m:winking]Here, I got this one from my rumpus!<br>Haha! | [m:winking]给，这一个是我屁屁上抓的！<br>哈哈！ | [s:.8][m:winking]给，这一个是我屁屁上抓的！<br>哈哈！[/s] |
-| `NPC_FRANK_FRANK_MAX1_6` | [m:happy]It's a bit little stinky but still the best one I gots! | [m:happy]有点点臭，但这个最痒！ | [s:.8][m:happy]有点点臭，但这个最痒！[/s] |
-| `NPC_FRANK_FRANK_MAX1_7` | [m:default]Be happy about it! | [m:default]享受吧！ | [s:.8][m:default]享受吧！[/s] |
-| `NPC_FRANK_FRANK_MAX2_1` | [m:happy]Guess what Frank gots!? | [m:happy]猜猜弗兰克发现什么？！ | [s:.8][m:happy]猜猜弗兰克发现什么？！[/s] |
-| `NPC_FRANK_FRANK_MAX2_2` | [m:veryhappy]A BIG ITCHY!<br>JUST FOR YOU! | [m:veryhappy]大痒痒！<br>给你的！ | [s:.8][m:veryhappy]大痒痒！<br>给你的！[/s] |
-| `NPC_FRANK_FRANK_MAX2_3` | [m:sad][s:.6]*huff huff*[/s] | [m:sad][s:.6]*呼哧呼哧*[/s] | [m:sad][s:.5]*呼哧呼哧*[/s] |
-| `NPC_FRANK_FRANK_MAX2_4` | [m:default]This one likes to crawl all over and give you red lumpies! | [m:default]这个喜欢到处爬，还会让你长红疙瘩！ | [s:.8][m:default]这个喜欢到处爬，还会让你长红疙瘩！[/s] |
-| `NPC_FRANK_FRANK_MAX2_5` | [m:happy]Take it home with you! | [m:happy]带回去吧！ | [s:.8][m:happy]带回去吧！[/s] |
-| `NPC_FRANK_FRANK_MAX2_6` | Bye bye! | 拜拜！ | [s:.8]拜拜！[/s] |
-| `NPC_FRANK_FRANK_MAX3_1` | [m:shocked]Oh it you!<br>I thought you were a baby guy... | [m:shocked]哦，是你！<br>我还以为是哪个宝宝…… | [s:.8][m:shocked]哦，是你！<br>我还以为是哪个宝宝……[/s] |
-| `NPC_FRANK_FRANK_MAX3_2` | [m:angry]Frank hates those babies! GRRRRR! | [m:angry]弗兰克讨厌那些宝宝！呃啊啊啊啊！ | [s:.8][m:angry]弗兰克讨厌那些宝宝！呃啊啊啊啊！[/s] |
-| `NPC_FRANK_FRANK_MAX3_3` | That's what Frank makes when we are mad the GRRRR sounds! | 弗兰克生气的时候，我们就会这样“呃啊啊啊啊”！ | [s:.8]弗兰克生气的时候，我们就会这样“呃啊啊啊啊”！[/s] |
-| `NPC_FRANK_FRANK_MAX3_4` | [m:questioning]Hey wait, don't Frank owe you an itchy? | [m:questioning]诶等等，弗兰克不是还欠你一个痒痒？ | [s:.8][m:questioning]诶等等，弗兰克不是还欠你一个痒痒？[/s] |
-| `NPC_FRANK_FRANK_MAX3_5` | [m:sad][s:.6]*cough cough*[/s] | [m:sad][s:.6]*咳嗽*[/s] | [m:sad][s:.5]*咳嗽*[/s] |
-| `NPC_FRANK_FRANK_MAX3_6` | [m:grossedout]We pulled this one from our throat holes! | [m:grossedout]这个是我们喉咙洞里抠出来的！ | [s:.8][m:grossedout]这个是我们喉咙洞里抠出来的！[/s] |
-| `NPC_FRANK_FRANK_MAX3_7` | [m:happy]You get it now! Yay! | [m:happy]现在归你啦！耶！ | [s:.8][m:happy]现在归你啦！耶！[/s] |
-| `NPC_FRANK_FRANK_MAX4_1` | [m:scared]Uh oh, guess what?! | [m:scared]呃喔，猜猜怎么着？！ | [s:.8][m:scared]呃喔，猜猜怎么着？！[/s] |
-| `NPC_FRANK_FRANK_MAX4_2` | [m:happy]Frank found another itchy! | [m:happy]弗兰克又找到一个痒痒！ | [s:.8][m:happy]弗兰克又找到一个痒痒！[/s] |
-| `NPC_FRANK_FRANK_MAX4_3` | [m:winking]Frank won't tell you where this itchy is from though... | [m:winking]不过弗兰克不告诉你是哪儿来的…… | [s:.8][m:winking]不过弗兰克不告诉你是哪儿来的……[/s] |
-| `NPC_FRANK_FRANK_MAX4_4` | [m:whispering][s:.5]It's from that secret spot...[/s] | [m:whispering][s:.5]是个秘密位置……[/s] | [s:.8][m:whispering][s:.5]是个秘密位置……[/s] |
-| `NPC_FRANK_FRANK_MAX4_5` | [m:sad][s:.6]*huff huff*[/s] | [m:sad][s:.6]*呼哧呼哧*[/s] | [m:sad][s:.5]*呼哧呼哧*[/s] |
-| `NPC_FRANK_FRANK_MAX4_6` | [m:happy]That's a hint that only you and Frank can know about! | [m:happy]这个提示只有你和弗兰克知道！ | [s:.8][m:happy]这个提示只有你和弗兰克知道！[/s] |
-| `NPC_FRANK_FRANK_MAX4_7` | [m:sad][s:.6]*cough cough*[/s] | [m:sad][s:.6]*咳嗽*[/s] | [m:sad][s:.5]*咳嗽*[/s] |
-| `NPC_FRANK_FRANK_MAX5_1` | [m:happy]LOOK AT THIS ONE! | [m:happy]看看这个！ | [s:.8][m:happy]看看这个！[/s] |
-| `NPC_FRANK_FRANK_MAX5_2` | [m:veryhappy]ANOTHER ITCHY!<br>And Frank was finding it in Frank's brown town! | [m:veryhappy]另外一个痒痒！<br>而且是弗兰克在弗兰克的棕色小镇找到的！ | [s:.8][m:veryhappy]另外一个痒痒！<br>而且是弗兰克在弗兰克的棕色小镇找到的！[/s] |
-| `NPC_FRANK_FRANK_MAX5_3` | [m:winking]Extra sticky just the way you is liking it! | [m:winking]特别黏糊糊，刚好是你喜欢的那样！ | [s:.8][m:winking]特别黏糊糊，刚好是你喜欢的那样！[/s] |
-| `NPC_FRANK_FRANK_MAX5_4` | [m:happy]Here take it!<br>We gots lots more! | [m:happy]给你吧！<br>我们还有好多！ | [s:.8][m:happy]给你吧！<br>我们还有好多！[/s] |
-| `NPC_FRANK_FRANK_MAX5_5` | [m:sad][s:.6]*cough cough*[/s] | [m:sad][s:.6]*咳嗽*[/s] | [m:sad][s:.5]*咳嗽*[/s] |
-| `NPC_FRANK_FRANK_MAX5_6` | [m:veryhappy]Frank is loving this deal we made! | [m:veryhappy]弗兰克喜欢这样！ | [s:.8][m:veryhappy]弗兰克喜欢这样！[/s] |
-| `NPC_FRANK_FRANK_MAX5_7` | [m:happy]See you next times! | [m:happy]下次见！ | [s:.8][m:happy]下次见！[/s] |
-| `NPC_FRANK_FRANK_MAX_INTRO_1` | [m:happy]Hey we didn't die!?<br>What the what!? | [m:happy]咦，我们没死？！<br>什么什么什么？！ | [s:.8][m:happy]咦，我们没死？！<br>什么什么什么？！[/s] |
-| `NPC_FRANK_FRANK_MAX_INTRO_2` | Holy molar!<br>This one is a great day! | 磨的牙啊！<br>今天是个好日子！ | [s:.8]磨的牙啊！<br>今天是个好日子！[/s] |
-| `NPC_FRANK_FRANK_MAX_INTRO_3` | [m:sad][s:.6]*cough cough*[/s] | [m:sad][s:.6]*咳嗽*[/s] | [m:sad][s:.5]*咳嗽*[/s] |
-| `NPC_FRANK_FRANK_MAX_INTRO_4` | [m:paranoid]Oh but what does Frank gonna do for you now? | [m:paranoid]那弗兰克还能帮你干什么呢？ | [s:.8][m:paranoid]那弗兰克还能帮你干什么呢？[/s] |
-| `NPC_FRANK_FRANK_MAX_INTRO_5` | [m:pondering]Hmmmm...<br>Wait I know what you need! | [m:pondering]唔……<br>啊，我知道你需要什么！ | [s:.8][m:pondering]唔……<br>啊，我知道你需要什么！[/s] |
-| `NPC_FRANK_FRANK_MAX_INTRO_6` | [m:veryhappy]ITCHIES! | [m:veryhappy]你要痒痒！ | [s:.8][m:veryhappy]你要痒痒！[/s] |
-| `NPC_FRANK_FRANK_MAX_INTRO_7` | [m:sad][s:.6]*huff huff*[/s] | [m:sad][s:.6]*呼哧呼哧*[/s] | [m:sad][s:.5]*呼哧呼哧*[/s] |
-| `NPC_FRANK_FRANK_MAX_INTRO_8` | [m:happy]Frank got tons of itchies! You just keep sending Frank kitties and you'll see! | [m:happy]弗兰克有超多痒痒！继续送猫过来，你就能知道啦！ | [s:.8][m:happy]弗兰克有超多痒痒！继续送猫过来，你就能知道啦！[/s] |
-| `NPC_FRANK_FRANK_TERMINATOR2_1` | [m:shocked]Did you see there is a silver peepee man making dead stuff all over town? | [m:shocked]看到那个银色小鸡鸡的男的没有？他在这边到处搞死东西！ | [s:.8][m:shocked]看到那个银色小鸡鸡的男的没有？他在这边到处搞死东西！[/s] |
-| `NPC_FRANK_FRANK_TERMINATOR2_10` | Maybe they are just too bad for their mommy... | 可能是他们太坏了，所以妈咪不要他们了…… | [s:.8]可能是他们太坏了，所以妈咪不要他们了……[/s] |
-| `NPC_FRANK_FRANK_TERMINATOR2_11` | [m:veryangry]I bet they cry so much they are always wet... | [m:veryangry]他们肯定会哭得天天身上都湿哒哒…… | [s:.8][m:veryangry]他们肯定会哭得天天身上都湿哒哒……[/s] |
-| `NPC_FRANK_FRANK_TERMINATOR2_12` | [m:pondering]yeah, I bet that is what happens... | [m:pondering]嗯，肯定就是这样…… | [s:.8][m:pondering]嗯，肯定就是这样……[/s] |
-| `NPC_FRANK_FRANK_TERMINATOR2_13` | [m:sad][s:.6]*huff huff*[/s] | [m:sad][s:.6]*呼哧呼哧*[/s] | [m:sad][s:.5]*呼哧呼哧*[/s] |
-| `NPC_FRANK_FRANK_TERMINATOR2_14` | [m:sad]... | [m:sad]…… | [s:.8][m:sad]……[/s] |
-| `NPC_FRANK_FRANK_TERMINATOR2_15` | [m:sad][s:.5]Mommy...[/s] | [m:sad][s:.5]妈咪……[/s] | [m:sad][s:.4]妈咪……[/s] |
-| `NPC_FRANK_FRANK_TERMINATOR2_2` | [m:scared]Frank is thinking hes wants to make Frank be a dead body! | [m:scared]弗兰克觉得他想把弗兰克变成尸体！ | [s:.8][m:scared]弗兰克觉得他想把弗兰克变成尸体！[/s] |
-| `NPC_FRANK_FRANK_TERMINATOR2_3` | [m:angry]Someone should tell his mommy on him so she leaves him and makes him so sad and alone! | [m:angry]就该有谁去跟他妈告状，让她不要他了，他就会又难过又孤单！ | [s:.8][m:angry]就该有谁去跟他妈告状，让她不要他了，他就会又难过又孤单！[/s] |
-| `NPC_FRANK_FRANK_TERMINATOR2_4` | [m:questioning]Can you do that?<br>Can you tell on him? | [m:questioning]你能去吗？<br>你能去告状吗？ | [s:.8][m:questioning]你能去吗？<br>你能去告状吗？[/s] |
-| `NPC_FRANK_FRANK_TERMINATOR2_5` | [m:sad][s:.6]*cough cough*[/s] | [m:sad][s:.6]*咳嗽*[/s] | [m:sad][s:.5]*咳嗽*[/s] |
-| `NPC_FRANK_FRANK_TERMINATOR2_6` | [m:angry]Oh I hope his mom gets so mad she leaves so far into space! | [m:angry]啊呀，我希望他妈气到直接飞到太空去！ | [s:.8][m:angry]啊呀，我希望他妈气到直接飞到太空去！[/s] |
-| `NPC_FRANK_FRANK_TERMINATOR2_7` | I bet he will roll into a cave and find some old itchy man to attach to! | 他肯定就会滚进哪个山洞，找到个浑身痒痒的老男人黏上去！ | [s:.8]他肯定就会滚进哪个山洞，找到个浑身痒痒的老男人黏上去！[/s] |
-| `NPC_FRANK_FRANK_TERMINATOR2_8` | [m:default]and I bet they will get so sad they try and build a house so high they can try to see their mommy... | [m:default]然后他们肯定会难过到想盖一栋超级高的房子，好让他们能看到妈咪…… | [s:.8][m:default]然后他们肯定会难过到想盖一栋超级高的房子，好让他们能看到妈咪……[/s] |
-| `NPC_FRANK_FRANK_TERMINATOR2_9` | [m:sad]But their mommy doesn't see them... | [m:sad]可妈咪看不到他们…… | [s:.8][m:sad]可妈咪看不到他们……[/s] |
-| `NPC_FRANK_FRANK_TIPS_10_1` | [m:pondering]A tip is a type of hint or something. | [m:pondering]贴士跟提示是差不多的东西。 | [s:.8][m:pondering]贴士跟提示是差不多的东西。[/s] |
-| `NPC_FRANK_FRANK_TIPS_10_2` | [m:sad][s:.6]*cough cough*[/s] | [m:sad][s:.6]*咳嗽*[/s] | [m:sad][s:.5]*咳嗽*[/s] |
-| `NPC_FRANK_FRANK_TIPS_10_3` | [m:veryhappy]That a tip inside of a tip!<br>What a cool thing I did! | [m:veryhappy]提示里边套提示！<br>我好厉害！ | [s:.8][m:veryhappy]提示里边套提示！<br>我好厉害！[/s] |
-| `NPC_FRANK_FRANK_TIPS_10_4` | [m:happy]See ya! | [m:happy]再见！ | [s:.8][m:happy]再见！[/s] |
-| `NPC_FRANK_FRANK_TIPS_1_1` | [m:happy]The black part of a pencil! | [m:happy]不是贴士！是贴纸！ | [s:.8][m:happy]不是贴士！是贴纸！[/s] |
-| `NPC_FRANK_FRANK_TIPS_1_2` | [m:veryhappy]That's a good tip!<br>People use that to draw! | [m:veryhappy]是不是很漂亮？！<br>贴在哪儿都行！ | [s:.8][m:veryhappy]是不是很漂亮？！<br>贴在哪儿都行！[/s] |
-| `NPC_FRANK_FRANK_TIPS_1_3` | [m:sad][s:.6]*cough cough*[/s] | [m:sad][s:.6]*咳嗽*[/s] | [m:sad][s:.5]*咳嗽*[/s] |
-| `NPC_FRANK_FRANK_TIPS_1_4` | [m:happy]That's all! | [m:happy]没别的了！ | [s:.8][m:happy]没别的了！[/s] |
-| `NPC_FRANK_FRANK_TIPS_2_1` | [m:questioning]Ummm, when Frank stumbles and falls on our hump? | [m:questioning]唔……弗兰克用“嘟嘟”打的那种车叫什么？ | [s:.8][m:questioning]唔……弗兰克用“嘟嘟”打的那种车叫什么？[/s] |
-| `NPC_FRANK_FRANK_TIPS_2_2` | [m:pondering]I think that ones called a tip, when we tip and fall? | [m:pondering]是的士吧？不是提示？ | [s:.8][m:pondering]是的士吧？不是提示？[/s] |
-| `NPC_FRANK_FRANK_TIPS_2_3` | [m:confused]Is that right? | [m:confused]是的士吗？ | [s:.8][m:confused]是的士吗？[/s] |
-| `NPC_FRANK_FRANK_TIPS_3_1` | [m:sad][s:.6]*huff huff*[/s] | [m:sad][s:.6]*呼哧呼哧*[/s] | [m:sad][s:.5]*呼哧呼哧*[/s] |
-| `NPC_FRANK_FRANK_TIPS_3_2` | [m:happy]When you eat inside a house and give your mommy money! | [m:happy]去银行拿钱叫提钱，那去厕所拿㞎㞎呢？ | [s:.8][m:happy]去银行拿钱叫提钱，那去厕所拿㞎㞎呢？[/s] |
-| `NPC_FRANK_FRANK_TIPS_3_3` | That one is called a tip also! | 提屎吗？提示？提屎！ | [s:.8]提屎吗？提示？提屎！[/s] |
-| `NPC_FRANK_FRANK_TIPS_4_1` | [m:paranoid]Stuff that pokes like injectors and stabbers? | [m:paranoid]弗兰克好像踢到尸体了？ | [s:.8][m:paranoid]弗兰克好像踢到尸体了？[/s] |
-| `NPC_FRANK_FRANK_TIPS_4_2` | [m:happy]Frank think those have tips too! | [m:happy]嗯，踢尸……体！ | [s:.8][m:happy]嗯，踢尸……体！[/s] |
-| `NPC_FRANK_FRANK_TIPS_4_3` | Hope that one helps! | 这个也算提示吧！ | [s:.8]这个也算提示吧！[/s] |
-| `NPC_FRANK_FRANK_TIPS_5_1` | [m:default]I hear mom say about Frank... | [m:default]妈妈以前说弗兰克…… | [s:.8][m:default]妈妈以前说弗兰克……[/s] |
-| `NPC_FRANK_FRANK_TIPS_5_2` | [m:happy]Frank's scabies is just the tip of the iceberg! | [m:happy]说弗兰克以前的头发像铁丝一样！ | [s:.8][m:happy]说弗兰克以前的头发像铁丝一样！[/s] |
-| `NPC_FRANK_FRANK_TIPS_5_3` | [m:sad]We miss her... | [m:sad]我们想她了…… | [s:.8][m:sad]我们想她了……[/s] |
-| `NPC_FRANK_FRANK_TIPS_5_4` | [m:pondering]Sometime we look at the stars and talk at her, in our brains. | [m:pondering]有时候我们一边看着星星，一边在脑子里跟她说话。 | [s:.8][m:pondering]有时候我们一边看着星星，一边在脑子里跟她说话。[/s] |
-| `NPC_FRANK_FRANK_TIPS_5_5` | [m:sad]I wish she could come back... | [m:sad]好希望她能回来…… | [s:.8][m:sad]好希望她能回来……[/s] |
-| `NPC_FRANK_FRANK_TIPS_6_1` | [m:paranoid]When kids push Frank, Frank can tip over! | [m:paranoid]有些石头能吸磁铁，那种石头叫铁石！ | [s:.8][m:paranoid]有些石头能吸磁铁，那种石头叫铁石！[/s] |
-| `NPC_FRANK_FRANK_TIPS_6_2` | [m:sad][s:.6]*cough cough*[/s] | [m:sad][s:.6]*咳嗽*[/s] | [m:sad][s:.5]*咳嗽*[/s] |
-| `NPC_FRANK_FRANK_TIPS_6_3` | [m:happy]That's a very good one! | [m:happy]这个妙！ | [s:.8][m:happy]这个妙！[/s] |
-| `NPC_FRANK_FRANK_TIPS_7_1` | [m:shocked]Like when your suit tips? And it shows your bumbum to everyone? | [m:shocked]我能一边尿尿一边写字！ | [s:.8][m:shocked]我能一边尿尿一边写字！[/s] |
-| `NPC_FRANK_FRANK_TIPS_7_2` | [m:pondering]We think that's a kind of tip? | [m:pondering]这叫题诗，也算提示吧？ | [s:.8][m:pondering]这叫题诗，也算提示吧？[/s] |
-| `NPC_FRANK_FRANK_TIPS_7_3` | [m:questioning]Maybe? | [m:questioning]算吧？ | [s:.8][m:questioning]算吧？[/s] |
-| `NPC_FRANK_FRANK_TIPS_8_1` | [m:happy]My finger has a tip! | [m:happy]提示能不能替死？ | [s:.8][m:happy]提示能不能替死？[/s] |
-| `NPC_FRANK_FRANK_TIPS_8_2` | [m:veryhappy]Isn't that cool!? | [m:veryhappy]能吧？！ | [s:.8][m:veryhappy]能吧？！[/s] |
-| `NPC_FRANK_FRANK_TIPS_8_3` | [m:sad][s:.6]*huff huff*[/s] | [m:sad][s:.6]*呼哧呼哧*[/s] | [m:sad][s:.5]*呼哧呼哧*[/s] |
-| `NPC_FRANK_FRANK_TIPS_9_1` | [m:happy]Triangle shape has 2 tips! | [m:happy]提示！瑜伽要注意体式！ | [s:.8][m:happy]提示！瑜伽要注意体式！[/s] |
-| `NPC_FRANK_FRANK_TIPS_9_2` | [m:happy]Frank is a teacher now! | [m:happy]弗兰克可以教人瑜伽了！ | [s:.8][m:happy]弗兰克可以教人瑜伽了！[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_4THROOM_1` | [m:shocked]OH NO OH NO! | [m:shocked]坏了坏了！ | [s:.8][m:shocked]坏了坏了！[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_4THROOM_10` | [s:.6][m:sad]*wimpering*[/s] | [s:.6][m:sad]*呜咽*[/s] | [s:.5][m:sad]*呜咽*[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_4THROOM_11` | [m:default]OK, a Frank must do what a Frank does best! | [m:default]好，弗兰克就该做弗兰克最拿手的事情！ | [s:.8][m:default]好，弗兰克就该做弗兰克最拿手的事情！[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_4THROOM_12` | [m:happy]We will do it, we will die making your house done! | [m:happy]我们会去盖房子，我们会死在帮你盖房子的时候！ | [s:.8][m:happy]我们会去盖房子，我们会死在帮你盖房子的时候！[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_4THROOM_13` | [m:sad][s:.6]*huff huff*[/s] | [m:sad][s:.6]*呼哧呼哧*[/s] | [m:sad][s:.5]*呼哧呼哧*[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_4THROOM_14` | [m:scared]... | [m:scared]…… | [s:.8][m:scared]……[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_4THROOM_15` | [m:happy]When you die will you talk to Frank again? Please? | [m:happy]等你死了，还会来跟弗兰克说话吗？求求你了。 | [s:.8][m:happy]等你死了，还会来跟弗兰克说话吗？求求你了。[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_4THROOM_16` | We love you! | 我们爱你！ | [s:.8]我们爱你！[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_4THROOM_17` | [m:veryhappy]Bye Bye. | [m:veryhappy]拜拜。 | [s:.8][m:veryhappy]拜拜。[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_4THROOM_2` | [m:scared]THIS IS THE LAST BUILDER ONER! | [m:scared]只能再盖这一次啦！ | [s:.8][m:scared]只能再盖这一次啦！[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_4THROOM_3` | [m:paranoid]FRANK DON'T KNOW HOW TO MAKE MORE HOUSE THAN THIS ONE! | [m:paranoid]盖完这个，弗兰克就不知道该怎么再继续盖啦！ | [s:.8][m:paranoid]盖完这个，弗兰克就不知道该怎么再继续盖啦！[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_4THROOM_4` | [m:scared]If we build this last thing, then Frank will die! | [m:scared]我们盖完最后这一次，弗兰克就要死啦！ | [s:.8][m:scared]我们盖完最后这一次，弗兰克就要死啦！[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_4THROOM_5` | [m:sad]And if we die, no one will talk to us again... | [m:sad]我们要是死了，就没人跟我们说话了…… | [s:.8][m:sad]我们要是死了，就没人跟我们说话了……[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_4THROOM_6` | [m:scared]AAAAAAHHHH! IM FRANKIN' OUT! | [m:scared]啊呀——！我要“弗翁”啦！ | [s:.8][m:scared]啊呀——！我要“弗翁”啦！[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_4THROOM_7` | [m:sad][s:.6]*cough cough*[/s] | [m:sad][s:.6]*咳嗽*[/s] | [m:sad][s:.5]*咳嗽*[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_4THROOM_8` | [m:paranoid]Listen to us, if we do one more house for you, will we die? | [m:paranoid]听我们说，要是再给你盖一栋房子，我们会死吗？ | [s:.8][m:paranoid]听我们说，要是再给你盖一栋房子，我们会死吗？[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_4THROOM_9` | [m:scared]Frank doesn't know about this one! If you stop looking at us do we go invisible? | [m:scared]弗兰克也不懂这个！要是你不看着我们，我们会不会隐形？ | [s:.8][m:scared]弗兰克也不懂这个！要是你不看着我们，我们会不会隐形？[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_ATTIC_1` | [m:happy]Oh hey, Frank was just waiting for you down here. | [m:happy]哦，诶，弗兰克就在这儿等你呢。 | [s:.8][m:happy]哦，诶，弗兰克就在这儿等你呢。[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_ATTIC_2` | Good job on sending the cat to us!<br>He's slow, so when he runs we can still get him! | 谢谢你送来了那只猫！<br>他动作慢，跑起来我们也追得上！ | [s:.8]谢谢你送来了那只猫！<br>他动作慢，跑起来我们也追得上！[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_ATTIC_3` | [m:sad]Franks slow, but no one seems to get us... | [m:sad]弗兰克动作慢，可好像没有谁追我们…… | [s:.8][m:sad]弗兰克动作慢，可好像没有谁追我们……[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_ATTIC_4` | [m:sad][s:.6]*cough cough*[/s] | [m:sad][s:.6]*咳嗽*[/s] | [m:sad][s:.5]*咳嗽*[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_ATTIC_5` | [m:default]Frank's getting so itchy!<br>I think we are ready to build! | [m:default]弗兰克手好痒！<br>我们准备好开工了！ | [s:.8][m:default]弗兰克手好痒！<br>我们准备好开工了！[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_ATTIC_6` | [m:questioning]You know that house on top of your house?<br>The one with the point on it? | [m:questioning]知道你家上面那个房子吗？<br>尖尖顶的那栋？ | [s:.8][m:questioning]知道你家上面那个房子吗？<br>尖尖顶的那栋？[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_ATTIC_7` | [m:happy]Well Franks' gonna go building all over that one! | [m:happy]弗兰克要在那上头再盖一层！ | [s:.8][m:happy]弗兰克要在那上头再盖一层！[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_ATTIC_8` | [m:default]You just wait and see!<br>It won't crush you or nothin'! | [m:default]就等着看吧！<br>不会把你们砸成肉饼什么的！ | [s:.8][m:default]就等着看吧！<br>不会把你们砸成肉饼什么的！[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_ATTIC_9` | [m:sad][s:.6]*huff huff*[/s] | [m:sad][s:.6]*呼哧呼哧*[/s] | [m:sad][s:.5]*呼哧呼哧*[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_BASEMENT2_1` | I will build you another basement tonight. | 我晚上再给你挖个地下室。 | [s:.8]我晚上再给你挖个地下室。[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_BASEMENT3_1` | I will build you ANOTHER basement tonight. | 我晚上再给你挖个地下室。 | [s:.8]我晚上再给你挖个地下室。[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_BASEMENT4_1` | I will build you YET ANOTHER basement tonight. | 我晚上又再再给你挖个地下室。 | [s:.8]我晚上又再再给你挖个地下室。[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_BASEMENT5_1` | I will build you another basement tonight. Too many basements. | 我晚上再给你挖个地下室。地下室太多了。 | [s:.8]我晚上再给你挖个地下室。地下室太多了。[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_BASEMENT_1` | I will build you a basement tonight. | 我晚上给你挖个地下室。 | [s:.8]我晚上给你挖个地下室。[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_LARGEHOUSE_1` | [m:happy]You came back to talk to us! | [m:happy]又来跟我们说话啦！ | [s:.8][m:happy]又来跟我们说话啦！[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_LARGEHOUSE_10` | [m:happy]This one's gonna be adding an<br>"On Topper". | [m:happy]这次要加一个<br>“顶上顶”。 | [s:.8][m:happy]这次要加一个<br>“顶上顶”。[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_LARGEHOUSE_11` | [m:questioning]It like a double deckers but more better maybe? | [m:questioning]就是双层的，但可能更厉害？ | [s:.8][m:questioning]就是双层的，但可能更厉害？[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_LARGEHOUSE_12` | [m:happy]Maybe mom will see us building and make a smile! | [m:happy]妈妈说不定会看到我们盖房子，还会笑出来！ | [s:.8][m:happy]妈妈说不定会看到我们盖房子，还会笑出来！[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_LARGEHOUSE_13` | [m:sad][s:.6]*huff huff*[/s] | [m:sad][s:.6]*呼哧呼哧*[/s] | [m:sad][s:.5]*呼哧呼哧*[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_LARGEHOUSE_2` | [m:pondering]Frank was just wondering how long we have left in this body... | [m:pondering]弗兰克刚刚还在想，这个身体我们还能用多久…… | [s:.8][m:pondering]弗兰克刚刚还在想，这个身体我们还能用多久……[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_LARGEHOUSE_3` | [m:veryhappy]We like it a lot, so many bumps and curves going over it. | [m:veryhappy]我们可喜欢它了，上面好多凸凸凹凹的地方。 | [s:.8][m:veryhappy]我们可喜欢它了，上面好多凸凸凹凹的地方。[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_LARGEHOUSE_4` | [m:happy]Even the tiny bumps are fun! Itchy fun! | [m:happy]连那些小疙瘩都很好玩！痒痒得好玩！ | [s:.8][m:happy]连那些小疙瘩都很好玩！痒痒得好玩！[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_LARGEHOUSE_5` | [m:sad][s:.6]*cough cough*[/s] | [m:sad][s:.6]*咳嗽*[/s] | [m:sad][s:.5]*咳嗽*[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_LARGEHOUSE_6` | [m:questioning]Frank sometime is wondering, when we die where will those bumps go? | [m:questioning]弗兰克有时候就想知道，等我们死了，那些疙瘩会去哪儿？ | [s:.8][m:questioning]弗兰克有时候就想知道，等我们死了，那些疙瘩会去哪儿？[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_LARGEHOUSE_7` | [m:pondering]Do the bugs take the bumps and wear them like a house!? | [m:pondering]虫子会不会把疙瘩搬走，穿在身上当房子？！ | [s:.8][m:pondering]虫子会不会把疙瘩搬走，穿在身上当房子？！[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_LARGEHOUSE_8` | [m:happy]Because that makes Frank so happy to dream about! | [m:happy]弗兰克想到这种事情就好开心！ | [s:.8][m:happy]弗兰克想到这种事情就好开心！[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_LARGEHOUSE_9` | [m:default]Speaking about Frank dying, looks like it time for Frank to get to work! | [m:default]说到弗兰克要死了这件事情，弗兰克好像该干活了！ | [s:.8][m:default]说到弗兰克要死了这件事情，弗兰克好像该干活了！[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_MEDIUMHOUSE_1` | [m:sad]Frank made babies cry... it's making Frank so sad to think of! | [m:sad]弗兰克把小宝宝惹哭了……弗兰克好难过。 | [s:.8][m:sad]弗兰克把小宝宝惹哭了……弗兰克好难过。[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_MEDIUMHOUSE_10` | [m:scared]Then another baby one comes out of a bush and starts rolling Frank down the street! | [m:scared]然后草丛里又冒出来个宝宝，推着弗兰克滚了一条街！ | [s:.8][m:scared]然后草丛里又冒出来个宝宝，推着弗兰克滚了一条街！[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_MEDIUMHOUSE_11` | [m:mocking]"Freaky Frank, Freaky Frank! Has no mom and smells so rank!"<br>They was singing that! | [m:mocking]“怪弗兰，怪弗兰！没妈管，臭翻天！”<br>他们还唱这种东西！ | [s:.8][m:mocking]“怪弗兰，怪弗兰！没妈管，臭翻天！”<br>他们还唱这种东西！[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_MEDIUMHOUSE_12` | [m:shocked] ABOUT US!!! | [m:shocked]弗兰就是我们！！！ | [s:.8][m:shocked]弗兰就是我们！！！[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_MEDIUMHOUSE_13` | [m:angry]Frank was saying back "We have a mommy! She just lives in space!" | [m:angry]弗兰克顶了他们一句：“我们有妈妈！她只是住在太空！” | [s:.8][m:angry]弗兰克顶了他们一句：“我们有妈妈！她只是住在太空！”[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_MEDIUMHOUSE_14` | [m:shocked]And they was laughing so hard they was crying! | [m:shocked]结果他们笑得眼泪都哭出来了！ | [s:.8][m:shocked]结果他们笑得眼泪都哭出来了！[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_MEDIUMHOUSE_15` | [m:sad][s:.6]*huff huff*[/s] | [m:sad][s:.6]*呼哧呼哧*[/s] | [m:sad][s:.5]*呼哧呼哧*[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_MEDIUMHOUSE_16` | We was feeling so bad about making the babies cry, Frank started to cry! | 我们把宝宝惹哭了，难过极了，结果弗兰克也哭了起来！ | [s:.8]我们把宝宝惹哭了，难过极了，结果弗兰克也哭了起来！[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_MEDIUMHOUSE_17` | [m:scared]And it was so scary! | [m:scared]超级可怕！ | [s:.8][m:scared]超级可怕！[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_MEDIUMHOUSE_18` | [m:sad][s:.6]*cough cough*[/s] | [m:sad][s:.6]*咳嗽*[/s] | [m:sad][s:.5]*咳嗽*[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_MEDIUMHOUSE_19` | [m:default]I think we are going to add more room to your house tonight. | [m:default]我们今天晚上会让你家变大一点。 | [s:.8][m:default]我们今天晚上会让你家变大一点。[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_MEDIUMHOUSE_2` | [m:scared]We was just doing our walks and a baby just jump out and scream! | [m:scared]我们只是出去走了走，结果一个小宝宝突然跳出来吱哇乱叫！ | [s:.8][m:scared]我们只是出去走了走，结果一个小宝宝突然跳出来吱哇乱叫！[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_MEDIUMHOUSE_20` | [m:happy]You like us when we make the house stuff right? | [m:happy]你喜欢我们盖房子的吧？ | [s:.8][m:happy]你喜欢我们盖房子的吧？[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_MEDIUMHOUSE_21` | Frank likes when you like us. | 你喜欢我们，弗兰克就高兴。 | [s:.8]你喜欢我们，弗兰克就高兴。[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_MEDIUMHOUSE_3` | [m:shocked]RRRRAAAAAAAAAAAAHHHHHH!!!!! | [m:shocked]啊——————————！！！！ | [s:.8][m:shocked]啊——————————！！！！[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_MEDIUMHOUSE_4` | [m:scared]Frank fell back on our hump and couldn't get back on the feet... | [m:scared]弗兰克仰着摔在地上，半天爬不起来…… | [s:.8][m:scared]弗兰克仰着摔在地上，半天爬不起来……[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_MEDIUMHOUSE_5` | Then the baby hit Frank... in the little brownies! | 那个宝宝还打了弗兰克……打到了弗兰克的棕色小铃铛！ | [s:.8]那个宝宝还打了弗兰克……打到了弗兰克的棕色小铃铛！[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_MEDIUMHOUSE_6` | [m:shocked]AAAAAAHHHH!<br><br>We were saying that so loud! | [m:shocked]啊呀————！<br><br>我们当时说得可大声了！ | [s:.8][m:shocked]啊呀————！<br><br>我们当时说得可大声了！[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_MEDIUMHOUSE_7` | ... | …… | [s:.8]……[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_MEDIUMHOUSE_8` | GGGAAAAAHHHH!! | 呃啊————！！ | [s:.8]呃啊————！！[/s] |
-| `NPC_FRANK_HOUSE_UPGRADE_MEDIUMHOUSE_9` | [m:sad][s:.6]*cough cough*[/s] | [m:sad][s:.6]*咳嗽*[/s] | [m:sad][s:.5]*咳嗽*[/s] |
-| `NPC_FRANK_UNKNOWN_1` | You appear to have unlocked something, but I don't have dialog for it. Congrats. Also fix this. | 你好像解锁什么了，可我没有对应的台词。恭喜了，另外处理一下这个。 | [s:.8]你好像解锁什么了，可我没有对应的台词。恭喜了，另外处理一下这个。[/s] |
-| `NPC_FRANK_UNPROMPTED_A_1` | [m:questioning]Hey you aren't our mom?!<br>Right? | [m:questioning]诶，你不是我们妈妈吧？！<br>不是吧？ | [s:.8][m:questioning]诶，你不是我们妈妈吧？！<br>不是吧？[/s] |
-| `NPC_FRANK_UNPROMPTED_A_2` | [m:happy]Oh, are you here for one of Frank's big tips!? | [m:happy]哦，你是来听弗兰克讲大贴士的吗！？ | [s:.8][m:happy]哦，你是来听弗兰克讲大贴士的吗！？[/s] |
-| `NPC_FRANK_UNPROMPTED_A_3` | [m:sad][s:.6]*cough cough*[/s] | [m:sad][s:.6]*咳嗽*[/s] | [s:.8][m:sad][s:.6]*咳嗽*[/s] |
-| `NPC_FRANK_UNPROMPTED_B_1` | [m:happy]Holy molar!<br>You come back to me! | [m:happy]磨的牙啊！<br>又来找我啦！ | [s:.8][m:happy]磨的牙啊！<br>又来找我啦！[/s] |
-| `NPC_FRANK_UNPROMPTED_B_2` | Frank thought of a new tip! | 弗兰克又想到提示了！ | [s:.8]弗兰克又想到提示了！[/s] |
-| `NPC_FRANK_UNPROMPTED_C_1` | [m:sad][s:.6]*huff huff*[/s] | [m:sad][s:.6]*呼哧呼哧*[/s] | [m:sad][s:.5]*呼哧呼哧*[/s] |
-| `NPC_FRANK_UNPROMPTED_C_2` | [m:happy]It's time for Frank tips again! | [m:happy]又到了弗兰克大贴士的时间！ | [s:.8][m:happy]又到了弗兰克大贴士的时间！[/s] |
-| `NPC_FRANK_UNPROMPTED_D_1` | [m:shocked]Uh oh, you caught us being naughty... | [m:shocked]呃哦，干坏事被你抓到了…… | [s:.8][m:shocked]呃哦，干坏事被你抓到了……[/s] |
-| `NPC_FRANK_UNPROMPTED_D_2` | [m:paranoid]If we give tips will you still be our friend? | [m:paranoid]我们给你提示，你还愿意当我们的朋友吗？ | [s:.8][m:paranoid]我们给你提示，你还愿意当我们的朋友吗？[/s] |
-| `NPC_FRANK_UNPROMPTED_D_3` | [m:happy]Good!<br>Here listen to this tip! | [m:happy]太好了！<br>听这个提示！ | [s:.8][m:happy]太好了！<br>听这个提示！[/s] |
-| `NPC_FRANK_UNPROMPTED_E_1` | [m:sad][s:.6]*cough cough*[/s] | [m:sad][s:.6]*咳嗽*[/s] | [m:sad][s:.5]*咳嗽*[/s] |
-| `NPC_FRANK_UNPROMPTED_E_2` | [m:sad][s:.6]*huff huff*[/s] | [m:sad][s:.6]*呼哧呼哧*[/s] | [m:sad][s:.5]*呼哧呼哧*[/s] |
-| `NPC_FRANK_UNPROMPTED_E_3` | [m:spacedout]Sorry Frank is dying...<br>[m:default]We better tell you those tips quick! | [m:spacedout]对不起，弗兰克要死了……<br>[m:default]我们要赶快把提示告诉你！ | [s:.8][m:spacedout]对不起，弗兰克要死了……<br>[m:default]我们要赶快把提示告诉你！[/s] |
-| `NPC_FRANK_UNPROMPTED_F_1` | [m:veryhappy]Mom?!<br>[m:default]Oh it you. | [m:veryhappy]妈妈？！<br>[m:default]哦，是你。 | [s:.8][m:veryhappy]妈妈？！<br>[m:default]哦，是你。[/s] |
-| `NPC_FRANK_UNPROMPTED_F_2` | I bet you want another Frank tip, huh? | 肯定又是来听弗兰克分享贴士的吧？ | [s:.8]肯定又是来听弗兰克分享贴士的吧？[/s] |
-| `NPC_FRANK_UNPROMPTED_F_3` | [m:happy]Well open your ear hole big cuz this tip is large! | [m:happy]那就把耳朵眼儿张大，这次的贴士很大！ | [s:.8][m:happy]那就把耳朵眼儿张大，这次的贴士很大！[/s] |
-| `NPC_FRANK_UNPROMPTED_G_1` | [m:happy]Hey! | [m:happy]诶！ | [s:.8][m:happy]诶！[/s] |
-| `NPC_FRANK_UNPROMPTED_G_2` | [m:sad][s:.6]*cough cough*[/s] | [m:sad][s:.6]*咳嗽*[/s] | [m:sad][s:.5]*咳嗽*[/s] |
-| `NPC_FRANK_UNPROMPTED_G_3` | [m:happy]Frank just come up with a new tips! | [m:happy]弗兰克又想到新的提示啦！ | [s:.8][m:happy]弗兰克又想到新的提示啦！[/s] |
-| `NPC_FRANK_UNPROMPTED_H_1` | [m:shocked]What the what!? | [m:shocked]什么什么什么？！ | [s:.8][m:shocked]什么什么什么？！[/s] |
-| `NPC_FRANK_UNPROMPTED_H_2` | [m:scared]We thought you were one of those mean babies! | [m:scared]还以为你是那种坏宝宝！ | [s:.8][m:scared]还以为你是那种坏宝宝！[/s] |
-| `NPC_FRANK_UNPROMPTED_H_3` | [m:mocking]We was all<br>"WHAT THE WHAT!?" | [m:mocking]我们当时就说<br>“什么什么什么？！” | [s:.8][m:mocking]我们当时就说<br>“什么什么什么？！”[/s] |
-| `NPC_FRANK_UNPROMPTED_H_4` | [m:happy]Member that?... | [m:happy]还记得吗……？ | [s:.8][m:happy]还记得吗……？[/s] |
-| `NPC_FRANK_UNPROMPTED_H_5` | [m:default]Oh,<br>you are just wanting the tips, huh? | [m:default]哦，<br>你只是来听提示的吧？ | [s:.8][m:default]哦，<br>你只是来听提示的吧？[/s] |
-| `NPC_FRANK_UNPROMPTED_I_1` | [m:spacedout]Oh hey, we didn't see you there... | [m:spacedout]哦，刚才没看到你…… | [s:.8][m:spacedout]哦，刚才没看到你……[/s] |
-| `NPC_FRANK_UNPROMPTED_I_2` | [m:questioning]Was that you talking to us last night? | [m:questioning]昨天晚上跟我们说话的是你吗？ | [s:.8][m:questioning]昨天晚上跟我们说话的是你吗？[/s] |
-| `NPC_FRANK_UNPROMPTED_I_3` | [m:default]We think we heard you telling Frank to do the bad stuff? | [m:default]我们好像听见你让弗兰克做坏事？ | [s:.8][m:default]我们好像听见你让弗兰克做坏事？[/s] |
-| `NPC_FRANK_UNPROMPTED_I_4` | [m:angry]Please don't do that, Frank likes being nice now. | [m:angry]千万不要这样，弗兰克现在喜欢做好事。 | [s:.8][m:angry]千万不要这样，弗兰克现在喜欢做好事。[/s] |
-| `NPC_FRANK_UNPROMPTED_I_5` | [m:happy]Oh we also come up with a new tip! Listen! | [m:happy]哦，我们也有了个新贴士！你看！ | [s:.8][m:happy]哦，我们也有了个新贴士！你看！[/s] |
-| `NPC_JACK_ALSO_1` | Also... | 还有…… | [s:.8]还有……[/s] |
-| `NPC_JACK_CANT_AFFORD_1` | [m:questioning]Uhhh, I think you are too poor for that right now... | [m:questioning]呃……你现在太穷了，买不起这个…… | [m:questioning][s:.8]呃……你现在太穷了，买不起这个……[/s] |
-| `NPC_JACK_JACK_BEGIN_ACCEPTING_CATS_1` | [m:happy]Oh hey, it's you!<br>I was just telling my Nona about you! | [m:happy]哦，是你呀！<br>刚刚还在跟阿婆说你！ | [s:.8][m:happy]哦，是你呀！<br>刚刚还在跟阿婆说你！[/s] |
-| `NPC_JACK_JACK_BEGIN_ACCEPTING_CATS_10` | [m:default]So I need your help!<br>Buy my treasures and help me save Nona! | [m:default]所以我需要你帮忙！<br>买我的宝贝，帮我救阿婆！ | [s:.8][m:default]所以我需要你帮忙！<br>买我的宝贝，帮我救阿婆！[/s] |
-| `NPC_JACK_JACK_BEGIN_ACCEPTING_CATS_11` | [m:spacedout]... | [m:spacedout]…… | [s:.8][m:spacedout]……[/s] |
-| `NPC_JACK_JACK_BEGIN_ACCEPTING_CATS_12` | [m:shocked]Oh, wait!<br>I almost forgot! | [m:shocked]对了，等一下！<br>差点忘了！ | [s:.8][m:shocked]对了，等一下！<br>差点忘了！[/s] |
-| `NPC_JACK_JACK_BEGIN_ACCEPTING_CATS_13` | [m:questioning]Can you please send me cats that are all broked up? | [m:questioning]坏了的猫咪能不能送给我？ | [s:.8][m:questioning]坏了的猫咪能不能送给我？[/s] |
-| `NPC_JACK_JACK_BEGIN_ACCEPTING_CATS_14` | [m:pondering]Smashed heads, Breaky bones...<br>I need cats like that. | [m:pondering]脑袋裂开的，骨头断掉的……<br>我需要那样的猫。 | [s:.8][m:pondering]脑袋裂开的，骨头断掉的……<br>我需要那样的猫。[/s] |
-| `NPC_JACK_JACK_BEGIN_ACCEPTING_CATS_15` | [m:happy]I'll tell you why later, it's a secret I just made up! | [m:happy]以后再告诉你为什么，是个秘密，我刚刚编的！ | [s:.8][m:happy]以后再告诉你为什么，是个秘密，我刚刚编的！[/s] |
-| `NPC_JACK_JACK_BEGIN_ACCEPTING_CATS_16` | [m:default]See ya! | [m:default]再见！ | [s:.8][m:default]再见！[/s] |
-| `NPC_JACK_JACK_BEGIN_ACCEPTING_CATS_2` | [m:default]She thinks you're nice, and I think she's right! | [m:default]她觉得你人很好，我觉得她说得对！ | [s:.8][m:default]她觉得你人很好，我觉得她说得对！[/s] |
-| `NPC_JACK_JACK_BEGIN_ACCEPTING_CATS_3` | [m:scared]So umm... | [m:scared]那个…… | [s:.8][m:scared]那个……[/s] |
-| `NPC_JACK_JACK_BEGIN_ACCEPTING_CATS_4` | The other day I done a kick so hard it made all of Nona's treasures fall down! | 我那天一脚没收住，把阿婆的宝贝全都踢倒了！ | [s:.8]我那天一脚没收住，把阿婆的宝贝全都踢倒了！[/s] |
-| `NPC_JACK_JACK_BEGIN_ACCEPTING_CATS_5` | [m:sad]Shes been stuck back there for like tons of days now... | [m:sad]她压在底下好多好多天了…… | [s:.8][m:sad]她压在底下好多好多天了……[/s] |
-| `NPC_JACK_JACK_BEGIN_ACCEPTING_CATS_6` | [m:happy]But I'm workin' on getting her out! | [m:happy]我正在想办法救她出来！ | [s:.8][m:happy]我正在想办法救她出来！[/s] |
-| `NPC_JACK_JACK_BEGIN_ACCEPTING_CATS_7` | [m:default]I bet if I can sell all the stuff that falled on her I could save her! | [m:default]只要把压住她的东西全卖掉，我肯定就能把她救出来！ | [s:.8][m:default]只要把压住她的东西全卖掉，我肯定就能把她救出来！[/s] |
-| `NPC_JACK_JACK_BEGIN_ACCEPTING_CATS_8` | [m:happy]And buy a rocket to the moon! | [m:happy]还能买架火箭去月球！ | [s:.8][m:happy]还能买架火箭去月球！[/s] |
-| `NPC_JACK_JACK_BEGIN_ACCEPTING_CATS_9` | [m:veryhappy]Or even a truck to the park! | [m:veryhappy]甚至买辆卡车去公园！ | [s:.8][m:veryhappy]甚至买辆卡车去公园！[/s] |
-| `NPC_JACK_JACK_DESERT_INTRO_1` | [m:happy]You are gonna go to the desert!? Wowza! The desert is the baddest! | [m:happy]你要去沙漠？！哇噻！沙漠那边超级牛皮！ | [s:.8][m:happy]你要去沙漠？！哇噻！沙漠那边超级牛皮！[/s] |
-| `NPC_JACK_JACK_DESERT_INTRO_10` | [m:happy]It's called a water bed for a reason, silly! | [m:happy]所以叫水床嘛！ | [s:.8][m:happy]所以叫水床嘛！[/s] |
-| `NPC_JACK_JACK_DESERT_INTRO_11` | [m:default]Bring me back a snake!<br>If you do, I'll name him BloodVipe! | [m:default]给我带条蛇回来！<br>你要是带来了，我就叫它“血蛇”！ | [s:.8][m:default]给我带条蛇回来！<br>你要是带来了，我就叫它“血蛇”！[/s] |
-| `NPC_JACK_JACK_DESERT_INTRO_12` | [m:questioning]Pretty rad name, huh? | [m:questioning]名字是不是很带劲？ | [m:questioning][s:.8]名字是不是很带劲？[/s] |
-| `NPC_JACK_JACK_DESERT_INTRO_2` | [m:veryhappy]Snakes, scorpions and soooo many bones! | [m:veryhappy]有蛇、蝎子，还有超——多骨头！ | [s:.8][m:veryhappy]有蛇、蝎子，还有超——多骨头！[/s] |
-| `NPC_JACK_JACK_DESERT_INTRO_3` | [m:shocked]Just be careful, deserts are H.O.T. HOT! | [m:shocked]小心点儿，沙漠热得要死！ | [s:.8][m:shocked]小心点儿，沙漠热得要死！[/s] |
-| `NPC_JACK_JACK_DESERT_INTRO_4` | [m:winking]Nona says to<br>"Stay hydrated!"<br>And Nona knows stuff! | [m:winking]阿婆说要<br>“多喝水！”<br>阿婆什么都懂！ | [s:.8][m:winking]阿婆说要<br>“多喝水！”<br>阿婆什么都懂！[/s] |
-| `NPC_JACK_JACK_DESERT_INTRO_5` | [m:whispering][s:.7]Cus' she's so old![/s]<br>Hehe... | [m:whispering][s:.7]因为她年龄超级大！[/s]<br>嘻嘻…… | [s:.8][m:whispering][s:.7]因为她年龄超级大！[/s]<br>嘻嘻……[/s] |
-| `NPC_JACK_JACK_DESERT_INTRO_6` | [m:veryangry]No, Nona!<br>We are talking about that other old thing! | [m:veryangry]没有，阿婆！<br>我们在说别的老东西！ | [s:.8][m:veryangry]没有，阿婆！<br>我们在说别的老东西！[/s] |
-| `NPC_JACK_JACK_DESERT_INTRO_7` | [m:default]But for reals, if you want to heal in the desert, drink water. | [m:default]不过，真的，在沙漠里想恢复，就多喝水。 | [s:.8][m:default]不过，真的，在沙漠里想恢复，就多喝水。[/s] |
-| `NPC_JACK_JACK_DESERT_INTRO_8` | [m:happy]Or at least get wet! | [m:happy]或者起码把自己身上弄湿！ | [s:.8][m:happy]或者起码把自己身上弄湿！[/s] |
-| `NPC_JACK_JACK_DESERT_INTRO_9` | [m:winking]Sometimes I wet my pants just to cool off when I'm sleeping! | [m:winking]我有时候睡觉嫌太热，就把裤子尿湿了降温！ | [s:.8][m:winking]我有时候睡觉嫌太热，就把裤子尿湿了降温！[/s] |
-| `NPC_JACK_JACK_GAINALTFURNITURE_1` | [m:shocked]O M G! | [m:shocked]我！的！上！帝！啊！ | [s:.8][m:shocked]我！的！上！帝！啊！[/s] |
-| `NPC_JACK_JACK_GAINALTFURNITURE_2` | [m:scared]I heard you got a treasure that was touched by the...<br>NONA CAT! | [m:scared]听说你找到了件宝贝，是……<br>阿婆猫碰过的！ | [s:.8][m:scared]听说你找到了件宝贝，是……<br>阿婆猫碰过的！[/s] |
-| `NPC_JACK_JACK_GAINALTFURNITURE_3` | [m:shocked]Look! look at it close. You can see the paw print of the Nona Cat! | [m:shocked]你看！仔细看！这上面有阿婆猫的爪子印！ | [s:.8][m:shocked]你看！仔细看！这上面有阿婆猫的爪子印！[/s] |
-| `NPC_JACK_JACK_GAINALTFURNITURE_4` | [m:veryhappy]This is so rare you don't even know! Gotta be worth like 10 hundred cans! | [m:veryhappy]你都不知道这个东西有多稀有！能值10百个易拉罐！ | [s:.8][m:veryhappy]你都不知道这个东西有多稀有！能值10百个易拉罐！[/s] |
-| `NPC_JACK_JACK_GAINALTFURNITURE_5` | [m:happy]Good work finding that! Seriously, I only seen like 7 of those things in like ever! | [m:happy]你能找到这个，太厉害了！我这辈子好像才见过七个！ | [s:.8][m:happy]你能找到这个，太厉害了！我这辈子好像才见过七个！[/s] |
-| `NPC_JACK_JACK_GAINALTFURNITURE_6` | [m:pondering]I wonder if I still have some in here... | [m:pondering]不知道我这边还有没有…… | [s:.8][m:pondering]不知道我这边还有没有……[/s] |
-| `NPC_JACK_JACK_GAINALTFURNITURE_7` | [m:winking]Anyway these things are<br>[a:shake]" Foil-alt-ultra-mythic-rare!"[/a]<br>And they have like double the effects! | [m:winking]这种东西是<br>[a:shake]“闪卡异画超究极传说秘稀”！[/a]<br>而且是双倍效果！ | [s:.8][m:winking]这种东西是<br>[a:shake]“闪卡异画超究极传说秘稀”！[/a]<br>而且是双倍效果！[/s] |
-| `NPC_JACK_JACK_GAINALTFURNITURE_8` | [m:happy]Go find more!<br>You'll look so cool! | [m:happy]再去找！<br>你会变得超级酷！ | [s:.8][m:happy]再去找！<br>你会变得超级酷！[/s] |
-| `NPC_JACK_JACK_MAX1_1` | [m:shocked]GUESS WHAT!<br>I think I saw the Nona Cat! | [m:shocked]你绝对想不到！<br>我好像看到阿婆猫了！ | [s:.8][m:shocked]你绝对想不到！<br>我好像看到阿婆猫了！[/s] |
-| `NPC_JACK_JACK_MAX1_2` | [m:veryhappy]He was floating around the room last night! I wonder if he touched something! | [m:veryhappy]他昨天晚上在房间里飘来飘去！不知道他有没有碰过什么东西！ | [s:.8][m:veryhappy]他昨天晚上在房间里飘来飘去！不知道他有没有碰过什么东西！[/s] |
-| `NPC_JACK_JACK_MAX1_3` | [m:happy]We'll stay on the lookout.  Maybe you'll see something he touched in the shop soon! | [m:happy]我们会多留心的，你说不定这两天就会在店里看到它碰过的东西！ | [s:.8][m:happy]我们会多留心的，你说不定这两天就会在店里看到它碰过的东西！[/s] |
-| `NPC_JACK_JACK_MAX2_1` | [m:happy]All these kitties you are sending is making the Nona Cat happy! | [m:happy]你送来了那些猫，阿婆猫好开心！ | [s:.8][m:happy]你送来了那些猫，阿婆猫好开心！[/s] |
-| `NPC_JACK_JACK_MAX2_2` | [m:veryhappy]It's crazy for real!<br>I saw him in his little tux.  I swear it touched some treasures! | [m:veryhappy]超级夸张！<br>我看到他穿了小礼服，而且绝对碰了几件宝贝！ | [s:.8][m:veryhappy]超级夸张！<br>我看到他穿了小礼服，而且绝对碰了几件宝贝！[/s] |
-| `NPC_JACK_JACK_MAX2_3` | [m:winking]Keep your eyes open wide! There has gotta be some more special treasures coming to the shop soon! | [m:winking]眼睛一定要睁大！店里肯定很快又会上架几件特别的宝贝！ | [s:.8][m:winking]眼睛一定要睁大！店里肯定很快又会上架几件特别的宝贝！[/s] |
-| `NPC_JACK_JACK_MAX3_1` | [m:shocked]Look behind you quick! It's the Nona Cat! | [m:shocked]快看你后边！阿婆猫！ | [s:.8][m:shocked]快看你后边！阿婆猫！[/s] |
-| `NPC_JACK_JACK_MAX3_2` | [m:veryhappy]HAHAHA!<br>I spooked you good! | [m:veryhappy]哈哈哈哈！<br>吓到了吧？！ | [s:.8][m:veryhappy]哈哈哈哈！<br>吓到了吧？！[/s] |
-| `NPC_JACK_JACK_MAX3_3` | [m:happy]I spooked Nona once so bad. She just went to sleep, she was so scared! | [m:happy]我有次把阿婆吓得够呛，吓得她直接睡过去了！ | [s:.8][m:happy]我有次把阿婆吓得够呛，吓得她直接睡过去了！[/s] |
-| `NPC_JACK_JACK_MAX3_4` | [m:veryhappy]I'm a spooky hero! | [m:veryhappy]我是吓人大英雄！ | [s:.8][m:veryhappy]我是吓人大英雄！[/s] |
-| `NPC_JACK_JACK_MAX3_5` | [m:winking]Also, I think there is even more special treasures coming soon! | [m:winking]而且，我觉得很快还会有更多特别的宝贝！ | [s:.8][m:winking]而且，我觉得很快还会有更多特别的宝贝！[/s] |
-| `NPC_JACK_JACK_MAX4_1` | [m:shocked]OMG dude!<br>The Nona Cat was by my bed box last night! | [m:shocked]上帝啊！<br>昨天夜里阿婆猫跑到我床边来了！ | [s:.8][m:shocked]上帝啊！<br>昨天夜里阿婆猫跑到我床边来了！[/s] |
-| `NPC_JACK_JACK_MAX4_2` | [m:mocking]He thought I was named Isaac! Isn't that so funny? I'm Jack, duh! | [m:mocking]他以为我叫以撒！是不是很搞笑？我明明是杰克诶！ | [s:.8][m:mocking]他以为我叫以撒！是不是很搞笑？我明明是杰克诶！[/s] |
-| `NPC_JACK_JACK_MAX4_3` | [m:happy]Then he went meowing around the room touching stuff! | [m:happy]然后他就喵喵叫，在房间里碰这碰那！ | [s:.8][m:happy]然后他就喵喵叫，在房间里碰这碰那！[/s] |
-| `NPC_JACK_JACK_MAX4_4` | [m:winking]Be on the lookout for his paw prints! | [m:winking]记得留心他的爪印！ | [s:.8][m:winking]记得留心他的爪印！[/s] |
-| `NPC_JACK_JACK_MAX5_1` | [m:happy]So me and the Nona cat are friends now! | [m:happy]我跟阿婆猫交朋友了！ | [s:.8][m:happy]我跟阿婆猫交朋友了！[/s] |
-| `NPC_JACK_JACK_MAX5_2` | [m:paranoid]But when I try and pet him my hand just goes through!<br>Just like the real Nona! | [m:paranoid]可是我想摸他的时候，手直接穿过去了！<br>阿婆也是这样！ | [s:.8][m:paranoid]可是我想摸他的时候，手直接穿过去了！<br>阿婆也是这样！[/s] |
-| `NPC_JACK_JACK_MAX5_3` | [m:pondering]I'm thinking they are friends maybe? I dunno... but Jack is on the case again! | [m:pondering]我在想他们两个会不会是朋友？我也说不清楚……杰克又有案子可以调查啦！ | [s:.8][m:pondering]我在想他们两个会不会是朋友？我也说不清楚……杰克又有案子可以调查啦！[/s] |
-| `NPC_JACK_JACK_MAX5_4` | [m:winking]Makin' friends and solving crimes! What can't this boy do!? Ha! | [m:winking]交朋友、破案子！还有什么我做不到？！哈！ | [s:.8][m:winking]交朋友、破案子！还有什么我做不到？！哈！[/s] |
-| `NPC_JACK_JACK_MAX_INTRO_1` | [m:scared]So uh,<br>I don't have any more space for new treasures up here... | [m:scared]呃……<br>我这边没地方放新宝贝了…… | [s:.8][m:scared]呃……<br>我这边没地方放新宝贝了……[/s] |
-| `NPC_JACK_JACK_MAX_INTRO_2` | [m:shocked]There are like 81 hundred things up here now! It's crazy! | [m:shocked]这上边现在有差不多81百个东西了！难以置信！ | [s:.8][m:shocked]这上边现在有差不多81百个东西了！难以置信！[/s] |
-| `NPC_JACK_JACK_MAX_INTRO_3` | [m:paranoid]... | [m:paranoid]…… | [s:.8][m:paranoid]……[/s] |
-| `NPC_JACK_JACK_MAX_INTRO_4` | [m:shocked]WHAT NONA!?<br>FOR REALS!? | [m:shocked]阿婆你说什么？！<br>真假？！ | [s:.8][m:shocked]阿婆你说什么？！<br>真假？！[/s] |
-| `NPC_JACK_JACK_MAX_INTRO_5` | [m:happy]Oh wow, Nona says something special might happen if you keep sending me those bent fluffies! | [m:happy]哇，阿婆说你如果继续送我那些歪七扭八的毛球，有可能发生不一般的事情！ | [s:.8][m:happy]哇，阿婆说你如果继续送我那些歪七扭八的毛球，有可能发生不一般的事情！[/s] |
-| `NPC_JACK_JACK_MAX_INTRO_6` | [m:pondering]I wonder what she means... hmmm. | [m:pondering]她是什么意思啊……唔…… | [s:.8][m:pondering]她是什么意思啊……唔……[/s] |
-| `NPC_JACK_JACK_MAX_INTRO_7` | [m:winking]So uh, keep sendin' them to me and I guess we will solve this Nona mystery together! | [m:winking]所以呢，继续送吧，我们就能解开阿婆的这道谜语了！ | [s:.8][m:winking]所以呢，继续送吧，我们就能解开阿婆的这道谜语了！[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE1_1` | [m:happy]Oh hey! | [m:happy]诶！ | [s:.8][m:happy]诶！[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE1_10` | [m:mocking]When my eye grows back in I betcha I'm gonna see through walls! | [m:mocking]等眼睛再长出来，我肯定视力就能穿墙了！ | [s:.8][m:mocking]等眼睛再长出来，我肯定视力就能穿墙了！[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE1_11` | [m:happy]Send me more of those broken kitties! | [m:happy]再有残废小猫，就继续送过来！ | [s:.8][m:happy]再有残废小猫，就继续送过来！[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE1_12` | [m:default]The more I have, the more treasures I can put out for you! | [m:default]送得越多，我能卖你的宝贝就越多！ | [s:.8][m:default]送得越多，我能卖你的宝贝就越多！[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE1_13` | [m:questioning]Deal? | [m:questioning]可以吗？ | [m:questioning][s:.8]可以吗？[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE1_2` | [m:questioning]My Nona says you are super rich!<br>Is that true? | [m:questioning]阿婆说你超级有钱！<br>真的吗？ | [m:questioning][s:.8]阿婆说你超级有钱！<br>真的吗？[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE1_3` | [m:happy]I bet you could buy all her treasures in no time! | [m:happy]肯定要不了几天就能买光她的宝贝！ | [s:.8][m:happy]肯定要不了几天就能买光她的宝贝！[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE1_4` | [m:questioning]So, you wanna know that secret I made up? | [m:questioning]想知道我编的那个秘密吗？ | [m:questioning][s:.8]想知道我编的那个秘密吗？[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE1_5` | [m:default]Ya know that thing where when you break all your bones? | [m:default]你知道全身骨头断光的那种感觉吧？ | [s:.8][m:default]你知道全身骨头断光的那种感觉吧？[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE1_6` | [m:pondering]Then they grow back all huge and strong like a daddy guy? | [m:pondering]骨头会长回来，而且长得又粗又壮，像我爸那样。 | [s:.8][m:pondering]骨头会长回来，而且长得又粗又壮，像我爸那样。[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE1_7` | [m:happy]Well that's what I'm doing to those cats you'd send me! | [m:happy]你给我的猫，我就是把它们的骨头全都弄断了！ | [s:.8][m:happy]你给我的猫，我就是把它们的骨头全都弄断了！[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE1_8` | [m:default]And guess what?! | [m:default]而且，你肯定猜不到！ | [s:.8][m:default]而且，你肯定猜不到！[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE1_9` | [m:veryhappy]I'm doing it to me too! | [m:veryhappy]我自己也要那样！ | [s:.8][m:veryhappy]我自己也要那样！[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE2_1` | [m:angry]Aw dang it...<br>UGH! | [m:angry]啊呀……<br>呃啊！ | [s:.8][m:angry]啊呀……<br>呃啊！[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE2_2` | [m:default]I know I look so strong with these monster muscles... | [m:default]我知道自己现在一身肌肉，看起来超级猛…… | [s:.8][m:default]我知道自己现在一身肌肉，看起来超级猛……[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE2_3` | [m:sad]But with all my smashed up bones and cuts, it hurts to move them boxes around! | [m:sad]可我骨头都碎了，而且身上全是伤，搬那些箱子很疼…… | [s:.8][m:sad]可我骨头都碎了，而且身上全是伤，搬那些箱子很疼……[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE2_4` | [m:pondering]I'm thinking I need more of those meowers.  They can help me move stuff faster! | [m:pondering]我还是需要那些喵喵，再送给我几个，他们能帮我搬东西！ | [s:.8][m:pondering]我还是需要那些喵喵，再送给我几个，他们能帮我搬东西！[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE2_5` | [m:happy]Yeah, I bet if I had a whole army of those guys I could save my Nona so fast, fires would happen! | [m:happy]对！我要是能有一支喵喵大军，那救阿婆肯定超级快，快到起火！ | [s:.8][m:happy]对！我要是能有一支喵喵大军，那救阿婆肯定超级快，快到起火！[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE2_6` | [m:shocked]?!? | [m:shocked]？！？ | [s:.8][m:shocked]？！？[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE2_7` | [m:angry]NO NONA! | [m:angry]没有啊，阿婆! | [s:.8][m:angry]没有啊，阿婆![/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE2_8` | [m:veryangry]WE DON'T PLAY WITH FIRE ANYMORE!<br><br>GO BACK TO SLEEP! | [m:veryangry]我们不玩火啦！<br><br>快回去睡觉！ | [s:.8][m:veryangry]我们不玩火啦！<br><br>快回去睡觉！[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE2_9` | [m:default]Haha, my Nona is so silly! | [m:default]哈哈，阿婆糊里糊涂的！ | [s:.8][m:default]哈哈，阿婆糊里糊涂的！[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE3_1` | [m:veryangry]NO NONA!<br>I'M NOT DOING THAT!<br>STOP YELLING! | [m:veryangry]阿婆！<br>你冤枉我！<br>不要吼啦！ | [s:.8][m:veryangry]阿婆！<br>你冤枉我！<br>不要吼啦！[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE3_10` | [m:happy]LOL | [m:happy]笑死了 | [s:.8][m:happy]笑死了[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE3_2` | [m:default]Heh, Nona's being silly...<br>I don't do that stuff anymore. | [m:default]唉，阿婆又犯糊涂了……<br>我早就不那样了。 | [s:.8][m:default]唉，阿婆又犯糊涂了……<br>我早就不那样了。[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE3_3` | [m:questioning]Say...<br>Can I ask you a favor? | [m:questioning]话说……<br>能帮我个忙吗？ | [m:questioning][s:.8]话说……<br>能帮我个忙吗？[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE3_4` | If you hear my Nona yelling can you just plug your ears? | 你要是听到阿婆吼，能把耳朵堵上吗？ | [s:.8]你要是听到阿婆吼，能把耳朵堵上吗？[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE3_5` | [m:angry]She can be a big liar sometimes and it makes it really hard to save her... | [m:angry]她有时候可爱撒谎了，就让我也不知道该怎么救她…… | [s:.8][m:angry]她有时候可爱撒谎了，就让我也不知道该怎么救她……[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE3_6` | [m:happy]Don't worry though, I'm still kicking the walls and pulling her arms! | [m:happy]不过放心，我还在踹墙、拉她胳膊！ | [s:.8][m:happy]不过放心，我还在踹墙、拉她胳膊！[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE3_7` | [m:default]We are gonna get her out! I just need more Kitcats! | [m:default]我们会把她救出来的！我只是还需要小猫！ | [s:.8][m:default]我们会把她救出来的！我只是还需要小猫！[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE3_8` | [m:angry]And for her to [m:veryangry]<br>STOP YELLING!!!! | [m:angry]还有就是，她不能[m:veryangry]<br>再吼啦——！！！ | [s:.8][m:angry]还有就是，她不能[m:veryangry]<br>再吼啦——！！！[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE3_9` | [m:default]Heh, Nona you so crazy! | [m:default]唉，阿婆你是疯了吧？！ | [s:.8][m:default]唉，阿婆你是疯了吧？！[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE4_1` | [m:veryhappy]Oh hey! Guess what?<br>We saved Nona! | [m:veryhappy]哦！你知道吗？<br>阿婆救出来啦！ | [s:.8][m:veryhappy]哦！你知道吗？<br>阿婆救出来啦！[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE4_10` | [m:winking]This pipe mystery is just what this hero needs! | [m:winking]这根管子的谜团才是我这个英雄需要破解的东西！ | [s:.8][m:winking]这根管子的谜团才是我这个英雄需要破解的东西！[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE4_11` | [m:happy]Anyway, keep sending me kitties and I'll give you goodies! | [m:happy]总而言之，继续送我小猫，我就给你好东西！ | [s:.8][m:happy]总而言之，继续送我小猫，我就给你好东西！[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE4_12` | Now I think I gonna poop in the pipe again! | 我又要去拉屎了，拉进那根管子里！ | [s:.8]我又要去拉屎了，拉进那根管子里！[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE4_13` | [m:shocked]! | [m:shocked]！ | [s:.8][m:shocked]！[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE4_14` | [m:angry]NO NONA! I SAID PIPE! | [m:angry]啊呀！阿婆！我说的管子啊！ | [s:.8][m:angry]啊呀！阿婆！我说的管子啊！[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE4_15` | [m:veryangry]PIPE! NO! THE NEW PIPE! STOP YELLING! | [m:veryangry]管子！不是那个！新的管子！别吼啦！ | [s:.8][m:veryangry]管子！不是那个！新的管子！别吼啦！[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE4_16` | [m:bored]I wonder if Nona will fit in that pipe... | [m:bored]那根管子不知道塞不塞得下阿婆…… | [s:.8][m:bored]那根管子不知道塞不塞得下阿婆……[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE4_2` | [m:winking]Just kidding!<br>Even with all those fluffers you sent me...<br>Nona's still back there. | [m:winking]开玩笑的！<br>你送了我那么多毛球……<br>可阿婆还是出不来。 | [s:.8][m:winking]开玩笑的！<br>你送了我那么多毛球……<br>可阿婆还是出不来。[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE4_3` | [m:sad]Don't be sad though, 'cuz sad kids get something to be sad about! | [m:sad]但是不要难过，不然就真有你难过的了！ | [s:.8][m:sad]但是不要难过，不然就真有你难过的了！[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE4_4` | [m:questioning]I think you just need to keep buying things and then maybe something will happen? | [m:questioning]你只要继续买东西，说不定就会有什么结果？ | [m:questioning][s:.8]你只要继续买东西，说不定就会有什么结果？[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE4_5` | [m:shocked]OH!<br>I almost forgetted!<br>I found a pipe!<br>But this one is different! | [m:shocked]哦！<br>差点给忘了！<br>我发现了一根管子！<br>这根不一样！ | [s:.8][m:shocked]哦！<br>差点给忘了！<br>我发现了一根管子！<br>这根不一样！[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE4_6` | [m:scared]I throwed some cans down inside it and I was hearing people in there! | [m:scared]我往里面丢了几个易拉罐，听到下面居然有人说话！ | [s:.8][m:scared]我往里面丢了几个易拉罐，听到下面居然有人说话！[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE4_7` | [m:pondering]Pretty sure it goes down into the bunker place! What the heck right? | [m:pondering]底下肯定就是地堡那边！是不是很离谱？ | [s:.8][m:pondering]底下肯定就是地堡那边！是不是很离谱？[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE4_8` | [m:happy]That's my new mystery to solve! | [m:happy]我要去破解这个新的谜团！ | [s:.8][m:happy]我要去破解这个新的谜团！[/s] |
-| `NPC_JACK_JACK_SHOPUPGRADE4_9` | [m:default]Nona is old news, and I don't even know how to read the newspaper! | [m:default]阿婆已经是旧新闻了，而且我都看不懂报纸！ | [s:.8][m:default]阿婆已经是旧新闻了，而且我都看不懂报纸！[/s] |
-| `NPC_JACK_JACK_ZARA_1` | [m:angry]That dumb rock turtle from space just knocked over more treasures! | [m:angry]太空来的那个笨石头乌龟又把宝贝撞倒了！ | [s:.8][m:angry]太空来的那个笨石头乌龟又把宝贝撞倒了！[/s] |
-| `NPC_JACK_JACK_ZARA_10` | [m:angry]Stupid rock thing... | [m:angry]蠢石头…… | [s:.8][m:angry]蠢石头……[/s] |
-| `NPC_JACK_JACK_ZARA_2` | [m:scared]Nona has been screaming all day! She's even more stuck now! | [m:scared]阿婆喊了一天了！她现在身上压的东西更多了！ | [s:.8][m:scared]阿婆喊了一天了！她现在身上压的东西更多了！[/s] |
-| `NPC_JACK_JACK_ZARA_3` | [m:veryangry]I'M WORKING ON IT NONA! | [m:veryangry]阿婆，我在想办法！ | [s:.8][m:veryangry]阿婆，我在想办法！[/s] |
-| `NPC_JACK_JACK_ZARA_4` | [m:questioning]Gosh,<br>does a hero's work ever end? | [m:questioning]唉，<br>英雄是不是永远都有事做？ | [m:questioning][s:.8]唉，<br>英雄是不是永远都有事做？[/s] |
-| `NPC_JACK_JACK_ZARA_5` | [m:default]Listen, I'd punch that thing if I had time but I gotta stay in the shop! | [m:default]我跟你说，我要是有时间，早就揍那家伙了，可我得看店！ | [s:.8][m:default]我跟你说，我要是有时间，早就揍那家伙了，可我得看店！[/s] |
-| `NPC_JACK_JACK_ZARA_6` | [m:questioning]Can you please get that thing in a sleeper hold for me? | [m:questioning]能不能麻烦你替我锁他的喉？ | [m:questioning][s:.8]能不能麻烦你替我锁他的喉？[/s] |
-| `NPC_JACK_JACK_ZARA_7` | [m:happy]Really twist his arm when you do it too! | [m:happy]顺便再使劲儿拧他的胳膊！ | [s:.8][m:happy]顺便再使劲儿拧他的胳膊！[/s] |
-| `NPC_JACK_JACK_ZARA_8` | [m:angry]Who does she think she is, punching walls?<br>My daddy?! | [m:angry]她以为自己是谁啊，到处砸墙？<br>我爸吗？！ | [s:.8][m:angry]她以为自己是谁啊，到处砸墙？<br>我爸吗？！[/s] |
-| `NPC_JACK_JACK_ZARA_9` | [m:veryangry]Well she's not my daddy because my daddy is gone, and hes not a girl! | [m:veryangry]她不是我爸，我爸不在了，而且他又不是女的！ | [s:.8][m:veryangry]她不是我爸，我爸不在了，而且他又不是女的！[/s] |
-| `NPC_JACK_OUT_OF_STOCK_1` | Oh, I don't got nothing. Come back Sunday. | 哦，我没东西了，礼拜天再来吧。 | [s:.8]哦，我没东西了，礼拜天再来吧。[/s] |
-| `NPC_JACK_PURCHASE_ITEM_1` | [m:happy]Oh cool, money! | [m:happy]好诶，赚钱啦！ | [s:.8][m:happy]好诶，赚钱啦！[/s] |
-| `NPC_JACK_SHOP_TOOLTIP` | {name}.<br>{desc} | {name}。<br>{desc} | [s:.8]{name}。<br>{desc}[/s] |
-| `NPC_JACK_UNKNOWN_1` | You appear to have unlocked something, but I don't have dialog for it. Congrats. Also fix this. | 你好像解锁什么了，可我没有对应的台词。恭喜了，另外处理一下这个。 | [s:.8]你好像解锁什么了，可我没有对应的台词。恭喜了，另外处理一下这个。[/s] |
-| `NPC_JACK_UNPROMPTED_1` | Hey! You like stuff? | 诶！你喜欢东西吗？ | [s:.8]诶！你喜欢东西吗？[/s] |
-| `NPC_NAME_ORGANGRINDER` | {organname} | {organname} | [f:NPCFont_OrganGrinder]{organname}[/f] |
-| `NPC_ORGANGRINDER_ORGAN_INTRO_10` | [m:shocked]"{organname}?" [m:happy]Wow, I like that name. [m:veryhappy]Actually I think that's my name too! | [m:shocked]“{organname}?”[m:happy]嚯，这个名字不错。[m:veryhappy]我可能也是叫这个！ | [m:shocked]“[f:NPCFont_OrganGrinder]{organname}[/f]?”[m:happy]嚯，这个名字不错。[m:veryhappy]我可能也是叫这个！ |
-| `NPC_ORGANGRINDER_ORGAN_INTRO_11` | Yeah yeah I'm definitely "{organname}"...<br>Wait! I'm having a memory! | 对对，我就是叫“{organname}”……<br>等一等！我想起来了！ | 对对，我就是叫“[f:NPCFont_OrganGrinder]{organname}[/f]”……<br>等一等！我想起来了！ |
-| `NPC_ORGANGRINDER_ORGAN_INTRO_12` | [m:angry]"{organname}!"<br>Stop pulling off your finger nails!<br>[m:happy]Yeah, yeah that's me... | [m:angry]“{organname}！”<br>别拽指甲了！<br>[m:happy]对，对，我是叫这个名字…… | [m:angry]“[f:NPCFont_OrganGrinder]{organname}[/f]！”<br>别拽指甲了！<br>[m:happy]对，对，我是叫这个名字…… |
-| `NPC_ORGANGRINDER_ORGAN_INTRO_13` | [m:veryhappy]I'm "{organname}!" | [m:veryhappy]我是“{organname}”！ | [m:veryhappy]我是“[f:NPCFont_OrganGrinder]{organname}[/f]”！ |
-| `NPC_ORGANGRINDER_ORGAN_RENAME_2` | [m:sad]I don't really feel like a "{organname}" anymore at all these days... | [m:sad]感觉现在一点都不像“{organname}”了…… | [m:sad]感觉现在一点都不像“[f:NPCFont_OrganGrinder]{organname}[/f]”了…… |
-| `NPC_ORGANGRINDER_ORGAN_RENAME_3` | [m:questioning]Yeah I don't think "{organname}" was actually ever my name!! | [m:questioning]嗯，我可能根本就不叫“{organname}”！！ | [m:questioning]嗯，我可能根本就不叫“[f:NPCFont_OrganGrinder]{organname}[/f]”！！ |
-| `NPC_ORGANGRINDER_ORGAN_RENAME_5` | [m:shocked]"{organname}"! | [m:shocked]“{organname}”！ | [m:shocked]“[f:NPCFont_OrganGrinder]{organname}[/f]”！ |
-| `NPC_ORGANGRINDER_ORGAN_RENAME_6` | [m:veryhappy]Yeah! "{organname}" was definitely my name! | [m:veryhappy]对！我是叫“{organname}”！ | [m:veryhappy]对！我是叫“[f:NPCFont_OrganGrinder]{organname}[/f]”！ |
-| `NPC_ORGANGRINDER_ORGAN_RENAME_7` | [m:happy]Yeah "{organname}" feels much better! | [m:happy]嗯，“{organname}”现在感觉好多了！ | [m:happy]嗯，“[f:NPCFont_OrganGrinder]{organname}[/f]”现在感觉好多了！ |
-| `NPC_ORGANGRINDER_ORGAN_UNLOCK_9` | [m:happy]Leave the flesh for ol' {organname}, I'll make it worth your while! | [m:happy]把肉留给{organname}吧，不会让你白忙活的！ | [m:happy]把肉留给[f:NPCFont_OrganGrinder]{organname}[/f]吧，不会让你白忙活的！ |
-| `NPC_ORGANGRINDER_ORGAN_UPGRADE1_1` | [m:happy]More meat puppets for {organname}!? Heck yeah! | [m:happy]又有肉偶给{organname}了！？诶嘿！ | [m:happy]又有肉偶给[f:NPCFont_OrganGrinder]{organname}[/f]了！？诶嘿！ |
-| `NPC_ORGANGRINDER_ORGAN_UPGRADE1_2` | [m:default]As long as {organname} is staying damp with ichor, I can be grabbing up all your trash for you! | [m:default]只要{organname}身上潮乎乎地沾着脓液，我就能帮你把垃圾全捡回来！ | [m:default]只要[f:NPCFont_OrganGrinder]{organname}[/f]身上潮乎乎地沾着脓液，我就能帮你把垃圾全捡回来！ |
-| `NPC_ORGANGRINDER_ORGAN_UPGRADE2_1` | [m:inlove]Wow, you are killing all these cats just for me!? You must be having feelings for ol' {organname}. | [m:inlove]嚯，你害死这些猫都是为了我！？你肯定是对{organname}动感情了。 | [m:inlove]嚯，你害死这些猫都是为了我！？你肯定是对[f:NPCFont_OrganGrinder]{organname}[/f]动感情了。 |
-| `NPC_ORGANGRINDER_ORGAN_UPGRADE2_2` | [m:paranoid]... {organname} has never been in love before... but I've been practicing... | [m:paranoid]……{organname}还没爱过谁……不过一直在练习…… | [m:paranoid]……[f:NPCFont_OrganGrinder]{organname}[/f]还没爱过谁……不过一直在练习…… |
-| `NPC_ORGANGRINDER_ORGAN_UPGRADE4_1` | [m:default]You know ol' {organname} was just standing here the other day and I swear I heard a kid crying... | [m:default]那什么，{organname}那天就站在这儿，当时绝对听到有个小孩在哭…… | [m:default]那什么，[f:NPCFont_OrganGrinder]{organname}[/f]那天就站在这儿，当时绝对听到有个小孩在哭…… |
-| `NPC_POPUP_FIRST_HOUSE_BOSS_TOMORROW_3` | You got like one day 'till she gets here! | 估计再过1天就上来啦！ | 估计再过一天就上来啦！ |
-| `NPC_POPUP_FIRST_HOUSE_BOSS_TOMORROW_6` | [m:bored][s:.7]Sadly...[/s] | [m:bored][s:.7]可惜了……[/s] | [m:bored][s:.7]可惜了…… |
-| `NPC_POPUP_HOUSE_PIPE_1` | Oh...<br>[s:.8]It's Rainin' again.[/s] | 哦……<br>[s:.8]又下雨了。[/s] | [s:.8]哦……[/s]<br>[s:.6]又下雨了。[/s] |
-| `NPC_POPUP_HOUSE_PIPE_10` | [m:sad][s:.6]*cough cough*[/s] | [m:sad][s:.6]*咳嗽*[/s] | [m:sad][s:.5]*咳嗽*[/s] |
-| `NPC_POPUP_HOUSE_PIPE_11` | [m:veryhappy]Hahaha!<br>[s:.8]We are just kidding on you![/s] | [m:veryhappy]哈哈哈！<br>[s:.8]跟你开玩笑呢！[/s] | [s:.8][m:veryhappy]哈哈哈！[/s]<br>[s:.6]跟你开玩笑呢！[/s] |
-| `NPC_POPUP_HOUSE_PIPE_12` | [m:happy]But really we love to build! So if you gonna wanna have more house made, just ask Frank. | [m:happy]但我们真的喜欢盖房子！你要是还想盖房子，就找弗兰克。 | [s:.8][m:happy]但我们真的喜欢盖房子！你要是还想盖房子，就找弗兰克。[/s] |
-| `NPC_POPUP_HOUSE_PIPE_13` | [m:default]Frank do need<br>to be paid though,<br>[s:.8]we don't work for<br>kisses no more.[/s]<br>[s:.7]No... Frank wants friends.[/s] | [m:default]但弗兰克<br>也得收钱，<br>[s:.8]我们不能再为<br>亲亲白干活。[/s]<br>[s:.7]不行……弗兰克想交朋友。[/s] | [s:.8][m:default]但弗兰克<br>也得收钱，[/s]<br>[s:.6]我们不能再为<br>亲亲白干活。[/s]<br>[s:.5]不行……弗兰克想交朋友。[/s] |
-| `NPC_POPUP_HOUSE_PIPE_14` | [m:happy][a:shake][s:1.4]Cat friends![/s][/a] | [m:happy][a:shake][s:1.4]想要猫猫朋友！[/s][/a] | [s:.8][m:happy][a:shake][s:1.4]想要猫猫朋友！[/s][/a][/s] |
-| `NPC_POPUP_HOUSE_PIPE_15` | [m:default]See that [b]pipe[/b] over there?<br>[s:.8]That [b]pipes[/b] goes all over this places![/s] | [m:default]看到那根[b]管道[/b]没有？<br>[s:.8]那根[b]管子[/b]能通到这边所有地方！[/s] | [s:.8][m:default]看到那根[b]管道[/b]没有？[/s]<br>[s:.6]那根[b]管子[/b]能通到这边所有地方！[/s] |
-| `NPC_POPUP_HOUSE_PIPE_16` | You wanna send a kitty out? Push him down that [b]pipe[/b] and bam!<br>[s:.8][m:happy]There he go![/s] | 想把小猫送出去？塞进那个[b]管道[/b]，啪！<br>[s:.8][m:happy]它就送出去啦！[/s] | [s:.8]想把小猫送出去？塞进那个[b]管道[/b]，啪！[/s]<br>[s:.6][m:happy]它就送出去啦！[/s] |
-| `NPC_POPUP_HOUSE_PIPE_17` | [m:sad][s:.6]*huff huff*[/s] | [m:sad][s:.6]*呼哧呼哧*[/s] | [m:sad][s:.5]*呼哧呼哧*[/s] |
-| `NPC_POPUP_HOUSE_PIPE_18` | [m:default]We don't want just any kitty though,<br>[s:.8]Frank want [o:black][c:white][img:retired]Retired[/c][/o] cats only.[/s] | [m:default]我们不是随便什么猫都要，<br>[s:.8]弗兰克只要[o:black][c:white][img:retired]退休[/c][/o]的猫。[/s] | [s:.8][m:default]我们不是随便什么猫都要，[/s]<br>[s:.6]弗兰克只要[o:black][c:white][img:retired]退休[/c][/o]的猫。[/s] |
-| `NPC_POPUP_HOUSE_PIPE_19` | Frank think we like retired cats<br>[s:.8]cuz we are kind of retired too.[/s] | 弗兰克觉得我们喜欢退休的猫，<br>[s:.8]是因为我们也算是退休了。[/s] | [s:.8]弗兰克觉得我们喜欢退休的猫，[/s]<br>[s:.6]是因为我们也算是退休了。[/s] |
-| `NPC_POPUP_HOUSE_PIPE_2` | [m:paranoid]Rain is a spookie one. [s:.8]I think it rain cuz we did bad things...[/s] | [m:paranoid]雨天很瘆人。[s:.8]我觉得下雨是因为我们干坏事了……[/s] | [s:.8][m:paranoid]雨天很瘆人。[/s][s:.6]我觉得下雨是因为我们干坏事了……[/s] |
-| `NPC_POPUP_HOUSE_PIPE_20` | [m:happy]OK well,<br>[s:.8]we go night night![/s] | [m:happy]好啦，<br>[s:.8]我们去睡觉觉了！[/s] | [s:.8][m:happy]好啦，[/s]<br>[s:.6]我们去睡觉觉了！[/s] |
-| `NPC_POPUP_HOUSE_PIPE_3` | [m:bored]The rain man sees what we be doing<br>[s:.8]and he tells on us.[/s] | [m:bored]下雨的人能看见我们在干什么，<br>[s:.8]然后就去告密。[/s] | [s:.8][m:bored]下雨的人能看见我们在干什么，[/s]<br>[s:.6]然后就去告密。[/s] |
-| `NPC_POPUP_HOUSE_PIPE_4` | [m:sad][s:.6]*huff huff*[/s] | [m:sad][s:.6]*呼哧呼哧*[/s] | [m:sad][s:.5]*呼哧呼哧*[/s] |
-| `NPC_POPUP_HOUSE_PIPE_5` | [m:happy]We are Frank and we live under your house! | [m:happy]我们是弗兰克，住在你家下面！ | [s:.8][m:happy]我们是弗兰克，住在你家下面！[/s] |
-| `NPC_POPUP_HOUSE_PIPE_6` | [m:default]I bet you hear us scratchin'...<br>[s:.8]It gets itchy down here sometimes...[/s] | [m:default]你肯定听见我们挠痒痒了……<br>[s:.8]下面有时候特别痒……[/s] | [s:.8][m:default]你肯定听见我们挠痒痒了……[/s]<br>[s:.6]下面有时候特别痒……[/s] |
-| `NPC_POPUP_HOUSE_PIPE_7` | Sometimes we like<br>being itchy, [m:happy][s:.8]cuz being itchy makes us work harder![/s] | 我们有时候喜欢<br>痒痒，[m:happy][s:.8]因为越痒我们干活越卖力！[/s] | [s:.8]我们有时候喜欢<br>痒痒，[/s][m:happy][s:.6]因为越痒我们干活越卖力！[/s] |
-| `NPC_POPUP_HOUSE_PIPE_8` | Bet you didn't know Frank builded your house! [s:.8]No lying![/s] | 你肯定不知道这个房子是弗兰克盖！[s:.8]没骗你！[/s] | [s:.8]你肯定不知道这个房子是弗兰克盖！[/s][s:.6]没骗你！[/s] |
-| `NPC_POPUP_HOUSE_PIPE_9` | We make them houses as fast as we make brown! | 我们盖房子跟拉㞎㞎一样快！ | [s:.8]我们盖房子跟拉㞎㞎一样快！[/s] |
-| `NPC_POPUP_JACK_INTRODUCTION_1` | Hey Dude!<br>I was lookin' in your windows and seen you got lotsa cool junk in there! | 诶！<br>我刚才趴在你家窗台上，看到屋里有好多好多有意思的废品！ | [s:.8]诶！<br>我刚才趴在你家窗台上，看到屋里有好多好多有意思的废品！[/s] |
-| `NPC_POPUP_JACK_INTRODUCTION_2` | Oh me?<br>I'm Baby Jack!<br>At least that's what the people around here call me... | 噢，你说我是谁？<br>我是杰克宝宝！<br>起码大家都这么叫我…… | [s:.8]噢，你说我是谁？<br>我是杰克宝宝！<br>起码大家都这么叫我……[/s] |
-| `NPC_POPUP_JACK_INTRODUCTION_3` | [m:happy]My Nona says its cuz of how talented I am.<br>I'm a superhero you know?! | [m:happy]阿婆说是因为我有天赋。<br>我是超级英雄，知不知道？！ | [s:.8][m:happy]阿婆说是因为我有天赋。<br>我是超级英雄，知不知道？！[/s] |
-| `NPC_POPUP_JACK_INTRODUCTION_4` | [m:default]Nona also says good boys do nice things,<br>so I got's a gift for ya! | [m:default]阿婆还说乖孩子要做好事，<br>所以我给你带了件礼物！ | [s:.8][m:default]阿婆还说乖孩子要做好事，<br>所以我给你带了件礼物！[/s] |
-| `NPC_POPUP_JACK_INTRODUCTION_5` | What I just gived you, that's what rich people call<br>[b]"furniture"[/b]. | 我刚给你的那个东西，有钱人叫<br>[b]“家具”[/b]。 | [s:.8]我刚给你的那个东西，有钱人叫<br>[b]“家具”[/b]。[/s] |
-| `NPC_POPUP_JACK_INTRODUCTION_6` | [m:happy]Furniture around these parts is filled with Jesus juice!<br>[s:.7][m:whispering]But we can talk about that later.[/s] | [m:happy]这边的家具里面都有耶稣果汁！<br>[s:.7][m:whispering]不过这个以后再说。[/s] | [s:.8][m:happy]这边的家具里面都有耶稣果汁！[/s]<br>[s:.6][m:whispering]不过这个以后再说。[/s] |
-| `NPC_POPUP_JACK_INTRODUCTION_7` | [m:default]See that tab up there?<br>Click it, then you can fill your house will all kinda junk! | [m:default]看见上面那个标签页没？<br>点一下，就能把各种乱七八糟的东西摆到家里啦！ | [s:.8][m:default]看见上面那个标签页没？<br>点一下，就能把各种乱七八糟的东西摆到家里啦！[/s] |
-| `NPC_POPUP_JACK_INTRODUCTION_7_GAMEPAD` | [m:default]See that tab up there?<br>Select it, then you can fill your house will all kinda junk! | [m:default]看见上面那个标签页没？<br>选中它，就能把各种乱七八糟的东西摆到家里啦！ | [s:.8][m:default]看见上面那个标签页没？<br>选中它，就能把各种乱七八糟的东西摆到家里啦！[/s] |
-| `NPC_POPUP_JACK_INTRODUCTION_8` | If you need me, I'll be with Nona in my lil' shack!<br>[m:happy]See ya! | 要是想找我，就来我跟阿婆住的小屋！<br>[m:happy]再见！ | [s:.8]要是想找我，就来我跟阿婆住的小屋！<br>[m:happy]再见！[/s] |
-| `NPC_POPUP_STEVEN_SAVESCUM_1ALT2_1` | [m:angry]CAUGHT YOU AGAIN! | [m:angry]又、让、我、看见了！ | [m:angry][s:1.3]又让我看见了！[/s] |
-| `NPC_POPUP_STEVEN_SAVESCUM_1ALT2_5` | [m:veryangry]WELL, I DON'T LIKE IT! | [m:veryangry]但、我不、喜、欢！！ | [m:veryangry][s:1.3]但我不喜欢！！[/s] |
-| `NPC_POPUP_STEVEN_SAVESCUM_1ALT2_9` | [m:veryangry]YOU DIE! | [m:veryangry]你就、死、定、了！ | [m:veryangry][s:1.3]你就死定了！[/s] |
-| `NPC_POPUP_STEVEN_SAVESCUM_1ALT3_1` | [m:angry]YOU SON OF A BITCH! | [m:angry]你个狗、东、西！ | [m:angry][s:1.3]你个狗东西！[/s] |
-| `NPC_POPUP_STEVEN_SAVESCUM_1ALT3_2` | [m:angry]YOU ARE DOING IT AGAIN! | [m:angry]你、还、这样？！ | [m:angry][s:1.3]你还这样？！[/s] |
-| `NPC_POPUP_STEVEN_SAVESCUM_1ALT3_3` | [m:veryangry]CHEATING! SAVE SCUMMING! | [m:veryangry]赖、皮！刷存档！ | [m:veryangry][s:1.3]赖皮！刷存档！[/s] |
-| `NPC_POPUP_STEVEN_SAVESCUM_1ALT3_4` | LOOK EVERYONE! THIS GUY LIKES TO CHEAT! | 都过来、看、啊！这哥们儿、这、么、喜欢赖皮！ | [s:1.3]都过来看啊！这哥们儿这么喜欢赖皮！[/s] |
-| `NPC_POPUP_STEVEN_SAVESCUM_1ALT3_6` | [m:angry]LOOK AT THIS THING! LOOK AT IT CHEAT! | [m:angry]都、过来、看啊！看、这家伙、赖、皮！ | [m:angry][s:1.3]都过来看啊！看这家伙赖皮！[/s] |
-| `NPC_POPUP_STEVEN_SAVESCUM_2ALT1_6` | [m:veryhappy]AND STOP SKIPPING WHAT I'M SAYING! THIS IS IMPORTANT STUFF! | [m:veryhappy]还有！我、说话、不、要、跳、过！我、说的、都、是、重、要、信息！ | [m:veryhappy][s:1.3]还有！我说话不要跳过！我说的都是重要信息！[/s] |
-| `NPC_POPUP_STEVEN_SAVESCUM_2ALT2_7` | [m:veryangry]WELL I DON'T! BECAUSE I HAVE SOUL! | [m:veryangry]我反正不、好、受！因、为、我有、心！ | [m:veryangry][s:1.3]我反正不好受！因为我有心！[/s] |
-| `NPC_POPUP_STEVEN_SAVESCUM_2ALT2_8` | YOU SOULLESS MONSTER! | 你个、没、心的怪、物！ | [s:1.3]你个没心的怪物！[/s] |
-| `NPC_POPUP_STEVEN_SAVESCUM_2ALT3_1` | [m:angry]LIAR! YOU SAID YOU WEREN'T GOING TO KEEP DOING THIS! | [m:angry]大、骗、子！明、明、说了不、这样了！ | [m:angry][s:1.3]大骗子！明明说了不这样了！[/s] |
-| `NPC_POPUP_STEVEN_SAVESCUM_2ALT3_10` | [m:veryangry]STOP! | [m:veryangry]停手！ | [m:veryangry][s:1.3]停手！[/s] |
-| `NPC_POPUP_STEVEN_SAVESCUM_2ALT3_3` | [m:veryangry]KEEP | [m:veryangry]还、让、我 | [m:veryangry][s:1.3]还让我[/s] |
-| `NPC_POPUP_STEVEN_SAVESCUM_2ALT3_4` | CHEATING | 怎、么 | [s:1.3]怎么[/s] |
-| `NPC_POPUP_STEVEN_SAVESCUM_2ALT3_5` | CONSTANTLY!? | 相、信、你？！ | [s:1.3]相信你？！[/s] |
-| `NPC_POPUP_STEVEN_SAVESCUM_2ALT3_8` | [m:whispering]Earth to {Catname} CAN YOU HEAR ME?!!? | [m:whispering]地球呼叫{Catname}，听、到、了吗？！？！ | [m:whispering]地球呼叫{Catname}，[s:1.3]听到了吗？！？！[/s] |
-| `NPC_POPUP_STEVEN_SAVESCUM_3ALT1_7` | [m:veryangry]STOP IT! STOP IT NOW! | [m:veryangry]停、手啊！我让你停！ | [m:veryangry][s:1.3]停、手啊！我让你停！[/s] |
-| `NPC_POPUP_STEVEN_SAVESCUM_3ALT2_5` | [m:veryangry]I'M REPORTING THIS! | [m:veryangry]我要、举、报你！ | [m:veryangry][s:1.3]我要、举、报你！[/s] |
-| `NPC_POPUP_STEVEN_SAVESCUM_3ALT2_6` | A SAVE SCUMMER LIKE YOU SHOULD BE PUT ON A WATCH LIST! | 你、这、样、的回、档赖、皮、鬼就该上监、视、名、单！ | [s:1.3]你这样的回档赖皮鬼就该上监视名单！[/s] |
-| `NPC_POPUP_STEVEN_SAVESCUM_3ALT3_1` | [m:angry]LOOK AT WHAT YOU ARE DOING! | [m:angry]你、看看、你在干、什、么啊！ | [m:angry][s:1.3]你看看你在干什么啊！[/s] |
-| `NPC_POPUP_STEVEN_SAVESCUM_3ALT3_2` | EVERY ONE OF YOUR CATS HAS DEJA VU! | 你的猫全、都、有既视感了！ | [s:1.3]你的猫都有既视感了！[/s] |
-| `NPC_POPUP_STEVEN_SAVESCUM_3ALT3_3` | [m:veryangry]ALL OF THEM! | [m:veryangry]全、都、有了！ | [m:veryangry][s:1.3]全都有了！[/s] |
-| `NPC_POPUP_STEVEN_SAVESCUM_3ALT3_4` | YOU CAN'T WIN LIKE THIS! | 你这样根、本、赢、不、了！ | [s:1.3]你这样根本赢不了！[/s] |
-| `NPC_POPUP_STEVEN_SAVESCUM_3ALT3_5` | YOU'RE SICK YOU KNOW THAT!? | 你知道自、己是变、态吗？！ | [s:1.3]你知道自己是变态吗？！[/s] |
-| `NPC_POPUP_STEVEN_SAVESCUM_3ALT3_6` | MARK MY WORDS! YOU WILL REGRET THIS! | 我、告、诉、你！你会后、悔、的！ | [s:1.3]我告诉你！你会后悔的！[/s] |
-| `NPC_POPUP_STEVEN_SAVESCUM_4ALT1_4` | [m:veryhappy]HERE I GO! | [m:veryhappy]我、上、啦！ | [m:veryhappy][s:1.3]我上啦！[/s] |
-| `NPC_POPUP_STEVEN_SAVESCUM_4ALT2_5` | [m:happy]CHECK THIS OUT! | [m:happy]看、好、了！ | [m:happy][s:1.3]看好了！[/s] |
-| `NPC_POPUP_STEVEN_SAVESCUM_4ALT3_1` | [m:happy]ANNNNNNND YOURE DONE! | [m:happy]到——此——为——止！ | [m:happy][s:1.3]到——此——为——止！[/s] |
-| `NPC_POPUP_STEVEN_SAVESCUM_4ALT3_4` | [m:veryhappy]IT'S STEVEN'S TURN! | [m:veryhappy]该史蒂文上了！ | [m:veryhappy]该史蒂文上了！[/s] |
-| `NPC_POPUP_STEVEN_SAVESCUM_HOUSEBOSS_1_9` | [m:veryangry]Also<br>[s:1.5]I'LL KILL YOU![/s] | [m:veryangry]而且<br>[s:1.5]我也会要、了、你的、命！[/s] | [m:veryangry]而且<br>[s:1.7]我也会要、了、你的、命！[/s] |
-| `NPC_POPUP_STEVEN_SAVESCUM_HOUSEBOSS_2_1` | [m:veryangry][s:1.2]CHEATER! [a:shake]FCUKING[/a] CHEATER![/s] | [m:veryangry][s:1.2]赖、皮！[a:shake]淦、你妈的[/a]赖、皮、鬼！[/s] | [m:veryangry][s:1.5]赖、皮！[a:shake]淦、你妈的[/a]赖、皮、鬼！[/s] |
-| `NPC_POPUP_STEVEN_SAVESCUM_HOUSEBOSS_2_10` | [m:happy][s:1.2]Last warning![/s] | [m:happy][s:1.2]最后警告一次！[/s] | [m:happy][s:1.4]最后警告一次！[/s] |
-| `NPC_POPUP_STEVEN_SAVESCUM_INTRO_10` | [m:veryangry][s:1.5]OR KILL YOUR PARENTS!!![/s] | [m:veryangry][s:1.5]或者杀了、你、爸、妈！！！[/s] | [m:veryangry][s:1.7]或者杀了你爸妈！！！[/s] |
-| `NPC_POPUP_STEVEN_SAVESCUM_INTRO_14` | [m:default]it's like that,<br>but worse, [m:angry]because this is<br>[s:1.2]REAL real![/s] | [m:default]就类似那样，<br>但更恐怖，[m:angry]因为会发生在<br>[s:1.2]真的现实世界！[/s] | [m:default]就类似那样，<br>但更恐怖，[m:angry]因为会发生在<br>[s:1.5]真的现实世界！[/s] |
-| `NPC_POPUP_STEVEN_SAVESCUM_INTRO_18` | [m:angry][s:1.2]ONE CHANCE![/s] | [m:angry][s:1.2]就、一、次！[/s] | [m:angry][s:1.5]就一次！[/s] |
-| `NPC_POPUP_STEVEN_SAVESCUM_INTRO_19` | [m:veryangry][s:1.5]ONE OOPSIE DO-OVER![/s] | [m:veryangry][s:1.5]什么“哎呀手滑了”之类的，可以重来一次！[/s] | [m:veryangry][s:1.7]什么“哎呀手滑了”之类的，可以重来一次！[/s] |
-| `NPC_POPUP_STEVEN_SAVESCUM_INTRO_23` | [m:questioning]If you wanna [s:1.2][b]save and exit[/b][/s] without seeing me, just do it from the map or whatever! | [m:questioning]想[s:1.2][b]存了档再退出[/b][/s]，又不想见到我？那就老老实实在地图上操作！ | [m:questioning]想[s:1.5][b]存了档再退出[/b][/s]，又不想见到我？那就老老实实在地图上操作！ |
-| `NPC_POPUP_STEVEN_SAVESCUM_INTRO_HOUSEBOSS_13` | [m:default]It's like that,<br>but worse, [m:angry]because this is<br>[s:1.2]REAL real![/s] | [m:default]就类似那样，<br>但更恐怖，[m:angry]因为会发生在<br>[s:1.2]真的现实世界！[/s] | [m:default]就类似那样，<br>但更恐怖，[m:angry]因为会发生在<br>[s:1.5]真的现实世界！[/s] |
-| `NPC_POPUP_STEVEN_SAVESCUM_INTRO_HOUSEBOSS_15` | [m:veryangry][s:1.5]SO STOP SAVE SCUMMING![/s] | [m:veryangry][s:1.5]所以别再、刷、存档了！！[/s] | [m:veryangry][s:1.7]所以别再刷存档了！！[/s] |
-| `NPC_POPUP_STEVEN_SAVESCUM_INTRO_HOUSEBOSS_2` | [m:pondering]You may know me from such games as Time Fcuk,<br>The End is Nigh or<br>[s:1.2]The Binding of Isaac! [/s] | [m:pondering]你可能在《Time Fcuk》、<br>《The End is Nigh》——就是《终结将至》——<br>还有[s:1.2]《The Binding of Isaac》（《以撒的结合》）[/s]里见过我！ | [m:pondering]你可能在《Time Fcuk》、<br>《The End is Nigh》——就是《终结将至》——<br>还有[s:1.5]《The Binding of Isaac》（《以撒的结合》）[/s]里见过我！ |
-| `NPC_POPUP_STEVEN_SAVESCUM_INTRO_HOUSEBOSS_8` | [m:veryangry][s:1.5]OR KILL YOUR PARENTS!!![/s] | [m:veryangry][s:1.5]或者杀了、你、爸、妈！！！[/s] | [m:veryangry][s:1.7]或者杀了你爸妈！！！[/s] |
-| `NPC_POPUP_STEVEN_SAVESCUM_INTRO_HOUSEBOSS_9` | [s:1.5]!  !  ![/s] | [s:1.5]！！！[/s] | [s:1.7]！！！[/s] |
-| `NPC_STEVEN_STEVEN_INTRODUCTION_6` | [m:veryhappy][s:1.6][a:shake]DIFFICULTY![/a][/s] | [m:veryhappy][s:1.6][a:shake]我、掌管、难、度！[/a][/s] | [m:veryhappy][s:1.6][a:shake]我掌管难度！[/a][/s] |
-| `NPC_STEVEN_STEVEN_POSTENDGAME_1` | [m:shocked]NO ONE EXPECTS THE STEVEN ENDING! | [m:shocked]谁、都没、想、到有史、蒂、文、结局！ | [m:shocked][s:1.3]谁都没想到有史蒂文结局！[/s] |
-| `NPC_STEVEN_STEVEN_POSTENDGAME_14` | [m:veryhappy]THAT WAS A JOKE AT YOUR EXPENSE, BUDDY! I'M TALKING ABOUT YOUR BEAN HOLE! | [m:veryhappy]伙计，拿你开个玩笑！我是在说你的豆豆眼儿！ | [m:veryhappy][s:1.3]伙计，拿你开个玩笑！我是在说你的豆豆眼儿！[/s] |
-| `NPC_STEVEN_STEVEN_UNLOCK_ACT1_CRAZY_5` | [m:shocked]AND IT'S GONNA GET YOU SO LOADED! | [m:shocked]能让你爽、到、飞起！ | [m:shocked][s:1.3]能让你爽到飞起！[/s] |
-| `NPC_STEVEN_STEVEN_UNLOCK_ACT2_CRAZY_5` | [m:veryhappy]HAHAHAHA! | [m:veryhappy]哈哈哈哈！ | [m:veryhappy][s:1.3]哈哈哈哈！[/s] |
-| `NPC_STEVEN_STEVEN_UNLOCK_ACT3_CRAZY_2` | [m:veryangry]Oh yeah... HANDLE THIS! | [m:veryangry]噢耶……扛住！ | [m:veryangry]噢耶……[s:1.3]扛住！[/s] |
-| `NPC_STEVEN_STEVEN_UNLOCK_ACT3_HARD_1` | [m:shocked]OMG, YOU UNLOCKED HARD MODE FOR ACT 3! | [m:shocked]我的上帝啊，你解锁了第三章的困难模式！ | [m:shocked][s:1.3]我的上帝啊，你解锁了第三章的困难模式！[/s] |
-| `NPC_STEVEN_STEVEN_UNLOCK_ACT3_HARD_10` | [m:happy]GL! | [m:happy]加油！ | [m:happy][s:1.3]加油！[/s] |
-| `NPC_STEVEN_STEVEN_UNLOCK_ACT3_IMPOSSIBLE_2` | [m:veryhappy]Fun fact: YOU CAN'T WIN! | [m:veryhappy]冷知识：你赢不了的！ | [m:veryhappy]冷知识：[s:1.3]你赢不了的！[/s] |
-| `NPC_STEVEN_STEVEN_UNLOCK_ACT3_IMPOSSIBLE_6` | [m:veryangry]IT'S NEVER GONNA HAPPEN DUDE! It's like a Lost Delirium run without the Holy Mantle unlocked! | [m:veryangry]朋友，别想了！这个就跟没解锁神圣屏障就拿游魂打精神错乱一样！ | [m:veryangry][s:1.3]朋友，别想了！[/s]这个就跟没解锁神圣屏障就拿游魂打精神错乱一样！ |
-| `NPC_TINK_TINK_TIPS_STIMULATION_7` | [m:happy]Every good breeder puts a heavy focus on Stimulation[img:stimulation], so don't neglect it! | [m:happy]合格的配种人都会很关注刺激[img:stimulation]，所以千万不能忽略了这一项！ | [m:happy]合格的配种人都会很重视刺激[img:stimulation]，所以千万不能忽略了这一项！ |
-| `OBJECT_SPEWERPILL_DESC` | Heals and changes the form of Spewer when eaten. | 喷喷吃下之后，会恢复生命，还会改变形态。 | 呕吐宝宝吃下之后，会恢复生命，还会改变形态。 |
-| `OBJECT_SPEWERTUBE_DESC` | Spawns pills for Spewer. | 会为喷喷吐出胶囊。 | 会为呕吐宝宝吐出胶囊。 |
-| `PASSIVE_LIGHTUPTHESTAGE_NAME` | Light Up the Stage | 点亮舞台 | 照亮舞台 |
-| `PASSIVE_RATSTYLE_NAME` | Rat Style | 鼠流 | 老鼠功 |
-| `PASSIVE_SUPERLUCK_NAME` | Super Luck | 超级幸运 | 超幸运 |
-| `PASSIVE_TRUESIGHT2_DESC` | You and your allies can't miss enemies within your line of sight. Allied physical attacks gain +50% critical hit chance against those enemies. | 你和友方攻击视线内的敌人不会落空。友方的物理攻击对这些敌人暴击几率+50% | 你和友方攻击你视线内的敌人不会落空。友方的物理攻击对这些敌人暴击几率+50% |
-| `PASSIVE_TRUESIGHT_DESC` | You and your allies can't miss enemies within your line of sight. | 你和友方攻击视线内的敌人不会落空。 | 你和友方攻击你视线内的敌人不会落空。 |
-| `SONG_UNLOCK_KAIJUS` | "Brush Your Teeth" is now in the radio playlist! | 《歯を磨いて》（《快去刷牙》）加进电台歌单啦！ | [f:EdmundmJP]《歯を磨いて》[/f] （《快去刷牙》）加进电台歌单啦！ |
+| `ABILITY_ALTERDNA2_DESC` | Spend all your mana. Give a unit within your line of sight a random stat up for every 2 mana spent (rounded up). Give enemies random stat downs instead. | 耗尽你所有魔能。每耗费2点魔能，就令视线内1个单位随机1项属性提升1次（次数向上取整）。如果是敌人，那么改为随机1项属性降低1次。 | 耗尽你所有魔能。每耗费2点魔能，就令你视线内1个单位随机1项属性提升1次（次数向上取整）。如果是敌人，那么改为随机1项属性降低1次。 |
+| `ABILITY_ALTERDNA_DESC` | Spend all your mana. Give a unit within your line of sight a random stat up for every 3 mana spent (rounded up). Give enemies random stat downs instead. | 耗尽你所有魔能。每耗费3点魔能，就令视线内1个单位随机1项属性提升1次（次数向上取整）。如果是敌人，那么改为随机1项属性降低1次。 | 耗尽你所有魔能。每耗费3点魔能，就令你视线内1个单位随机1项属性提升1次（次数向上取整）。如果是敌人，那么改为随机1项属性降低1次。 |
+| `ABILITY_ANCESTRALRECALL2_DESC` | Target yourself or a unit within your line of sight and upgrade one of their spells at random for the rest of the battle. | 以自己或视线内的1个单位为目标，本场战斗期间，随机强化这个单位的1个法术。 | 以自己或你视线内的1个单位为目标，本场战斗期间，随机强化这个单位的1个法术。 |
+| `ABILITY_ASTEROID2_DESC` | Make an asteroid fall onto a tile within your line of sight. The asteroid deals damage, bruises and leaves a boulder. | 令1颗陨石落在视线内的1个方格。陨石会造成伤害、施加【瘀伤】，同时留下1块巨石。 | 令1颗陨石落在你视线内的1个方格。陨石会造成伤害、施加【瘀伤】，同时留下1块巨石。 |
+| `ABILITY_ASTEROID_DESC` | Make an asteroid fall onto a tile within your line of sight. The asteroid deals damage and leaves a rock. | 令1颗陨石落在视线内的1个方格。陨石会造成伤害，同时留下1块石头。 | 令1颗陨石落在你视线内的1个方格。陨石会造成伤害，同时留下1块石头。 |
+| `ABILITY_AUTOPILOT2_DESC` | You or another unit takes an extra turn after this one. That unit is AI controlled on that turn.<br>[s:.7](This spell costs less.)[/s] | 你或另外1个单位在这个回合之后获得1个额外回合。这个单位在那个回合由AI控制。<br>[s:.7]（这个法术耗费减少）[/s] | 你或另外1个单位在这个回合之后获得1个额外回合。这个单位在额外回合由AI控制。<br>[s:.7]（这个法术耗费减少）[/s] |
+| `ABILITY_CHOMP2_DESC` | A wide melee attack with Life Steal. If used on an ally, gain +1[img:str]. If used on a pickup, gain double that pickup's effects. | 范围更宽的近身攻击，带【吸血】。如果目标是友方，那么你[img:str]+1；如果目标是可以捡起的物品，那么这件物品的效果翻倍。 | 范围更宽的近身攻击，带【吸血】。如果目标是友方，那么你[img:str]+1；如果目标是可以捡起的物品，那么这件物品的效果增强1倍。 |
+| `ABILITY_CHOMP_DESC` | A melee attack with Life Steal. If used on an ally, gain +1[img:str]. If used on a pickup, gain double that pickup's effects. | 近身攻击，带【吸血】。如果目标是友方，那么你[img:str]+1，如果目标是可以捡起的物品，那么这件物品的效果翻倍。 | 近身攻击，带【吸血】。如果目标是友方，那么你[img:str]+1，如果目标是可以捡起的物品，那么这件物品的效果增强1倍。 |
+| `ABILITY_CONSUME2_DESC` | Collect all pickups, then become drowsy. Gain double the effects of these pickups. | 捡起所有可以捡起的物品，然后【昏昏欲睡】。这些物品的效果翻倍。 | 捡起所有可以捡起的物品，然后【昏昏欲睡】。这些物品的效果增强1倍。 |
+| `ABILITY_CUMULATIVEBLAST2_DESC` | Deal damage to a unit in your line of sight, then increase this spell's damage by 1 for the rest of the battle.<br>[s:.7](This spell costs less.)[/s] | 对视线内1个单位造成伤害，然后本场战斗期间这个法术伤害+1。<br>[s:.7]（这个法术耗费减少）[/s] | 对你视线内1个单位造成伤害，然后本场战斗期间这个法术伤害+1。<br>[s:.7]（这个法术耗费减少）[/s] |
+| `ABILITY_CUMULATIVEBLAST_DESC` | Deal damage to a unit in your line of sight, then increase this spell's damage by 1 for the rest of the battle. | 对视线内1个单位造成伤害，然后本场战斗期间这个法术伤害+1。 | 对你视线内1个单位造成伤害，然后本场战斗期间这个法术伤害+1。 |
+| `ABILITY_ETHEREAL_NAME` | Ethereal | 灵体 | 虚灵 |
+| `ABILITY_EXTRATURNQ2_DESC` | Take an extra turn. You have a 75% chance to be stunned and don't regenerate mana on that turn.<br>[s:.7](This spell can't be cast on extra turns.)[/s] | 获得1个额外回合。那个回合，你有75%的几率进入【眩晕】状态，而且不会恢复魔能。<br>[s:.7]（这个法术不能在额外回合施放）[/s] | 获得1个额外回合。你在那个回合有75%的几率进入【眩晕】状态，而且不会恢复魔能。<br>[s:.7]（这个法术不能在额外回合施放）[/s] |
+| `ABILITY_EXTRATURNQ_DESC` | Take an extra turn. You're stunned and don't regenerate mana on that turn.<br>[s:.7](This spell can't be cast on extra turns.)[/s] | 获得1个额外回合。那个回合，你处于【眩晕】状态，而且不会恢复魔能。<br>[s:.7]（这个法术不能在额外回合施放）[/s] | 获得1个额外回合。你在那个回合处于【眩晕】状态，而且不会恢复魔能。<br>[s:.7]（这个法术不能在额外回合施放）[/s] |
+| `ABILITY_FLAMETHROWER_NAME` | Flamethrower | 火焰喷射器 | 喷射火焰 |
+| `ABILITY_FLIP2_DESC` | Turn a unit within your line of sight 180 degrees. Inflict Confusion 2 and Magic Weakness 1 on that unit. | 令视线内1个单位转身。对它施加2层【混乱】和1层【魔法克制】。 | 令你视线内1个单位转身。对它施加2层【混乱】和1层【魔法克制】。 |
+| `ABILITY_FLIP_DESC` | Turn a unit within your line of sight 180 degrees. Inflict Confusion 1 on that unit. | 令视线内1个单位转身。对它施加1层【混乱】。 | 令你视线内1个单位转身。对它施加1层【混乱】。 |
+| `ABILITY_FUTURESIGHT2_DESC` | A unit within your line of sight backflips out of the way the next time they're targeted by an enemy.<br> [s:.7](This spell costs less.)[/s] | 令视线内的1个单位下一次被敌人选为目标时后空翻躲开。<br>[s:.7]（这个法术耗费减少）[/s] | 令你视线内的1个单位下一次被敌人选为目标时后空翻躲开。<br>[s:.7]（这个法术耗费减少）[/s] |
+| `ABILITY_FUTURESIGHT_DESC` | A unit within your line of sight backflips out of the way the next time they're targeted by an enemy. | 令视线内的1个单位下一次被敌人选为目标时后空翻躲开。 | 令你视线内的1个单位下一次被敌人选为目标时后空翻躲开。 |
+| `ABILITY_HIPTOSS2_DESC` | Throw a random adjacent unit two tiles away, dealing damage to it. This deals double damage if it's thrown onto another unit. | 随机把前后左右相邻的1个单位扔出2格远，对它造成伤害。如果它砸到其他单位，那么伤害翻倍。 | 随机把前后左右相邻的1个单位扔出2格远，对它造成伤害。如果它砸到其他单位，那么伤害增加1倍。 |
+| `ABILITY_INCREASEGRAVITY2_DESC` | Inflict Slow 1 on each unit in an area around a tile within your line of sight. If you cast this from full mana, instead inflict Immobilize 1 and deal 6 damage. | 对视线内1个方格周围1片区域的每个单位施加1层【迟缓】。如果你这时是满魔能，那么改为施加1层【移动受限】，同时造成6点伤害。 | 对你视线内1个方格周围1片区域的每个单位施加1层【迟缓】。如果你这时是满魔能，那么改为施加1层【移动受限】，同时造成6点伤害。 |
+| `ABILITY_INCREASEGRAVITY_DESC` | Inflict Slow 1 on a unit within your line of sight. If you cast this from full mana, instead inflict Immobilize 1 and deal 6 damage. | 对视线内的1个单位施加1层【迟缓】。如果你这时是满魔能，那么改为施加1层【移动受限】，同时造成6点伤害。 | 对你视线内的1个单位施加1层【迟缓】。如果你这时是满魔能，那么改为施加1层【移动受限】，同时造成6点伤害。 |
+| `ABILITY_INVERSION2_DESC` | Swap positions with a unit in your line of sight.<br>[s:.7](This spell costs less.)[/s] | 跟视线内的1个单位交换位置。<br>[s:.7]（这个法术耗费减少）[/s] | 跟你视线内的1个单位交换位置。<br>[s:.7]（这个法术耗费减少）[/s] |
+| `ABILITY_INVERSION_DESC` | Swap positions with a unit in your line of sight. | 跟视线内的1个单位交换位置。 | 跟你视线内的1个单位交换位置。 |
+| `ABILITY_JUICED2_DESC` | Your movement range is doubled and you get +4 [img:str] until the end of the turn. | 这个回合结束之前，你的移动范围翻倍，同时[img:str]+4。 | 这个回合结束之前，你的移动范围扩大1倍，同时[img:str]+4。 |
+| `ABILITY_JUICED_DESC` | Your movement range is doubled until the end of the turn. | 这个回合结束之前，你的移动范围翻倍。 | 这个回合结束之前，你的移动范围扩大1倍。 |
+| `ABILITY_KAMEHAMEHA2_DESC` | Fire a magic blast at a unit anywhere within your line of sight.<br>[s:.7](Castable once per battle. If all your armor slots are empty, castable once per turn.)[/s] | 对视线内任意位置的1个单位发射魔法冲击。<br>[s:.7]（每场战斗可以施放1次。如果防具栏位全空，那么每个回合可以施放1次）[/s] | 对你视线内任意位置的1个单位发射魔法冲击。<br>[s:.7]（每场战斗可以施放1次。如果防具栏位全空，那么每个回合可以施放1次）[/s] |
+| `ABILITY_LOOKAWAY2_DESC` | Every unit within your line of sight turns away from you and is inflicted with Blind 1. | 视线内的每个单位都会转身背对你，同时获得1层【瞎眼】。 | 你视线内的每个单位都会转身背对你，同时获得1层【瞎眼】。 |
+| `ABILITY_LOOKAWAY_DESC` | Every unit within your line of sight turns away from you. | 视线内的每个单位都会转身背对你。 | 你视线内的每个单位都会转身背对你。 |
+| `ABILITY_MANIFEST2_DESC` | Teleport into a unit within your line of sight. Deal damage and displace it. | 传送到视线内1个单位所在的方格。对它造成伤害，同时把它挤开。 | 传送到你视线内1个单位所在的方格。对它造成伤害，同时把它挤开。 |
+| `ABILITY_MANIFEST_DESC` | Teleport in a straight line into a unit within your line of sight. Deal damage and displace it. | 沿直线传送到视线内1个单位所在的方格。对它造成伤害，同时把它挤开。 | 沿直线传送到你视线内1个单位所在的方格。对它造成伤害，同时把它挤开。 |
+| `ABILITY_MASSHYSTERIA2_DESC` | Every enemy in your line of sight takes an extra turn. They are charmed on that turn.<br>[s:.7](This spell costs less.)[/s] | 视线内的每个敌人获得1个额外回合，它们在那个回合会处于【洗脑】状态。<br>[s:.7]（这个法术耗费减少）[/s] | 你视线内的每个敌人获得1个额外回合，它们在那个回合会处于【洗脑】状态。<br>[s:.7]（这个法术耗费减少）[/s] |
+| `ABILITY_MASSHYSTERIA_DESC` | Every enemy in your line of sight takes an extra turn. They are charmed on that turn. | 视线内的每个敌人获得1个额外回合，它们在那个回合会处于【洗脑】状态。 | 你视线内的每个敌人获得1个额外回合，它们在那个回合会处于【洗脑】状态。 |
+| `ABILITY_MEDUSA2_DESC` | Inflict Petrify on all units in your line of sight.<br>[s:.7](This spell costs less.)[/s] | 对视线内的所有单位施加【石化】。<br>[s:.7]（这个法术耗费减少）[/s] | 对你视线内的所有单位施加【石化】。<br>[s:.7]（这个法术耗费减少）[/s] |
+| `ABILITY_MEDUSA_DESC` | Inflict Petrify on all units in your line of sight. | 对视线内的所有单位施加【石化】。 | 对你视线内的所有单位施加【石化】。 |
+| `ABILITY_MIMIC2_DESC` | Target an allied cat within your line of sight. Cast one of their spells at random for free (or use their basic attack if theres no good spells).<br>[s:.7](This spell costs less.)[/s] | 以视线内的1个友方猫为目标，随机免费施放它的1个法术（如果没有合适法术，那么改为使用它的普通攻击）。<br>[s:.7]（这个法术耗费减少）[/s] | 以你视线内的1个友方猫为目标，随机免费施放它的1个法术（如果没有合适法术，那么改为使用它的普通攻击）。<br>[s:.7]（这个法术耗费减少）[/s] |
+| `ABILITY_MIMIC_DESC` | Target an allied cat within your line of sight. Cast one of their spells at random for free (or use their basic attack if theres no good spells). | 以视线内的1个友方猫为目标，随机免费施放它的1个法术（如果没有合适法术，那么改为使用它的普通攻击）。 | 以你视线内的1个友方猫为目标，随机免费施放它的1个法术（如果没有合适法术，那么改为使用它的普通攻击）。 |
+| `ABILITY_MINDCONTROL2_DESC` | Charm an enemy within your line of sight for the rest of the battle. That unit immediately takes an extra turn. | 本场战斗期间，令视线内的1个敌人【洗脑】。这个单位立刻获得1个额外回合。 | 本场战斗期间，令你视线内的1个敌人【洗脑】。这个单位立刻获得1个额外回合。 |
+| `ABILITY_MINDCONTROL_DESC` | Charm an enemy within your line of sight for the rest of the battle. | 本场战斗期间，令视线内的1个敌人【洗脑】。 | 本场战斗期间，令你视线内的1个敌人【洗脑】。 |
+| `ABILITY_MINDCRACK2_DESC` | Inflict Magic Weakness 2 and Confusion 1 on all non-allied units in your line of sight. | 对视线内所有非友方的单位施加2层【魔法克制】和1层【混乱】。 | 对你视线内所有非友方的单位施加2层【魔法克制】和1层【混乱】。 |
+| `ABILITY_MINDCRACK_DESC` | Inflict Magic Weakness 2 on all units in your line of sight. | 对视线内的所有单位施加2层【魔法克制】。 | 对你视线内的所有单位施加2层【魔法克制】。 |
+| `ABILITY_NIRVANA_NAME` | Nirvana | 涅槃 | 寂灭 |
+| `ABILITY_ORDER2_DESC` | Give a unit within your line of sight All Stats Up and force it to move and attack one of its enemies. | 令视线内的1个单位所有属性提升，同时强迫它移动、攻击它的1个敌人。 | 令你视线内的1个单位所有属性提升，同时强迫它移动、攻击它的1个敌人。 |
+| `ABILITY_ORDER_DESC` | Force a unit within your line of sight to move and attack one of its enemies. | 强迫视线内的1个单位移动、攻击它的1个敌人。 | 强迫你视线内的1个单位移动、攻击它的1个敌人。 |
+| `ABILITY_PASS2_DESC` | Give a unit within your line of sight an extra turn immediately, then end your turn.<br>Castable only if you haven't taken any actions this turn other than your movement action.<br>[s:.7](This can't be cast on extra turns.)[/s] | 立刻令视线内的1个单位获得1个额外回合，然后结束你的回合。<br>如果这个回合用过移动之外的其他行动，那么就不能施放这个法术。<br>[s:.7]（这个法术不能在额外回合施放）[/s] | 立刻令你视线内的1个单位获得1个额外回合，然后结束你的回合。<br>如果这个回合用过移动之外的其他行动，那么就不能施放这个法术。<br>[s:.7]（这个法术不能在额外回合施放）[/s] |
+| `ABILITY_PASS_DESC` | Give a unit within your line of sight an extra turn immediately, then end your turn. <br>Castable only if you haven't taken any actions this turn.<br>[s:.7](This can't be cast on extra turns.)[/s] | 立刻令视线内的1个单位获得1个额外回合，然后结束你的回合。<br>如果这个回合行动过，那么就不能施放这个法术。<br>[s:.7]（这个法术不能在额外回合施放）[/s] | 立刻令你视线内的1个单位获得1个额外回合，然后结束你的回合。<br>如果这个回合行动过，那么就不能施放这个法术。<br>[s:.7]（这个法术不能在额外回合施放）[/s] |
+| `ABILITY_PING2_DESC` | Deal 1 damage to any unit within your line of sight.<br>RELOAD: Spend mana<br>Bonus Passive: +2 [img:int]. | 对视线内任一单位造成1点伤害。<br>冷却结束：耗费魔能<br>奖励被动：[img:int]+2。 | 对你视线内任一单位造成1点伤害。<br>冷却结束：耗费魔能<br>奖励被动：[img:int]+2。 |
+| `ABILITY_PING_DESC` | Deal 1 damage to any unit within your line of sight.<br>RELOAD: Spend mana | 对视线内任一单位造成1点伤害。<br>冷却结束：耗费魔能 | 对你视线内任一单位造成1点伤害。<br>冷却结束：耗费魔能 |
+| `ABILITY_PROLIFERATE2_DESC` | Double a unit's Poison, Bleed, and Burn.<br>[s:.7](This spell costs 0 mana. Castable once per battle.)[/s] | 令1个单位【中毒】、【出血】、【灼烧】的层数翻倍。<br>[s:.7]（这个法术耗费0魔能。每场战斗可以施放1次）[/s] | 令1个单位【中毒】、【出血】、【灼烧】的层数增加1倍。<br>[s:.7]（这个法术耗费0魔能。每场战斗可以施放1次）[/s] |
+| `ABILITY_PROLIFERATE_DESC` | Double a unit's Poison, Bleed, and Burn.<br>[s:.7](Castable once per battle.)[/s] | 令1个单位【中毒】、【出血】、【灼烧】的层数翻倍。<br>[s:.7]（每场战斗可以施放1次）[/s] | 令1个单位【中毒】、【出血】、【灼烧】的层数增加1倍。<br>[s:.7]（每场战斗可以施放1次）[/s] |
+| `ABILITY_PROLIFERATE_NAME` | Proliferate | 增殖 | 倍增 |
+| `ABILITY_PSYCHICCHOKE2_DESC` | Deal damage to and inflict Bruise on a unit within your line of sight. This damage counts as physical damage and scales with [img:str]. | 对视线内的1个单位造成伤害和【瘀伤】。这次伤害视为物理伤害，而且数值随[img:str]增加。 | 对你视线内的1个单位造成伤害和【瘀伤】。这次伤害视为物理伤害，而且数值随[img:str]增加。 |
+| `ABILITY_PSYCHICCHOKE_DESC` | Deal damage to and inflict Bruise on a unit within your line of sight. | 对视线内的1个单位造成伤害和【瘀伤】。 | 对你视线内的1个单位造成伤害和【瘀伤】。 |
+| `ABILITY_PUPPET2_DESC` | Force a unit within your line of sight to attack in the direction it's facing. | 强迫视线内的1个单位向它面朝的方向攻击。 | 强迫你视线内的1个单位向它面朝的方向攻击。 |
+| `ABILITY_PUPPET_DESC` | Force an enemy within your line of sight to attack in the direction it's facing. | 强迫视线内的1个敌人向它面朝的方向攻击。 | 强迫你视线内的1个敌人向它面朝的方向攻击。 |
+| `ABILITY_RUSSIANSHORTHAIRROULETTE_NAME` | Russian Shorthair Roulette | 俄短轮盘 | 俄罗斯短尾轮盘 |
+| `ABILITY_SCAVENGE2_DESC` | Run to any pickup and collect it. The effects of that pickup are doubled. | 跑向场上任一可以捡起的物品，把它捡起来。这件物品的效果翻倍。 | 跑向场上任一可以捡起的物品，把它捡起来。这件物品的效果增强1倍。 |
+| `ABILITY_SHIFT2_DESC` | Swap positions with any unit.<br>[s:.7](Castable once per turn.)[/s] | 跟场上任一单位交换位置。<br>[s:.7]（每个回合可以施放1次）[/s] | 跟任一单位交换位置。<br>[s:.7]（每个回合可以施放1次）[/s] |
+| `ABILITY_SHORTSHOT_DESC` | Shoot a unit in your line of sight. | 向视线内的1个单位射箭。 | 向你视线内的1个单位射箭。 |
+| `ABILITY_SKYSHATTER2_DESC` | Create floating glass shards in an area within your line of sight. | 在视线内的1片区域生成飘在空中的玻璃碎片。 | 在你视线内的1片区域生成飘在空中的玻璃碎片。 |
+| `ABILITY_SKYSHATTER_DESC` | Create floating glass shards on a tile within your line of sight. | 在视线内的1个方格生成飘在空中的玻璃碎片。 | 在你视线内的1个方格生成飘在空中的玻璃碎片。 |
+| `ABILITY_SMASHTINKERER2_DESC` | Smash your weapon onto an adjacent unit, destroying it and dealing double its damage.<br>[s:.7](This spell costs less.)[/s] | 用武器猛砸前后左右相邻的1个单位，摧毁武器，本次武器伤害翻倍。<br>[s:.7]（这个法术耗费减少）[/s] | 用武器猛砸前后左右相邻的1个单位，摧毁武器，本次武器伤害增大1倍。<br>[s:.7]（这个法术耗费减少）[/s] |
+| `ABILITY_SMASHTINKERER_DESC` | Smash your weapon onto an adjacent unit, destroying it and dealing double its damage. | 用武器猛砸前后左右相邻的1个单位，摧毁武器，本次武器伤害翻倍。 | 用武器猛砸前后左右相邻的1个单位，摧毁武器，本次武器伤害增大1倍。 |
+| `ABILITY_SNATCH2_DESC` | Collect any pickup within your line of sight.<br>Gain +1 [img:lck]. | 捡起视线内任一件可以捡起的物品。<br>[img:lck]+1。 | 捡起你视线内任一件可以捡起的物品。<br>[img:lck]+1。 |
+| `ABILITY_SNATCH_DESC` | Collect any pickup within your line of sight. | 捡起视线内任一件可以捡起的物品。 | 捡起你视线内任一件可以捡起的物品。 |
+| `ABILITY_STAKEOUT2_DESC` | End your turn. On your next turn, your ranged abilities deal double damage.<br>[s:.7](Costs 0 mana. Castable only if you haven't taken any other actions this turn other than your movement action.)[/s] | 结束你的回合。你下个回合远程能力的伤害翻倍。<br>[s:.7]（这个法术耗费0魔能。如果这个回合用过移动之外的其他行动，那么就不能施放。）[/s] | 结束你的回合。你下个回合远程能力的伤害增大1倍。<br>[s:.7]（这个法术耗费0魔能。如果这个回合用过移动之外的其他行动，那么就不能施放。）[/s] |
+| `ABILITY_STAKEOUT_DESC` | End your turn. On your next turn, your ranged abilities deal double damage.<br>[s:.7](Castable only if you haven't taken any other actions this turn.)[/s] | 结束你的回合。你下个回合的远程能力伤害翻倍。<br>[s:.7]（如果这个回合用过其他行动，那么就不能施放。）[/s] | 结束你的回合。你下个回合的远程能力伤害增大1倍。<br>[s:.7]（如果这个回合用过其他行动，那么就不能施放。）[/s] |
+| `ABILITY_STASIS2_DESC` | Inflict Freeze 1, Blind 2, and Confusion 2 on a unit within your line of sight. | 对视线内1个单位施加1层【冻住】、2层【瞎眼】和2层【混乱】。 | 对你视线内1个单位施加1层【冻住】、2层【瞎眼】和2层【混乱】。 |
+| `ABILITY_STASIS_DESC` | Inflict Freeze on a unit within your line of sight. | 对视线内1个单位施加【冻住】。 | 对你视线内1个单位施加【冻住】。 |
+| `ABILITY_SUGGESTION2_DESC` | Cause enemies in a target area within your line of sight to each attack another enemy if they can. | 如果视线内目标区域的敌人可以攻击另一个敌人，那么就令他们全部进行攻击。 | 如果你视线内目标区域的敌人可以攻击另一个敌人，那么就令他们全部进行攻击。 |
+| `ABILITY_SUGGESTION_DESC` | Cause an enemy within your line of sight to attack another enemy if it can. | 如果视线内有敌人可以攻击另一个敌人，那么就令这样的1个敌人进行攻击。 | 如果你视线内有敌人可以攻击另一个敌人，那么就令这样的1个敌人进行攻击。 |
+| `ABILITY_SUPERNOVA2_DESC` | Deal damage to and inflict Blind on every unit within your line of sight, excluding your allies. | 对视线内的每个单位造成伤害和【瞎眼】，不包括你的友方。 | 对你视线内的每个单位造成伤害和【瞎眼】，不包括你的友方。 |
+| `ABILITY_SUPERNOVA_DESC` | Deal damage to and inflict Blind on every unit within your line of sight. | 对视线内的每个单位造成伤害和【瞎眼】。 | 对你视线内的每个单位造成伤害和【瞎眼】。 |
+| `ABILITY_TELEKINESIS2_DESC` | Push a unit within your line of sight away from you 10 tiles with Chain Knockback. | 把视线内的1个单位推开10格，带连锁击退。 | 把你视线内的1个单位推开10格，带连锁击退。 |
+| `ABILITY_TELEKINESIS_DESC` | Push a unit within your line of sight away from you 10 tiles. | 把视线内的1个单位推开10格。 | 把你视线内的1个单位推开10格。 |
+| `ABILITY_TEMPORALSHARDS2_DESC` | Give a unit within your line of sight +3 temporary Bleed Thorns until the end of its turn. If its was an ally, the bleed thorns last for the rest of the battle. | 令视线内的1个单位临时【出血尖刺】+3，持续到它的回合结束。如果目标是友方，那么它的【出血尖刺】持续到战斗结束。 | 令你视线内的1个单位临时【出血尖刺】+3，持续到它的回合结束。如果目标是友方，那么它的【出血尖刺】持续到战斗结束。 |
+| `ABILITY_TEMPORALSHARDS_DESC` | Give a unit within your line of sight +3 temporary Bleed Thorns until the end of its turn. | 令视线内的1个单位临时【出血尖刺】+3，持续到它的回合结束。 | 令你视线内的1个单位临时【出血尖刺】+3，持续到它的回合结束。 |
+| `ABILITY_TRAILBLAZER2_DESC` | Double your movement.  You're unaffected by tile effects until the end of the turn. | 你的移动范围翻倍。本回合结束之前，你不受方格效果影响。 | 你的移动范围扩大1倍。本回合结束之前，你不受方格效果影响。 |
+| `ABILITY_WAYOFTHEOWL_NAME` | Way of the Owl | 鸮流 | 猫头鹰流 |
+| `ABILITY_WITHDRAW2_DESC` | Pull any unit within your line of sight to a tile adjacent to you.<br>[s:.7](This spell costs less.)[/s] | 把视线内任一单位拉到你前后左右相邻的方格。<br>[s:.7]（这个法术耗费减少）[/s] | 把你视线内任一单位拉到你前后左右相邻的方格。<br>[s:.7]（这个法术耗费减少）[/s] |
+| `ABILITY_WITHDRAW_DESC` | Pull any unit within your line of sight to a tile adjacent to you. | 把视线内任一单位拉到你前后左右相邻的方格。 | 把你视线内任一单位拉到你前后左右相邻的方格。 |
+| `AREA_NAME_FUTURE` | Das Füture | Das Füture | 达斯·弗彻 |
+| `ARMOR_BANDAGES_DESC` | Heals heal you for twice as much. | 你获得的治疗效果翻倍。 | 你获得的治疗效果增强1倍。 |
+| `ARMOR_CAPANDBELLS_DESC` | Triple the effects of your Trinket. | 你小玩意儿的效果变成3倍。 | 你小玩意儿的效果增强2倍。 |
+| `ARMOR_CAVEMANEYEBROWS_DESC` | Your weapons deal double damage. | 你武器的伤害翻倍。 | 你武器的伤害增大1倍。 |
+| `ARMOR_CLAM_NAME` | Clam | 蛤蜊 | 鲍鱼 |
+| `ARMOR_CLOWNMAKEUP_DESC` | Triple the effects of your Head armor. | 你头部防护的效果变成3倍。 | 你头部防护的效果增强2倍。 |
+| `ARMOR_DNAMULTIPLIER_DESC` | Double all status effects that get applied to you. | 给你施加的所有状态效果翻倍。 | 给你施加的所有状态效果增强1倍。 |
+| `ARMOR_HEADCHEESE_NAME` | Head Cheese | 脑袋奶酪 | 头顶奶酪 |
+| `ARMOR_OBI_NAME` | Obi | 带 | 束带 |
+| `ARMOR_RUFFLE_DESC` | Triple the effects of your Face armor. | 你脸部防护的效果变成3倍。 | 你脸部防护的效果增强2倍。 |
+| `ARMOR_RUNEOFJERA_DESC` | Your trinket effects are doubled. | 你小玩意儿的效果翻倍。 | 你小玩意儿的效果增强1倍。 |
+| `ARMOR_STOMACH_DESC` | Consumables you use have double the effect. | 你使用的消耗品效果翻倍。 | 你使用的消耗品效果增强1倍。 |
+| `ARMOR_STORAGELOCKER_DESC` | Side Quest Item. Your team's active ability level ups offer rare items instead. | 支线任务物品。你队伍主动能力的升级选项会改为稀罕物品。 | 支线任务物品。你队伍主动能力的升级选项会改为稀有物品。 |
+| `ARMOR_STUNNINGBEARD_DESC` | Your head and neck item effects are doubled. | 你头部和颈部物品的效果翻倍。 | 你头部和颈部物品的效果增强1倍。 |
+| `ARMOR_STUNNINGCHAIN_DESC` | Your head and face item effects are doubled. | 你头部和脸部物品的效果翻倍。 | 你头部和脸部物品的效果增强1倍。 |
+| `ARMOR_STUNNINGHAIRCUT_DESC` | Your face and neck item effects are doubled. | 你脸部和颈部物品的效果翻倍。 | 你脸部和颈部物品的效果增强1倍。 |
+| `ARMOR_TENTACLENECK_NAME` | Back Tentacles | 臀部触手 | 背部触手 |
+| `ARMOR_TWINEARMOR_NAME` | Twine Armor | 合股线防具 | 细绳防具 |
+| `ARMOR_TWINEHAT_NAME` | Twine Hat | 合股线帽子 | 细绳帽子 |
+| `ARMOR_TWINEMASK_NAME` | Twine Mask | 合股线面具 | 细绳面具 |
+| `ARMOR_ZODIACSPONCHO_NAME` | Zodiacs Poncho | 黄道十二宫杀手的斗篷 | 黄道十二宫的斗篷 |
+| `CAT_EMBARK_QUOTES_TINKERER_10` | I love the power glove, it's so bad. | 我喜欢这个力量手套，太牛逼了。 | 我喜欢这个力量手套，太牛了。 |
+| `CAT_VS_BOSS_QUOTES_FIGHTER_1` | I'm gonna punch you in your stupid idiot face! | 蠢逼，我要干爆你那张脸！ | 大傻子，我要打烂你的脸！ |
+| `COMBAT_POPUP_CATCH` | Catch! | 拿到了！ | 接住了！ |
+| `COMBAT_POPUP_DEX_DOWN` | Dexterity Down | 协调性下降 | 灵巧下降 |
+| `COMBAT_POPUP_DEX_UP` | Dexterity Up | 协调性提升 | 灵巧提升 |
+| `COMBAT_UI_DEFEAT` | Defeat! | 战败！ | &amp;nbsp;战败！ |
+| `DISORDER_BRAINDEAD_DESC` | Gain twice as many stats when you level up. +1 Reroll when leveling up. | 你升级时，获得的属性翻倍。升级时，重掷次数+1。 | 你升级时，获得的属性增加1倍。升级时，重掷次数+1。 |
+| `DISORDER_EATINGDISORDER_DESC` | Double the effects of your consumables but you are confused on how to eat them. | 消耗品的效果翻倍，但你不知道该怎么吃。 | 消耗品的效果增强1倍，但你不知道该怎么吃。 |
+| `DISORDER_INTESTINALPROLAPSE_DESC` | You receive double damage from behind. | 你受到的身后伤害翻倍。 | 你受到的身后伤害增大1倍。 |
+| `DISORDER_SENSORYOVERLOADFACE_DESC` | All but your face slot is locked. Your face item's effects are tripled! | 除了脸部以外，其他栏位全部上锁。脸部物品效果变成3倍！ | 除了脸部以外，其他栏位全部上锁。脸部物品效果增强2倍！ |
+| `DISORDER_SENSORYOVERLOADHEAD_DESC` | All but your head slot is locked. Your head item's effects are tripled! | 除了头部以外，其他栏位全部上锁。头部物品效果变成3倍！ | 除了头部以外，其他栏位全部上锁。头部物品效果增强2倍！ |
+| `DISORDER_SENSORYOVERLOADNECK_DESC` | All but your neck slot is locked. Your neck item's effects are tripled! | 除了颈部以外，其他栏位全部上锁。颈部物品效果变成3倍！ | 除了颈部以外，其他栏位全部上锁。颈部物品效果增强2倍！ |
+| `DISORDER_SENSORYOVERLOADTRINKET_DESC` | All but your trinket slot is locked. Your trinket's effects are tripled! | 除了小玩意儿以外，其他栏位全部上锁。小玩意儿效果变成3倍！ | 除了小玩意儿以外，其他栏位全部上锁。小玩意儿效果增强2倍！ |
+| `DISORDER_SENSORYOVERLOADWEAPON_DESC` | All but your weapon slot is locked. Your weapon's effects are tripled! | 除了武器以外，其他栏位全部上锁。你的武器效果变成3倍！ | 除了武器以外，其他栏位全部上锁。你的武器效果增强2倍！ |
+| `DISORDER_WRENCHEDNECK_DESC` | You can't equip neck armor. Double the effects of your head armor. | 你不能装备颈部防具。头部防具效果翻倍。 | 你不能装备颈部防具。头部防具效果增强1倍。 |
+| `ENEMY_HEADLESS_NAME` | Headless | 无头 | 没头 |
+| `ENEMY_MEATSLIME_NAME` | Meat Slime | 黏黏肉 | 肉史莱姆 |
+| `ENEMY_PARAISARIA_NAME` | Paraisaria | 近棒束孢 | 类猫棒束孢 |
+| `ENEMY_PILE_NAME` | Pile | 一坨 | 坨坨 |
+| `EVENT_BUTCH2_REW2` | [i]"Fly like a butthole fly, stink like a pee, I always say!<br><br>Quick, while no one's lookin'. Take this!"[/i] | “我的一贯宗旨是，‘黏上去就得像甩不掉的绿头蝇，骚起来就得像熏破天的陈年尿’！<br><br>快，趁没人看着，拿着！” | “我一直都说：‘飞就要飞得像屁眼的苍蝇，骚就要骚出尿味’！<br><br>快，趁没人看着，拿着！” |
+| `EVENT_BUTCH3_REW2` | Heck kid, you'll need tough skin out there, but that's a bit excessive tho. You do you, kiddo. | 年轻人，在外面闯，皮不能太薄，但你这有点过了。小家伙，随你便吧。 | 年轻人，出来混皮是得厚点儿，但你这有点过了。算了，随你便吧。 |
+| `EVENT_BUTCHTUTORIAL_REW2` | {catname} points cleverly behind Butch, distracting him.<br><br>[i]"Well hello mr. fancy pants! You're lucky your [img:int] is so high or you'd be chewin' rocks!"[/i] | {catname}机灵地指了指布奇身后，转移了他的注意。<br><br>“小家伙挺聪明啊！要不是你[img:int]这么高，现在就该在地上数牙了！” | {catname}机灵地指了指布奇身后，转移了他的注意。<br><br>“小家伙挺聪明啊！要不是你[img:int]这么高，现在就让你在地上数牙了！” |
+| `EVENT_CATSINHEAT_REW3` | The cats join in on the action. It has been a while since they have had this much fun! | 猫咪们也加入了。它们好久没这么尽兴过了！ | 猫咪们也加入了。他们好久没这么尽兴过了！ |
+| `EVENT_CLAM_NAME` | Clam | 蛤蜊 | 鲍鱼 |
+| `EVENT_CLAM_QUES` | {catname} comes upon a charming little clam.<br><br>It's so... beautiful! {He} feels a growing urge to lean in closer... | {catname}遇到一个迷人的小蛤蜊。<br><br>它真的……好美啊！{He}忍不住想要再凑近一些…… | {catname}遇到一个迷猫的小鲍鱼。<br><br>它真的……好美啊！{He}忍不住想要再凑近一些…… |
+| `EVENT_CLAM_QUES_N` | {catname} comes upon a charming little clam.<br><br>It's so... beautiful! They feel a growing urge to lean in closer... | {catname}撞见一个迷猫的小蛤蜊。<br><br>它真的……好美啊！彵忍不住想要再凑近一些…… | {catname}撞见一个迷猫的小鲍鱼。<br><br>它真的……好美啊！彵忍不住想要再凑近一些…… |
+| `EVENT_CLAM_REW1` | {catname} leans in and gives the clam a kiss!<br><br>The clam pops open and kisses {him} back! | {catname}探过去，亲了蛤蜊一口！<br><br>蛤蜊张开了壳，也亲了{him}一下！ | {catname}探过去，亲了鲍鱼一口！<br><br>鲍鱼张开了壳，也亲了{him}一下！ |
+| `EVENT_CLAM_REW2` | {catname} gives the clam a kiss with {his} tongue.<br><br>It pops open revealing a shiny stone inside! | {catname}伸出舌头舔了舔蛤蜊。<br><br>蛤蜊张开了壳，露出了一颗发光的石头！ | {catname}伸出舌头舔了舔鲍鱼。<br><br>鲍鱼张开了壳，露出了一颗发光的石头！ |
+| `EVENT_CLAM_REW3` | {catname} leans in to give the clam a kiss, and when {his} nose is about to touch the clam snaps at {him}! | {catname}凑过去想亲一下，鼻尖刚碰上蛤蜊，就冷不丁被夹了一下！ | {catname}凑过去想亲一下，鼻尖刚碰上鲍鱼，就冷不丁被夹了一下！ |
+| `EVENT_CLAM_REW4` | Drawn in by the alluring clam, {catname} closes {his} eyes and moves in close to the clam...<br><br>It snaps shut on {his} face! | {catname}被蛤蜊迷住了，闭上眼睛凑了上去……<br><br>结果蛤蜊“啪”地一声夹住了{his}脸！ | {catname}被鲍鱼迷住了，闭上眼睛凑了上去……<br><br>结果鲍鱼“啪”地一声夹住了{his}脸！ |
+| `EVENT_CLAM_REW5` | {catname} resists the temptation and smashes the little clam instead. | {catname}抵挡住了诱惑，把这小蛤蜊拍烂了。 | {catname}抵挡住了诱惑，把这小鲍鱼拍烂了。 |
+| `EVENT_CLAM_REW6` | Ignoring the clam's charm, {catname} prys it open looking for treasure within... | {catname}不吃蛤蜊那一套，撬开壳找起了宝贝…… | {catname}不吃鲍鱼那一套，撬开壳找起了宝贝…… |
+| `EVENT_CLAM_REW7` | {catname} attempts to crush the clam, but it snaps at {him} instead! | {catname}想把蛤蜊砸碎，结果被它夹到了！ | {catname}想把鲍鱼砸碎，结果被它夹到了！ |
+| `EVENT_CLAM_REW8` | {catname} jumps on the small clam, trying to crush it beneath {him}, but the clam slams shut on {his} paw! | {catname}扑了过去，想把蛤蜊砸碎，结果蛤蜊“啪”一下夹住了{his}爪子！ | {catname}扑了过去，想把鲍鱼砸碎，结果鲍鱼“啪”一下夹住了{his}爪子！ |
+| `EVENT_FRUITBASKET_REW4` | The fruit tastes great, at first... But after {catname} and the other cats devour it, they look down and notice that the remains are all rotted. They begin to feel sick as poison sets in... | 水果一开始尝着挺不错……{catname}和其他猫猫大口吃起来，可是吃着吃着，低头发现剩下的都烂了。毒素进入了猫猫体内，他们开始不舒服了来…… | 水果一开始尝着挺不错……{catname}和其他猫猫大口吃起来，可是吃着吃着，低头发现剩下的都烂了。毒素进入了猫猫体内，他们开始不舒服了…… |
+| `EVENT_HAPPENING_METEORSHOWER_REW` | The cats look up in wonder as majestic balls of fire streak through the sky.<br><br>Their awe shifts to terror as the loud booms of meteors striking the ground reverberate through the air! | 猫猫们仰头望去，只见一个个巨大的火球划破天空。<br><br>他们正看得出神，陨石接连砸在地上，轰隆巨响把它们吓得魂都要飞了！ | 猫猫们仰头望去，只见一个个巨大的火球划破天空。<br><br>他们正看得出神，陨石接连砸在地上，轰隆巨响把他们吓得魂都要飞了！ |
+| `EVENT_HOLEINTHEEARTH_REW6` | {catname} offers up a sacrificial item to the hole...<br><br>From the depths of hell below a powerful item is returned! | {catname}向地洞献上一件祭品……<br><br>深处居然回赠了一件威力强大的东西！ | {catname}向地洞献上一件祭品……<br><br>地洞深处居然回赠了一件威力强大的东西！ |
+| `EVENT_MOBOFRATS_REW1` | {catname} hisses and strikes a terrifying pose, ready to strike!<br><br>The rats scurry away in fright, terrified by the prospect of being attacked by such a fearsome creature as {catname}! | {catname}哈着气，摆出一副不好惹的架势，随时准备扑上去！<br><br>老鼠吓得一哄而散。{catname}一看就很凶，它们留下来肯定只有挨打的份！ | {catname}哈着气，摆出一副不好惹的架势，随时准备扑上去！<br><br>老鼠吓得一哄而散。{catname}一看就很凶，他们留下来肯定只有挨打的份！ |
+| `EVENT_MOBOFRATS_REW8` | {catname} tries in vain to scare away the rats, but the rats tear into {him} with their teeth! | {catname}想把老鼠吓走，可是并没有吓走，反倒被它们啃得皮开肉绽！ | {catname}想把老鼠吓走，可是并没有吓走，反倒被他们啃得皮开肉绽！ |
+| `EVENT_MYSTERIOUSTOMB_REW3` | {catname} tries to pull the heavy doors open but they are stuck fast. | {catname}使劲拽沉重的门，可它们纹丝不动。 | {catname}使劲拽沉重的门，可门纹丝不动。 |
+| `EVENT_NESTOFEGGS_REW3` | The cats break open the eggs to eat them but are overwhelmed by a sudden stench of farts! | 猫猫们磕开蛋准备美餐一顿，结果一股冲天的屁味迎面扑来，把它们都熏懵了！ | 猫猫们磕开蛋准备美餐一顿，结果一股冲天的屁味迎面扑来，把他们都熏懵了！ |
+| `EVENT_NESTOFEGGS_REW8` | When they enter the nest, the cats are suddenly ambushed by Raptors!<br><br>Beaten and bloodied, the cats manage to barely escape their wrath. | 猫猫们刚走进窝里，就被一群迅猛龙围攻了！<br><br>它们被打得浑身是血，好不容易才捡回条命逃了出来。 | 猫猫们刚走进窝里，就被一群迅猛龙围攻了！<br><br>他们被打得浑身是血，好不容易才捡回条命逃了出来。 |
+| `EVENT_SMALLBLACKHOLE_REW1A` | With great effort, {catname} pulls {his} arm from the black hole clutching a rare item in {his} paw! | {catname}使出浑身力气，总算把胳膊从黑洞里拽了出来，爪子里还攥着一件稀有东西！ | {catname}使出浑身力气，总算把胳膊从黑洞里拽了出来，爪子里还攥着一件稀罕东西！ |
+| `FURNITURE_DESC_SPECIAL_FIGHTIDOL` | Fights are deadlier but the winning cat gets double the stat rewards. | 猫咪打架更容易死猫，但赢的那只属性加成翻倍。 | 猫咪打架更容易死猫，但赢的那只属性加成增大1倍。 |
+| `HOUSE_CAT_INFO_DEX_DESC` | Dexterity affects ranged attack and ranged ability damage. | 协调性影响远程攻击和远程能力的伤害。 | 灵巧影响远程攻击和远程能力的伤害。 |
+| `HOUSE_CAT_INFO_DEX_NAME` | [img:dex]Dexterity | [img:dex]协调性 | [img:dex]灵巧 |
+| `ITEM_AIRHORN_FIXED_DESC` | Use: Apply Madness to a unit within 5 tiles in your line of sight.<br>[s:.7](Usable once per battle.)[/s] | 使用：对视线内5格之内的1个单位施加【癫狂】。<br>[s:.7]（每场战斗可以用1次）[/s] | 使用：对你视线内5格之内的1个单位施加【癫狂】。<br>[s:.7]（每场战斗可以用1次）[/s] |
+| `ITEM_BROKENMIRROR_NAME` | Broken Mirror | 破镜子 | 碎镜子 |
+| `ITEM_FURNITUREBOX_RARE_DESC` | Breaks when [img:shield] is depleted.<br>Becomes a random piece of rare furniture when you return home. | [img:shield]耗尽时，这个会损坏。<br>回到家里时，会随机变成1件稀罕的家具。 | [img:shield]耗尽时，这个会损坏。<br>回到家里时，会随机变成1件稀有的家具。 |
+| `ITEM_FURNITUREBOX_RARE_NAME` | Rare Furniture Box | 稀罕的家具箱子 | 稀有的家具箱子 |
+| `ITEM_GLOWINGCOIN_DESC` | Use: Flip a coin.<br>Heads: Double your mana.<br>Tails: Lose 50% of your mana. | 使用：抛硬币。<br>正面：你的魔能翻倍。<br>反面：失去50%的魔能。 | 使用：抛硬币。<br>正面：你的魔能增加1倍。<br>反面：失去50%的魔能。 |
+| `ITEM_HEAVYMACE_DESC` | Use: A melee attack with Knockback 2 that deals damage equal to your [img:str].<br>Cleaves and deals double damage to units with [img:shield]. | 使用：近身攻击，击退2格，伤害数值等于自身的[img:str]。<br>狠剁，对有[img:shield]的单位伤害翻倍。 | 使用：近身攻击，击退2格，伤害数值等于自身的[img:str]。<br>狠剁，对有[img:shield]的单位伤害增大1倍。 |
+| `ITEM_LUCKYCOIN_DESC` | Coins that spawn at the start of each battle are doubled. | 每场战斗开始时生成的钱数量翻倍。 | 每场战斗开始时生成的钱数量增加1倍。 |
+| `ITEM_NEVERSTONE_NAME` | Neverstone | 不变之石 | 不变石头 |
+| `ITEM_THELONER_FIXED_DESC` | Use: Deals 5 damage to anything in your line of sight.<br>RELOAD: Any ally dies. | 使用：对视线内任一目标造成5点伤害。<br>冷却结束：任一友方死亡。 | 使用：对你视线内任一目标造成5点伤害。<br>冷却结束：任一友方死亡。 |
+| `KEYWORD_DEXDOWN_DESC` | Dexterity decreased by {absstacks}.<br>Dexterity affects ranged attack and ranged ability damage. | 协调性下降{absstacks}。<br>协调性影响远程攻击和远程能力的伤害。 | 灵巧下降{absstacks}。<br>灵巧影响远程攻击和远程能力的伤害。 |
+| `KEYWORD_DEXDOWN_NAME` | Dexterity Down | 协调性下降 | 灵巧下降 |
+| `KEYWORD_DEXUP_DESC` | Dexterity increased by {stacks}.<br>Dexterity affects ranged attack and ranged ability damage. | 协调性提升{stacks}。<br>协调性影响远程攻击和远程能力的伤害。 | 灵巧提升{stacks}。<br>灵巧影响远程攻击和远程能力的伤害。 |
+| `KEYWORD_DEXUP_NAME` | Dexterity Up | 协调性提升 | 灵巧提升 |
+| `KEYWORD_DOUBLERANGEDDMG_DESC` | All ranged physical attacks and abilities deal double damage. | 远程的物理攻击和能力伤害全部翻倍。 | 远程的物理攻击和能力伤害全部增大1倍。 |
+| `LEVELUP_CHOICE_STATS_DEX` | [img:dex]Dexterity[img:dex]<br>affects ranged attack and ranged ability damage | [img:dex]协调性[img:dex]<br>影响远程攻击和远程能力的伤害 | [img:dex]灵巧[img:dex]<br>影响远程攻击和远程能力的伤害 |
+| `MUTATION_TEXTURE_310_DESC` | Gain double the effects of pickups you collect. | 捡起的物品效果翻倍。 | 捡起的物品效果增强1倍。 |
+| `NPCOFFICE_NAME_ORGANGRINDER` | {organname}'s Box | [f:EdmundM]{organname}[/f]的箱子 | [f:Edmundm]{organname}[/f]的箱子 |
+| `NPC_BEANIES_BEANIESQUEST_COMPLETE_BUBBLEBOY_7` | [m:happy]Oh, I almost forgot... Your reward!<br>It's a thing of Bubbles! | [m:happy]哦，差点忘了……给你的奖励！<br>一团泡泡！ | [m:happy]哦，差点忘了……给你的奖励！<br>能吹泡泡！ |
+| `NPC_BEANIES_BEANIESQUEST_COMPLETE_FIGLEAF_2` | [m:happy]Haha, just giving you a hard time! | [m:happy]哈哈，跟你说着玩的！ | [m:happy]哈哈，逗你玩呢！ |
+| `NPC_BEANIES_BEANIESQUEST_COMPLETE_HIVEMIND_3` | [m:happy]Hey that reminds me, I just finished another fashion!<br>I call it... "Remote Head"! | [m:happy]诶，说到这个，我刚又设计了一件时尚单品！<br>我叫它……“远程头部”！ | [m:happy]诶，说到这个，我刚又设计了一件时尚单品！<br>我叫它……“遥控脑袋”！ |
+| `NPC_BEANIES_BEANIESQUEST_COMPLETE_MULTILINKCABLE_3` | [m:pondering]Something smells fishy here...<br>How could an idiot like you achieve something so grand!? | [m:pondering]这个事情有猫腻……<br>你这种白痴怎么可能这么牛逼？！ | [m:pondering]这个事情有猫腻……<br>你这种白痴怎么可能这么了不起？！ |
+| `NPC_BEANIES_BEANIESQUEST_COMPLETE_NUCLEARKNIFE_9` | [m:default]Here,<br>I made a gun with the same tech!<br>I call it Nuclear Gun!<br>Pretty neat huh?[sfx:PickupCoin][pause:1][sfx:PickupCoin][pause:1][sfx:PickupCoin] | [m:default]给，<br>我用同样的技术做了门炮！<br>我管它叫核能炮！<br>是不是很牛逼？[sfx:PickupCoin][pause:1][sfx:PickupCoin][pause:1][sfx:PickupCoin] | [m:default]给，<br>我用同样的技术做了门炮！<br>我管它叫核能炮！<br>是不是很牛？[sfx:PickupCoin][pause:1][sfx:PickupCoin][pause:1][sfx:PickupCoin] |
+| `NPC_BEANIES_BEANIESQUEST_COMPLETE_THEIOU_2` | [m:sad]Wow, what a pal!<br>Honestly I think I'm tearing up... | [m:sad]哇，真心朋友！<br>我真的快哭出来了…… | [m:sad]哇，真够朋友！<br>我快哭出来了，真的…… |
+| `NPC_BEANIES_BEANIESQUEST_FAIL_AIRHORN_13` | You better get your shit together ASAP unless you wanna wake up tomorrow with missing genitals! | 抓紧把状态给我调整好，不然你明天醒的时候，生殖器就没了！ | 抓紧把你那个烂摊子收拾好，不然你明天醒的时候，生殖器就没了！ |
+| `NPC_BEANIES_BEANIESQUEST_FAIL_AI_6` | [m:questioning]Me go make 'nother gobot, ok? | [m:questioning]我去做百变勇师，好不好？ | [m:questioning]我再做百变勇师，好不好？ |
+| `NPC_BEANIES_BEANIESQUEST_FAIL_NUCLEARKNIFE_4` | [m:pondering]Except the gun is really cool and the baby is some kind of robot Nazi! | [m:pondering]只不过枪很牛逼，然后婴儿是个什么纳粹机器人！ | [m:pondering]只不过枪很厉害，然后婴儿是个什么纳粹机器人！ |
+| `NPC_BEANIES_BEANIESQUEST_INTRO_EXPERIMENTALTREATMENT_2` | Mustard water, urine, cat spray and infected sinus mucus with a dash of lemon! | 芥末水、尿、猫的喷尿、鼻窦炎黏液，外加一点点柠檬！ | 芥末水、小便、猫的喷尿、鼻窦炎黏液，外加一点点柠檬！ |
+| `NPC_BEANIES_BEANIESQUEST_INTRO_HIVEMIND_2` | [m:pondering]Me either, but it sounds cool right? | [m:pondering]我也没听过，但听着是不是很牛逼？ | [m:pondering]我也没听过，但听着是不是很有意思？ |
+| `NPC_BEANIES_BEANIESQUEST_INTRO_HIVEMIND_3` | [m:happy]So cool that I'm basing a whole invention on it! | [m:happy]牛逼得我决定围绕它发明个东西！ | [m:happy]有意思得我决定围绕它发明个东西！ |
+| `NPC_BEANIES_BEANIESQUEST_INTRO_MESTONE_1` | [m:veryhappy]IT'S TIME TO UNVEIL THE "ME STONE!" | [m:veryhappy]是时候揭开“自我之石”的真面目了！ | [m:veryhappy]是时候揭开“自我石头”的真面目了！ |
+| `NPC_BEANIES_BEANIESQUEST_INTRO_TRAPFEST99_4` | [m:scared]There is one side effect... The worst shits you'll ever experience in your life! | [m:scared]有一个副作用……会让你体验到前所未有的痛苦便秘！ | [m:scared]有一个副作用……会让你拉出这辈子最惨烈的一泡屎！ |
+| `NPC_BEANIES_BEANIES_BOMBQUEST_3_4` | [m:pondering]Or maybe the<br>"Time Ender"?<br>I dunno, what sounds cooler? | [m:pondering]或者叫<br>“终结时间者”？<br>你觉得哪个更拉风？ | [m:pondering]或者叫<br>“时间终结者”？<br>你觉得哪个更拉风？ |
+| `NPC_BEANIES_BEANIES_BOMBQUEST_BEGIN_12` | [m:happy]Don't worry, we will beat this "Supreme Being" or die trying! | [m:happy]你放心，我们就算拼上命，就要打倒这个“至高存在”！ | [m:happy]你放心，我们就算拼上命，也要打倒这个“至高存在”！ |
+| `NPC_BEANIES_BEANIES_FUTURE_INTRO_8` | [m:angry]Fix up the shit that you did! | [m:angry]都是拉的㞎㞎叭叭叭叭叭叭！ | [m:angry]㞎㞎叭叭叭叭叭叭！ |
+| `NPC_BEANIES_BEANIES_LAB_INTRO_11` | [m:veryangry]THATS IT! IM DONE WITH YOUR BULLSHIT!  THIS IS THE FINAL STRAW! | [m:veryangry]行了！我不要再跟你折腾了！这是压死骆驼的最后一根稻草！ | [m:veryangry]行了！你这些狗屁事情，不要再找我了！这是压死骆驼的最后一根稻草！ |
+| `NPC_BEANIES_BEANIES_SEEFUTURE_12` | 1984 Demikhov Dr. Boon County U.S Fuckin' A! | 美利坚他妈逼的合众国布恩县德米霍夫路1984号！ | 美利坚他妈的合众国布恩县德米霍夫路1984号！ |
+| `NPC_BEANIES_BEANIES_TIMEMACHINE_2_2` | [m:default]It's my excrement receptacle. | [m:default]来自我的排泄容器。 | [m:default]是我的排泄容器。 |
+| `NPC_BEANIES_BEANIES_TIMEMACHINE_2_3` | [m:questioning]As a fellow hobo I'm sure you know, us bums defecate in bags... | [m:questioning]你也是流浪人士，肯定明白，我们拉屎都是用袋子装…… | [m:questioning]你也是流浪人士，肯定知道，我们排便都是用袋子…… |
+| `NPC_BEANIES_INTRO_25` | [m:winking]Don't worry,<br>I'll be sure to harvest some from {Catname's} elbows before {he's} incinerated. | [m:winking]放心，<br>火化{he's}不需要会中国的那种功夫，只是可能要多花一些时间。 | [m:winking]放心，<br>不需要中国的那种功夫，只是可能要多花一些时间。 |
+| `NPC_BUTCH_BUTCH_TIPS_HEADHOME_3` | [m:pondering]Maybe you got tons of coins saved up, or a few badass items you don't wanna risk losing. | [m:pondering]你可能一路上捞了不少钱，或者捡到了牛逼的装备，不想因为死了丢了。 | [m:pondering]你可能一路上捞了不少钱，或者捡到了厉害的装备，不想因为死了丢了。 |
+| `NPC_BUTCH_BUTCH_TIPS_LESSCATS_2` | Doin' a 3 cat run means those cats will level up 2-3 more times than usual! | 带3猫出去的话，猫咪能比平时多升2到3级！ | 带3只猫出去的话，猫咪能比平时多升2到3级！ |
+| `NPC_BUTCH_BUTCH_TIPS_PASSIVES_3` | [m:happy]They are the key to some amazing combos! Keep your eyes peeled! | [m:happy]有些牛逼联动的核心就是被动能力！眼睛千万睁大看清楚！ | [m:happy]有些厉害联动的核心就是被动能力！眼睛千万睁大看清楚！ |
+| `NPC_BUTCH_CLASS_UNLOCK_BUTCHER_1` | [m:happy]OK, here we go!<br>This one's pretty damn cool! | [m:happy]行嘞，看看这一个！<br>这个真他妈牛逼！ | [m:happy]行嘞，看看这一个！<br>这个特别厉害！ |
+| `NPC_BUTCH_CLASS_UNLOCK_JESTER_3` | [m:spacedout]How fucking random! | [m:spacedout]怎么他妈什么职业都有！随机乱设计的吗？ | [m:spacedout]怎么他妈什么职业都有！随机设计的吗？ |
+| `NPC_BUTCH_UNPROMPTED_G_1` | [m:shocked]Oh, you scared me! I thought I was about to be mugged by a loser incapable of logical thought! | [m:shocked]我靠，你吓我一跳！还以为遇上了不懂逻辑、打游戏又菜的强盗！ | [m:shocked]吓我一跳！还以为是哪个不会动脑子的废物要来抢我！ |
+| `NPC_BUTCH_UPGRADE_STORAGE_6_3` | I just started bawling like a baby!<br>What the hell is wrong with me!? | 我直接嗷嗷大哭，跟个小娃娃一样！<br>我他妈是有什么毛病吗？！ | 我直接嗷嗷大哭，跟个小娃娃一样！<br>我特么是有什么毛病吗？！ |
+| `NPC_BUTCH_UPGRADE_STORAGE_MAX5_2` | [m:questioning]I don't wanna sound judgy but like... Have you ever thought you might be mentally ill? | [m:questioning]我没有别的意思啊，但就是……你有没有想过自己会不会有什么收纳空间不足恐惧症？ | [m:questioning]我没有别的意思啊，但就是……有没有想过自己是不是有什么精神病？ |
+| `NPC_BUTCH_UPGRADE_STORAGE_MAX5_4` | [m:winking]Same dude, same. | [m:winking]一样，朋友，我们是病友。 | [m:winking]一样，朋友，我也有。 |
+| `NPC_FRANK_FRANK_CAVES_INTRO_4` | Good as new, right?<br>Look at how we can make this one dance! | [s:.8]是不是跟新的一样？<br>我们可以用这个身体跳舞！很灵活！[/s] | [s:.8]是不是跟新的一样？<br>看我们可以用这个身体跳舞！[/s] |
+| `NPC_FRANK_HOUSE_UPGRADE_ATTIC_3` | [m:sad]Franks slow, but no one seems to get us... | [s:.8][m:sad]弗兰克动作慢，可好像没有谁追我们……[/s] | [s:.8][m:sad]弗兰克反应也慢，可好像没人跟得上我们……[/s] |
+| `NPC_FRANK_HOUSE_UPGRADE_MEDIUMHOUSE_12` | [m:shocked] ABOUT US!!! | [s:.8][m:shocked]弗兰就是我们！！！[/s] | [s:.8][m:shocked]在说我们！！！[/s] |
+| `NPC_JACK_JACK_DESERT_INTRO_1` | [m:happy]You are gonna go to the desert!? Wowza! The desert is the baddest! | [s:.8][m:happy]你要去沙漠？！哇噻！沙漠那边超级牛皮！[/s] | [s:.8][m:happy]你要去沙漠？！哇噻！沙漠那边超级刺激！[/s] |
+| `NPC_JACK_JACK_DESERT_INTRO_3` | [m:shocked]Just be careful, deserts are H.O.T. HOT! | [s:.8][m:shocked]小心点儿，沙漠热得要死！[/s] | [s:.8][m:shocked]小心点儿，沙漠超热，热得要死！[/s] |
+| `NPC_JACK_JACK_DESERT_INTRO_5` | [m:whispering][s:.7]Cus' she's so old![/s]<br>Hehe... | [s:.8][m:whispering][s:.7]因为她年龄超级大！[/s]<br>嘻嘻……[/s] | [s:.8][m:whispering][s:.7]因为她非常老！[/s]<br>嘻嘻……[/s] |
+| `NPC_JACK_JACK_MAX4_2` | [m:mocking]He thought I was named Isaac! Isn't that so funny? I'm Jack, duh! | [s:.8][m:mocking]他以为我叫以撒！是不是很搞笑？我明明是杰克诶！[/s] | [s:.8][m:mocking]他以为我叫以撒！是不是很搞笑？我明明是杰克！[/s] |
+| `NPC_JACK_JACK_SHOPUPGRADE1_13` | [m:questioning]Deal? | [m:questioning][s:.8]可以吗？[/s] | [m:questioning][s:.8]成交吗？[/s] |
+| `NPC_JACK_JACK_SHOPUPGRADE1_6` | [m:pondering]Then they grow back all huge and strong like a daddy guy? | [s:.8][m:pondering]骨头会长回来，而且长得又粗又壮，像我爸那样。[/s] | [s:.8][m:pondering]骨头会长回来，而且长得又粗又壮，像我爸那样的大人一样。[/s] |
+| `NPC_JACK_JACK_SHOPUPGRADE2_2` | [m:default]I know I look so strong with these monster muscles... | [s:.8][m:default]我知道自己现在一身肌肉，看起来超级猛……[/s] | [s:.8][m:default]我知道自己现在有怪物肌肉，看起来超级猛……[/s] |
+| `NPC_JACK_JACK_SHOPUPGRADE3_5` | [m:angry]She can be a big liar sometimes and it makes it really hard to save her... | [s:.8][m:angry]她有时候可爱撒谎了，就让我也不知道该怎么救她……[/s] | [s:.8][m:angry]她有时候爱撒大谎，让我也不知道该怎么救她……[/s] |
+| `NPC_JACK_JACK_SHOPUPGRADE4_10` | [m:winking]This pipe mystery is just what this hero needs! | [s:.8][m:winking]这根管子的谜团才是我这个英雄需要破解的东西！[/s] | [s:.8][m:winking]我是大英雄，就需要这个管子谜团！[/s] |
+| `NPC_ORGANGRINDER_COLLECTED_NOTHING_5` | [m:angry]Please stop making me angry... | [m:angry]请不要再惹我生气了…… | [m:angry]麻烦不要再让我生气了…… |
+| `NPC_ORGANGRINDER_ORGAN_MAX_INTRO_1` | [m:questioning]Hey guess what?  You know all those bumps and blisters covering my visible flesh? | [m:questioning]诶，我跟你说，看见我身上这些疙瘩、脓疱没有？ | [m:questioning]诶，我跟你说，我露出来的这些肉，看见这些疙瘩、脓疱没有？ |
+| `NPC_ORGANGRINDER_ORGAN_MAX_INTRO_2` | [m:happy]Those are diseases!<br>And guess what else? | [m:happy]这些可都是病！<br>而且知道吗？ | [m:happy]这可都是病！<br>而且知道吗？ |
+| `NPC_ORGANGRINDER_ORGAN_THROBBINGDOMAIN_INTRO_13` | [m:questioning]The lips of a cow, the tongue of a lion... | [m:questioning]牛的嘴、狮子的舌头…… | [m:questioning]牛的嘴唇、狮子的舌头…… |
+| `NPC_ORGANGRINDER_ORGAN_TINA3_10` | [m:confused][s:.6]3. Hot fudge.[/s] | [m:confused][s:.6]3. 热咖喱酱。[/s] | [m:confused][s:.6][f:EdmundM]3.[/f] 热咖喱酱。[/s] |
+| `NPC_ORGANGRINDER_ORGAN_TINA3_11` | [s:.5][a:wave]3. Long walks on the beach.[/s][/a] | [s:.5][a:wave]3. 海边漫步。[/s][/a] | [s:.5][a:wave][f:EdmundM]3.[/f] 海边漫步。[/s][/a] |
+| `NPC_ORGANGRINDER_ORGAN_TINA3_12` | [m:bored][a:wave][s:.4]3. Blondes.[/s][/a] | [m:bored][a:wave][s:.4]3. 金发妞。[/s][/a] | [m:bored][a:wave][s:.4][f:EdmundM]3.[/f] 金发妞。[/s][/a] |
+| `NPC_ORGANGRINDER_ORGAN_TINA3_5` | [m:default]Oh wait yeah, I wanted to give you a tip on how to kill that giant corpse! | [m:default]哦对对，我是想教你怎么杀那个大个子死东西来着！ | [m:default]哦对对，我是想教你怎么杀那个大个子死猫来着！ |
+| `NPC_ORGANGRINDER_ORGAN_TINA3_6` | [m:whispering]As a fellow corpse, I can give you a quick list of our weaknesses... | [m:whispering]我作为死东西，可以把我们的弱点给你快快列一个清单出来…… | [m:whispering]我也是死了的东西，可以把我们的弱点给你快快列一个清单出来…… |
+| `NPC_ORGANGRINDER_ORGAN_TINA3_7` | [m:default]1. Guns. | [m:default]1. 枪。 | [m:default][f:EdmundM]1.[/f] 枪。 |
+| `NPC_ORGANGRINDER_ORGAN_TINA3_8` | [m:happy]2. Punches. | [m:happy]2. 拳头。 | [m:happy][f:EdmundM]2.[/f] 拳头。 |
+| `NPC_ORGANGRINDER_ORGAN_TINA3_9` | [m:pondering][s:.8]3. Lasers.[/s] | [m:pondering][s:.8]3. 激光。[/s] | [m:pondering][s:.8][f:EdmundM]3.[/f]  激光。[/s] |
+| `NPC_ORGANGRINDER_ORGAN_UPGRADE1_1` | [m:happy]More meat puppets for {organname}!? Heck yeah! | [m:happy]又有肉偶给[f:NPCFont_OrganGrinder]{organname}[/f]了！？诶嘿！ | [m:happy]又有肉偶给[f:NPCFont_OrganGrinder]{organname}[/f]了？！好啊！ |
+| `NPC_ORGANGRINDER_ORGAN_UPGRADE1_3` | [m:questioning]I'm like the tin man from that movie The Wizard! But instead of oil i need plasma... to play video games!! | [m:questioning]我跟《绿野仙踪》的铁皮人一样！但他需要的是油，我需要液……晶屏幕打游戏！！ | [m:questioning]我跟《奥兹巫师》的铁皮人一样！但他需要的是油，我需要液……晶屏幕打游戏！！ |
+| `NPC_ORGANGRINDER_ORGAN_UPGRADE1_7` | [m:questioning]You should kill more cats for me. I'm just saying to kill more cats so I can juice 'em and get stronger is all... | [m:questioning]你该继续帮我害猫，我的意思是你害死猫，我把汁水挤出来，才能变得更厉害…… | [m:questioning]你该再帮我弄死几只猫，我的意思是你把猫弄死，我把汁水挤出来，才能变得更厉害…… |
+| `NPC_ORGANGRINDER_ORGAN_UPGRADE2_1` | [m:inlove]Wow, you are killing all these cats just for me!? You must be having feelings for ol' {organname}. | [m:inlove]嚯，你害死这些猫都是为了我！？你肯定是对[f:NPCFont_OrganGrinder]{organname}[/f]动感情了。 | [m:inlove]嚯，你弄死这些猫都是为了我！？你肯定是对[f:NPCFont_OrganGrinder]{organname}[/f]动感情了。 |
+| `NPC_ORGANGRINDER_ORGAN_UPGRADE3_3` | [m:paranoid]Sometimes I'm just punching at my belly so those damn bugs stop eating up all my cruor. | [m:paranoid]我有时候只能使劲儿捶肚子，才能防止该死的虫子把我的血糊糊吃光。 | [m:paranoid]我有时候只能使劲儿捶肚子，才能防止该死的虫子把我的凝血块吃光。 |
+| `NPC_ORGANGRINDER_ORGAN_UPGRADE4_4` | [m:bored]And it's probably TMI,  but.. he just lays there...<br>If i wanted to date a corpse, I'd date you! | [m:bored]再说的话，可能就有点信息过量了，可……他就只会躺尸，一动不动……<br>我要是真想约尸体，肯定就约你了！ | [m:bored]这个话不太该跟你说，他……就只会躺尸，一动不动……<br>我要是真想约尸体，肯定就约你了！ |
+| `NPC_ORGANGRINDER_ORGAN_UPGRADE5_1` | [m:shocked]ANOTHER MEMORY APPEARS! | [m:shocked]我又想起来一件事情！ | [m:shocked]又出现一段记忆！ |
+| `NPC_POPUP_DONE_SPITTING_FAIL_ALLY_1` | [m:veryangry]No no no NO NO! Idiot! [m:angry]That was your teammate. | [m:veryangry]啊呀呀呀呀！你白痴吗？！[m:angry]那是你队友。 | [m:veryangry]哎哎哎哎哎！你白痴吗？！[m:angry]那是你队友。 |
+| `NPC_POPUP_FIRST_FIGHT_INTRO_2` | [m:default]Name's [b]Butch[/b],<br>[s:.6]and even though I could give a frick if you live or die,[/s]<br>I can't help but see a bit of myself in you... | [m:default]我叫[b]布奇[/b]，<br>[s:.6]虽然你是死是活，我无吊所谓，[/s]<br>但我总感觉你身上应该有点我的东西…… | [m:default]我叫[b]布奇[/b]，<br>[s:.6]虽然你是死是活，我根本无所谓，[/s]<br>总感觉你身上有点儿我的味道…… |
+| `NPC_POPUP_HOUSE_STRAYS_5` | [m:questioning]You should totes take {him} inside, right? | [m:questioning]你肯定应该会把{him}抱进去吧？ | [m:questioning]肯定得把{him}抱进去吧？ |
+| `NPC_POPUP_LEVEL_UP_DIDNT_SELECT_SUNBURN_6` | And always look for combos! Seriously I can't stress this enough. | 另外，时刻想办法制造联动！真的，这个事情我再强调多少遍都不为过。 | 另外，时刻想办法制造联动！真的，这个事情再说多少遍都不为过。 |
+| `NPC_POPUP_LEVEL_UP_INTRO_5` | There's a pretty awesome combo here. | 这儿有个很牛逼的联动。 | 这儿有个很牛的联动。 |
+| `NPC_POPUP_LEVEL_UP_SELECTED_SUNBURN_3` | A cat's passives can make or break a run, and combos win games! | 猫的被动有时候能决定你一局是起飞还是暴毙，有联动才能赢！ | 猫的被动有时候能决定你一局是胜利还是战败，有联动才能赢！ |
+| `NPC_POPUP_RANGED_CAT_EARLY_ATTACK2_RAT_1` | [m:sad]OK well, you just wasted your attack. That rat was already dead. You sure desecrated its body though. | [m:sad]行吧，你把攻击浪费了。那个老鼠刚才就已经死了，你倒是把它尸体狠狠干了一通。 | [m:sad]行吧，你把攻击浪费了。那个老鼠刚才就已经死了，你倒是毁辱了它的遗体。 |
+| `NPC_POPUP_STEVEN_SAVESCUM_HOUSEBOSS_1_9` | [m:veryangry]Also<br>[s:1.5]I'LL KILL YOU![/s] | [m:veryangry]而且<br>[s:1.7]我也会要、了、你的、命！[/s] | [m:veryangry]而且<br>[s:1.7]我也会要了你的命！[/s] |
+| `NPC_POPUP_STEVEN_SAVESCUM_HOUSEBOSS_2_1` | [m:veryangry][s:1.2]CHEATER! [a:shake]FCUKING[/a] CHEATER![/s] | [m:veryangry][s:1.5]赖、皮！[a:shake]淦、你妈的[/a]赖、皮、鬼！[/s] | [m:veryangry][s:1.5]赖、皮！[a:shake]淦你妈的[/a]赖皮鬼！[/s] |
+| `NPC_POPUP_STEVEN_SAVESCUM_INTRO_1` | [m:happy]Oh Hey! It's me, Steven! | [m:happy]哦，诶！是我史蒂文！ | [b][m:happy]哦，诶！是我史蒂文！[/b] |
+| `NPC_POPUP_STEVEN_SAVESCUM_INTRO_2` | [m:pondering]You may know me from such games as Time Fcuk,<br>The End is Nigh or<br>[s:1.2]The Binding of Isaac! [/s] | [m:pondering]你可能在《Time Fcuk》、<br>《The End is Nigh》——就是《终结将至》——<br>还有[s:1.2]《The Binding of Isaac》（《以撒的结合》）[/s]里见过我！ | [b][m:pondering]你可能在《Time Fcuk》、<br>《The End is Nigh》——就是《终结将至》——<br>还有[s:1.2]《The Binding of Isaac》（《以撒的结合》）[/s]里见过我！[/b] |
+| `NPC_POPUP_STEVEN_SAVESCUM_INTRO_3` | [m:default]But from here on out you're probably going to remember me as that Mr. Resetti guy. | [m:default]不过从现在开始，我可能要变成你的“电源叔叔”了。 | [b][m:default]不过从现在开始，我可能要变成你的“电源叔叔”了。[/b] |
+| `NPC_STEVEN_STEVEN_INTRODUCTION_18` | [m:veryangry][a:shake][s:1.3]And fcuk your shit up![/a][/s] | [m:veryangry][a:shake][s:1.3]然后淦你个五荤三素！[/a][/s] | [m:veryangry][a:shake][s:1.3]然后淦你个稀巴烂！[/a][/s] |
+| `NPC_STEVEN_STEVEN_POSTENDGAME_1` | [m:shocked]NO ONE EXPECTS THE STEVEN ENDING! | [m:shocked][s:1.3]谁都没想到有史蒂文结局！[/s] | [m:shocked][s:1.5]谁都没想到有史蒂文结局！[/s] |
+| `NPC_STEVEN_STEVEN_POSTENDGAME_14` | [m:veryhappy]THAT WAS A JOKE AT YOUR EXPENSE, BUDDY! I'M TALKING ABOUT YOUR BEAN HOLE! | [m:veryhappy][s:1.3]伙计，拿你开个玩笑！我是在说你的豆豆眼儿！[/s] | [m:veryhappy][s:1.5]伙计，拿你开个玩笑！我是在说你的屁屁眼儿！[/s] |
+| `NPC_STEVEN_STEVEN_RESUMMON_1` | Huh?... | 呵……？ | 哈……？ |
+| `NPC_STEVEN_STEVEN_UNLOCK_ACT1_CRAZY_5` | [m:shocked]AND IT'S GONNA GET YOU SO LOADED! | [m:shocked][s:1.3]能让你爽到飞起！[/s] | [m:shocked][s:1.5]能让你爽到飞起！[/s] |
+| `NPC_STEVEN_STEVEN_UNLOCK_ACT2_CRAZY_3` | [m:pondering]What I mean is you look like shit. All sweaty, flabby and generally weird... | [m:pondering]我看你状态这么差，满头大汗，那么多肥肉，整个人看着也不对劲…… | [m:pondering]我看你状态这么烂，满头大汗，那么多肥肉，整个人看着也不对劲…… |
+| `NPC_STEVEN_STEVEN_UNLOCK_ACT2_HARD_1` | [m:paranoid]Guess what!? | [m:paranoid]听我说。 | [m:paranoid]你猜怎么着？！ |
+| `NPC_STEVEN_STEVEN_UNLOCK_ACT2_IMPOSSIBLE_4` | [m:veryhappy]HA! Gotcha, bitch! | [m:veryhappy]哈！贱人，逮到你了！ | [m:veryhappy]哈！贱人，想歪了吧！ |
+| `NPC_STEVEN_STEVEN_UNLOCK_ACT3_CRAZY_2` | [m:veryangry]Oh yeah... HANDLE THIS! | [m:veryangry]噢耶……[s:1.3]扛住！[/s] | [m:veryangry]噢耶……[s:1.5]扛住！[/s] |
+| `NPC_STEVEN_STEVEN_UNLOCK_ACT3_CRAZY_4` | [m:happy]At this point I'd reach through the screen and knock your fcukin' ass out! | [m:happy]我现在真恨不得把手伸出屏幕，淦你个人仰马翻！ | [m:happy]我现在恨不得把手伸出屏幕，一拳把你淦晕！ |
+| `NPC_STEVEN_STEVEN_UNLOCK_ACT3_HARD_1` | [m:shocked]OMG, YOU UNLOCKED HARD MODE FOR ACT 3! | [m:shocked][s:1.3]我的上帝啊，你解锁了第三章的困难模式！[/s] | [m:shocked][s:1.5]我的上帝啊，你解锁了第三章的困难模式！[/s] |
+| `NPC_STEVEN_STEVEN_UNLOCK_ACT3_HARD_10` | [m:happy]GL! | [m:happy][s:1.3]加油！[/s] | [m:happy][s:1.5]加油！[/s] |
+| `NPC_STEVEN_STEVEN_UNLOCK_ACT3_IMPOSSIBLE_2` | [m:veryhappy]Fun fact: YOU CAN'T WIN! | [m:veryhappy]冷知识：[s:1.3]你赢不了的！[/s] | [m:veryhappy]冷知识：[s:1.5]你赢不了的！[/s] |
+| `NPC_STEVEN_STEVEN_UNLOCK_ACT3_IMPOSSIBLE_3` | [m:happy]It's totally untested! The developers just added it to fcuk with you! | [m:happy]测试都没测过！开发者加进来就是为了淦你！ | [m:happy]测试都没测过！开发者加进来就是为了淦……为了整你！ |
+| `NPC_STEVEN_STEVEN_UNLOCK_ACT3_IMPOSSIBLE_6` | [m:veryangry]IT'S NEVER GONNA HAPPEN DUDE! It's like a Lost Delirium run without the Holy Mantle unlocked! | [m:veryangry][s:1.3]朋友，别想了！[/s]这个就跟没解锁神圣屏障就拿游魂打精神错乱一样！ | [m:veryangry][s:1.5]朋友，别想了！[/s]这个就跟没解锁神圣屏障就拿游魂打精神错乱一样！ |
+| `NPC_TINK_TINK_AGGRESSION_8` | [m:questioning]So, have you ever wanted to know if someone is a huge moody biotch, just by looking at them? | [m:questioning]你有没有想过，有没有办法一眼就能看出对方是不是情绪炸弹？ | [m:questioning]你有没有想过，有没有办法一眼就能看出对方是不是喜怒无常的碧池？ |
+| `NPC_TINK_TINK_BASESTATS_1` | [m:veryhappy]OMG GURL,<br>did you see my new car outside? | [m:veryhappy]我的上帝啊，亲爱的，<br>在外边看见我新车没有？ | [m:veryhappy]我的上帝啊，姐们儿，<br>外边看见我新车没有？ |
+| `NPC_TINK_TINK_BASESTATS_11` | [m:mocking]When you are built like this, you don't need to know "NUMBERS"! | [m:mocking]你什么时候能长成我这样，就不需要知道什么“数值”了！ | [m:mocking]长成我这样，就不需要懂什么“数字”了！ |
+| `NPC_TINK_TINK_BEGIN_ACCEPTING_CATS_4` | [m:questioning]And I'm like<br>"Thanks girl, but did you hear about that newbie in town who's been hoarding all those cats!?" | [m:questioning]我说：<br>“亲爱的太会说话了，你听说新来的那个没有？她家里攒了一大堆猫！” | [m:questioning]我说：<br>“姐妹太会说话了，你听说新来的那个没有？那人家里攒了一大堆猫！” |
+| `NPC_TINK_TINK_MAX2_3` | [m:angry]You are a real sicko, you know that!? | [m:angry]你知不知道自己心理很扭曲？！ | [m:angry]你知不知道自己心理扭曲？！ |
+| `NPC_TINK_TINK_MAX9_5` | [m:veryangry]STOP INTERRUPTING ME! | [m:veryangry]能不能不要再干扰我了！ | [m:veryangry]不要再来烦我了！ |
+| `NPC_TINK_TINK_MAX_INTRO_1` | [m:pondering]Listen sister, don't tell the boys... But I'm all out of tea... | [m:pondering]那什么，亲爱的，千万别跟他们说啊……我没料可爆了…… | [m:pondering]那什么，亲爱的，千万别跟那帮男的说啊……我已经没料可爆了…… |
+| `NPC_TINK_TINK_MAX_INTRO_10` | [m:default]A true boss bitch!<br>OK, so how's 25 bucks sound? | [m:default]你可以啊！<br>好，25块钱怎么样？ | [m:default]真够狠啊！<br>好，25块钱怎么样？ |
+| `NPC_TINK_TINK_MAX_INTRO_3` | [m:scared]I'm a fraud!<br>And everyone is going to find out! | [m:scared]我要成冒牌货了！<br>所有人都会知道的！ | [m:scared]我成冒牌货了！<br>所有人都会知道的！ |
+| `NPC_TINK_TINK_MAX_INTRO_9` | [m:angry]Extortion is it?<br>[m:pondering]Well I can't say I don't respect the hustle, girl... | [m:angry]勒索是吧？<br>[m:pondering]亲爱的，我还挺佩服你这个劲头…… | [m:angry]勒索是吧？<br>[m:pondering]姐们儿，不得不说，你这个手段我佩服…… |
+| `NPC_TINK_TINK_TINA2_1` | [m:scared]I was driving past Pinky Winkies today and swear to God, I saw that fat cat's head rolling through the street! | [m:scared]今天开车路过丁莱士，我对上帝发誓，绝对看到那个肥猫的脑袋在街上滚来滚去！ | [m:scared]今天开车路过丁莱士，我对上帝发誓，绝对看到那个肥猫的脑袋了，在街上滚来滚去！ |
+| `NPC_TINK_TINK_TINA2_10` | [m:angry]What the hell is wrong with everyone these days!? | [m:angry]现在的人都特么是有什么毛病吗？！ | [m:angry]现在的人一个个都是有什么毛病吗？！ |
+| `NPC_TINK_UNPROMPTED_B_2` | Ok gurl, let me spill the tea... | 行啦姐妹，我给你爆个料…… | 行，姐们儿，我给你爆个料…… |
+| `NPC_TINK_UNPROMPTED_C_1` | [m:happy]Well someone is in need of a makeover!<br>Let's chat! | [m:happy]哎呀，有些人需要整一整型！<br>来聊聊吧！ | [m:happy]哎呀，有些人需要改造一下！<br>来聊聊吧！ |
+| `NPC_TINK_UNPROMPTED_F_1` | Yep, still here! It's like I never leave this damn RV these days. | 诶，我还在这儿！我这段时间基本就没出过这个房车。 | 诶，我还在这儿！我这段时间基本就没出过这个鬼房车。 |
+| `NPC_TINK_UNPROMPTED_G_1` | [m:shocked]Gah, you spooked me! Were you watching me do my makeup? | [m:shocked]靠！吓我一跳！你刚是在偷看我化妆吗？ | [m:shocked]啊呀！吓我一跳！你刚是在偷看我化妆吗？ |
+| `NPC_TRACY_TRACY_INTRODUCTION_9` | [m:default]In fact, I believe all animals should have the same rights as us. | [m:default]我认为所有动物都享受的权利应该跟我们一样多。 | [m:default]我认为所有动物享受的权利都应该跟我们一样多。 |
+| `NPC_TRACY_TRACY_KAIJUFIGHT_4` | [m:pondering]Or I guess murder at least one of them? | [m:pondering]起码办掉一个？ | [m:pondering]起码杀一个？ |
+| `NPC_TRACY_TRACY_MAX5_2` | [m:spacedout]DUUR DURRR! I love the crap I get when I do what I'm told! HUUURRR! | [m:spacedout]呃……我照他们说的办，就能弄到一堆破烂，我喜欢！呜—— | [m:spacedout]呃——呃——……我照他们说的办，就能弄到一堆破烂，我喜欢！呃—— |
+| `NPC_TRACY_TRACY_MAX_INTRO_2` | Congratulations on being the first loser to completely sell your soul to the man, or whatever! | 恭喜你成为第一个把灵魂彻底卖给资本的大冤种！ | 恭喜你成为第一个把灵魂彻底卖给资本的废物！ |
+| `OBJECT_HARPOONTRAP_NAME` | Harpoon Trap | 鱼叉陷阱 | 鱼叉机关 |
+| `PASSIVE_ARMORSPECIALIST2_DESC` | Your equipment passive and active effects are doubled. | 你的装备主、被动效果翻倍。 | 你的装备主、被动效果增强1倍。 |
+| `PASSIVE_ARMORSPECIALIST_DESC` | Your equipment passive effects are doubled. | 你的装备被动效果翻倍。 | 你的装备被动效果增强1倍。 |
+| `PASSIVE_BLESSINGOFHOLYFIRE_DESC` | Holy-element spells deal double damage to enemies instead of healing and inflict Burn 2. <br>This blessing is lost when you kill a unit. | 神圣系法术不再治疗，而是对敌人造成双倍伤害、施加2层【灼烧】。<br>你击杀单位时会失去这个福佑。 | 神圣系法术不会治疗敌人，而是对敌人造成双倍伤害、施加2层【灼烧】。<br>你击杀单位时会失去这个福佑。 |
+| `PASSIVE_DEALER2_DESC` | You can use consumables on other units.<br>Consumables you use have double the effect. | 你可以对其他单位使用消耗品。<br>你使用的消耗品效果翻倍。 | 你可以对其他单位使用消耗品。<br>你使用的消耗品效果增强1倍。 |
+| `PASSIVE_ENCHANTEDRELIC2_DESC` | Your trinket's passive and active effects are tripled. | 你小玩意儿的被动效果和主动效果变成3倍。 | 你小玩意儿的被动效果和主动效果增强2倍。 |
+| `PASSIVE_ENCHANTEDRELIC_DESC` | Your trinket's passive and active effects are doubled. | 你小玩意儿的被动效果和主动效果翻倍。 | 你小玩意儿的被动效果和主动效果增强1倍。 |
+| `PASSIVE_EVILPATRON2_DESC` | Your healing abilities deal damage to enemies.<br>Holy element damage you deal is doubled.<br>Gain +2 range on tile-targeted healing spells. | 你的治疗能力会对敌人造成伤害。<br>你造成的神圣系伤害翻倍。<br>你以方格为目标的治疗法术范围+2。 | 你的治疗能力会对敌人造成伤害。<br>你造成的神圣系伤害增大1倍。<br>你以方格为目标的治疗法术范围+2。 |
+| `PASSIVE_FIGHTME_NAME` | Underdog | 鱼腩 | 逆风 |
+| `PASSIVE_HAZARDOUS2_DESC` | Tile damage and effects are doubled.<br>Allies are immune to tile damage and effects. | 方格伤害和方格效果翻倍。<br>友方免疫方格伤害和方格效果。 | 方格伤害和方格效果增强1倍。<br>友方免疫方格伤害和方格效果。 |
+| `PASSIVE_HAZARDOUS_DESC` | Tile damage and effects are doubled. | 方格伤害和方格效果翻倍。 | 方格伤害和方格效果增强1倍。 |
+| `PASSIVE_HEAVEHOOK2_DESC` | Your hook can target tiles.<br>Units pulled by your hook gain trample while being hooked, this trample damage is doubled. | 你的钩子能以方格为目标。<br>单位被你钩住拖拽时，获得横冲直撞，这次横冲直撞的伤害翻倍。 | 你的钩子能以方格为目标。<br>单位被你钩住拖拽时，获得横冲直撞，这次横冲直撞的伤害增大1倍。 |
+| `PASSIVE_HEAVEHOOK2_MULTICLASS_DESC` | Your hook can target tiles.<br>Units pulled by your hook gain trample while being hooked, this trample damage is doubled.<br>[s:.7](Equips a temporary hook if you dont have one)[/s] | 你的钩子能以方格为目标。<br>单位被你钩住拖拽时，获得横冲直撞，这次横冲直撞的伤害翻倍。<br>[s:.7]（如果你没有钩子，就临时装备一个）[/s] | 你的钩子能以方格为目标。<br>单位被你钩住拖拽时，获得横冲直撞，这次横冲直撞的伤害增大1倍。<br>[s:.7]（如果你没有钩子，就临时装备一个）[/s] |
+| `PASSIVE_MORALEBOOST2_DESC` | Allies gain All Stats Up whenever you kill something.<br>When you kill something, refresh your basic attack. | 每当你击杀单位，友方所有属性就提升。<br>你击杀单位时，你的普通攻击刷新。 | 每当你击杀单位，友方就所有属性提升。<br>你击杀单位时，你的普通攻击刷新。 |
+| `PASSIVE_MORALEBOOST_DESC` | Allies gain All Stats Up whenever you kill something. | 每当你击杀单位，友方所有属性就提升。 | 每当你击杀单位，友方就所有属性提升。 |
+| `PASSIVE_NUMBINGLEECHES2_DESC` | Your basic attack deals 0 damage, but its status and hit effects are tripled.<br>Your basic attack inflicts Mana Leech. | 你的普通攻击造成0点伤害，但它施加的状态和命中效果变成3倍。<br>你的普通攻击会施加【魔能吸取】。 | 你的普通攻击造成0点伤害，但它施加的状态和命中效果增强2倍。<br>你的普通攻击会施加【魔能吸取】。 |
+| `PASSIVE_NUMBINGLEECHES_DESC` | Your basic attack deals 0 damage but its status and hit effects are tripled. | 你的普通攻击造成0点伤害，但它施加的状态和命中效果变成3倍。 | 你的普通攻击造成0点伤害，但它施加的状态和命中效果增强2倍。 |
+| `PASSIVE_ONEWITHNOTHING2_DESC` | If you end your turn with 0 mana, your Mana Regeneration is doubled.<br>Bonus ability: Slit Wrists | 你的回合结束时，如果你的魔能为0，那么你的魔能自然恢复翻倍。<br>奖励能力：割腕。 | 你的回合结束时，如果你的魔能为0，那么你的魔能自然恢复增加1倍。<br>奖励能力：割腕。 |
+| `PASSIVE_ONEWITHNOTHING_DESC` | If you end your turn with 0 mana, your Mana Regeneration is doubled. | 你的回合结束时，如果你的魔能为0，那么你的魔能自然恢复翻倍。 | 你的回合结束时，如果你的魔能为0，那么你的魔能自然恢复增加1倍。 |
+| `PASSIVE_OVERCONFIDENT2_DESC` | While at full HP, reduce the cost of your spells by 2, but take double damage.  This can't reduce mana costs to less than 1. When you cast a spell, heal 1 HP. | 满生命时，法术的耗费-2，但你受到的伤害翻倍。魔能耗费最低降到1。你施放法术时，恢复1点生命。 | 满生命时，法术的耗费-2，但你受到的伤害增大1倍。魔能耗费最低降到1。你施放法术时，恢复1点生命。 |
+| `PASSIVE_OVERCONFIDENT_DESC` | While at full HP, reduce the cost of your spells by 2, but take double damage. This can't reduce mana costs to less than 1. | 满生命时，法术的耗费-2，但你所受伤害翻倍。魔能耗费最低降到1。 | 满生命时，法术的耗费-2，但你所受伤害增大1倍。魔能耗费最低降到1。 |
+| `PASSIVE_PATIENCE_DESC` | If you end your turn without taking any actions, gain an extra turn at the end of the round. You don't regenerate mana on your main turn if you pass it. | 如果你不行动直接结束回合，那么可以在一轮结束时获得1个额外回合。如果你跳过原始回合，那么那个回合魔能不会自然恢复。 | 如果你不行动直接结束回合，那么可以在一轮结束时获得1个额外回合。如果你跳过原始回合，那么额外回合魔能不会自然恢复。 |
+| `PASSIVE_POISONTIPS2_DESC` | Your basic attack inflicts Poison 1.<br>Poison you inflict is doubled. | 你的普通攻击会施加1层【中毒】。<br>你施加的【中毒】翻倍。 | 你的普通攻击会施加1层【中毒】。<br>你施加的【中毒】层数增加1倍。 |
+| `PASSIVE_PSYSMACK2_DESC` | Knockback damage and distance you and your allies deal is doubled and has Chain Knockback. | 你和友方造成的击退伤害和距离翻倍，而且可以连锁击退。 | 你和友方造成的击退伤害和距离增大1倍，而且可以连锁击退。 |
+| `PASSIVE_PSYSMACK_DESC` | Knockback damage you and your allies deal is doubled. | 你和友方造成的击退伤害翻倍。 | 你和友方造成的击退伤害增大1倍。 |
+| `PASSIVE_QUIVER2_DESC` | Save unused basic attacks for future turns.<br>If you haven't attacked this battle, the number you save is doubled. | 没有使用的普通攻击可以留到以后的回合使用。<br>如果这场战斗你还没攻击，你留下的普通攻击次数翻倍。 | 没有使用的普通攻击可以留到以后的回合使用。<br>如果这场战斗你还没攻击，你留下的普通攻击次数增加1倍。 |
+| `PASSIVE_SCHADENFREUDE_NAME` | Schadenfreude | 沙登弗洛伊德 | 幸灾乐祸 |
+| `PASSIVE_SMASH2_DESC` | Your weapons deal triple damage, but they have a 50% chance to break when you use them.<br>Three more Sticks are added to your inventory. | 你武器的伤害变成3倍，但使用时有50%的几率损坏。<br>你背包里会多3根树枝。 | 你武器的伤害增大2倍，但使用时有50%的几率损坏。<br>你背包里会多3根树枝。 |
+| `PASSIVE_SMASH_DESC` | Your weapons deal triple damage, but they always break when you use them.<br>Three Sticks are added to your inventory. | 你武器的伤害变成3倍，但只要使用就会损坏。<br>你背包里会多3根树枝。 | 你武器的伤害增大2倍，但只要使用就会损坏。<br>你背包里会多3根树枝。 |
+| `PASSIVE_TOWERDEFENSE2_DESC` | When an enemy comes within range, use your basic attack on them. | 敌人进入范围时，对它使用普通攻击。 | 敌人停在你的范围之内时，对它使用普通攻击。 |
+| `PASSIVE_TOWERDEFENSE_DESC` | When an enemy comes within range, shoot them for 1 damage. | 敌人进入范围时，对它射击，造成1点伤害。 | 敌人停在你的范围之内时，对它射击，造成1点伤害。 |
+| `PASSIVE_TRICKYTRAPS2_DESC` | Damage and effects from your traps are doubled.<br>Allies don't trigger your traps. | 你夹子的伤害和效果翻倍。<br>友方不会触发你的夹子。 | 你夹子的伤害和效果增强1倍。<br>友方不会触发你的夹子。 |
+| `PASSIVE_TRICKYTRAPS_DESC` | Damage and effects from your traps are doubled. | 你夹子的伤害和效果翻倍。 | 你夹子的伤害和效果增强1倍。 |
+| `PASSIVE_WEAPONMASTER_DESC` | Your weapon and item abilities deal +2 Damage and get +25% critical chance. A pipe is added to your inventory. | 你武器和物品能力的伤害+2、暴击几率+25%。你背包多了一根管子。 | 你武器和物品能力的伤害+2、暴击几率+25%。你背包多一根管子。 |
+| `QEVENT_TIMEMACHINE_JURASSIC_REW1` | The cats pile into the time machine and activate it!<br><br>What new wonders will await them in the Infinite? | 猫猫们一股脑挤进时间机器，把它发动起来了！<br><br>无限世界里，会有什么稀奇玩意儿等着它们去发现呢？ | 猫猫们一股脑挤进时间机器，把它发动起来了！<br><br>无限世界里，会有什么稀奇玩意儿等着他们去发现呢？ |
+| `SETBONUS_RECYCLED_DESC` | Also find a rare item when a recycled set piece breaks. | 回收套装物品坏掉时，还会获得1件稀罕物品。 | 回收套装物品坏掉时，还会获得1件稀有物品。 |
+| `SETBONUS_STUNNING_DESC` | Your weapon and trinket's passive and active effects are tripled. | 你武器和小玩意儿的被动效果和主动效果变成3倍。 | 你武器和小玩意儿的被动效果和主动效果增强2倍。 |
+| `SETBONUS_TWINE_NAME` | Twine Set Bonus! | 合股线套装加成！ | 细绳套装加成！ |
+| `TEAMNAME_NOUN_COLORLESS1` | Boys | 小子 | 小伙子 |
+| `TEAMNAME_NOUN_COLORLESS2` | Girls | 丫头 | 姑娘 |
 
 ## Removed
 
