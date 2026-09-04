@@ -4681,28 +4681,28 @@
           "bad_prompt_key": "EVENT_CLAM_REW3",
           "good_prompt_texts": {
             "en": "{catname} leans in and gives the clam a kiss!\r\n\r\nThe clam pops open and kisses {him} back!",
-            "zh": "{catname}\u63a2\u8fc7\u53bb\uff0c\u4eb2\u4e86\u9c8d\u9c7c\u4e00\u53e3\uff01\n\n\u9c8d\u9c7c\u5f20\u5f00\u4e86\u58f3\uff0c\u4e5f\u4eb2\u4e86{him}\u4e00\u4e0b\uff01"
+            "zh": "{catname}\u63a2\u8fc7\u53bb\uff0c\u4eb2\u4e86\u9c8d\u9c7c\u4e00\u53e3\uff01\n\n\u9c8d\u9c7c\u4e5f\u4eb2\u4e86{him}\u4e00\u4e0b\uff01"
           },
           "bad_prompt_texts": {
             "en": "{catname} leans in to give the clam a kiss, and when {his} nose is about to touch the clam snaps at {him}!",
-            "zh": "{catname}\u51d1\u8fc7\u53bb\u60f3\u4eb2\u4e00\u4e0b\uff0c\u9f3b\u5c16\u521a\u78b0\u4e0a\u9c8d\u9c7c\uff0c\u5c31\u51b7\u4e0d\u4e01\u88ab\u5939\u4e86\u4e00\u4e0b\uff01"
+            "zh": "{catname}\u51d1\u8fc7\u53bb\u60f3\u4eb2\u4e00\u4e0b\uff0c\u9f3b\u5c16\u521a\u78b0\u4e0a\u9c8d\u9c7c\uff0c\u5c31\u88ab\u5b83\u5438\u4f4f\u4e86\uff0c\u7529\u8131\u7684\u65f6\u5019\u4f24\u5230\u4e86\u81ea\u5df1\uff01"
           },
           "prompt_texts": {
             "EVENT_CLAM_REW1": {
               "en": "{catname} leans in and gives the clam a kiss!\r\n\r\nThe clam pops open and kisses {him} back!",
-              "zh": "{catname}\u63a2\u8fc7\u53bb\uff0c\u4eb2\u4e86\u9c8d\u9c7c\u4e00\u53e3\uff01\n\n\u9c8d\u9c7c\u5f20\u5f00\u4e86\u58f3\uff0c\u4e5f\u4eb2\u4e86{him}\u4e00\u4e0b\uff01"
+              "zh": "{catname}\u63a2\u8fc7\u53bb\uff0c\u4eb2\u4e86\u9c8d\u9c7c\u4e00\u53e3\uff01\n\n\u9c8d\u9c7c\u4e5f\u4eb2\u4e86{him}\u4e00\u4e0b\uff01"
             },
             "EVENT_CLAM_REW2": {
               "en": "{catname} gives the clam a kiss with {his} tongue.\r\n\r\nIt pops open revealing a shiny stone inside!",
-              "zh": "{catname}\u4f38\u51fa\u820c\u5934\u8214\u4e86\u8214\u9c8d\u9c7c\u3002\n\n\u9c8d\u9c7c\u5f20\u5f00\u4e86\u58f3\uff0c\u9732\u51fa\u4e86\u4e00\u9897\u53d1\u5149\u7684\u77f3\u5934\uff01"
+              "zh": "{catname}\u4f38\u51fa\u820c\u5934\u8214\u4e86\u8214\u9c8d\u9c7c\u3002\n\n\u9c8d\u9c7c\u9732\u51fa\u4e86\u4e00\u9897\u53d1\u5149\u7684\u77f3\u5934\uff01"
             },
             "EVENT_CLAM_REW3": {
               "en": "{catname} leans in to give the clam a kiss, and when {his} nose is about to touch the clam snaps at {him}!",
-              "zh": "{catname}\u51d1\u8fc7\u53bb\u60f3\u4eb2\u4e00\u4e0b\uff0c\u9f3b\u5c16\u521a\u78b0\u4e0a\u9c8d\u9c7c\uff0c\u5c31\u51b7\u4e0d\u4e01\u88ab\u5939\u4e86\u4e00\u4e0b\uff01"
+              "zh": "{catname}\u51d1\u8fc7\u53bb\u60f3\u4eb2\u4e00\u4e0b\uff0c\u9f3b\u5c16\u521a\u78b0\u4e0a\u9c8d\u9c7c\uff0c\u5c31\u88ab\u5b83\u5438\u4f4f\u4e86\uff0c\u7529\u8131\u7684\u65f6\u5019\u4f24\u5230\u4e86\u81ea\u5df1\uff01"
             },
             "EVENT_CLAM_REW4": {
               "en": "Drawn in by the alluring clam, {catname} closes {his} eyes and moves in close to the clam...\r\n\r\nIt snaps shut on {his} face!",
-              "zh": "{catname}\u88ab\u9c8d\u9c7c\u8ff7\u4f4f\u4e86\uff0c\u95ed\u4e0a\u773c\u775b\u51d1\u4e86\u4e0a\u53bb\u2026\u2026\n\n\u7ed3\u679c\u9c8d\u9c7c\u201c\u556a\u201d\u5730\u4e00\u58f0\u5939\u4f4f\u4e86{his}\u8138\uff01"
+              "zh": "{catname}\u88ab\u9c8d\u9c7c\u8ff7\u4f4f\u4e86\uff0c\u95ed\u4e0a\u773c\u775b\u51d1\u4e86\u4e0a\u53bb\u2026\u2026\n\n\u7ed3\u679c\u9c8d\u9c7c\u72e0\u72e0\u5438\u5728\u4e86{his}\u8138\u4e0a\uff0c\u7529\u8131\u7684\u65f6\u5019\u4f24\u5230\u4e86\u81ea\u5df1\uff01"
             }
           },
           "good_code": "set_frame 2\n                    reward {\n                        common {\n                            prompt \"EVENT_CLAM_REW1\"\n                            permanent_stats {\n                                lck 1\n                            }\n                        }\n                        rare {\n                            prompt \"EVENT_CLAM_REW2\"\n                            get_item Pearl\n                        }\n                    }",
@@ -4727,7 +4727,7 @@
           },
           "bad_prompt_texts": {
             "en": "{catname} attempts to crush the clam, but it snaps at {him} instead!",
-            "zh": "{catname}\u60f3\u628a\u9c8d\u9c7c\u7838\u788e\uff0c\u7ed3\u679c\u88ab\u5b83\u5939\u5230\u4e86\uff01"
+            "zh": "{catname}\u60f3\u628a\u9c8d\u9c7c\u7838\u788e\uff0c\u7ed3\u679c\u88ab\u5b83\u5438\u4f4f\u4e86\uff0c{he}\u7528\u529b\u7529\u8131\u7684\u65f6\u5019\u4f24\u5230\u4e86\u81ea\u5df1\uff01"
           },
           "prompt_texts": {
             "EVENT_CLAM_REW5": {
@@ -4736,15 +4736,15 @@
             },
             "EVENT_CLAM_REW6": {
               "en": "Ignoring the clam's charm, {catname} prys it open looking for treasure within...",
-              "zh": "{catname}\u4e0d\u5403\u9c8d\u9c7c\u90a3\u4e00\u5957\uff0c\u64ac\u5f00\u58f3\u627e\u8d77\u4e86\u5b9d\u8d1d\u2026\u2026"
+              "zh": "{catname}\u4e0d\u5403\u9c8d\u9c7c\u90a3\u4e00\u5957\uff0c\u6252\u5f00\u8089\u627e\u8d77\u4e86\u5b9d\u8d1d\u2026\u2026"
             },
             "EVENT_CLAM_REW7": {
               "en": "{catname} attempts to crush the clam, but it snaps at {him} instead!",
-              "zh": "{catname}\u60f3\u628a\u9c8d\u9c7c\u7838\u788e\uff0c\u7ed3\u679c\u88ab\u5b83\u5939\u5230\u4e86\uff01"
+              "zh": "{catname}\u60f3\u628a\u9c8d\u9c7c\u7838\u788e\uff0c\u7ed3\u679c\u88ab\u5b83\u5438\u4f4f\u4e86\uff0c{he}\u7528\u529b\u7529\u8131\u7684\u65f6\u5019\u4f24\u5230\u4e86\u81ea\u5df1\uff01"
             },
             "EVENT_CLAM_REW8": {
               "en": "{catname} jumps on the small clam, trying to crush it beneath {him}, but the clam slams shut on {his} paw!",
-              "zh": "{catname}\u6251\u4e86\u8fc7\u53bb\uff0c\u60f3\u628a\u9c8d\u9c7c\u7838\u788e\uff0c\u7ed3\u679c\u9c8d\u9c7c\u201c\u556a\u201d\u4e00\u4e0b\u5939\u4f4f\u4e86{his}\u722a\u5b50\uff01"
+              "zh": "{catname}\u6251\u4e86\u8fc7\u53bb\uff0c\u60f3\u628a\u9c8d\u9c7c\u7838\u788e\uff0c\u7ed3\u679c\u9c8d\u9c7c\u72e0\u72e0\u5438\u4f4f\u4e86{his}\u722a\u5b50\uff0c{he}\u7529\u8131\u7684\u65f6\u5019\u4f24\u5230\u4e86\u81ea\u5df1\uff01"
             }
           },
           "good_code": "reward {\n                        common {\n                            set_frame 1\n                            prompt \"EVENT_CLAM_REW5\"\n                            permanent_stats {\n                                con 1\n                            }\n                        }\n                        rare {\n                            set_frame 2\n                            prompt \"EVENT_CLAM_REW6\"\n                            get_item TinyPebble\n                        }\n                    }",
